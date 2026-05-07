@@ -1,0 +1,57 @@
+{
+  "id": "q_scene_002_002__xc__vague",
+  "scene_id": "scene_002",
+  "l1_scene": "深度研究展示",
+  "l2_scene_label": "个人生活类",
+  "application_type": "年度相册应用",
+  "product_type": "landing_page",
+  "target_complexity": "vague",
+  "design_style": "Luxury",
+  "created_at": "2026-04-27T05:04:13.316Z",
+  "generator_mode": "llm-openai",
+  "query_variant": "anchored_persona_xc_supplement",
+  "persona_anchor_query_id": "q_scene_002_002",
+  "persona_anchor_target_complexity": "medium",
+  "persona_id": "p_life_album_01",
+  "persona_title": "追求极简美学的业余胶片摄影师",
+  "persona_source": "llm_persona_synthesis",
+  "persona_spec": {
+    "persona_id": "p_life_album_01",
+    "persona_title": "追求极简美学的业余胶片摄影师",
+    "persona_description": "29岁的林女士每年都会用相机记录生活细节，年底习惯做年终总结。今年她不想再用繁杂的社交媒体九宫格发照片，而是想做一个专属的年度电子相册网页发给亲友。她对视觉要求极高，希望页面能像实体艺术杂志一样有故事感地呈现她最满意的生活大片。",
+    "persona_style_hint": "沟通时带有强烈的审美偏好，会明确要求'留白'、'杂志感'和'排版精致'。她会给出具体的页面模块构想（例如需要首屏大图和季节分类），但不会提及任何前端代码或组件库，语言偏向感性表达与基础设计词汇的结合。",
+    "user_goal": "Create a landing page for a personal annual photo album. I want a magazine-style hero section with a full-bleed cover photo and elegant serif typography, followed by a 'Four Seasons' gallery module that uses asymmetrical layouts and plenty of white space.",
+    "domain_familiarity": "medium",
+    "persona_source": "llm_persona_synthesis",
+    "llm_raw_text": "{ \"persona_id\": \"p_life_album_01\", \"persona_title\": \"追求极简美学的业余胶片摄影师\", \"persona_description\": \"29岁的林女士每年都会用相机记录生活细节，年底习惯做年终总结。今年她不想再用繁杂的社交媒体九宫格发照片，而是想做一个专属的年度电子相册网页发给亲友。她对视觉要求极高，希望页面能像实体艺术杂志一样有故事感地呈现她最满意的生活大片。\", \"persona_style_hint\": \"沟通时带有强烈的审美偏好，会明确要求'留白'、'杂志感'和'排版精致'。她会给出具体的页面模块构想（例如需要首屏大图和季节分类），但不会提及任何前端代码或组件库，语言偏向感性表达与基础设计词汇的结合。\", \"user_goal\": \"Create a landing page for a personal annual photo album. I want a magazine-style hero section with a full-bleed cover photo and elegant serif typography, followed by a 'Four Seasons' gallery module that uses asymmetrical layouts and plenty of white space.\", \"domain_familiarity\": \"medium\", \"persona_source\": \"llm_persona_synthesis\" }"
+  },
+  "persona_prompt_text": "[persona 冻结自锚点记录，本次未重新调用 persona LLM]\n你是一个 persona 设计助手，需要先基于场景合成一个真实用户画像，再用于生成前端 UI query。\n请参考 persona-driven synthetic data synthesis 的思路：persona 应该是场景驱动的真实人，不是固定职业标签。\n\n## 场景输入\n一级场景：深度研究展示\n二级场景标签：个人生活类\n该场景常见 app 方向示例（仅用于理解，不要机械照抄进最终 query）：旅行回忆、年度相册、画作展示、宝宝成长\n当前选定的 L3 application_type：年度相册应用\n当前 UI 形态：官网/落地页\n设计风格：更像高质感杂志专题，排版精致且有留白\n目标复杂度：medium\n复杂度要求：Make it clearly more specific than vague: include a clear intent plus one or two concrete constraints, modules, or UI details in one concise paragraph.\n最终 query 默认输出英文。\n\n## 你的任务\n请生成 1 个最适合该场景的 persona，要求：\n1. persona 要体现真实身份、动机、表达方式和信息不完整性。\n2. persona 该场景下真实需要\n3. persona 要解释为什么会提出这个页面或组件需求。\n4. 不要把二级场景括号中的示例整段复制到 persona 文本中。\n\n## 输出格式\n{\n  \"persona_id\": \"p_xxx\",\n  \"persona_title\": \"角色标签一句话概括这个人\",\n  \"persona_description\": \"2-4 句描述背景、动机和当前处境\",\n  \"persona_style_hint\": \"这个人会如何表达、会不会给细节、会不会提技术\",\n  \"user_goal\": \"这个人想通过页面/产品完成什么\",\n  \"domain_familiarity\": \"low | medium | high\",\n  \"persona_source\": \"llm_persona_synthesis\"\n}",
+  "query_prompt_text": "你现在要扮演给定的 persona，向 AI 编程助手发送一条前端 UI 开发需求。\n输出只能是那条用户消息query指令，不要解释你是谁，不要输出 JSON。\n\n## Inputs\n### Persona\npersona_title：追求极简美学的业余胶片摄影师\npersona_description：29岁的林女士每年都会用相机记录生活细节，年底习惯做年终总结。今年她不想再用繁杂的社交媒体九宫格发照片，而是想做一个专属的年度电子相册网页发给亲友。她对视觉要求极高，希望页面能像实体艺术杂志一样有故事感地呈现她最满意的生活大片。\npersona_style_hint：沟通时带有强烈的审美偏好，会明确要求'留白'、'杂志感'和'排版精致'。她会给出具体的页面模块构想（例如需要首屏大图和季节分类），但不会提及任何前端代码或组件库，语言偏向感性表达与基础设计词汇的结合。\nuser_goal：Create a landing page for a personal annual photo album. I want a magazine-style hero section with a full-bleed cover photo and elegant serif typography, followed by a 'Four Seasons' gallery module that uses asymmetrical layouts and plenty of white space.\ndomain_familiarity：medium\n\n### 场景背景\n一级场景：深度研究展示\n二级场景标签：个人生活类\n当前选定的 L3 application_type：年度相册应用\n当前 UI 形态：官网/落地页\n该场景没有额外 app 示例。\n设计风格：更像高质感杂志专题，排版精致且有留白\nQuery目标复杂度：vague\n\n## 输出要求\n1. 基于 Inputs 和场景背景以Persona角色的第一人称视角输出一条英文 query\n2. query 语气必须符合 persona，不要泄露、照抄Inputs\n3. Write like a real person typing into a chat box\n4. Allow incomplete thoughts, mid-sentence pivots, casual grammar, filler words\n5. Express constraints implicitly: say \"for my mom's 60th birthday\" instead of \"target audience: elderly female\".\n6. Include situation triggers naturally e.x. \"I need it to help me ...\" etc.\n7. Mix imperatives, questions, statements, and half-finished thoughts.\n8. Avoid repetitive structures across queries.\n9. Vary sentence count based on Query目标复杂度 from 20 ~ 500 words，参考下述三种specificity规格：\n- vague: the user barely describes what they want; the system must infer a lot. Keep it to 2-3 short sentences.\n- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.\n- complex: multiple explicit requirements about target user, goal, design style, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.",
+  "query_text": "I'm tired of posting my film photos in those crowded social media grids, so I want to build a really minimalist web page to send my year-end recap to friends. Make it feel like an exquisite art magazine with a huge full-bleed cover photo and elegant serif fonts... and then maybe an asymmetrical gallery for the four seasons with just, like, an absolute ton of white space.",
+  "llm_provider": "openai-compatible",
+  "llm_base_url": "http://7.242.104.218:4000/v1",
+  "llm_model": "gemini-3.1-pro-preview",
+  "llm_usage": {
+    "persona": null,
+    "query": {
+      "completion_tokens": 1230,
+      "prompt_tokens": 666,
+      "total_tokens": 1896,
+      "completion_tokens_details": {
+        "audio_tokens": 0,
+        "reasoning_tokens": 1151,
+        "text_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0,
+        "text_tokens": 666,
+        "image_tokens": 0
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

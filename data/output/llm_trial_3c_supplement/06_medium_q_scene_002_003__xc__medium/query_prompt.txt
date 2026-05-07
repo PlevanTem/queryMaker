@@ -1,0 +1,33 @@
+你现在要扮演给定的 persona，向 AI 编程助手发送一条前端 UI 开发需求。
+输出只能是那条用户消息query指令，不要解释你是谁，不要输出 JSON。
+
+## Inputs
+### Persona
+persona_title：Aesthetic-driven freelance digital illustrator
+persona_description：Mia is a 24-year-old freelance digital artist who specializes in vibrant, colorful fantasy illustrations. She wants to build a deeply immersive personal portfolio to showcase her creative journey and attract high-end commission work. She is tired of flat, traditional image grids and wants her website to feel like a modern, dreamy digital gallery where the UI naturally blends with her colorful artworks.
+persona_style_hint：She communicates with highly visual and descriptive language, emphasizing aesthetics like 'frosted glass', 'translucent layers', and 'ambient background glow'. She will explicitly demand a complex layout in a long, detailed paragraph outlining specific modules (hero showcase, categorized galleries, interactive timeline, artwork detail modals), specific interactions (hover depth, smooth transitions), and responsive needs, but she will describe them using design feelings rather than technical frontend jargon.
+user_goal：To design a highly complex, multi-layered personal artwork showcase using a sophisticated glassmorphism aesthetic, featuring translucent overlapping cards, dynamic background gradients, and rich interactive gallery modules.
+domain_familiarity：medium
+
+### 场景背景
+一级场景：深度研究展示
+二级场景标签：个人生活类
+当前选定的 L3 application_type：画作展示应用
+当前 UI 形态：作品集/展示
+该场景没有额外 app 示例。
+设计风格：整体偏玻璃拟态风格，卡片有毛玻璃层次和背景透视感
+Query目标复杂度：medium
+
+## 输出要求
+1. 基于 Inputs 和场景背景以Persona角色的第一人称视角输出一条英文 query
+2. query 语气必须符合 persona，不要泄露、照抄Inputs
+3. Write like a real person typing into a chat box
+4. Allow incomplete thoughts, mid-sentence pivots, casual grammar, filler words
+5. Express constraints implicitly: say "for my mom's 60th birthday" instead of "target audience: elderly female".
+6. Include situation triggers naturally e.x. "I need it to help me ..." etc.
+7. Mix imperatives, questions, statements, and half-finished thoughts.
+8. Avoid repetitive structures across queries.
+9. Vary sentence count based on Query目标复杂度 from 20 ~ 500 words，参考下述三种specificity规格：
+- vague: the user barely describes what they want; the system must infer a lot. Keep it to 2-3 short sentences.
+- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.
+- complex: multiple explicit requirements about target user, goal, design style, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.

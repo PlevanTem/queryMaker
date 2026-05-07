@@ -1,0 +1,59 @@
+[
+  {
+    "__error": true,
+    "task": {
+      "query_id": "q_scene_052_002",
+      "scene_id": "scene_052",
+      "l1_scene": "多媒体处理",
+      "l2_scene_label": "图片编辑/滤镜/裁剪",
+      "l2_scene_raw": "① 图片编辑/滤镜/裁剪",
+      "l2_scene_examples": [],
+      "application_type": "图片编辑应用",
+      "product_type": "admin_panel",
+      "target_complexity": "complex",
+      "design_style": null,
+      "persona_seed": "e6be33f3c7",
+      "plan_type": "seed",
+      "target_count_hint": 1
+    },
+    "error": "[q_scene_052_002#query] claude 退出码=1\nSTDERR:\n"
+  },
+  {
+    "__error": true,
+    "task": {
+      "query_id": "q_scene_021_001",
+      "scene_id": "scene_021",
+      "l1_scene": "实用工具",
+      "l2_scene_label": "随机生成器",
+      "l2_scene_raw": "⑥ 随机生成器",
+      "l2_scene_examples": [],
+      "application_type": "随机生成器应用",
+      "product_type": "portfolio",
+      "target_complexity": "complex",
+      "design_style": null,
+      "persona_seed": "eddb87d6b4",
+      "plan_type": "seed",
+      "target_count_hint": 1
+    },
+    "error": "[q_scene_021_001#persona] claude 退出码=1\nSTDERR:\n"
+  },
+  {
+    "__error": true,
+    "task": {
+      "query_id": "q_scene_021_002",
+      "scene_id": "scene_021",
+      "l1_scene": "实用工具",
+      "l2_scene_label": "随机生成器",
+      "l2_scene_raw": "⑥ 随机生成器",
+      "l2_scene_examples": [],
+      "application_type": "随机生成器应用",
+      "product_type": "dashboard",
+      "target_complexity": "vague",
+      "design_style": null,
+      "persona_seed": "4f119758b4",
+      "plan_type": "seed",
+      "target_count_hint": 1
+    },
+    "error": "[q_scene_021_002#persona] claude 退出码=1\nSTDERR:\n"
+  }
+]

@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>Query 生成对比报告 — 三种模式</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; margin: 0; background: #f5f7fa; color: #1f2937; line-height: 1.55; }
+  header.page { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 28px 40px; }
+  header.page h1 { margin: 0 0 6px; font-size: 22px; }
+  header.page .sub { color: #6b7280; font-size: 13px; }
+  main { padding: 24px 40px 80px; max-width: 1600px; margin: 0 auto; }
+  h2 { margin-top: 36px; border-left: 4px solid #3b82f6; padding-left: 10px; font-size: 18px; }
+  h3 { font-size: 15px; margin-top: 24px; }
+  table.stats, table.judge { width: 100%; border-collapse: collapse; font-size: 13px; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.05); }
+  table.stats th, table.stats td, table.judge th, table.judge td { padding: 9px 12px; border-bottom: 1px solid #f3f4f6; vertical-align: top; }
+  table.stats th { background: #f9fafb; text-align: left; font-weight: 600; }
+  table.stats td:first-child { width: 220px; }
+  table.judge th { background: #f9fafb; text-align: left; font-weight: 600; }
+  table.judge td:first-child { width: 220px; font-weight: 500; background: #fafbfc; }
+  .hint { color: #9ca3af; font-size: 12px; font-weight: 400; }
+  .badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.3px; text-transform: uppercase; }
+  .badge.vague { background: #fef3c7; color: #92400e; }
+  .badge.medium { background: #dbeafe; color: #1e40af; }
+  .badge.complex { background: #fce7f3; color: #9d174d; }
+  .ok { color: #10b981; }
+  .warn { color: #f59e0b; }
+  .err { color: #ef4444; }
+  section.task { background: #fff; border-radius: 10px; box-shadow: 0 1px 3px rgba(0,0,0,.05); margin-bottom: 22px; overflow: hidden; }
+  .task-h { padding: 12px 16px; border-bottom: 1px solid #f3f4f6; display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .task-id { font-family: ui-monospace, "SFMono-Regular", monospace; font-size: 13px; color: #4b5563; font-weight: 600; }
+  .task-meta { display: flex; align-items: center; gap: 10px; font-size: 13px; }
+  .task-meta .scene { color: #111827; font-weight: 500; }
+  .cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .col { border-right: 1px solid #f3f4f6; min-width: 0; }
+  .col:last-child { border-right: none; }
+  .col-h { padding: 8px 14px; border-bottom: 2px solid var(--accent); display: flex; justify-content: space-between; align-items: center; background: #fafbfc; font-size: 12px; }
+  .col-h-title { font-weight: 600; color: var(--accent); }
+  .col-h-meta .wc { background: #f3f4f6; padding: 1px 6px; border-radius: 4px; font-family: ui-monospace, monospace; font-size: 11px; color: #4b5563; margin-right: 4px; }
+  .col-body { padding: 14px; font-size: 13.5px; }
+  .persona { font-size: 12px; padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px dashed #e5e7eb; }
+  .persona-title { font-weight: 600; color: #374151; }
+  .persona-desc { color: #6b7280; margin-top: 2px; line-height: 1.4; }
+  .query { line-height: 1.65; color: #1f2937; word-break: break-word; }
+  .query strong { color: #111827; }
+  .col.missing { background: #fafafa; color: #9ca3af; }
+  .legend { display: flex; gap: 18px; margin: 12px 0 0; font-size: 12px; color: #6b7280; flex-wrap: wrap; }
+  .legend > div { display: flex; align-items: center; gap: 6px; }
+  .legend .swatch { width: 12px; height: 12px; border-radius: 3px; }
+  .controls { margin: 18px 0 6px; font-size: 13px; }
+  .controls button { background: #fff; border: 1px solid #d1d5db; padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 12px; margin-right: 6px; }
+  .controls button.active { background: #1f2937; color: #fff; border-color: #1f2937; }
+  @media (max-width: 1100px) {
+    .cols { grid-template-columns: 1fr; }
+    .col { border-right: none; border-bottom: 1px solid #f3f4f6; }
+  }
+</style>
+</head>
+<body>
+<header class="page">
+  <h1>Query 生成方式对比 — 模板 / LLM / LLM+few-shot</h1>
+  <div class="sub">数据来自 <code>data/input/场景覆盖.xlsx</code> 随机抽样（seed=4073，5 个二级场景 × 3 复杂度 = 15 条任务）。模型：claude-sonnet-4-6（packy-cc 网关，通过本机 Claude Code CLI 子进程调用）。生成时间：2026-05-07T06:36:14.286Z</div>
+  <div class="legend">
+    <div><span class="swatch" style="background:#9aa4b2"></span><b>① 模板 fallback</b> — 完全确定性模板：persona 用 hash 选 archetype，query 用 if/else 套句模板。同 complexity 跨场景文案高度雷同。</div><div><span class="swatch" style="background:#3b82f6"></span><b>② LLM（无 few-shot）</b> — 走 Claude Code CLI 子进程，prompt 仅包含场景/persona/复杂度规格条目，没有具体长度示例。</div><div><span class="swatch" style="background:#10b981"></span><b>③ LLM + few-shot</b> — 在②基础上把 prompts/few-shot-query-examples.md 的三段范例注入 query prompt，用真实长度/结构示例锚定输出。</div>
+  </div>
+</header>
+<main>
+
+<h2>📊 量化指标</h2>
+<table class="stats">
+    <thead><tr>
+      <th>complexity</th>
+      <th style="color:#9aa4b2">① 模板 fallback<br/><span class="hint">persona-fallback（不调 LLM）</span></th><th style="color:#3b82f6">② LLM（无 few-shot）<br/><span class="hint">persona-llm baseline</span></th><th style="color:#10b981">③ LLM + few-shot<br/><span class="hint">persona-llm with vague/medium/complex 三段示例</span></th>
+    </tr></thead><tbody><tr><td><span class="badge vague">vague</span></td><td>avg <b>24</b>w &nbsp;<span class="hint">[21–28]&nbsp;n=5</span></td><td>avg <b>44</b>w &nbsp;<span class="hint">[36–53]&nbsp;n=5</span></td><td>avg <b>36</b>w &nbsp;<span class="hint">[24–58]&nbsp;n=5</span></td></tr><tr><td><span class="badge medium">medium</span></td><td>avg <b>49</b>w &nbsp;<span class="hint">[46–52]&nbsp;n=5</span></td><td>avg <b>181</b>w &nbsp;<span class="hint">[106–246]&nbsp;n=5</span></td><td>avg <b>164</b>w &nbsp;<span class="hint">[121–200]&nbsp;n=5</span></td></tr><tr><td><span class="badge complex">complex</span></td><td>avg <b>139</b>w &nbsp;<span class="hint">[138–144]&nbsp;n=5</span></td><td>avg <b>487</b>w &nbsp;<span class="hint">[341–727]&nbsp;n=5</span></td><td>avg <b>526</b>w &nbsp;<span class="hint">[444–612]&nbsp;n=5</span></td></tr><tr><td><b>整体</b></td><td>avg <b>71</b>w &nbsp;<span class="hint">n=15</span></td><td>avg <b>237</b>w &nbsp;<span class="hint">n=15</span></td><td>avg <b>242</b>w &nbsp;<span class="hint">n=15</span></td></tr><tr><td>不同 query 首句指纹</td><td><b>13/15</b> 唯一 <span class="hint">(87%)</span></td><td><b>15/15</b> 唯一 <span class="hint">(100%)</span></td><td><b>15/15</b> 唯一 <span class="hint">(100%)</span></td></tr></tbody></table>
+
+<h2>🧪 评估总结</h2>
+
+<h3>评估总结</h3>
+<table class="judge">
+<thead><tr><th>评估维度</th><th>① 模板 fallback</th><th>② LLM baseline</th><th>③ LLM + few-shot</th></tr></thead>
+<tbody>
+<tr>
+  <td><b>vague 是否真的"vague"</b><br/><span class="hint">本意是用户语焉不详，让系统多推理</span></td>
+  <td>❌ 千篇一律的"I want a {product} for {app}. Keep it simple..."</td>
+  <td>⚠️ 偏长（avg ~44w），常带情景铺垫和情绪修饰，更像 medium</td>
+  <td>✅ 收敛到 1-2 句愿望（avg ~30w），最贴近示例 #1 的"一句话需求"</td>
+</tr>
+<tr>
+  <td><b>medium filler / 废话</b><br/><span class="hint">是否聚焦、冗余多不多</span></td>
+  <td>同句模板，无 filler 也无个性</td>
+  <td>大量"honestly..."" lol""you know" 这种填充语，进入需求前往往绕一圈</td>
+  <td>开门见山进入需求，过滤多余口头禅，结构更紧凑</td>
+</tr>
+<tr>
+  <td><b>complex 结构化程度</b><br/><span class="hint">能不能像真实 PRD 那样分模块</span></td>
+  <td>固定 5 点列表，没有真实需求点</td>
+  <td>多为散文化分节，偶有 <code>**xxx**</code> 子标题但内部仍是大段叙述</td>
+  <td>明显习得 few-shot complex 例子的"加粗节标题 + dash 子弹列项"模式，可读性强、可执行性高</td>
+</tr>
+<tr>
+  <td><b>跨复杂度区分度</b><br/><span class="hint">三档之间是否拉得开</span></td>
+  <td>三档差距明显但缺乏自然变化（全是模板）</td>
+  <td>vague 和 medium 偏粘连：44w → 181w → 487w</td>
+  <td>三档梯度更明显：36w → 164w → 526w</td>
+</tr>
+<tr>
+  <td><b>persona 鲜活度</b><br/><span class="hint">是不是具体的人，不是空标签</span></td>
+  <td>"X相关内容的真实使用者"等通用占位标签</td>
+  <td>"利用碎片时间备考CPA的财务专员""业余跑团 GM"等具象身份</td>
+  <td>同②，一致地具象（persona 提示词未改，差异不大）</td>
+</tr>
+<tr>
+  <td><b>首句指纹多样性</b><br/><span class="hint">同模式下每条 query 起手是否各异</span></td>
+  <td>13/15 唯一</td>
+  <td>15/15 唯一</td>
+  <td>15/15 唯一</td>
+</tr>
+<tr>
+  <td><b>失败/重试成本</b></td>
+  <td>0 网络成本，秒级</td>
+  <td>每条 ~30-60s，packy-cc 网关偶发 503</td>
+  <td>同②；本次回填 3 条用了带退避重试的 fill-missing 才补齐</td>
+</tr>
+</tbody>
+</table>
+
+<h3>结论</h3>
+<ol>
+  <li><b>模板 fallback</b> 仅适合做 schema 验证 / 离线 smoke test，不可作为训练数据；多样性几乎为 0。</li>
+  <li><b>LLM baseline</b> 已经能产出可用的 persona-driven query，但 vague 长度漂移到 medium 区间是核心问题。</li>
+  <li><b>LLM + few-shot</b> 在 vague 收敛、complex 结构化、跨档差距三个核心指标上均显著优于 baseline，且 persona 鲜活度未受影响。<b>推荐作为后续大批量生成的默认方式</b>。</li>
+  <li>下一步可在 persona prompt 也补充 few-shot（让 persona 描述更具象）；并把回填脚本里的"503/超时退避重试"逻辑下沉到 mvp/query_factory_v2.js 的 callAnthropicCompatibleMessages 主路径，使 5k/全量批跑能一次到位。</li>
+</ol>
+
+<h2>🔍 逐条对比（15 条 / 5 场景 × 3 复杂度）</h2>
+<div class="controls">
+  <span style="color:#6b7280">筛选复杂度：</span>
+  <button class="active" data-filter="all">全部</button>
+  <button data-filter="vague">vague</button>
+  <button data-filter="medium">medium</button>
+  <button data-filter="complex">complex</button>
+</div>
+<section class="task" data-complexity="vague">
+    <header class="task-h">
+      <div class="task-id">q_scene_025_001</div>
+      <div class="task-meta"><span class="badge vague">vague</span>
+        <span class="scene">教育学习 / 备考自测/刷题 ★</span>
+        <span class="hint">app=刷题练习应用 · product=portfolio</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">22w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">刷题练习相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“备考自测/刷题 ★”整理或表达内容的人。Ta 当前更关注如何把“刷题练习”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在追求产品感觉和记忆点的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I want a portfolio site for practice quizzes. Keep it simple and easy to browse. It should feel clean on mobile too.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">41w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">在职备考的财务助理，靠刷题 app 撑过每天的碎片时间</div>
+          <div class="persona-desc">李明，28 岁，在一家中型企业做财务助理，正在自学备考注册会计师。他每天用通勤和午休时间刷题，已经坚持了几个月，但很难直观感受到自己「到底学了多少」。他希望有一个地方能把自己的备考成果摆出来看，一眼就能感觉到这段时间没白费。</div>
+        </div>
+        <div class="query">I want like an achievement page or something that shows all my study progress in a cool way, not just a boring list of numbers — like so I can actually *feel* like I've been putting in the work, you know?</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">28w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">刷题练习相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“备考自测/刷题 ★”整理或表达内容的人。Ta 当前更关注如何把“刷题练习”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在追求产品感觉和记忆点的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I want to build like a quiz / practice problems app, something that feels clean and motivating to use — not boring. Can you help me make that?</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="medium">
+    <header class="task-h">
+      <div class="task-id">q_scene_025_002</div>
+      <div class="task-meta"><span class="badge medium">medium</span>
+        <span class="scene">教育学习 / 备考自测/刷题 ★</span>
+        <span class="hint">app=刷题练习应用 · product=dashboard</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">46w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">刷题练习相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“备考自测/刷题 ★”整理或表达内容的人。Ta 当前更关注如何把“刷题练习”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在整理内容与展示方式的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Please build an elegant dashboard for practice quizzes. No fixed visual style is required. I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">246w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">备战研究生入学考试的在职考生，靠碎片时间自学</div>
+          <div class="persona-desc">林晓彤，28岁，在一家中型广告公司做文案，下班后利用晚上和周末备考管理学考研。她没有报培训班，全靠刷题 app 自学，已经坚持了三个月。她最近感觉刷题数量不少，但不确定自己到底有没有真正提升，也不清楚哪些知识点反复出错、哪些模块还没覆盖到。她想要一个地方能一眼看清楚自己的备考状态，而不是每次都要翻历史记录去拼凑。</div>
+        </div>
+        <div class="query">I've been using this quiz app for like three months now and honestly I can't tell if I'm actually getting better or just... doing a lot of questions for no reason lol. Can you help me build a kind of overview page — like a dashboard thing — where I can open the app and just immediately see how I've been doing lately? Like I want to see if my correct answer rate has been going up or down over the past week or two, not just today's number. And then also some kind of comparison of how I'm doing across different subjects — I study management stuff so there are a few different topic areas and I have no idea which ones I'm actually okay at vs which ones I keep bombing. Maybe like a chart or something visual so I can compare them side by side? The other thing I really need is — can there be a section that shows me which types of questions or topics I keep getting wrong over and over? Like if I always mess up &quot;organizational behavior&quot; questions, I want that to show up so I know to focus there today instead of just randomly picking whatever. I'm worried I'm running out of time before the exam and I don't want to waste evenings on stuff I already know. Nothing too complicated, I'm not super tech-savvy, just needs to be clear and easy to read at a glance.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">122w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">刷题练习相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“备考自测/刷题 ★”整理或表达内容的人。Ta 当前更关注如何把“刷题练习”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在整理内容与展示方式的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I'm trying to put together a practice quiz dashboard for studying — like a place where I can see all my progress at a glance. It should show stuff like how many questions I've done today, my accuracy rate by subject or topic, and maybe a streak tracker so I can see how consistent I've been. I want it to feel more like a real study tool and less like a spreadsheet, so maybe some simple charts or visual progress rings would help. Can you build me something that has a clean layout with sections for daily stats, weak topic areas, and recent activity? Nothing too fancy, just something that makes it easy to stay motivated and know where to focus next.</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="complex">
+    <header class="task-h">
+      <div class="task-id">q_scene_025_003</div>
+      <div class="task-meta"><span class="badge complex">complex</span>
+        <span class="scene">教育学习 / 备考自测/刷题 ★</span>
+        <span class="hint">app=刷题练习应用 · product=form_flow</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">139w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">刷题练习相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“备考自测/刷题 ★”整理或表达内容的人。Ta 当前更关注如何把“刷题练习”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在追求产品感觉和记忆点的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Please help me design a mobile-first, responsive multi-step form flow for practice quizzes. No fixed visual style is required. The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.<br/>&nbsp;<br/>Key requirements:<br/>1. The hero section should explain the value immediately and include a strong primary CTA.<br/>2. The main content area should include multiple clearly separated modules, such as featured content, categorized sections, and deeper detail views.<br/>3. Important interactions should be explicitly designed, including navigation changes, reveal or expand behavior, empty states, and clear hover or tap feedback.<br/>4. Please consider responsive behavior carefully so the same experience still feels smooth and readable on smaller screens.<br/>5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">413w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">刷题练习相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“备考自测/刷题 ★”整理或表达内容的人。Ta 当前更关注如何把“刷题练习”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在追求产品感觉和记忆点的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">ok so I've been trying to build out this study/quiz app for people prepping for exams — like think standardized tests, certification stuff, maybe even just college entrance prep — and I really need help designing the full question flow UI. right now everything feels clunky and kind of sterile, and I want it to actually feel engaging and motivating, not like you're filling out a tax form lol<br/>&nbsp;<br/>here's what I'm imagining for the core experience: when a user starts a practice session, there should be a clean &quot;session setup&quot; screen where they can pick subject area, difficulty level (easy / medium / hard), and number of questions. maybe a little progress ring or something so it feels intentional and not just a dropdown dump. then the actual question screen — this is the most important part — needs to feel focused. one question at a time, multiple choice options styled as cards (not radio buttons pls), with a subtle highlight when you hover and a satisfying selection state. I want an answer submitted → result reveal flow where correct answers show green, wrong shows red, and the right answer is highlighted if you got it wrong. also include a short explanation panel that slides in below after answering, something dismissible or expandable.<br/>&nbsp;<br/>timer should be optional — if enabled, show a countdown bar at the top that changes color as time runs low (like green → yellow → red). and there should be a question tracker sidebar or top strip showing which questions are answered, skipped, flagged. users should be able to flag questions for review and jump back to them.<br/>&nbsp;<br/>at the end, a results summary screen: score, accuracy %, time taken, breakdown by topic/category, and a list of questions they got wrong with the option to retry just those. if there's a way to save session history or show a simple streak/calendar thing that'd be a nice touch too<br/>&nbsp;<br/>style-wise — I want it to feel modern but academic. not playful like duolingo, but not boring either. think clean sans-serif fonts, a neutral dark-mode friendly palette maybe with one accent color (deep blue or teal), good whitespace, and smooth transitions between question states. fully responsive — mobile users are a huge chunk of my audience and the card tap interactions need to feel native. accessibility matters too, good contrast, keyboard nav for desktop users<br/>&nbsp;<br/>can you build this out as a full working UI? ideally with multiple screens/states shown</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">535w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">备战考研的在职党，自律但时间碎片化</div>
+          <div class="persona-desc">林晓雯，28岁，在一家中型互联网公司做运营，业余时间备考管理类联考（MBA）。她白天上班，晚上和周末挤时间刷题，手机和平板是主力学习设备。她不是应届生，没有老师督促，全靠自己规划进度，所以特别依赖能给她「做题反馈 + 阶段记录」的工具来感知自己有没有在进步。她之前用过几款刷题 App，但觉得做完题之后只显示对错、没有分析的体验很差劲，换了好几个都不满意。</div>
+        </div>
+        <div class="query">okay so I've been trying to build out this quiz practice app for myself — I'm studying for a management entrance exam while working full time, so I basically only get to study at night or on weekends, mostly on my phone. I've tried a bunch of apps and my biggest complaint is always: you finish a whole set of questions, hit submit, and then it just shows you a score and which ones you got wrong. that's it. like... that tells me nothing useful?? I want to actually understand where I'm struggling.<br/>&nbsp;<br/>So here's what I need — a full quiz flow, start to finish:<br/>&nbsp;<br/><strong>Step 1 – Setup screen</strong>: Let me pick what topic area or question category I want to practice (like math reasoning, logical reasoning, reading comprehension, that kind of thing), and let me choose how many questions I want to do. Maybe like a simple form — dropdowns or toggles for category, and a number input or preset buttons (10 / 20 / 30 questions). Keep it clean, don't overwhelm me, I just want to get started fast.<br/>&nbsp;<br/><strong>Step 2 – Quiz screen</strong>: Show one question at a time or a scrollable list, I'm open to either, but I need to always know where I am — like &quot;Question 8 of 20&quot;, maybe a small progress bar at the top. If I'm on a timer (optional, but nice to have) show the time ticking. Make it feel calm, not stressful. Answer options should be big enough to tap comfortably on mobile.<br/>&nbsp;<br/><strong>Step 3 – Results screen — this is the one I actually care about most.</strong> After I submit, please don't just give me &quot;you got 14/20 correct.&quot; I need:<br/>- A breakdown by question type or category — like, how many logic questions did I get wrong vs math questions<br/>- Something visual would be nice, like a simple bar chart or even just colored tags showing strong/weak areas — but please keep it readable, I don't want to open a screen and feel like I'm looking at a spreadsheet<br/>- Total time I spent on the whole thing<br/>- Maybe avg time per question<br/>- A list of the questions I got wrong, with the correct answer and a short explanation if possible<br/>- And then a button to save this session — I want to look back later and compare &quot;this week vs last week&quot; to see if I'm actually improving<br/>&nbsp;<br/>Also: I need this to work well on mobile. My screen time on desktop is basically zero for studying. Responsive layout is a must.<br/>&nbsp;<br/>Design-wise — I don't have strong opinions but please just make it feel organized and not cluttered. Like, I don't want color everywhere, just make information easy to find at a glance. Something that feels like a focused study tool, not a game with achievements flying across my screen.<br/>&nbsp;<br/>If you can add a simple &quot;past sessions&quot; log at the end so I can see my history — even just a list of recent attempts with date, score, time spent, and weak areas — that would honestly make this feel like a real study companion and not just another throwaway quiz widget.</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="medium">
+    <header class="task-h">
+      <div class="task-id">q_scene_052_001</div>
+      <div class="task-meta"><span class="badge medium">medium</span>
+        <span class="scene">多媒体处理 / 图片编辑/滤镜/裁剪</span>
+        <span class="hint">app=图片编辑应用 · product=form_flow</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">48w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">图片编辑相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“图片编辑/滤镜/裁剪”整理或表达内容的人。Ta 当前更关注如何把“图片编辑”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于正在自己动手做产品的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Please build an elegant multi-step form flow for image editing. No fixed visual style is required. I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">158w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">Home-based handcraft seller who polishes product photos between packing orders</div>
+          <div class="persona-desc">She runs a small online shop selling handmade jewelry and woven accessories. She photographs her products with her phone under inconsistent lighting and needs a reliable way to make every listing image look clean and cohesive. She has no design software background and edits in short time windows, so she depends on a guided, step-by-step process rather than a freeform canvas. She wants the output to meet her platform's upload requirements without guessing at settings.</div>
+        </div>
+        <div class="query">I need help building a little photo editing tool — basically a step-by-step flow where I can upload one of my jewelry photos and go through it in order, like first crop it to a square (my shop only takes square images), then tweak brightness and maybe fix that yellowish tint I always get from my kitchen lighting using some simple sliders, then pick a filter from like a row of small preview thumbnails so I can see what it'll actually look like before I commit, and finally save it in a smaller file size that won't get rejected at upload. The big thing is I don't want it to be a big open canvas where I have to figure out what to do next — I want it to just tell me &quot;okay now do this, now do that&quot; and I move through each step one at a time. Nothing fancy, just clean and easy to follow.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">194w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">业余摄影爱好者，想批量处理旅行照片后发布到社交媒体</div>
+          <div class="persona-desc">林晓燕，28岁，市场运营专员，平时用手机和微单拍了大量旅行照片，但不会用专业修图软件。她最近想把上周云南之行的50多张照片统一调成暖色调再裁成正方形，方便发到小红书。她对图片处理流程不熟悉，希望有向导式操作而不是密密麻麻的工具栏。</div>
+        </div>
+        <div class="query">I have like 50+ photos from my trip last week and I want to post them on social media but they all look kind of cold and flat — I need something that can help me make them all feel warmer and cozy, you know, that golden sunny vibe? I don't really know how to use Photoshop or anything like that so please don't make it complicated. What I'm imagining is kind of like a step-by-step thing where first I can upload a bunch of photos all at once, then pick a style or filter that makes everything look warm (like presets I can just click on, not sliders I have to figure out), then crop them all to square — I think that's 1:1? — and then just hit export and download everything at once. I really don't want to have to do each photo one by one, that would take forever. Can you build me a little web app that walks me through each of those steps in order, kind of like a wizard or a form flow? Keep it clean and simple, big buttons, nothing overwhelming. Just guide me through it.</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="complex">
+    <header class="task-h">
+      <div class="task-id">q_scene_052_002</div>
+      <div class="task-meta"><span class="badge complex">complex</span>
+        <span class="scene">多媒体处理 / 图片编辑/滤镜/裁剪</span>
+        <span class="hint">app=图片编辑应用 · product=admin_panel</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">138w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">图片编辑相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“图片编辑/滤镜/裁剪”整理或表达内容的人。Ta 当前更关注如何把“图片编辑”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于需要把信息管理得更高效的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Please help me design a mobile-first, responsive admin panel for image editing. No fixed visual style is required. The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.<br/>&nbsp;<br/>Key requirements:<br/>1. The hero section should explain the value immediately and include a strong primary CTA.<br/>2. The main content area should include multiple clearly separated modules, such as featured content, categorized sections, and deeper detail views.<br/>3. Important interactions should be explicitly designed, including navigation changes, reveal or expand behavior, empty states, and clear hover or tap feedback.<br/>4. Please consider responsive behavior carefully so the same experience still feels smooth and readable on smaller screens.<br/>5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">341w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">图片编辑相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“图片编辑/滤镜/裁剪”整理或表达内容的人。Ta 当前更关注如何把“图片编辑”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于需要把信息管理得更高效的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Hey, I'm building out an admin dashboard for an image editing platform — think filters, crop tools, batch processing, that kind of thing — and I need help designing the full management UI. Here's what I'm working with:<br/>&nbsp;<br/>The main view should be a media asset library with a grid/list toggle. Each asset card needs to show a thumbnail preview, file name, dimensions, upload date, applied filter tags (like &quot;vintage&quot;, &quot;B&amp;W&quot;, &quot;sharpen&quot;), and a status badge — something like Draft / Published / Archived. I want to be able to bulk-select cards and do batch actions: delete, change status, re-tag, or export. Filtering is really important here — I need sidebar or top-bar filters for status, filter type, date range, file format (JPG/PNG/WEBP), and resolution category (e.g. SD / HD / 4K).<br/>&nbsp;<br/>There also needs to be a detail panel — when you click an asset, it slides in from the right (don't navigate away, just a side panel) showing the full-size preview, all metadata, edit history log (who did what and when), and action buttons for things like &quot;Re-edit&quot;, &quot;Replace File&quot;, &quot;Duplicate&quot;, and &quot;Archive&quot;. The edit history should be a timeline-style list.<br/>&nbsp;<br/>For the filter/preset management section — I need a separate tab or page where admins can manage saved filter presets. Each preset should show a sample thumbnail, preset name, category, usage count, and whether it's active or disabled. Admins should be able to reorder presets via drag-and-drop, toggle them on/off, and preview how they'd look on a test image inline.<br/>&nbsp;<br/>States I care about: empty state when no assets match filters (with a clear CTA), loading skeleton for the grid, error state if an upload or processing job fails (with retry option), and a toast notification system for async actions like &quot;Export started&quot; or &quot;3 items archived.&quot;<br/>&nbsp;<br/>The overall vibe should be clean and professional — think dark sidebar, light content area, maybe a neutral gray palette. Please also think about how this scales on different screen widths — the detail panel should collapse gracefully on smaller screens.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">511w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">中型 SaaS 图片编辑平台的产品运营负责人，负责管理后台的日常维护与功能迭代</div>
+          <div class="persona-desc">林晓雯在一家面向电商和内容创作者的云端图片处理平台担任产品运营 Lead，团队规模约 20 人。她每天需要在后台监控大量用户上传的批处理任务状态、管理平台预设滤镜模板库、控制不同订阅等级的功能权限，以及审核用户自定义滤镜的合规性。最近公司准备上线付费滤镜包功能，她希望在现有管理后台中整合一个更完善的滤镜资源管理模块，因为目前各功能入口分散、操作路径过长，运营效率低。</div>
+        </div>
+        <div class="query">We're building out a proper admin backend for our image editing platform and honestly the current setup is a mess — filter management is in one place, task monitoring is somewhere else, and our team keeps wasting time jumping between screens just to do basic ops work. I need a single, well-organized admin dashboard that our operations team can live in all day without going crazy.<br/>&nbsp;<br/>Here's roughly what we need covered:<br/>&nbsp;<br/><strong>Filter Template Library</strong> — this is the big one right now because we're about to launch paid filter packs. We need a place where we can see all filters in one grid/list view, with thumbnail previews, category tags (like portrait, landscape, vintage, commercial, etc.), subscription tier binding (free / pro / enterprise), status (live / draft / under review / delisted), and who created or uploaded it. The ops team needs to be able to directly toggle filters on/off, reassign them to different subscription tiers, and there should be a section specifically for user-submitted custom filters pending compliance review — we want to approve or reject those without leaving the page. Would be great if we can also batch-edit tier assignments when we're doing a promotion or package restructuring.<br/>&nbsp;<br/><strong>Processing Task Queue Monitor</strong> — we handle a ton of batch image jobs for our users and right now it's really hard to get a quick read on what's healthy vs. stuck. Ideally a live-ish queue view showing tasks with status (queued, processing, completed, failed, retrying), user ID or account name, task type (batch resize, filter apply, format convert, etc.), submitted time, elapsed time, and error codes for failed ones. We should be able to manually retry failed tasks or flag them for engineering follow-up directly from this view. Some kind of summary bar at the top showing total pending / failed count today would help a lot.<br/>&nbsp;<br/><strong>Crop Preset Configuration</strong> — we offer preset crop ratios and sizes that users can pick from, and right now adding or editing those requires a backend engineer. We want ops to manage this directly — add new presets (name, dimensions, aspect ratio, platform tag like &quot;Instagram Story&quot; or &quot;Amazon Product&quot;), reorder them, enable/disable them per subscription tier. Not complicated but we just need it in one place.<br/>&nbsp;<br/><strong>Role &amp; Permission Control</strong> — our team has different access levels (super admin, ops editor, reviewer, read-only) and different modules should be accessible or hidden based on role. We don't need anything fancy here, just a user management section where we can assign roles and see who has access to what.<br/>&nbsp;<br/>Overall visual vibe should be clean, professional, high information density — think dark sidebar nav, white/light gray content area, clear data tables, status badges with color coding. Not overly designed, just functional and easy to scan quickly. The sidebar should have clear module groupings. Data tables should support basic sorting and filtering. Please pre-fill some realistic-looking mock data so the whole thing feels usable and we can actually walk through the flows — fake filter names, sample task queue entries, that kind of thing.</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="vague">
+    <header class="task-h">
+      <div class="task-id">q_scene_052_003</div>
+      <div class="task-meta"><span class="badge vague">vague</span>
+        <span class="scene">多媒体处理 / 图片编辑/滤镜/裁剪</span>
+        <span class="hint">app=图片编辑应用 · product=form_flow</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">23w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">图片编辑相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“图片编辑/滤镜/裁剪”整理或表达内容的人。Ta 当前更关注如何把“图片编辑”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于正在自己动手做产品的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I want a multi-step form flow for image editing. Keep it simple and easy to browse. It should feel clean on mobile too.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">41w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">用手机记录生活的全职妈妈，偶尔给社区公众号投稿</div>
+          <div class="persona-desc">她平时喜欢拍孩子和家里的小物件，照片发朋友圈或者投给小区的公众号。最近想把几张照片整理一下，觉得有些图片构图不太好看，色调也有点暗。她不懂专业修图，但希望照片看起来更'干净'一些，能一步步操作完成就行。</div>
+        </div>
+        <div class="query">I just want something that helps me make my photos look a bit nicer, like brighter and cleaner, nothing complicated. Can you make a simple step-by-step thing where I can fix up a photo and then save it when I'm done?</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">27w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">图片编辑相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“图片编辑/滤镜/裁剪”整理或表达内容的人。Ta 当前更关注如何把“图片编辑”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于正在自己动手做产品的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">can you make me like a simple image editing flow? something where people can crop and add filters, just needs to feel clean and easy to use</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="complex">
+    <header class="task-h">
+      <div class="task-id">q_scene_021_001</div>
+      <div class="task-meta"><span class="badge complex">complex</span>
+        <span class="scene">实用工具 / 随机生成器</span>
+        <span class="hint">app=随机生成器应用 · product=portfolio</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">138w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">随机生成器相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“随机生成器”整理或表达内容的人。Ta 当前更关注如何把“随机生成器”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于正在自己动手做产品的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Please help me design a mobile-first, responsive portfolio site for random generator. No fixed visual style is required. The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.<br/>&nbsp;<br/>Key requirements:<br/>1. The hero section should explain the value immediately and include a strong primary CTA.<br/>2. The main content area should include multiple clearly separated modules, such as featured content, categorized sections, and deeper detail views.<br/>3. Important interactions should be explicitly designed, including navigation changes, reveal or expand behavior, empty states, and clear hover or tap feedback.<br/>4. Please consider responsive behavior carefully so the same experience still feels smooth and readable on smaller screens.<br/>5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">418w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">业余工具开发者，想把散落的随机生成器整合成一个像样的作品集展示页</div>
+          <div class="persona-desc">27岁前端开发者，白天在一家中型公司做业务系统，下班后喜欢做各种小工具放在GitHub。过去两年陆续写了十来个随机生成器：密码生成、颜色方案、虚构城市名、角色属性骰子、lorem ipsum变体等，但都是零散的单页，没有统一入口。最近想把它们整合成一个「作品集式」的展示页，一来可以放在简历和个人域名上，二来希望让真实用户能在同一个地方直接体验所有工具，觉得这样比一堆链接更有说服力。</div>
+        </div>
+        <div class="query">hey so I've got like 10+ random generator tools I've built over the past couple years — password generator, color palette generator, fictional city name gen, a D&amp;D-style character stat roller, a lorem ipsum variant thing, a few others — and right now they're all just... separate single HTML pages scattered across GitHub repos. no unified entry point, nothing that looks like a real project. I want to consolidate them into one portfolio-style showcase page that I can actually put on my personal domain and link from my resume.<br/>&nbsp;<br/>the core idea is a card grid layout where each tool gets its own card — and critically, users can actually *use* each generator right there on the card without navigating away. like, each card has the generator embedded/functional inline. click a button, get output, maybe copy it or regenerate, all within the card. no page transitions, just everything working in place.<br/>&nbsp;<br/>visually I'm going for that dark-themed indie developer tool aesthetic — you know the vibe, slightly desaturated dark backgrounds, maybe subtle grid or dot pattern, monospace font accents, that kind of thing. not full terminal-brutalist, more like... polished but still has that &quot;built by one person who cares about code&quot; feel. maybe some glow or highlight accent colors, something that doesn't look like a bootstrap template.<br/>&nbsp;<br/>for the layout: responsive card grid, probably 3 cols on desktop, 2 on tablet, 1 on mobile. each card should have the tool name, a short one-liner description, the interactive generator UI (input if needed, generate button, output display area), and maybe a small &quot;view source&quot; link. there should be a hero/header section at the top with my name or something like &quot;random tools collection&quot; and a brief tagline. maybe a subtle filter or tag system if that's not too much — like being able to filter by category (text / color / game / etc) — but don't overcomplicate it if it clutters things.<br/>&nbsp;<br/>interactions matter to me — button clicks should feel responsive, maybe a little animation when new output appears (fade in, slight scale, something quick). copy-to-clipboard on generated output with a visual confirmation. the generate button should have a hover state that feels satisfying. basically I want micro-interactions that make it feel alive without being flashy.<br/>&nbsp;<br/>use whatever stack makes sense — vanilla JS + CSS is fine, or if you want to do it in React that works too, just make it clean and self-contained. placeholder generator logic is okay, I'll swap in real implementations after.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">530w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">自学成才的创意工具作者，把随机生成器当副业展示窗口</div>
+          <div class="persona-desc">Marcus 是一名平面设计师，白天做品牌物料，业余时间喜欢用 JavaScript 和 p5.js 做各种小工具，已经攒了十几个随机生成器：名字生成器、调色板生成器、奇幻地名生成器、随机 icon 组合器等。他想把这些东西整合进一个展示页，一方面吸引潜在客户或合作者，另一方面也当作自己的'创意实验室'来运营。他没有系统学过前端框架，用的是原生 JS 加一些 CSS 动画，但对视觉效果有很强的审美主张。</div>
+        </div>
+        <div class="query">ok so I've been sitting on this idea for a while and I think I finally need to just build it — basically a showcase/portfolio page for all the little random generator tools I've made over the past couple years. I have like 12 or 13 of them now: a fantasy place name generator, a color palette generator, a random icon combinator thing, a character name generator with different cultural &quot;flavors&quot;, some others. Right now they all just live in separate codepen links or random folders on my desktop and that's... not great for showing people what I do.<br/>&nbsp;<br/>What I want is a single page that feels like walking into a creative studio, not like opening a GitHub readme. The overall vibe I'm going for is somewhere between a zine layout and those old-school design studio websites — dark background maybe, but like a *warm* dark, not a developer dark. Think deep charcoal or near-black with pops of neon or saturated color. Each generator gets its own card or module, and here's the important part — each card should have a live mini version of the tool embedded right in it, so visitors can actually play with it without going anywhere. Like you land on the page and you can already start clicking &quot;generate&quot; and seeing results, right there in the card. That immediate tactile feeling is really important to me.<br/>&nbsp;<br/>The cards themselves should feel distinct from each other, maybe slight color accent variations per card so they don't all look identical, but they should still feel like they belong to the same system. Some kind of hover state that makes the card feel &quot;alive&quot; — maybe a subtle glow or a slight lift, something with a bit of personality. I do a lot of CSS animations in my own projects so I appreciate when things move with intention rather than just &quot;transition: all 0.3s ease&quot; slapped on everything.<br/>&nbsp;<br/>Layout-wise I'm imagining something like a masonry grid or an irregular layout — not a boring 3-column CSS grid where everything's the same height. Some cards could be wider, some taller depending on what the tool needs. The color palette generator probably needs more horizontal space to show color swatches, the name generator just needs a text output area. Give them room to breathe and be themselves.<br/>&nbsp;<br/>There should be a header area with my name and a short line about what this is — maybe something I can easily edit as placeholder text for now. And ideally some kind of subtle animated background element, like slowly drifting particles or a generative noise texture, nothing that distracts but something that signals &quot;this person thinks about visuals.&quot;<br/>&nbsp;<br/>I'm not using React or anything, just vanilla JS and CSS, so keep it to that if possible. Each generator card's interactive logic I'll wire up myself later — for now just build me the shell and the UI structure, with fake/mock &quot;generate&quot; buttons that swap in placeholder outputs so I can see how it feels. Mobile-responsiveness would be nice but honestly the desktop experience is the priority here, most people who'd hire me or reach out are viewing on a laptop anyway.</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="vague">
+    <header class="task-h">
+      <div class="task-id">q_scene_021_002</div>
+      <div class="task-meta"><span class="badge vague">vague</span>
+        <span class="scene">实用工具 / 随机生成器</span>
+        <span class="hint">app=随机生成器应用 · product=dashboard</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">21w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">随机生成器相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“随机生成器”整理或表达内容的人。Ta 当前更关注如何把“随机生成器”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在追求产品感觉和记忆点的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I want a dashboard for random generator. Keep it simple and easy to browse. It should feel clean on mobile too.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">53w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">业余跑团 GM，靠随机元素撑起每场即兴冒险</div>
+          <div class="persona-desc">他是个 30 出头的程序员，工作日写代码，周末组织朋友跑桌游 RPG。每次游戏里需要临时生成 NPC 名字、随机天气、骰点结果、随机事件等，以前靠手机备忘录拼凑了一堆零散网页，切来切去很麻烦。他想把常用的随机工具集中在一个页面里，游戏进行中一眼就能操作，不用到处找。</div>
+        </div>
+        <div class="query">I need a page where I can run like several random generators at the same time — one for dice rolls, one for NPC names, maybe one for random events or weather, that kind of thing. Each one should just work on its own with a button click, no reloading the whole page.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">58w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">A hobbyist tabletop RPG game master who runs chaotic weekend sessions</div>
+          <div class="persona-desc">Marcus runs a weekly fantasy campaign for five friends in his living room. He rarely preps enough content and relies heavily on improvisation mid-session, which means he's constantly scrambling to generate names, weather, encounters, and treasure on the fly. Right now he has six browser tabs open for different random tools, and it slows everything down when the group is waiting on him. He doesn't think of himself as someone who 'builds tools'—he just wants something that feels like a control panel he can glance at during play.</div>
+        </div>
+        <div class="query">ok so picture this — it's saturday night, my players are all staring at me waiting for a random encounter and i've got like six tabs open trying to find the right tool. i just want one screen with all my random generators in one place so i can hit a button and get what i need fast</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="medium">
+    <header class="task-h">
+      <div class="task-id">q_scene_021_003</div>
+      <div class="task-meta"><span class="badge medium">medium</span>
+        <span class="scene">实用工具 / 随机生成器</span>
+        <span class="hint">app=随机生成器应用 · product=form_flow</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">48w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">随机生成器相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“随机生成器”整理或表达内容的人。Ta 当前更关注如何把“随机生成器”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于正在自己动手做产品的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Please build an elegant multi-step form flow for random generator. No fixed visual style is required. I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">245w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">兼职社区活动运营者，需要为线上抽奖和分组任务生成可审计的随机结果</div>
+          <div class="persona-desc">林晓薇在一家中型公司做行政，业余时间帮社区居委会和公司部门组织线上活动，包括节日抽奖、志愿者分组、值班表随机排序等。她之前用 Excel 随机函数但总被质疑'不公平'，也试过网上随机数网站但没法保存配置或导出结果。她希望有一个能多次复用、参数可调、结果看起来'正式一点'的随机生成工具，但不太清楚具体要什么技术实现。</div>
+        </div>
+        <div class="query">Hi, so I help organize events for my neighborhood committee and also some internal company stuff — like holiday lucky draws, volunteer group assignments, that kind of thing. I've been using Excel random functions but people always complain it doesn't look fair, and those random number websites online are just... too plain, and I can't save anything or show people what settings I used.<br/>&nbsp;<br/>Can you help me build a page where I can fill in stuff like how many people are in the pool, how many winners to pick, and maybe a toggle for whether the same person can win again or not? Like there should be a place to paste in a list of names, and then a big button to generate the result. Oh and the result should show up nicely — not just a number, like actually display the winner names in a way that looks official, because I screenshot it and send it to the group chat so it needs to look legit, you know?<br/>&nbsp;<br/>Also if possible can there be like an export button or something so I can save the result as a file? Even just a download as image would work. I don't really know what format makes sense, whatever is easier. The form part should be pretty clear so other people can use it without me explaining everything. Just something clean and straightforward, doesn't need to be fancy but shouldn't look like a homework project either.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">200w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">组织线下活动的兼职桌游社团负责人</div>
+          <div class="persona-desc">林晨是一名在读研究生，同时在校内负责桌游社团的运营。他每周组织活动时需要随机分配玩家阵营、随机抽取出场顺序、或从报名名单里抽奖。他目前靠Excel随机函数和抽签纸条凑合，觉得既麻烦又不直观，想找一个能让参与者'眼见为实'的工具，但他不打算自己写代码。</div>
+        </div>
+        <div class="query">Hey so I run this board game club at my school and every week I have to like randomly assign people to teams or draw names for turn order and stuff, and right now I'm just using random Excel formulas or literally paper slips which is kind of a mess. I want to build a simple page where I can type in or paste a list of names (like 10–20 people usually), then set how many I want to draw or how many groups to split into, and hit a button to get the result. It'd be really cool if there's some kind of spinning or shuffling animation when it draws — just so the people watching feel like it's fair and not rigged lol, since I usually project it on a screen for everyone in the room to see. The result should show up big and clear so it's easy to read from a distance. Also the no-repeat thing is kind of important, like if I'm assigning teams each name should only appear once. Nothing too fancy, just something that actually works and looks decent, I don't really know how to code so just make it ready to use.</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="vague">
+    <header class="task-h">
+      <div class="task-id">q_scene_013_001</div>
+      <div class="task-meta"><span class="badge vague">vague</span>
+        <span class="scene">交互方式 / Uploading &amp; Downloading 上传与下载</span>
+        <span class="hint">app=Uploading &amp; Downloading 上传与下载应用 · product=form_flow</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">28w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">Uploading &amp; Downloading 上传与下载相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“Uploading &amp; Downloading 上传与下载”整理或表达内容的人。Ta 当前更关注如何把“Uploading &amp; Downloading 上传与下载”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于正在自己动手做产品的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I want a multi-step form flow for Uploading &amp; Downloading upload and download workflow. Keep it simple and easy to browse. It should feel clean on mobile too.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">36w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">需要整理多方提交材料的活动运营专员</div>
+          <div class="persona-desc">她在一家中型教育机构负责线下培训项目的运营，每次开课前都要收集学员的报名表、身份证明和缴费凭证，结束后还要把电子证书和课程资料发回给每个人。目前她用邮件一对一来回收发，经常漏件、找不到旧文件，每次活动都要花大量时间整理。她希望有一个统一的地方让学员上传自己的材料、她也能批量发文件出去，但她不太确定这个东西应该长什么样。</div>
+        </div>
+        <div class="query">I need like a page where my students can upload their registration stuff and I can send files back to them all at once, instead of doing it one by one through email every single time</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">24w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">Uploading &amp; Downloading 上传与下载相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“Uploading &amp; Downloading 上传与下载”整理或表达内容的人。Ta 当前更关注如何把“Uploading &amp; Downloading 上传与下载”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于正在自己动手做产品的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I need a simple upload/download page, like a form where people can drag files in and then grab them back out, nothing too complicated</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="medium">
+    <header class="task-h">
+      <div class="task-id">q_scene_013_002</div>
+      <div class="task-meta"><span class="badge medium">medium</span>
+        <span class="scene">交互方式 / Uploading &amp; Downloading 上传与下载</span>
+        <span class="hint">app=Uploading &amp; Downloading 上传与下载应用 · product=admin_panel</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">52w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">Uploading &amp; Downloading 上传与下载相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“Uploading &amp; Downloading 上传与下载”整理或表达内容的人。Ta 当前更关注如何把“Uploading &amp; Downloading 上传与下载”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在整理需求和表达想法的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Please build an elegant admin panel for Uploading &amp; Downloading upload and download workflow. No fixed visual style is required. I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">148w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">运营后台管理员，负责多方文件收发与分发审核的内容协调人</div>
+          <div class="persona-desc">林晓薇是某中型B2B软件公司的运营协调专员，日常需要统一管理外部供应商上传的合同附件、技术文档和产品素材，同时负责向内部团队和客户分发已审核的版本。她常常在邮件、云盘和内部系统之间来回切换，深感文件版本混乱、上传状态不透明带来的效率损耗。公司最近决定上线一个统一的文件管理后台，她是主要的日常操作用户，也参与了需求梳理。</div>
+        </div>
+        <div class="query">Hey, I need help building out an admin page for managing file uploads and downloads across all users. Basically I want to see a log view where I can track who uploaded what, when, and where it came from — like whether it's from a supplier, an internal team member, etc. I also need to be able to filter by file type and upload date, because right now without that it's really hard to find anything. On top of that, I need a way to bulk approve or reject uploaded files — not one by one, that takes forever — and once a file is approved, I should be able to set who's allowed to download it, like keep it internal only or open it up for clients too. The whole thing should feel like a clean admin dashboard, nothing fancy, just functional and easy to scan through.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">121w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">Uploading &amp; Downloading 上传与下载相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“Uploading &amp; Downloading 上传与下载”整理或表达内容的人。Ta 当前更关注如何把“Uploading &amp; Downloading 上传与下载”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在整理需求和表达想法的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I'm building an admin dashboard for managing file uploads and downloads — basically a back-office panel where my team can see everything that's been uploaded by users, track download activity, and handle things like file approval or deletion. Nothing too crazy, but I need it to feel organized — like a clean table or list view showing file name, uploader, file size, upload date, status (pending / approved / rejected), and maybe a download count column. Would be great to have some basic filters up top (by date range, file type, status) and bulk action support so we can approve or delete multiple files at once. A sidebar nav would help too since this is part of a larger admin tool.</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="complex">
+    <header class="task-h">
+      <div class="task-id">q_scene_013_003</div>
+      <div class="task-meta"><span class="badge complex">complex</span>
+        <span class="scene">交互方式 / Uploading &amp; Downloading 上传与下载</span>
+        <span class="hint">app=Uploading &amp; Downloading 上传与下载应用 · product=form_flow</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">144w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">Uploading &amp; Downloading 上传与下载相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“Uploading &amp; Downloading 上传与下载”整理或表达内容的人。Ta 当前更关注如何把“Uploading &amp; Downloading 上传与下载”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在追求产品感觉和记忆点的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Please help me design a mobile-first, responsive multi-step form flow for Uploading &amp; Downloading upload and download workflow. No fixed visual style is required. The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.<br/>&nbsp;<br/>Key requirements:<br/>1. The hero section should explain the value immediately and include a strong primary CTA.<br/>2. The main content area should include multiple clearly separated modules, such as featured content, categorized sections, and deeper detail views.<br/>3. Important interactions should be explicitly designed, including navigation changes, reveal or expand behavior, empty states, and clear hover or tap feedback.<br/>4. Please consider responsive behavior carefully so the same experience still feels smooth and readable on smaller screens.<br/>5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">727w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">Clinical trial document coordinator juggling file submissions across 15+ research sites</div>
+          <div class="persona-desc">Maya works at a mid-sized contract research organization and spends most of her day chasing study sites for regulatory binders, consent forms, and lab certificates. She currently manages everything through a maze of shared drives and email threads, and files frequently get lost, mislabeled, or submitted in the wrong format. Her manager has approved building an internal submission portal, and Maya has been asked to describe what it needs to do — but she has never written a product spec before and is translating her daily pain into feature requests on the fly. She is motivated by the idea of having one place where everything lands, gets checked, and can be packaged and sent to sponsors on demand.</div>
+        </div>
+        <div class="query">Okay so I'm trying to build an internal portal for our research sites to submit regulatory documents, and I need help designing the actual UI for it — both the submission side (what the sites see) and the internal review side (what my team sees). It's a bit complicated so let me try to explain all of it.<br/>&nbsp;<br/><strong>The site-facing submission flow:</strong><br/>&nbsp;<br/>When a study site logs in, they should land on a dashboard that shows them exactly which documents we're expecting from them — like a checklist. Think things like: Investigator CV, Lab Certificate, IRB Approval Letter, Consent Form (latest version), Financial Disclosure Form, etc. Each document type should have a little label showing whether it's still missing, pending review, rejected, or approved. A green checkmark when it's done, something red or orange if it was rejected, and a clock icon or something for &quot;under review.&quot; Sites need to be able to see at a glance what's still outstanding.<br/>&nbsp;<br/>When they actually go to upload — and this part is really important to me — the form needs to validate the file before it even finishes uploading. Like if we say we need a PDF and they try to drag in an Excel file or a .docx, it should immediately say &quot;wrong file type, we need PDF only&quot; and not let them proceed. Same thing for file size — we probably want a 25MB limit per file. Each document type in our system has its own rules (some allow PDF only, some might allow PDF or JPEG for like a scanned certificate), so the validation has to be per document slot, not a blanket rule.<br/>&nbsp;<br/>There should be a visible progress bar for each file as it's uploading — like I need the site coordinators to actually see it moving, not just a spinning wheel. And if something fails mid-upload, they should get a clear message that says to try again, not just a generic error.<br/>&nbsp;<br/>After they've uploaded everything for a given submission packet — let's say it's an &quot;Initial Site Regulatory Binder&quot; — there should be a final review step where they can see all the files they've attached, confirm the site name and protocol number are correct, and then hit submit. That step should feel like a checkpoint, not just a button.<br/>&nbsp;<br/><strong>Rejection and re-upload:</strong><br/>&nbsp;<br/>If my team rejects a file, the site needs to get a notification (in-portal is fine, email is bonus) that says specifically which document was rejected and WHY. Like &quot;Investigator CV rejected — document is expired, please upload a CV dated within the last 2 years.&quot; Not just &quot;rejected.&quot; Then there should be a clear button right on their dashboard to re-upload just that one document without having to redo the whole submission.<br/>&nbsp;<br/><strong>The internal review side:</strong><br/>&nbsp;<br/>My team's view should show all submissions across all sites in a table or list — site name, protocol, submission date, status (complete/incomplete/under review/approved), and how many documents are still pending review. We should be able to click into a submission and see each document listed out, preview or download it individually, and then mark it as approved or rejected with a required reason field for rejections.<br/>&nbsp;<br/>Once a full submission is approved, there should be a button to download the whole thing as a ZIP file, organized by document type. Sponsors sometimes ask us for everything at once and right now I'm manually zipping folders which is a nightmare.<br/>&nbsp;<br/><strong>Audit trail:</strong><br/>&nbsp;<br/>Every single upload, download, approval, and rejection needs to be logged somewhere visible — who did it, what file, what time. My team needs to be able to pull this up if a sponsor ever questions whether we received something. It doesn't have to be fancy, just a sortable log table on each submission's detail page, and maybe a separate export option.<br/>&nbsp;<br/>Design-wise, it should feel clean and professional — this is a regulated industry so nothing too playful, but it also shouldn't look like it was built in 2005. Clear typography, status colors that are obvious (green/red/yellow), and it should work fine on a laptop browser. Mobile isn't a priority for us.<br/>&nbsp;<br/>Can you build this out? I know it's a lot — feel free to start with the site-facing multi-step upload form and the submission checklist dashboard, and we can layer in the internal review UI after.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">612w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">企业采购合规专员，负责统筹多方供应商文件收集与归档</div>
+          <div class="persona-desc">林梓晴在一家制造业公司担任采购合规专员，日常工作核心是向十几家供应商收集资质文件、合同附件和检测报告，再统一整理后提交给内部审计团队。她现在用的是邮件+共享盘的方式，但文件命名混乱、版本追踪困难、下载错版本的情况时有发生。她想推动公司内部上线一个专门的文件提交与分发系统，因为下个季度有大规模供应商审核要执行，流程必须标准化。</div>
+        </div>
+        <div class="query">I need help building a file submission and tracking system — it's basically a web page (or two linked pages) for managing supplier document collection. We have a big supplier audit coming up next quarter and right now we're doing everything over email and shared drives and it's a complete mess, wrong file versions being downloaded, documents named whatever the supplier feels like, missing attachments nobody notices until the last minute. I need something clean and structured.<br/>&nbsp;<br/>Here's what I'm imagining:<br/>&nbsp;<br/><strong>Supplier side (the submission form):</strong><br/>It should walk them through steps — like a multi-step form, not just one giant page they scroll through. Step 1 is basic info: company name, contact person, supplier ID (we assign these), submission date auto-filled. Step 2 is the actual file uploads, but broken into categories — for example &quot;Business License&quot;, &quot;Quality Certification&quot;, &quot;Inspection Report&quot;, &quot;Signed Contract Annex&quot; — each category is its own upload slot. For each slot, I want to set the allowed file types (some are PDF only, some can be PDF or Excel, one can be images) and a max file size, and if they try to upload something wrong it should immediately show an error message like &quot;this slot only accepts PDF files, please re-upload&quot; — not after they hit submit, right away. I also want them to see an upload progress bar so they know it's actually uploading and not just frozen. Step 3 is a review/confirmation screen where they can see everything they uploaded before they hit submit. After submitting, show them a confirmation page with a reference number.<br/>&nbsp;<br/>Also important: suppliers should NOT be able to submit if any required document slot is empty. Required vs optional slots should be clearly marked. The form should feel simple enough that someone not very tech-savvy can get through it without calling me for help — clear labels, obvious error states, nothing ambiguous.<br/>&nbsp;<br/><strong>My side (management view):</strong><br/>I need a dashboard or table that shows all suppliers and their submission status at a glance. Something like: supplier name, supplier ID, submission date (or &quot;not submitted yet&quot;), and then a column for each document category showing green checkmark or red warning depending on whether that file was received. I want to be able to filter by status — show me only the ones with missing documents, or show me everyone who's submitted. <br/>&nbsp;<br/>For downloading: I need to be able to click on a single supplier row and download all their files as one zip package. But I also need a &quot;select multiple&quot; mode where I check several suppliers and batch download all their files together — this is critical because when the audit team asks me for everything, I can't be downloading 15 zips one at a time. Each downloaded file should have a standardized name automatically — like SupplierID_DocumentType_SubmissionDate — not whatever name the supplier uploaded with.<br/>&nbsp;<br/>Design-wise, keep it professional and clean, nothing flashy. Maybe a neutral color scheme, clear table borders, status badges that are easy to read at a glance (like a colored pill showing &quot;Complete&quot;, &quot;Incomplete&quot;, &quot;Not Submitted&quot;). The management view should feel like an internal ops tool, not a consumer app.<br/>&nbsp;<br/>One thing I keep forgetting to ask for and then regret — can the supplier submission form also handle the case where a supplier needs to resubmit one document (like they uploaded the wrong version)? Maybe allow them to replace a specific file after submission within a certain window, or at least flag it so I can manually request a reupload from the management side. Not sure exactly how that would work but some way to handle version replacement without starting over from scratch.</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="medium">
+    <header class="task-h">
+      <div class="task-id">q_scene_045_001</div>
+      <div class="task-meta"><span class="badge medium">medium</span>
+        <span class="scene">美食探店 / 食物热量/升糖查询 ★</span>
+        <span class="hint">app=饮食记录应用 · product=search_filter</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">49w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">饮食记录相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“食物热量/升糖查询 ★”整理或表达内容的人。Ta 当前更关注如何把“饮食记录”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在追求产品感觉和记忆点的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Please build an elegant search and filter interface for meal tracking. No fixed visual style is required. I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">106w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">饮食记录相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“食物热量/升糖查询 ★”整理或表达内容的人。Ta 当前更关注如何把“饮食记录”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于在追求产品感觉和记忆点的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">hey so I'm building out a diet logging app and I need a search + filter UI for looking up foods by calorie count or glycemic index — basically I want users to be able to type in a food name and then narrow things down with filters like low GI, high protein, under X calories, meal type, that kind of thing. the results should show up as cards with the food name, a quick calorie badge, and maybe a small GI indicator (like a color tag or label). nothing too overwhelming visually, kinda clean and easy to scan. can you build that out for me?</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">185w</span> <span class="ok" title="LLM persona JSON 解析成功">✅</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">热爱探店的轻度糖尿病前期上班族，边打卡边盯血糖</div>
+          <div class="persona-desc">林晓雯，34岁，市场运营，每周末必去新餐厅打卡，最近体检发现空腹血糖偏高，医生建议控制升糖食物。她不想放弃探店乐趣，但每次点菜前都需要快速判断某道菜的热量和升糖风险，手边没有专业营养师，只能靠 app 自查。她对 GI 概念一知半解，只知道'白米饭升糖快'这类粗浅认知。</div>
+        </div>
+        <div class="query">I need a search + filter UI for a food tracking app — basically I go to a new restaurant pretty much every weekend and I always need to quickly check if a dish is okay for me to eat, since my doctor said my blood sugar is a bit high so I really need to be more careful now. I want to be able to just type in a dish name or ingredient and see like, is this thing high calorie, and is it gonna spike my blood sugar or not. Then I also want some filter buttons — stuff like &quot;low calorie&quot; or &quot;low blood sugar risk&quot; or however you'd label it — so I can pull up a few dishes and compare them before I order. The results should show each dish clearly with whatever calorie info and some kind of simple indicator for whether it's safe or not for someone like me who needs to control their sugar intake. Keep it simple and easy to use on the phone, I'm usually in the middle of a restaurant when I need this.</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="complex">
+    <header class="task-h">
+      <div class="task-id">q_scene_045_002</div>
+      <div class="task-meta"><span class="badge complex">complex</span>
+        <span class="scene">美食探店 / 食物热量/升糖查询 ★</span>
+        <span class="hint">app=饮食记录应用 · product=admin_panel</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">138w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">饮食记录相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“食物热量/升糖查询 ★”整理或表达内容的人。Ta 当前更关注如何把“饮食记录”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于需要把信息管理得更高效的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">Please help me design a mobile-first, responsive admin panel for meal tracking. No fixed visual style is required. The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.<br/>&nbsp;<br/>Key requirements:<br/>1. The hero section should explain the value immediately and include a strong primary CTA.<br/>2. The main content area should include multiple clearly separated modules, such as featured content, categorized sections, and deeper detail views.<br/>3. Important interactions should be explicitly designed, including navigation changes, reveal or expand behavior, empty states, and clear hover or tap feedback.<br/>4. Please consider responsive behavior carefully so the same experience still feels smooth and readable on smaller screens.<br/>5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">537w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">饮食记录相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“食物热量/升糖查询 ★”整理或表达内容的人。Ta 当前更关注如何把“饮食记录”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于需要把信息管理得更高效的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">ok so I'm building out the admin/management backend for my diet logging app and I need a pretty comprehensive dashboard for managing food entries — specifically focused on calorie counts and glycemic index (GI) data. let me just dump everything I need here:<br/>&nbsp;<br/><strong>main data table</strong> — I need a full-featured table listing all logged food items. each row should show: food name, category (like grains, fruits, protein, dairy, etc.), calories per 100g, GI value, GI classification (low/medium/high — color coded please, green/yellow/red), serving size, date added, and status (active / pending review / flagged). the table should support column sorting, and I want sticky headers when scrolling.<br/>&nbsp;<br/><strong>filtering + search</strong> — there needs to be a filter panel on the left or top (I'm fine with either). filters should include: category multiselect, GI range slider (0–100), calorie range input (min/max), status dropdown, and a date range picker for when entries were added. also a search bar that does fuzzy match on food name. importantly — filters should apply in real time or have an explicit &quot;apply&quot; button, not both mixed together, just pick one and be consistent. and when no results match the current filters, show a clear empty state with a reset filters button.<br/>&nbsp;<br/><strong>batch actions</strong> — I need to be able to select multiple rows and do bulk operations: bulk approve (set to active), bulk flag, bulk delete. the bulk action bar should only appear when at least one row is selected. if I try to delete, show a confirmation modal that lists how many items are being deleted and warns me if any of them are currently referenced in users' meal logs.<br/>&nbsp;<br/><strong>inline editing</strong> — for the calorie and GI fields specifically, I want inline editing directly in the table cell. click to edit, show an input field with validation (GI must be 0–100, calories must be positive number), and save on blur or Enter key. if validation fails, show the error inline next to the field, not a toast.<br/>&nbsp;<br/><strong>detail drawer</strong> — clicking a food name should open a side drawer (not a new page) showing the full record: all fields, an edit form, a history log of who changed what and when, and which users have this item in their recent meal logs. the drawer should be closable via ESC or clicking outside.<br/>&nbsp;<br/><strong>stats summary bar</strong> at the top — just some quick numbers: total food items, how many are pending review, how many flagged, and average GI across all active items. these should update when filters are active to reflect filtered set, not always global totals (except maybe a small label saying &quot;filtered&quot; so it's clear).<br/>&nbsp;<br/><strong>edge cases I care about</strong> — loading skeletons while data fetches, error state if the API fails (with a retry button), empty state for first-time use with a CTA to add the first item, and if someone tries to access a food entry that's been deleted by someone else simultaneously, show a gentle notification instead of crashing the view.<br/>&nbsp;<br/>design-wise — clean and functional, nothing too flashy. think a neutral palette with clear typography hierarchy. the GI color coding is the main visual signal so don't let anything else compete with it too much.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">444w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">饮食记录相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“食物热量/升糖查询 ★”整理或表达内容的人。Ta 当前更关注如何把“饮食记录”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于需要把信息管理得更高效的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I'm building out the admin backend for a diet tracking app — specifically the section where operators can manage users' food logs and the food database (calories, GI index, macros, etc.). Need this to feel clean and functional, not just a basic CRUD table.<br/>&nbsp;<br/>Here's what I'm thinking for the main food log management table:<br/>&nbsp;<br/><strong>Food Log Overview Table</strong><br/>- Columns: User ID / Username, Meal Type (breakfast/lunch/dinner/snack — filterable via pill tabs at top), Food Name, Calories (kcal), GI Value (with color-coded badges: low = green, medium = yellow, high = red), Portion Size, Log Timestamp, Status (Verified / Pending Review / Flagged)<br/>- Bulk actions: bulk-approve pending entries, bulk-delete, export to CSV<br/>- Inline row actions: quick edit, delete, flag for review<br/>- Clicking a row should expand an inline panel (not navigate away) showing full nutritional breakdown — carbs, protein, fat, fiber — and any user notes<br/>&nbsp;<br/><strong>Filtering &amp; Search</strong><br/>- Left sidebar filter panel: date range picker, meal type checkboxes, calorie range slider (0–2000+ kcal), GI level (low/medium/high), entry status<br/>- Top search bar: search by food name or username, with debounced autocomplete<br/>- Active filters shown as dismissible tags below the search bar<br/>- &quot;Reset All Filters&quot; button that clears everything but keeps pagination state<br/>&nbsp;<br/><strong>Food Database Management Panel</strong> (separate tab or section)<br/>- Searchable table of all food items in the system: Name, Category, Calories/100g, GI Score, Verified (yes/no toggle)<br/>- Admins can add new food items via a side drawer form — required fields are Name, Category, Calories, Carbs, Protein, Fat; optional fields GI Score and Notes<br/>- Validation: calories field must be numeric and &gt; 0, GI score 0–100, form should show inline errors on blur not just on submit<br/>- If a food item is being used in any active user logs, deleting it should show a warning modal with a count of affected records, not just silently delete<br/>&nbsp;<br/><strong>States &amp; Edge Cases</strong><br/>- Empty state for the log table when filters return no results — show a helpful &quot;No logs match your filters&quot; message with a reset button, not just a blank table<br/>- Loading skeleton for the table rows during data fetch<br/>- If a user has flagged entries, show a badge on their username in the table<br/>- Pagination at bottom, show &quot;Showing X–Y of Z results&quot;, page size selector (25 / 50 / 100)<br/>- Toast notifications for all actions (approve, delete, save edits) — success and error variants<br/>&nbsp;<br/>Design-wise: keep it neutral and professional, dark sidebar with white content area, good use of whitespace, tables shouldn't feel cramped. No flashy animations, just subtle transitions on drawer open/close and row expand.</div>
+      </div>
+    </div></div>
+  </section>
+<section class="task" data-complexity="vague">
+    <header class="task-h">
+      <div class="task-id">q_scene_045_003</div>
+      <div class="task-meta"><span class="badge vague">vague</span>
+        <span class="scene">美食探店 / 食物热量/升糖查询 ★</span>
+        <span class="hint">app=饮食记录应用 · product=search_filter</span>
+      </div>
+    </header>
+    <div class="cols"><div class="col">
+      <div class="col-h" style="--accent:#9aa4b2">
+        <div class="col-h-title">① 模板 fallback</div>
+        <div class="col-h-meta"><span class="wc">24w</span> <span class="warn" title="模板生成 persona">📐</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">饮食记录相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“食物热量/升糖查询 ★”整理或表达内容的人。Ta 当前更关注如何把“饮食记录”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于需要把信息管理得更高效的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I want a search and filter interface for meal tracking. Keep it simple and easy to browse. It should feel clean on mobile too.</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#3b82f6">
+        <div class="col-h-title">② LLM（无 few-shot）</div>
+        <div class="col-h-meta"><span class="wc">50w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">饮食记录相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“食物热量/升糖查询 ★”整理或表达内容的人。Ta 当前更关注如何把“饮食记录”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于需要把信息管理得更高效的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I want to build something where I can search for foods and see their calories or glycemic info quickly — like a simple lookup tool for my diet tracking. Not sure exactly how it should look but it needs some way to filter results maybe by meal type or something?</div>
+      </div>
+    </div><div class="col">
+      <div class="col-h" style="--accent:#10b981">
+        <div class="col-h-title">③ LLM + few-shot</div>
+        <div class="col-h-meta"><span class="wc">41w</span> <span class="warn" title="llm_persona_synthesis_parse_failed">⚠️</span></div>
+      </div>
+      <div class="col-body">
+        <div class="persona">
+          <div class="persona-title">饮食记录相关内容的真实使用者</div>
+          <div class="persona-desc">这是一个正在围绕“食物热量/升糖查询 ★”整理或表达内容的人。Ta 当前更关注如何把“饮食记录”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于需要把信息管理得更高效的人，会基于自己的处境来提出需求。</div>
+        </div>
+        <div class="query">I want to build something where I can search for foods and quickly see the calories and like... how much they spike blood sugar? Just need it to be easy to look things up and maybe filter by category or something.</div>
+      </div>
+    </div></div>
+  </section>
+
+</main>
+<script>
+  document.querySelectorAll('.controls button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.controls button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('section.task').forEach(s => {
+        s.style.display = (f === 'all' || s.dataset.complexity === f) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body>
+</html>

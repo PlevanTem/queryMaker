@@ -1,0 +1,57 @@
+{
+  "id": "q_scene_002_001__xc__medium",
+  "scene_id": "scene_002",
+  "l1_scene": "深度研究展示",
+  "l2_scene_label": "个人生活类",
+  "application_type": "旅行回忆应用",
+  "product_type": "portfolio",
+  "target_complexity": "medium",
+  "design_style": null,
+  "created_at": "2026-04-27T05:04:13.316Z",
+  "generator_mode": "llm-openai",
+  "query_variant": "anchored_persona_xc_supplement",
+  "persona_anchor_query_id": "q_scene_002_001",
+  "persona_anchor_target_complexity": "vague",
+  "persona_id": "p_travel_memories_vague_01",
+  "persona_title": "刚结束冰岛环岛自驾的感性摄影爱好者",
+  "persona_source": "llm_persona_synthesis",
+  "persona_spec": {
+    "persona_id": "p_travel_memories_vague_01",
+    "persona_title": "刚结束冰岛环岛自驾的感性摄影爱好者",
+    "persona_description": "他刚和伴侣结束了一趟为期一个月的长途自驾游，拍摄了大量极光、公路和冰川的照片。他希望有一个专属的地方能把这些珍贵的瞬间陈列出来，供自己回味并分享给亲友。因为他更关注内心情感的表达，对具体的网页排版毫无头绪，只知道想要一种宁静、广阔且充满回忆的氛围。",
+    "persona_style_hint": "表达极其感性且非常简短，完全不懂也不关心任何技术名词或 UI 组件。只会用 2-3 句英文描述自己想要的整体感觉和情感诉求（如“感觉像一部老电影”、“安静的氛围”），刻意保持模糊，绝不提供具体的布局或功能细节。",
+    "user_goal": "想要一个能展示长途旅行照片并传达旅行时宁静、广阔心境的视觉展示页。",
+    "domain_familiarity": "low",
+    "persona_source": "llm_persona_synthesis",
+    "llm_raw_text": "{ \"persona_id\": \"p_travel_memories_vague_01\", \"persona_title\": \"刚结束冰岛环岛自驾的感性摄影爱好者\", \"persona_description\": \"他刚和伴侣结束了一趟为期一个月的长途自驾游，拍摄了大量极光、公路和冰川的照片。他希望有一个专属的地方能把这些珍贵的瞬间陈列出来，供自己回味并分享给亲友。因为他更关注内心情感的表达，对具体的网页排版毫无头绪，只知道想要一种宁静、广阔且充满回忆的氛围。\", \"persona_style_hint\": \"表达极其感性且非常简短，完全不懂也不关心任何技术名词或 UI 组件。只会用 2-3 句英文描述自己想要的整体感觉和情感诉求（如“感觉像一部老电影”、“安静的氛围”），刻意保持模糊，绝不提供具体的布局或功能细节。\", \"user_goal\": \"想要一个能展示长途旅行照片并传达旅行时宁静、广阔心境的视觉展示页。\", \"domain_familiarity\": \"low\", \"persona_source\": \"llm_persona_synthesis\" }"
+  },
+  "persona_prompt_text": "[persona 冻结自锚点记录，本次未重新调用 persona LLM]\n你是一个 persona 设计助手，需要先基于场景合成一个真实用户画像，再用于生成前端 UI query。\n请参考 persona-driven synthetic data synthesis 的思路：persona 应该是场景驱动的真实人，不是固定职业标签。\n\n## 场景输入\n一级场景：深度研究展示\n二级场景标签：个人生活类\n该场景常见 app 方向示例（仅用于理解，不要机械照抄进最终 query）：旅行回忆、年度相册、画作展示、宝宝成长\n当前选定的 L3 application_type：旅行回忆应用\n当前 UI 形态：作品集/展示\n设计风格：未显式指定设计风格，可根据场景自然推断。\n目标复杂度：vague\n复杂度要求：Keep it intentionally vague. The user should only describe a broad goal or feeling in 2-3 short sentences.\n最终 query 默认输出英文。\n\n## 你的任务\n请生成 1 个最适合该场景的 persona，要求：\n1. persona 要体现真实身份、动机、表达方式和信息不完整性。\n2. persona 该场景下真实需要\n3. persona 要解释为什么会提出这个页面或组件需求。\n4. 不要把二级场景括号中的示例整段复制到 persona 文本中。\n\n## 输出格式\n{\n  \"persona_id\": \"p_xxx\",\n  \"persona_title\": \"角色标签一句话概括这个人\",\n  \"persona_description\": \"2-4 句描述背景、动机和当前处境\",\n  \"persona_style_hint\": \"这个人会如何表达、会不会给细节、会不会提技术\",\n  \"user_goal\": \"这个人想通过页面/产品完成什么\",\n  \"domain_familiarity\": \"low | medium | high\",\n  \"persona_source\": \"llm_persona_synthesis\"\n}",
+  "query_prompt_text": "你现在要扮演给定的 persona，向 AI 编程助手发送一条前端 UI 开发需求。\n输出只能是那条用户消息query指令，不要解释你是谁，不要输出 JSON。\n\n## Inputs\n### Persona\npersona_title：刚结束冰岛环岛自驾的感性摄影爱好者\npersona_description：他刚和伴侣结束了一趟为期一个月的长途自驾游，拍摄了大量极光、公路和冰川的照片。他希望有一个专属的地方能把这些珍贵的瞬间陈列出来，供自己回味并分享给亲友。因为他更关注内心情感的表达，对具体的网页排版毫无头绪，只知道想要一种宁静、广阔且充满回忆的氛围。\npersona_style_hint：表达极其感性且非常简短，完全不懂也不关心任何技术名词或 UI 组件。只会用 2-3 句英文描述自己想要的整体感觉和情感诉求（如“感觉像一部老电影”、“安静的氛围”），刻意保持模糊，绝不提供具体的布局或功能细节。\nuser_goal：想要一个能展示长途旅行照片并传达旅行时宁静、广阔心境的视觉展示页。\ndomain_familiarity：low\n\n### 场景背景\n一级场景：深度研究展示\n二级场景标签：个人生活类\n当前选定的 L3 application_type：旅行回忆应用\n当前 UI 形态：作品集/展示\n该场景没有额外 app 示例。\n设计风格：未显式指定设计风格，可根据场景自然推断。\nQuery目标复杂度：medium\n\n## 输出要求\n1. 基于 Inputs 和场景背景以Persona角色的第一人称视角输出一条英文 query\n2. query 语气必须符合 persona，不要泄露、照抄Inputs\n3. Write like a real person typing into a chat box\n4. Allow incomplete thoughts, mid-sentence pivots, casual grammar, filler words\n5. Express constraints implicitly: say \"for my mom's 60th birthday\" instead of \"target audience: elderly female\".\n6. Include situation triggers naturally e.x. \"I need it to help me ...\" etc.\n7. Mix imperatives, questions, statements, and half-finished thoughts.\n8. Avoid repetitive structures across queries.\n9. Vary sentence count based on Query目标复杂度 from 20 ~ 500 words，参考下述三种specificity规格：\n- vague: the user barely describes what they want; the system must infer a lot. Keep it to 2-3 short sentences.\n- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.\n- complex: multiple explicit requirements about target user, goal, design style, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.",
+  "query_text": "We just got back from a month on the road in Iceland... looking at all these pictures of the endless empty roads and the northern lights is just overwhelming. I need somewhere special to put these moments to share with our friends, but I don't want a regular website... I just want it to feel really vast and quiet, you know? Like you're stepping right back into those cold, peaceful nights we had.",
+  "llm_provider": "openai-compatible",
+  "llm_base_url": "http://7.242.104.218:4000/v1",
+  "llm_model": "gemini-3.1-pro-preview",
+  "llm_usage": {
+    "persona": null,
+    "query": {
+      "completion_tokens": 983,
+      "prompt_tokens": 643,
+      "total_tokens": 1626,
+      "completion_tokens_details": {
+        "audio_tokens": 0,
+        "reasoning_tokens": 898,
+        "text_tokens": 0
+      },
+      "prompt_tokens_details": {
+        "audio_tokens": 0,
+        "cached_tokens": 0,
+        "text_tokens": 643,
+        "image_tokens": 0
+      },
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "claude_cache_creation_5_m_tokens": 0,
+      "claude_cache_creation_1_h_tokens": 0
+    }
+  }
+}

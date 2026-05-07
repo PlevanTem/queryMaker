@@ -1,0 +1,22 @@
+{
+  "total_queries": 1,
+  "average_quality": 4.6,
+  "by_l1_scene": {
+    "深度研究展示": 1
+  },
+  "by_l2_scene": {
+    "① 个人生活类（旅行回忆、年度相册、画作展示、宝宝成长）": 1
+  },
+  "by_user_role": {
+    "pm": 1
+  },
+  "by_product_type": {
+    "portfolio": 1
+  },
+  "by_design_style": {
+    "unspecified": 1
+  },
+  "by_complexity": {
+    "complex": 1
+  }
+}

@@ -1,0 +1,958 @@
+{
+  "generated_at": "2026-04-15T08:13:23.463Z",
+  "version": "v2",
+  "source_file": "D:\\workspace\\ui_query_pipeline_claude\\场景覆盖.xlsx",
+  "source_sheet": "Sheet1",
+  "total_scenarios": 61,
+  "scenarios": [
+    {
+      "id": "scene_002",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 2,
+      "l1_scene": "深度研究展示",
+      "l2_scene_raw": "① 个人生活类（旅行回忆、年度相册、画作展示、宝宝成长）",
+      "target_count": 95,
+      "notes": "",
+      "l2_scene_label": "个人生活类",
+      "l2_scene_examples": [
+        "旅行回忆",
+        "年度相册",
+        "画作展示",
+        "宝宝成长"
+      ],
+      "application_type_candidates": [
+        "旅行回忆应用",
+        "年度相册应用",
+        "画作展示应用",
+        "宝宝成长应用",
+        "成长记录应用"
+      ]
+    },
+    {
+      "id": "scene_003",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 3,
+      "l1_scene": "深度研究展示",
+      "l2_scene_raw": "② 个人专业类（摄影作品集、设计师Portfolio、求职简历）",
+      "target_count": 95,
+      "notes": "",
+      "l2_scene_label": "个人专业类",
+      "l2_scene_examples": [
+        "摄影作品集",
+        "设计师Portfolio",
+        "求职简历"
+      ],
+      "application_type_candidates": [
+        "摄影作品集应用",
+        "设计师Portfolio应用",
+        "求职简历应用",
+        "画作展示应用",
+        "求职展示应用"
+      ]
+    },
+    {
+      "id": "scene_004",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 4,
+      "l1_scene": "深度研究展示",
+      "l2_scene_raw": "③ 办公/商务类（产品介绍页、项目成果/年报、客户提案）",
+      "target_count": 95,
+      "notes": "",
+      "l2_scene_label": "办公/商务类",
+      "l2_scene_examples": [
+        "产品介绍页",
+        "项目成果/年报",
+        "客户提案"
+      ],
+      "application_type_candidates": [
+        "产品介绍页应用",
+        "项目成果/年报应用",
+        "客户提案应用",
+        "项目介绍应用",
+        "成果展示应用"
+      ]
+    },
+    {
+      "id": "scene_005",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 5,
+      "l1_scene": "深度研究展示",
+      "l2_scene_raw": "④ 文化/知识类（人物传记、品牌故事、历史事件、科普长文）",
+      "target_count": 95,
+      "notes": "",
+      "l2_scene_label": "文化/知识类",
+      "l2_scene_examples": [
+        "人物传记",
+        "品牌故事",
+        "历史事件",
+        "科普长文"
+      ],
+      "application_type_candidates": [
+        "人物传记应用",
+        "品牌故事应用",
+        "历史事件应用",
+        "科普长文应用"
+      ]
+    },
+    {
+      "id": "scene_006",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 6,
+      "l1_scene": "交互方式",
+      "l2_scene_raw": "① Adding & Creating 新建与创建",
+      "target_count": 80,
+      "notes": "",
+      "l2_scene_label": "Adding & Creating 新建与创建",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "Adding & Creating 新建与创建应用"
+      ]
+    },
+    {
+      "id": "scene_007",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 7,
+      "l1_scene": "交互方式",
+      "l2_scene_raw": "② Editing & Updating 编辑与更新",
+      "target_count": 80,
+      "notes": "",
+      "l2_scene_label": "Editing & Updating 编辑与更新",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "Editing & Updating 编辑与更新应用"
+      ]
+    },
+    {
+      "id": "scene_008",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 8,
+      "l1_scene": "交互方式",
+      "l2_scene_raw": "③ Searching & Finding 搜索与查找",
+      "target_count": 80,
+      "notes": "",
+      "l2_scene_label": "Searching & Finding 搜索与查找",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "Searching & Finding 搜索与查找应用"
+      ]
+    },
+    {
+      "id": "scene_009",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 9,
+      "l1_scene": "交互方式",
+      "l2_scene_raw": "④ Selecting & Choosing 选择与选取",
+      "target_count": 80,
+      "notes": "",
+      "l2_scene_label": "Selecting & Choosing 选择与选取",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "Selecting & Choosing 选择与选取应用"
+      ]
+    },
+    {
+      "id": "scene_010",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 10,
+      "l1_scene": "交互方式",
+      "l2_scene_raw": "⑤ Filtering & Sorting 筛选与排序",
+      "target_count": 80,
+      "notes": "",
+      "l2_scene_label": "Filtering & Sorting 筛选与排序",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "Filtering & Sorting 筛选与排序应用"
+      ]
+    },
+    {
+      "id": "scene_011",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 11,
+      "l1_scene": "交互方式",
+      "l2_scene_raw": "⑥ Deleting & Removing 删除与移除",
+      "target_count": 80,
+      "notes": "",
+      "l2_scene_label": "Deleting & Removing 删除与移除",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "Deleting & Removing 删除与移除应用"
+      ]
+    },
+    {
+      "id": "scene_012",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 12,
+      "l1_scene": "交互方式",
+      "l2_scene_raw": "⑦ Editing Profile 编辑个人资料",
+      "target_count": 80,
+      "notes": "",
+      "l2_scene_label": "Editing Profile 编辑个人资料",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "Editing Profile 编辑个人资料应用"
+      ]
+    },
+    {
+      "id": "scene_013",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 13,
+      "l1_scene": "交互方式",
+      "l2_scene_raw": "⑧ Uploading & Downloading 上传与下载",
+      "target_count": 80,
+      "notes": "",
+      "l2_scene_label": "Uploading & Downloading 上传与下载",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "Uploading & Downloading 上传与下载应用"
+      ]
+    },
+    {
+      "id": "scene_014",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 14,
+      "l1_scene": "交互方式",
+      "l2_scene_raw": "⑨ Copying & Duplicating 复制与副本",
+      "target_count": 80,
+      "notes": "",
+      "l2_scene_label": "Copying & Duplicating 复制与副本",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "Copying & Duplicating 复制与副本应用"
+      ]
+    },
+    {
+      "id": "scene_015",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 15,
+      "l1_scene": "交互方式",
+      "l2_scene_raw": "⑩ Misc 其他",
+      "target_count": 80,
+      "notes": "",
+      "l2_scene_label": "Misc 其他",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "Misc 其他应用"
+      ]
+    },
+    {
+      "id": "scene_016",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 16,
+      "l1_scene": "实用工具",
+      "l2_scene_raw": "① 计算器/换算器 ★",
+      "target_count": 75,
+      "notes": "",
+      "l2_scene_label": "计算器/换算器 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "计算器/换算器 ★应用"
+      ]
+    },
+    {
+      "id": "scene_017",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 17,
+      "l1_scene": "实用工具",
+      "l2_scene_raw": "② 生活记录器 ★",
+      "target_count": 75,
+      "notes": "",
+      "l2_scene_label": "生活记录器 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "生活记录器 ★应用"
+      ]
+    },
+    {
+      "id": "scene_018",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 18,
+      "l1_scene": "实用工具",
+      "l2_scene_raw": "③ 社交辅助 ★",
+      "target_count": 75,
+      "notes": "",
+      "l2_scene_label": "社交辅助 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "社交辅助 ★应用"
+      ]
+    },
+    {
+      "id": "scene_019",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 19,
+      "l1_scene": "实用工具",
+      "l2_scene_raw": "④ 倒计时/纪念日",
+      "target_count": 75,
+      "notes": "",
+      "l2_scene_label": "倒计时/纪念日",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "倒计时/纪念日应用"
+      ]
+    },
+    {
+      "id": "scene_020",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 20,
+      "l1_scene": "实用工具",
+      "l2_scene_raw": "⑤ 文本处理",
+      "target_count": 75,
+      "notes": "",
+      "l2_scene_label": "文本处理",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "文本处理应用"
+      ]
+    },
+    {
+      "id": "scene_021",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 21,
+      "l1_scene": "实用工具",
+      "l2_scene_raw": "⑥ 随机生成器",
+      "target_count": 75,
+      "notes": "",
+      "l2_scene_label": "随机生成器",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "随机生成器应用"
+      ]
+    },
+    {
+      "id": "scene_022",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 22,
+      "l1_scene": "实用工具",
+      "l2_scene_raw": "⑦ 无障碍辅助",
+      "target_count": 75,
+      "notes": "",
+      "l2_scene_label": "无障碍辅助",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "无障碍辅助应用"
+      ]
+    },
+    {
+      "id": "scene_023",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 23,
+      "l1_scene": "实用工具",
+      "l2_scene_raw": "⑧ 其他长尾微工具",
+      "target_count": 75,
+      "notes": "",
+      "l2_scene_label": "其他长尾微工具",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "其他长尾微工具应用"
+      ]
+    },
+    {
+      "id": "scene_024",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 24,
+      "l1_scene": "教育学习",
+      "l2_scene_raw": "① 闪卡/单词记忆 ★",
+      "target_count": 45,
+      "notes": "",
+      "l2_scene_label": "闪卡/单词记忆 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "闪卡/单词记忆 ★应用"
+      ]
+    },
+    {
+      "id": "scene_025",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 25,
+      "l1_scene": "教育学习",
+      "l2_scene_raw": "② 备考自测/刷题 ★",
+      "target_count": 45,
+      "notes": "",
+      "l2_scene_label": "备考自测/刷题 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "刷题练习应用"
+      ]
+    },
+    {
+      "id": "scene_026",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 26,
+      "l1_scene": "教育学习",
+      "l2_scene_raw": "③ 学习打卡/进度追踪 ★",
+      "target_count": 45,
+      "notes": "",
+      "l2_scene_label": "学习打卡/进度追踪 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "进度追踪应用"
+      ]
+    },
+    {
+      "id": "scene_027",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 27,
+      "l1_scene": "教育学习",
+      "l2_scene_raw": "④ 课程目录/课堂界面",
+      "target_count": 45,
+      "notes": "",
+      "l2_scene_label": "课程目录/课堂界面",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "课程目录/课堂界面应用"
+      ]
+    },
+    {
+      "id": "scene_028",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 28,
+      "l1_scene": "教育学习",
+      "l2_scene_raw": "⑤ 知识速查/公式表",
+      "target_count": 45,
+      "notes": "",
+      "l2_scene_label": "知识速查/公式表",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "知识速查/公式表应用"
+      ]
+    },
+    {
+      "id": "scene_029",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 29,
+      "l1_scene": "办公效率",
+      "l2_scene_raw": "① 待办清单/任务管理 ★",
+      "target_count": 40,
+      "notes": "",
+      "l2_scene_label": "待办清单/任务管理 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "任务管理应用"
+      ]
+    },
+    {
+      "id": "scene_030",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 30,
+      "l1_scene": "办公效率",
+      "l2_scene_raw": "② 番茄钟/专注计时 ★",
+      "target_count": 40,
+      "notes": "",
+      "l2_scene_label": "番茄钟/专注计时 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "番茄钟/专注计时 ★应用"
+      ]
+    },
+    {
+      "id": "scene_031",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 31,
+      "l1_scene": "办公效率",
+      "l2_scene_raw": "③ 日程/倒计时 ★",
+      "target_count": 40,
+      "notes": "",
+      "l2_scene_label": "日程/倒计时 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "任务管理应用"
+      ]
+    },
+    {
+      "id": "scene_032",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 32,
+      "l1_scene": "办公效率",
+      "l2_scene_raw": "④ 数据仪表盘/报表 ★",
+      "target_count": 40,
+      "notes": "",
+      "l2_scene_label": "数据仪表盘/报表 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "数据看板应用"
+      ]
+    },
+    {
+      "id": "scene_033",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 33,
+      "l1_scene": "办公效率",
+      "l2_scene_raw": "⑤ 笔记/文档编辑",
+      "target_count": 40,
+      "notes": "",
+      "l2_scene_label": "笔记/文档编辑",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "笔记/文档编辑应用"
+      ]
+    },
+    {
+      "id": "scene_034",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 34,
+      "l1_scene": "健康管理",
+      "l2_scene_raw": "① 饮水/服药/习惯提醒 ★",
+      "target_count": 40,
+      "notes": "",
+      "l2_scene_label": "饮水/服药/习惯提醒 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "饮水/服药/习惯提醒 ★应用"
+      ]
+    },
+    {
+      "id": "scene_035",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 35,
+      "l1_scene": "健康管理",
+      "l2_scene_raw": "② 运动记录/健身计划 ★",
+      "target_count": 40,
+      "notes": "",
+      "l2_scene_label": "运动记录/健身计划 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "运动记录/健身计划 ★应用"
+      ]
+    },
+    {
+      "id": "scene_036",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 36,
+      "l1_scene": "健康管理",
+      "l2_scene_raw": "③ 体重/经期/睡眠追踪 ★",
+      "target_count": 40,
+      "notes": "",
+      "l2_scene_label": "体重/经期/睡眠追踪 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "体重/经期/睡眠追踪 ★应用"
+      ]
+    },
+    {
+      "id": "scene_037",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 37,
+      "l1_scene": "健康管理",
+      "l2_scene_raw": "④ 健康数据看板",
+      "target_count": 40,
+      "notes": "",
+      "l2_scene_label": "健康数据看板",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "数据看板应用"
+      ]
+    },
+    {
+      "id": "scene_038",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 38,
+      "l1_scene": "健康管理",
+      "l2_scene_raw": "⑤ 冥想/呼吸练习",
+      "target_count": 40,
+      "notes": "",
+      "l2_scene_label": "冥想/呼吸练习",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "冥想/呼吸练习应用"
+      ]
+    },
+    {
+      "id": "scene_039",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 39,
+      "l1_scene": "出行助手",
+      "l2_scene_raw": "① 行程规划器 ★",
+      "target_count": 35,
+      "notes": "",
+      "l2_scene_label": "行程规划器 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "旅行回忆应用"
+      ]
+    },
+    {
+      "id": "scene_040",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 40,
+      "l1_scene": "出行助手",
+      "l2_scene_raw": "② 打包清单/旅行准备",
+      "target_count": 35,
+      "notes": "",
+      "l2_scene_label": "打包清单/旅行准备",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "旅行回忆应用"
+      ]
+    },
+    {
+      "id": "scene_041",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 41,
+      "l1_scene": "出行助手",
+      "l2_scene_raw": "③ 地图/路线导航",
+      "target_count": 35,
+      "notes": "",
+      "l2_scene_label": "地图/路线导航",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "路线导航应用"
+      ]
+    },
+    {
+      "id": "scene_042",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 42,
+      "l1_scene": "出行助手",
+      "l2_scene_raw": "④ 天气/实时信息查询",
+      "target_count": 35,
+      "notes": "",
+      "l2_scene_label": "天气/实时信息查询",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "天气信息应用"
+      ]
+    },
+    {
+      "id": "scene_043",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 43,
+      "l1_scene": "出行助手",
+      "l2_scene_raw": "⑤ 交通时刻/票价查询",
+      "target_count": 35,
+      "notes": "",
+      "l2_scene_label": "交通时刻/票价查询",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "交通时刻/票价查询应用"
+      ]
+    },
+    {
+      "id": "scene_044",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 44,
+      "l1_scene": "美食探店",
+      "l2_scene_raw": "① \"今天吃什么\"随机选择器 ★",
+      "target_count": 25,
+      "notes": "",
+      "l2_scene_label": "\"今天吃什么\"随机选择器 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "\"今天吃什么\"随机选择器 ★应用"
+      ]
+    },
+    {
+      "id": "scene_045",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 45,
+      "l1_scene": "美食探店",
+      "l2_scene_raw": "② 食物热量/升糖查询 ★",
+      "target_count": 25,
+      "notes": "",
+      "l2_scene_label": "食物热量/升糖查询 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "饮食记录应用"
+      ]
+    },
+    {
+      "id": "scene_046",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 46,
+      "l1_scene": "美食探店",
+      "l2_scene_raw": "③ 菜谱生成/食材搭配",
+      "target_count": 25,
+      "notes": "",
+      "l2_scene_label": "菜谱生成/食材搭配",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "菜谱生成/食材搭配应用"
+      ]
+    },
+    {
+      "id": "scene_047",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 47,
+      "l1_scene": "美食探店",
+      "l2_scene_raw": "④ 餐厅列表/点评浏览",
+      "target_count": 25,
+      "notes": "",
+      "l2_scene_label": "餐厅列表/点评浏览",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "餐厅列表/点评浏览应用"
+      ]
+    },
+    {
+      "id": "scene_048",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 48,
+      "l1_scene": "休闲游戏",
+      "l2_scene_raw": "① 文字猜谜/知识竞赛 ★",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "文字猜谜/知识竞赛 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "休闲互动应用"
+      ]
+    },
+    {
+      "id": "scene_049",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 49,
+      "l1_scene": "休闲游戏",
+      "l2_scene_raw": "② 抽签/转盘/随机决策 ★",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "抽签/转盘/随机决策 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "休闲互动应用"
+      ]
+    },
+    {
+      "id": "scene_050",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 50,
+      "l1_scene": "休闲游戏",
+      "l2_scene_raw": "③ 经典小游戏",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "经典小游戏",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "休闲互动应用"
+      ]
+    },
+    {
+      "id": "scene_051",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 51,
+      "l1_scene": "休闲游戏",
+      "l2_scene_raw": "④ 情绪减压/解压玩具",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "情绪减压/解压玩具",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "休闲互动应用"
+      ]
+    },
+    {
+      "id": "scene_052",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 52,
+      "l1_scene": "多媒体处理",
+      "l2_scene_raw": "① 图片编辑/滤镜/裁剪",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "图片编辑/滤镜/裁剪",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "图片编辑应用"
+      ]
+    },
+    {
+      "id": "scene_053",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 53,
+      "l1_scene": "多媒体处理",
+      "l2_scene_raw": "② 海报/简历/卡片模板 ★",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "海报/简历/卡片模板 ★",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "求职展示应用",
+        "模板制作应用"
+      ]
+    },
+    {
+      "id": "scene_054",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 54,
+      "l1_scene": "多媒体处理",
+      "l2_scene_raw": "③ 音视频播放界面",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "音视频播放界面",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "音视频播放界面应用"
+      ]
+    },
+    {
+      "id": "scene_055",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 55,
+      "l1_scene": "多媒体处理",
+      "l2_scene_raw": "④ 内容创作工具",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "内容创作工具",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "内容创作工具应用"
+      ]
+    },
+    {
+      "id": "scene_056",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 56,
+      "l1_scene": "新闻资讯",
+      "l2_scene_raw": "① 信息流/Feed 浏览",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "信息流/Feed 浏览",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "资讯阅读应用"
+      ]
+    },
+    {
+      "id": "scene_057",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 57,
+      "l1_scene": "新闻资讯",
+      "l2_scene_raw": "② 文章详情/阅读模式",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "文章详情/阅读模式",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "资讯阅读应用"
+      ]
+    },
+    {
+      "id": "scene_058",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 58,
+      "l1_scene": "新闻资讯",
+      "l2_scene_raw": "③ 订阅/频道管理",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "订阅/频道管理",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "资讯阅读应用"
+      ]
+    },
+    {
+      "id": "scene_059",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 59,
+      "l1_scene": "新闻资讯",
+      "l2_scene_raw": "④ 搜索与筛选",
+      "target_count": 20,
+      "notes": "",
+      "l2_scene_label": "搜索与筛选",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "资讯阅读应用"
+      ]
+    },
+    {
+      "id": "scene_060",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 60,
+      "l1_scene": "购物消费",
+      "l2_scene_raw": "① 商品详情/规格选择",
+      "target_count": 5,
+      "notes": "",
+      "l2_scene_label": "商品详情/规格选择",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "购物流程应用"
+      ]
+    },
+    {
+      "id": "scene_061",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 61,
+      "l1_scene": "购物消费",
+      "l2_scene_raw": "② 购物车/结算",
+      "target_count": 5,
+      "notes": "",
+      "l2_scene_label": "购物车/结算",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "购物流程应用"
+      ]
+    },
+    {
+      "id": "scene_062",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 62,
+      "l1_scene": "购物消费",
+      "l2_scene_raw": "③ 订单/物流追踪",
+      "target_count": 5,
+      "notes": "",
+      "l2_scene_label": "订单/物流追踪",
+      "l2_scene_examples": [],
+      "application_type_candidates": [
+        "购物流程应用"
+      ]
+    }
+  ]
+}

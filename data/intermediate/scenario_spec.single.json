@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-04-15T03:10:41.395Z",
+  "source_file": "D:\\workspace\\ui_query_pipeline_claude\\场景覆盖.xlsx",
+  "source_sheet": "Sheet1",
+  "total_scenarios": 1,
+  "scenarios": [
+    {
+      "id": "scene_002",
+      "source_file": "场景覆盖.xlsx",
+      "source_sheet": "Sheet1",
+      "source_row_id": 2,
+      "l1_scene": "深度研究展示",
+      "l2_scene": "① 个人生活类（旅行回忆、年度相册、画作展示、宝宝成长）",
+      "target_count": 95,
+      "notes": ""
+    }
+  ]
+}

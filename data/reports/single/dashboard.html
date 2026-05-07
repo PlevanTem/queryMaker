@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Query Factory Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f7fb; color: #1b2430; }
+    .page { max-width: 1400px; margin: 0 auto; padding: 24px; }
+    .hero { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
+    .metric, .card { background: #fff; border-radius: 12px; padding: 16px; box-shadow: 0 1px 6px rgba(12, 20, 33, 0.08); }
+    .metric .label { color: #607086; font-size: 13px; }
+    .metric .value { font-size: 28px; font-weight: 700; margin-top: 8px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 20px; }
+    .filters { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-bottom: 16px; }
+    select, input { width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid #d7deea; border-radius: 8px; background: #fff; }
+    table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid #eef2f7; text-align: left; vertical-align: top; }
+    th { background: #f8fafc; font-size: 13px; color: #4e5d6c; }
+    .bar-row { display: grid; grid-template-columns: 180px 1fr 44px; gap: 12px; align-items: center; margin: 10px 0; }
+    .bar-track { background: #edf2f7; height: 10px; border-radius: 999px; overflow: hidden; }
+    .bar-fill { background: linear-gradient(90deg, #4f46e5, #06b6d4); height: 100%; border-radius: 999px; }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 999px; background: #eef4ff; color: #274690; font-size: 12px; }
+    .empty { color: #7a8797; }
+    @media (max-width: 1100px) { .hero, .grid, .filters { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 720px) { .hero, .grid, .filters { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Query Factory Dashboard</h1>
+    <div class="hero">
+      <div class="metric"><div class="label">总 Query 数</div><div class="value" id="totalQueries">0</div></div>
+      <div class="metric"><div class="label">平均质量分</div><div class="value" id="averageQuality">0</div></div>
+      <div class="metric"><div class="label">一级场景数</div><div class="value" id="l1Count">0</div></div>
+      <div class="metric"><div class="label">二级场景数</div><div class="value" id="l2Count">0</div></div>
+    </div>
+
+    <div class="grid" id="chartGrid"></div>
+
+    <div class="card">
+      <h3>过滤器</h3>
+      <div class="filters">
+        <select id="filterL1"><option value="">全部一级场景</option></select>
+        <select id="filterRole"><option value="">全部角色</option></select>
+        <select id="filterProduct"><option value="">全部产品形态</option></select>
+        <select id="filterStyle"><option value="">全部风格</option></select>
+        <input id="filterKeyword" placeholder="搜索 query 文本">
+      </div>
+      <div class="empty" id="tableCount"></div>
+    </div>
+
+    <div class="card">
+      <h3>Query 列表</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>一级场景</th>
+            <th>二级场景</th>
+            <th>角色</th>
+            <th>产品形态</th>
+            <th>风格</th>
+            <th>质量分</th>
+            <th>复杂度</th>
+            <th>Query</th>
+          </tr>
+        </thead>
+        <tbody id="queryTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const DATA = {"queries":[{"id":"q_scene_002_001","scene_id":"scene_002","query_text":"我们在做一个① 个人生活类（旅行回忆、年度相册、画作展示、宝宝成长）的作品集/展示页面，需要封面区、项目列表和详情展开区，作品卡片点击后要能看更多图片或过程说明，希望有时间线或分类导航方便快速浏览。重点是流程清楚，用户第一次看也能直接理解。","l1_scene":"深度研究展示","l2_scene":"① 个人生活类（旅行回忆、年度相册、画作展示、宝宝成长）","user_role":"pm","product_type":"portfolio","design_style":null,"quality_score":4.6,"quality_pass":1,"complexity_level":"complex","created_at":"2026-04-15T03:19:02.536Z"}],"summary":{"total_queries":1,"average_quality":4.6,"by_l1_scene":{"深度研究展示":1},"by_l2_scene":{"① 个人生活类（旅行回忆、年度相册、画作展示、宝宝成长）":1},"by_user_role":{"pm":1},"by_product_type":{"portfolio":1},"by_design_style":{"unspecified":1},"by_complexity":{"complex":1}}};
+
+    const tableBody = document.getElementById("queryTableBody");
+    const chartGrid = document.getElementById("chartGrid");
+    const filterL1 = document.getElementById("filterL1");
+    const filterRole = document.getElementById("filterRole");
+    const filterProduct = document.getElementById("filterProduct");
+    const filterStyle = document.getElementById("filterStyle");
+    const filterKeyword = document.getElementById("filterKeyword");
+    const tableCount = document.getElementById("tableCount");
+
+    function uniqueValues(items, key) {
+      return [...new Set(items.map((item) => item[key] || "unspecified"))].sort();
+    }
+
+    function fillSelect(select, values) {
+      values.forEach((value) => {
+        const option = document.createElement("option");
+        option.value = value === "unspecified" ? "" : value;
+        option.textContent = value === "unspecified" ? "未指定" : value;
+        select.appendChild(option);
+      });
+    }
+
+    function renderMetrics(summary) {
+      document.getElementById("totalQueries").textContent = summary.total_queries;
+      document.getElementById("averageQuality").textContent = summary.average_quality;
+      document.getElementById("l1Count").textContent = Object.keys(summary.by_l1_scene).length;
+      document.getElementById("l2Count").textContent = Object.keys(summary.by_l2_scene).length;
+    }
+
+    function renderCharts(summary) {
+      const configs = [
+        ["按一级场景分布", summary.by_l1_scene],
+        ["按二级场景分布", summary.by_l2_scene],
+        ["按角色分布", summary.by_user_role],
+        ["按产品形态分布", summary.by_product_type],
+        ["按设计风格分布", summary.by_design_style],
+        ["按复杂度分布", summary.by_complexity],
+      ];
+      chartGrid.innerHTML = configs
+        .map(([title, data]) => renderBarsClient(title, data))
+        .join("");
+    }
+
+    function renderBarsClient(title, data) {
+      const entries = Object.entries(data).sort((a, b) => b[1] - a[1]);
+      const max = entries.length ? entries[0][1] : 1;
+      const rows = entries.map(([label, value]) => {
+        const width = Math.max(8, (value / max) * 100);
+        return '<div class="bar-row"><div class="bar-label">' + escapeHtmlClient(label) + '</div><div class="bar-track"><div class="bar-fill" style="width:' + width + '%"></div></div><div class="bar-value">' + value + '</div></div>';
+      }).join("");
+      return '<section class="card"><h3>' + escapeHtmlClient(title) + '</h3>' + (rows || '<div class="empty">暂无数据</div>') + '</section>';
+    }
+
+    function escapeHtmlClient(text) {
+      return String(text ?? "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function currentFilters() {
+      return {
+        l1: filterL1.value,
+        role: filterRole.value,
+        product: filterProduct.value,
+        style: filterStyle.value,
+        keyword: filterKeyword.value.trim().toLowerCase(),
+      };
+    }
+
+    function applyFilters() {
+      const filters = currentFilters();
+      const filtered = DATA.queries.filter((query) => {
+        if (filters.l1 && query.l1_scene !== filters.l1) return false;
+        if (filters.role && query.user_role !== filters.role) return false;
+        if (filters.product && query.product_type !== filters.product) return false;
+        if (filters.style && (query.design_style || "") !== filters.style) return false;
+        if (filters.keyword && !String(query.query_text || "").toLowerCase().includes(filters.keyword)) return false;
+        return true;
+      });
+
+      tableBody.innerHTML = filtered.map((query) => {
+        return '<tr>' +
+          '<td>' + escapeHtmlClient(query.id) + '</td>' +
+          '<td>' + escapeHtmlClient(query.l1_scene) + '</td>' +
+          '<td>' + escapeHtmlClient(query.l2_scene) + '</td>' +
+          '<td><span class="tag">' + escapeHtmlClient(query.user_role) + '</span></td>' +
+          '<td>' + escapeHtmlClient(query.product_type) + '</td>' +
+          '<td>' + escapeHtmlClient(query.design_style || "未指定") + '</td>' +
+          '<td>' + escapeHtmlClient(query.quality_score ?? "") + '</td>' +
+          '<td>' + escapeHtmlClient(query.complexity_level || "") + '</td>' +
+          '<td>' + escapeHtmlClient(query.query_text || "") + '</td>' +
+        '</tr>';
+      }).join("");
+
+      tableCount.textContent = '当前显示 ' + filtered.length + ' / ' + DATA.queries.length + ' 条 Query';
+    }
+
+    fillSelect(filterL1, uniqueValues(DATA.queries, "l1_scene"));
+    fillSelect(filterRole, uniqueValues(DATA.queries, "user_role"));
+    fillSelect(filterProduct, uniqueValues(DATA.queries, "product_type"));
+    fillSelect(filterStyle, uniqueValues(DATA.queries, "design_style"));
+
+    [filterL1, filterRole, filterProduct, filterStyle].forEach((element) => element.addEventListener("change", applyFilters));
+    filterKeyword.addEventListener("input", applyFilters);
+
+    renderMetrics(DATA.summary);
+    renderCharts(DATA.summary);
+    applyFilters();
+  </script>
+</body>
+</html>

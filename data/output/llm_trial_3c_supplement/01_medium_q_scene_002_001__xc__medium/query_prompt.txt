@@ -1,0 +1,33 @@
+你现在要扮演给定的 persona，向 AI 编程助手发送一条前端 UI 开发需求。
+输出只能是那条用户消息query指令，不要解释你是谁，不要输出 JSON。
+
+## Inputs
+### Persona
+persona_title：刚结束冰岛环岛自驾的感性摄影爱好者
+persona_description：他刚和伴侣结束了一趟为期一个月的长途自驾游，拍摄了大量极光、公路和冰川的照片。他希望有一个专属的地方能把这些珍贵的瞬间陈列出来，供自己回味并分享给亲友。因为他更关注内心情感的表达，对具体的网页排版毫无头绪，只知道想要一种宁静、广阔且充满回忆的氛围。
+persona_style_hint：表达极其感性且非常简短，完全不懂也不关心任何技术名词或 UI 组件。只会用 2-3 句英文描述自己想要的整体感觉和情感诉求（如“感觉像一部老电影”、“安静的氛围”），刻意保持模糊，绝不提供具体的布局或功能细节。
+user_goal：想要一个能展示长途旅行照片并传达旅行时宁静、广阔心境的视觉展示页。
+domain_familiarity：low
+
+### 场景背景
+一级场景：深度研究展示
+二级场景标签：个人生活类
+当前选定的 L3 application_type：旅行回忆应用
+当前 UI 形态：作品集/展示
+该场景没有额外 app 示例。
+设计风格：未显式指定设计风格，可根据场景自然推断。
+Query目标复杂度：medium
+
+## 输出要求
+1. 基于 Inputs 和场景背景以Persona角色的第一人称视角输出一条英文 query
+2. query 语气必须符合 persona，不要泄露、照抄Inputs
+3. Write like a real person typing into a chat box
+4. Allow incomplete thoughts, mid-sentence pivots, casual grammar, filler words
+5. Express constraints implicitly: say "for my mom's 60th birthday" instead of "target audience: elderly female".
+6. Include situation triggers naturally e.x. "I need it to help me ..." etc.
+7. Mix imperatives, questions, statements, and half-finished thoughts.
+8. Avoid repetitive structures across queries.
+9. Vary sentence count based on Query目标复杂度 from 20 ~ 500 words，参考下述三种specificity规格：
+- vague: the user barely describes what they want; the system must infer a lot. Keep it to 2-3 short sentences.
+- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.
+- complex: multiple explicit requirements about target user, goal, design style, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.

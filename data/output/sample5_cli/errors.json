@@ -1,0 +1,59 @@
+[
+  {
+    "__error": true,
+    "task": {
+      "query_id": "q_scene_025_001",
+      "scene_id": "scene_025",
+      "l1_scene": "教育学习",
+      "l2_scene_label": "备考自测/刷题 ★",
+      "l2_scene_raw": "② 备考自测/刷题 ★",
+      "l2_scene_examples": [],
+      "application_type": "刷题练习应用",
+      "product_type": "portfolio",
+      "target_complexity": "vague",
+      "design_style": null,
+      "persona_seed": "5ffe8a1121",
+      "plan_type": "seed",
+      "target_count_hint": 1
+    },
+    "error": "spawn EINVAL"
+  },
+  {
+    "__error": true,
+    "task": {
+      "query_id": "q_scene_025_002",
+      "scene_id": "scene_025",
+      "l1_scene": "教育学习",
+      "l2_scene_label": "备考自测/刷题 ★",
+      "l2_scene_raw": "② 备考自测/刷题 ★",
+      "l2_scene_examples": [],
+      "application_type": "刷题练习应用",
+      "product_type": "dashboard",
+      "target_complexity": "medium",
+      "design_style": null,
+      "persona_seed": "45472105a1",
+      "plan_type": "seed",
+      "target_count_hint": 1
+    },
+    "error": "spawn EINVAL"
+  },
+  {
+    "__error": true,
+    "task": {
+      "query_id": "q_scene_025_003",
+      "scene_id": "scene_025",
+      "l1_scene": "教育学习",
+      "l2_scene_label": "备考自测/刷题 ★",
+      "l2_scene_raw": "② 备考自测/刷题 ★",
+      "l2_scene_examples": [],
+      "application_type": "刷题练习应用",
+      "product_type": "form_flow",
+      "target_complexity": "complex",
+      "design_style": null,
+      "persona_seed": "36ea2b32b9",
+      "plan_type": "seed",
+      "target_count_hint": 1
+    },
+    "error": "spawn EINVAL"
+  }
+]

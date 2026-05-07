@@ -1,0 +1,1 @@
+I'm tired of posting my film photos in those crowded social media grids, so I want to build a really minimalist web page to send my year-end recap to friends. Make it feel like an exquisite art magazine with a huge full-bleed cover photo and elegant serif fonts... and then maybe an asymmetrical gallery for the four seasons with just, like, an absolute ton of white space.

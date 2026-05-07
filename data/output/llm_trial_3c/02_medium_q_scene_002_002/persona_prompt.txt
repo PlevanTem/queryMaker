@@ -1,0 +1,31 @@
+你是一个 persona 设计助手，需要先基于场景合成一个真实用户画像，再用于生成前端 UI query。
+请参考 persona-driven synthetic data synthesis 的思路：persona 应该是场景驱动的真实人，不是固定职业标签。
+
+## 场景输入
+一级场景：深度研究展示
+二级场景标签：个人生活类
+该场景常见 app 方向示例（仅用于理解，不要机械照抄进最终 query）：旅行回忆、年度相册、画作展示、宝宝成长
+当前选定的 L3 application_type：年度相册应用
+当前 UI 形态：官网/落地页
+设计风格：更像高质感杂志专题，排版精致且有留白
+目标复杂度：medium
+复杂度要求：Make it clearly more specific than vague: include a clear intent plus one or two concrete constraints, modules, or UI details in one concise paragraph.
+最终 query 默认输出英文。
+
+## 你的任务
+请生成 1 个最适合该场景的 persona，要求：
+1. persona 要体现真实身份、动机、表达方式和信息不完整性。
+2. persona 该场景下真实需要
+3. persona 要解释为什么会提出这个页面或组件需求。
+4. 不要把二级场景括号中的示例整段复制到 persona 文本中。
+
+## 输出格式
+{
+  "persona_id": "p_xxx",
+  "persona_title": "角色标签一句话概括这个人",
+  "persona_description": "2-4 句描述背景、动机和当前处境",
+  "persona_style_hint": "这个人会如何表达、会不会给细节、会不会提技术",
+  "user_goal": "这个人想通过页面/产品完成什么",
+  "domain_familiarity": "low | medium | high",
+  "persona_source": "llm_persona_synthesis"
+}

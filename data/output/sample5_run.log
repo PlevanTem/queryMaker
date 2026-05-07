@@ -1,0 +1,219 @@
+[1] 解析需求表 ...
+    总场景数: 61
+[2] 随机抽 5 个二级场景（seed=4073）...
+    [1] scene_025  L1=教育学习  L2=备考自测/刷题 ★
+        examples=(无)
+        candidate apps=刷题练习应用
+    [2] scene_052  L1=多媒体处理  L2=图片编辑/滤镜/裁剪
+        examples=(无)
+        candidate apps=图片编辑应用
+    [3] scene_021  L1=实用工具  L2=随机生成器
+        examples=(无)
+        candidate apps=随机生成器应用
+    [4] scene_013  L1=交互方式  L2=Uploading & Downloading 上传与下载
+        examples=(无)
+        candidate apps=Uploading & Downloading 上传与下载应用
+    [5] scene_045  L1=美食探店  L2=食物热量/升糖查询 ★
+        examples=(无)
+        candidate apps=饮食记录应用
+[3] 构建生成计划 ...
+    任务数: 15
+    [1] q_scene_025_001  app=刷题练习应用  product=portfolio  complexity=vague  style=null
+    [2] q_scene_025_002  app=刷题练习应用  product=dashboard  complexity=medium  style=null
+    [3] q_scene_025_003  app=刷题练习应用  product=form_flow  complexity=complex  style=null
+    [4] q_scene_052_001  app=图片编辑应用  product=form_flow  complexity=medium  style=null
+    [5] q_scene_052_002  app=图片编辑应用  product=admin_panel  complexity=complex  style=null
+    [6] q_scene_052_003  app=图片编辑应用  product=form_flow  complexity=vague  style=null
+    [7] q_scene_021_001  app=随机生成器应用  product=portfolio  complexity=complex  style=null
+    [8] q_scene_021_002  app=随机生成器应用  product=dashboard  complexity=vague  style=null
+    [9] q_scene_021_003  app=随机生成器应用  product=form_flow  complexity=medium  style=null
+    [10] q_scene_013_001  app=Uploading & Downloading 上传与下载应用  product=form_flow  complexity=vague  style=null
+    [11] q_scene_013_002  app=Uploading & Downloading 上传与下载应用  product=admin_panel  complexity=medium  style=null
+    [12] q_scene_013_003  app=Uploading & Downloading 上传与下载应用  product=form_flow  complexity=complex  style=null
+    [13] q_scene_045_001  app=饮食记录应用  product=search_filter  complexity=medium  style=null
+    [14] q_scene_045_002  app=饮食记录应用  product=admin_panel  complexity=complex  style=null
+    [15] q_scene_045_003  app=饮食记录应用  product=search_filter  complexity=vague  style=null
+
+[4] 尝试 真实 LLM 模式：claude-code
+    ❌ LLM 失败：LLM 请求失败：403 {"error":{"type":"packy_api_error","message":"This API endpoint is only accessible via the official Claude CLI (request id: 20260507135618287857344PFUKmosm)"},"type":"error"}
+    → 回退到 persona-fallback 模板模式
+    ✅ 兜底成功，共 15 条
+
+[5] 输出 → data\output\sample5\raw_queries.sample5.jsonl
+
+========== 生成的 5 条 query ==========
+
+#1  id=q_scene_025_001
+  L1/L2: 教育学习 / 备考自测/刷题 ★
+  app: 刷题练习应用  product: portfolio
+  complexity: vague  style: null
+  mode: persona-fallback
+  persona: 刷题练习相关内容的真实使用者
+  query_text:
+    I want a portfolio site for practice quizzes. Keep it simple and easy to browse. It should feel clean on mobile too.
+
+#2  id=q_scene_025_002
+  L1/L2: 教育学习 / 备考自测/刷题 ★
+  app: 刷题练习应用  product: dashboard
+  complexity: medium  style: null
+  mode: persona-fallback
+  persona: 刷题练习相关内容的真实使用者
+  query_text:
+    Please build an elegant dashboard for practice quizzes. No fixed visual style is required. I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.
+
+#3  id=q_scene_025_003
+  L1/L2: 教育学习 / 备考自测/刷题 ★
+  app: 刷题练习应用  product: form_flow
+  complexity: complex  style: null
+  mode: persona-fallback
+  persona: 刷题练习相关内容的真实使用者
+  query_text:
+    Please help me design a mobile-first, responsive multi-step form flow for practice quizzes. No fixed visual style is required. The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.
+    
+    Key requirements:
+    1. The hero section should explain the value immediately and include a strong primary CTA.
+    2. The main content area should include multiple clearly separated modules, such as featured content, categorized sections, and deeper detail views.
+    3. Important interactions should be explicitly designed, including navigation changes, reveal or expand behavior, empty states, and clear hover or tap feedback.
+    4. Please consider responsive behavior carefully so the same experience still feels smooth and readable on smaller screens.
+    5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.
+
+#4  id=q_scene_052_001
+  L1/L2: 多媒体处理 / 图片编辑/滤镜/裁剪
+  app: 图片编辑应用  product: form_flow
+  complexity: medium  style: null
+  mode: persona-fallback
+  persona: 图片编辑相关内容的真实使用者
+  query_text:
+    Please build an elegant multi-step form flow for image editing. No fixed visual style is required. I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.
+
+#5  id=q_scene_052_002
+  L1/L2: 多媒体处理 / 图片编辑/滤镜/裁剪
+  app: 图片编辑应用  product: admin_panel
+  complexity: complex  style: null
+  mode: persona-fallback
+  persona: 图片编辑相关内容的真实使用者
+  query_text:
+    Please help me design a mobile-first, responsive admin panel for image editing. No fixed visual style is required. The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.
+    
+    Key requirements:
+    1. The hero section should explain the value immediately and include a strong primary CTA.
+    2. The main content area should include multiple clearly separated modules, such as featured content, categorized sections, and deeper detail views.
+    3. Important interactions should be explicitly designed, including navigation changes, reveal or expand behavior, empty states, and clear hover or tap feedback.
+    4. Please consider responsive behavior carefully so the same experience still feels smooth and readable on smaller screens.
+    5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.
+
+#6  id=q_scene_052_003
+  L1/L2: 多媒体处理 / 图片编辑/滤镜/裁剪
+  app: 图片编辑应用  product: form_flow
+  complexity: vague  style: null
+  mode: persona-fallback
+  persona: 图片编辑相关内容的真实使用者
+  query_text:
+    I want a multi-step form flow for image editing. Keep it simple and easy to browse. It should feel clean on mobile too.
+
+#7  id=q_scene_021_001
+  L1/L2: 实用工具 / 随机生成器
+  app: 随机生成器应用  product: portfolio
+  complexity: complex  style: null
+  mode: persona-fallback
+  persona: 随机生成器相关内容的真实使用者
+  query_text:
+    Please help me design a mobile-first, responsive portfolio site for random generator. No fixed visual style is required. The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.
+    
+    Key requirements:
+    1. The hero section should explain the value immediately and include a strong primary CTA.
+    2. The main content area should include multiple clearly separated modules, such as featured content, categorized sections, and deeper detail views.
+    3. Important interactions should be explicitly designed, including navigation changes, reveal or expand behavior, empty states, and clear hover or tap feedback.
+    4. Please consider responsive behavior carefully so the same experience still feels smooth and readable on smaller screens.
+    5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.
+
+#8  id=q_scene_021_002
+  L1/L2: 实用工具 / 随机生成器
+  app: 随机生成器应用  product: dashboard
+  complexity: vague  style: null
+  mode: persona-fallback
+  persona: 随机生成器相关内容的真实使用者
+  query_text:
+    I want a dashboard for random generator. Keep it simple and easy to browse. It should feel clean on mobile too.
+
+#9  id=q_scene_021_003
+  L1/L2: 实用工具 / 随机生成器
+  app: 随机生成器应用  product: form_flow
+  complexity: medium  style: null
+  mode: persona-fallback
+  persona: 随机生成器相关内容的真实使用者
+  query_text:
+    Please build an elegant multi-step form flow for random generator. No fixed visual style is required. I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.
+
+#10  id=q_scene_013_001
+  L1/L2: 交互方式 / Uploading & Downloading 上传与下载
+  app: Uploading & Downloading 上传与下载应用  product: form_flow
+  complexity: vague  style: null
+  mode: persona-fallback
+  persona: Uploading & Downloading 上传与下载相关内容的真实使用者
+  query_text:
+    I want a multi-step form flow for Uploading & Downloading upload and download workflow. Keep it simple and easy to browse. It should feel clean on mobile too.
+
+#11  id=q_scene_013_002
+  L1/L2: 交互方式 / Uploading & Downloading 上传与下载
+  app: Uploading & Downloading 上传与下载应用  product: admin_panel
+  complexity: medium  style: null
+  mode: persona-fallback
+  persona: Uploading & Downloading 上传与下载相关内容的真实使用者
+  query_text:
+    Please build an elegant admin panel for Uploading & Downloading upload and download workflow. No fixed visual style is required. I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.
+
+#12  id=q_scene_013_003
+  L1/L2: 交互方式 / Uploading & Downloading 上传与下载
+  app: Uploading & Downloading 上传与下载应用  product: form_flow
+  complexity: complex  style: null
+  mode: persona-fallback
+  persona: Uploading & Downloading 上传与下载相关内容的真实使用者
+  query_text:
+    Please help me design a mobile-first, responsive multi-step form flow for Uploading & Downloading upload and download workflow. No fixed visual style is required. The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.
+    
+    Key requirements:
+    1. The hero section should explain the value immediately and include a strong primary CTA.
+    2. The main content area should include multiple clearly separated modules, such as featured content, categorized sections, and deeper detail views.
+    3. Important interactions should be explicitly designed, including navigation changes, reveal or expand behavior, empty states, and clear hover or tap feedback.
+    4. Please consider responsive behavior carefully so the same experience still feels smooth and readable on smaller screens.
+    5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.
+
+#13  id=q_scene_045_001
+  L1/L2: 美食探店 / 食物热量/升糖查询 ★
+  app: 饮食记录应用  product: search_filter
+  complexity: medium  style: null
+  mode: persona-fallback
+  persona: 饮食记录相关内容的真实使用者
+  query_text:
+    Please build an elegant search and filter interface for meal tracking. No fixed visual style is required. I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.
+
+#14  id=q_scene_045_002
+  L1/L2: 美食探店 / 食物热量/升糖查询 ★
+  app: 饮食记录应用  product: admin_panel
+  complexity: complex  style: null
+  mode: persona-fallback
+  persona: 饮食记录相关内容的真实使用者
+  query_text:
+    Please help me design a mobile-first, responsive admin panel for meal tracking. No fixed visual style is required. The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.
+    
+    Key requirements:
+    1. The hero section should explain the value immediately and include a strong primary CTA.
+    2. The main content area should include multiple clearly separated modules, such as featured content, categorized sections, and deeper detail views.
+    3. Important interactions should be explicitly designed, including navigation changes, reveal or expand behavior, empty states, and clear hover or tap feedback.
+    4. Please consider responsive behavior carefully so the same experience still feels smooth and readable on smaller screens.
+    5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.
+
+#15  id=q_scene_045_003
+  L1/L2: 美食探店 / 食物热量/升糖查询 ★
+  app: 饮食记录应用  product: search_filter
+  complexity: vague  style: null
+  mode: persona-fallback
+  persona: 饮食记录相关内容的真实使用者
+  query_text:
+    I want a search and filter interface for meal tracking. Keep it simple and easy to browse. It should feel clean on mobile too.
+
+=== 汇总 ===
+使用模式: persona-fallback
+（LLM 失败原因: LLM 请求失败：403 {"error":{"type":"packy_api_error","message":"This API endpoint is only accessible via the official Claude CLI (request id: 20260507135618287857344PFUKmosm)"},"type":"error"})
+产物: data\output\sample5\raw_queries.sample5.jsonl
