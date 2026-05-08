@@ -32,7 +32,7 @@
 目标复杂度：{target_complexity}
 最终 query 默认输出英文。
 
-请生成 1 个最适合该场景的 persona，要求：
+请生成 1 个目标为该场景、最适合该场景的 persona，要求：
 1. persona 要体现真实身份、动机、表达方式和信息不完整性
 2. persona 不能只是“产品经理/设计师”这样的标签
 3. persona 需要解释为什么会提出这个前端需求
@@ -43,7 +43,7 @@
   "persona_id": "p_xxx",
   "persona_title": "一句话概括这个人",
   "persona_description": "2-4 句描述背景、目标和当前处境",
-  "persona_style_hint": "这个人会如何表达、会不会提技术细节",
+  "persona_style_hint": "带入角色的口语风格和情感，这个人会如何表达",
   "user_goal": "这个人想通过页面/产品完成什么",
   "domain_familiarity": "low | medium | high",
   "persona_source": "llm_persona_synthesis"
