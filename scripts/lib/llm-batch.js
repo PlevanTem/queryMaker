@@ -587,9 +587,15 @@ async function runBatch(options) {
   const elapsed = ((Date.now() - tStart) / 1000).toFixed(1);
 
   // Final ordered rewrite of jsonl (per-row appends were unordered).
+  // Keep existing rows that belong to a *prior* plan (different task IDs), then
+  // append the current plan's rows in order. This allows multiple plan passes
+  // (seed + backfill) to accumulate into the same output file.
   const allRows = [...existingRows, ...ok];
   const orderById = new Map(allRows.map((r) => [r.id, r]));
-  const ordered = plan.tasks.map((t) => orderById.get(t.query_id)).filter(Boolean);
+  const planTaskIds = new Set(plan.tasks.map((t) => t.query_id));
+  const priorRows = existingRows.filter((r) => !planTaskIds.has(r.id));
+  const currentOrdered = plan.tasks.map((t) => orderById.get(t.query_id)).filter(Boolean);
+  const ordered = [...priorRows, ...currentOrdered];
   writeJsonl(paths.outJsonl, ordered);
 
   // Errors and stats: single write at end (avoids O(n²) read-modify-write).
