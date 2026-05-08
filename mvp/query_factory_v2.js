@@ -597,6 +597,7 @@ function buildBackfillPlan(spec, existingQueries, options = {}) {
   }
 
   const minPerScene = Number(options.minPerScene ?? 6);
+  const N = COMPLEXITY_LEVELS.length;
   const tasks = [];
 
   spec.scenarios.forEach((scenario, scenarioIndex) => {
@@ -1578,28 +1579,67 @@ function inferActualComplexity(text) {
   return "vague";
 }
 
-function scoreQueryRecord(record) {
+// --- n-gram helpers for intra-scene similarity check ---
+function ngramSet(text, n) {
+  const tokens = text.toLowerCase().split(/\s+/).filter(Boolean);
+  const set = new Set();
+  for (let i = 0; i <= tokens.length - n; i++) set.add(tokens.slice(i, i + n).join(" "));
+  return set;
+}
+
+function jaccardSimilarity(setA, setB) {
+  if (!setA.size && !setB.size) return 0;
+  let inter = 0;
+  for (const g of setA) if (setB.has(g)) inter++;
+  return inter / (setA.size + setB.size - inter);
+}
+
+// Max Jaccard(trigrams) against any peer in the same scene group.
+// Returns 0 if no peers; 1 means identical.
+function maxPeerSimilarity(text, peerTexts) {
+  if (!peerTexts || peerTexts.length === 0) return 0;
+  const mine = ngramSet(text, 3);
+  return peerTexts.reduce((max, peer) => Math.max(max, jaccardSimilarity(mine, ngramSet(peer, 3))), 0);
+}
+
+function scoreQueryRecord(record, peerTexts = []) {
   const text = cleanText(record.query_text);
-  const hasStyle = Boolean(record.design_style);
-  const hasSpecificMarkers =
-    /page|interface|hero|card|list|table|button|chart|flow|filter|search|detail|modal|timeline|navigation|cta|responsive|section|module/gi.test(
-      text,
-    );
   const actualComplexity = inferActualComplexity(text);
 
-  let authenticity = 3;
-  if (!/^please help me make.{0,10}$/i.test(text)) authenticity += 1;
-  if (text.length >= 45) authenticity += 1;
+  // --- Authenticity (1-5): does the query feel like a real person's request? ---
+  // Start from 1 (earned, not given).
+  let authenticity = 1;
+  // Specific persona context: first-person pronoun or possessive signals voice
+  if (/\b(i |i'|my |we |our )/i.test(text)) authenticity += 1;
+  // Concrete motivation or constraint beyond generic "build me a X"
+  if (/\b(because|so that|need to|want to|trying to|help me|allow|ensure|support|track|manage|review|compare|find|share|upload|download)\b/i.test(text)) authenticity += 1;
+  // Mentions a real user context (role, goal, domain)
+  if (record.persona_title && text.length >= 60) authenticity += 1;
+  // Not a one-liner template with no substance
+  if (text.split(/\s+/).filter(Boolean).length >= 20) authenticity += 1;
 
-  let specificity = 2;
-  if (hasSpecificMarkers) specificity += 1;
+  // --- Specificity (1-5): does it contain enough actionable UI detail? ---
+  let specificity = 1;
+  const uiComponents = (text.match(/\b(hero|card|list|table|button|chart|filter|search|modal|timeline|navigation|cta|responsive|section|module|sidebar|header|footer|badge|toast|drawer|tab|dropdown|form|input|step|wizard|grid|carousel|avatar|tag|tooltip|progress|skeleton)\b/gi) || []).length;
+  if (uiComponents >= 1) specificity += 1;
+  if (uiComponents >= 3) specificity += 1;
   if (actualComplexity !== "vague") specificity += 1;
-  if (/[,:;]|[0-9]\./.test(text)) specificity += 1;
+  // Structured or multi-sentence (commas, colons, numbering)
+  if (/[,:;]/.test(text) && text.split(/[.!?]/).filter((s) => s.trim().length > 5).length >= 2) specificity += 1;
 
-  let diversity = 2;
-  if (hasStyle) diversity += 1;
+  // --- Diversity (1-5): is this query distinct within its scene group? ---
+  let diversity = 1;
+  if (record.design_style) diversity += 1;
   if (record.application_type && !record.application_type.startsWith("通用")) diversity += 1;
-  if (record.persona_title) diversity += 1;
+  // Penalise high similarity to peers in the same scene
+  const sim = maxPeerSimilarity(text, peerTexts);
+  if (sim < 0.55) diversity += 1; // not too similar to any peer
+  if (sim < 0.30) diversity += 1; // genuinely distinct
+
+  // --- form_flow bias flag ---
+  // If product_type is NOT form_flow but query talks about forms/steps, flag it.
+  const formVocab = /\b(form|step \d|step-by-step|wizard|fill (in|out)|submit|multi-step|填写|表单|步骤)\b/i.test(text);
+  const formBias = formVocab && record.product_type !== "form_flow";
 
   authenticity = clampScore(authenticity);
   specificity = clampScore(specificity);
@@ -1611,6 +1651,8 @@ function scoreQueryRecord(record) {
     quality_score: total,
     quality_pass: total >= 2.8,
     complexity_level: actualComplexity,
+    peer_similarity: Number(sim.toFixed(3)),
+    form_bias_flag: formBias,
   };
 }
 
@@ -1619,7 +1661,18 @@ function clampScore(value) {
 }
 
 function scoreQueryRecords(rows) {
-  return rows.map(scoreQueryRecord);
+  // Group by scene_id so each record can compare against its scene peers.
+  const byScene = {};
+  for (const r of rows) {
+    const key = r.scene_id || "__no_scene__";
+    (byScene[key] = byScene[key] || []).push(r);
+  }
+  return rows.map((record) => {
+    const peers = (byScene[record.scene_id || "__no_scene__"] || [])
+      .filter((p) => p !== record)
+      .map((p) => cleanText(p.query_text));
+    return scoreQueryRecord(record, peers);
+  });
 }
 
 let sqlPromise = null;
