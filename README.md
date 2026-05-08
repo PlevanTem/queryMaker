@@ -260,11 +260,15 @@ flowchart LR
 │   ├── build-generation-plan.js
 │   ├── build-backfill-plan.js
 │   ├── generate-queries.js
+│   ├── batch-generate-queries.js
+│   ├── supplement-anchored-persona-queries.js
 │   ├── score-queries.js
 │   ├── import-queries.js
 │   ├── build-dashboard.js
 │   ├── preview-persona-flow.js
-│   └── run-mvp.js
+│   ├── run-mvp.js
+│   └── lib/
+│       └── llm-batch.js
 ├── prompts/
 │   ├── persona_synthesis_prompt.md
 │   ├── query_from_persona_prompt.md
@@ -321,7 +325,7 @@ flowchart LR
 当前默认模式为 `persona-fallback`。
 它不是直接把字段机械拼接成句子，而是分两步生成：
 
-1. 先根据 `scene + application_type + product_type + target_complexity + design_style` 合成 persona
+1. 先根据 `scene + application_type + design_style` 合成 persona（`product_type` 在默认开放路径下仅作元数据，不注入 prompt）
 2. 再由 persona 生成符合语气和复杂度目标的前端 UI query
 
 可选生成模式：
@@ -342,7 +346,7 @@ flowchart LR
 - 使用稳定的 `persona_seed` 保证结果可复现
 - 通过启发式规则回判 `complexity_level` 和 `quality_score`
 
-这条链路已经可以离线跑通，但还没有把所有步骤替换成真实在线 LLM 调用。
+这条链路已经可以离线跑通，也支持通过 `--transport claude-cli / openai / anthropic` 接入真实 LLM 批量生成。
 
 ## Documentation Map
 
@@ -419,15 +423,16 @@ flowchart LR
 ### Implemented
 
 - Excel -> scenario spec 解析链路
-- seed plan 与 backfill plan 生成
+- seed plan 与 backfill plan 生成（groupIndex 分组，同组 3 条任务共享 persona）
 - persona-driven fallback query 生成
+- LLM 两步生成：`batch-generate-queries.js` 支持 `claude-cli / openai / anthropic` 三种 transport
+- `constrained` 标志：`product_type` 默认仅作元数据，`constrained: true` 时才注入 prompt
 - 启发式质量评分
 - SQLite 导入与静态 dashboard 输出
 - 主链路冒烟测试
 
 ### Not Yet Implemented End-to-End
 
-- 基于外部 LLM 的在线 persona 合成执行
 - 基于 `p5` 的完整 LLM 评分与多维标签抽取
 - 从 Stage 1 到 Stage 4 的全自动研究版流水线
 - 在线服务化或任务调度系统
