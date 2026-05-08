@@ -82,20 +82,20 @@ flowchart TD
 
     subgraph SEED ["buildSeedPlan()"]
         SD1["计算每场景 seed 数量\nmin(9, max(3, target_count × 0.15))"]
-        SD2["轮转分配 application_type\n从 candidates 中 rotate"]
-        SD3["轮转分配 target_complexity\nvague → medium → complex"]
-        SD4["关键词推断 product_type\ninferProductTypes()"]
-        SD5["关键词推断 design_style\ninferStyles()"]
-        SD6["生成 persona_seed\nsha1(scene_id:app:complexity:index)"]
+        SD2["以 groupIndex = ⌊i/3⌋ 为单位\n分配 application_type\n同组 3 条任务共享同一 app"]
+        SD3["同组内轮转 target_complexity\nvague → medium → complex\n保证同一 persona 覆盖三档"]
+        SD4["关键词推断 product_type\ninferProductTypes()\n作为元数据，默认不注入 prompt"]
+        SD5["关键词推断 design_style\ninferStyles()\n同组 3 条任务共享"]
+        SD6["生成 persona_seed\nsha1(scene_id:app:groupIndex)\n同组 3 条任务相同"]
     end
 
     subgraph BACKFILL ["buildBackfillPlan()"]
         BF1["统计已有 query 的\nscene × complexity 覆盖"]
-        BF2["对缺口场景补齐\n优先填充最少覆盖的 complexity"]
+        BF2["对缺口场景以 groupIndex 分组补齐\n同组天然 1:1:1 复杂度平衡"]
     end
 
     subgraph PLAN ["generation_plan.v2.jsonl"]
-        PL["每条任务:\n{query_id, scene_id,\napplication_type, product_type,\ntarget_complexity, design_style,\npersona_seed}"]
+        PL["每条任务:\n{query_id, scene_id,\napplication_type, product_type,\nconstrained, target_complexity,\ndesign_style, persona_seed}"]
     end
 
     SPEC --> SEED --> PLAN
@@ -116,7 +116,7 @@ Query_task = f(application_type, product_type, target_complexity, design_style, 
 | 维度                 | 来源                          | 实际规模         |
 | -------------------- | ----------------------------- | ---------------- |
 | application_type     | 从 l2_scene_examples 关键词推断 + 20 条规则 | 随输入 Excel 而定 |
-| product_type         | 关键词规则 → 13 种原型          | 13 种            |
+| product_type         | 关键词推断（元数据）；`constrained: true` 时注入 prompt | 13 种 |
 | target_complexity    | 固定三档轮转                    | vague / medium / complex |
 | design_style         | 关键词规则 → 10 种 + null       | 11 种            |
 | persona_seed         | SHA1 确定性哈希                 | 每条唯一          |
@@ -137,7 +137,7 @@ flowchart TD
 
     subgraph PERSONA ["buildPersonaSpec()"]
         PA1["persona_seed → pickSeeded()\n从 5 种 archetype 中选一个:\nmaker / planner / curator /\noperator / founder_like"]
-        PA2["生成 persona 对象:\n- persona_title\n- persona_description\n- persona_style_hint\n  (随 complexity 变化)\n- user_goal\n- domain_familiarity"]
+        PA2["生成 persona 对象:\n- persona_title\n- persona_description\n- persona_style_hint\n- user_goal\n- domain_familiarity"]
     end
 
     subgraph QUERY ["synthesizeQueryFromPersona()"]
@@ -201,7 +201,9 @@ flowchart TD
 ```
 
 关键实现细节：
-- 支持 OpenAI 兼容接口和 Anthropic Messages 接口
+- 支持三种 transport：`claude-cli`（Claude Code CLI 子进程）、`openai`（OpenAI 兼容接口）、`anthropic`（Anthropic Messages 接口）
+- **Persona 缓存**：同组 3 条任务共享同一 `persona_seed`，LLM persona 调用只发起一次，其余任务 await 同一 Promise，零重复调用
+- `product_type` 默认不注入 LLM prompt（open path）；`constrained: true` 时才显式注入 persona + query 两步 prompt（supplementation path）
 - 并发控制（默认 concurrency=3）+ 超时 + 重试
 - Persona 解析失败时自动降级到 deterministic fallback
 - Windows 系统代理自动检测 + 不安全 TLS 可选
@@ -362,7 +364,7 @@ mindmap
     Persona-Driven 两步生成
       先合成 persona 再生成 query
       5 种 archetype x 3 档 complexity
-      persona 风格随复杂度变化
+      persona 与复杂度解耦，不因 complexity 而变化
       参考 Persona Hub 方法论
     Complexity 前置分配
       plan 阶段指定 vague/medium/complex

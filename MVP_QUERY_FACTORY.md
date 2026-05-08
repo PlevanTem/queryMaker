@@ -66,10 +66,11 @@ npm run run:mvp
 - `l1_scene`
 - `l2_scene_label`
 - `application_type`
-- `product_type`
+- `product_type`（元数据；`constrained: true` 时才注入 LLM prompt）
+- `constrained`（boolean；默认 `false`；补充生成时设为 `true`）
 - `target_complexity`
 - `design_style`
-- `persona_seed`
+- `persona_seed`（同组 3 条任务共享，格式 `sha1(scene_id:app:groupIndex)`）
 
 ### `queries` 表
 
@@ -101,7 +102,7 @@ npm run run:mvp
 
 ## 后续最自然的扩展
 
-1. 把 `persona_synthesis_prompt` 和 `query_from_persona_prompt` 接到 Cursor 或外部 LLM
+1. ~~把 `persona_synthesis_prompt` 和 `query_from_persona_prompt` 接到 Cursor 或外部 LLM~~ ✅ 已实现（`batch-generate-queries.js` + `scripts/lib/llm-batch.js`，支持 `claude-cli / openai / anthropic`）
 2. 把 `score:queries` 接到精简版 `p5` 评分流程
-3. 把 `plan:backfill` 从“按场景补齐”扩展到“按 application_type / complexity 热区补齐”
+3. 把 `plan:backfill` 从”按场景补齐”扩展到”按 application_type / complexity 热区补齐”
 
