@@ -18,7 +18,7 @@ domain_familiarity：{domain_familiarity}
 一级场景：{l1_scene}
 二级场景标签：{l2_scene_label}
 当前选定的 L3 application_type：{application_type}
-当前 UI 形态：{product_type}
+当前 UI 形态（参考方向，如有）：{product_type}
 常见 app 方向示例（仅参考，按二级场景随机衍生，不要重复）：{scene_examples}
 设计风格：{design_style}
 Query目标复杂度：{target_complexity}

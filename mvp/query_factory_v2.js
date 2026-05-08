@@ -542,18 +542,20 @@ function computeSeedCount(targetCount, options = {}) {
 
 function buildSeedPlan(spec, options = {}) {
   const tasks = [];
+  const N = COMPLEXITY_LEVELS.length;
   spec.scenarios.forEach((scenario, scenarioIndex) => {
     const count = computeSeedCount(scenario.target_count, options);
     const applicationTypes = rotate(scenario.application_type_candidates, scenarioIndex);
-    const seededComplexities = rotate(COMPLEXITY_LEVELS, scenarioIndex);
+    const complexities = rotate(COMPLEXITY_LEVELS, scenarioIndex);
 
     for (let i = 0; i < count; i += 1) {
-      const applicationType = applicationTypes[i % applicationTypes.length];
+      const groupIndex = Math.floor(i / N);
+      const applicationType = applicationTypes[groupIndex % applicationTypes.length];
       const productTypes = inferProductTypes(scenario.l1_scene, scenario.l2_scene_label, applicationType);
       const styles = inferStyles(scenario.l1_scene, scenario.l2_scene_label, applicationType);
-      const targetComplexity = seededComplexities[i % seededComplexities.length];
-      const productType = productTypes[i % productTypes.length];
-      const designStyle = styles[i % styles.length];
+      const targetComplexity = complexities[i % N];
+      const productType = productTypes[groupIndex % productTypes.length];
+      const designStyle = styles[groupIndex % styles.length];
       tasks.push({
         query_id: `q_${scenario.id}_${String(i + 1).padStart(3, "0")}`,
         scene_id: scenario.id,
@@ -563,9 +565,10 @@ function buildSeedPlan(spec, options = {}) {
         l2_scene_examples: scenario.l2_scene_examples,
         application_type: applicationType,
         product_type: productType,
+        constrained: false,
         target_complexity: targetComplexity,
         design_style: designStyle,
-        persona_seed: hashText(`${scenario.id}:${applicationType}:${targetComplexity}:${i}`),
+        persona_seed: hashText(`${scenario.id}:${applicationType}:${groupIndex}`),
         plan_type: "seed",
         target_count_hint: scenario.target_count,
       });
@@ -603,12 +606,13 @@ function buildBackfillPlan(spec, existingQueries, options = {}) {
     if (!gap) {
       return;
     }
-    const complexityCounts = complexityByScene[scenario.id] || {};
     const applicationTypes = rotate(scenario.application_type_candidates, currentCount + scenarioIndex);
+    const complexities = rotate(COMPLEXITY_LEVELS, currentCount + scenarioIndex);
+    const baseGroup = Math.floor(currentCount / N);
 
     for (let i = 0; i < gap; i += 1) {
-      const leastCoveredComplexity = leastCoveredKey(COMPLEXITY_LEVELS, complexityCounts, i);
-      const applicationType = applicationTypes[i % applicationTypes.length];
+      const groupIndex = Math.floor(i / N);
+      const applicationType = applicationTypes[groupIndex % applicationTypes.length];
       const productTypes = inferProductTypes(scenario.l1_scene, scenario.l2_scene_label, applicationType);
       const styles = inferStyles(scenario.l1_scene, scenario.l2_scene_label, applicationType);
       tasks.push({
@@ -619,15 +623,15 @@ function buildBackfillPlan(spec, existingQueries, options = {}) {
         l2_scene_raw: scenario.l2_scene_raw,
         l2_scene_examples: scenario.l2_scene_examples,
         application_type: applicationType,
-        product_type: productTypes[i % productTypes.length],
-        target_complexity: leastCoveredComplexity,
-        design_style: styles[i % styles.length],
-        persona_seed: hashText(`${scenario.id}:${applicationType}:${leastCoveredComplexity}:${currentCount + i}`),
+        product_type: productTypes[groupIndex % productTypes.length],
+        constrained: false,
+        target_complexity: complexities[i % N],
+        design_style: styles[groupIndex % styles.length],
+        persona_seed: hashText(`${scenario.id}:${applicationType}:${baseGroup + groupIndex}`),
         plan_type: "backfill",
         target_count_hint: scenario.target_count,
         gap_after_snapshot: gap,
       });
-      complexityCounts[leastCoveredComplexity] = (complexityCounts[leastCoveredComplexity] || 0) + 1;
     }
   });
 
@@ -805,7 +809,7 @@ function buildPersonaSynthesisPrompt(task) {
       ? `该场景常见 app 方向示例（仅用于理解，不要机械照抄进最终 query）：${task.l2_scene_examples.join("、")}`
       : "该场景没有额外 app 方向示例。",
     `当前选定的 L3 application_type：${task.application_type}`,
-    `当前 UI 形态：${PRODUCT_TYPE_LABELS[task.product_type] || task.product_type}`,
+    task.constrained ? `当前 UI 形态：${PRODUCT_TYPE_LABELS[task.product_type] || task.product_type}` : null,
     `设计风格：${getDesignStyleInstruction(task.design_style)}`,
     `目标复杂度：${task.target_complexity}`,
     `复杂度要求：${getComplexityInstruction(task.target_complexity)}`,
@@ -832,7 +836,7 @@ function buildPersonaSynthesisPrompt(task) {
       null,
       2,
     ),
-  ].join("\n");
+  ].filter(Boolean).join("\n");
 }
 
 function buildPersonaSpec(task) {
@@ -867,7 +871,7 @@ function buildQueryPromptFromPersona(task, persona) {
     `一级场景：${task.l1_scene}`,
     `二级场景标签：${task.l2_scene_label}`,
     `当前选定的 L3 application_type：${task.application_type}`,
-    `当前 UI 形态：${PRODUCT_TYPE_LABELS[task.product_type] || task.product_type}`,
+    task.constrained ? `当前 UI 形态（参考方向）：${PRODUCT_TYPE_LABELS[task.product_type] || task.product_type}` : null,
     task.l2_scene_examples?.length
       ? `常见 app 方向示例（仅参考，按二级场景随机衍生，不要重复）：${task.l2_scene_examples.join("、")}`
       : "该场景没有额外 app 示例。",
@@ -910,20 +914,23 @@ function buildQueryPromptFromPersona(task, persona) {
     "</complex>",
     "",
     "注意：示例只是用于校准\"长度感 / 结构感 / 信息密度\"，请保持你的 query 与示例话题完全无关，且最终输出仍默认英文（vague 也用英文，不要因为示例是中文就跟着输出中文）。",
-  ].join("\n");
+  ].filter(Boolean).join("\n");
 }
 
 function synthesizeQueryFromPersona(task, persona) {
   const styleSentence = getEnglishStyleInstruction(task.design_style);
   const appLabel = getEnglishApplicationLabel(task.application_type);
-  const productLabel = getEnglishProductTypeLabel(task.product_type);
+  const productLabel = task.constrained ? getEnglishProductTypeLabel(task.product_type) : null;
 
   if (task.target_complexity === "vague") {
-    return `I want a ${productLabel} for ${appLabel}. Keep it simple and easy to browse. It should feel clean on mobile too.`;
+    return productLabel
+      ? `I want a ${productLabel} for ${appLabel}. Keep it simple and easy to browse. It should feel clean on mobile too.`
+      : `I want something for ${appLabel}. Keep it simple and easy to browse. It should feel clean on mobile too.`;
   }
 
   if (task.target_complexity === "complex") {
-    return `Please help me design a mobile-first, responsive ${productLabel} for ${appLabel}. ${styleSentence} The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.
+    const uiRef = productLabel ? `a mobile-first, responsive ${productLabel}` : "a mobile-first, responsive interface";
+    return `Please help me design ${uiRef} for ${appLabel}. ${styleSentence} The experience should feel polished rather than generic, and I want the layout, visual hierarchy, and interaction flow to clearly support browsing, comparison, and deeper exploration.
 
 Key requirements:
 1. The hero section should explain the value immediately and include a strong primary CTA.
@@ -933,13 +940,16 @@ Key requirements:
 5. If motion is used, it should improve orientation and storytelling rather than feel purely decorative.`;
   }
 
-  return `Please build an elegant ${productLabel} for ${appLabel}. ${styleSentence} I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.`;
+  const uiRef = productLabel ? `an elegant ${productLabel}` : "an elegant interface";
+  return `Please build ${uiRef} for ${appLabel}. ${styleSentence} I want a clear hero section, a structured main content area, and one useful supporting interaction such as quick filtering or expand-for-details. The overall experience should feel organized and easy to scan.`;
 }
 
 function buildTemplateQuery(task) {
   const appLabel = getEnglishApplicationLabel(task.application_type);
-  const productLabel = getEnglishProductTypeLabel(task.product_type);
-  return `I want a ${productLabel} for ${appLabel} with a clear structure and easy-to-scan content.`;
+  const productLabel = task.constrained ? getEnglishProductTypeLabel(task.product_type) : null;
+  return productLabel
+    ? `I want a ${productLabel} for ${appLabel} with a clear structure and easy-to-scan content.`
+    : `I want something for ${appLabel} with a clear structure and easy-to-scan content.`;
 }
 
 function normalizeOpenAiBaseUrl(baseUrl) {
@@ -1432,6 +1442,7 @@ async function supplementAnchoredPersonaQueries(anchorRows, options = {}) {
       l2_scene_raw: row.l2_scene_raw,
       application_type: row.application_type,
       product_type: row.product_type,
+      constrained: true,
       design_style: row.design_style,
       target_complexity: target,
       persona_seed: row.persona_seed || `anchored_${anchorId}`,
