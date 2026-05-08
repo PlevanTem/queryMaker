@@ -811,8 +811,6 @@ function buildPersonaSynthesisPrompt(task) {
     `当前选定的 L3 application_type：${task.application_type}`,
     task.constrained ? `当前 UI 形态：${PRODUCT_TYPE_LABELS[task.product_type] || task.product_type}` : null,
     `设计风格：${getDesignStyleInstruction(task.design_style)}`,
-    `目标复杂度：${task.target_complexity}`,
-    `复杂度要求：${getComplexityInstruction(task.target_complexity)}`,
     "最终 query 默认输出英文。",
     "",
     "## 你的任务",
