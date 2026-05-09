@@ -822,6 +822,8 @@ function buildPersonaSynthesisPrompt(task) {
     "4. 不要把二级场景括号中的示例整段复制到 persona 文本中。",
     "",
     "## 输出格式",
+    "直接输出以下 JSON，不要加 markdown 代码块围栏（不要 ```json）：",
+    "【重要】所有字符串值内部禁止使用 ASCII 双引号 \" —— 若需引用词语请用中文书名号《》或单引号 '' 代替，否则 JSON 会解析失败。",
     JSON.stringify(
       {
         persona_id: "p_xxx",
@@ -2102,6 +2104,8 @@ module.exports = {
   PRODUCT_TYPE_LABELS,
   DESIGN_STYLES,
   COMPLEXITY_LEVELS,
+  loadLocalEnv,
+  escapeHtml,
   parseArgs,
   autoDetectWorkbook,
   parseRawRequirements,

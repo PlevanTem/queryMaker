@@ -156,6 +156,81 @@ npm run run:mvp -- --mode llm-anthropic
 
 **依赖说明：** LLM 调用使用项目已有的 `undici`（Node 内建环境变量加载见 `mvp/query_factory_v2.js`），接入真实模型时 **无需** 额外安装 OpenAI 官方 SDK；`npm install` 一次即可，除非升级 Node 大版本，一般不必为「换模型 / 换网关」更新 `package.json` 依赖。
 
+### 7. 真实 LLM 批量生成（推荐入口）
+
+`batch:generate` 是当前推荐的批量生成入口，它内置：xlsx 抽样 / 外部 plan / 三种 transport（含本机 `claude-cli` 子进程，绕过 packy-cc 网关指纹检测）/ 退避重试 / 断点续跑 / 标准化产物。详细参数见 [scripts/README.md](./scripts/README.md)。
+
+#### 快速启动
+
+```bash
+# 抽 5 个二级场景做一次冒烟
+node scripts/batch-generate-queries.js \
+  --input data/input/场景覆盖.xlsx \
+  --output-dir data/output/runs/sample5 \
+  --sample-n 5 --seed 4073
+```
+
+或用项目已有的 plan 跑全量：
+
+```bash
+node scripts/batch-generate-queries.js \
+  --plan data/intermediate/generation_plan.v2.jsonl \
+  --output-dir data/output/runs/full \
+  --concurrency 4
+```
+
+#### 前置条件
+
+- `.env.local` 配好 `PACKY_API_KEY` 和 `ANTHROPIC_BASE_URL`
+- 本机已安装 Claude Code CLI：`npm i -g @anthropic-ai/claude-code`（默认 `claude-cli` transport 依赖）
+
+#### 它会做什么（以抽样 5 个场景为例）
+
+| 步骤 | 行为 |
+|---|---|
+| 1. 加载 env | 读取 `.env.local`，把 `PACKY_API_KEY` 同步到 `ANTHROPIC_API_KEY / ANTHROPIC_AUTH_TOKEN` |
+| 2. 解析 + 抽样 | `parseRequirementsFromWorkbook` 解析 xlsx → 全部场景 → 用 seed 确定性随机抽 5 个二级场景 |
+| 3. 构建 plan | `buildSeedPlan` 把每个场景展开成 vague / medium / complex 三档 → **15 个任务** |
+| 4. resume 检查 | 默认开。若 `--output-dir/raw_queries.jsonl` 已存在，跳过已完成的 `query_id` |
+| 5. 起 LLM | 默认 `claude-cli` transport（spawn `claude.cmd -p --bare …` 子进程，绕过 packy-cc 网关指纹检测） |
+| 6. 双步 pipeline | 每个任务串行两次 LLM 调用：① persona JSON 合成（带 retry）② 用 persona 生成 query 文本（带 retry） |
+| 7. 并发池 | 默认 3 并发（`--concurrency`），按 503/超时/CLI 非零退出码 退避重试 2 次（`--max-retries`） |
+| 8. 流式落盘 | 每条成功立即 append 到 `raw_queries.jsonl`，崩了重跑同目录靠 resume 续上 |
+| 9. 收尾 | 按 plan 顺序重写 jsonl + 写 `stats.json` / `errors.json` / `config.json` |
+
+#### 输出（`--output-dir` 下）
+
+```
+plan.json          本批 plan 快照
+raw_queries.jsonl  ★ 主产物：每行一条 query 记录（与 raw_queries.v2.jsonl schema 兼容）
+errors.json        失败明细（仅在有失败时写）
+stats.json         按复杂度的字数 / persona 解析率 / 耗时
+config.json        入参/transport 留痕（API key 已脱敏）
+```
+
+#### 时间预估
+
+- 单条任务约 30–60s（persona 20–40s + query 10–20s）
+- 抽样 5 场景 = 15 任务，并发 3：**约 3–5 分钟**
+- 全量 ~280 任务，并发 4：**约 30–40 分钟**
+
+#### 跑完后看效果
+
+`build:comparison` 把任意多个 run 拼成并排 HTML（自动计算跨复杂度区分度并标出最优组）：
+
+```bash
+# 单 run 看自己
+node scripts/build-query-comparison.js \
+  --run-dir data/output/runs/sample5 \
+  --output  data/output/sample5_report.html
+
+# 多 run 横评（如 baseline vs few-shot）
+node scripts/build-query-comparison.js \
+  --run-dir data/output/runs/sample5_baseline \
+  --run-dir data/output/runs/sample5_fewshot \
+  --output  data/output/query_comparison.html
+```
+
 ## Pipeline Overview
 
 ```mermaid
@@ -256,6 +331,12 @@ flowchart LR
 │   ├── query_factory.js
 │   └── query_factory_v2.js
 ├── scripts/
+│   ├── README.md                       # batch / comparison 脚本使用说明
+│   ├── lib/
+│   │   └── llm-batch.js                # 共享：transports / 重试 / pipeline / pool / stats
+│   ├── batch-generate-queries.js       # 真实 LLM 批量生成入口（推荐）
+│   ├── build-query-comparison.js       # 多 run 对比 HTML 生成器
+│   ├── test-api-connectivity.js        # API 网关探活
 │   ├── parse-requirements.js
 │   ├── build-generation-plan.js
 │   ├── build-backfill-plan.js
@@ -267,8 +348,9 @@ flowchart LR
 │   ├── build-dashboard.js
 │   ├── preview-persona-flow.js
 │   ├── run-mvp.js
-│   └── lib/
-│       └── llm-batch.js
+│   ├── lib/
+│   │   └── llm-batch.js
+│   └── legacy/                         # 已归档的一次性脚本
 ├── prompts/
 │   ├── persona_synthesis_prompt.md
 │   ├── query_from_persona_prompt.md
@@ -302,6 +384,9 @@ flowchart LR
 | `npm run import:queries`     | 将场景与 query 导入 SQLite         |
 | `npm run build:dashboard`    | 从数据库生成静态报表                   |
 | `npm run run:mvp`            | 一键跑通完整 v2 MVP 流程             |
+| `npm run batch:generate`     | 真实 LLM 批量生成 query（支持 xlsx 抽样 / plan 输入 / 断点续跑） |
+| `npm run build:comparison`   | 把任意多个 batch run 拼成并排 HTML 对比报告 |
+| `npm run test:api`           | 探活：分别测 Anthropic 与 OpenAI 兼容端点 |
 | `npm test`                   | 运行冒烟测试                       |
 
 

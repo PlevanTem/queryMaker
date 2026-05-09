@@ -16,6 +16,9 @@
     "import:queries": "node scripts/import-queries.js",
     "build:dashboard": "node scripts/build-dashboard.js",
     "run:mvp": "node scripts/run-mvp.js",
+    "batch:generate": "node scripts/batch-generate-queries.js",
+    "build:comparison": "node scripts/build-query-comparison.js",
+    "test:api": "node scripts/test-api-connectivity.js",
     "test": "node --test tests/*.test.js"
   },
   "keywords": [],
