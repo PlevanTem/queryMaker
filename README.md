@@ -156,80 +156,44 @@ npm run run:mvp -- --mode llm-anthropic
 
 **依赖说明：** LLM 调用使用项目已有的 `undici`（Node 内建环境变量加载见 `mvp/query_factory_v2.js`），接入真实模型时 **无需** 额外安装 OpenAI 官方 SDK；`npm install` 一次即可，除非升级 Node 大版本，一般不必为「换模型 / 换网关」更新 `package.json` 依赖。
 
-### 7. 真实 LLM 批量生成（推荐入口）
+### 7. LLM 自由生成流水线（推荐入口）
 
-`batch:generate` 是当前推荐的批量生成入口，它内置：xlsx 抽样 / 外部 plan / 三种 transport（含本机 `claude-cli` 子进程，绕过 packy-cc 网关指纹检测）/ 退避重试 / 断点续跑 / 标准化产物。详细参数见 [scripts/README.md](./scripts/README.md)。
-
-#### 快速启动
+`run:free` 是当前推荐的 LLM 批量生成一键入口，内部按顺序编排四步：构建计划 → LLM 生成 → 质量评分 → 可视化报告，任一步骤失败立即退出并标明位置。
 
 ```bash
-# 抽 5 个二级场景做一次冒烟
-node scripts/batch-generate-queries.js \
-  --input data/input/场景覆盖.xlsx \
-  --output-dir data/output/runs/sample5 \
-  --sample-n 5 --seed 4073
+# 最简启动（全部默认）
+npm run run:free
+
+# 全量重跑到新目录
+npm run run:free -- --output-dir data/output/runs/free200_v2 --no-resume
+
+# 同时导出带前缀的 CSV
+npm run run:free -- --no-resume --export-csv
+
+# 完整参数
+npm run run:free -- \
+  --output-dir    data/output/runs/free200_v2 \
+  --persona-scope scene \
+  --concurrency   3 \
+  --no-resume \
+  --title         "free200 v2 · 2026-05" \
+  --export-csv \
+  --csv-prefix    "Generate a plain HTML optimized for mobile devices."
 ```
 
-或用项目已有的 plan 跑全量：
+**主要参数：**
 
-```bash
-node scripts/batch-generate-queries.js \
-  --plan data/intermediate/generation_plan.v2.jsonl \
-  --output-dir data/output/runs/full \
-  --concurrency 4
-```
+| 参数 | 默认 | 说明 |
+|---|---|---|
+| `--output-dir` | `data/output/runs/free200_llm` | 所有产物目录 |
+| `--persona-scope` | `scene` | `scene`=同场景共享 persona；`task`=每条独立 |
+| `--concurrency` | `3` | LLM 并发数 |
+| `--no-resume` | 断点续跑 | 传此参数则全量重跑 |
+| `--skip-plan` | — | 跳过计划构建，沿用已有 plan |
+| `--export-csv` | 关 | 开启后额外导出带前缀的 CSV |
+| `--csv-prefix` | `Generate a plain HTML optimized for mobile devices.` | CSV 每条 query 前缀 |
 
-#### 前置条件
-
-- `.env.local` 配好 `PACKY_API_KEY` 和 `ANTHROPIC_BASE_URL`
-- 本机已安装 Claude Code CLI：`npm i -g @anthropic-ai/claude-code`（默认 `claude-cli` transport 依赖）
-
-#### 它会做什么（以抽样 5 个场景为例）
-
-| 步骤 | 行为 |
-|---|---|
-| 1. 加载 env | 读取 `.env.local`，把 `PACKY_API_KEY` 同步到 `ANTHROPIC_API_KEY / ANTHROPIC_AUTH_TOKEN` |
-| 2. 解析 + 抽样 | `parseRequirementsFromWorkbook` 解析 xlsx → 全部场景 → 用 seed 确定性随机抽 5 个二级场景 |
-| 3. 构建 plan | `buildSeedPlan` 把每个场景展开成 vague / medium / complex 三档 → **15 个任务** |
-| 4. resume 检查 | 默认开。若 `--output-dir/raw_queries.jsonl` 已存在，跳过已完成的 `query_id` |
-| 5. 起 LLM | 默认 `claude-cli` transport（spawn `claude.cmd -p --bare …` 子进程，绕过 packy-cc 网关指纹检测） |
-| 6. 双步 pipeline | 每个任务串行两次 LLM 调用：① persona JSON 合成（带 retry）② 用 persona 生成 query 文本（带 retry） |
-| 7. 并发池 | 默认 3 并发（`--concurrency`），按 503/超时/CLI 非零退出码 退避重试 2 次（`--max-retries`） |
-| 8. 流式落盘 | 每条成功立即 append 到 `raw_queries.jsonl`，崩了重跑同目录靠 resume 续上 |
-| 9. 收尾 | 按 plan 顺序重写 jsonl + 写 `stats.json` / `errors.json` / `config.json` |
-
-#### 输出（`--output-dir` 下）
-
-```
-plan.json          本批 plan 快照
-raw_queries.jsonl  ★ 主产物：每行一条 query 记录（与 raw_queries.v2.jsonl schema 兼容）
-errors.json        失败明细（仅在有失败时写）
-stats.json         按复杂度的字数 / persona 解析率 / 耗时
-config.json        入参/transport 留痕（API key 已脱敏）
-```
-
-#### 时间预估
-
-- 单条任务约 30–60s（persona 20–40s + query 10–20s）
-- 抽样 5 场景 = 15 任务，并发 3：**约 3–5 分钟**
-- 全量 ~280 任务，并发 4：**约 30–40 分钟**
-
-#### 跑完后看效果
-
-`build:comparison` 把任意多个 run 拼成并排 HTML（自动计算跨复杂度区分度并标出最优组）：
-
-```bash
-# 单 run 看自己
-node scripts/build-query-comparison.js \
-  --run-dir data/output/runs/sample5 \
-  --output  data/output/sample5_report.html
-
-# 多 run 横评（如 baseline vs few-shot）
-node scripts/build-query-comparison.js \
-  --run-dir data/output/runs/sample5_baseline \
-  --run-dir data/output/runs/sample5_fewshot \
-  --output  data/output/query_comparison.html
-```
+单步调用方式见 [scripts/README.md](./scripts/README.md)。
 
 ## Pipeline Overview
 
@@ -331,25 +295,28 @@ flowchart LR
 │   ├── query_factory.js
 │   └── query_factory_v2.js             # 核心：pipeline / 评分 / design_style 系统
 ├── scripts/
-│   ├── README.md                       # batch / comparison / expand 脚本使用说明
+│   ├── README.md                       # 脚本层使用说明（参数、示例、设计原则）
 │   ├── lib/
-│   │   └── llm-batch.js                # 共享：transports / 重试 / pipeline / pool / stats
-│   ├── batch-generate-queries.js       # ★ 真实 LLM 批量生成入口（推荐）
-│   ├── build-query-comparison.js       # 多 run 对比 HTML 生成器
-│   ├── build-expand200-plan.js         # ★ 发散性拓展 plan（200 条，3 part 结构）
-│   ├── generate-extra-scenes.js        # 基于 L1 分类扩展新 L2 场景（41 场景）
-│   ├── generate-analysis-report.js     # ★ 批次质量分析报告生成器（可复用 skill）
+│   │   └── llm-batch.js                # 共享：transports / 重试 / persona-query pipeline / 并发池
+│   ├── run-free.js                     # ★ LLM 自由生成一键流水线（推荐入口）
+│   ├── batch-generate-queries.js       # LLM 批量生成（run-free 内部调用，也可单独使用）
+│   ├── build-free200-plan.js           # ★ 自由生成计划构建（200 条，persona-scope 控制）
+│   ├── build-expand200-plan.js         # 发散性拓展 plan（200 条，3 part 结构）
+│   ├── generate-analysis-report.js     # ★ 批次质量分析报告（含 persona 卡片）
+│   ├── score-queries.js                # 质量评分
+│   ├── export-queries-csv.js           # ★ 导出带前缀的 query CSV
+│   ├── build-query-comparison.js       # 多 run 横向对比 HTML
+│   ├── generate-extra-scenes.js        # 基于 L1 扩展新 L2 场景（41 个）
 │   ├── test-api-connectivity.js        # API 网关探活
 │   ├── parse-requirements.js
 │   ├── build-generation-plan.js
 │   ├── build-backfill-plan.js
 │   ├── generate-queries.js
 │   ├── supplement-anchored-persona-queries.js
-│   ├── score-queries.js
 │   ├── import-queries.js
 │   ├── build-dashboard.js
 │   ├── preview-persona-flow.js
-│   ├── run-mvp.js
+│   ├── run-mvp.js                      # 旧版一键流水线（persona-fallback，无 LLM）
 │   └── legacy/                         # 已归档的一次性脚本
 ├── prompts/
 │   ├── persona_synthesis_prompt.md
@@ -364,14 +331,17 @@ flowchart LR
 ├── data/
 │   ├── intermediate/
 │   │   ├── generation_plan.v2.jsonl
-│   │   ├── generation_plan.expand200.jsonl   # expand200 批次 plan
-│   │   └── generation_plan.extra.jsonl
+│   │   ├── generation_plan.expand200.jsonl
+│   │   ├── generation_plan.extra.jsonl
+│   │   └── generation_plan.free200.jsonl    # ★ 自由生成计划（build-free200-plan.js 产出）
 │   ├── output/
 │   │   └── runs/
-│   │       └── expand200_llm/               # ★ 200 条真实 LLM 批次产物
+│   │       ├── expand200_llm/               # expand200 批次产物
+│   │       └── free200_llm/                 # ★ 自由生成批次产物
 │   │           ├── raw_queries.jsonl
 │   │           ├── scored_queries.jsonl
-│   │           └── analysis_report.html
+│   │           ├── analysis_report.html
+│   │           └── export_prompts.csv
 │   ├── db/
 │   └── reports_v2/
 └── ARCHIVE/
@@ -391,8 +361,9 @@ flowchart LR
 | `npm run score:queries`      | 对 query 做启发式评分               |
 | `npm run import:queries`     | 将场景与 query 导入 SQLite         |
 | `npm run build:dashboard`    | 从数据库生成静态报表                   |
-| `npm run run:mvp`            | 一键跑通完整 v2 MVP 流程             |
-| `npm run batch:generate`     | 真实 LLM 批量生成 query（支持 xlsx 抽样 / plan 输入 / 断点续跑） |
+| `npm run run:mvp`            | 一键跑通完整 v2 MVP 流程（旧版，persona-fallback，无 LLM） |
+| `npm run run:free`           | ★ LLM 自由生成一键流水线（plan → generate → score → report） |
+| `npm run batch:generate`     | LLM 批量生成单步入口（支持 xlsx 抽样 / plan 输入 / 断点续跑） |
 | `npm run build:comparison`   | 把任意多个 batch run 拼成并排 HTML 对比报告 |
 | `npm run test:api`           | 探活：分别测 Anthropic 与 OpenAI 兼容端点 |
 | `npm test`                   | 运行冒烟测试                       |
@@ -400,14 +371,23 @@ flowchart LR
 **扩展脚本（直接调用）：**
 
 ```bash
-# 构建 200 条发散拓展 plan（三部分结构，design_style 默认 null）
+# ★ 构建自由生成 plan（200 条，persona-scope 默认 scene）
+node scripts/build-free200-plan.js [--dry-run] [--persona-scope scene|task]
+
+# 构建发散拓展 plan（三部分结构，200 条）
 node scripts/build-expand200-plan.js [--dry-run] [--design-styles "Dark,Glassmorphism"]
 
-# 从任意 scored_queries.jsonl 生成可交互 HTML 分析报告
+# 从任意 scored_queries.jsonl 生成可交互 HTML 分析报告（含 persona 卡片）
 node scripts/generate-analysis-report.js \
   --input  data/output/runs/<batch>/scored_queries.jsonl \
   --output data/output/runs/<batch>/analysis_report.html \
   [--title "批次名"] [--meta "N 条 · 模型信息"]
+
+# 导出带前缀的 query CSV
+node scripts/export-queries-csv.js \
+  --input  data/output/runs/<batch>/raw_queries.jsonl \
+  [--output <file.csv>] \
+  [--prefix "Generate a plain HTML optimized for mobile devices."]
 ```
 
 
@@ -607,7 +587,10 @@ registerDesignStyle(
   - 评分公式：`Authenticity × 0.4 + Specificity × 0.4 + Diversity × 0.2`，通过阈值 ≥ 2.8
 - **Design Style 系统**：`design_style` 默认 `null`，LLM 自由发挥；支持 `--design-styles` opt-in 注入；`registerDesignStyle()` 动态扩展
 - **发散性拓展 plan**：`build-expand200-plan.js` 产出 200 条任务（3 part 结构，覆盖 19 个新领域）
-- **可复用质量分析报告 skill**：`generate-analysis-report.js` 从任意 scored JSONL 生成自包含 HTML（图表 + 交互筛选器 + 评分细则）
+- **可复用质量分析报告 skill**：`generate-analysis-report.js` 从任意 scored JSONL 生成自包含 HTML（图表 + 交互筛选器 + 评分细则 + **persona 卡片展开**）
+- **自由生成流水线**：`run-free.js` 一键编排 plan → generate → score → report → (可选) CSV 导出；`build-free200-plan.js` 管理 persona-scope（默认 scene 共享）
+- **persona-scope 控制**：`--persona-scope scene`（默认）同场景共享 persona；`--persona-scope task` 每条独立；防止 task 级变量误混入 seed
+- **CSV 导出**：`export-queries-csv.js` 从任意 raw_queries.jsonl 导出带自定义前缀的 prompt CSV
 - SQLite 导入与静态 dashboard 输出
 - 主链路冒烟测试
 

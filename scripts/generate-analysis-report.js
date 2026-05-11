@@ -413,6 +413,16 @@ tr.expanded .q-full{display:block}
 .chip-medium{background:#ffa94022;color:var(--warn2)}
 .chip-complex{background:#ff6b6b22;color:var(--fail)}
 .chip-unknown{background:var(--surface2);color:var(--text2)}
+
+/* Persona badge & expanded card */
+.persona-badge{font-size:10px;color:var(--accent2);margin-bottom:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:480px;font-style:italic;opacity:.85}
+.persona-card{background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;margin-bottom:10px}
+.persona-card-title{font-size:12px;font-weight:700;color:var(--accent2);margin-bottom:8px}
+.persona-card-row{display:flex;gap:8px;margin-bottom:5px;font-size:12px;line-height:1.5}
+.persona-card-label{color:var(--text2);width:64px;flex-shrink:0;font-size:11px;font-weight:600}
+.persona-card-val{color:var(--text);flex:1}
+.persona-fam{padding:1px 7px;border-radius:10px;font-size:10px;font-weight:700}
+.fam-low{background:#ff6b6b22;color:var(--fail)}.fam-medium{background:#ffa94022;color:var(--warn2)}.fam-high{background:#36d39922;color:var(--pass)}
 </style>
 </head>
 <body>
@@ -844,8 +854,9 @@ function renderTable() {
       <td><span class="score-pill \${scoreClass(sc)}">\${sc}</span></td>
       <td><span class="pass-dot \${q.quality_pass?"pass":"fail"}" title="\${q.quality_pass?"通过":"失败"}"></span></td>
       <td>
+        <div class="persona-badge">\${(q.persona_title||"").replace(/</g,"&lt;")}</div>
         <div class="q-preview">\${preview}</div>
-        <div class="q-full">\${full}</div>
+        <div class="q-full">\${buildPersonaCard(q)}\${full}</div>
       </td>\`;
     tbody.appendChild(tr);
   });
@@ -856,6 +867,20 @@ function changePage(delta) {
   const pages = Math.ceil(filteredData.length / ps) || 1;
   currentPage = Math.max(1, Math.min(pages, currentPage + delta));
   renderTable();
+}
+
+// ─── Persona card builder (used in expanded row) ──────────────────────────────
+function buildPersonaCard(q) {
+  const spec = q.persona_spec || {};
+  function e(s) { return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+  const famCls = { low:'fam-low', medium:'fam-medium', high:'fam-high' };
+  let h = '<div class="persona-card">';
+  h += '<div class="persona-card-title">' + e(q.persona_title||'—') + '</div>';
+  if (spec.persona_description) h += '<div class="persona-card-row"><div class="persona-card-label">描述</div><div class="persona-card-val">' + e(spec.persona_description) + '</div></div>';
+  if (spec.user_goal)           h += '<div class="persona-card-row"><div class="persona-card-label">目标</div><div class="persona-card-val">' + e(spec.user_goal) + '</div></div>';
+  if (spec.persona_style_hint)  h += '<div class="persona-card-row"><div class="persona-card-label">表达风格</div><div class="persona-card-val">' + e(spec.persona_style_hint) + '</div></div>';
+  if (spec.domain_familiarity)  h += '<div class="persona-card-row"><div class="persona-card-label">熟悉度</div><div class="persona-card-val"><span class="persona-fam ' + (famCls[spec.domain_familiarity]||'') + '">' + spec.domain_familiarity + '</span></div></div>';
+  return h + '</div>';
 }
 
 // Initial render

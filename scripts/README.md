@@ -8,17 +8,92 @@
 scripts/
 ├── lib/
 │   └── llm-batch.js                  # 共享核心：transport / 重试 / persona-query pipeline / 并发池 / 统计
-├── batch-generate-queries.js         # ★ 批量生成 CLI 入口
-├── build-query-comparison.js         # ★ 多 run 对比 HTML 生成器
-├── build-expand200-plan.js           # ★ 发散拓展 plan 构建（200 条，3 part 结构）
+├── run-free.js                       # ★ LLM 自由生成一键流水线（推荐入口）
+├── batch-generate-queries.js         # LLM 批量生成单步 CLI（run-free 内部调用）
+├── build-free200-plan.js             # ★ 自由生成 plan 构建（200 条，persona-scope 控制）
+├── build-expand200-plan.js           # 发散拓展 plan 构建（200 条，3 part 结构）
+├── generate-analysis-report.js       # ★ 批次质量分析报告生成器（含 persona 卡片，可复用 skill）
+├── score-queries.js                  # 质量评分单步 CLI
+├── export-queries-csv.js             # ★ 导出带前缀的 query CSV
+├── build-query-comparison.js         # 多 run 横向对比 HTML 生成器
 ├── generate-extra-scenes.js          # 基于 L1 分类扩展新 L2 场景（41 个）
-├── generate-analysis-report.js       # ★ 批次质量分析报告生成器（可复用 skill）
 ├── test-api-connectivity.js          # API 网关连通性自检
 ├── parse-requirements.js …           # v2 主链路其它脚本（保持原状）
 └── legacy/                           # 已归档的历史一次性脚本
 ```
 
 复用约定：通用工具（`parseArgs` / `readJsonl` / `writeJsonl` / `ensureDir` / `escapeHtml` / `loadLocalEnv` / `COMPLEXITY_LEVELS` / `resolveDesignStyle` / `registerDesignStyle`）来自 `mvp/query_factory_v2.js`，scripts 不重复实现。
+
+## 一键流水线：`run:free`（推荐入口）
+
+> 等价于 `node scripts/run-free.js`
+
+将以下四步编排为单条命令，任一步骤失败立即退出并标明位置：
+
+```
+Step 1  build-plan    构建生成计划（build-free200-plan.js）
+Step 2  generate      LLM 批量生成 query（batch-generate-queries.js）
+Step 3  score         质量评分（score-queries.js）
+Step 4  report        生成可视化 HTML 报告（generate-analysis-report.js）
+Step 5  export-csv    （可选）导出带前缀的 CSV（export-queries-csv.js）
+```
+
+**主要参数：**
+
+| 参数 | 默认 | 说明 |
+|---|---|---|
+| `--output-dir` | `data/output/runs/free200_llm` | 所有产物目录（锚点） |
+| `--persona-scope` | `scene` | `scene`=同场景共享 persona；`task`=每条独立 |
+| `--concurrency` | `3` | LLM 并发数 |
+| `--no-resume` | — | 全量重跑；不传则从断点续跑 |
+| `--skip-plan` | — | 跳过 Step 1，沿用已有 plan 文件 |
+| `--skip-score` | — | 跳过 Step 3（调试用） |
+| `--skip-report` | — | 跳过 Step 4 |
+| `--export-csv` | 关 | 开启 Step 5 |
+| `--csv-prefix` | `Generate a plain HTML...` | CSV 每条 query 前缀 |
+| `--title` | 自动生成 | 报告标题 |
+
+```bash
+# 最简启动
+npm run run:free
+
+# 全量重跑到新目录
+npm run run:free -- --output-dir data/output/runs/free200_v2 --no-resume
+
+# 跳过 plan 重建 + 导出 CSV
+npm run run:free -- --skip-plan --no-resume --export-csv
+
+# 指定 persona 独立模式（每条 task 独立 persona，耗时更长）
+npm run run:free -- --persona-scope task --no-resume
+```
+
+产物均落在 `--output-dir` 下，与 `batch-generate-queries.js` 的产物格式完全兼容。
+
+## 自由生成 plan：`build-free200-plan.js`
+
+> 为 `run:free` 提供输入 plan，也可单独调用。
+
+构建 200 条任务计划，分两部分：
+- **Part A**（100 条）：25 个已有场景，使用 expand200 未覆盖的 product_type 组合
+- **Part B**（100 条）：20 个全新 L2 场景（fintech / dev-tools / creator economy / 身心健康 / 市政服务 / 可持续生活 / 宠物生活 / 职业成长）
+
+复杂度：vague:medium = 1:2（无 complex），`design_style` 全部 `null`（LLM 自由发挥）。
+
+**persona-scope（关键设计决策）：**
+
+| 模式 | `persona_seed` | 行为 | 适用场景 |
+|---|---|---|---|
+| `scene`（默认） | `hash(sceneId)` | 同场景所有 task 共享一个 persona | 节省 LLM 调用、场景内一致性好 |
+| `task` | `hash(sceneId + seq)` | 每条 task 独立生成 persona | 数据多样性最大，耗时耗钱 |
+
+⚠️ 不要把 `globalSeq` / `query_id` 等 task 级变量混入 `scene` 模式的 seed hash，否则退化为 task 模式（历史已踩坑）。
+
+```bash
+node scripts/build-free200-plan.js [--dry-run]
+node scripts/build-free200-plan.js --persona-scope task   # 每条独立
+```
+
+输出：`data/intermediate/generation_plan.free200.jsonl`
 
 ## 核心入口：`batch:generate`
 
@@ -225,10 +300,32 @@ node scripts/generate-analysis-report.js \
 | 词数分布图 | 按词数区间统计通过/失败 |
 | Design Style 网格 | 每种风格通过率热图 |
 | L1 场景横向条 | 各 L1 通过数量对比 |
-| **全量 Query 浏览器** | 多轴筛选（复杂度 / 风格 / 场景 / 通过状态 / 关键词搜索）+ 排序 + 分页 + 点击展开完整文本 |
+| **全量 Query 浏览器** | 多轴筛选（复杂度 / 风格 / 场景 / 通过状态 / 关键词搜索）+ 排序 + 分页 + 点击展开（展开后显示 **persona 卡片**：描述 / 目标 / 表达风格 / 熟悉度 + 完整 query 文本） |
 | 诊断 / 建议 | 自动根据失败率生成（全通过时显示 ✓）|
 
 无外部运行时依赖（Chart.js 走 CDN；所有数据内嵌为 JSON）。
+
+## CSV 导出：`export-queries-csv.js`
+
+从 `raw_queries.jsonl` 或 `scored_queries.jsonl` 导出两列 CSV（`id` / `prompt`），每条 query 前自动拼接前缀指令。
+
+```bash
+# 默认（读 free200_llm/raw_queries.jsonl）
+node scripts/export-queries-csv.js
+
+# 指定任意批次
+node scripts/export-queries-csv.js \
+  --input  data/output/runs/<batch>/raw_queries.jsonl \
+  [--output <file.csv>] \
+  [--prefix "Build a React component for:"]
+```
+
+输出格式（RFC 4180，双引号包裹，内部双引号转义）：
+
+```csv
+"id","prompt"
+"q_scene_fa_01_001","Generate a plain HTML optimized for mobile devices. just want something where I can repeat after it…"
+```
 
 ## 设计原则
 
