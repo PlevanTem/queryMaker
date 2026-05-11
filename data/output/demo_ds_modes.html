@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Design Style 模式对比 · medium</title>
+<style>
+:root {
+  --bg:#0f1117; --surface:#1a1d27; --surface2:#22263a; --border:#2e3350;
+  --accent:#6c63ff; --accent2:#00d4aa; --warn2:#ffa940;
+  --text:#e8eaf6; --text2:#9da3c4; --pass:#36d399; --fail:#ff6b6b;
+  --radius:10px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'Inter','Segoe UI',system-ui,sans-serif;font-size:13px;line-height:1.6}
+
+/* ── Layout ── */
+.page{max-width:1480px;margin:0 auto;padding:28px 20px 80px}
+header{margin-bottom:32px;border-bottom:1px solid var(--border);padding-bottom:20px}
+header h1{font-size:20px;font-weight:700}
+header .sub{color:var(--text2);font-size:12px;margin-top:6px}
+
+/* Scenario banner */
+.scene-banner{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px;margin-bottom:24px;display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+.scene-item{display:flex;flex-direction:column;gap:2px}
+.scene-key{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:.5px}
+.scene-val{font-size:13px;font-weight:600;color:var(--text)}
+.badge-medium{display:inline-block;background:#ffa94022;color:var(--warn2);padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700}
+.badge-vague{display:inline-block;background:#6c63ff22;color:var(--accent);padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700}
+.badge-complex{display:inline-block;background:#ff6b6b22;color:var(--fail);padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700}
+
+/* Concept callout */
+.concept{background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:var(--radius);padding:14px 18px;margin-bottom:24px;font-size:12px;color:var(--text2);line-height:1.7}
+.concept strong{color:var(--text)}
+.concept .hl-row{margin-top:8px;display:flex;gap:12px;flex-wrap:wrap}
+.chip{display:inline-block;padding:3px 10px;border-radius:6px;font-size:11px;font-weight:600;margin-right:4px}
+.chip-null{background:#6c63ff22;color:#6c63ff}
+.chip-dark{background:#36d39922;color:#36d399}
+.chip-glass{background:#00d4aa22;color:#00d4aa}
+
+/* Columns grid */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:start}
+@media(max-width:1100px){.cols{grid-template-columns:1fr}}
+
+.col{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+.col-header{padding:14px 16px;background:var(--surface2);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.mode-badge{padding:3px 10px;border-radius:6px;font-size:11px;font-weight:700}
+.mode-label{font-size:13px;font-weight:600;flex:1}
+.error-badge{background:#ff6b6b22;color:var(--fail);padding:2px 8px;border-radius:6px;font-size:11px;font-weight:700}
+
+/* Steps */
+.step-block{padding:14px 16px;border-bottom:1px solid var(--border)}
+.step-block:last-child{border-bottom:none}
+.step-final{background:var(--surface2)}
+.step-title{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;background:var(--accent);color:#fff;border-radius:50%;font-size:10px;font-weight:800;flex-shrink:0}
+.timing{color:var(--accent2);font-weight:600;font-variant-numeric:tabular-nums}
+.wc-tag{background:var(--surface);border:1px solid var(--border);color:var(--text2);padding:1px 6px;border-radius:8px;font-size:10px}
+
+/* Metadata */
+.meta-grid{display:flex;flex-direction:column;gap:5px}
+.meta-row{display:flex;gap:8px;align-items:baseline}
+.mk{font-size:10px;color:var(--text2);width:90px;flex-shrink:0;font-family:monospace}
+.mv{font-size:12px;color:var(--text)}
+
+/* Diff callout */
+.diff-callout{background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:8px 10px;margin-bottom:8px}
+.diff-label{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px}
+.diff-line{display:block;font-size:11px;font-family:monospace;word-break:break-word;color:var(--text2)}
+.diff-line.has-style{color:var(--accent2)}
+.diff-line.no-style{color:#ffa940;font-style:italic}
+
+/* Highlight marks in prompt text */
+mark.hl-zh{background:#ffa94033;color:#ffa940;padding:0 2px;border-radius:2px}
+mark.hl-en{background:#00d4aa22;color:#00d4aa;padding:0 2px;border-radius:2px}
+
+/* Prompt pre */
+details summary{font-size:11px;color:var(--text2);cursor:pointer;padding:4px 0;user-select:none}
+details summary:hover{color:var(--text)}
+.prompt-pre{font-size:10.5px;font-family:'Fira Code',monospace;white-space:pre-wrap;word-break:break-word;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:10px 12px;margin-top:8px;color:var(--text2);max-height:320px;overflow-y:auto;line-height:1.6}
+
+/* Persona card */
+.persona-card{background:var(--bg);border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-bottom:8px}
+.pf-row{display:grid;grid-template-columns:140px 1fr;border-bottom:1px solid var(--border)}
+.pf-row:last-child{border-bottom:none}
+.pf-key{font-size:10px;font-family:monospace;color:var(--text2);padding:6px 8px;background:var(--surface);border-right:1px solid var(--border);word-break:break-all}
+.pf-val{font-size:11px;padding:6px 8px;color:var(--text);line-height:1.5}
+.source-tag{font-size:10px;padding:3px 8px;border-radius:4px;display:inline-block}
+.source-tag.ok{background:#36d39918;color:var(--pass)}
+.source-tag.warn{background:#ffa94018;color:var(--warn2)}
+.no-data{color:var(--text2);font-size:11px;font-style:italic}
+.error-msg{background:#ff6b6b18;border:1px solid #ff6b6b44;border-radius:6px;padding:8px 10px;color:var(--fail);font-size:11px}
+
+/* Query output */
+.query-output{background:var(--bg);border:1px solid var(--border);border-left:3px solid var(--col-color,var(--accent));border-radius:6px;padding:12px 14px;font-size:12px;color:var(--text);line-height:1.7;white-space:pre-wrap;word-break:break-word}
+
+/* Timing footer */
+.timing-footer{padding:10px 16px;font-size:11px;color:var(--text2);background:var(--bg);border-top:1px solid var(--border);text-align:right}
+
+/* Legend */
+.legend{margin-top:32px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px 20px}
+.legend h3{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--text2);margin-bottom:12px}
+.legend-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.legend-item{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 14px}
+.legend-item h4{font-size:12px;font-weight:700;margin-bottom:6px}
+.legend-item p{font-size:11px;color:var(--text2);line-height:1.6}
+.legend-item code{background:var(--surface);padding:1px 5px;border-radius:3px;font-size:10px;color:var(--accent2)}
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <h1>Design Style 注入模式 · 完整过程对比</h1>
+  <div class="sub">相同场景 / 相同复杂度 / 独立 persona seed · 生成于 2026-05-11 01:42 · claude-cli transport</div>
+</header>
+
+<div class="scene-banner">
+  <div class="scene-item"><div class="scene-key">L1 场景</div><div class="scene-val">办公效率</div></div>
+  <div class="scene-item"><div class="scene-key">L2 场景</div><div class="scene-val">项目看板/任务追踪 ★</div></div>
+  <div class="scene-item"><div class="scene-key">应用类型</div><div class="scene-val">项目看板应用</div></div>
+  <div class="scene-item"><div class="scene-key">目标复杂度</div><div class="scene-val"><span class="badge-medium">medium</span></div></div>
+</div>
+
+<div class="concept">
+  <strong>三种模式的核心差异</strong>：design_style 字段影响两个 prompt 注入点。
+  <div class="hl-row">
+    <span><span class="chip chip-null">null（默认）</span> 中文: "未显式指定设计风格，可根据场景自然推断。" &nbsp;|&nbsp; 英文: "No fixed visual style is required — let the visual direction emerge naturally..."</span>
+  </div>
+  <div class="hl-row">
+    <span><span class="chip chip-dark">Dark</span> 中文: "使用深色主题，重点信息高对比突出" &nbsp;|&nbsp; 英文: "Use a dark theme with strong contrast on key information."</span>
+  </div>
+  <div class="hl-row">
+    <span><span class="chip chip-glass">Glassmorphism</span> 中文: "整体偏玻璃拟态风格，卡片有毛玻璃层次和背景透视感" &nbsp;|&nbsp; 英文: "Use a glassmorphism visual style with translucent layered cards."</span>
+  </div>
+  <div style="margin-top:8px;color:#9da3c4"><strong style="color:#ffa940">黄色高亮</strong> = 中文设计风格行 &nbsp;·&nbsp; <strong style="color:#00d4aa">绿色高亮</strong> = 英文风格指令句</div>
+</div>
+
+<div class="cols">
+<div class="col" style="--col-color:#6c63ff">
+  <div class="col-header" style="border-top:3px solid #6c63ff">
+    <div class="mode-badge" style="background:#6c63ff22;color:#6c63ff">null</div>
+    <div class="mode-label">Mode A — null（LLM 自由发挥）</div>
+    
+  </div>
+
+  <!-- Task metadata -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">1</span> Plan Task（输入）</div>
+    <div class="meta-grid">
+      <div class="meta-row"><span class="mk">scene</span><span class="mv">项目看板/任务追踪 ★</span></div>
+      <div class="meta-row"><span class="mk">app</span><span class="mv">项目看板应用</span></div>
+      <div class="meta-row"><span class="mk">complexity</span><span class="mv badge-medium">medium</span></div>
+      <div class="meta-row"><span class="mk">design_style</span><span class="mv" style="color:#6c63ff;font-weight:700"><span style="color:#666;font-style:italic">null（不注入）</span></span></div>
+    </div>
+  </div>
+
+  <!-- Persona prompt -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">2</span> Persona 合成 Prompt（发给 LLM）</div>
+    <div class="diff-callout">
+      <div class="diff-label">中文风格行</div>
+      <code class="diff-line no-style">设计风格：未显式指定设计风格，可根据场景自然推断。</code>
+    </div>
+    <details>
+      <summary>展开完整 prompt（27 行）</summary>
+      <pre class="prompt-pre">你是一个 persona 设计助手，需要先基于场景合成一个真实用户画像，再用于生成前端 UI query。
+请参考 persona-driven synthetic data synthesis 的思路：persona 应该是场景驱动的真实人，不是固定职业标签。
+## 场景输入
+一级场景：办公效率
+二级场景标签：项目看板/任务追踪 ★
+该场景常见 app 方向示例（仅用于理解，不要机械照抄进最终 query）：看板视图、进度条、优先级标签、里程碑管理
+当前选定的 L3 application_type：项目看板应用
+<mark class="hl-zh">设计风格：未显式指定设计风格，可根据场景自然推断。</mark>
+最终 query 默认输出英文。
+## 你的任务
+请生成 1 个最适合该场景的 persona，要求：
+1. persona 要体现真实身份、动机、表达方式和信息不完整性。
+2. persona 该场景下真实需要
+3. persona 要解释为什么会提出这个页面或组件需求。
+4. 不要把二级场景括号中的示例整段复制到 persona 文本中。
+## 输出格式
+直接输出以下 JSON，不要加 markdown 代码块围栏（不要 ```json）：
+【重要】所有字符串值内部禁止使用 ASCII 双引号 " —— 若需引用词语请用中文书名号《》或单引号 '' 代替，否则 JSON 会解析失败。
+{
+  "persona_id": "p_xxx",
+  "persona_title": "角色标签一句话概括这个人",
+  "persona_description": "2-4 句描述背景、动机和当前处境",
+  "persona_style_hint": "这个人会如何表达、会不会给细节、会不会提技术",
+  "user_goal": "这个人想通过页面/产品完成什么",
+  "domain_familiarity": "low | medium | high",
+  "persona_source": "llm_persona_synthesis"
+}</pre>
+    </details>
+  </div>
+
+  <!-- Persona output -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">3</span> Persona 合成结果 <span class="timing">18.4s</span></div>
+    
+    
+    <div class="persona-card">
+      
+        <div class="pf-row">
+          <div class="pf-key">persona_title</div>
+          <div class="pf-val">跨部门项目协调员，靠看板维持多线并行的掌控感</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">persona_description</div>
+          <div class="pf-val">陈思琦，32岁，在一家中型互联网公司担任项目协调员，同时跟进3-4个并行项目，每个项目涉及设计、开发、运营等不同团队。她没有正式的 PM 认证，但实际上承担着大量项目推进工作。最近季度末考核压力大，她需要一个能让老板和各方负责人都能快速看懂进度的界面，而不是每次开会前手动整理 Excel。</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">persona_style_hint</div>
+          <div class="pf-val">表达偏实用、直接，会说'我需要一眼看到哪些任务卡住了'，不太会用技术术语，更倾向于描述自己的使用场景而非具体功能名称，细节给得不完整，比如只说'按人分组'但不说是否需要拖拽</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">user_goal</div>
+          <div class="pf-val">希望有一个可以按项目分组展示任务状态的看板页面，能清晰看到每个任务当前处于哪个阶段、是否有阻塞，并且可以快速筛选出某个负责人名下所有未完成的任务</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">domain_familiarity</div>
+          <div class="pf-val">medium</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">persona_source</div>
+          <div class="pf-val">llm_persona_synthesis</div>
+        </div>
+    </div>
+    <div class="source-tag ok">✅ llm_persona_synthesis</div>
+    
+  </div>
+
+  <!-- Query prompt -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">4</span> Query 生成 Prompt（发给 LLM）</div>
+    <div class="diff-callout">
+      <div class="diff-label">英文风格句</div>
+      <code class="diff-line no-style">—</code>
+    </div>
+    <details>
+      <summary>展开完整 prompt（49 行）</summary>
+      <pre class="prompt-pre">你现在要扮演给定的 persona，向 AI 编程助手发送一条前端 UI 开发需求。
+输出只能是那条用户消息query指令，不要解释你是谁，不要输出 JSON。
+## Inputs
+### Persona
+persona_title：跨部门项目协调员，靠看板维持多线并行的掌控感
+persona_description：陈思琦，32岁，在一家中型互联网公司担任项目协调员，同时跟进3-4个并行项目，每个项目涉及设计、开发、运营等不同团队。她没有正式的 PM 认证，但实际上承担着大量项目推进工作。最近季度末考核压力大，她需要一个能让老板和各方负责人都能快速看懂进度的界面，而不是每次开会前手动整理 Excel。
+persona_style_hint：表达偏实用、直接，会说'我需要一眼看到哪些任务卡住了'，不太会用技术术语，更倾向于描述自己的使用场景而非具体功能名称，细节给得不完整，比如只说'按人分组'但不说是否需要拖拽
+user_goal：希望有一个可以按项目分组展示任务状态的看板页面，能清晰看到每个任务当前处于哪个阶段、是否有阻塞，并且可以快速筛选出某个负责人名下所有未完成的任务
+domain_familiarity：medium
+### 场景背景
+一级场景：办公效率
+二级场景标签：项目看板/任务追踪 ★
+当前选定的 L3 application_type：项目看板应用
+常见 app 方向示例（仅参考，按二级场景随机衍生，不要重复）：看板视图、进度条、优先级标签、里程碑管理
+<mark class="hl-zh">设计风格：未显式指定设计风格，可根据场景自然推断。</mark>
+Query目标复杂度：medium
+## 输出要求
+1. 基于 Inputs 和场景背景以Persona角色的第一人称视角输出一条英文 query
+2. query 语气必须符合 persona，不要泄露、照抄Inputs
+3. Write like a real person typing into a chat box
+4. Allow incomplete thoughts, mid-sentence pivots, casual grammar, filler words
+5. Express constraints implicitly: say "for my mom's 60th birthday" instead of "target audience: elderly female".
+6. Include situation triggers naturally e.x. "I need it to help me ..." etc.
+7. Mix imperatives, statements, and half-finished thoughts. Questions are fine mid-query but do NOT end with a meta-question ("Can you help me?", "Does that make sense?", "Can you build something for that?" etc.) — the context already implies asking for help.
+8. Avoid repetitive structures across queries.
+9. Vary sentence count based on Query目标复杂度 from 10 ~ 250 words，参考下述三种specificity规格：
+- vague: the user barely describes what they want and precisely the app type; the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off.
+- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.
+- complex: multiple explicit requirements about target user, goal, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.
+## Few-shot Examples（仅作为长度与结构参考，不要照抄主题/语言）
+下面三段展示了 vague / medium / complex 三种复杂度下，真实用户写出来的 query 大致长什么样。注意它们的篇幅、信息密度和结构差异：
+&lt;vague&gt;
+example1: 我想测下运势，给我开发一个玄学风格的运势生成器
+example2: 给我一个生成复古胶片感拍立得的工具
+example3: 做个晚餐抽签器，每次大家纠结吃什么的时候转一转。
+&lt;/vague&gt;
+&lt;medium&gt;
+Act as an expert kids' game designer and web developer. Help me build a tool that turns simple ideas into detailed prompts for kid-friendly web games. Output the prompt in short, medium, detail versions. Allow options for picking different game type, styles, and complexity
+&lt;/medium&gt;
+&lt;complex&gt;
+Help me build a mobile app called Tag along — a small social app for friend circles, hobby groups, and company crews to plan things together. Vibe: fun, warm, young. Look: round buttons, round avatars, colors that are playful but soft (coral, sunshine yellow, mint, sky blue, lavender, off-white background). Bottom bar with 5 tabs, the middle one is a round red +:
+1. Feed — list of upcoming plans, with a row of interest pills at the top (hiking, coffee, yoga...) so I can filter; show a "For you" section that matches my interests.
+2. Wall — an Instagram-style photo wall: big photo + caption + likes + comments. If a post is about a plan, show a small event card under it with a "Join" button.
+3. +-when I tap it, pop up two choices: post a photo or create an event.
+4. Ranks — a leaderboard. Rules: hosting an event = 50 pts, posting on the wall = 20 pts, joining an event = 10 pts. Top 3 get medals.
+5. Profile — my avatar, name, a one-word vibe, three little prompts (anthem / perfect Sunday / hot take), my interests, the events I've hosted or am going to, and all the photo posts I've made. Other people's profiles look the same but read-only.
+Core action on every event: two pill buttons — Coming and Not Coming. Tapping one drops my name into that list. No RSVP form. From the event page I can also send a friend a small nudge if they haven't replied, and react with vibes (Hyped / I'm in / Maybe / Saving spot / FOMO). Keep all data on the phone — no third-party login, no payments, no push notifications. Please pre-fill some demo users and events so the app feels alive the moment I open it.
+&lt;/complex&gt;
+注意：示例只是用于校准"长度感 / 结构感 / 信息密度"，请保持你的 query 与示例话题完全无关，且最终输出仍默认英文（vague 也用英文，不要因为示例是中文就跟着输出中文）。</pre>
+    </details>
+  </div>
+
+  <!-- Final query -->
+  <div class="step-block step-final">
+    <div class="step-title"><span class="step-num">5</span> 最终 Query 输出 <span class="timing">12.3s</span> <span class="wc-tag">148 词</span></div>
+    <blockquote class="query-output">I'm juggling like 3-4 projects at the same time and every time before a check-in I end up manually pulling together an Excel just to show who's doing what and where things are stuck — it's a mess. I need a kanban-style page where tasks are grouped by project, and I can see at a glance which ones are blocked or falling behind. Each task card should show the current stage, the person responsible, and some kind of visual flag if it's been sitting too long or is blocked. Also I really need a way to filter by person — like if I click on someone's name I want to see all their unfinished tasks across every project, not just one board. The whole thing should feel clean enough that I can just share the screen during a meeting and people actually understand it without me explaining everything.</blockquote>
+  </div>
+
+  <!-- Total timing -->
+  <div class="timing-footer">
+    总耗时 30.8s
+    &nbsp;·&nbsp;
+    persona 18.4s
+    &nbsp;+&nbsp;
+    query 12.3s
+  </div>
+</div>
+<div class="col" style="--col-color:#36d399">
+  <div class="col-header" style="border-top:3px solid #36d399">
+    <div class="mode-badge" style="background:#36d39922;color:#36d399">Dark</div>
+    <div class="mode-label">Mode B — "Dark"（显式指定）</div>
+    
+  </div>
+
+  <!-- Task metadata -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">1</span> Plan Task（输入）</div>
+    <div class="meta-grid">
+      <div class="meta-row"><span class="mk">scene</span><span class="mv">项目看板/任务追踪 ★</span></div>
+      <div class="meta-row"><span class="mk">app</span><span class="mv">项目看板应用</span></div>
+      <div class="meta-row"><span class="mk">complexity</span><span class="mv badge-medium">medium</span></div>
+      <div class="meta-row"><span class="mk">design_style</span><span class="mv" style="color:#36d399;font-weight:700">"Dark"</span></div>
+    </div>
+  </div>
+
+  <!-- Persona prompt -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">2</span> Persona 合成 Prompt（发给 LLM）</div>
+    <div class="diff-callout">
+      <div class="diff-label">中文风格行</div>
+      <code class="diff-line has-style">设计风格：使用深色主题，重点信息高对比突出</code>
+    </div>
+    <details>
+      <summary>展开完整 prompt（27 行）</summary>
+      <pre class="prompt-pre">你是一个 persona 设计助手，需要先基于场景合成一个真实用户画像，再用于生成前端 UI query。
+请参考 persona-driven synthetic data synthesis 的思路：persona 应该是场景驱动的真实人，不是固定职业标签。
+## 场景输入
+一级场景：办公效率
+二级场景标签：项目看板/任务追踪 ★
+该场景常见 app 方向示例（仅用于理解，不要机械照抄进最终 query）：看板视图、进度条、优先级标签、里程碑管理
+当前选定的 L3 application_type：项目看板应用
+<mark class="hl-zh">设计风格：使用深色主题，重点信息高对比突出</mark>
+最终 query 默认输出英文。
+## 你的任务
+请生成 1 个最适合该场景的 persona，要求：
+1. persona 要体现真实身份、动机、表达方式和信息不完整性。
+2. persona 该场景下真实需要
+3. persona 要解释为什么会提出这个页面或组件需求。
+4. 不要把二级场景括号中的示例整段复制到 persona 文本中。
+## 输出格式
+直接输出以下 JSON，不要加 markdown 代码块围栏（不要 ```json）：
+【重要】所有字符串值内部禁止使用 ASCII 双引号 " —— 若需引用词语请用中文书名号《》或单引号 '' 代替，否则 JSON 会解析失败。
+{
+  "persona_id": "p_xxx",
+  "persona_title": "角色标签一句话概括这个人",
+  "persona_description": "2-4 句描述背景、动机和当前处境",
+  "persona_style_hint": "这个人会如何表达、会不会给细节、会不会提技术",
+  "user_goal": "这个人想通过页面/产品完成什么",
+  "domain_familiarity": "low | medium | high",
+  "persona_source": "llm_persona_synthesis"
+}</pre>
+    </details>
+  </div>
+
+  <!-- Persona output -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">3</span> Persona 合成结果 <span class="timing">15.1s</span></div>
+    
+    
+    <div class="persona-card">
+      
+        <div class="pf-row">
+          <div class="pf-key">persona_title</div>
+          <div class="pf-val">独立接单的全栈开发者，同时跑三个客户项目</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">persona_description</div>
+          <div class="pf-val">Marcus 是一名自由职业全栈工程师，同时维护着三个来自不同客户的开发合同。他白天泡在编辑器里，需要随时知道哪个 feature 卡在哪一步、哪个 deadline 快到了。他没有专职 PM，所有任务追踪都得自己管，当前用的电子表格已经完全失控。他想要一个能在黑屏环境下长时间使用的看板工具，核心诉求是'一眼看出哪里堵了'。</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">persona_style_hint</div>
+          <div class="pf-val">表达简短直接，习惯用开发者口吻说话，会提颜色对比、深色模式等视觉偏好，但不会主动给出完整交互规格，细节靠追问才说</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">user_goal</div>
+          <div class="pf-val">希望有一个能展示多项目并行进度的看板页面，支持按优先级快速识别阻塞任务，深色背景下关键状态仍然高亮清晰</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">domain_familiarity</div>
+          <div class="pf-val">medium</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">persona_source</div>
+          <div class="pf-val">llm_persona_synthesis</div>
+        </div>
+    </div>
+    <div class="source-tag ok">✅ llm_persona_synthesis</div>
+    
+  </div>
+
+  <!-- Query prompt -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">4</span> Query 生成 Prompt（发给 LLM）</div>
+    <div class="diff-callout">
+      <div class="diff-label">英文风格句</div>
+      <code class="diff-line has-style">—</code>
+    </div>
+    <details>
+      <summary>展开完整 prompt（49 行）</summary>
+      <pre class="prompt-pre">你现在要扮演给定的 persona，向 AI 编程助手发送一条前端 UI 开发需求。
+输出只能是那条用户消息query指令，不要解释你是谁，不要输出 JSON。
+## Inputs
+### Persona
+persona_title：独立接单的全栈开发者，同时跑三个客户项目
+persona_description：Marcus 是一名自由职业全栈工程师，同时维护着三个来自不同客户的开发合同。他白天泡在编辑器里，需要随时知道哪个 feature 卡在哪一步、哪个 deadline 快到了。他没有专职 PM，所有任务追踪都得自己管，当前用的电子表格已经完全失控。他想要一个能在黑屏环境下长时间使用的看板工具，核心诉求是'一眼看出哪里堵了'。
+persona_style_hint：表达简短直接，习惯用开发者口吻说话，会提颜色对比、深色模式等视觉偏好，但不会主动给出完整交互规格，细节靠追问才说
+user_goal：希望有一个能展示多项目并行进度的看板页面，支持按优先级快速识别阻塞任务，深色背景下关键状态仍然高亮清晰
+domain_familiarity：medium
+### 场景背景
+一级场景：办公效率
+二级场景标签：项目看板/任务追踪 ★
+当前选定的 L3 application_type：项目看板应用
+常见 app 方向示例（仅参考，按二级场景随机衍生，不要重复）：看板视图、进度条、优先级标签、里程碑管理
+<mark class="hl-zh">设计风格：使用深色主题，重点信息高对比突出</mark>
+Query目标复杂度：medium
+## 输出要求
+1. 基于 Inputs 和场景背景以Persona角色的第一人称视角输出一条英文 query
+2. query 语气必须符合 persona，不要泄露、照抄Inputs
+3. Write like a real person typing into a chat box
+4. Allow incomplete thoughts, mid-sentence pivots, casual grammar, filler words
+5. Express constraints implicitly: say "for my mom's 60th birthday" instead of "target audience: elderly female".
+6. Include situation triggers naturally e.x. "I need it to help me ..." etc.
+7. Mix imperatives, statements, and half-finished thoughts. Questions are fine mid-query but do NOT end with a meta-question ("Can you help me?", "Does that make sense?", "Can you build something for that?" etc.) — the context already implies asking for help.
+8. Avoid repetitive structures across queries.
+9. Vary sentence count based on Query目标复杂度 from 10 ~ 250 words，参考下述三种specificity规格：
+- vague: the user barely describes what they want and precisely the app type; the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off.
+- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.
+- complex: multiple explicit requirements about target user, goal, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.
+## Few-shot Examples（仅作为长度与结构参考，不要照抄主题/语言）
+下面三段展示了 vague / medium / complex 三种复杂度下，真实用户写出来的 query 大致长什么样。注意它们的篇幅、信息密度和结构差异：
+&lt;vague&gt;
+example1: 我想测下运势，给我开发一个玄学风格的运势生成器
+example2: 给我一个生成复古胶片感拍立得的工具
+example3: 做个晚餐抽签器，每次大家纠结吃什么的时候转一转。
+&lt;/vague&gt;
+&lt;medium&gt;
+Act as an expert kids' game designer and web developer. Help me build a tool that turns simple ideas into detailed prompts for kid-friendly web games. Output the prompt in short, medium, detail versions. Allow options for picking different game type, styles, and complexity
+&lt;/medium&gt;
+&lt;complex&gt;
+Help me build a mobile app called Tag along — a small social app for friend circles, hobby groups, and company crews to plan things together. Vibe: fun, warm, young. Look: round buttons, round avatars, colors that are playful but soft (coral, sunshine yellow, mint, sky blue, lavender, off-white background). Bottom bar with 5 tabs, the middle one is a round red +:
+1. Feed — list of upcoming plans, with a row of interest pills at the top (hiking, coffee, yoga...) so I can filter; show a "For you" section that matches my interests.
+2. Wall — an Instagram-style photo wall: big photo + caption + likes + comments. If a post is about a plan, show a small event card under it with a "Join" button.
+3. +-when I tap it, pop up two choices: post a photo or create an event.
+4. Ranks — a leaderboard. Rules: hosting an event = 50 pts, posting on the wall = 20 pts, joining an event = 10 pts. Top 3 get medals.
+5. Profile — my avatar, name, a one-word vibe, three little prompts (anthem / perfect Sunday / hot take), my interests, the events I've hosted or am going to, and all the photo posts I've made. Other people's profiles look the same but read-only.
+Core action on every event: two pill buttons — Coming and Not Coming. Tapping one drops my name into that list. No RSVP form. From the event page I can also send a friend a small nudge if they haven't replied, and react with vibes (Hyped / I'm in / Maybe / Saving spot / FOMO). Keep all data on the phone — no third-party login, no payments, no push notifications. Please pre-fill some demo users and events so the app feels alive the moment I open it.
+&lt;/complex&gt;
+注意：示例只是用于校准"长度感 / 结构感 / 信息密度"，请保持你的 query 与示例话题完全无关，且最终输出仍默认英文（vague 也用英文，不要因为示例是中文就跟着输出中文）。</pre>
+    </details>
+  </div>
+
+  <!-- Final query -->
+  <div class="step-block step-final">
+    <div class="step-title"><span class="step-num">5</span> 最终 Query 输出 <span class="timing">11.5s</span> <span class="wc-tag">106 词</span></div>
+    <blockquote class="query-output">Running three client contracts at once and my spreadsheet tracking is a complete mess — need a dark-theme kanban board that shows all three projects side by side. Each project should have columns for backlog, in-progress, blocked, and done. The blocked column especially needs to pop visually, like a high-contrast warning color that's obvious at a glance even on a dark background. Tasks should have priority labels (high/med/low) with distinct colors that actually stay readable in dark mode, not that washed-out low-opacity stuff. Would be nice if I can see at a quick scan which project has the most blockers without having to read every card.</blockquote>
+  </div>
+
+  <!-- Total timing -->
+  <div class="timing-footer">
+    总耗时 26.6s
+    &nbsp;·&nbsp;
+    persona 15.1s
+    &nbsp;+&nbsp;
+    query 11.5s
+  </div>
+</div>
+<div class="col" style="--col-color:#00d4aa">
+  <div class="col-header" style="border-top:3px solid #00d4aa">
+    <div class="mode-badge" style="background:#00d4aa22;color:#00d4aa">Glassmorphism</div>
+    <div class="mode-label">Mode C — "Glassmorphism"（显式指定）</div>
+    
+  </div>
+
+  <!-- Task metadata -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">1</span> Plan Task（输入）</div>
+    <div class="meta-grid">
+      <div class="meta-row"><span class="mk">scene</span><span class="mv">项目看板/任务追踪 ★</span></div>
+      <div class="meta-row"><span class="mk">app</span><span class="mv">项目看板应用</span></div>
+      <div class="meta-row"><span class="mk">complexity</span><span class="mv badge-medium">medium</span></div>
+      <div class="meta-row"><span class="mk">design_style</span><span class="mv" style="color:#00d4aa;font-weight:700">"Glassmorphism"</span></div>
+    </div>
+  </div>
+
+  <!-- Persona prompt -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">2</span> Persona 合成 Prompt（发给 LLM）</div>
+    <div class="diff-callout">
+      <div class="diff-label">中文风格行</div>
+      <code class="diff-line has-style">设计风格：整体偏玻璃拟态风格，卡片有毛玻璃层次和背景透视感</code>
+    </div>
+    <details>
+      <summary>展开完整 prompt（27 行）</summary>
+      <pre class="prompt-pre">你是一个 persona 设计助手，需要先基于场景合成一个真实用户画像，再用于生成前端 UI query。
+请参考 persona-driven synthetic data synthesis 的思路：persona 应该是场景驱动的真实人，不是固定职业标签。
+## 场景输入
+一级场景：办公效率
+二级场景标签：项目看板/任务追踪 ★
+该场景常见 app 方向示例（仅用于理解，不要机械照抄进最终 query）：看板视图、进度条、优先级标签、里程碑管理
+当前选定的 L3 application_type：项目看板应用
+<mark class="hl-zh">设计风格：整体偏玻璃拟态风格，卡片有毛玻璃层次和背景透视感</mark>
+最终 query 默认输出英文。
+## 你的任务
+请生成 1 个最适合该场景的 persona，要求：
+1. persona 要体现真实身份、动机、表达方式和信息不完整性。
+2. persona 该场景下真实需要
+3. persona 要解释为什么会提出这个页面或组件需求。
+4. 不要把二级场景括号中的示例整段复制到 persona 文本中。
+## 输出格式
+直接输出以下 JSON，不要加 markdown 代码块围栏（不要 ```json）：
+【重要】所有字符串值内部禁止使用 ASCII 双引号 " —— 若需引用词语请用中文书名号《》或单引号 '' 代替，否则 JSON 会解析失败。
+{
+  "persona_id": "p_xxx",
+  "persona_title": "角色标签一句话概括这个人",
+  "persona_description": "2-4 句描述背景、动机和当前处境",
+  "persona_style_hint": "这个人会如何表达、会不会给细节、会不会提技术",
+  "user_goal": "这个人想通过页面/产品完成什么",
+  "domain_familiarity": "low | medium | high",
+  "persona_source": "llm_persona_synthesis"
+}</pre>
+    </details>
+  </div>
+
+  <!-- Persona output -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">3</span> Persona 合成结果 <span class="timing">17.6s</span></div>
+    
+    
+    <div class="persona-card">
+      
+        <div class="pf-row">
+          <div class="pf-key">persona_title</div>
+          <div class="pf-val">初创公司运营负责人，同时跟进多个跨部门项目</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">persona_description</div>
+          <div class="pf-val">Rachel 在一家 40 人的 SaaS 初创公司担任运营 Lead，日常需要同时协调产品、研发、市场三条线的推进节奏。她的团队最近从 Excel 表格迁移到在线工具，但现有工具界面太'密'，每次打开开会都要花时间找重点。她希望有一个视觉上清爽、层次感强的看板界面，让她在投屏会议时能一眼传达全局进度，不用再解释表格。</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">persona_style_hint</div>
+          <div class="pf-val">表达偏直觉型，习惯说'我想要那种感觉像…的界面'，较少提具体技术术语，会用参照物描述期望效果，比如'像 Notion 那种但更好看'；细节需求往往需要追问才能挖出来</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">user_goal</div>
+          <div class="pf-val">搭建一个能在团队周会上直接投屏的项目看板页面，要求视觉层次分明、状态一目了然，同时界面本身要'好看'，能体现公司形象而不是运维感</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">domain_familiarity</div>
+          <div class="pf-val">medium</div>
+        </div>
+        <div class="pf-row">
+          <div class="pf-key">persona_source</div>
+          <div class="pf-val">llm_persona_synthesis</div>
+        </div>
+    </div>
+    <div class="source-tag ok">✅ llm_persona_synthesis</div>
+    
+  </div>
+
+  <!-- Query prompt -->
+  <div class="step-block">
+    <div class="step-title"><span class="step-num">4</span> Query 生成 Prompt（发给 LLM）</div>
+    <div class="diff-callout">
+      <div class="diff-label">英文风格句</div>
+      <code class="diff-line has-style">—</code>
+    </div>
+    <details>
+      <summary>展开完整 prompt（49 行）</summary>
+      <pre class="prompt-pre">你现在要扮演给定的 persona，向 AI 编程助手发送一条前端 UI 开发需求。
+输出只能是那条用户消息query指令，不要解释你是谁，不要输出 JSON。
+## Inputs
+### Persona
+persona_title：初创公司运营负责人，同时跟进多个跨部门项目
+persona_description：Rachel 在一家 40 人的 SaaS 初创公司担任运营 Lead，日常需要同时协调产品、研发、市场三条线的推进节奏。她的团队最近从 Excel 表格迁移到在线工具，但现有工具界面太'密'，每次打开开会都要花时间找重点。她希望有一个视觉上清爽、层次感强的看板界面，让她在投屏会议时能一眼传达全局进度，不用再解释表格。
+persona_style_hint：表达偏直觉型，习惯说'我想要那种感觉像…的界面'，较少提具体技术术语，会用参照物描述期望效果，比如'像 Notion 那种但更好看'；细节需求往往需要追问才能挖出来
+user_goal：搭建一个能在团队周会上直接投屏的项目看板页面，要求视觉层次分明、状态一目了然，同时界面本身要'好看'，能体现公司形象而不是运维感
+domain_familiarity：medium
+### 场景背景
+一级场景：办公效率
+二级场景标签：项目看板/任务追踪 ★
+当前选定的 L3 application_type：项目看板应用
+常见 app 方向示例（仅参考，按二级场景随机衍生，不要重复）：看板视图、进度条、优先级标签、里程碑管理
+<mark class="hl-zh">设计风格：整体偏玻璃拟态风格，卡片有毛玻璃层次和背景透视感</mark>
+Query目标复杂度：medium
+## 输出要求
+1. 基于 Inputs 和场景背景以Persona角色的第一人称视角输出一条英文 query
+2. query 语气必须符合 persona，不要泄露、照抄Inputs
+3. Write like a real person typing into a chat box
+4. Allow incomplete thoughts, mid-sentence pivots, casual grammar, filler words
+5. Express constraints implicitly: say "for my mom's 60th birthday" instead of "target audience: elderly female".
+6. Include situation triggers naturally e.x. "I need it to help me ..." etc.
+7. Mix imperatives, statements, and half-finished thoughts. Questions are fine mid-query but do NOT end with a meta-question ("Can you help me?", "Does that make sense?", "Can you build something for that?" etc.) — the context already implies asking for help.
+8. Avoid repetitive structures across queries.
+9. Vary sentence count based on Query目标复杂度 from 10 ~ 250 words，参考下述三种specificity规格：
+- vague: the user barely describes what they want and precisely the app type; the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off.
+- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.
+- complex: multiple explicit requirements about target user, goal, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.
+## Few-shot Examples（仅作为长度与结构参考，不要照抄主题/语言）
+下面三段展示了 vague / medium / complex 三种复杂度下，真实用户写出来的 query 大致长什么样。注意它们的篇幅、信息密度和结构差异：
+&lt;vague&gt;
+example1: 我想测下运势，给我开发一个玄学风格的运势生成器
+example2: 给我一个生成复古胶片感拍立得的工具
+example3: 做个晚餐抽签器，每次大家纠结吃什么的时候转一转。
+&lt;/vague&gt;
+&lt;medium&gt;
+Act as an expert kids' game designer and web developer. Help me build a tool that turns simple ideas into detailed prompts for kid-friendly web games. Output the prompt in short, medium, detail versions. Allow options for picking different game type, styles, and complexity
+&lt;/medium&gt;
+&lt;complex&gt;
+Help me build a mobile app called Tag along — a small social app for friend circles, hobby groups, and company crews to plan things together. Vibe: fun, warm, young. Look: round buttons, round avatars, colors that are playful but soft (coral, sunshine yellow, mint, sky blue, lavender, off-white background). Bottom bar with 5 tabs, the middle one is a round red +:
+1. Feed — list of upcoming plans, with a row of interest pills at the top (hiking, coffee, yoga...) so I can filter; show a "For you" section that matches my interests.
+2. Wall — an Instagram-style photo wall: big photo + caption + likes + comments. If a post is about a plan, show a small event card under it with a "Join" button.
+3. +-when I tap it, pop up two choices: post a photo or create an event.
+4. Ranks — a leaderboard. Rules: hosting an event = 50 pts, posting on the wall = 20 pts, joining an event = 10 pts. Top 3 get medals.
+5. Profile — my avatar, name, a one-word vibe, three little prompts (anthem / perfect Sunday / hot take), my interests, the events I've hosted or am going to, and all the photo posts I've made. Other people's profiles look the same but read-only.
+Core action on every event: two pill buttons — Coming and Not Coming. Tapping one drops my name into that list. No RSVP form. From the event page I can also send a friend a small nudge if they haven't replied, and react with vibes (Hyped / I'm in / Maybe / Saving spot / FOMO). Keep all data on the phone — no third-party login, no payments, no push notifications. Please pre-fill some demo users and events so the app feels alive the moment I open it.
+&lt;/complex&gt;
+注意：示例只是用于校准"长度感 / 结构感 / 信息密度"，请保持你的 query 与示例话题完全无关，且最终输出仍默认英文（vague 也用英文，不要因为示例是中文就跟着输出中文）。</pre>
+    </details>
+  </div>
+
+  <!-- Final query -->
+  <div class="step-block step-final">
+    <div class="step-title"><span class="step-num">5</span> 最终 Query 输出 <span class="timing">14.0s</span> <span class="wc-tag">187 词</span></div>
+    <blockquote class="query-output">I need a project status board — like a kanban-style page we can throw up on the screen during our weekly all-hands. The vibe I'm going for is... you know how some dashboards just feel calm and premium, almost like a Notion doc but with more visual polish? That's what I want. Right now our setup is basically a wall of text and everyone's eyes glaze over. I want something where you can see at a glance which projects are on track, which ones are stuck, and what's coming up — without anyone having to explain the color coding for five minutes first.
+
+Cards for each project, grouped by status (like In Progress, Blocked, Done, Upcoming), with a frosted glass or layered look — I saw some designs where the cards have that semi-transparent, blurry-background feel and it just looks so much more intentional than plain white boxes. Priority tags, a progress indicator of some kind, owner names or team labels. Nothing too cluttered. The whole page should feel like something you'd actually want to look at on a big screen, not like a spreadsheet someone skinned.</blockquote>
+  </div>
+
+  <!-- Total timing -->
+  <div class="timing-footer">
+    总耗时 31.6s
+    &nbsp;·&nbsp;
+    persona 17.6s
+    &nbsp;+&nbsp;
+    query 14.0s
+  </div>
+</div></div>
+
+<div class="legend">
+  <h3>流程说明 — 5 步 Pipeline</h3>
+  <div class="legend-grid">
+    <div class="legend-item">
+      <h4 style="color:var(--accent)">步骤 1 · Plan Task</h4>
+      <p>plan 阶段确定 <code>design_style</code> 字段。默认 <code>null</code>，可通过 <code>--design-styles</code> 显式注入，或 <code>registerDesignStyle()</code> 扩展风格库。</p>
+    </div>
+    <div class="legend-item">
+      <h4 style="color:var(--accent)">步骤 2 · Persona Prompt</h4>
+      <p><code>buildPersonaSynthesisPrompt(task)</code> 生成中文 persona 合成指令。<strong style="color:#ffa940">风格行</strong>注入在 "## 场景输入" 块内，影响 LLM 对用户角色的理解。</p>
+    </div>
+    <div class="legend-item">
+      <h4 style="color:var(--accent2)">步骤 3 · Persona 合成</h4>
+      <p>LLM 返回 JSON: <code>persona_title</code> / <code>persona_description</code> / <code>persona_style_hint</code> / <code>user_goal</code> 等字段。persona 决定了后续 query 的说话人语气。</p>
+    </div>
+    <div class="legend-item">
+      <h4 style="color:var(--accent2)">步骤 4 · Query Prompt</h4>
+      <p><code>buildQueryPromptFromPersona(task, persona)</code> 生成英文 query 指令。<strong style="color:#00d4aa">风格句</strong>直接嵌入 query 模板（medium: "...{styleSentence} I want a clear hero section..."）。</p>
+    </div>
+    <div class="legend-item">
+      <h4 style="color:var(--warn2)">步骤 5 · 最终 Query</h4>
+      <p>LLM 以 persona 身份输出 UI 需求描述。design_style 影响程度：<br>null → LLM 自由融入场景感；explicit → 用户语气中会带入具体风格词汇。</p>
+    </div>
+    <div class="legend-item">
+      <h4 style="color:var(--pass)">扩展新风格</h4>
+      <p><code>registerDesignStyle("Y2K", "千禧复古...", "Use a Y2K-inspired aesthetic...")</code> — 立即生效，同步更新 DESIGN_STYLES / STYLE_HINTS / _EN_STYLE_INSTRUCTIONS。</p>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
