@@ -530,6 +530,40 @@ function inferStyles(l1Scene, l2SceneLabel, applicationType) {
   return [...new Set(hits)];
 }
 
+/**
+ * Resolve design_style for a single plan task.
+ *
+ * options.designStyles controls behaviour:
+ *   - falsy (default) → null (LLM chooses freely)
+ *   - "auto"          → use inferStyles() heuristics
+ *   - string[]        → rotate through the provided list (e.g. ["Dark","Glassmorphism"])
+ */
+function resolveDesignStyle(options, groupIndex, l1Scene, l2SceneLabel, applicationType) {
+  const ds = options.designStyles;
+  if (!ds) return null;
+  if (ds === "auto") {
+    const styles = inferStyles(l1Scene, l2SceneLabel, applicationType);
+    return styles[groupIndex % styles.length];
+  }
+  if (Array.isArray(ds) && ds.length > 0) {
+    return ds[groupIndex % ds.length] || null;
+  }
+  return null;
+}
+
+/**
+ * Register a new design style so prompt injection functions recognise it.
+ *
+ * @param {string} name           - Style key (e.g. "Y2K", "Retro")
+ * @param {string} zhHint         - Chinese description injected into persona prompt
+ * @param {string} enInstruction  - English sentence injected into query prompt
+ */
+function registerDesignStyle(name, zhHint, enInstruction) {
+  if (!DESIGN_STYLES.includes(name)) DESIGN_STYLES.push(name);
+  if (zhHint)        STYLE_HINTS[name] = zhHint;
+  if (enInstruction) _EN_STYLE_INSTRUCTIONS[name] = enInstruction;
+}
+
 function computeSeedCount(targetCount, options = {}) {
   const minSeed = Number(options.minSeed ?? 3);
   const maxSeed = Number(options.maxSeed ?? 9);
@@ -552,10 +586,9 @@ function buildSeedPlan(spec, options = {}) {
       const groupIndex = Math.floor(i / N);
       const applicationType = applicationTypes[groupIndex % applicationTypes.length];
       const productTypes = inferProductTypes(scenario.l1_scene, scenario.l2_scene_label, applicationType);
-      const styles = inferStyles(scenario.l1_scene, scenario.l2_scene_label, applicationType);
       const targetComplexity = complexities[i % N];
       const productType = productTypes[groupIndex % productTypes.length];
-      const designStyle = styles[groupIndex % styles.length];
+      const designStyle = resolveDesignStyle(options, groupIndex, scenario.l1_scene, scenario.l2_scene_label, applicationType);
       tasks.push({
         query_id: `q_${scenario.id}_${String(i + 1).padStart(3, "0")}`,
         scene_id: scenario.id,
@@ -615,7 +648,6 @@ function buildBackfillPlan(spec, existingQueries, options = {}) {
       const groupIndex = Math.floor(i / N);
       const applicationType = applicationTypes[groupIndex % applicationTypes.length];
       const productTypes = inferProductTypes(scenario.l1_scene, scenario.l2_scene_label, applicationType);
-      const styles = inferStyles(scenario.l1_scene, scenario.l2_scene_label, applicationType);
       tasks.push({
         query_id: `q_${scenario.id}_${String(currentCount + i + 1).padStart(3, "0")}`,
         scene_id: scenario.id,
@@ -627,7 +659,7 @@ function buildBackfillPlan(spec, existingQueries, options = {}) {
         product_type: productTypes[groupIndex % productTypes.length],
         constrained: false,
         target_complexity: complexities[i % N],
-        design_style: styles[groupIndex % styles.length],
+        design_style: resolveDesignStyle(options, baseGroup + groupIndex, scenario.l1_scene, scenario.l2_scene_label, applicationType),
         persona_seed: hashText(`${scenario.id}:${applicationType}:${baseGroup + groupIndex}`),
         plan_type: "backfill",
         target_count_hint: scenario.target_count,
@@ -697,20 +729,24 @@ function getEnglishProductTypeLabel(productType) {
   return labels[productType] || productType;
 }
 
+// Mutable map — extended at runtime via registerDesignStyle()
+const _EN_STYLE_INSTRUCTIONS = {
+  Glassmorphism: "Use a glassmorphism visual style with translucent layered cards.",
+  Neumorphism:   "Use a soft neumorphism style with subtle raised surfaces.",
+  Neubrutalism:  "Use a neubrutalism style with bold borders and strong contrast.",
+  Minimalism:    "Keep the interface minimal with generous whitespace and clear hierarchy.",
+  Material:      "Follow a Material-inspired visual system with clear feedback states.",
+  "Data-Dense":  "Make the layout information-dense and scannable, optimised for power users.",
+  Dark:          "Use a dark theme with strong contrast on key information.",
+  Cyberpunk:     "Use a neon cyberpunk-inspired visual direction.",
+  Luxury:        "Make it feel editorial and premium with refined spacing and typography.",
+  Vibrant:       "Use a vibrant visual direction with more saturated colors.",
+};
+
 function getEnglishStyleInstruction(style) {
-  const instructions = {
-    Glassmorphism: "Use a glassmorphism visual style with translucent layered cards.",
-    Neumorphism: "Use a soft neumorphism style with subtle raised surfaces.",
-    Neubrutalism: "Use a neubrutalism style with bold borders and strong contrast.",
-    Minimalism: "Keep the interface minimal with generous whitespace and clear hierarchy.",
-    Material: "Follow a Material-inspired visual system with clear feedback states.",
-    "Data-Dense": "Make the layout information-dense and easy to scan quickly.",
-    Dark: "Use a dark theme with strong contrast on key information.",
-    Cyberpunk: "Use a neon cyberpunk-inspired visual direction.",
-    Luxury: "Make it feel editorial and premium with refined spacing and typography.",
-    Vibrant: "Use a vibrant visual direction with more saturated colors.",
-  };
-  return style ? instructions[style] || `Use a ${style} visual direction.` : "No fixed visual style is required.";
+  return style
+    ? _EN_STYLE_INSTRUCTIONS[style] || `Use a ${style} visual direction.`
+    : "No fixed visual style is required — let the visual direction emerge naturally from the content and context.";
 }
 
 function getEnglishApplicationLabel(applicationType) {
@@ -1608,28 +1644,55 @@ function maxPeerSimilarity(text, peerTexts) {
 
 function scoreQueryRecord(record, peerTexts = []) {
   const text = cleanText(record.query_text);
+  const wordCount = text.split(/\s+/).filter(Boolean).length;
+  const targetComplexity = record.target_complexity || "medium";
   const actualComplexity = inferActualComplexity(text);
 
   // --- Authenticity (1-5): does the query feel like a real person's request? ---
+  // Rubric is the same across complexities — only the word-count threshold differs.
   // Start from 1 (earned, not given).
   let authenticity = 1;
   // Specific persona context: first-person pronoun or possessive signals voice
   if (/\b(i |i'|my |we |our )/i.test(text)) authenticity += 1;
   // Concrete motivation or constraint beyond generic "build me a X"
   if (/\b(because|so that|need to|want to|trying to|help me|allow|ensure|support|track|manage|review|compare|find|share|upload|download)\b/i.test(text)) authenticity += 1;
-  // Mentions a real user context (role, goal, domain)
-  if (record.persona_title && text.length >= 60) authenticity += 1;
-  // Not a one-liner template with no substance
-  if (text.split(/\s+/).filter(Boolean).length >= 20) authenticity += 1;
+  // Persona exists → authentic voice (no length gate: vague queries are intentionally short)
+  if (record.persona_title) authenticity += 1;
+  // Word-count substance check — threshold depends on target complexity:
+  //   vague   : 1-2 short sentences is correct; any non-trivial length (≥5 words) earns the point.
+  //   medium/complex: need more substance (≥20 words).
+  if (targetComplexity === "vague" ? wordCount >= 5 : wordCount >= 20) authenticity += 1;
 
-  // --- Specificity (1-5): does it contain enough actionable UI detail? ---
+  // --- Specificity (1-5): per-complexity rubric ---
+  //
+  // vague definition: "the user barely describes what they want and precisely the app type;
+  //   the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off."
+  //   → Reward: names/implies an app type, appropriate brevity, clean ending.
+  //   → Penalise: over-specification (≥3 UI components → should be medium/complex).
+  //
+  // medium/complex: original UI-component + sentence-structure rubric.
   let specificity = 1;
   const uiComponents = (text.match(/\b(hero|card|list|table|button|chart|filter|search|modal|timeline|navigation|cta|responsive|section|module|sidebar|header|footer|badge|toast|drawer|tab|dropdown|form|input|step|wizard|grid|carousel|avatar|tag|tooltip|progress|skeleton)\b/gi) || []).length;
-  if (uiComponents >= 1) specificity += 1;
-  if (uiComponents >= 3) specificity += 1;
-  if (actualComplexity !== "vague") specificity += 1;
-  // Structured or multi-sentence (commas, colons, numbering)
-  if (/[,:;]/.test(text) && text.split(/[.!?]/).filter((s) => s.trim().length > 5).length >= 2) specificity += 1;
+
+  if (targetComplexity === "vague") {
+    // +1  names an app type, product category, or functional goal (even implicitly via app field)
+    if (/\b(app|dashboard|page|tool|site|tracker|manager|viewer|planner|builder|calculator|generator|editor|platform)\b/i.test(text) || record.application_type) specificity += 1;
+    // +1  no trailing question mark (vague should be a statement, not a question)
+    if (!/\?\s*$/.test(text)) specificity += 1;
+    // +1  no sign-off phrases that break persona realism
+    if (!/\b(thanks|thank you|regards|sincerely|best|cheers)\b/i.test(text)) specificity += 1;
+    // +1  appropriately brief: 5–40 words covers "1-2 short sentences" comfortably
+    if (wordCount >= 5 && wordCount <= 40) specificity += 1;
+    // -1  over-specified (≥3 UI components → this belongs in medium/complex, not vague)
+    if (uiComponents >= 3) specificity -= 1;
+  } else {
+    // medium / complex: original rubric
+    if (uiComponents >= 1) specificity += 1;
+    if (uiComponents >= 3) specificity += 1;
+    if (actualComplexity !== "vague") specificity += 1;
+    // Structured or multi-sentence (commas, colons, numbering)
+    if (/[,:;]/.test(text) && text.split(/[.!?]/).filter((s) => s.trim().length > 5).length >= 2) specificity += 1;
+  }
 
   // --- Diversity (1-5): is this query distinct within its scene group? ---
   let diversity = 1;
@@ -2132,4 +2195,8 @@ module.exports = {
   inferApplicationTypeCandidates,
   inferProductTypes,
   inferStyles,
+  resolveDesignStyle,
+  registerDesignStyle,
+  DESIGN_STYLES,
+  STYLE_HINTS,
 };

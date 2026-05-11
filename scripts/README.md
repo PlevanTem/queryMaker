@@ -1,0 +1,252 @@
+# scripts/ — Reusable LLM Batch Pipeline
+
+这一层是流水线的 CLI 表层。原有的 v2 主链路（`parse:requirements → plan:seed → generate:queries → score:queries → import:queries → build:dashboard`）保持不变；本目录新增五个**可复用**的批量生成与分析工具，以便配合真实 LLM API 高效产出 query 数据集。
+
+## 目录
+
+```
+scripts/
+├── lib/
+│   └── llm-batch.js                  # 共享核心：transport / 重试 / persona-query pipeline / 并发池 / 统计
+├── batch-generate-queries.js         # ★ 批量生成 CLI 入口
+├── build-query-comparison.js         # ★ 多 run 对比 HTML 生成器
+├── build-expand200-plan.js           # ★ 发散拓展 plan 构建（200 条，3 part 结构）
+├── generate-extra-scenes.js          # 基于 L1 分类扩展新 L2 场景（41 个）
+├── generate-analysis-report.js       # ★ 批次质量分析报告生成器（可复用 skill）
+├── test-api-connectivity.js          # API 网关连通性自检
+├── parse-requirements.js …           # v2 主链路其它脚本（保持原状）
+└── legacy/                           # 已归档的历史一次性脚本
+```
+
+复用约定：通用工具（`parseArgs` / `readJsonl` / `writeJsonl` / `ensureDir` / `escapeHtml` / `loadLocalEnv` / `COMPLEXITY_LEVELS` / `resolveDesignStyle` / `registerDesignStyle`）来自 `mvp/query_factory_v2.js`，scripts 不重复实现。
+
+## 核心入口：`batch:generate`
+
+> 等价于 `node scripts/batch-generate-queries.js`
+
+**两种输入二选一：**
+
+| 入参 | 说明 |
+|---|---|
+| `--input <xlsx>` | 需求表（如 `data/input/场景覆盖.xlsx`），将走 `parseRequirementsFromWorkbook + buildSeedPlan` |
+| `--plan <jsonl>` | 已构建好的 generation plan（`data/intermediate/generation_plan.v2.jsonl` 等） |
+
+**主要参数（CLI flag 优先，未传则取等价 env）：**
+
+| flag | env | 默认 | 说明 |
+|---|---|---|---|
+| `--output-dir` | — | `data/output/runs/run_<ts>` | 所有产物的目录（必传或自动按时间戳命名） |
+| `--sample-n` | `SAMPLE_N` | `0` | 从 xlsx 随机抽几个二级场景；`0` 表示全部 |
+| `--seed` | `SAMPLE_SEED` | 随机 | 抽样种子，便于复现 |
+| `--target-count-per-scene` | — | `1` | 每个抽样场景分配多少条任务（每条仍展开 3 复杂度） |
+| `--transport` | `LLM_TRANSPORT` | `claude-cli` | `claude-cli` / `anthropic` / `openai` |
+| `--model` | `ANTHROPIC_MODEL` / `PACKY_MODEL` | `claude-sonnet-4-6` | 模型 id |
+| `--concurrency` | `LLM_CONCURRENCY` | `3` | 并发任务数 |
+| `--max-retries` | `LLM_MAX_RETRIES` | `2` | 503 / 超时退避重试次数 |
+| `--per-call-timeout` | `PER_CALL_TIMEOUT_MS` | `180000` | 单次 LLM 调用超时（ms） |
+| `--no-resume` | — | resume 默认开 | 关掉断点续跑（重新覆盖 jsonl） |
+| `--generator-tag` | — | `claude-code-cli-subprocess` | 落盘记录里 `generator_mode` 标签 |
+
+**Transport 选择指南：**
+
+- **`claude-cli`** — 本机 Claude Code CLI 子进程（`claude -p --bare …`）。**唯一能跑通 packy-cc 网关**的方式，因为该网关会指纹识别非官方 CLI。
+  需要先 `npm i -g @anthropic-ai/claude-code` 并在 `.env.local` 配好 `ANTHROPIC_BASE_URL` / `PACKY_API_KEY`。
+- **`anthropic`** — HTTP 直连 `/v1/messages`。普通 Anthropic key 或开放型网关用这个。
+- **`openai`** — HTTP 直连 `/v1/chat/completions`。OpenAI 兼容网关（如 packy 普通分组、LiteLLM）用这个。
+
+### 标准化产物（`--output-dir/` 下）
+
+| 文件 | 作用 |
+|---|---|
+| `plan.json` | 本批 plan 完整快照（带场景 spec），用于审计与 fill 入口 |
+| `raw_queries.jsonl` | ✅ 主产物：每行一条 query 记录，schema 与既有 `data/output/raw_queries.v2.jsonl` 兼容 |
+| `errors.json` | 失败任务清单（error/stderr/at），可作为下一轮 fill 输入 |
+| `stats.json` | 自动统计：按 complexity 的 avg/min/max words、persona 解析成功率、整体耗时 |
+| `config.json` | 入参/transport/时间留痕（API key 自动脱敏为前 6 位 + `…`） |
+
+### 例子
+
+```bash
+# 1) 抽样冒烟（5 个场景 × 3 复杂度 = 15 任务）
+npm run batch:generate -- \
+  --input data/input/场景覆盖.xlsx \
+  --output-dir data/output/runs/sample5_$(date +%Y%m%d_%H%M%S) \
+  --sample-n 5 --seed 4073
+
+# 2) 全量跑 + 断点续跑（中途挂掉直接重跑同一目录即可）
+npm run batch:generate -- \
+  --plan data/intermediate/generation_plan.v2.jsonl \
+  --output-dir data/output/runs/full_v2 \
+  --concurrency 4
+
+# 3) 跑完发现还差几条 → 同目录重跑（resume 自动跳过已完成）
+npm run batch:generate -- \
+  --plan data/intermediate/generation_plan.v2.jsonl \
+  --output-dir data/output/runs/full_v2
+
+# 4) 切换 OpenAI 兼容网关
+LLM_TRANSPORT=openai \
+PACKY_BASE_URL=https://your-gateway/v1 \
+PACKY_API_KEY=xxx \
+npm run batch:generate -- \
+  --input data/input/场景覆盖.xlsx --sample-n 10 \
+  --output-dir data/output/runs/openai_sample10 \
+  --model claude-3-5-sonnet-20240620
+```
+
+### 退出码
+
+- `0` — 全部任务成功
+- `1` — 至少一条失败（jsonl 仍是有效产物，可重跑同目录靠 resume 补齐）
+- `2` — 入参错误（找不到文件等）
+
+## 对比报告：`build:comparison`
+
+> 等价于 `node scripts/build-query-comparison.js`
+
+把任意多个 run 的 `raw_queries.jsonl` 合成一份并排对比 HTML。
+
+### 用法 A：按目录推断（最简单）
+
+```bash
+npm run build:comparison -- \
+  --run-dir data/output/sample5 \
+  --run-dir data/output/sample5_cli \
+  --run-dir data/output/sample5_cli_fewshot \
+  --output data/output/query_comparison.html \
+  --title "Query 生成对比"
+```
+
+每个目录默认找 `raw_queries.jsonl`；找不到则用目录里第一个 `.jsonl`。label 默认是目录名。
+
+### 用法 B：精确指定每组（label / path / color / sub）
+
+```bash
+npm run build:comparison -- \
+  --runs \
+    "label=① 模板|path=data/output/sample5/raw_queries.sample5.jsonl|color=#9aa4b2|sub=persona-fallback（不调 LLM）" \
+    "label=② LLM|path=data/output/sample5_cli/raw_queries.sample5.cli.jsonl|color=#3b82f6|sub=persona-llm baseline" \
+    "label=③ LLM+few-shot|path=data/output/sample5_cli_fewshot/raw_queries.sample5.cli.jsonl|color=#10b981|sub=加 few-shot 示例" \
+  --output data/output/query_comparison.html
+```
+
+HTML 包含：
+
+- 顶部量化表（complexity 维度 avg/min-max/n + 首句指纹唯一率 + persona 解析率）
+- 自动评估表（跨复杂度梯度 + 区分度评分 → 自动标出最优组）
+- 逐条对比卡片（按任务最多的那一组顺序对齐，缺失列灰显「missing」），顶部有 vague/medium/complex 筛选
+
+## 连通性自检：`test:api`
+
+> 等价于 `node scripts/test-api-connectivity.js`
+
+只做一次 ping，分别测 Anthropic Messages 与 OpenAI 兼容 Chat 两条路是否能拿到响应；用于快速判断 key / base_url / 网关分组的状态。
+
+## Schema：`raw_queries.jsonl` 一条记录
+
+```jsonc
+{
+  "id": "q_scene_025_001",            // 来自 plan 的 query_id
+  "scene_id": "scene_025",
+  "l1_scene": "教育学习",
+  "l2_scene_label": "备考自测/刷题 ★",
+  "l2_scene_examples": [],
+  "application_type": "刷题练习应用",
+  "product_type": "portfolio",
+  "target_complexity": "vague",       // vague | medium | complex
+  "design_style": null,               // 默认 null（LLM 自由发挥）；--design-styles 时有值
+  "created_at": "2026-05-07T13:54:00.000Z",
+  "generator_mode": "claude-code-cli-subprocess",
+  "llm_model": "claude-sonnet-4-6",
+  "persona_id": "p_xxx",
+  "persona_title": "...",
+  "persona_source": "llm_persona_synthesis",  // 或 _parse_failed / deterministic_persona_fallback
+  "persona_spec": { /* 完整 persona JSON */ },
+  "persona_prompt_text": "...",        // 留底，便于复盘
+  "query_prompt_text": "...",
+  "query_text": "...",                 // ✅ 最终 query
+  "timings_ms": { "persona_ms": 3210, "query_ms": 8120, "total_ms": 11330 }
+}
+```
+
+字段集与既有 `data/output/raw_queries.v2.jsonl` 兼容，可直接喂给 `score:queries` / `import:queries` 后续步骤。
+
+## 发散拓展：`build-expand200-plan.js`
+
+从已有场景基础上，构建 200 条结构化拓展任务（三部分）：
+
+| Part | 范围 | 条数 | 说明 |
+|------|------|------|------|
+| A | scene_063–103（41 extra 场景第 2 轮） | 82 | 换用不同 product_type + 复杂度，seq 004/005 |
+| B | scene_039–058（20 个低覆盖原始场景） | 60 | seq 010/011/012，不与已有 001-009 冲突 |
+| C | scene_104–122（19 个全新领域场景） | 58 | fintech / healthcare / dev-tools / creative / IoT / pet 等 |
+
+```bash
+# 默认：design_style = null（LLM 自由发挥）
+node scripts/build-expand200-plan.js [--dry-run]
+
+# 指定风格列表（循环分配）
+node scripts/build-expand200-plan.js --design-styles "Dark,Glassmorphism,Cyberpunk"
+
+# 启发式按场景关键词推断风格
+node scripts/build-expand200-plan.js --design-styles auto
+```
+
+输出：`data/intermediate/generation_plan.expand200.jsonl`
+
+之后用 `batch-generate-queries.js` 跑生成：
+```bash
+node scripts/batch-generate-queries.js \
+  --plan data/intermediate/generation_plan.expand200.jsonl \
+  --output-dir data/output/runs/expand200_llm \
+  --concurrency 3
+```
+
+## 质量分析报告：`generate-analysis-report.js`
+
+**可复用 skill**：读取任意 `scored_queries.jsonl`，输出自包含单文件 HTML 报告。
+
+```bash
+node scripts/generate-analysis-report.js \
+  --input  data/output/runs/<batch>/scored_queries.jsonl \
+  --output data/output/runs/<batch>/analysis_report.html \
+  [--title "批次名"] \
+  [--meta  "N 条 · 模型信息"]
+```
+
+报告包含：
+
+| 模块 | 内容 |
+|------|------|
+| KPI 卡片 | 总条数 / 通过 / 失败 / 平均分 / 通过率 / fallback 数 |
+| 评分方式与细则 | 公式、三维度 per-complexity 规则、complexity 推断表 |
+| 质量分直方图 | 分档颜色（红 < 2.8 / 橙 2.8–4.0 / 绿 ≥ 4.0）|
+| 复杂度堆叠图 | vague / medium / complex 通过/失败对比 |
+| 词数分布图 | 按词数区间统计通过/失败 |
+| Design Style 网格 | 每种风格通过率热图 |
+| L1 场景横向条 | 各 L1 通过数量对比 |
+| **全量 Query 浏览器** | 多轴筛选（复杂度 / 风格 / 场景 / 通过状态 / 关键词搜索）+ 排序 + 分页 + 点击展开完整文本 |
+| 诊断 / 建议 | 自动根据失败率生成（全通过时显示 ✓）|
+
+无外部运行时依赖（Chart.js 走 CDN；所有数据内嵌为 JSON）。
+
+## 设计原则
+
+1. **断点续跑优先** — 默认 resume，每条完成立即 append 到 `raw_queries.jsonl`，崩了重跑同目录即可
+2. **失败可定位** — `errors.json` 留下 stderr，`config.json` 留下入参与 transport
+3. **transport 可换** — 三种 transport 都实现 `(prompt, opts) => Promise<string>` 同一签名，便于以后接其它网关
+4. **零外部依赖** — 复用项目已有的 `xlsx` / `undici`-fetch，不引入 OpenAI / Anthropic SDK
+5. **可观测** — 每条任务实时打印 persona/query 各自耗时与 persona JSON 解析状态
+6. **prompt 与代码分离** — 改 prompt 优先改 `mvp/query_factory_v2.js` 中的 `buildPersonaSynthesisPrompt` / `buildQueryPromptFromPersona`，并在 `prompts/*.md` 留同步副本，scripts 层不持有 prompt
+7. **一切通用工具下沉** — `mvp/query_factory_v2.js` 已导出 `parseArgs / readJsonl / writeJsonl / ensureDir / loadLocalEnv / escapeHtml / COMPLEXITY_LEVELS / resolveDesignStyle / registerDesignStyle / DESIGN_STYLES / STYLE_HINTS`，scripts 与 lib 直接 require 复用，不重复造轮子
+8. **design_style 默认不注入** — plan 任务的 `design_style` 默认为 `null`，让 LLM 根据场景上下文自然发挥；只在明确有 UI 风格诉求时通过 `--design-styles` 或 `registerDesignStyle()` 显式控制
+
+## 历史脚本归档
+
+为避免新人误用旧路径，下列一次性脚本已迁移到 [scripts/legacy/](./legacy/)：
+
+| 旧脚本 | 新方案 |
+|---|---|
+| `test-sample5.js` / `test-sample5-cli.js` | `npm run batch:generate` + `--sample-n 5 --transport claude-cli` |
+| `fill-missing.js` | 重跑同一 `--output-dir`（resume 默认开） |
+| `build-comparison-html.js` | `npm run build:comparison` （支持任意 run 数） |

@@ -329,27 +329,27 @@ flowchart LR
 ├── package.json
 ├── mvp/
 │   ├── query_factory.js
-│   └── query_factory_v2.js
+│   └── query_factory_v2.js             # 核心：pipeline / 评分 / design_style 系统
 ├── scripts/
-│   ├── README.md                       # batch / comparison 脚本使用说明
+│   ├── README.md                       # batch / comparison / expand 脚本使用说明
 │   ├── lib/
 │   │   └── llm-batch.js                # 共享：transports / 重试 / pipeline / pool / stats
-│   ├── batch-generate-queries.js       # 真实 LLM 批量生成入口（推荐）
+│   ├── batch-generate-queries.js       # ★ 真实 LLM 批量生成入口（推荐）
 │   ├── build-query-comparison.js       # 多 run 对比 HTML 生成器
+│   ├── build-expand200-plan.js         # ★ 发散性拓展 plan（200 条，3 part 结构）
+│   ├── generate-extra-scenes.js        # 基于 L1 分类扩展新 L2 场景（41 场景）
+│   ├── generate-analysis-report.js     # ★ 批次质量分析报告生成器（可复用 skill）
 │   ├── test-api-connectivity.js        # API 网关探活
 │   ├── parse-requirements.js
 │   ├── build-generation-plan.js
 │   ├── build-backfill-plan.js
 │   ├── generate-queries.js
-│   ├── batch-generate-queries.js
 │   ├── supplement-anchored-persona-queries.js
 │   ├── score-queries.js
 │   ├── import-queries.js
 │   ├── build-dashboard.js
 │   ├── preview-persona-flow.js
 │   ├── run-mvp.js
-│   ├── lib/
-│   │   └── llm-batch.js
 │   └── legacy/                         # 已归档的一次性脚本
 ├── prompts/
 │   ├── persona_synthesis_prompt.md
@@ -363,7 +363,15 @@ flowchart LR
 │   └── query-factory-smoke.test.js
 ├── data/
 │   ├── intermediate/
+│   │   ├── generation_plan.v2.jsonl
+│   │   ├── generation_plan.expand200.jsonl   # expand200 批次 plan
+│   │   └── generation_plan.extra.jsonl
 │   ├── output/
+│   │   └── runs/
+│   │       └── expand200_llm/               # ★ 200 条真实 LLM 批次产物
+│   │           ├── raw_queries.jsonl
+│   │           ├── scored_queries.jsonl
+│   │           └── analysis_report.html
 │   ├── db/
 │   └── reports_v2/
 └── ARCHIVE/
@@ -388,6 +396,19 @@ flowchart LR
 | `npm run build:comparison`   | 把任意多个 batch run 拼成并排 HTML 对比报告 |
 | `npm run test:api`           | 探活：分别测 Anthropic 与 OpenAI 兼容端点 |
 | `npm test`                   | 运行冒烟测试                       |
+
+**扩展脚本（直接调用）：**
+
+```bash
+# 构建 200 条发散拓展 plan（三部分结构，design_style 默认 null）
+node scripts/build-expand200-plan.js [--dry-run] [--design-styles "Dark,Glassmorphism"]
+
+# 从任意 scored_queries.jsonl 生成可交互 HTML 分析报告
+node scripts/generate-analysis-report.js \
+  --input  data/output/runs/<batch>/scored_queries.jsonl \
+  --output data/output/runs/<batch>/analysis_report.html \
+  [--title "批次名"] [--meta "N 条 · 模型信息"]
+```
 
 
 ## Key Artifacts
@@ -432,6 +453,74 @@ flowchart LR
 - 通过启发式规则回判 `complexity_level` 和 `quality_score`
 
 这条链路已经可以离线跑通，也支持通过 `--transport claude-cli / openai / anthropic` 接入真实 LLM 批量生成。
+
+## Design Style 系统
+
+### 默认行为：`null`（LLM 自由发挥）
+
+`buildSeedPlan()` / `buildBackfillPlan()` / `build-expand200-plan.js` 生成的所有 plan task，`design_style` 字段默认为 `null`。
+
+prompt 注入：
+- `design_style = null` → `"No fixed visual style is required — let the visual direction emerge naturally."`
+- `design_style = "Dark"` → `"Use a dark theme with strong contrast on key information."`
+
+### 三种 opt-in 方式
+
+| 方式 | 行为 |
+|------|------|
+| 不传（默认） | `design_style: null`，LLM 按场景上下文自然推断 |
+| `--design-styles "Dark,Glassmorphism,Cyberpunk"` | 在指定列表中循环分配 |
+| `--design-styles auto` | 按场景 L1/L2/app 关键词启发式推断（旧行为） |
+
+```bash
+# 不指定风格（推荐默认）
+node scripts/build-expand200-plan.js
+
+# 指定固定风格列表（循环分配）
+node scripts/build-expand200-plan.js --design-styles "Dark,Glassmorphism,Cyberpunk"
+
+# 按场景启发式推断
+node scripts/build-expand200-plan.js --design-styles auto
+```
+
+### 当前注册的设计风格
+
+| 名称 | 风格定义 |
+|------|------|
+| `Dark` | 深色主题，重点信息高对比突出 |
+| `Glassmorphism` | 玻璃拟态，卡片半透明 + 背景模糊 |
+| `Neumorphism` | 软质拟态，元素从背景浮起 |
+| `Neubrutalism` | 新粗野，边框阴影对比感强 |
+| `Minimalism` | 极简，留白充足，层级清晰 |
+| `Material` | Material 风格，交互反馈明确 |
+| `Data-Dense` | 信息密度高，适合快速扫读 |
+| `Cyberpunk` | 霓虹赛博感，视觉冲击强 |
+| `Luxury` | 高质感杂志专题，排版精致 |
+| `Vibrant` | 活泼，颜色饱和度高 |
+
+### 扩展新风格
+
+在任意调用方代码中：
+
+```js
+const { registerDesignStyle } = require('./mvp/query_factory_v2');
+
+registerDesignStyle(
+  'Y2K',                                                    // plan 字段值
+  '千禧复古风格，金属光泽渐变、霓虹色调、科技感配合怀旧元素',      // 中文 persona 提示
+  'Use a Y2K-inspired aesthetic with metallic gradients and neon accents.'  // 英文 query 指令
+);
+```
+
+注册后立即生效，同步更新 `DESIGN_STYLES` 列表、中文 prompt hint（`STYLE_HINTS`）和英文 prompt 指令（`_EN_STYLE_INSTRUCTIONS`）。
+
+### 评分器与 design_style
+
+评分器 `scoreQueryRecord()` 对 `design_style` 的处理：
+- `design_style` 字段有值 → Diversity 维度 **+1**
+- 不影响 Authenticity / Specificity 两个维度的评分
+
+因此：`design_style = null` 的 query 在 Diversity 维度最多得 4 分（而非 5 分）。如果 Diversity 基准分不够，可考虑通过 `--design-styles` 注入或场景本身 `application_type` 的具体程度来补偿。
 
 ## Documentation Map
 
@@ -512,7 +601,13 @@ flowchart LR
 - persona-driven fallback query 生成
 - LLM 两步生成：`batch-generate-queries.js` 支持 `claude-cli / openai / anthropic` 三种 transport
 - `constrained` 标志：`product_type` 默认仅作元数据，`constrained: true` 时才注入 prompt
-- 启发式质量评分
+- **启发式质量评分（per-complexity 独立规则）**
+  - `vague`：词数 5–40、含 app 类型词、无尾问句、无 sign-off
+  - `medium / complex`：UI 组件词数、句子结构、推断复杂度对齐
+  - 评分公式：`Authenticity × 0.4 + Specificity × 0.4 + Diversity × 0.2`，通过阈值 ≥ 2.8
+- **Design Style 系统**：`design_style` 默认 `null`，LLM 自由发挥；支持 `--design-styles` opt-in 注入；`registerDesignStyle()` 动态扩展
+- **发散性拓展 plan**：`build-expand200-plan.js` 产出 200 条任务（3 part 结构，覆盖 19 个新领域）
+- **可复用质量分析报告 skill**：`generate-analysis-report.js` 从任意 scored JSONL 生成自包含 HTML（图表 + 交互筛选器 + 评分细则）
 - SQLite 导入与静态 dashboard 输出
 - 主链路冒烟测试
 

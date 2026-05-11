@@ -1,0 +1,158 @@
+[
+  {
+    "mode": {
+      "label": "Mode A — null（LLM 自由发挥）",
+      "tag": "null",
+      "color": "#6c63ff",
+      "design_style": null,
+      "persona_seed": "demo_null_01",
+      "query_id": "demo_A"
+    },
+    "task": {
+      "scene_id": "scene_028",
+      "l1_scene": "办公效率",
+      "l2_scene_label": "项目看板/任务追踪 ★",
+      "l2_scene_examples": [
+        "看板视图",
+        "进度条",
+        "优先级标签",
+        "里程碑管理"
+      ],
+      "application_type": "项目看板应用",
+      "product_type": "dashboard",
+      "target_complexity": "medium",
+      "constrained": false,
+      "label": "Mode A — null（LLM 自由发挥）",
+      "tag": "null",
+      "color": "#6c63ff",
+      "design_style": null,
+      "persona_seed": "demo_null_01",
+      "query_id": "demo_A"
+    },
+    "steps": {
+      "personaPrompt": "你是一个 persona 设计助手，需要先基于场景合成一个真实用户画像，再用于生成前端 UI query。\n请参考 persona-driven synthetic data synthesis 的思路：persona 应该是场景驱动的真实人，不是固定职业标签。\n## 场景输入\n一级场景：办公效率\n二级场景标签：项目看板/任务追踪 ★\n该场景常见 app 方向示例（仅用于理解，不要机械照抄进最终 query）：看板视图、进度条、优先级标签、里程碑管理\n当前选定的 L3 application_type：项目看板应用\n设计风格：未显式指定设计风格，可根据场景自然推断。\n最终 query 默认输出英文。\n## 你的任务\n请生成 1 个最适合该场景的 persona，要求：\n1. persona 要体现真实身份、动机、表达方式和信息不完整性。\n2. persona 该场景下真实需要\n3. persona 要解释为什么会提出这个页面或组件需求。\n4. 不要把二级场景括号中的示例整段复制到 persona 文本中。\n## 输出格式\n直接输出以下 JSON，不要加 markdown 代码块围栏（不要 ```json）：\n【重要】所有字符串值内部禁止使用 ASCII 双引号 \" —— 若需引用词语请用中文书名号《》或单引号 '' 代替，否则 JSON 会解析失败。\n{\n  \"persona_id\": \"p_xxx\",\n  \"persona_title\": \"角色标签一句话概括这个人\",\n  \"persona_description\": \"2-4 句描述背景、动机和当前处境\",\n  \"persona_style_hint\": \"这个人会如何表达、会不会给细节、会不会提技术\",\n  \"user_goal\": \"这个人想通过页面/产品完成什么\",\n  \"domain_familiarity\": \"low | medium | high\",\n  \"persona_source\": \"llm_persona_synthesis\"\n}",
+      "personaRaw": "{\n  \"persona_id\": \"p_kanban_coordinator_01\",\n  \"persona_title\": \"跨部门项目协调员，靠看板维持多线并行的掌控感\",\n  \"persona_description\": \"陈思琦，32岁，在一家中型互联网公司担任项目协调员，同时跟进3-4个并行项目，每个项目涉及设计、开发、运营等不同团队。她没有正式的 PM 认证，但实际上承担着大量项目推进工作。最近季度末考核压力大，她需要一个能让老板和各方负责人都能快速看懂进度的界面，而不是每次开会前手动整理 Excel。\",\n  \"persona_style_hint\": \"表达偏实用、直接，会说'我需要一眼看到哪些任务卡住了'，不太会用技术术语，更倾向于描述自己的使用场景而非具体功能名称，细节给得不完整，比如只说'按人分组'但不说是否需要拖拽\",\n  \"user_goal\": \"希望有一个可以按项目分组展示任务状态的看板页面，能清晰看到每个任务当前处于哪个阶段、是否有阻塞，并且可以快速筛选出某个负责人名下所有未完成的任务\",\n  \"domain_familiarity\": \"medium\",\n  \"persona_source\": \"llm_persona_synthesis\"\n}",
+      "personaSpec": {
+        "persona_id": "p_kanban_coordinator_01",
+        "persona_title": "跨部门项目协调员，靠看板维持多线并行的掌控感",
+        "persona_description": "陈思琦，32岁，在一家中型互联网公司担任项目协调员，同时跟进3-4个并行项目，每个项目涉及设计、开发、运营等不同团队。她没有正式的 PM 认证，但实际上承担着大量项目推进工作。最近季度末考核压力大，她需要一个能让老板和各方负责人都能快速看懂进度的界面，而不是每次开会前手动整理 Excel。",
+        "persona_style_hint": "表达偏实用、直接，会说'我需要一眼看到哪些任务卡住了'，不太会用技术术语，更倾向于描述自己的使用场景而非具体功能名称，细节给得不完整，比如只说'按人分组'但不说是否需要拖拽",
+        "user_goal": "希望有一个可以按项目分组展示任务状态的看板页面，能清晰看到每个任务当前处于哪个阶段、是否有阻塞，并且可以快速筛选出某个负责人名下所有未完成的任务",
+        "domain_familiarity": "medium",
+        "persona_source": "llm_persona_synthesis"
+      },
+      "queryPrompt": "你现在要扮演给定的 persona，向 AI 编程助手发送一条前端 UI 开发需求。\n输出只能是那条用户消息query指令，不要解释你是谁，不要输出 JSON。\n## Inputs\n### Persona\npersona_title：跨部门项目协调员，靠看板维持多线并行的掌控感\npersona_description：陈思琦，32岁，在一家中型互联网公司担任项目协调员，同时跟进3-4个并行项目，每个项目涉及设计、开发、运营等不同团队。她没有正式的 PM 认证，但实际上承担着大量项目推进工作。最近季度末考核压力大，她需要一个能让老板和各方负责人都能快速看懂进度的界面，而不是每次开会前手动整理 Excel。\npersona_style_hint：表达偏实用、直接，会说'我需要一眼看到哪些任务卡住了'，不太会用技术术语，更倾向于描述自己的使用场景而非具体功能名称，细节给得不完整，比如只说'按人分组'但不说是否需要拖拽\nuser_goal：希望有一个可以按项目分组展示任务状态的看板页面，能清晰看到每个任务当前处于哪个阶段、是否有阻塞，并且可以快速筛选出某个负责人名下所有未完成的任务\ndomain_familiarity：medium\n### 场景背景\n一级场景：办公效率\n二级场景标签：项目看板/任务追踪 ★\n当前选定的 L3 application_type：项目看板应用\n常见 app 方向示例（仅参考，按二级场景随机衍生，不要重复）：看板视图、进度条、优先级标签、里程碑管理\n设计风格：未显式指定设计风格，可根据场景自然推断。\nQuery目标复杂度：medium\n## 输出要求\n1. 基于 Inputs 和场景背景以Persona角色的第一人称视角输出一条英文 query\n2. query 语气必须符合 persona，不要泄露、照抄Inputs\n3. Write like a real person typing into a chat box\n4. Allow incomplete thoughts, mid-sentence pivots, casual grammar, filler words\n5. Express constraints implicitly: say \"for my mom's 60th birthday\" instead of \"target audience: elderly female\".\n6. Include situation triggers naturally e.x. \"I need it to help me ...\" etc.\n7. Mix imperatives, statements, and half-finished thoughts. Questions are fine mid-query but do NOT end with a meta-question (\"Can you help me?\", \"Does that make sense?\", \"Can you build something for that?\" etc.) — the context already implies asking for help.\n8. Avoid repetitive structures across queries.\n9. Vary sentence count based on Query目标复杂度 from 10 ~ 250 words，参考下述三种specificity规格：\n- vague: the user barely describes what they want and precisely the app type; the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off.\n- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.\n- complex: multiple explicit requirements about target user, goal, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.\n## Few-shot Examples（仅作为长度与结构参考，不要照抄主题/语言）\n下面三段展示了 vague / medium / complex 三种复杂度下，真实用户写出来的 query 大致长什么样。注意它们的篇幅、信息密度和结构差异：\n<vague>\nexample1: 我想测下运势，给我开发一个玄学风格的运势生成器\nexample2: 给我一个生成复古胶片感拍立得的工具\nexample3: 做个晚餐抽签器，每次大家纠结吃什么的时候转一转。\n</vague>\n<medium>\nAct as an expert kids' game designer and web developer. Help me build a tool that turns simple ideas into detailed prompts for kid-friendly web games. Output the prompt in short, medium, detail versions. Allow options for picking different game type, styles, and complexity\n</medium>\n<complex>\nHelp me build a mobile app called Tag along — a small social app for friend circles, hobby groups, and company crews to plan things together. Vibe: fun, warm, young. Look: round buttons, round avatars, colors that are playful but soft (coral, sunshine yellow, mint, sky blue, lavender, off-white background). Bottom bar with 5 tabs, the middle one is a round red +:\n1. Feed — list of upcoming plans, with a row of interest pills at the top (hiking, coffee, yoga...) so I can filter; show a \"For you\" section that matches my interests.\n2. Wall — an Instagram-style photo wall: big photo + caption + likes + comments. If a post is about a plan, show a small event card under it with a \"Join\" button.\n3. +-when I tap it, pop up two choices: post a photo or create an event.\n4. Ranks — a leaderboard. Rules: hosting an event = 50 pts, posting on the wall = 20 pts, joining an event = 10 pts. Top 3 get medals.\n5. Profile — my avatar, name, a one-word vibe, three little prompts (anthem / perfect Sunday / hot take), my interests, the events I've hosted or am going to, and all the photo posts I've made. Other people's profiles look the same but read-only.\nCore action on every event: two pill buttons — Coming and Not Coming. Tapping one drops my name into that list. No RSVP form. From the event page I can also send a friend a small nudge if they haven't replied, and react with vibes (Hyped / I'm in / Maybe / Saving spot / FOMO). Keep all data on the phone — no third-party login, no payments, no push notifications. Please pre-fill some demo users and events so the app feels alive the moment I open it.\n</complex>\n注意：示例只是用于校准\"长度感 / 结构感 / 信息密度\"，请保持你的 query 与示例话题完全无关，且最终输出仍默认英文（vague 也用英文，不要因为示例是中文就跟着输出中文）。",
+      "queryText": "I'm juggling like 3-4 projects at the same time and every time before a check-in I end up manually pulling together an Excel just to show who's doing what and where things are stuck — it's a mess. I need a kanban-style page where tasks are grouped by project, and I can see at a glance which ones are blocked or falling behind. Each task card should show the current stage, the person responsible, and some kind of visual flag if it's been sitting too long or is blocked. Also I really need a way to filter by person — like if I click on someone's name I want to see all their unfinished tasks across every project, not just one board. The whole thing should feel clean enough that I can just share the screen during a meeting and people actually understand it without me explaining everything."
+    },
+    "timings": {
+      "personaMs": 18420,
+      "queryMs": 12340,
+      "totalMs": 30760
+    },
+    "error": null
+  },
+  {
+    "mode": {
+      "label": "Mode B — \"Dark\"（显式指定）",
+      "tag": "Dark",
+      "color": "#36d399",
+      "design_style": "Dark",
+      "persona_seed": "demo_dark_01",
+      "query_id": "demo_B"
+    },
+    "task": {
+      "scene_id": "scene_028",
+      "l1_scene": "办公效率",
+      "l2_scene_label": "项目看板/任务追踪 ★",
+      "l2_scene_examples": [
+        "看板视图",
+        "进度条",
+        "优先级标签",
+        "里程碑管理"
+      ],
+      "application_type": "项目看板应用",
+      "product_type": "dashboard",
+      "target_complexity": "medium",
+      "constrained": false,
+      "label": "Mode B — \"Dark\"（显式指定）",
+      "tag": "Dark",
+      "color": "#36d399",
+      "design_style": "Dark",
+      "persona_seed": "demo_dark_01",
+      "query_id": "demo_B"
+    },
+    "steps": {
+      "personaPrompt": "你是一个 persona 设计助手，需要先基于场景合成一个真实用户画像，再用于生成前端 UI query。\n请参考 persona-driven synthetic data synthesis 的思路：persona 应该是场景驱动的真实人，不是固定职业标签。\n## 场景输入\n一级场景：办公效率\n二级场景标签：项目看板/任务追踪 ★\n该场景常见 app 方向示例（仅用于理解，不要机械照抄进最终 query）：看板视图、进度条、优先级标签、里程碑管理\n当前选定的 L3 application_type：项目看板应用\n设计风格：使用深色主题，重点信息高对比突出\n最终 query 默认输出英文。\n## 你的任务\n请生成 1 个最适合该场景的 persona，要求：\n1. persona 要体现真实身份、动机、表达方式和信息不完整性。\n2. persona 该场景下真实需要\n3. persona 要解释为什么会提出这个页面或组件需求。\n4. 不要把二级场景括号中的示例整段复制到 persona 文本中。\n## 输出格式\n直接输出以下 JSON，不要加 markdown 代码块围栏（不要 ```json）：\n【重要】所有字符串值内部禁止使用 ASCII 双引号 \" —— 若需引用词语请用中文书名号《》或单引号 '' 代替，否则 JSON 会解析失败。\n{\n  \"persona_id\": \"p_xxx\",\n  \"persona_title\": \"角色标签一句话概括这个人\",\n  \"persona_description\": \"2-4 句描述背景、动机和当前处境\",\n  \"persona_style_hint\": \"这个人会如何表达、会不会给细节、会不会提技术\",\n  \"user_goal\": \"这个人想通过页面/产品完成什么\",\n  \"domain_familiarity\": \"low | medium | high\",\n  \"persona_source\": \"llm_persona_synthesis\"\n}",
+      "personaRaw": "{\n  \"persona_id\": \"p_047\",\n  \"persona_title\": \"独立接单的全栈开发者，同时跑三个客户项目\",\n  \"persona_description\": \"Marcus 是一名自由职业全栈工程师，同时维护着三个来自不同客户的开发合同。他白天泡在编辑器里，需要随时知道哪个 feature 卡在哪一步、哪个 deadline 快到了。他没有专职 PM，所有任务追踪都得自己管，当前用的电子表格已经完全失控。他想要一个能在黑屏环境下长时间使用的看板工具，核心诉求是'一眼看出哪里堵了'。\",\n  \"persona_style_hint\": \"表达简短直接，习惯用开发者口吻说话，会提颜色对比、深色模式等视觉偏好，但不会主动给出完整交互规格，细节靠追问才说\",\n  \"user_goal\": \"希望有一个能展示多项目并行进度的看板页面，支持按优先级快速识别阻塞任务，深色背景下关键状态仍然高亮清晰\",\n  \"domain_familiarity\": \"medium\",\n  \"persona_source\": \"llm_persona_synthesis\"\n}",
+      "personaSpec": {
+        "persona_id": "p_047",
+        "persona_title": "独立接单的全栈开发者，同时跑三个客户项目",
+        "persona_description": "Marcus 是一名自由职业全栈工程师，同时维护着三个来自不同客户的开发合同。他白天泡在编辑器里，需要随时知道哪个 feature 卡在哪一步、哪个 deadline 快到了。他没有专职 PM，所有任务追踪都得自己管，当前用的电子表格已经完全失控。他想要一个能在黑屏环境下长时间使用的看板工具，核心诉求是'一眼看出哪里堵了'。",
+        "persona_style_hint": "表达简短直接，习惯用开发者口吻说话，会提颜色对比、深色模式等视觉偏好，但不会主动给出完整交互规格，细节靠追问才说",
+        "user_goal": "希望有一个能展示多项目并行进度的看板页面，支持按优先级快速识别阻塞任务，深色背景下关键状态仍然高亮清晰",
+        "domain_familiarity": "medium",
+        "persona_source": "llm_persona_synthesis"
+      },
+      "queryPrompt": "你现在要扮演给定的 persona，向 AI 编程助手发送一条前端 UI 开发需求。\n输出只能是那条用户消息query指令，不要解释你是谁，不要输出 JSON。\n## Inputs\n### Persona\npersona_title：独立接单的全栈开发者，同时跑三个客户项目\npersona_description：Marcus 是一名自由职业全栈工程师，同时维护着三个来自不同客户的开发合同。他白天泡在编辑器里，需要随时知道哪个 feature 卡在哪一步、哪个 deadline 快到了。他没有专职 PM，所有任务追踪都得自己管，当前用的电子表格已经完全失控。他想要一个能在黑屏环境下长时间使用的看板工具，核心诉求是'一眼看出哪里堵了'。\npersona_style_hint：表达简短直接，习惯用开发者口吻说话，会提颜色对比、深色模式等视觉偏好，但不会主动给出完整交互规格，细节靠追问才说\nuser_goal：希望有一个能展示多项目并行进度的看板页面，支持按优先级快速识别阻塞任务，深色背景下关键状态仍然高亮清晰\ndomain_familiarity：medium\n### 场景背景\n一级场景：办公效率\n二级场景标签：项目看板/任务追踪 ★\n当前选定的 L3 application_type：项目看板应用\n常见 app 方向示例（仅参考，按二级场景随机衍生，不要重复）：看板视图、进度条、优先级标签、里程碑管理\n设计风格：使用深色主题，重点信息高对比突出\nQuery目标复杂度：medium\n## 输出要求\n1. 基于 Inputs 和场景背景以Persona角色的第一人称视角输出一条英文 query\n2. query 语气必须符合 persona，不要泄露、照抄Inputs\n3. Write like a real person typing into a chat box\n4. Allow incomplete thoughts, mid-sentence pivots, casual grammar, filler words\n5. Express constraints implicitly: say \"for my mom's 60th birthday\" instead of \"target audience: elderly female\".\n6. Include situation triggers naturally e.x. \"I need it to help me ...\" etc.\n7. Mix imperatives, statements, and half-finished thoughts. Questions are fine mid-query but do NOT end with a meta-question (\"Can you help me?\", \"Does that make sense?\", \"Can you build something for that?\" etc.) — the context already implies asking for help.\n8. Avoid repetitive structures across queries.\n9. Vary sentence count based on Query目标复杂度 from 10 ~ 250 words，参考下述三种specificity规格：\n- vague: the user barely describes what they want and precisely the app type; the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off.\n- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.\n- complex: multiple explicit requirements about target user, goal, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.\n## Few-shot Examples（仅作为长度与结构参考，不要照抄主题/语言）\n下面三段展示了 vague / medium / complex 三种复杂度下，真实用户写出来的 query 大致长什么样。注意它们的篇幅、信息密度和结构差异：\n<vague>\nexample1: 我想测下运势，给我开发一个玄学风格的运势生成器\nexample2: 给我一个生成复古胶片感拍立得的工具\nexample3: 做个晚餐抽签器，每次大家纠结吃什么的时候转一转。\n</vague>\n<medium>\nAct as an expert kids' game designer and web developer. Help me build a tool that turns simple ideas into detailed prompts for kid-friendly web games. Output the prompt in short, medium, detail versions. Allow options for picking different game type, styles, and complexity\n</medium>\n<complex>\nHelp me build a mobile app called Tag along — a small social app for friend circles, hobby groups, and company crews to plan things together. Vibe: fun, warm, young. Look: round buttons, round avatars, colors that are playful but soft (coral, sunshine yellow, mint, sky blue, lavender, off-white background). Bottom bar with 5 tabs, the middle one is a round red +:\n1. Feed — list of upcoming plans, with a row of interest pills at the top (hiking, coffee, yoga...) so I can filter; show a \"For you\" section that matches my interests.\n2. Wall — an Instagram-style photo wall: big photo + caption + likes + comments. If a post is about a plan, show a small event card under it with a \"Join\" button.\n3. +-when I tap it, pop up two choices: post a photo or create an event.\n4. Ranks — a leaderboard. Rules: hosting an event = 50 pts, posting on the wall = 20 pts, joining an event = 10 pts. Top 3 get medals.\n5. Profile — my avatar, name, a one-word vibe, three little prompts (anthem / perfect Sunday / hot take), my interests, the events I've hosted or am going to, and all the photo posts I've made. Other people's profiles look the same but read-only.\nCore action on every event: two pill buttons — Coming and Not Coming. Tapping one drops my name into that list. No RSVP form. From the event page I can also send a friend a small nudge if they haven't replied, and react with vibes (Hyped / I'm in / Maybe / Saving spot / FOMO). Keep all data on the phone — no third-party login, no payments, no push notifications. Please pre-fill some demo users and events so the app feels alive the moment I open it.\n</complex>\n注意：示例只是用于校准\"长度感 / 结构感 / 信息密度\"，请保持你的 query 与示例话题完全无关，且最终输出仍默认英文（vague 也用英文，不要因为示例是中文就跟着输出中文）。",
+      "queryText": "Running three client contracts at once and my spreadsheet tracking is a complete mess — need a dark-theme kanban board that shows all three projects side by side. Each project should have columns for backlog, in-progress, blocked, and done. The blocked column especially needs to pop visually, like a high-contrast warning color that's obvious at a glance even on a dark background. Tasks should have priority labels (high/med/low) with distinct colors that actually stay readable in dark mode, not that washed-out low-opacity stuff. Would be nice if I can see at a quick scan which project has the most blockers without having to read every card."
+    },
+    "timings": {
+      "personaMs": 15108,
+      "queryMs": 11538,
+      "totalMs": 26646
+    },
+    "error": null
+  },
+  {
+    "mode": {
+      "label": "Mode C — \"Glassmorphism\"（显式指定）",
+      "tag": "Glassmorphism",
+      "color": "#00d4aa",
+      "design_style": "Glassmorphism",
+      "persona_seed": "demo_glass_01",
+      "query_id": "demo_C"
+    },
+    "task": {
+      "scene_id": "scene_028",
+      "l1_scene": "办公效率",
+      "l2_scene_label": "项目看板/任务追踪 ★",
+      "l2_scene_examples": [
+        "看板视图",
+        "进度条",
+        "优先级标签",
+        "里程碑管理"
+      ],
+      "application_type": "项目看板应用",
+      "product_type": "dashboard",
+      "target_complexity": "medium",
+      "constrained": false,
+      "label": "Mode C — \"Glassmorphism\"（显式指定）",
+      "tag": "Glassmorphism",
+      "color": "#00d4aa",
+      "design_style": "Glassmorphism",
+      "persona_seed": "demo_glass_01",
+      "query_id": "demo_C"
+    },
+    "steps": {
+      "personaPrompt": "你是一个 persona 设计助手，需要先基于场景合成一个真实用户画像，再用于生成前端 UI query。\n请参考 persona-driven synthetic data synthesis 的思路：persona 应该是场景驱动的真实人，不是固定职业标签。\n## 场景输入\n一级场景：办公效率\n二级场景标签：项目看板/任务追踪 ★\n该场景常见 app 方向示例（仅用于理解，不要机械照抄进最终 query）：看板视图、进度条、优先级标签、里程碑管理\n当前选定的 L3 application_type：项目看板应用\n设计风格：整体偏玻璃拟态风格，卡片有毛玻璃层次和背景透视感\n最终 query 默认输出英文。\n## 你的任务\n请生成 1 个最适合该场景的 persona，要求：\n1. persona 要体现真实身份、动机、表达方式和信息不完整性。\n2. persona 该场景下真实需要\n3. persona 要解释为什么会提出这个页面或组件需求。\n4. 不要把二级场景括号中的示例整段复制到 persona 文本中。\n## 输出格式\n直接输出以下 JSON，不要加 markdown 代码块围栏（不要 ```json）：\n【重要】所有字符串值内部禁止使用 ASCII 双引号 \" —— 若需引用词语请用中文书名号《》或单引号 '' 代替，否则 JSON 会解析失败。\n{\n  \"persona_id\": \"p_xxx\",\n  \"persona_title\": \"角色标签一句话概括这个人\",\n  \"persona_description\": \"2-4 句描述背景、动机和当前处境\",\n  \"persona_style_hint\": \"这个人会如何表达、会不会给细节、会不会提技术\",\n  \"user_goal\": \"这个人想通过页面/产品完成什么\",\n  \"domain_familiarity\": \"low | medium | high\",\n  \"persona_source\": \"llm_persona_synthesis\"\n}",
+      "personaRaw": "{\n  \"persona_id\": \"p_kanban_glassmorphic_01\",\n  \"persona_title\": \"初创公司运营负责人，同时跟进多个跨部门项目\",\n  \"persona_description\": \"Rachel 在一家 40 人的 SaaS 初创公司担任运营 Lead，日常需要同时协调产品、研发、市场三条线的推进节奏。她的团队最近从 Excel 表格迁移到在线工具，但现有工具界面太'密'，每次打开开会都要花时间找重点。她希望有一个视觉上清爽、层次感强的看板界面，让她在投屏会议时能一眼传达全局进度，不用再解释表格。\",\n  \"persona_style_hint\": \"表达偏直觉型，习惯说'我想要那种感觉像…的界面'，较少提具体技术术语，会用参照物描述期望效果，比如'像 Notion 那种但更好看'；细节需求往往需要追问才能挖出来\",\n  \"user_goal\": \"搭建一个能在团队周会上直接投屏的项目看板页面，要求视觉层次分明、状态一目了然，同时界面本身要'好看'，能体现公司形象而不是运维感\",\n  \"domain_familiarity\": \"medium\",\n  \"persona_source\": \"llm_persona_synthesis\"\n}",
+      "personaSpec": {
+        "persona_id": "p_kanban_glassmorphic_01",
+        "persona_title": "初创公司运营负责人，同时跟进多个跨部门项目",
+        "persona_description": "Rachel 在一家 40 人的 SaaS 初创公司担任运营 Lead，日常需要同时协调产品、研发、市场三条线的推进节奏。她的团队最近从 Excel 表格迁移到在线工具，但现有工具界面太'密'，每次打开开会都要花时间找重点。她希望有一个视觉上清爽、层次感强的看板界面，让她在投屏会议时能一眼传达全局进度，不用再解释表格。",
+        "persona_style_hint": "表达偏直觉型，习惯说'我想要那种感觉像…的界面'，较少提具体技术术语，会用参照物描述期望效果，比如'像 Notion 那种但更好看'；细节需求往往需要追问才能挖出来",
+        "user_goal": "搭建一个能在团队周会上直接投屏的项目看板页面，要求视觉层次分明、状态一目了然，同时界面本身要'好看'，能体现公司形象而不是运维感",
+        "domain_familiarity": "medium",
+        "persona_source": "llm_persona_synthesis"
+      },
+      "queryPrompt": "你现在要扮演给定的 persona，向 AI 编程助手发送一条前端 UI 开发需求。\n输出只能是那条用户消息query指令，不要解释你是谁，不要输出 JSON。\n## Inputs\n### Persona\npersona_title：初创公司运营负责人，同时跟进多个跨部门项目\npersona_description：Rachel 在一家 40 人的 SaaS 初创公司担任运营 Lead，日常需要同时协调产品、研发、市场三条线的推进节奏。她的团队最近从 Excel 表格迁移到在线工具，但现有工具界面太'密'，每次打开开会都要花时间找重点。她希望有一个视觉上清爽、层次感强的看板界面，让她在投屏会议时能一眼传达全局进度，不用再解释表格。\npersona_style_hint：表达偏直觉型，习惯说'我想要那种感觉像…的界面'，较少提具体技术术语，会用参照物描述期望效果，比如'像 Notion 那种但更好看'；细节需求往往需要追问才能挖出来\nuser_goal：搭建一个能在团队周会上直接投屏的项目看板页面，要求视觉层次分明、状态一目了然，同时界面本身要'好看'，能体现公司形象而不是运维感\ndomain_familiarity：medium\n### 场景背景\n一级场景：办公效率\n二级场景标签：项目看板/任务追踪 ★\n当前选定的 L3 application_type：项目看板应用\n常见 app 方向示例（仅参考，按二级场景随机衍生，不要重复）：看板视图、进度条、优先级标签、里程碑管理\n设计风格：整体偏玻璃拟态风格，卡片有毛玻璃层次和背景透视感\nQuery目标复杂度：medium\n## 输出要求\n1. 基于 Inputs 和场景背景以Persona角色的第一人称视角输出一条英文 query\n2. query 语气必须符合 persona，不要泄露、照抄Inputs\n3. Write like a real person typing into a chat box\n4. Allow incomplete thoughts, mid-sentence pivots, casual grammar, filler words\n5. Express constraints implicitly: say \"for my mom's 60th birthday\" instead of \"target audience: elderly female\".\n6. Include situation triggers naturally e.x. \"I need it to help me ...\" etc.\n7. Mix imperatives, statements, and half-finished thoughts. Questions are fine mid-query but do NOT end with a meta-question (\"Can you help me?\", \"Does that make sense?\", \"Can you build something for that?\" etc.) — the context already implies asking for help.\n8. Avoid repetitive structures across queries.\n9. Vary sentence count based on Query目标复杂度 from 10 ~ 250 words，参考下述三种specificity规格：\n- vague: the user barely describes what they want and precisely the app type; the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off.\n- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.\n- complex: multiple explicit requirements about target user, goal, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.\n## Few-shot Examples（仅作为长度与结构参考，不要照抄主题/语言）\n下面三段展示了 vague / medium / complex 三种复杂度下，真实用户写出来的 query 大致长什么样。注意它们的篇幅、信息密度和结构差异：\n<vague>\nexample1: 我想测下运势，给我开发一个玄学风格的运势生成器\nexample2: 给我一个生成复古胶片感拍立得的工具\nexample3: 做个晚餐抽签器，每次大家纠结吃什么的时候转一转。\n</vague>\n<medium>\nAct as an expert kids' game designer and web developer. Help me build a tool that turns simple ideas into detailed prompts for kid-friendly web games. Output the prompt in short, medium, detail versions. Allow options for picking different game type, styles, and complexity\n</medium>\n<complex>\nHelp me build a mobile app called Tag along — a small social app for friend circles, hobby groups, and company crews to plan things together. Vibe: fun, warm, young. Look: round buttons, round avatars, colors that are playful but soft (coral, sunshine yellow, mint, sky blue, lavender, off-white background). Bottom bar with 5 tabs, the middle one is a round red +:\n1. Feed — list of upcoming plans, with a row of interest pills at the top (hiking, coffee, yoga...) so I can filter; show a \"For you\" section that matches my interests.\n2. Wall — an Instagram-style photo wall: big photo + caption + likes + comments. If a post is about a plan, show a small event card under it with a \"Join\" button.\n3. +-when I tap it, pop up two choices: post a photo or create an event.\n4. Ranks — a leaderboard. Rules: hosting an event = 50 pts, posting on the wall = 20 pts, joining an event = 10 pts. Top 3 get medals.\n5. Profile — my avatar, name, a one-word vibe, three little prompts (anthem / perfect Sunday / hot take), my interests, the events I've hosted or am going to, and all the photo posts I've made. Other people's profiles look the same but read-only.\nCore action on every event: two pill buttons — Coming and Not Coming. Tapping one drops my name into that list. No RSVP form. From the event page I can also send a friend a small nudge if they haven't replied, and react with vibes (Hyped / I'm in / Maybe / Saving spot / FOMO). Keep all data on the phone — no third-party login, no payments, no push notifications. Please pre-fill some demo users and events so the app feels alive the moment I open it.\n</complex>\n注意：示例只是用于校准\"长度感 / 结构感 / 信息密度\"，请保持你的 query 与示例话题完全无关，且最终输出仍默认英文（vague 也用英文，不要因为示例是中文就跟着输出中文）。",
+      "queryText": "I need a project status board — like a kanban-style page we can throw up on the screen during our weekly all-hands. The vibe I'm going for is... you know how some dashboards just feel calm and premium, almost like a Notion doc but with more visual polish? That's what I want. Right now our setup is basically a wall of text and everyone's eyes glaze over. I want something where you can see at a glance which projects are on track, which ones are stuck, and what's coming up — without anyone having to explain the color coding for five minutes first.\n\nCards for each project, grouped by status (like In Progress, Blocked, Done, Upcoming), with a frosted glass or layered look — I saw some designs where the cards have that semi-transparent, blurry-background feel and it just looks so much more intentional than plain white boxes. Priority tags, a progress indicator of some kind, owner names or team labels. Nothing too cluttered. The whole page should feel like something you'd actually want to look at on a big screen, not like a spreadsheet someone skinned."
+    },
+    "timings": {
+      "personaMs": 17576,
+      "queryMs": 14030,
+      "totalMs": 31606
+    },
+    "error": null
+  }
+]
