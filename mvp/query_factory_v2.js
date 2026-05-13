@@ -854,7 +854,7 @@ function buildPersonaSynthesisPrompt(task) {
     "请生成 1 个最适合该场景的 persona，要求：",
     "1. persona 要体现真实身份、动机、表达方式和信息不完整性。",
     "2. persona 该场景下真实需要",
-    "3. persona 要解释为什么会提出这个页面或组件需求。",
+    "3. persona 要解释为什么会提出这个工具或功能需求。",
     "4. 不要把二级场景括号中的示例整段复制到 persona 文本中。",
     "",
     "## 输出格式",
@@ -866,7 +866,7 @@ function buildPersonaSynthesisPrompt(task) {
         persona_title: "角色标签一句话概括这个人",
         persona_description: "2-4 句描述背景、动机和当前处境",
         persona_style_hint: "这个人会如何表达、会不会给细节、会不会提技术",
-        user_goal: "这个人想通过页面/产品完成什么",
+        user_goal: "这个人当前面临的任务场景是什么，想解决什么问题或达成什么目标",
         domain_familiarity: "low | medium | high",
         persona_source: "llm_persona_synthesis",
       },
@@ -885,7 +885,7 @@ function buildPersonaSpec(task) {
     persona_title: `${example}相关内容的真实使用者`,
     persona_description: `这是一个正在围绕“${task.l2_scene_label}”整理或表达内容的人。Ta 当前更关注如何把“${example}”相关内容做成更清晰、更顺手的线上体验，而不是先写完整文档。Ta 属于${archetype.title}，会基于自己的处境来提出需求。`,
     persona_style_hint: archetype.styles[task.target_complexity] || archetype.styles.medium,
-    user_goal: `希望把“${example}”相关内容承载成更适合浏览、展示或管理的界面。`,
+    user_goal: `正在处理”${example}”相关的实际任务，希望有个顺手的工具或功能来提升效率。`,
     domain_familiarity: familiarity,
     persona_source: "deterministic_persona_fallback",
   };
@@ -925,7 +925,7 @@ function buildQueryPromptFromPersona(task, persona) {
     "7. Mix imperatives, statements, and half-finished thoughts. Questions are fine mid-query but do NOT end with a meta-question (\"Can you help me?\", \"Does that make sense?\", \"Can you build something for that?\" etc.) — the context already implies asking for help.",
     "8. Avoid repetitive structures across queries.",
     "9. Vary sentence count based on Query目标复杂度 from 10 ~ 250 words，参考下述三种specificity规格：",
-    "- vague: the user barely describes what they want and precisely the app type; the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off.",
+    "- vague: the user barely describes the product specification. the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off.",
     "- medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.",
     "- complex: multiple explicit requirements about target user, goal, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.",
     "",
@@ -1345,7 +1345,7 @@ async function generateQueryRecordWithLlm(task, base, config) {
       {
         role: "user",
         content:
-          "You are a reliable persona synthesis assistant. Return a single JSON object only, with no markdown fences and no extra commentary.\n\n" +
+          "You are a reliable persona synthesis assistant. Return a single JSON object only, with no markdown fences and no extra commentary. Do NOT use ASCII double-quote characters inside string values — use Chinese 《》 or single quotes '' instead.\n\n" +
           personaPromptText,
       },
     ],
@@ -1576,8 +1576,12 @@ async function generateQueryRecords(plan, options = {}) {
     return syncRows;
   }
 
-  if (!["llm-openai", "real-llm", "packy-openai", "llm-anthropic", "claude-code", "anthropic-cc", "packy-cc"].includes(mode)) {
-    throw new Error(`不支持的生成模式：${mode}`);
+  const LLM_MODES = ["llm-openai", "real-llm", "packy-openai", "llm-anthropic", "claude-code", "anthropic-cc", "packy-cc"];
+  const DIRECT_MODES = { "corpus-direct": buildCorpusDirectQueryPrompt, "scene-direct": buildSceneDirectQueryPrompt };
+  const ALL_MODES = [...LLM_MODES, ...Object.keys(DIRECT_MODES), "persona-corpus"];
+
+  if (!ALL_MODES.includes(mode)) {
+    throw new Error(`不支持的生成模式：${mode}。可选：${ALL_MODES.join(", ")}`);
   }
 
   const llmConfig = resolveLlmConfig(options, mode);
@@ -1595,6 +1599,12 @@ async function generateQueryRecords(plan, options = {}) {
       generator_mode: mode,
       llm_task_index: index,
     };
+    if (mode in DIRECT_MODES) {
+      return generateQueryRecordDirect(task, base, llmConfig, DIRECT_MODES[mode]);
+    }
+    if (mode === "persona-corpus") {
+      return generateQueryRecordWithCorpusPersona(task, base, llmConfig);
+    }
     return generateQueryRecordWithLlm(task, base, llmConfig);
   });
 }
@@ -2163,6 +2173,376 @@ async function buildDashboardAssets(dbPath, outputDir) {
   return { queries, summary, summaryPath, dashboardPath };
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// CORPUS-AUGMENTED GENERATION
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Method 1 — corpus-direct
+ * Topic-anchored single-call prompt: no persona intermediary.
+ * The corpus topic IS the specific use-case seed.
+ */
+function buildCorpusDirectQueryPrompt(task) {
+  const complexityInstruction = getComplexityInstruction(task.target_complexity);
+  const styleInstruction = getEnglishStyleInstruction(task.design_style);
+  const hasStyle = task.design_style && styleInstruction !== getEnglishStyleInstruction(null);
+
+  return [
+    "You are a real user at the given context sending a  front end development instruction query for a mobile app.",
+    "Output only the final query text — no labels, no markdown fences, no explanations.",
+    "",
+    "## Specific Topic (your primary anchor)",
+    `"${task.corpus_topic}"`,
+    "",
+    "## Scene Context",
+    `App category: ${task.l1_scene} / ${task.l2_scene_label}`,
+    "",
+    "## Output Requirements",
+    `1. The query must be specifically about the topic: "${task.corpus_topic}"`,
+    "2. Start directly with the substance. NO greetings, NO openers (no 'hi', 'hey', 'hello', 'okay so', 'I want to'-style polite framing). Jump straight into the request.",
+    "3. Natural, slightly informal language is fine — it does not have to be perfectly structured.",
+    "4. Allow specific details, functional goals, and interaction hints that naturally emerge from the topic.",
+    `5. Complexity: ${task.target_complexity} — ${complexityInstruction}`,
+    hasStyle ? `6. Visual style hint: ${styleInstruction}` : null,
+    "",
+    "Output in English only.",
+  ].filter(Boolean).join("\n");
+}
+
+/**
+ * Method 3 — scene-direct (baseline)
+ * Scene-only single-call prompt: no corpus topic, no persona.
+ * Used to measure the value added by corpus anchoring.
+ */
+function buildSceneDirectQueryPrompt(task) {
+  const complexityInstruction = getComplexityInstruction(task.target_complexity);
+  const styleInstruction = getEnglishStyleInstruction(task.design_style);
+  const hasStyle = task.design_style && styleInstruction !== getEnglishStyleInstruction(null);
+
+  return [
+    "You are generating a realistic frontend UI development request for a mini-program or mobile app.",
+    "Output only the final query text — no labels, no markdown fences, no explanations.",
+    "",
+    "## Scene",
+    `Category: ${task.l1_scene}`,
+    `Subcategory: ${task.l2_scene_label}`,
+    task.l2_scene_examples?.length
+      ? `Common app directions in this scene (choose one or invent a related one): ${task.l2_scene_examples.join(", ")}`
+      : null,
+    "",
+    "## Output Requirements",
+    "1. Pick a specific app idea within this scene and write a request focused on that.",
+    "2. Write as a real person typing to an AI coding assistant.",
+    "3. Natural language; mid-sentence pivots and casual grammar are fine.",
+    `4. Complexity: ${task.target_complexity} — ${complexityInstruction}`,
+    hasStyle ? `5. Visual style hint: ${styleInstruction}` : null,
+    "",
+    "Output in English only.",
+  ].filter(Boolean).join("\n");
+}
+
+/**
+ * Method 2 — persona-corpus
+ * Like buildPersonaSynthesisPrompt but corpus_topic is the primary anchor for
+ * the persona's motivation and application focus.
+ */
+function buildCorpusPersonaSynthesisPrompt(task) {
+  return [
+    "你是一个 persona 设计助手，需要先基于场景和具体 topic 合成一个真实用户画像，再用于生成前端 UI query。",
+    "persona 应该是场景驱动的真实人，不是固定职业标签。",
+    "",
+    "## 场景输入",
+    `一级场景：${task.l1_scene}`,
+    `二级场景标签：${task.l2_scene_label}`,
+    task.l2_scene_examples?.length
+      ? `该场景常见 app 方向示例（仅用于理解背景，不要照抄）：${task.l2_scene_examples.join("、")}`
+      : null,
+    "",
+    "## Corpus Topic（核心锚点）",
+    `当前选定的具体 topic：${task.corpus_topic}`,
+    "这个 topic 代表这个场景下一个具体的 UI 功能或使用场景。",
+    "persona 的动机、目标和当前处境应该围绕这个 topic 展开，解释为什么他/她需要这个功能。",
+    "",
+    `设计风格：${getDesignStyleInstruction(task.design_style)}`,
+    "最终 query 默认输出英文。",
+    "",
+    "## 你的任务",
+    "请生成 1 个最适合该 topic 和场景的 persona，要求：",
+    "1. persona 要体现真实身份、动机、表达方式和信息不完整性。",
+    "2. persona 的 user_goal 必须直接与 corpus topic 相关，体现为什么这个人需要构建这个具体功能。",
+    "3. 不要把二级场景括号中的示例整段复制到 persona 文本中。",
+    "4. persona 风格要与目标复杂度匹配：",
+    `   target_complexity = ${task.target_complexity}`,
+    "",
+    "## 输出格式",
+    "直接输出以下 JSON，不要加 markdown 代码块围栏（不要 ```json）：",
+    "【重要】所有字符串值内部禁止使用 ASCII 双引号 \" —— 若需引用词语请用中文书名号《》或单引号 '' 代替，否则 JSON 会解析失败。",
+    JSON.stringify(
+      {
+        persona_id: "p_xxx",
+        persona_title: "角色标签一句话概括这个人",
+        persona_description: "2-4 句描述背景、动机和当前处境（需与 corpus topic 相关）",
+        persona_style_hint: "这个人会如何表达、会不会给细节、会不会提技术",
+        user_goal: `这个人当前为什么需要构建 "${task.corpus_topic}" 相关的 UI`,
+        domain_familiarity: "low | medium | high",
+        persona_source: "llm_persona_corpus_synthesis",
+      },
+      null,
+      2,
+    ),
+  ].filter(Boolean).join("\n");
+}
+
+/**
+ * Run the two-call persona → query pipeline for persona-corpus mode.
+ * Uses buildCorpusPersonaSynthesisPrompt instead of buildPersonaSynthesisPrompt.
+ */
+async function generateQueryRecordWithCorpusPersona(task, base, config) {
+  const caller =
+    config.provider === "anthropic" ? callAnthropicCompatibleMessages : callOpenAiCompatibleChat;
+
+  const personaPromptText = buildCorpusPersonaSynthesisPrompt(task);
+  const personaResult = await caller(
+    [
+      {
+        role: "user",
+        content:
+          "You are a reliable persona synthesis assistant. Return a single JSON object only, with no markdown fences and no extra commentary. Do NOT use ASCII double-quote characters inside string values — use Chinese 《》 or single quotes '' instead.\n\n" +
+          personaPromptText,
+      },
+    ],
+    config,
+    { temperature: 0.8, maxTokens: 4096 },
+  );
+
+  const personaSpec = normalizePersonaSpec(task, personaResult.text);
+  const queryPromptText = buildQueryPromptFromPersona(task, personaSpec);
+  const queryResult = await caller(
+    [
+      {
+        role: "user",
+        content:
+          "You are an instruction generator. Output only the final user query text, with no markdown fences, labels, or explanations.\n\n" +
+          queryPromptText,
+      },
+    ],
+    config,
+    { temperature: 0.95, maxTokens: 4096 },
+  );
+
+  const queryText = normalizeQueryOutput(queryResult.text);
+  if (!queryText) {
+    throw new Error(`LLM 未返回有效 query：${task.query_id}`);
+  }
+
+  return {
+    ...base,
+    corpus_topic: task.corpus_topic || null,
+    corpus_l2_key: task.corpus_l2_key || null,
+    persona_id: personaSpec.persona_id,
+    persona_title: personaSpec.persona_title,
+    persona_source: personaSpec.persona_source,
+    persona_spec: personaSpec,
+    persona_prompt_text: personaPromptText,
+    query_prompt_text: queryPromptText,
+    query_text: queryText,
+    llm_provider: config.provider,
+    llm_base_url: config.baseUrl,
+    llm_model: config.model,
+    llm_usage: {
+      persona: personaResult.raw?.usage || null,
+      query: queryResult.raw?.usage || null,
+    },
+  };
+}
+
+/**
+ * Single-call LLM generation (no persona step).
+ * Used by modes: corpus-direct, scene-direct.
+ */
+async function generateQueryRecordDirect(task, base, config, promptBuilder) {
+  const caller =
+    config.provider === "anthropic" ? callAnthropicCompatibleMessages : callOpenAiCompatibleChat;
+  const promptText = promptBuilder(task);
+  const result = await caller(
+    [
+      {
+        role: "user",
+        content:
+          "You are an instruction generator. Output only the final user query text, with no markdown fences, labels, or explanations.\n\n" +
+          promptText,
+      },
+    ],
+    config,
+    { temperature: 0.95, maxTokens: 2048 },
+  );
+  const queryText = normalizeQueryOutput(result.text);
+  if (!queryText) {
+    throw new Error(`LLM 未返回有效 query：${task.query_id}`);
+  }
+  return {
+    ...base,
+    corpus_topic: task.corpus_topic || null,
+    corpus_l2_key: task.corpus_l2_key || null,
+    query_prompt_text: promptText,
+    query_text: queryText,
+    llm_provider: config.provider,
+    llm_base_url: config.baseUrl,
+    llm_model: config.model,
+    llm_usage: { query: result.raw?.usage || null },
+  };
+}
+
+/**
+ * Find the corpus_data.json key that best matches a scenario's L2 scene.
+ * Tries ordinal-stripped exact match first, then substring containment.
+ */
+function findCorpusKeyForScenario(scenario, corpusData) {
+  const stripOrdinal = (s) => cleanText(s).replace(/^[①②③④⑤⑥⑦⑧⑨⑩]\s*/, "");
+  const labelNorm = stripOrdinal(scenario.l2_scene_label);
+  const rawNorm = stripOrdinal(scenario.l2_scene_raw || "");
+
+  for (const key of Object.keys(corpusData)) {
+    const keyNorm = stripOrdinal(key);
+    if (keyNorm === labelNorm || keyNorm === rawNorm) return key;
+  }
+  for (const key of Object.keys(corpusData)) {
+    const keyNorm = stripOrdinal(key);
+    if (keyNorm.includes(labelNorm) || labelNorm.includes(keyNorm)) return key;
+  }
+  return null;
+}
+
+// Default complexity mix for corpus-direct generation runs.
+// Configurable via buildCorpusPlan options.complexityMix.
+const DEFAULT_CORPUS_COMPLEXITY_MIX = ["medium"];
+
+/**
+ * Allocate `total` query tasks across L2 scenarios proportional to xlsx scene
+ * distribution. xlsx 一级场景 target_count is L1-level (replicated to each L2 row
+ * via merged-cell fill), so we divide by sibling-L2 count to get the true per-L2 share.
+ *
+ * Returns one integer count per scenario (same order as spec.scenarios), summing to `total`.
+ */
+function allocateCorpusCountsByScenePlan(spec, total) {
+  if (!total || total <= 0) return spec.scenarios.map(() => 0);
+
+  // Count L2 siblings per L1 for de-duping merged target_count
+  const siblingsByL1 = {};
+  for (const s of spec.scenarios) {
+    siblingsByL1[s.l1_scene] = (siblingsByL1[s.l1_scene] || 0) + 1;
+  }
+
+  // Per-L2 fractional share (handles fillMergedCells duplication)
+  const shares = spec.scenarios.map((s) => {
+    const siblings = siblingsByL1[s.l1_scene] || 1;
+    return (Number(s.target_count) || 0) / siblings;
+  });
+  const sumShares = shares.reduce((a, b) => a + b, 0) || 1;
+
+  // Floor + remainder distribution by largest fractional part
+  const raw = shares.map((s) => (s / sumShares) * total);
+  const counts = raw.map((c) => Math.floor(c));
+  let allocated = counts.reduce((a, b) => a + b, 0);
+  let remainder = total - allocated;
+  const fracs = raw.map((c, i) => ({ idx: i, frac: c - Math.floor(c) }));
+  fracs.sort((a, b) => b.frac - a.frac);
+  for (let i = 0; i < remainder && i < fracs.length; i += 1) {
+    counts[fracs[i].idx] += 1;
+  }
+  return counts;
+}
+
+/**
+ * Build a corpus-anchored generation plan.
+ * Each task gets a corpus_topic sampled from corpusData[l2Key].topics.
+ * application_type is overridden with corpus_topic for direct anchoring.
+ *
+ * @param {object} spec        - output of parseRequirementsFromWorkbook()
+ * @param {object} corpusData  - require("scripts/corpus_data.json")
+ * @param {object} [options]
+ * @param {number} [options.total]          - total task count; allocates across L2 by xlsx ratio
+ * @param {string[]} [options.complexityMix] - complexity rotation (default ["medium"])
+ * @param {string|string[]} [options.designStyles] - see resolveDesignStyle
+ */
+function buildCorpusPlan(spec, corpusData, options = {}) {
+  const tasks = [];
+  const complexityMix = Array.isArray(options.complexityMix) && options.complexityMix.length
+    ? options.complexityMix
+    : DEFAULT_CORPUS_COMPLEXITY_MIX;
+  const MN = complexityMix.length;
+
+  // Allocate per-L2 counts: prefer options.total (scaled by xlsx ratio).
+  // If not given, fall back to computeSeedCount per scenario (legacy behaviour).
+  const countsByScenario = options.total
+    ? allocateCorpusCountsByScenePlan(spec, Number(options.total))
+    : spec.scenarios.map((s) => computeSeedCount(s.target_count, options));
+
+  spec.scenarios.forEach((scenario, scenarioIndex) => {
+    const l2Key = findCorpusKeyForScenario(scenario, corpusData);
+    const topics = (l2Key ? corpusData[l2Key]?.topics : null) || [];
+
+    const count = countsByScenario[scenarioIndex] || 0;
+    if (count <= 0) return;
+
+    const applicationTypes = rotate(scenario.application_type_candidates, scenarioIndex);
+
+    for (let i = 0; i < count; i += 1) {
+      const groupIndex = Math.floor(i / Math.max(MN, 1));
+      const corpusTopic = topics.length ? topics[i % topics.length] : null;
+      // Prefer corpus topic as application_type anchor; fall back to heuristic
+      const applicationType = corpusTopic || applicationTypes[groupIndex % applicationTypes.length];
+      const productTypes = inferProductTypes(scenario.l1_scene, scenario.l2_scene_label, applicationType);
+      const targetComplexity = complexityMix[i % MN];
+      const productType = productTypes[groupIndex % productTypes.length];
+      const designStyle = resolveDesignStyle(
+        options,
+        groupIndex,
+        scenario.l1_scene,
+        scenario.l2_scene_label,
+        applicationType,
+      );
+
+      tasks.push({
+        query_id: `q_${scenario.id}_${String(i + 1).padStart(3, "0")}`,
+        scene_id: scenario.id,
+        l1_scene: scenario.l1_scene,
+        l2_scene_label: scenario.l2_scene_label,
+        l2_scene_raw: scenario.l2_scene_raw,
+        l2_scene_examples: scenario.l2_scene_examples,
+        application_type: applicationType,
+        product_type: productType,
+        constrained: false,
+        target_complexity: targetComplexity,
+        design_style: designStyle,
+        corpus_topic: corpusTopic,
+        corpus_l2_key: l2Key,
+        persona_seed: hashText(`${scenario.id}:${applicationType}:${groupIndex}`),
+        plan_type: "corpus_seed",
+        target_count_hint: scenario.target_count,
+      });
+    }
+  });
+
+  return {
+    generated_at: new Date().toISOString(),
+    version: "v2",
+    total_tasks: tasks.length,
+    complexity_mix: complexityMix,
+    requested_total: options.total || null,
+    tasks,
+  };
+}
+
+/**
+ * Unified LLM caller — dispatches to Anthropic or OpenAI-compatible based on config.provider.
+ */
+async function callLlm(messages, config, options = {}) {
+  return config.provider === "anthropic"
+    ? callAnthropicCompatibleMessages(messages, config, options)
+    : callOpenAiCompatibleChat(messages, config, options);
+}
+
 module.exports = {
   PRODUCT_TYPE_LABELS,
   DESIGN_STYLES,
@@ -2199,4 +2579,22 @@ module.exports = {
   registerDesignStyle,
   DESIGN_STYLES,
   STYLE_HINTS,
+  // corpus-augmented generation
+  buildCorpusDirectQueryPrompt,
+  buildSceneDirectQueryPrompt,
+  buildCorpusPersonaSynthesisPrompt,
+  buildCorpusPlan,
+  allocateCorpusCountsByScenePlan,
+  findCorpusKeyForScenario,
+  generateQueryRecordWithCorpusPersona,
+  DEFAULT_CORPUS_COMPLEXITY_MIX,
+  // internal helpers exposed for test scripts
+  resolveLlmConfig,
+  callLlm,
+  normalizeQueryOutput,
+  normalizePersonaSpec,
+  scoreQueryRecord,
+  cleanText,
+  mapWithConcurrency,
+  generateQueryRecordWithLlm,
 };

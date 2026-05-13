@@ -7,8 +7,13 @@
 ```
 scripts/
 ├── lib/
-│   └── llm-batch.js                  # 共享核心：transport / 重试 / persona-query pipeline / 并发池 / 统计
-├── run-free.js                       # ★ LLM 自由生成一键流水线（推荐入口）
+│   ├── llm-batch.js                  # 共享核心：transport / 重试 / persona-query pipeline / 并发池 / 统计
+│   └── claude-cli.js                 # ★ 共享：claude CLI 子进程调用 + env override（被 run-corpus / test-corpus-methods 复用）
+├── corpus_data.json                  # ★ 61 个 L2 场景 × ~40 corpus topics（人工评审用）
+├── build_corpus.py / gen_html.py     # corpus 数据与可视化构建
+├── run-corpus.js                     # ★ Corpus-Direct 生产流水线（人工评审认定为最高质量方案）
+├── test-corpus-methods.js            # 4 方法对比评测（控制变量：scene/复杂度/persona 固定）
+├── run-free.js                       # ★ LLM 自由生成一键流水线（persona-driven 链路）
 ├── batch-generate-queries.js         # LLM 批量生成单步 CLI（run-free 内部调用）
 ├── build-free200-plan.js             # ★ 自由生成 plan 构建（200 条，persona-scope 控制）
 ├── build-expand200-plan.js           # 发散拓展 plan 构建（200 条，3 part 结构）
@@ -68,6 +73,71 @@ npm run run:free -- --persona-scope task --no-resume
 ```
 
 产物均落在 `--output-dir` 下，与 `batch-generate-queries.js` 的产物格式完全兼容。
+
+## 一键流水线：`run-corpus.js`（生产推荐）
+
+> Corpus-Direct 链路：直接用 `corpus_data.json` 中的具体 topic 作为 query 锚点。在 4 方法对比评测中**人工评审认定为最高质量方案**——topic 命中率 100%，单 task 仅 1 次 LLM 调用，速度比 persona 链路快 3×。
+
+**工作流（与 `run:free` 并存的独立入口）：**
+
+```
+parseRequirementsFromWorkbook(xlsx)          # 解析 61 个 L2
+       ↓
+buildCorpusPlan(spec, corpus, {              # 按 xlsx L1 配比分配 N 个 task
+  total: 200,                                # 总量（必填默认）
+  complexityMix: ["medium"],                 # 复杂度轮换（默认全 medium）
+})
+       ↓
+buildCorpusDirectQueryPrompt(task)           # 显式锁 corpus_topic，禁招呼语
+       ↓
+claude CLI subprocess（lib/claude-cli.js）   # 走 packy CC 网关，model=claude-sonnet-4-6
+       ↓
+scoreQueryRecord                             # 启发式打分
+       ↓
+data/output/corpus_run/
+   ├── plan.jsonl                            # 完整计划（每 task 含 corpus_topic）
+   ├── queries.jsonl                         # 每条 query + score + word_count + duration
+   └── summary.json                          # 汇总：L1 分布 / 平均质量 / 通过率 / 耗时
+```
+
+**用法：**
+
+```bash
+# 默认：200 task，全 medium，按 xlsx L1 配比分布
+node scripts/run-corpus.js
+
+# 自定义总量
+node scripts/run-corpus.js --total 500
+
+# 自定义复杂度 mix
+node scripts/run-corpus.js --total 200 --complexity-mix "vague,medium,medium"
+
+# 验证 plan 分布（不调 LLM）
+node scripts/run-corpus.js --total 200 --dry-run
+
+# 验证用：只跑前 N 条真实 LLM
+node scripts/run-corpus.js --total 200 --limit 5
+
+# 提高并发
+node scripts/run-corpus.js --total 200 --concurrency 4
+
+# 自定义输出
+node scripts/run-corpus.js --total 200 --out data/output/corpus_v1
+```
+
+**参数：**
+
+| 参数 | 默认 | 说明 |
+|---|---|---|
+| `--total` | `200` | 总 task 数；按 xlsx L1 配比缩放分配 |
+| `--complexity-mix` | `"medium"` | 复杂度轮换（逗号分隔），如 `"vague,medium,medium"` |
+| `--concurrency` | `2` | claude CLI 子进程并发数 |
+| `--dry-run` | 关 | 不调 LLM，验证 plan 分布与脚本结构 |
+| `--limit N` | 关 | 仅执行前 N 个 task |
+| `--input` | 自动 | xlsx 路径（默认从 `data/input/` 自动检测） |
+| `--out` | `data/output/corpus_run` | 输出目录 |
+
+**复用关系：** 共享 `scripts/lib/claude-cli.js` 与 `test-corpus-methods.js`，两脚本对 claude CLI 调用统一一处实现。
 
 ## 自由生成 plan：`build-free200-plan.js`
 

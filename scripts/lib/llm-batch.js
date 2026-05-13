@@ -48,7 +48,7 @@ const TRANSPORT_KINDS = Object.freeze({
 // Persona JSON system prompt + Query system prompt; users can override via env.
 const SYSTEM_PROMPT_PERSONA =
   process.env.SYSTEM_PROMPT_PERSONA ||
-  "You are a persona synthesis assistant. Output strict JSON only, no prose, no code fences. Respect the schema in the user message.";
+  "You are a persona synthesis assistant. Output strict JSON only, no prose, no code fences. Do NOT use ASCII double-quote characters inside string values — use Chinese 《》 or single quotes '' instead. Respect the schema in the user message.";
 const SYSTEM_PROMPT_QUERY =
   process.env.SYSTEM_PROMPT_QUERY ||
   "You are roleplaying as a real end-user typing a UI request to an AI coding assistant. Output only the user's message. No JSON. No meta commentary. English only.";

@@ -38,13 +38,14 @@
 3. persona 需要解释为什么会提出这个前端需求
 4. 不要把 app 示例原样照抄进 persona 文本
 
-只输出 JSON：
+直接输出以下 JSON，不要加 markdown 代码块围栏（不要 ```json）：
+【重要】所有字符串值内部禁止使用 ASCII 双引号 " —— 若需引用词语请用中文书名号《》或单引号 '' 代替，否则 JSON 会解析失败。
 {
   "persona_id": "p_xxx",
   "persona_title": "一句话概括这个人",
   "persona_description": "2-4 句描述背景、目标和当前处境",
   "persona_style_hint": "带入角色的口语风格和情感，这个人会如何表达",
-  "user_goal": "这个人想通过页面/产品完成什么",
+  "user_goal": "这个人当前面临的任务场景是什么，想解决什么问题或达成什么目标",
   "domain_familiarity": "low | medium | high",
   "persona_source": "llm_persona_synthesis"
 }

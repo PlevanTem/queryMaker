@@ -33,7 +33,7 @@ Query目标复杂度：{target_complexity}
 7. Mix imperatives, statements, and half-finished thoughts. Questions are fine mid-query but do NOT end with a meta-question ("Can you help me?", "Does that make sense?", "Can you build something for that?" etc.) — the context already implies asking for help.
 8. Avoid repetitive structures across queries.
 9. Vary sentence count based on Query目标复杂度 from 10 ~ 250 words，参考下述三种specificity规格：
-- vague: the user barely describes what they want and precisely the app type; the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off.
+- vague: the user barely describes the product specification. the system must infer a lot. 1-2 short sentences — no trailing question, no sign-off.
 - medium: some clear intent plus one or two constraints or details. Keep it as one concise paragraph.
 - complex: multiple explicit requirements about target user, goal, functionalities, interactions, states, responsiveness, animation, or other relevant descriptions. It should be much more detailed than medium, ideally a long paragraph or structured requirement block.
 
