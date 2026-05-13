@@ -1,9 +1,10 @@
 # UI QueryMaker Pipeline
 
-> Build realistic, diverse, and structured front-end UI requirement queries from scenario specifications.
+> Real-world-grounded, persona-driven, similarity-validated synthesis of front-end UI queries — built as a reproducible data pipeline.
 
-一个面向前端 UI 需求数据集构建的生成流水线。
-它将需求表格解析为场景，自动生成 `persona-driven query`，完成评分、入库与可视化，形成一条可离线跑通的 MVP 数据生产链路。
+一个面向前端 UI 需求数据集构建的生成流水线。它以一个 **2,440 条真实场景的 corpus** 为锚点，结合 **以人为本的 persona 真实性建模**、**11 种设计风格感知**、**三元组 Jaccard 相似度去重校验**，并通过 **4 种生成方法的对照评测** 验证策略选择。生产默认走 corpus-direct，已在 200 条规模上达成 100% 成功率（详见 `data/output/corpus_run/summary.json`）。
+
+📄 **项目展示页**：[docs/index.html](./docs/index.html) — 双语单文件 showcase，可一键 GitHub Pages 发布。
 
 ## Why This Project
 
@@ -55,16 +56,22 @@ xlsx requirements -> scenario spec -> generation plan -> persona/query generatio
 
 ## Highlights
 
-- `End-to-end pipeline`
-从 Excel 输入一路到 SQLite 和静态 Dashboard，完整闭环
-- `Persona-driven generation`
-不直接拼模板字段，而是先构造 persona，再生成 query
-- `Deterministic fallback`
-即使不接外部 LLM，当前版本也可以离线稳定产出结果
-- `Structured artifacts`
-中间结果全部显式落盘，便于排查、复用和二次分析
+- `Real-world corpus grounding`
+2,440 条 corpus topic 锚定（61 个 L2 场景 × ~40 条 / 12 个 L1 大类），告别模板填空，直接锁定具体产品方向
+- `Persona-driven authenticity`
+5 个 persona 原型 × 3 档复杂度风格，配合 `--persona-scope scene|task` 控制场景内一致性 vs 任务级多样性
+- `Design-style aware`
+11 种注册风格 × 3 种调用模式（默认 / 固定列表 / 启发式自动），主动注入视觉意图，可通过 `registerDesignStyle()` 一行扩展
+- `Similarity-validated diversity`
+三元组 Jaccard 相似度做同场景同辈比对（阈值 0.55 / 0.30 两档），把"多样性"从主观目标变成可量化分数
+- `4-method evaluation framework`
+`test-corpus-methods.js` 跑同场景 × 同 rubric 的 scene-direct / corpus-direct / persona-only / persona+corpus 对照，trade-off 公开透明
+- `Production-grade execution`
+200 条规模成功率 100% · 平均 84 词 / 条 · 单条 ~3.3s · 全链路中间产物落盘，可断点续跑
+- `Deterministic offline fallback`
+零 LLM 调用也能跑通：种子化 persona 选择 + 模板兜底，适合 CI、MVP demo 和 API 不可用场景
 - `MVP + research blueprint`
-一边有当前可运行实现，一边保留完整研究版方法论与提示词资产
+一边是当前可运行实现，一边保留完整研究版方法论与 p1-p5 提示词资产
 
 ## Quick Start
 
@@ -197,7 +204,33 @@ npm run run:free -- \
 
 ### 8. Corpus-Direct 流水线（生产推荐）
 
-`run-corpus.js` 是基于 corpus topic 锚定的生产链路。在 4 种方法对比评测中，人工评审认定 **corpus-direct 为最高质量方案** —— 它直接用 `scripts/corpus_data.json` 中 61 个 L2 场景下的具体 topic 作为锚点（每个 L2 含 ~40 个 topic），生成的 query 紧扣 topic 主旨、命中率 100%（vs `scene-direct` / `persona-only` 容易飘到 L2 类目里的其他子话题）。
+`run-corpus.js` 是基于 corpus topic 锚定的生产链路，也是当前 **首选生产入口**。它直接用 `scripts/corpus_data.json` 中 61 个 L2 场景下的具体 topic 作为锚点（共 ~2,440 条 topic），每个 task 锁定一个 corpus topic 单次 LLM 调用，生成的 query 紧扣 topic 主旨、命中率 ≈ 100%（vs `scene-direct` / `persona-only` 容易飘到 L2 类目里的其他子话题）。
+
+**最近一次 200 条生产运行（[summary.json](./data/output/corpus_run/summary.json)）：**
+
+| 指标 | 数值 |
+|---|---|
+| 计划任务数 | 200 |
+| 实际执行 | 200 |
+| 成功 / 失败 | 200 / 0 |
+| 平均词数 / 条 | 84 |
+| 单条平均耗时 | ~3.3s |
+| 全量耗时 | ~11 分钟 |
+| 模型 | `claude-sonnet-4-6`（claude CLI 子进程） |
+| L1 覆盖 | 12 个分类，按 xlsx 配比分布 |
+
+**4 方法对照评测（[test-corpus-methods.js](./scripts/test-corpus-methods.js)）：**
+
+仓库 ship 了一套受控对照，在同样场景上跑 4 种生成策略、用同样 rubric 打分，trade-off 写在明面：
+
+| 方法 | Topic 贴合 | 口吻真实度 | LLM 调用 | 适用 |
+|---|---|---|---|---|
+| `scene-direct`（基线）   | ~60-80% | 低 | 1× | 仅作对照基线，容易跑题 |
+| `corpus-direct`（生产）  | ~100%   | 中 | 1× | **生产默认，性价比最高** |
+| `persona-only`           | 低      | 高 | 1× | 口吻真实但话题易飘 |
+| `persona+corpus`         | ~100%   | 高 | 2× | 理论最优，但成本和延迟翻倍 |
+
+打分 rubric：`Authenticity × 0.4 + Specificity × 0.4 + Diversity × 0.2`，及格线 ≥ 2.8 / 5.0；Diversity 维度由三元组 Jaccard 同场景同辈相似度驱动（< 0.55 → +1，< 0.30 → +2）。
 
 **工作流（与 `run-mvp.js` 并存的入口）：**
 
@@ -264,30 +297,30 @@ node scripts/run-corpus.js --total 200 --concurrency 4 --out data/output/corpus_
 
 ## Pipeline Overview
 
-仓库目前并存两条生产链路：
+仓库目前并存两条生产链路。**Corpus-Direct 是当前推荐的生产入口**（详见 §8），Persona-Driven 链路保留作对照与历史兼容。
 
 ```mermaid
 flowchart TD
     A["Excel requirements"] --> B["Parse requirements"]
     B --> C["Scenario spec"]
 
-    subgraph PersonaLine["Persona-Driven Line (legacy / run:free / run:mvp)"]
+    subgraph CorpusLine["★ Corpus-Direct Line (run-corpus) — Production"]
+      C --> D2["buildCorpusPlan<br/>(corpus_data.json + xlsx ratio)"]
+      D2 --> E2["Plan with corpus_topic"]
+      E2 --> G2["buildCorpusDirectQueryPrompt<br/>(1× LLM call)"]
+    end
+
+    subgraph PersonaLine["Persona-Driven Line (run:free / run:mvp) — Reference"]
       C --> D1["Seed / backfill planning"]
       D1 --> E1["Generation plan"]
       E1 --> F1["Persona synthesis (LLM)"]
       F1 --> G1["Query from persona (LLM)"]
     end
 
-    subgraph CorpusLine["Corpus-Direct Line (run-corpus)"]
-      C --> D2["buildCorpusPlan<br/>(corpus_data.json + xlsx ratio)"]
-      D2 --> E2["Plan with corpus_topic"]
-      E2 --> G2["buildCorpusDirectQueryPrompt<br/>(1× LLM call)"]
-    end
-
-    G1 --> H["Heuristic scoring"]
+    G1 --> H["Heuristic scoring + Jaccard dedup"]
     G2 --> H
     H --> I["SQLite import / JSONL artifacts"]
-    I --> J["Dashboard + summary"]
+    I --> J["Dashboard + summary + docs/index.html showcase"]
 ```
 
 
@@ -371,6 +404,8 @@ flowchart LR
 ├── README.md
 ├── MVP_QUERY_FACTORY.md
 ├── package.json
+├── docs/
+│   └── index.html                      # ★ 双语项目展示页（GitHub Pages 就绪）
 ├── mvp/
 │   ├── query_factory.js
 │   └── query_factory_v2.js             # 核心：pipeline / 评分 / design_style 系统
@@ -486,11 +521,15 @@ node scripts/export-queries-csv.js \
 | `data/intermediate/scenario_spec.v2.json`    | 清洗后的场景规范          |
 | `data/intermediate/generation_plan.v2.jsonl` | 首轮生成任务列表          |
 | `data/intermediate/backfill_plan.v2.jsonl`   | 覆盖补齐任务列表          |
-| `data/output/raw_queries.v2.jsonl`           | 生成后的原始 query      |
-| `data/output/scored_queries.v2.jsonl`        | 带质量分和复杂度标签的 query |
+| `data/output/corpus_run/plan.jsonl`          | ★ Corpus-direct 计划（topic 锚定） |
+| `data/output/corpus_run/queries.jsonl`       | ★ Corpus-direct 生成结果（含双语 query_text / query_text_zh） |
+| `data/output/corpus_run/summary.json`        | ★ Corpus-direct 运行汇总（L1 分布、成功率等） |
+| `data/output/raw_queries.v2.jsonl`           | Persona 链路：原始 query   |
+| `data/output/scored_queries.v2.jsonl`        | Persona 链路：带质量分的 query |
 | `data/db/queries_v2.sqlite`                  | 最终分析数据库           |
 | `data/reports_v2/dashboard.html`             | 静态可视化面板           |
 | `data/reports_v2/summary.json`               | 聚合统计摘要            |
+| `docs/index.html`                            | ★ 双语项目展示页（GitHub Pages 就绪） |
 
 
 ## How Generation Works
@@ -634,11 +673,17 @@ registerDesignStyle(
 
 ## Where To Start
 
-### 如果你想先跑起来
+### 如果你想先跑起来（推荐：corpus-direct）
 
-1. 看 `README.md`
-2. 跑 `npm run run:mvp`
-3. 打开 `data/reports_v2/dashboard.html`
+1. 看 `README.md` §8
+2. 跑 `node scripts/run-corpus.js --total 50 --dry-run` 验证 plan
+3. 跑 `node scripts/run-corpus.js --total 50` 真实生成 50 条
+4. 查看 `data/output/corpus_run/queries.jsonl` 和 `summary.json`
+
+### 如果你想跑离线 persona-fallback 链路
+
+1. 跑 `npm run run:mvp`
+2. 打开 `data/reports_v2/dashboard.html`
 
 ### 如果你想先读代码
 
@@ -664,6 +709,9 @@ registerDesignStyle(
 ### Implemented
 
 - Excel -> scenario spec 解析链路
+- **★ Corpus-Direct 生产流水线**：`run-corpus.js` 基于 2,440 条 corpus topic 锚定，1× LLM 调用 / task，200 条规模 100% 成功率
+- **★ 4 方法对照评测框架**：`test-corpus-methods.js` 在同场景上跑 scene-direct / corpus-direct / persona-only / persona+corpus，trade-off 用同 rubric 量化
+- **★ 双语项目展示页**：`docs/index.html` — 单文件 / 零外部依赖 / EN ↔ 中文 toggle，GitHub Pages 就绪
 - seed plan 与 backfill plan 生成（groupIndex 分组，同组 3 条任务共享 persona）
 - persona-driven fallback query 生成
 - LLM 两步生成：`batch-generate-queries.js` 支持 `claude-cli / openai / anthropic` 三种 transport
@@ -672,6 +720,7 @@ registerDesignStyle(
   - `vague`：词数 5–40、含 app 类型词、无尾问句、无 sign-off
   - `medium / complex`：UI 组件词数、句子结构、推断复杂度对齐
   - 评分公式：`Authenticity × 0.4 + Specificity × 0.4 + Diversity × 0.2`，通过阈值 ≥ 2.8
+  - **Diversity 由三元组 Jaccard 同场景同辈相似度驱动**（< 0.55 → +1，< 0.30 → +2）
 - **Design Style 系统**：`design_style` 默认 `null`，LLM 自由发挥；支持 `--design-styles` opt-in 注入；`registerDesignStyle()` 动态扩展
 - **发散性拓展 plan**：`build-expand200-plan.js` 产出 200 条任务（3 part 结构，覆盖 19 个新领域）
 - **可复用质量分析报告 skill**：`generate-analysis-report.js` 从任意 scored JSONL 生成自包含 HTML（图表 + 交互筛选器 + 评分细则 + **persona 卡片展开**）
@@ -703,4 +752,13 @@ registerDesignStyle(
 
 ## In One Sentence
 
-这是一个把“前端 UI 需求数据生成”从零散 prompt 工程，推进到 **可运行、可验证、可分析的 AI 数据流水线** 的仓库。
+这是一个把”前端 UI 需求数据生成”从零散 prompt 工程，推进到 **可运行、可验证、可分析的 AI 数据流水线** 的仓库——以真实 corpus 为锚、以 persona 为人本表达、以 4 方法对照评测为科学背书。
+
+## GitHub Pages
+
+[docs/index.html](./docs/index.html) 是双语项目展示页（EN / 中文 toggle，默认中文），可直接发布到 GitHub Pages：
+
+1. 仓库 Settings → Pages
+2. Source: `Deploy from a branch`
+3. Branch: `main`，Folder: `/docs`
+4. 几分钟后访问 `https://plevantem.github.io/queryMaker/`
