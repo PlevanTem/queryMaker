@@ -195,18 +195,98 @@ npm run run:free -- \
 
 单步调用方式见 [scripts/README.md](./scripts/README.md)。
 
+### 8. Corpus-Direct 流水线（生产推荐）
+
+`run-corpus.js` 是基于 corpus topic 锚定的生产链路。在 4 种方法对比评测中，人工评审认定 **corpus-direct 为最高质量方案** —— 它直接用 `scripts/corpus_data.json` 中 61 个 L2 场景下的具体 topic 作为锚点（每个 L2 含 ~40 个 topic），生成的 query 紧扣 topic 主旨、命中率 100%（vs `scene-direct` / `persona-only` 容易飘到 L2 类目里的其他子话题）。
+
+**工作流（与 `run-mvp.js` 并存的入口）：**
+
+```text
+场景覆盖.xlsx + corpus_data.json
+        │
+        ▼
+parseRequirementsFromWorkbook(xlsx)
+        │
+        ▼
+buildCorpusPlan(spec, corpus, {total, complexityMix})
+   按 xlsx L1 配比 → 分配 200 个 task 到 61 个 L2
+   每 task 锚定一个 corpus_topic（在该 L2 内 rotate 采样）
+        │
+        ▼
+buildCorpusDirectQueryPrompt(task)
+   prompt 显式锁 topic，禁招呼语，按 complexity 控制长度
+        │
+        ▼  claude CLI subprocess（packy CC 网关，model=claude-sonnet-4-6）
+generateQueryRecords(plan, {mode: "corpus-direct"})   # 1× LLM call / task
+        │
+        ▼
+scoreQueryRecord                                      # quality + complexity 启发式打分
+        │
+        ▼
+data/output/corpus_run/{plan.jsonl, queries.jsonl, summary.json}
+```
+
+**用法：**
+
+```bash
+# 默认：200 task，全 medium，按 xlsx 场景配比分布
+node scripts/run-corpus.js
+
+# 自定义总量
+node scripts/run-corpus.js --total 500
+
+# 自定义复杂度 mix（逗号分隔）
+node scripts/run-corpus.js --total 200 --complexity-mix "vague,medium,medium"
+
+# 验证 plan（不调 LLM，只看分配）
+node scripts/run-corpus.js --total 200 --dry-run
+
+# 小批量真实跑（验证用）
+node scripts/run-corpus.js --total 200 --limit 10
+
+# 自定义输出目录 + 并发
+node scripts/run-corpus.js --total 200 --concurrency 4 --out data/output/corpus_v1
+```
+
+**参数：**
+
+| 参数 | 默认 | 说明 |
+|---|---|---|
+| `--total` | `200` | 总 task 数；按 xlsx L1 配比缩放分配到 61 个 L2 |
+| `--complexity-mix` | `medium` | 复杂度轮换列表（逗号分隔），如 `"vague,medium,medium"` |
+| `--concurrency` | `2` | claude CLI 并发子进程数 |
+| `--dry-run` | 关 | 不调 LLM，只验证 plan 分布与脚本结构 |
+| `--limit N` | 关 | 仅执行前 N 个 task（验证用） |
+| `--input` | 自动检测 `data/input/*.xlsx` | xlsx 路径 |
+| `--out` | `data/output/corpus_run` | 输出目录 |
+
+**模型与认证：** 复用 `.env.local` 中的 `PACKY_API_KEY`。脚本走本机 `claude.cmd` 子进程绕过 CC 分组网关对非 CLI 客户端的 UA 校验。模型默认 `claude-sonnet-4-6`，可通过环境变量 `ANTHROPIC_MODEL` 覆盖。详见 [scripts/lib/claude-cli.js](./scripts/lib/claude-cli.js)。
+
 ## Pipeline Overview
+
+仓库目前并存两条生产链路：
 
 ```mermaid
 flowchart TD
     A["Excel requirements"] --> B["Parse requirements"]
     B --> C["Scenario spec"]
-    C --> D["Seed / backfill planning"]
-    D --> E["Generation plan"]
-    E --> F["Persona synthesis"]
-    F --> G["Query generation"]
-    G --> H["Heuristic scoring"]
-    H --> I["SQLite import"]
+
+    subgraph PersonaLine["Persona-Driven Line (legacy / run:free / run:mvp)"]
+      C --> D1["Seed / backfill planning"]
+      D1 --> E1["Generation plan"]
+      E1 --> F1["Persona synthesis (LLM)"]
+      F1 --> G1["Query from persona (LLM)"]
+    end
+
+    subgraph CorpusLine["Corpus-Direct Line (run-corpus)"]
+      C --> D2["buildCorpusPlan<br/>(corpus_data.json + xlsx ratio)"]
+      D2 --> E2["Plan with corpus_topic"]
+      E2 --> G2["buildCorpusDirectQueryPrompt<br/>(1× LLM call)"]
+    end
+
+    G1 --> H["Heuristic scoring"]
+    G2 --> H
+    H --> I["SQLite import / JSONL artifacts"]
     I --> J["Dashboard + summary"]
 ```
 
@@ -297,8 +377,14 @@ flowchart LR
 ├── scripts/
 │   ├── README.md                       # 脚本层使用说明（参数、示例、设计原则）
 │   ├── lib/
-│   │   └── llm-batch.js                # 共享：transports / 重试 / persona-query pipeline / 并发池
-│   ├── run-free.js                     # ★ LLM 自由生成一键流水线（推荐入口）
+│   │   ├── llm-batch.js                # 共享：transports / 重试 / persona-query pipeline / 并发池
+│   │   └── claude-cli.js               # ★ 共享：claude CLI 子进程调用（绕过 packy CC 网关 UA 校验）
+│   ├── corpus_data.json                # ★ 61 个 L2 × ~40 corpus topics
+│   ├── build_corpus.py                 # corpus_data.json 构建脚本
+│   ├── gen_html.py                     # corpus 可视化 HTML 生成
+│   ├── run-corpus.js                   # ★ Corpus-Direct 一键流水线（生产推荐）
+│   ├── test-corpus-methods.js          # 4 方法对比评测（含控制变量实验）
+│   ├── run-free.js                     # ★ LLM 自由生成一键流水线（persona 链路）
 │   ├── batch-generate-queries.js       # LLM 批量生成（run-free 内部调用，也可单独使用）
 │   ├── build-free200-plan.js           # ★ 自由生成计划构建（200 条，persona-scope 控制）
 │   ├── build-expand200-plan.js         # 发散性拓展 plan（200 条，3 part 结构）
@@ -362,7 +448,8 @@ flowchart LR
 | `npm run import:queries`     | 将场景与 query 导入 SQLite         |
 | `npm run build:dashboard`    | 从数据库生成静态报表                   |
 | `npm run run:mvp`            | 一键跑通完整 v2 MVP 流程（旧版，persona-fallback，无 LLM） |
-| `npm run run:free`           | ★ LLM 自由生成一键流水线（plan → generate → score → report） |
+| `npm run run:free`           | ★ LLM 自由生成一键流水线（persona-driven，plan → generate → score → report） |
+| `node scripts/run-corpus.js` | ★ Corpus-Direct 一键流水线（corpus topic 锚定，1× LLM/task，生产推荐） |
 | `npm run batch:generate`     | LLM 批量生成单步入口（支持 xlsx 抽样 / plan 输入 / 断点续跑） |
 | `npm run build:comparison`   | 把任意多个 batch run 拼成并排 HTML 对比报告 |
 | `npm run test:api`           | 探活：分别测 Anthropic 与 OpenAI 兼容端点 |

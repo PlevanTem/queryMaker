@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corpus Method Comparison</title>
+<style>
+  :root{--bg:#0f172a;--surface:#1e293b;--surface2:#293548;--border:#334155;--text:#f1f5f9;--muted:#94a3b8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;line-height:1.6}
+  h1{font-size:22px;font-weight:700;padding:28px 32px 4px}
+  .subtitle{color:var(--muted);padding:0 32px 24px;font-size:13px}
+  .dry-run-banner{background:#7c3aed;color:#fff;padding:6px 32px;font-size:12px;font-weight:600}
+  /* summary table */
+  .summary-wrap{padding:0 32px 32px}
+  .summary-title{font-size:15px;font-weight:600;margin-bottom:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  table{width:100%;border-collapse:collapse;background:var(--surface);border-radius:10px;overflow:hidden}
+  th{background:var(--surface2);padding:10px 14px;text-align:left;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  td{padding:10px 14px;border-top:1px solid var(--border);vertical-align:middle}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:7px;vertical-align:middle}
+  .bar-wrap{display:inline-block;width:80px;height:7px;background:var(--border);border-radius:4px;margin-right:6px;vertical-align:middle}
+  .bar-fill{height:100%;border-radius:4px}
+  /* scene sections */
+  .scene-section{padding:0 32px 36px}
+  .scene-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .scene-title{font-size:16px;font-weight:700}
+  .tag{padding:2px 10px;border-radius:12px;font-size:11px;font-weight:600}
+  .tag-complexity{background:#1e3a5f;color:#7dd3fc}
+  .tag-corpus{background:#1e2d1e;color:#86efac;max-width:360px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .method-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:1100px){.method-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.method-grid{grid-template-columns:1fr}}
+  .method-card{background:var(--surface);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:10px}
+  .method-header{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+  .method-badge{padding:2px 8px;border-radius:12px;font-size:11px;color:#fff;font-weight:600;white-space:nowrap}
+  .method-name{font-weight:600;font-size:13px}
+  .llm-calls{margin-left:auto;font-size:11px;color:var(--muted)}
+  .method-desc{font-size:12px;color:var(--muted);border-left:2px solid var(--border);padding-left:8px}
+  .anchor-persona{background:#0c2541;border:1px solid #1e40af;border-radius:10px;padding:14px 18px;margin-bottom:16px;font-size:13px}
+  .anchor-label{font-size:11px;color:#93c5fd;text-transform:uppercase;letter-spacing:.07em;font-weight:700;margin-bottom:8px}
+  .anchor-title{font-weight:700;color:#dbeafe;margin-bottom:6px;font-size:14px}
+  .anchor-desc{color:#cbd5e1;margin-bottom:8px;line-height:1.6}
+  .anchor-row{font-size:12px;color:#94a3b8;margin-top:3px}
+  .kv-key{color:#7dd3fc;font-weight:600;margin-right:6px}
+  .query-box{background:#0d1b2a;border-radius:7px;padding:10px 12px;font-size:13px;line-height:1.65;white-space:pre-wrap;word-break:break-word}
+  .error-box{background:#3f0d0d;color:#fca5a5;border-radius:7px;padding:10px;font-size:12px}
+  .cell-agg{display:flex;align-items:center;gap:6px;background:#0d1b2a;border-radius:7px;padding:8px 12px;border-left:3px solid #f59e0b}
+  .sample-block{display:flex;flex-direction:column;gap:6px;border-top:1px dashed var(--border);padding-top:8px}
+  .sample-head{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .sample-idx{font-size:11px;font-weight:700;color:var(--muted);background:var(--surface2);padding:1px 7px;border-radius:9px}
+  .metric{font-size:11px;font-weight:600}
+  .badge-inline{padding:2px 8px;border-radius:10px;font-size:11px;color:#fff;font-weight:600}
+  .prompt-details{font-size:11px}
+  .prompt-details summary{color:var(--muted);cursor:pointer;padding:4px 0}
+  .prompt-details summary:hover{color:var(--text)}
+  .prompt-pre{background:#0d1117;border-radius:6px;padding:10px;white-space:pre-wrap;word-break:break-word;color:#94a3b8;max-height:300px;overflow-y:auto;margin-top:6px;font-size:11px}
+  .methodology-box{background:var(--surface);border-left:3px solid #22c55e;border-radius:6px;padding:12px 16px;margin:0 32px 24px;font-size:13px;line-height:1.7}
+  .methodology-box b{color:#86efac}
+  hr{border:none;border-top:1px solid var(--border);margin:0 32px 32px}
+</style>
+</head>
+<body>
+<div class="dry-run-banner">⚠ DRY-RUN 模式 — 以下 query 为模板填充，非真实 LLM 输出</div>
+<h1>Corpus Method Comparison · 控制变量实验</h1>
+<p class="subtitle">4 种 query 生成方法 × 3 个场景 × N=1 次采样 · 生成时间：2026/5/12 20:44:59</p>
+
+<div class="methodology-box">
+  <b>实验设计：</b>
+  <span style="color:var(--muted)">控制变量 — </span>
+  <span>场景/L1/L2/复杂度/corpus topic 固定 ✓</span>
+  <span> · </span>
+  <span><b>persona 预生成1次/场景，所有 persona 方法共用</b></span>
+  <span> · </span>
+  <span>每方法跑 N=1 次采样取均值±标准差（消除 LLM 随机性）</span>
+  <br>
+  <b>独立变量：</b>
+  <span style="color:var(--muted)">query 生成 prompt 是否包含 corpus topic、是否包含 persona</span>
+  <span> · </span>
+  <b>所有方法均为 1 次 LLM 调用</b>（persona 不计入方法对比）
+</div>
+
+<div class="summary-wrap">
+  <div class="summary-title">方法汇总（跨场景 × 跨样本）</div>
+  <table>
+    <thead><tr><th>方法</th><th>Query Prompt 输入</th><th>含 Topic</th><th>含 Persona</th><th>质量分 (mean±std)</th><th>词数 (mean±std)</th><th>通过率</th><th>耗时</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="dot" style="background:#6b7280"></span><b>Scene-Direct</b></td>
+        <td><span class="badge-inline" style="background:#6b7280">scene</span></td>
+        <td>—</td>
+        <td>—</td>
+        <td>
+          <div class="bar-wrap"><div class="bar-fill" style="width:45%;background:#ef4444"></div></div>
+          <span style="color:#ef4444;font-weight:700">2.27</span>
+          <span style="color:var(--muted);font-size:11px"> ±0.94</span>
+        </td>
+        <td>7 <span style="color:var(--muted);font-size:11px">±1</span></td>
+        <td>1/3</td>
+        <td>1ms</td>
+      </tr>
+      <tr>
+        <td><span class="dot" style="background:#6366f1"></span><b>Corpus-Direct</b></td>
+        <td><span class="badge-inline" style="background:#6366f1">scene + topic</span></td>
+        <td>✅</td>
+        <td>—</td>
+        <td>
+          <div class="bar-wrap"><div class="bar-fill" style="width:51%;background:#ef4444"></div></div>
+          <span style="color:#ef4444;font-weight:700">2.53</span>
+          <span style="color:var(--muted);font-size:11px"> ±0.82</span>
+        </td>
+        <td>9 <span style="color:var(--muted);font-size:11px">±2</span></td>
+        <td>1/3</td>
+        <td>1ms</td>
+      </tr>
+      <tr>
+        <td><span class="dot" style="background:#f59e0b"></span><b>Persona-Only</b></td>
+        <td><span class="badge-inline" style="background:#f59e0b">scene + persona</span></td>
+        <td>—</td>
+        <td>✅</td>
+        <td>
+          <div class="bar-wrap"><div class="bar-fill" style="width:59%;background:#f59e0b"></div></div>
+          <span style="color:#f59e0b;font-weight:700">2.93</span>
+          <span style="color:var(--muted);font-size:11px"> ±0.82</span>
+        </td>
+        <td>16 <span style="color:var(--muted);font-size:11px">±2</span></td>
+        <td>2/3</td>
+        <td>1ms</td>
+      </tr>
+      <tr>
+        <td><span class="dot" style="background:#0ea5e9"></span><b>Persona + Corpus</b></td>
+        <td><span class="badge-inline" style="background:#0ea5e9">scene + topic + persona</span></td>
+        <td>✅</td>
+        <td>✅</td>
+        <td>
+          <div class="bar-wrap"><div class="bar-fill" style="width:61%;background:#f59e0b"></div></div>
+          <span style="color:#f59e0b;font-weight:700">3.07</span>
+          <span style="color:var(--muted);font-size:11px"> ±0.82</span>
+        </td>
+        <td>19 <span style="color:var(--muted);font-size:11px">±3</span></td>
+        <td>2/3</td>
+        <td>1ms</td>
+      </tr></tbody>
+  </table>
+</div>
+
+<hr>
+
+      <section class="scene-section">
+        <div class="scene-header">
+          <div class="scene-title">深度研究展示 × 个人生活类</div>
+          <div class="scene-meta">
+            <span class="tag tag-complexity">medium</span>
+            <span class="tag tag-corpus">🗂 Travel Memory Scrapbook</span>
+          </div>
+        </div>
+        <div class="anchor-persona">
+          <div class="anchor-label">🧑 共享 Anchor Persona（persona-only & persona-corpus 共用）</div>
+          <div class="anchor-title">[DRY-RUN] User for Travel Memory Scrapbook</div>
+          <div class="anchor-desc">[DRY-RUN persona] Someone interested in travel memory scrapbook.</div>
+          <div class="anchor-row"><span class="kv-key">Goal:</span> Build Travel Memory Scrapbook UI</div>
+          <div class="anchor-row"><span class="kv-key">Style:</span> casual</div>
+          <div class="anchor-row"><span class="kv-key">Familiarity:</span> medium</div>
+        </div>
+        <div class="method-grid">
+        <div class="method-card" style="border-top:3px solid #6b7280">
+          <div class="method-header">
+            <span class="method-badge" style="background:#6b7280">scene</span>
+            <span class="method-name">Scene-Direct</span>
+          </div>
+          <div class="method-desc">基线：query prompt 只含场景</div>
+          
+        <div class="cell-agg">
+          <span style="color:#ef4444;font-weight:700;font-size:14px">★ 1.60</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 6±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#ef4444">★ 1.6</span>
+            <span class="metric">📝 6w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] Something for the 个人生活类 category.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — scene-direct)</pre>
+          </details>
+        </div>
+        <div class="method-card" style="border-top:3px solid #6366f1">
+          <div class="method-header">
+            <span class="method-badge" style="background:#6366f1">scene + topic</span>
+            <span class="method-name">Corpus-Direct</span>
+          </div>
+          <div class="method-desc">query prompt = 场景 + corpus topic</div>
+          
+        <div class="cell-agg">
+          <span style="color:#ef4444;font-weight:700;font-size:14px">★ 1.60</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 7±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#ef4444">★ 1.6</span>
+            <span class="metric">📝 7w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] Build a Travel Memory Scrapbook UI.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — corpus-direct)</pre>
+          </details>
+        </div>
+        <div class="method-card" style="border-top:3px solid #f59e0b">
+          <div class="method-header">
+            <span class="method-badge" style="background:#f59e0b">scene + persona</span>
+            <span class="method-name">Persona-Only</span>
+          </div>
+          <div class="method-desc">query prompt = 场景 + 共享 persona（不含 topic）</div>
+          
+        <div class="cell-agg">
+          <span style="color:#ef4444;font-weight:700;font-size:14px">★ 2.00</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 13±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#ef4444">★ 2</span>
+            <span class="metric">📝 13w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] As [DRY-RUN] User for Travel Memory Scrapbook — need a 个人生活类 app.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — persona-only)</pre>
+          </details>
+        </div>
+        <div class="method-card" style="border-top:3px solid #0ea5e9">
+          <div class="method-header">
+            <span class="method-badge" style="background:#0ea5e9">scene + topic + persona</span>
+            <span class="method-name">Persona + Corpus</span>
+          </div>
+          <div class="method-desc">query prompt = 场景 + corpus topic + 共享 persona</div>
+          
+        <div class="cell-agg">
+          <span style="color:#ef4444;font-weight:700;font-size:14px">★ 2.00</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 14±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#ef4444">★ 2</span>
+            <span class="metric">📝 14w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] As [DRY-RUN] User for Travel Memory Scrapbook — need Travel Memory Scrapbook UI.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — persona-corpus)</pre>
+          </details>
+        </div></div>
+      </section>
+      <section class="scene-section">
+        <div class="scene-header">
+          <div class="scene-title">交互方式 × 新建与创建</div>
+          <div class="scene-meta">
+            <span class="tag tag-complexity">complex</span>
+            <span class="tag tag-corpus">🗂 Recipe step-by-step creation wizard with ingredient input</span>
+          </div>
+        </div>
+        <div class="anchor-persona">
+          <div class="anchor-label">🧑 共享 Anchor Persona（persona-only & persona-corpus 共用）</div>
+          <div class="anchor-title">[DRY-RUN] User for Recipe step-by-step creation wizard with ingredient input</div>
+          <div class="anchor-desc">[DRY-RUN persona] Someone interested in recipe step-by-step creation wizard with ingredient input.</div>
+          <div class="anchor-row"><span class="kv-key">Goal:</span> Build Recipe step-by-step creation wizard with ingredient input UI</div>
+          <div class="anchor-row"><span class="kv-key">Style:</span> casual</div>
+          <div class="anchor-row"><span class="kv-key">Familiarity:</span> medium</div>
+        </div>
+        <div class="method-grid">
+        <div class="method-card" style="border-top:3px solid #6b7280">
+          <div class="method-header">
+            <span class="method-badge" style="background:#6b7280">scene</span>
+            <span class="method-name">Scene-Direct</span>
+          </div>
+          <div class="method-desc">基线：query prompt 只含场景</div>
+          
+        <div class="cell-agg">
+          <span style="color:#ef4444;font-weight:700;font-size:14px">★ 1.60</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 8±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#ef4444">★ 1.6</span>
+            <span class="metric">📝 8w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] Something for the Adding &amp; Creating category.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — scene-direct)</pre>
+          </details>
+        </div>
+        <div class="method-card" style="border-top:3px solid #6366f1">
+          <div class="method-header">
+            <span class="method-badge" style="background:#6366f1">scene + topic</span>
+            <span class="method-name">Corpus-Direct</span>
+          </div>
+          <div class="method-desc">query prompt = 场景 + corpus topic</div>
+          
+        <div class="cell-agg">
+          <span style="color:#ef4444;font-weight:700;font-size:14px">★ 2.40</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 11±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#ef4444">★ 2.4</span>
+            <span class="metric">📝 11w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] Build a Recipe step-by-step creation wizard with ingredient input UI.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — corpus-direct)</pre>
+          </details>
+        </div>
+        <div class="method-card" style="border-top:3px solid #f59e0b">
+          <div class="method-header">
+            <span class="method-badge" style="background:#f59e0b">scene + persona</span>
+            <span class="method-name">Persona-Only</span>
+          </div>
+          <div class="method-desc">query prompt = 场景 + 共享 persona（不含 topic）</div>
+          
+        <div class="cell-agg">
+          <span style="color:#f59e0b;font-weight:700;font-size:14px">★ 2.80</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 19±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#f59e0b">★ 2.8</span>
+            <span class="metric">📝 19w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] As [DRY-RUN] User for Recipe step-by-step creation wizard with ingredient input — need a Adding &amp; Creating app.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — persona-only)</pre>
+          </details>
+        </div>
+        <div class="method-card" style="border-top:3px solid #0ea5e9">
+          <div class="method-header">
+            <span class="method-badge" style="background:#0ea5e9">scene + topic + persona</span>
+            <span class="method-name">Persona + Corpus</span>
+          </div>
+          <div class="method-desc">query prompt = 场景 + corpus topic + 共享 persona</div>
+          
+        <div class="cell-agg">
+          <span style="color:#f59e0b;font-weight:700;font-size:14px">★ 3.20</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 22±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#f59e0b">★ 3.2</span>
+            <span class="metric">📝 22w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] As [DRY-RUN] User for Recipe step-by-step creation wizard with ingredient input — need Recipe step-by-step creation wizard with ingredient input UI.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — persona-corpus)</pre>
+          </details>
+        </div></div>
+      </section>
+      <section class="scene-section">
+        <div class="scene-header">
+          <div class="scene-title">工具与效率 × 番茄钟/专注计时</div>
+          <div class="scene-meta">
+            <span class="tag tag-complexity">vague</span>
+            <span class="tag tag-corpus">🗂 90-minute deep work flow block timer</span>
+          </div>
+        </div>
+        <div class="anchor-persona">
+          <div class="anchor-label">🧑 共享 Anchor Persona（persona-only & persona-corpus 共用）</div>
+          <div class="anchor-title">[DRY-RUN] User for 90-minute deep work flow block timer</div>
+          <div class="anchor-desc">[DRY-RUN persona] Someone interested in 90-minute deep work flow block timer.</div>
+          <div class="anchor-row"><span class="kv-key">Goal:</span> Build 90-minute deep work flow block timer UI</div>
+          <div class="anchor-row"><span class="kv-key">Style:</span> casual</div>
+          <div class="anchor-row"><span class="kv-key">Familiarity:</span> medium</div>
+        </div>
+        <div class="method-grid">
+        <div class="method-card" style="border-top:3px solid #6b7280">
+          <div class="method-header">
+            <span class="method-badge" style="background:#6b7280">scene</span>
+            <span class="method-name">Scene-Direct</span>
+          </div>
+          <div class="method-desc">基线：query prompt 只含场景</div>
+          
+        <div class="cell-agg">
+          <span style="color:#22c55e;font-weight:700;font-size:14px">★ 3.60</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 6±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#22c55e">★ 3.6</span>
+            <span class="metric">📝 6w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] Something for the 番茄钟/专注计时 category.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — scene-direct)</pre>
+          </details>
+        </div>
+        <div class="method-card" style="border-top:3px solid #6366f1">
+          <div class="method-header">
+            <span class="method-badge" style="background:#6366f1">scene + topic</span>
+            <span class="method-name">Corpus-Direct</span>
+          </div>
+          <div class="method-desc">query prompt = 场景 + corpus topic</div>
+          
+        <div class="cell-agg">
+          <span style="color:#22c55e;font-weight:700;font-size:14px">★ 3.60</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 10±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#22c55e">★ 3.6</span>
+            <span class="metric">📝 10w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] Build a 90-minute deep work flow block timer UI.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — corpus-direct)</pre>
+          </details>
+        </div>
+        <div class="method-card" style="border-top:3px solid #f59e0b">
+          <div class="method-header">
+            <span class="method-badge" style="background:#f59e0b">scene + persona</span>
+            <span class="method-name">Persona-Only</span>
+          </div>
+          <div class="method-desc">query prompt = 场景 + 共享 persona（不含 topic）</div>
+          
+        <div class="cell-agg">
+          <span style="color:#22c55e;font-weight:700;font-size:14px">★ 4.00</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 16±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#22c55e">★ 4</span>
+            <span class="metric">📝 16w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] As [DRY-RUN] User for 90-minute deep work flow block timer — need a 番茄钟/专注计时 app.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — persona-only)</pre>
+          </details>
+        </div>
+        <div class="method-card" style="border-top:3px solid #0ea5e9">
+          <div class="method-header">
+            <span class="method-badge" style="background:#0ea5e9">scene + topic + persona</span>
+            <span class="method-name">Persona + Corpus</span>
+          </div>
+          <div class="method-desc">query prompt = 场景 + corpus topic + 共享 persona</div>
+          
+        <div class="cell-agg">
+          <span style="color:#22c55e;font-weight:700;font-size:14px">★ 4.00</span>
+          <span style="color:var(--muted);font-size:11px">±0.00</span>
+          <span class="metric" style="margin-left:auto">📝 20±0w</span>
+        </div>
+          
+        <div class="sample-block">
+          <div class="sample-head">
+            <span class="sample-idx">#1</span>
+            <span class="metric" style="color:#22c55e">★ 4</span>
+            <span class="metric">📝 20w</span>
+            <span class="metric"><span style="background:#94a3b8;color:#fff;padding:1px 6px;border-radius:9px;font-size:11px">vague</span></span>
+            
+          </div>
+          <div class="query-box">[DRY/0] As [DRY-RUN] User for 90-minute deep work flow block timer — need 90-minute deep work flow block timer UI.</div>
+        </div>
+          <details class="prompt-details">
+            <summary>查看 query prompt</summary>
+            <pre class="prompt-pre">(dry-run/0 — persona-corpus)</pre>
+          </details>
+        </div></div>
+      </section>
+</body>
+</html>
