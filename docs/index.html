@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ui-queryMaker — Realistic UI Query Data Synthesis at Scale</title>
+<meta name="description" content="A production pipeline for synthesizing realistic, diverse, persona-grounded UI query data — corpus-anchored, similarity-validated, design-style aware.">
+<style>
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --surface2: #21262d;
+  --surface3: #2d333b;
+  --border: #30363d;
+  --border2: #444c56;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --muted2: #6e7681;
+  --accent: #58a6ff;
+  --accent-bg: #1f6feb22;
+  --accent-bd: #1f6feb55;
+  --green: #3fb950;
+  --orange: #d29922;
+  --red: #f85149;
+  --indigo: #818cf8;
+  --amber: #f59e0b;
+  --cyan: #22d3ee;
+  --gray: #8b949e;
+  --radius: 10px;
+  --pad: 32px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Noto Sans SC', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  font-size: 14px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+code, .mono {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  font-size: 0.92em;
+}
+
+/* ── Header ── */
+.topbar {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(13, 17, 23, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px var(--pad);
+  display: flex; align-items: center; gap: 16px;
+}
+.topbar-brand { font-weight: 700; font-size: 14px; letter-spacing: -0.2px; }
+.topbar-brand .dot { color: var(--accent); }
+.topbar-spacer { flex: 1; }
+.topbar a.nav { color: var(--muted); font-size: 13px; padding: 6px 10px; border-radius: 6px; }
+.topbar a.nav:hover { color: var(--text); background: var(--surface2); text-decoration: none; }
+.lang-toggle {
+  display: inline-flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
+  font-size: 12px; font-family: 'SFMono-Regular', monospace;
+}
+.lang-toggle button {
+  background: transparent; color: var(--muted); border: 0; padding: 5px 10px; cursor: pointer;
+  font-family: inherit; font-size: inherit;
+}
+.lang-toggle button.active { background: var(--accent-bg); color: var(--accent); }
+.cta-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border: 1px solid var(--accent-bd); background: var(--accent-bg);
+  color: var(--accent); border-radius: 6px; font-size: 12px; font-weight: 500;
+}
+.cta-link:hover { background: #1f6feb33; text-decoration: none; }
+
+/* ── Hero ── */
+.hero {
+  padding: 80px var(--pad) 60px;
+  border-bottom: 1px solid var(--border);
+  background:
+    radial-gradient(ellipse 800px 400px at 20% 0%, #1f6feb15, transparent 60%),
+    radial-gradient(ellipse 600px 300px at 80% 20%, #a371f722, transparent 60%),
+    var(--bg);
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; color: var(--muted); font-family: 'SFMono-Regular', monospace;
+  padding: 4px 10px; border: 1px solid var(--border); border-radius: 20px;
+  margin-bottom: 20px;
+}
+.hero-eyebrow .pulse {
+  width: 6px; height: 6px; border-radius: 50%; background: var(--green);
+  box-shadow: 0 0 8px var(--green);
+}
+.hero h1 {
+  font-size: 44px; font-weight: 800; letter-spacing: -1.2px;
+  line-height: 1.15; max-width: 880px; margin-bottom: 18px;
+}
+.hero h1 .grad {
+  background: linear-gradient(90deg, #58a6ff 0%, #a371f7 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.hero-sub {
+  font-size: 17px; color: var(--muted); max-width: 760px; margin-bottom: 28px;
+  line-height: 1.6;
+}
+.hero-pillars {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 36px;
+}
+.pillar-chip {
+  font-size: 12px; padding: 5px 12px; border-radius: 20px;
+  border: 1px solid var(--border); color: var(--text); background: var(--surface);
+}
+.pillar-chip .k { color: var(--muted); margin-right: 6px; }
+
+/* ── KPI tiles ── */
+.kpi-row {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+  max-width: 880px;
+}
+.kpi {
+  background: var(--surface); padding: 22px 20px;
+}
+.kpi-value { font-size: 28px; font-weight: 700; letter-spacing: -1px; }
+.kpi-value .unit { font-size: 14px; color: var(--muted); font-weight: 500; margin-left: 4px; }
+.kpi-label { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.6px; }
+.kpi-foot { font-size: 11px; color: var(--muted2); margin-top: 6px; }
+
+/* ── Generic section ── */
+section.block {
+  padding: 64px var(--pad);
+  border-bottom: 1px solid var(--border);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section-eyebrow {
+  font-size: 11px; color: var(--accent); font-family: 'SFMono-Regular', monospace;
+  text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;
+}
+.section-title { font-size: 30px; font-weight: 700; letter-spacing: -0.8px; margin-bottom: 12px; }
+.section-sub { font-size: 15px; color: var(--muted); max-width: 760px; margin-bottom: 32px; line-height: 1.65; }
+
+/* ── Problem/solution table ── */
+.ps-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+}
+.ps-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px;
+}
+.ps-card .ps-bad { font-size: 11px; color: var(--red); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
+.ps-card .ps-bad-body { font-size: 13px; color: var(--muted); margin-bottom: 14px; line-height: 1.55; }
+.ps-card .ps-good { font-size: 11px; color: var(--green); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
+.ps-card .ps-good-body { font-size: 13px; color: var(--text); line-height: 1.55; }
+.ps-card hr { border: 0; border-top: 1px dashed var(--border); margin: 12px 0; }
+
+/* ── Pipeline diagram ── */
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 24px 16px;
+  overflow-x: auto;
+}
+.pipe-node {
+  text-align: center; padding: 10px 6px; border-radius: 8px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-width: 110px; cursor: pointer; transition: background 0.12s, transform 0.12s;
+}
+.pipe-node:hover { background: var(--surface2); transform: translateY(-1px); }
+.pipe-node .pn-num {
+  font-family: 'SFMono-Regular', monospace; font-size: 10px; color: var(--muted2);
+  margin-bottom: 6px;
+}
+.pipe-node .pn-icon {
+  width: 36px; height: 36px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 8px; background: var(--accent-bg); border: 1px solid var(--accent-bd);
+  font-family: 'SFMono-Regular', monospace; font-size: 14px; color: var(--accent);
+}
+.pipe-node .pn-label { font-size: 12px; font-weight: 500; line-height: 1.3; max-width: 110px; }
+.pipe-arrow {
+  display: flex; align-items: center; justify-content: center; color: var(--muted2);
+  font-size: 18px;
+}
+
+/* ── Pillar layout ── */
+.pillar-head {
+  display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px;
+}
+.pillar-num {
+  font-family: 'SFMono-Regular', monospace; font-size: 14px; color: var(--accent);
+  font-weight: 600;
+}
+
+/* ── Persona cards ── */
+.persona-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px;
+}
+.persona-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px;
+  transition: border-color 0.12s, transform 0.12s;
+}
+.persona-card:hover { border-color: var(--accent-bd); transform: translateY(-1px); }
+.persona-card .pc-id {
+  font-family: 'SFMono-Regular', monospace; font-size: 11px; color: var(--accent);
+  margin-bottom: 8px;
+}
+.persona-card .pc-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.persona-card .pc-title-en { font-size: 12px; color: var(--muted); margin-bottom: 14px; line-height: 1.5; }
+.persona-card .pc-styles { font-size: 12px; color: var(--muted); }
+.persona-card .pc-styles .cx { color: var(--text); font-weight: 500; }
+.persona-card .pc-styles .cx-row { margin-bottom: 6px; line-height: 1.5; }
+
+/* ── Style chips ── */
+.style-chips {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px;
+}
+.style-chip {
+  padding: 8px 14px; border-radius: 20px; font-size: 13px;
+  background: var(--surface); border: 1px solid var(--border); cursor: default;
+  transition: all 0.15s;
+}
+.style-chip:hover {
+  background: var(--surface2); border-color: var(--border2);
+  transform: translateY(-1px);
+}
+.style-chip[data-style="Glassmorphism"] { background: linear-gradient(135deg, #58a6ff22, #58a6ff05); }
+.style-chip[data-style="Neumorphism"]   { background: linear-gradient(135deg, #8b949e22, #8b949e05); }
+.style-chip[data-style="Neubrutalism"]  { background: linear-gradient(135deg, #f8514922, #f8514905); }
+.style-chip[data-style="Minimalism"]    { background: linear-gradient(135deg, #e6edf322, #e6edf305); }
+.style-chip[data-style="Material"]      { background: linear-gradient(135deg, #3fb95022, #3fb95005); }
+.style-chip[data-style="Data-Dense"]    { background: linear-gradient(135deg, #d2992222, #d2992205); }
+.style-chip[data-style="Dark"]          { background: linear-gradient(135deg, #21262d, #161b22); }
+.style-chip[data-style="Cyberpunk"]     { background: linear-gradient(135deg, #a371f722, #58a6ff15); }
+.style-chip[data-style="Luxury"]        { background: linear-gradient(135deg, #c69c6d22, #c69c6d05); }
+.style-chip[data-style="Vibrant"]       { background: linear-gradient(135deg, #f8514922, #f59e0b22); }
+
+/* ── Style modes ── */
+.mode-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px;
+}
+.mode-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px;
+}
+.mode-card .mc-tag {
+  font-family: 'SFMono-Regular', monospace; font-size: 11px;
+  padding: 2px 8px; border-radius: 4px; background: var(--surface2); color: var(--accent);
+  display: inline-block; margin-bottom: 10px;
+}
+.mode-card .mc-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
+.mode-card .mc-desc { font-size: 12px; color: var(--muted); line-height: 1.55; margin-bottom: 12px; }
+.mode-card pre {
+  background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+  padding: 10px 12px; font-size: 11px; overflow-x: auto; color: var(--text);
+}
+
+/* ── 4-method comparison ── */
+.method-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px;
+}
+.method-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px; border-top-width: 3px;
+}
+.method-card.m-scene    { border-top-color: var(--gray); }
+.method-card.m-corpus   { border-top-color: var(--indigo); }
+.method-card.m-persona  { border-top-color: var(--amber); }
+.method-card.m-pcorpus  { border-top-color: var(--cyan); }
+.method-card .mn { font-size: 11px; color: var(--muted); font-family: 'SFMono-Regular', monospace; margin-bottom: 4px; }
+.method-card .mt { font-size: 14px; font-weight: 600; margin-bottom: 10px; }
+.method-card .mb { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+table.cmp {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  overflow: hidden;
+}
+table.cmp th, table.cmp td {
+  padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border);
+}
+table.cmp th {
+  background: var(--surface2); color: var(--muted); font-weight: 500;
+  font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px;
+}
+table.cmp tr:last-child td { border-bottom: 0; }
+table.cmp .dot {
+  display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px;
+  vertical-align: middle;
+}
+table.cmp .pill {
+  font-family: 'SFMono-Regular', monospace; font-size: 11px;
+  padding: 2px 7px; border-radius: 10px; background: var(--surface2); color: var(--text);
+}
+table.cmp .good { color: var(--green); }
+table.cmp .warn { color: var(--orange); }
+table.cmp .neutral { color: var(--muted); }
+
+/* ── Diversity / dedup ── */
+.formula-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 22px; margin-bottom: 16px;
+}
+.formula {
+  font-family: 'SFMono-Regular', monospace; font-size: 14px;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+  padding: 14px 18px; color: var(--text); margin: 12px 0; overflow-x: auto;
+}
+.formula .var { color: #79c0ff; }
+.formula .op  { color: #ff7b72; }
+.threshold-table {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 8px 16px; font-size: 13px;
+  margin-top: 12px;
+}
+.threshold-table .t-key { font-family: 'SFMono-Regular', monospace; color: var(--accent); }
+.threshold-table .t-desc { color: var(--muted); }
+.threshold-table .t-val { color: var(--green); font-family: 'SFMono-Regular', monospace; }
+
+/* ── L1 distribution bars ── */
+.l1-bars { display: flex; flex-direction: column; gap: 8px; }
+.l1-row {
+  display: grid; grid-template-columns: 160px 1fr 50px; align-items: center; gap: 12px; font-size: 13px;
+}
+.l1-row .l1-name { color: var(--text); }
+.l1-row .l1-bar {
+  height: 8px; background: var(--surface2); border-radius: 4px; overflow: hidden;
+}
+.l1-row .l1-fill {
+  height: 100%; background: linear-gradient(90deg, var(--accent), #a371f7);
+  border-radius: 4px;
+}
+.l1-row .l1-count { color: var(--muted); text-align: right; font-family: 'SFMono-Regular', monospace; font-size: 12px; }
+
+/* ── Sample queries ── */
+.sample-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px;
+}
+.sample-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 0; overflow: hidden;
+  transition: border-color 0.12s, transform 0.12s;
+}
+.sample-card:hover { border-color: var(--accent-bd); transform: translateY(-1px); }
+.sample-head {
+  padding: 14px 18px; border-bottom: 1px solid var(--border);
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  background: var(--surface2);
+}
+.sample-head .badge {
+  font-size: 11px; padding: 2px 8px; border-radius: 10px;
+  background: var(--accent-bg); color: var(--accent); border: 1px solid var(--accent-bd);
+}
+.sample-head .topic-chip {
+  font-size: 11px; padding: 2px 8px; border-radius: 10px;
+  background: var(--surface3); color: var(--text); border: 1px solid var(--border);
+  font-family: 'SFMono-Regular', monospace;
+}
+.sample-head .meta { font-size: 11px; color: var(--muted); margin-left: auto; }
+.sample-body {
+  padding: 16px 18px; font-size: 13px; color: var(--text); line-height: 1.6;
+}
+
+/* ── Quickstart code block ── */
+.code-block {
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 16px 20px; font-family: 'SFMono-Regular', monospace; font-size: 13px;
+  color: var(--text); overflow-x: auto; line-height: 1.7;
+  position: relative;
+}
+.code-block .c-comment { color: var(--muted); }
+.code-block .c-cmd { color: var(--green); }
+.code-block .c-flag { color: #ff7b72; }
+.code-block .c-num { color: var(--orange); }
+.copy-hint {
+  position: absolute; top: 10px; right: 12px; font-size: 10px; color: var(--muted2);
+  font-family: 'SFMono-Regular', monospace;
+}
+
+/* ── File map ── */
+.file-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 10px;
+}
+.file-row {
+  display: grid; grid-template-columns: 280px 1fr; gap: 14px;
+  padding: 10px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+  font-size: 13px; align-items: center;
+}
+.file-row .fp { font-family: 'SFMono-Regular', monospace; font-size: 12px; color: var(--accent); }
+.file-row .fd { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+/* ── Footer ── */
+footer {
+  padding: 32px var(--pad); text-align: center;
+  font-size: 12px; color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+footer a { color: var(--accent); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .hero h1 { font-size: 32px; }
+  .kpi-row { grid-template-columns: repeat(2, 1fr); }
+  .ps-grid, .mode-grid, .method-grid { grid-template-columns: 1fr; }
+  .pipeline { grid-template-columns: repeat(3, 1fr); }
+  .pipe-arrow { display: none; }
+  .l1-row { grid-template-columns: 100px 1fr 40px; }
+  .file-row { grid-template-columns: 1fr; }
+  section.block { padding: 48px 20px; }
+  .topbar { padding: 10px 16px; }
+  .topbar a.nav.hide-sm { display: none; }
+}
+
+/* ── i18n visibility helpers (used by JS) ── */
+[data-en], [data-zh] { transition: opacity 0.15s; }
+</style>
+</head>
+<body>
+
+<!-- ── Top bar ── -->
+<div class="topbar">
+  <div class="topbar-brand">ui-queryMaker<span class="dot">.</span></div>
+  <a href="#pipeline" class="nav hide-sm" data-i18n="nav.pipeline">Pipeline</a>
+  <a href="#diversity" class="nav hide-sm" data-i18n="nav.diversity">Diversity</a>
+  <a href="#persona" class="nav hide-sm" data-i18n="nav.persona">Persona</a>
+  <a href="#evaluation" class="nav hide-sm" data-i18n="nav.eval">Evaluation</a>
+  <a href="#samples" class="nav hide-sm" data-i18n="nav.samples">Samples</a>
+  <a href="#quickstart" class="nav hide-sm" data-i18n="nav.quickstart">Quickstart</a>
+  <div class="topbar-spacer"></div>
+  <div class="lang-toggle" role="group" aria-label="Language toggle">
+    <button data-lang-btn="en">EN</button>
+    <button data-lang-btn="zh" class="active">中文</button>
+  </div>
+  <a class="cta-link" href="https://github.com/PlevanTem/queryMaker" target="_blank" rel="noopener">
+    <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    GitHub
+  </a>
+</div>
+
+<!-- ── Hero ── -->
+<header class="hero">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="hero-eyebrow">
+      <span class="pulse"></span>
+      <span data-i18n="hero.eyebrow">Production pipeline · v2 corpus-direct branch</span>
+    </div>
+    <h1>
+      <span data-i18n="hero.h1a">Realistic UI query data,</span><br>
+      <span class="grad" data-i18n="hero.h1b">synthesized with rigor.</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero.sub">
+      A production pipeline for generating large, diverse, persona-grounded
+      natural-language queries that describe UI to be built — anchored to a
+      2,440-topic real-world corpus, validated by trigram-similarity dedup,
+      and benchmarked across four generation strategies.
+    </p>
+    <div class="hero-pillars">
+      <span class="pillar-chip"><span class="k">01</span><span data-i18n="hero.p1">Real-world corpus grounding</span></span>
+      <span class="pillar-chip"><span class="k">02</span><span data-i18n="hero.p2">Persona-centered authenticity</span></span>
+      <span class="pillar-chip"><span class="k">03</span><span data-i18n="hero.p3">Design-style aware</span></span>
+      <span class="pillar-chip"><span class="k">04</span><span data-i18n="hero.p4">Similarity-validated diversity</span></span>
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi">
+        <div class="kpi-value">2,440<span class="unit"><span data-i18n="kpi.topics.unit">topics</span></span></div>
+        <div class="kpi-label" data-i18n="kpi.topics.label">Corpus coverage</div>
+        <div class="kpi-foot" data-i18n="kpi.topics.foot">61 L2 scenes · 12 L1 categories</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">200<span class="unit">/ 200</span></div>
+        <div class="kpi-label" data-i18n="kpi.success.label">Run success rate</div>
+        <div class="kpi-foot" data-i18n="kpi.success.foot">0 failures · claude-sonnet-4-6</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">~84<span class="unit"><span data-i18n="kpi.words.unit">words</span></span></div>
+        <div class="kpi-label" data-i18n="kpi.words.label">Avg query length</div>
+        <div class="kpi-foot" data-i18n="kpi.words.foot">medium complexity, EN</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-value">~3.3<span class="unit">s</span></div>
+        <div class="kpi-label" data-i18n="kpi.lat.label">Per-query latency</div>
+        <div class="kpi-foot" data-i18n="kpi.lat.foot">200 queries in 11 min</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ── Why this exists ── -->
+<section class="block" id="why">
+  <div class="section-eyebrow" data-i18n="why.eyebrow">// THE PROBLEM</div>
+  <h2 class="section-title" data-i18n="why.title">Why synthesized UI queries usually fall short</h2>
+  <p class="section-sub" data-i18n="why.sub">
+    Most "let's just prompt an LLM for some queries" pipelines collapse to narrow,
+    templated distributions that don't generalize. We attack that on three axes.
+  </p>
+  <div class="ps-grid">
+    <div class="ps-card">
+      <div class="ps-bad" data-i18n="why.bad1">Narrow distribution</div>
+      <div class="ps-bad-body" data-i18n="why.bad1b">A naive prompt returns 100 variations of "build me a dashboard" — covering &lt; 5% of real product space.</div>
+      <hr>
+      <div class="ps-good" data-i18n="why.good1">Real-world corpus anchoring</div>
+      <div class="ps-good-body" data-i18n="why.good1b">Each generation is locked to a specific topic from a curated 2,440-entry corpus spanning 12 L1 categories.</div>
+    </div>
+    <div class="ps-card">
+      <div class="ps-bad" data-i18n="why.bad2">Robotic phrasing</div>
+      <div class="ps-bad-body" data-i18n="why.bad2b">LLMs default to a single polite, structured voice that doesn't match how humans actually request UI.</div>
+      <hr>
+      <div class="ps-good" data-i18n="why.good2">Persona-driven voice</div>
+      <div class="ps-good-body" data-i18n="why.good2b">Five archetypes × three complexity styles produce first-person voice variation grounded in user goals.</div>
+    </div>
+    <div class="ps-card">
+      <div class="ps-bad" data-i18n="why.bad3">Visually flat output</div>
+      <div class="ps-bad-body" data-i18n="why.bad3b">Generated queries rarely specify visual style, leaving downstream UI generation to default to one aesthetic.</div>
+      <hr>
+      <div class="ps-good" data-i18n="why.good3">Design-style awareness</div>
+      <div class="ps-good-body" data-i18n="why.good3b">Eleven registered design styles × three invocation modes (default / fixed / heuristic-auto) inject visual intent.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Pipeline ── -->
+<section class="block" id="pipeline">
+  <div class="section-eyebrow" data-i18n="pipe.eyebrow">// THE PIPELINE</div>
+  <h2 class="section-title" data-i18n="pipe.title">From spec to scored corpus, in seven stages</h2>
+  <p class="section-sub" data-i18n="pipe.sub">
+    A deterministic plan layer separates "what to generate" from "how to generate it",
+    making the pipeline reproducible, resumable, and offline-capable when needed.
+  </p>
+  <div class="pipeline">
+    <a class="pipe-node" href="#diversity"><div class="pn-num">01</div><div class="pn-icon">XLS</div><div class="pn-label" data-i18n="pipe.n1">Scenario spec (xlsx)</div></a>
+    <div class="pipe-arrow">→</div>
+    <a class="pipe-node" href="#diversity"><div class="pn-num">02</div><div class="pn-icon">⌬</div><div class="pn-label" data-i18n="pipe.n2">Corpus 2,440 topics</div></a>
+    <div class="pipe-arrow">→</div>
+    <a class="pipe-node" href="#diversity"><div class="pn-num">03</div><div class="pn-icon">⊞</div><div class="pn-label" data-i18n="pipe.n3">Plan allocation</div></a>
+    <div class="pipe-arrow">→</div>
+    <a class="pipe-node" href="#persona"><div class="pn-num">04</div><div class="pn-icon">人</div><div class="pn-label" data-i18n="pipe.n4">Persona binding</div></a>
+  </div>
+  <div class="pipeline" style="margin-top:12px;">
+    <a class="pipe-node" href="#evaluation"><div class="pn-num">05</div><div class="pn-icon">{ }</div><div class="pn-label" data-i18n="pipe.n5">LLM generation</div></a>
+    <div class="pipe-arrow">→</div>
+    <a class="pipe-node" href="#diversity"><div class="pn-num">06</div><div class="pn-icon">≈</div><div class="pn-label" data-i18n="pipe.n6">Jaccard dedup + scoring</div></a>
+    <div class="pipe-arrow">→</div>
+    <a class="pipe-node" href="#samples"><div class="pn-num">07</div><div class="pn-icon">▤</div><div class="pn-label" data-i18n="pipe.n7">JSONL · SQLite · HTML</div></a>
+    <div class="pipe-arrow"></div>
+    <div></div>
+    <div class="pipe-arrow"></div>
+    <div></div>
+  </div>
+</section>
+
+<!-- ── Pillar 1: Diversity ── -->
+<section class="block" id="diversity">
+  <div class="pillar-head"><span class="pillar-num">PILLAR 01</span></div>
+  <h2 class="section-title" data-i18n="div.title">Diversity through real-world grounding</h2>
+  <p class="section-sub" data-i18n="div.sub">
+    The "pre-stage" is the secret. We don't ask the LLM to come up with topics — we
+    pre-allocate them from a curated corpus, then let the LLM render natural language
+    around each anchor. Similarity-based scoring then verifies the output stays diverse.
+  </p>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:32px;">
+    <div class="formula-card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'SFMono-Regular',monospace;">// PRE-STAGE</div>
+      <div style="font-size:16px;font-weight:600;margin-bottom:10px;" data-i18n="div.f1.t">Hierarchical topic allocation</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.6;" data-i18n="div.f1.d">
+        Excel scenario spec is parsed into 61 L2 scenes across 12 L1 categories.
+        Each task in the plan is anchored to a concrete corpus topic — not a templated slot.
+      </div>
+      <div class="formula" style="margin-top:14px;">
+<span class="var">spec</span> <span class="op">×</span> <span class="var">corpus_data</span> <span class="op">→</span> <span class="var">plan.jsonl</span><br>
+&nbsp;&nbsp;<span style="color:var(--muted);">// 200 tasks · L1-proportional · topic-anchored</span>
+      </div>
+    </div>
+    <div class="formula-card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'SFMono-Regular',monospace;">// POST-STAGE</div>
+      <div style="font-size:16px;font-weight:600;margin-bottom:10px;" data-i18n="div.f2.t">Trigram Jaccard dedup</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.6;" data-i18n="div.f2.d">
+        Each query is compared against its same-scene peers via trigram-set Jaccard
+        similarity. The diversity score rewards low max-peer-similarity.
+      </div>
+      <div class="formula" style="margin-top:14px;">
+J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</span> |trigrams(<span class="var">A</span>) <span class="op">∩</span> trigrams(<span class="var">B</span>)| <span class="op">/</span> |<span class="op">∪</span>|
+      </div>
+      <div class="threshold-table">
+        <span class="t-key">sim &lt; 0.55</span><span class="t-desc" data-i18n="div.f2.r1">distinct enough</span><span class="t-val">+1.0</span>
+        <span class="t-key">sim &lt; 0.30</span><span class="t-desc" data-i18n="div.f2.r2">strongly distinct</span><span class="t-val">+2.0</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size:13px;color:var(--muted);margin-bottom:14px;font-family:'SFMono-Regular',monospace;">// L1 DISTRIBUTION FROM A REAL 200-QUERY RUN</div>
+  <div class="l1-bars" id="l1-bars"></div>
+</section>
+
+<!-- ── Pillar 2: Persona ── -->
+<section class="block" id="persona">
+  <div class="pillar-head"><span class="pillar-num">PILLAR 02</span></div>
+  <h2 class="section-title" data-i18n="ps.title">Authenticity through persona</h2>
+  <p class="section-sub" data-i18n="ps.sub">
+    Five archetypes drawn from how people actually request UI work. Each archetype carries
+    per-complexity style hints, so the same persona phrases a vague request differently
+    from a complex one — preserving voice while scaling specificity.
+  </p>
+
+  <div class="persona-grid" id="persona-cards"></div>
+
+  <div style="margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div class="formula-card" style="margin:0;">
+      <div style="font-size:13px;font-weight:600;margin-bottom:8px;" data-i18n="ps.scope.t">Persona scope: scene vs. task</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6;" data-i18n="ps.scope.d">
+        <code>--persona-scope scene</code> shares one persona across all tasks in the same L2 scene
+        (for cohesive intra-scene voice). <code>--persona-scope task</code> assigns a unique persona
+        per task (for maximum diversity). Both modes are deterministic and reproducible.
+      </div>
+    </div>
+    <div class="formula-card" style="margin:0;">
+      <div style="font-size:13px;font-weight:600;margin-bottom:8px;" data-i18n="ps.fb.t">Deterministic offline fallback</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.6;" data-i18n="ps.fb.d">
+        The entire pipeline can run with zero LLM calls using seeded archetype selection
+        and template-driven generation — useful for CI, MVP demos, or when an API is unavailable.
+        Same plan + same seed always produces the same output.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Pillar 3: Design style ── -->
+<section class="block" id="design">
+  <div class="pillar-head"><span class="pillar-num">PILLAR 03</span></div>
+  <h2 class="section-title" data-i18n="ds.title">Design-style aware generation</h2>
+  <p class="section-sub" data-i18n="ds.sub">
+    Eleven first-class design styles, each with a Chinese persona-side hint and an English
+    LLM-side instruction. New styles register in one line — the system was designed for extension.
+  </p>
+  <div class="style-chips" id="style-chips"></div>
+
+  <div class="mode-grid">
+    <div class="mode-card">
+      <span class="mc-tag">MODE 01 · default</span>
+      <div class="mc-title" data-i18n="ds.m1.t">Free / contextual inference</div>
+      <div class="mc-desc" data-i18n="ds.m1.d">No fixed style — let the visual direction emerge naturally from scene + topic context.</div>
+      <pre>design_style: <span style="color:var(--muted);">null</span></pre>
+    </div>
+    <div class="mode-card">
+      <span class="mc-tag">MODE 02 · fixed</span>
+      <div class="mc-title" data-i18n="ds.m2.t">Explicit rotation</div>
+      <div class="mc-desc" data-i18n="ds.m2.d">Cycle through a user-supplied list. Guarantees coverage of priority styles.</div>
+      <pre>--design-styles "Dark,<br>&nbsp;Glassmorphism,Cyberpunk"</pre>
+    </div>
+    <div class="mode-card">
+      <span class="mc-tag">MODE 03 · auto</span>
+      <div class="mc-title" data-i18n="ds.m3.t">Heuristic scene-matching</div>
+      <div class="mc-desc" data-i18n="ds.m3.d">inferStyles() ranks styles by scene keywords — e.g. health + meditation → Neumorphism, Minimalism, Dark.</div>
+      <pre>--design-styles auto</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ── Pillar 4: Evaluation ── -->
+<section class="block" id="evaluation">
+  <div class="pillar-head"><span class="pillar-num">PILLAR 04</span></div>
+  <h2 class="section-title" data-i18n="ev.title">Validated by a 4-method evaluation framework</h2>
+  <p class="section-sub" data-i18n="ev.sub">
+    Rather than asserting a method is "best", we ship a controlled comparison across four
+    generation strategies, run on identical scenes, scored on identical rubrics. The trade-offs are honest.
+  </p>
+
+  <div class="method-grid">
+    <div class="method-card m-scene">
+      <div class="mn">METHOD A · baseline</div>
+      <div class="mt" data-i18n="ev.m1.t">Scene-direct</div>
+      <div class="mb" data-i18n="ev.m1.d">Only L1/L2 scene context. No topic, no persona. Measures raw scene-conditioned quality.</div>
+    </div>
+    <div class="method-card m-corpus">
+      <div class="mn">METHOD B · primary</div>
+      <div class="mt" data-i18n="ev.m2.t">Corpus-direct</div>
+      <div class="mb" data-i18n="ev.m2.d">Scene + specific corpus topic. 1× LLM call. The production default — sweet spot.</div>
+    </div>
+    <div class="method-card m-persona">
+      <div class="mn">METHOD C · voice</div>
+      <div class="mt" data-i18n="ev.m3.t">Persona-only</div>
+      <div class="mb" data-i18n="ev.m3.d">Scene + persona, no topic anchor. Tests whether persona alone yields specific queries.</div>
+    </div>
+    <div class="method-card m-pcorpus">
+      <div class="mn">METHOD D · combined</div>
+      <div class="mt" data-i18n="ev.m4.t">Persona + Corpus</div>
+      <div class="mb" data-i18n="ev.m4.d">Best on paper. 2× LLM calls (persona synthesis + query). Higher cost & latency.</div>
+    </div>
+  </div>
+
+  <table class="cmp">
+    <thead>
+      <tr>
+        <th data-i18n="ev.col.method">Method</th>
+        <th data-i18n="ev.col.topic">Topic adherence</th>
+        <th data-i18n="ev.col.voice">Voice authenticity</th>
+        <th data-i18n="ev.col.cost">LLM calls / query</th>
+        <th data-i18n="ev.col.verdict">Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="dot" style="background:var(--gray);"></span>Scene-direct</td>
+        <td><span class="warn">~60–80%</span></td>
+        <td class="neutral">low</td>
+        <td><span class="pill">1×</span></td>
+        <td class="neutral" data-i18n="ev.r1">Baseline · drifts off-topic</td>
+      </tr>
+      <tr>
+        <td><span class="dot" style="background:var(--indigo);"></span>Corpus-direct</td>
+        <td><span class="good">~100%</span></td>
+        <td class="neutral">medium</td>
+        <td><span class="pill">1×</span></td>
+        <td class="good" data-i18n="ev.r2">Production default · best ROI</td>
+      </tr>
+      <tr>
+        <td><span class="dot" style="background:var(--amber);"></span>Persona-only</td>
+        <td class="warn">low</td>
+        <td class="good">high</td>
+        <td><span class="pill">1×</span></td>
+        <td class="neutral" data-i18n="ev.r3">Strong voice · weak specificity</td>
+      </tr>
+      <tr>
+        <td><span class="dot" style="background:var(--cyan);"></span>Persona + Corpus</td>
+        <td class="good">~100%</td>
+        <td class="good">high</td>
+        <td><span class="pill">2×</span></td>
+        <td class="warn" data-i18n="ev.r4">Best quality · 2× cost & latency</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="margin-top:20px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:6px;font-size:13px;color:var(--muted);line-height:1.65;">
+    <strong style="color:var(--text);" data-i18n="ev.takeaway.t">Honest takeaway:</strong>
+    <span data-i18n="ev.takeaway.b">Persona+Corpus wins on paper, but at 2× the cost. For most production workloads, corpus-direct hits the sweet spot — 100% topic adherence with a single LLM call. Persona+Corpus is reserved for high-value subsets where voice quality matters most.</span>
+  </div>
+
+  <div style="margin-top:14px;font-size:12px;color:var(--muted2);font-family:'SFMono-Regular',monospace;" data-i18n="ev.scoring">
+    Scoring rubric: Authenticity (40%) + Specificity (40%) + Diversity (20%). Pass threshold ≥ 2.8 / 5.0.
+  </div>
+</section>
+
+<!-- ── Samples ── -->
+<section class="block" id="samples">
+  <div class="section-eyebrow" data-i18n="sp.eyebrow">// THE RECEIPTS</div>
+  <h2 class="section-title" data-i18n="sp.title">Real samples from a production run</h2>
+  <p class="section-sub" data-i18n="sp.sub">
+    Six queries picked from a real 200-query corpus-direct run, spanning six L1 categories.
+    Toggle EN ↔ 中文 in the top right — the data ships bilingual out of the box.
+  </p>
+  <div class="sample-grid" id="sample-grid"></div>
+</section>
+
+<!-- ── Quickstart ── -->
+<section class="block" id="quickstart">
+  <div class="section-eyebrow" data-i18n="qs.eyebrow">// RUN IT YOURSELF</div>
+  <h2 class="section-title" data-i18n="qs.title">Quickstart</h2>
+  <p class="section-sub" data-i18n="qs.sub">
+    From clone to 50 generated queries in under 10 minutes. Requires Node 18+ and the
+    Claude CLI (or set a Packy-compatible API key).
+  </p>
+  <div class="code-block">
+    <span class="copy-hint">bash</span>
+<span class="c-comment"># 1. Install</span>
+<span class="c-cmd">git clone</span> https://github.com/PlevanTem/queryMaker.git
+<span class="c-cmd">cd</span> queryMaker <span class="op">&amp;&amp;</span> <span class="c-cmd">npm install</span>
+
+<span class="c-comment"># 2. Dry-run the plan (no LLM call)</span>
+<span class="c-cmd">node</span> scripts/run-corpus.js <span class="c-flag">--total</span> <span class="c-num">50</span> <span class="c-flag">--dry-run</span>
+
+<span class="c-comment"># 3. Real run — 50 queries, ~3 min</span>
+<span class="c-cmd">node</span> scripts/run-corpus.js <span class="c-flag">--total</span> <span class="c-num">50</span> <span class="c-flag">--concurrency</span> <span class="c-num">2</span>
+
+<span class="c-comment"># 4. Inspect outputs</span>
+<span class="c-cmd">cat</span> data/output/corpus_run/summary.json
+<span class="c-cmd">head</span> data/output/corpus_run/queries.jsonl
+  </div>
+  <div style="margin-top:16px;font-size:12px;color:var(--muted);line-height:1.6;" data-i18n="qs.note">
+    Each record in <code>queries.jsonl</code> includes the English query, a Chinese translation,
+    word count, scene metadata, the corpus topic anchor, model name, and timing. Pipe directly
+    into training, or run <code>scripts/generate-analysis-report.js</code> for a self-contained HTML report.
+  </div>
+</section>
+
+<!-- ── File map ── -->
+<section class="block" id="files">
+  <div class="section-eyebrow" data-i18n="fm.eyebrow">// THE MAP</div>
+  <h2 class="section-title" data-i18n="fm.title">What's inside</h2>
+  <p class="section-sub" data-i18n="fm.sub">The shortest path to understanding the codebase.</p>
+  <div class="file-grid">
+    <div class="file-row"><div class="fp">mvp/query_factory_v2.js</div><div class="fd" data-i18n="fm.r1">Core engine: parsing, planning, generation, scoring (~2,600 LOC)</div></div>
+    <div class="file-row"><div class="fp">scripts/run-corpus.js</div><div class="fd" data-i18n="fm.r2">Production CLI for the corpus-direct pipeline</div></div>
+    <div class="file-row"><div class="fp">scripts/run-free.js</div><div class="fd" data-i18n="fm.r3">Persona-driven runner with --persona-scope control</div></div>
+    <div class="file-row"><div class="fp">scripts/test-corpus-methods.js</div><div class="fd" data-i18n="fm.r4">4-method evaluation harness on identical scenes</div></div>
+    <div class="file-row"><div class="fp">scripts/generate-analysis-report.js</div><div class="fd" data-i18n="fm.r5">Reusable: turn any scored JSONL into an interactive HTML report</div></div>
+    <div class="file-row"><div class="fp">scripts/corpus_data.json</div><div class="fd" data-i18n="fm.r6">The 2,440-topic corpus across 61 L2 categories</div></div>
+    <div class="file-row"><div class="fp">data/output/corpus_run/</div><div class="fd" data-i18n="fm.r7">Latest production run — plan, queries, summary, xlsx export</div></div>
+    <div class="file-row"><div class="fp">README.md · ARCHIVE/</div><div class="fd" data-i18n="fm.r8">Full pipeline diagram and the original 5-stage research blueprint</div></div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="https://github.com/PlevanTem/queryMaker" target="_blank" rel="noopener">github.com/PlevanTem/queryMaker</a>
+    &nbsp;·&nbsp; <span data-i18n="ft.built">Built with Claude · Self-contained showcase, no external dependencies</span>
+  </div>
+</footer>
+
+<!-- ── Embedded data ── -->
+<script id="data-l1" type="application/json">
+{"深度研究展示":36,"交互方式":30,"实用工具":32,"教育学习":20,"办公效率":15,"健康管理":15,"出行助手":15,"美食探店":10,"休闲游戏":8,"多媒体处理":8,"新闻资讯":8,"购物消费":3}
+</script>
+
+<script id="data-l1-en" type="application/json">
+{"深度研究展示":"Deep research / showcase","交互方式":"Interaction patterns","实用工具":"Utilities","教育学习":"Education","办公效率":"Office productivity","健康管理":"Health","出行助手":"Travel assistant","美食探店":"Food discovery","休闲游戏":"Casual games","多媒体处理":"Media processing","新闻资讯":"News","购物消费":"Shopping"}
+</script>
+
+<script id="data-personas" type="application/json">
+[
+  {"id":"maker","title_zh":"正在自己动手做产品的人","title_en":"The hands-on builder","styles":{"vague":{"zh":"说法比较口语，只会给出大方向和感受。","en":"Casual phrasing, only direction and vibe."},"medium":{"zh":"会说清楚目标，并补充一两个结构或交互要求。","en":"States the goal plus one or two structural / interaction asks."},"complex":{"zh":"会把目标、展示内容和关键交互讲得比较完整。","en":"Spells out goal, content, and key interactions in full."}}},
+  {"id":"planner","title_zh":"在整理需求和表达想法的人","title_en":"The requirements-organizer","styles":{"vague":{"zh":"更像先说希望达到什么效果，不会一次给很多细节。","en":"Leads with desired outcome, withholds details."},"medium":{"zh":"会从用户视角说明目标，并点出少量核心细节。","en":"Frames the goal from a user POV with a few core details."},"complex":{"zh":"会把功能边界、展示顺序和体验目标讲得很清楚。","en":"Defines feature scope, ordering, and UX goals precisely."}}},
+  {"id":"curator","title_zh":"在整理内容与展示方式的人","title_en":"The content curator","styles":{"vague":{"zh":"更在意整体感觉和内容呈现，不太讲技术。","en":"Focused on feel and presentation, light on technical detail."},"medium":{"zh":"会同时关注内容组织方式和浏览节奏。","en":"Cares about content organization and browsing rhythm."},"complex":{"zh":"会明确说明内容结构、导航和浏览行为。","en":"Specifies content structure, navigation, and browse behavior."}}},
+  {"id":"operator","title_zh":"需要把信息管理得更高效的人","title_en":"The efficiency operator","styles":{"vague":{"zh":"更强调想解决的问题，不会给出完整方案。","en":"Emphasizes the problem, not a full solution."},"medium":{"zh":"会补充一两个和效率有关的要求。","en":"Adds one or two efficiency-oriented requirements."},"complex":{"zh":"会清楚提出筛选、状态、反馈和异常场景要求。","en":"Spells out filters, states, feedback, and edge cases."}}},
+  {"id":"founder_like","title_zh":"在追求产品感觉和记忆点的人","title_en":"The product-feel founder","styles":{"vague":{"zh":"会先描述想要的气质和整体方向。","en":"Leads with the feel and overall direction."},"medium":{"zh":"会给出感觉和重点模块的组合要求。","en":"Combines feel with key module requirements."},"complex":{"zh":"会同时给出风格、品牌感和多个功能模块要求。","en":"Specifies style, brand feel, and multiple modules together."}}}
+]
+</script>
+
+<script id="data-styles" type="application/json">
+["Glassmorphism","Neumorphism","Neubrutalism","Minimalism","Material","Data-Dense","Dark","Cyberpunk","Luxury","Vibrant"]
+</script>
+
+<script id="data-samples" type="application/json">
+[
+  {
+    "l1_zh":"深度研究展示","l1_en":"Deep research / showcase","l2":"个人生活类",
+    "topic":"Travel Memory Scrapbook","words":100,"complexity":"medium","product":"portfolio",
+    "en":"Build a Travel Memory Scrapbook screen for a mobile app where users can create trip entries with a cover photo, trip title, date range, and a collage-style photo grid underneath. Each entry should be tappable to open a detail view with a vertical scroll layout showing photos mixed with short text notes — kind of like a digital scrapbook page. Keep the UI warm and nostalgic, maybe slightly aged paper texture as background, and make sure the photo grid on the entry card supports at least 3–5 images in a masonry or asymmetric layout rather than a plain uniform grid.",
+    "zh":"帮我做一个移动端的旅行记忆相册页面，用户可以新建旅程卡片，每张卡片上有封面照片、旅程标题、起止日期，以及下方一个拼贴风格的照片网格。点击卡片后进入详情页，详情页是竖向滚动的布局，照片和短文字笔记交错穿插排列，整体感觉就像翻一本数字剪贴簿。视觉风格要温暖、有点复古怀旧，背景最好带做旧纸张的质感，卡片上的照片网格要能放3到5张图，用瀑布流或者不对称的方式来排，不要那种方方正正的均匀网格。"
+  },
+  {
+    "l1_zh":"交互方式","l1_en":"Interaction patterns","l2":"Adding & Creating",
+    "topic":"Recipe step-by-step creation wizard","words":78,"complexity":"medium","product":"form_flow",
+    "en":"Build a multi-step recipe creation wizard for mobile where users can add ingredients with quantity and unit fields in step one, then define cooking steps in order on step two — each step should support a short description and optional timer value. Include a progress indicator at the top showing which step they're on, and make sure users can go back and edit previous steps without losing data. The final screen should show a summary preview before submitting.",
+    "zh":"做一个移动端的多步骤食谱创建向导，第一步让用户添加食材，每种食材可以填写用量和单位；第二步按顺序填写烹饪步骤，每个步骤支持输入简短说明，并可选填一个计时时长。顶部需要有进度指示器显示当前处于哪一步，同时确保用户返回上一步修改时不会丢失已填写的数据。最后一屏在正式提交前展示一个完整的内容预览摘要。"
+  },
+  {
+    "l1_zh":"实用工具","l1_en":"Utilities","l2":"Calculator / converter",
+    "topic":"Currency converter with live exchange rates","words":81,"complexity":"medium","product":"portfolio",
+    "en":"Build a mobile currency converter screen that fetches live exchange rates from an API — need a clean input field at the top where users type an amount, then two currency selector dropdowns (from/to) with flag icons, and the converted result displayed large below. Add a swap button between the two selectors to flip currencies instantly. The rate should auto-refresh every 60 seconds and show a small timestamp like \"Updated 2 min ago\" so users know how fresh the data is.",
+    "zh":"做一个移动端的货币换算页面，需要实时从接口拉取汇率数据——顶部放一个简洁的金额输入框，用户在里面输入数字，然后下面是两个带国旗图标的货币选择下拉框，分别对应源货币和目标货币，换算结果用大字显示在下方。两个选择框中间加一个切换按钮，点击可以瞬间互换两种货币的位置。汇率每60秒自动刷新一次，并在页面上显示一个小提示，比如\"2分钟前更新\"，让用户知道数据的时效性。"
+  },
+  {
+    "l1_zh":"教育学习","l1_en":"Education","l2":"Flashcard / vocabulary",
+    "topic":"GRE vocabulary with usage sentences","words":64,"complexity":"medium","product":"portfolio",
+    "en":"Build a flashcard screen for a GRE vocabulary app where each card shows the word on the front and flips to reveal the definition plus two example sentences showing real usage. Cards should support swipe-left to mark as \"needs review\" and swipe-right to mark as \"learned\", with a small progress bar at the top showing how many words are done in the current session.",
+    "zh":"做一个GRE词汇app的单词卡页面，每张卡片正面显示单词，翻转后展示释义以及两个体现实际用法的例句。卡片要支持左滑标记为\"待复习\"、右滑标记为\"已掌握\"，页面顶部放一个小进度条，显示本轮学习中已完成的单词数。"
+  },
+  {
+    "l1_zh":"健康管理","l1_en":"Health","l2":"Habit reminder",
+    "topic":"Daily water intake goal with glass-tap log","words":71,"complexity":"medium","product":"admin_panel",
+    "en":"Build a daily water intake screen where users set a goal (e.g. 2000ml) and log each glass by tapping a cup icon — each tap adds a fixed amount (250ml default, but user can change it in settings). Show a circular progress ring that fills as they drink, display the current ml vs goal, and keep a scrollable log below with timestamps for each entry so they can delete accidental taps.",
+    "zh":"做一个每日饮水记录页面，用户可以自行设置目标饮水量（比如2000ml），每次喝水时点击杯子图标来添加记录——每次点击默认增加250ml，但用户可以在设置里修改这个单次饮水量。页面上用一个圆形进度环来展示当前进度，随着饮水量增加逐渐填满，同时显示已喝毫升数与目标的对比。进度环下方有一个可滚动的饮水记录列表，每条记录带有时间戳，用户可以删除误操作的条目。"
+  },
+  {
+    "l1_zh":"美食探店","l1_en":"Food discovery","l2":"Calorie / nutrition lookup",
+    "topic":"Barcode scan calorie and nutrition lookup","words":78,"complexity":"medium","product":"search_filter",
+    "en":"Build a barcode scanner screen for the food calorie lookup app — when the user points the camera at a product barcode, it should auto-detect and scan without needing a button tap, then immediately show a bottom sheet with the food name, calories per serving, and key nutrition stats (carbs, protein, fat, GI index if available). If the barcode isn't found in the database, show a \"not found\" state with an option to manually search by name instead.",
+    "zh":"帮我做一个食物热量查询应用里的条形码扫描页面——用户把摄像头对准商品条形码后，应该能自动识别并完成扫描，不需要手动点按钮，扫描成功后立刻从底部弹出一个bottom sheet，显示食品名称、每份热量以及主要营养数据（碳水、蛋白质、脂肪，如果有的话还要显示GI指数）。如果数据库里查不到这个条形码，就展示一个\"未找到\"的状态页，并提供一个入口让用户改为按名称手动搜索。"
+  }
+]
+</script>
+
+<!-- ── i18n strings ── -->
+<script id="data-i18n" type="application/json">
+{
+  "en": {
+    "nav.pipeline":"Pipeline","nav.diversity":"Diversity","nav.persona":"Persona","nav.eval":"Evaluation","nav.samples":"Samples","nav.quickstart":"Quickstart",
+    "hero.eyebrow":"Production pipeline · v2 corpus-direct branch",
+    "hero.h1a":"Realistic UI query data,","hero.h1b":"synthesized with rigor.",
+    "hero.sub":"A production pipeline for generating large, diverse, persona-grounded natural-language queries that describe UI to be built — anchored to a 2,440-topic real-world corpus, validated by trigram-similarity dedup, and benchmarked across four generation strategies.",
+    "hero.p1":"Real-world corpus grounding","hero.p2":"Persona-centered authenticity","hero.p3":"Design-style aware","hero.p4":"Similarity-validated diversity",
+    "kpi.topics.unit":"topics","kpi.topics.label":"Corpus coverage","kpi.topics.foot":"61 L2 scenes · 12 L1 categories",
+    "kpi.success.label":"Run success rate","kpi.success.foot":"0 failures · claude-sonnet-4-6",
+    "kpi.words.unit":"words","kpi.words.label":"Avg query length","kpi.words.foot":"medium complexity, EN",
+    "kpi.lat.label":"Per-query latency","kpi.lat.foot":"200 queries in 11 min",
+    "why.eyebrow":"// THE PROBLEM","why.title":"Why synthesized UI queries usually fall short",
+    "why.sub":"Most \"let's just prompt an LLM for some queries\" pipelines collapse to narrow, templated distributions that don't generalize. We attack that on three axes.",
+    "why.bad1":"Narrow distribution","why.bad1b":"A naive prompt returns 100 variations of \"build me a dashboard\" — covering < 5% of real product space.",
+    "why.good1":"Real-world corpus anchoring","why.good1b":"Each generation is locked to a specific topic from a curated 2,440-entry corpus spanning 12 L1 categories.",
+    "why.bad2":"Robotic phrasing","why.bad2b":"LLMs default to a single polite, structured voice that doesn't match how humans actually request UI.",
+    "why.good2":"Persona-driven voice","why.good2b":"Five archetypes × three complexity styles produce first-person voice variation grounded in user goals.",
+    "why.bad3":"Visually flat output","why.bad3b":"Generated queries rarely specify visual style, leaving downstream UI generation to default to one aesthetic.",
+    "why.good3":"Design-style awareness","why.good3b":"Eleven registered design styles × three invocation modes (default / fixed / heuristic-auto) inject visual intent.",
+    "pipe.eyebrow":"// THE PIPELINE","pipe.title":"From spec to scored corpus, in seven stages",
+    "pipe.sub":"A deterministic plan layer separates \"what to generate\" from \"how to generate it\", making the pipeline reproducible, resumable, and offline-capable when needed.",
+    "pipe.n1":"Scenario spec (xlsx)","pipe.n2":"Corpus 2,440 topics","pipe.n3":"Plan allocation","pipe.n4":"Persona binding",
+    "pipe.n5":"LLM generation","pipe.n6":"Jaccard dedup + scoring","pipe.n7":"JSONL · SQLite · HTML",
+    "div.title":"Diversity through real-world grounding",
+    "div.sub":"The \"pre-stage\" is the secret. We don't ask the LLM to come up with topics — we pre-allocate them from a curated corpus, then let the LLM render natural language around each anchor. Similarity-based scoring then verifies the output stays diverse.",
+    "div.f1.t":"Hierarchical topic allocation",
+    "div.f1.d":"Excel scenario spec is parsed into 61 L2 scenes across 12 L1 categories. Each task in the plan is anchored to a concrete corpus topic — not a templated slot.",
+    "div.f2.t":"Trigram Jaccard dedup",
+    "div.f2.d":"Each query is compared against its same-scene peers via trigram-set Jaccard similarity. The diversity score rewards low max-peer-similarity.",
+    "div.f2.r1":"distinct enough","div.f2.r2":"strongly distinct",
+    "ps.title":"Authenticity through persona",
+    "ps.sub":"Five archetypes drawn from how people actually request UI work. Each archetype carries per-complexity style hints, so the same persona phrases a vague request differently from a complex one — preserving voice while scaling specificity.",
+    "ps.scope.t":"Persona scope: scene vs. task",
+    "ps.scope.d":"<code>--persona-scope scene</code> shares one persona across all tasks in the same L2 scene (for cohesive intra-scene voice). <code>--persona-scope task</code> assigns a unique persona per task (for maximum diversity). Both modes are deterministic and reproducible.",
+    "ps.fb.t":"Deterministic offline fallback",
+    "ps.fb.d":"The entire pipeline can run with zero LLM calls using seeded archetype selection and template-driven generation — useful for CI, MVP demos, or when an API is unavailable. Same plan + same seed always produces the same output.",
+    "ds.title":"Design-style aware generation",
+    "ds.sub":"Eleven first-class design styles, each with a Chinese persona-side hint and an English LLM-side instruction. New styles register in one line — the system was designed for extension.",
+    "ds.m1.t":"Free / contextual inference","ds.m1.d":"No fixed style — let the visual direction emerge naturally from scene + topic context.",
+    "ds.m2.t":"Explicit rotation","ds.m2.d":"Cycle through a user-supplied list. Guarantees coverage of priority styles.",
+    "ds.m3.t":"Heuristic scene-matching","ds.m3.d":"inferStyles() ranks styles by scene keywords — e.g. health + meditation → Neumorphism, Minimalism, Dark.",
+    "ev.title":"Validated by a 4-method evaluation framework",
+    "ev.sub":"Rather than asserting a method is \"best\", we ship a controlled comparison across four generation strategies, run on identical scenes, scored on identical rubrics. The trade-offs are honest.",
+    "ev.m1.t":"Scene-direct","ev.m1.d":"Only L1/L2 scene context. No topic, no persona. Measures raw scene-conditioned quality.",
+    "ev.m2.t":"Corpus-direct","ev.m2.d":"Scene + specific corpus topic. 1× LLM call. The production default — sweet spot.",
+    "ev.m3.t":"Persona-only","ev.m3.d":"Scene + persona, no topic anchor. Tests whether persona alone yields specific queries.",
+    "ev.m4.t":"Persona + Corpus","ev.m4.d":"Best on paper. 2× LLM calls (persona synthesis + query). Higher cost & latency.",
+    "ev.col.method":"Method","ev.col.topic":"Topic adherence","ev.col.voice":"Voice authenticity","ev.col.cost":"LLM calls / query","ev.col.verdict":"Verdict",
+    "ev.r1":"Baseline · drifts off-topic","ev.r2":"Production default · best ROI",
+    "ev.r3":"Strong voice · weak specificity","ev.r4":"Best quality · 2× cost & latency",
+    "ev.takeaway.t":"Honest takeaway:",
+    "ev.takeaway.b":" Persona+Corpus wins on paper, but at 2× the cost. For most production workloads, corpus-direct hits the sweet spot — 100% topic adherence with a single LLM call. Persona+Corpus is reserved for high-value subsets where voice quality matters most.",
+    "ev.scoring":"Scoring rubric: Authenticity (40%) + Specificity (40%) + Diversity (20%). Pass threshold ≥ 2.8 / 5.0.",
+    "sp.eyebrow":"// THE RECEIPTS","sp.title":"Real samples from a production run",
+    "sp.sub":"Six queries picked from a real 200-query corpus-direct run, spanning six L1 categories. Toggle EN ↔ 中文 in the top right — the data ships bilingual out of the box.",
+    "qs.eyebrow":"// RUN IT YOURSELF","qs.title":"Quickstart",
+    "qs.sub":"From clone to 50 generated queries in under 10 minutes. Requires Node 18+ and the Claude CLI (or set a Packy-compatible API key).",
+    "qs.note":"Each record in <code>queries.jsonl</code> includes the English query, a Chinese translation, word count, scene metadata, the corpus topic anchor, model name, and timing. Pipe directly into training, or run <code>scripts/generate-analysis-report.js</code> for a self-contained HTML report.",
+    "fm.eyebrow":"// THE MAP","fm.title":"What's inside","fm.sub":"The shortest path to understanding the codebase.",
+    "fm.r1":"Core engine: parsing, planning, generation, scoring (~2,600 LOC)",
+    "fm.r2":"Production CLI for the corpus-direct pipeline",
+    "fm.r3":"Persona-driven runner with --persona-scope control",
+    "fm.r4":"4-method evaluation harness on identical scenes",
+    "fm.r5":"Reusable: turn any scored JSONL into an interactive HTML report",
+    "fm.r6":"The 2,440-topic corpus across 61 L2 categories",
+    "fm.r7":"Latest production run — plan, queries, summary, xlsx export",
+    "fm.r8":"Full pipeline diagram and the original 5-stage research blueprint",
+    "ft.built":"Built with Claude · Self-contained showcase, no external dependencies"
+  },
+  "zh": {
+    "nav.pipeline":"流水线","nav.diversity":"多样性","nav.persona":"人格","nav.eval":"评估","nav.samples":"样例","nav.quickstart":"快速上手",
+    "hero.eyebrow":"生产级流水线 · v2 corpus-direct 分支",
+    "hero.h1a":"真实可用的 UI Query 数据，","hero.h1b":"以工程化方式合成。",
+    "hero.sub":"一条生产级流水线，用于规模化生成多样、以真实人格为锚的 UI 自然语言指令——以 2,440 条真实场景语料为基础，三元组 Jaccard 相似度去重校验，并跨 4 种生成策略做了对照评估。",
+    "hero.p1":"真实世界语料锚定","hero.p2":"以人为本的真实人格","hero.p3":"设计风格感知","hero.p4":"相似度验证多样性",
+    "kpi.topics.unit":"个话题","kpi.topics.label":"语料覆盖","kpi.topics.foot":"61 个 L2 场景 · 12 个 L1 分类",
+    "kpi.success.label":"运行成功率","kpi.success.foot":"0 失败 · claude-sonnet-4-6",
+    "kpi.words.unit":"词","kpi.words.label":"平均查询长度","kpi.words.foot":"medium 复杂度, 英文",
+    "kpi.lat.label":"单条平均耗时","kpi.lat.foot":"200 条耗时 11 分钟",
+    "why.eyebrow":"// 痛点","why.title":"合成 Query 数据为什么常常翻车",
+    "why.sub":"大部分\"找个 LLM 写点 query 就完事\"的做法，最后都会塌缩成模板化、覆盖面极窄的分布。我们从三个维度系统性解决这个问题。",
+    "why.bad1":"分布狭窄","why.bad1b":"naive prompt 出来的 100 条 query 都是\"做个 dashboard\"的变体，覆盖真实产品空间不到 5%。",
+    "why.good1":"真实语料锚定","why.good1b":"每次生成都锁定到一条具体的语料话题；语料库 2,440 条，覆盖 12 个 L1 分类。",
+    "why.bad2":"措辞机械","why.bad2b":"LLM 默认输出单一的礼貌、结构化口吻，与真实用户请求 UI 的方式相差很远。",
+    "why.good2":"人格驱动的口吻","why.good2b":"5 个原型 × 3 档复杂度，输出真正第一人称、围绕目标的口吻变化。",
+    "why.bad3":"视觉缺失","why.bad3b":"生成的 query 很少明确说明视觉风格，下游 UI 生成只能默认一种美学。",
+    "why.good3":"设计风格意识","why.good3b":"11 种注册风格 × 3 种调用模式（默认 / 固定 / 启发式自动），主动注入视觉意图。",
+    "pipe.eyebrow":"// 流水线","pipe.title":"从需求到打分语料，七个阶段",
+    "pipe.sub":"确定性的 plan 层把\"生成什么\"和\"怎么生成\"解耦，整条流水线可复现、可断点续跑、必要时可完全离线运行。",
+    "pipe.n1":"场景需求 (xlsx)","pipe.n2":"语料 2,440 条","pipe.n3":"计划分配","pipe.n4":"人格绑定",
+    "pipe.n5":"LLM 生成","pipe.n6":"Jaccard 去重 + 评分","pipe.n7":"JSONL · SQLite · HTML",
+    "div.title":"多样性：从真实世界数据出发的泛化",
+    "div.sub":"\"前置 (pre-stage)\"是关键。我们不让 LLM 自己想话题——而是从精选语料库里预分配，让 LLM 只负责把自然语言围绕每个锚点写出来。再用相似度打分校验输出多样性。",
+    "div.f1.t":"分层话题分配",
+    "div.f1.d":"Excel 场景规格被解析为 61 个 L2 场景、12 个 L1 分类。每个 task 锚定一条具体的语料话题——不是模板填空。",
+    "div.f2.t":"三元组 Jaccard 去重",
+    "div.f2.d":"每条 query 与同场景内的同辈做 trigram 集合的 Jaccard 相似度比较；多样性分鼓励低的 max-peer-similarity。",
+    "div.f2.r1":"足够独特","div.f2.r2":"明显独特",
+    "ps.title":"真实性：以人为中心的 query 生成",
+    "ps.sub":"5 个原型，源自人们真实请求 UI 工作的方式。每个原型自带 3 档复杂度的口吻提示，因此同一人格说\"模糊\"和\"复杂\"需求时口吻一致、信息密度递增。",
+    "ps.scope.t":"Persona scope：scene vs. task",
+    "ps.scope.d":"<code>--persona-scope scene</code> 让同一 L2 场景内所有 task 共享一个 persona（场景内口吻连贯）；<code>--persona-scope task</code> 每个 task 独立 persona（最大多样性）。两种模式都是确定性、可复现的。",
+    "ps.fb.t":"确定性离线 fallback",
+    "ps.fb.d":"整条流水线可以零 LLM 调用运行——通过种子化的原型选择 + 模板生成实现，适合 CI、MVP demo、或 API 不可用时。同 plan + 同 seed 永远输出相同结果。",
+    "ds.title":"设计风格感知的生成",
+    "ds.sub":"11 种一等公民设计风格，每种都同时配备中文人格侧 hint 和英文 LLM 侧 instruction。新风格只需一行注册——系统从一开始就为扩展而设计。",
+    "ds.m1.t":"自由 / 上下文推断","ds.m1.d":"不固定风格——让视觉方向从场景 + 话题中自然涌现。",
+    "ds.m2.t":"显式轮换","ds.m2.d":"按用户指定列表轮换，保证重点风格的覆盖。",
+    "ds.m3.t":"启发式场景匹配","ds.m3.d":"inferStyles() 根据场景关键词排序——例如 health + meditation → Neumorphism、Minimalism、Dark。",
+    "ev.title":"以 4 方法对照评估为支撑",
+    "ev.sub":"我们不强行声称某方法\"最好\"——而是直接交付一套对照实验：4 种生成策略跑同样场景、用同样 rubric 打分。trade-off 写得很坦诚。",
+    "ev.m1.t":"Scene-direct","ev.m1.d":"只用 L1/L2 场景上下文，无 topic、无 persona。衡量纯场景条件下的基线质量。",
+    "ev.m2.t":"Corpus-direct","ev.m2.d":"场景 + 具体语料 topic。1× LLM 调用。生产默认值——性价比最高。",
+    "ev.m3.t":"Persona-only","ev.m3.d":"场景 + persona，没有 topic 锚。用于检验单靠 persona 是否能产出具体 query。",
+    "ev.m4.t":"Persona + Corpus","ev.m4.d":"理论最优。2× LLM 调用（persona 合成 + query 生成）。成本和延迟都翻倍。",
+    "ev.col.method":"方法","ev.col.topic":"话题贴合度","ev.col.voice":"口吻真实度","ev.col.cost":"LLM 调用 / 条","ev.col.verdict":"结论",
+    "ev.r1":"基线 · 容易跑题","ev.r2":"生产默认 · 性价比最高",
+    "ev.r3":"口吻真实 · 信息度弱","ev.r4":"质量最高 · 2× 成本和延迟",
+    "ev.takeaway.t":"坦诚结论：",
+    "ev.takeaway.b":"Persona+Corpus 在纸面上最好，但要付 2× 成本。对大部分生产场景，corpus-direct 是性价比甜点——100% 话题贴合 + 单次 LLM 调用。Persona+Corpus 留给口吻质量特别重要的高价值子集。",
+    "ev.scoring":"评分规则：真实性 40% + 信息度 40% + 多样性 20%，及格线 ≥ 2.8 / 5.0。",
+    "sp.eyebrow":"// 真实样例","sp.title":"来自真实生产运行的样例",
+    "sp.sub":"6 条 query 来自一次真实的 200 条 corpus-direct 运行，覆盖 6 个 L1 分类。点右上角 EN ↔ 中文 切换——数据本身就是双语的。",
+    "qs.eyebrow":"// 自己跑跑看","qs.title":"快速上手",
+    "qs.sub":"从 clone 到 50 条生成 query，10 分钟内搞定。需要 Node 18+ 和 Claude CLI（或配置 Packy 兼容的 API key）。",
+    "qs.note":"<code>queries.jsonl</code> 中的每条记录都包含英文 query、中文翻译、字数、场景元数据、语料 topic 锚点、模型名、耗时。可以直接喂训练，也可以跑 <code>scripts/generate-analysis-report.js</code> 出一份独立 HTML 报表。",
+    "fm.eyebrow":"// 文件地图","fm.title":"仓库里都有什么","fm.sub":"理解这个项目最短的路径。",
+    "fm.r1":"核心引擎：解析、计划、生成、评分（约 2,600 行）",
+    "fm.r2":"corpus-direct 流水线的生产 CLI",
+    "fm.r3":"persona 驱动的运行器，支持 --persona-scope 控制",
+    "fm.r4":"4 方法对照评估的实验框架（同场景对比）",
+    "fm.r5":"通用工具：把任意打分 JSONL 转成可交互 HTML 报表",
+    "fm.r6":"61 个 L2 分类下共 2,440 条话题的语料库",
+    "fm.r7":"最近一次生产运行——plan、queries、summary、xlsx 导出",
+    "fm.r8":"完整流水线图，以及最初的 5 阶段研究 blueprint"
+  }
+}
+</script>
+
+<script>
+(function () {
+  const I18N = JSON.parse(document.getElementById('data-i18n').textContent);
+  const L1 = JSON.parse(document.getElementById('data-l1').textContent);
+  const L1EN = JSON.parse(document.getElementById('data-l1-en').textContent);
+  const PERSONAS = JSON.parse(document.getElementById('data-personas').textContent);
+  const STYLES = JSON.parse(document.getElementById('data-styles').textContent);
+  const SAMPLES = JSON.parse(document.getElementById('data-samples').textContent);
+
+  // ── L1 distribution bars ──
+  const l1Box = document.getElementById('l1-bars');
+  const max = Math.max(...Object.values(L1));
+  Object.entries(L1).sort((a, b) => b[1] - a[1]).forEach(([name, n]) => {
+    const row = document.createElement('div');
+    row.className = 'l1-row';
+    row.innerHTML =
+      '<div class="l1-name" data-l1-key="' + name + '">' + name + '</div>' +
+      '<div class="l1-bar"><div class="l1-fill" style="width:' + (n / max * 100).toFixed(1) + '%;"></div></div>' +
+      '<div class="l1-count">' + n + '</div>';
+    l1Box.appendChild(row);
+  });
+
+  // ── Personas ──
+  const pBox = document.getElementById('persona-cards');
+  PERSONAS.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'persona-card';
+    card.innerHTML =
+      '<div class="pc-id">' + p.id + '</div>' +
+      '<div class="pc-title" data-p-zh="' + p.title_zh + '" data-p-en="' + p.title_en + '">' + p.title_en + '</div>' +
+      '<div class="pc-title-en" data-p-zh-sub="' + p.title_en + '" data-p-en-sub="' + p.title_zh + '">' + p.title_zh + '</div>' +
+      '<div class="pc-styles">' +
+        '<div class="cx-row"><span class="cx">vague →</span> <span data-p-style="' + p.id + '.vague">' + p.styles.vague.en + '</span></div>' +
+        '<div class="cx-row"><span class="cx">medium →</span> <span data-p-style="' + p.id + '.medium">' + p.styles.medium.en + '</span></div>' +
+        '<div class="cx-row"><span class="cx">complex →</span> <span data-p-style="' + p.id + '.complex">' + p.styles.complex.en + '</span></div>' +
+      '</div>';
+    pBox.appendChild(card);
+  });
+
+  // ── Style chips ──
+  const sBox = document.getElementById('style-chips');
+  STYLES.forEach(s => {
+    const chip = document.createElement('span');
+    chip.className = 'style-chip';
+    chip.dataset.style = s;
+    chip.textContent = s;
+    sBox.appendChild(chip);
+  });
+
+  // ── Samples ──
+  const samplesBox = document.getElementById('sample-grid');
+  SAMPLES.forEach(s => {
+    const card = document.createElement('div');
+    card.className = 'sample-card';
+    card.innerHTML =
+      '<div class="sample-head">' +
+        '<span class="badge" data-l1-zh="' + s.l1_zh + '" data-l1-en="' + s.l1_en + '">' + s.l1_en + '</span>' +
+        '<span class="topic-chip">' + s.topic + '</span>' +
+        '<span class="meta">' + s.complexity + ' · ' + s.words + ' words</span>' +
+      '</div>' +
+      '<div class="sample-body" data-sample-en="' + escapeAttr(s.en) + '" data-sample-zh="' + escapeAttr(s.zh) + '">' +
+        s.en +
+      '</div>';
+    samplesBox.appendChild(card);
+  });
+
+  function escapeAttr(s) {
+    return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  // ── i18n apply ──
+  function applyLang(lang) {
+    document.documentElement.setAttribute('data-lang', lang);
+    const dict = I18N[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const k = el.getAttribute('data-i18n');
+      if (dict[k]) el.innerHTML = dict[k];
+    });
+    // L1 names in distribution chart
+    document.querySelectorAll('[data-l1-key]').forEach(el => {
+      const k = el.getAttribute('data-l1-key');
+      el.textContent = lang === 'zh' ? k : (L1EN[k] || k);
+    });
+    // Sample badges
+    document.querySelectorAll('[data-l1-zh]').forEach(el => {
+      el.textContent = lang === 'zh' ? el.getAttribute('data-l1-zh') : el.getAttribute('data-l1-en');
+    });
+    // Sample bodies
+    document.querySelectorAll('[data-sample-en]').forEach(el => {
+      const v = lang === 'zh' ? el.getAttribute('data-sample-zh') : el.getAttribute('data-sample-en');
+      el.textContent = v;
+    });
+    // Persona titles + sub-titles + style hints
+    document.querySelectorAll('[data-p-zh]').forEach(el => {
+      el.textContent = lang === 'zh' ? el.getAttribute('data-p-zh') : el.getAttribute('data-p-en');
+    });
+    document.querySelectorAll('[data-p-zh-sub]').forEach(el => {
+      el.textContent = lang === 'zh' ? el.getAttribute('data-p-zh-sub') : el.getAttribute('data-p-en-sub');
+    });
+    document.querySelectorAll('[data-p-style]').forEach(el => {
+      const [pid, lvl] = el.getAttribute('data-p-style').split('.');
+      const persona = PERSONAS.find(p => p.id === pid);
+      if (persona) el.textContent = persona.styles[lvl][lang];
+    });
+    // Toggle button states
+    document.querySelectorAll('[data-lang-btn]').forEach(b => {
+      b.classList.toggle('active', b.getAttribute('data-lang-btn') === lang);
+    });
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+  }
+
+  document.querySelectorAll('[data-lang-btn]').forEach(b => {
+    b.addEventListener('click', () => applyLang(b.getAttribute('data-lang-btn')));
+  });
+
+  // Default to EN; honor saved choice
+  const saved = (function () { try { return localStorage.getItem('uqm-lang'); } catch (e) { return null; } })();
+  const initial = saved === 'zh' || saved === 'en' ? saved : 'zh';
+  applyLang(initial);
+  document.querySelectorAll('[data-lang-btn]').forEach(b => {
+    b.addEventListener('click', () => {
+      try { localStorage.setItem('uqm-lang', b.getAttribute('data-lang-btn')); } catch (e) {}
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
