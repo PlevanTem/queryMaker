@@ -367,6 +367,19 @@ table.cmp .neutral { color: var(--muted); }
   transition: border-color 0.12s, transform 0.12s;
 }
 .sample-card:hover { border-color: var(--accent-bd); transform: translateY(-1px); }
+.sample-card.persona-maker        { border-top: 3px solid var(--amber); }
+.sample-card.persona-operator     { border-top: 3px solid var(--accent); }
+.sample-card.persona-planner      { border-top: 3px solid var(--green); }
+.sample-card.persona-curator      { border-top: 3px solid #c084fc; }
+.sample-card.persona-founder_like { border-top: 3px solid #f472b6; }
+.persona-chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 9px; border-radius: 999px;
+  font-size: 11px; font-weight: 500; line-height: 1;
+  background: var(--surface); border: 1px solid var(--border); color: var(--muted);
+}
+.persona-chip .pc-emoji { font-size: 13px; }
+.persona-chip .pc-label { color: var(--text); font-weight: 500; }
 .sample-head {
   padding: 14px 18px; border-bottom: 1px solid var(--border);
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
@@ -969,40 +982,39 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
 <script id="data-samples" type="application/json">
 [
   {
-    "l1_zh":"深度研究展示","l1_en":"Deep research / showcase","l2":"个人生活类",
-    "topic":"Travel Memory Scrapbook","words":100,"complexity":"medium","product":"portfolio",
-    "en":"Build a Travel Memory Scrapbook screen for a mobile app where users can create trip entries with a cover photo, trip title, date range, and a collage-style photo grid underneath. Each entry should be tappable to open a detail view with a vertical scroll layout showing photos mixed with short text notes — kind of like a digital scrapbook page. Keep the UI warm and nostalgic, maybe slightly aged paper texture as background, and make sure the photo grid on the entry card supports at least 3–5 images in a masonry or asymmetric layout rather than a plain uniform grid.",
-    "zh":"帮我做一个移动端的旅行记忆相册页面，用户可以新建旅程卡片，每张卡片上有封面照片、旅程标题、起止日期，以及下方一个拼贴风格的照片网格。点击卡片后进入详情页，详情页是竖向滚动的布局，照片和短文字笔记交错穿插排列，整体感觉就像翻一本数字剪贴簿。视觉风格要温暖、有点复古怀旧，背景最好带做旧纸张的质感，卡片上的照片网格要能放3到5张图，用瀑布流或者不对称的方式来排，不要那种方方正正的均匀网格。"
+    "persona":"maker","persona_emoji":"🛠️","persona_label_en":"Maker","persona_label_zh":"爱折腾的小白",
+    "l1_zh":"休闲游戏","l1_en":"Casual games","l2":"经典小游戏",
+    "topic":"Match-3 color gem cascade game","words":94,"complexity":"medium",
+    "en":"Need a match-3 color gem game where you tap or swap colorful gems on a grid and when three or more of the same color line up they burst and the gems above come falling down to fill the space, I want it to feel satisfying with little pop animations when gems disappear and maybe a score counter at the top so you can see how well you're doing, nothing too complicated just a clean fun little game I can open on my phone browser and play for a few minutes when I'm bored.",
+    "zh":"想做一个消消乐风格的彩色宝石游戏，在格子上点击或滑动交换宝石，三个或三个以上相同颜色的宝石连成一排就会爆开消除，上方的宝石随即落下填补空位，希望消除的时候有那种爽快的弹出动画，顶部放个分数计数器方便看自己的成绩，不用太复杂，界面干净好看就行，主要是能在手机浏览器上打开，无聊的时候随手玩几分钟的那种小游戏。"
   },
   {
-    "l1_zh":"交互方式","l1_en":"Interaction patterns","l2":"Adding & Creating",
-    "topic":"Recipe step-by-step creation wizard","words":78,"complexity":"medium","product":"form_flow",
-    "en":"Build a multi-step recipe creation wizard for mobile where users can add ingredients with quantity and unit fields in step one, then define cooking steps in order on step two — each step should support a short description and optional timer value. Include a progress indicator at the top showing which step they're on, and make sure users can go back and edit previous steps without losing data. The final screen should show a summary preview before submitting.",
-    "zh":"做一个移动端的多步骤食谱创建向导，第一步让用户添加食材，每种食材可以填写用量和单位；第二步按顺序填写烹饪步骤，每个步骤支持输入简短说明，并可选填一个计时时长。顶部需要有进度指示器显示当前处于哪一步，同时确保用户返回上一步修改时不会丢失已填写的数据。最后一屏在正式提交前展示一个完整的内容预览摘要。"
+    "persona":"operator","persona_emoji":"⚙️","persona_label_en":"Operator","persona_label_zh":"想偷懒的打工人",
+    "l1_zh":"交互方式","l1_en":"Interaction patterns","l2":"Searching & Finding",
+    "topic":"Multi-criteria filter-then-search with chip display","words":99,"complexity":"medium",
+    "en":"A search app where you pick a bunch of filters first — like category, price range, or location — before you even start typing, and then every filter you've picked shows up as a small removable label right above the results so you can actually see what's active without having to remember. I always forget what I filtered by and then wonder why the results look weird, so it needs to be really clear which filters are on, and tapping one of those labels should immediately drop it and refresh the results without making me start over from scratch.",
+    "zh":"一个搜索应用，用户在开始输入之前就能先选好一堆筛选条件——比如分类、价格区间或者位置，选完之后，所有已选的筛选项会以小标签的形式显示在结果列表正上方，这样就能一眼看清哪些条件是生效的，不用靠自己去记。我老是忘了自己筛了什么，然后搞不懂为什么结果看起来很奇怪，所以一定要让当前生效的筛选条件一目了然，而且点击某个标签就能立刻把它移除并刷新结果，不需要重新从头开始操作。"
   },
   {
-    "l1_zh":"实用工具","l1_en":"Utilities","l2":"Calculator / converter",
-    "topic":"Currency converter with live exchange rates","words":81,"complexity":"medium","product":"portfolio",
-    "en":"Build a mobile currency converter screen that fetches live exchange rates from an API — need a clean input field at the top where users type an amount, then two currency selector dropdowns (from/to) with flag icons, and the converted result displayed large below. Add a swap button between the two selectors to flip currencies instantly. The rate should auto-refresh every 60 seconds and show a small timestamp like \"Updated 2 min ago\" so users know how fresh the data is.",
-    "zh":"做一个移动端的货币换算页面，需要实时从接口拉取汇率数据——顶部放一个简洁的金额输入框，用户在里面输入数字，然后下面是两个带国旗图标的货币选择下拉框，分别对应源货币和目标货币，换算结果用大字显示在下方。两个选择框中间加一个切换按钮，点击可以瞬间互换两种货币的位置。汇率每60秒自动刷新一次，并在页面上显示一个小提示，比如\"2分钟前更新\"，让用户知道数据的时效性。"
+    "persona":"planner","persona_emoji":"📋","persona_label_en":"Planner","persona_label_zh":"喜欢列清单的整理控",
+    "l1_zh":"健康管理","l1_en":"Health","l2":"运动记录/健身计划",
+    "topic":"HIIT workout timer with round counter","words":95,"complexity":"medium",
+    "en":"A HIIT timer app where the round counter is always clearly visible at the top — something like \"Round 3 of 8\" so I always know where I am in the workout. The big countdown clock in the middle should switch between work time and rest time and change color so I can tell at a glance which phase I'm in, and there should be a simple label underneath saying \"Work\" or \"Rest\" in plain text. The start, pause, and reset buttons need to be big enough to tap quickly without stopping to look carefully.",
+    "zh":"做一个HIIT计时器应用，顶部要始终清晰显示当前轮次，比如\"第3轮 / 共8轮\"这样的格式，让我随时知道训练进度。中间的大倒计时在工作时间和休息时间之间切换时要变换颜色，一眼就能分辨当前处于哪个阶段，下方用普通文字显示\"训练\"或\"休息\"的简单标签。开始、暂停和重置按钮要足够大，不用仔细看就能快速点到。"
   },
   {
-    "l1_zh":"教育学习","l1_en":"Education","l2":"Flashcard / vocabulary",
-    "topic":"GRE vocabulary with usage sentences","words":64,"complexity":"medium","product":"portfolio",
-    "en":"Build a flashcard screen for a GRE vocabulary app where each card shows the word on the front and flips to reveal the definition plus two example sentences showing real usage. Cards should support swipe-left to mark as \"needs review\" and swipe-right to mark as \"learned\", with a small progress bar at the top showing how many words are done in the current session.",
-    "zh":"做一个GRE词汇app的单词卡页面，每张卡片正面显示单词，翻转后展示释义以及两个体现实际用法的例句。卡片要支持左滑标记为\"待复习\"、右滑标记为\"已掌握\"，页面顶部放一个小进度条，显示本轮学习中已完成的单词数。"
+    "persona":"curator","persona_emoji":"🎨","persona_label_en":"Curator","persona_label_zh":"内容驱动的审美派",
+    "l1_zh":"实用工具","l1_en":"Utilities","l2":"倒计时/纪念日",
+    "topic":"Memorial and tribute date annual reminder","words":89,"complexity":"medium",
+    "en":"Create a memorial and tribute date reminder app that feels quiet and reverent — like flipping through an old photo album in the late afternoon light — where each remembered person or moment gets their own soft card with a portrait-style photo, their name, and the annual date that marks them, and as the date draws near the whole app shifts into a warmer, more muted tone almost like candlelight, so it never feels like a cold calendar alert but more like a gentle nudge to pause and remember.",
+    "zh":"做一个纪念与追思日期提醒的应用，整体氛围要安静而庄重，就像在午后柔和的光线里慢慢翻阅一本老相册——每一位被铭记的人或每一段值得珍藏的时刻，都有专属的柔和卡片，配上竖版人像照片、姓名，以及每年循环的纪念日期；当日期临近时，整个应用的色调会自动过渡到更温暖、更沉静的感觉，像烛光一样，让人感受不到任何冰冷的日历提醒，更像是一次轻柔的提示，让你停下来，静静地想起那个人。"
   },
   {
-    "l1_zh":"健康管理","l1_en":"Health","l2":"Habit reminder",
-    "topic":"Daily water intake goal with glass-tap log","words":71,"complexity":"medium","product":"admin_panel",
-    "en":"Build a daily water intake screen where users set a goal (e.g. 2000ml) and log each glass by tapping a cup icon — each tap adds a fixed amount (250ml default, but user can change it in settings). Show a circular progress ring that fills as they drink, display the current ml vs goal, and keep a scrollable log below with timestamps for each entry so they can delete accidental taps.",
-    "zh":"做一个每日饮水记录页面，用户可以自行设置目标饮水量（比如2000ml），每次喝水时点击杯子图标来添加记录——每次点击默认增加250ml，但用户可以在设置里修改这个单次饮水量。页面上用一个圆形进度环来展示当前进度，随着饮水量增加逐渐填满，同时显示已喝毫升数与目标的对比。进度环下方有一个可滚动的饮水记录列表，每条记录带有时间戳，用户可以删除误操作的条目。"
-  },
-  {
-    "l1_zh":"美食探店","l1_en":"Food discovery","l2":"Calorie / nutrition lookup",
-    "topic":"Barcode scan calorie and nutrition lookup","words":78,"complexity":"medium","product":"search_filter",
-    "en":"Build a barcode scanner screen for the food calorie lookup app — when the user points the camera at a product barcode, it should auto-detect and scan without needing a button tap, then immediately show a bottom sheet with the food name, calories per serving, and key nutrition stats (carbs, protein, fat, GI index if available). If the barcode isn't found in the database, show a \"not found\" state with an option to manually search by name instead.",
-    "zh":"帮我做一个食物热量查询应用里的条形码扫描页面——用户把摄像头对准商品条形码后，应该能自动识别并完成扫描，不需要手动点按钮，扫描成功后立刻从底部弹出一个bottom sheet，显示食品名称、每份热量以及主要营养数据（碳水、蛋白质、脂肪，如果有的话还要显示GI指数）。如果数据库里查不到这个条形码，就展示一个\"未找到\"的状态页，并提供一个入口让用户改为按名称手动搜索。"
+    "persona":"founder_like","persona_emoji":"✨","persona_label_en":"Founder-like","persona_label_zh":"自留地用户",
+    "l1_zh":"多媒体处理","l1_en":"Media processing","l2":"海报/简历/卡片模板",
+    "topic":"Wedding invitation card creator","words":95,"complexity":"medium",
+    "en":"Make a wedding invitation card creator that feels personal and handcrafted, not like some cookie-cutter template factory — I want a small set of maybe four or five elegant layouts I can actually customize with our names, date, and a short line of text, and the font choices should lean traditional and warm, not trendy sans-serif stuff. No stock photo backgrounds, no cartoon illustrations, no confetti animations — just clean, tasteful design with maybe a soft floral border option. It should feel like something I made myself, not something that came off an assembly line.",
+    "zh":"做一个婚礼请柬制作工具，要有那种亲手设计的温馨感，而不是流水线出来的千篇一律模板——我想要四五种精致的排版样式，能真正自定义我们的名字、日期和一句简短的文字，字体要偏传统、有温度，不要那种时髦的无衬线风格。不要素材库里的背景图，不要卡通插画，不要撒纸屑的动画效果——就是干净、有品味的设计，可以加一个淡雅的花卉边框选项。整体感觉要像是我自己亲手做的，不像是机器批量生产出来的。"
   }
 ]
 </script>
@@ -1091,6 +1103,7 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "ev.takeaway.b":" Persona+Corpus wins on paper, but at 2× the cost. For most production workloads, corpus-direct hits the sweet spot — 100% topic adherence with a single LLM call. Persona+Corpus is reserved for high-value subsets where voice quality matters most.",
     "ev.scoring":"Scoring rubric: Authenticity (40%) + Specificity (40%) + Diversity (20%). Pass threshold ≥ 2.8 / 5.0.",
     "sp.eyebrow":"// THE RECEIPTS","sp.title":"Real samples from a production run",
+    "sp.sub":"Five queries hand-picked from a real 200-query corpus-direct run, one per persona archetype, spanning five distinct L1 scenes. Each card shows the persona that drove the tone, plus the corpus topic anchor. Toggle EN ↔ 中文 in the top right — the data ships bilingual out of the box.",
     "sp.sub":"Six queries picked from a real 200-query corpus-direct run, spanning six L1 categories. Toggle EN ↔ 中文 in the top right — the data ships bilingual out of the box.",
     "qs.eyebrow":"// RUN IT YOURSELF","qs.title":"Quickstart",
     "qs.sub":"From clone to 50 generated queries in under 10 minutes. Requires Node 18+ and the Claude CLI (or set a Packy-compatible API key).",
@@ -1187,6 +1200,7 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "ev.takeaway.b":"Persona+Corpus 在纸面上最好，但要付 2× 成本。对大部分生产场景，corpus-direct 是性价比甜点——100% 话题贴合 + 单次 LLM 调用。Persona+Corpus 留给口吻质量特别重要的高价值子集。",
     "ev.scoring":"评分规则：真实性 40% + 信息度 40% + 多样性 20%，及格线 ≥ 2.8 / 5.0。",
     "sp.eyebrow":"// 真实样例","sp.title":"来自真实生产运行的样例",
+    "sp.sub":"从一次真实的 200 条 corpus-direct 运行中精选出 5 条，每个 persona archetype 各一条，覆盖 5 个不同的 L1 场景。每张卡片标注了驱动语气的 persona，以及锚定的 corpus topic。右上角可切换 EN ↔ 中文，数据本身就是双语直出。",
     "sp.sub":"6 条 query 来自一次真实的 200 条 corpus-direct 运行，覆盖 6 个 L1 分类。点右上角 EN ↔ 中文 切换——数据本身就是双语的。",
     "qs.eyebrow":"// 自己跑跑看","qs.title":"快速上手",
     "qs.sub":"从 clone 到 50 条生成 query，10 分钟内搞定。需要 Node 18+ 和 Claude CLI（或配置 Packy 兼容的 API key）。",
@@ -1257,10 +1271,18 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
   const samplesBox = document.getElementById('sample-grid');
   SAMPLES.forEach(s => {
     const card = document.createElement('div');
-    card.className = 'sample-card';
+    const personaCls = s.persona ? ' persona-' + s.persona : '';
+    card.className = 'sample-card' + personaCls;
+    const personaChip = s.persona
+      ? '<span class="persona-chip" data-persona-id="' + s.persona + '">' +
+          '<span class="pc-emoji">' + (s.persona_emoji || '') + '</span>' +
+          '<span class="pc-label" data-p-zh="' + (s.persona_label_zh || '') + '" data-p-en="' + (s.persona_label_en || '') + '">' + (s.persona_label_en || '') + '</span>' +
+        '</span>'
+      : '';
     card.innerHTML =
       '<div class="sample-head">' +
         '<span class="badge" data-l1-zh="' + s.l1_zh + '" data-l1-en="' + s.l1_en + '">' + s.l1_en + '</span>' +
+        personaChip +
         '<span class="topic-chip">' + s.topic + '</span>' +
         '<span class="meta">' + s.complexity + ' · ' + s.words + ' words</span>' +
       '</div>' +
