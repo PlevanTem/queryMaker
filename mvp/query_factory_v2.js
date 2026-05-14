@@ -2300,9 +2300,10 @@ function buildCorpusDirectQueryPrompt(task) {
     `4. ${opener.instruction}`,
     "5. Match your persona's voice. Do NOT use product/dev jargon (e.g. \"modal\", \"dashboard\", \"masonry grid\", \"auto-generate\", \"swipeable\", \"bottom sheet\", \"scrollable card\", \"tag chip\", \"GTD\", \"CTA\") unless your persona would naturally use such words. If you catch yourself reaching for one, rephrase as the persona would.",
     "6. Only include the kinds of details your persona would naturally bring up — match the angle described in your Voice line. Skip details outside that angle.",
-    `7. Complexity: ${task.target_complexity} — ${complexityInstruction} (Phrased as the persona would.)`,
+    "7. Frame the request as building a complete 0-to-1 mini-app, NOT a single page or screen. The primary noun must be \"app\" or a specific app type (e.g. \"tracker\", \"tool\", \"reminder\", \"planner\", \"calculator\", \"logger\", \"manager\", \"timer\"). Do NOT use \"page\", \"screen\", \"view\", \"section\", \"module\", \"feature\", \"widget\" as the thing being built. (Mid-query references like \"the home screen of the app\" are fine — only the top-level scope noun is restricted.)",
+    `8. Complexity: ${task.target_complexity} — ${complexityInstruction} (Phrased as the persona would.)`,
     hasStyle
-      ? `8. Add natural visual style description following real user habit: ${styleInstruction} — integrate the style requirement into the query naturally instead of rigid listing.`
+      ? `9. Add natural visual style description following real user habit: ${styleInstruction} — integrate the style requirement into the query naturally instead of rigid listing.`
       : null,
     "",
     "Output in natural English only, pure user request sentence.",

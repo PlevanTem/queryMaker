@@ -124,8 +124,16 @@ async function main() {
   // reorder so "queries" is first
   wb.SheetNames = ["queries", ...wb.SheetNames.filter((n) => n !== "queries")];
 
-  XLSX.writeFile(wb, xlsxPath);
-  console.log(`📊 已更新 ${path.relative(process.cwd(), xlsxPath)} （新增列 query_text_zh）`);
+  try {
+    XLSX.writeFile(wb, xlsxPath);
+    console.log(`📊 已更新 ${path.relative(process.cwd(), xlsxPath)} （新增列 query_text_zh）`);
+  } catch (e) {
+    if (e.code === "EBUSY") {
+      console.log(`⚠️  xlsx 被占用（请关闭 Excel 后重跑或单独 rebuild）：${path.relative(process.cwd(), xlsxPath)}`);
+    } else {
+      throw e;
+    }
+  }
 }
 
 main().catch((err) => {
