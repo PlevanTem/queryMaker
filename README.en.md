@@ -177,6 +177,44 @@ See the [Live Demo](https://plevantem.github.io/queryMaker/) for the full
 benchmark write-up, or open `data/output/corpus_method_comparison.html` after running
 `scripts/test-corpus-methods.js`.
 
+## Iteration Story: 4 stages, 4 fixes
+
+This wasn't a single shot — each stage is a real production-grade pain that surfaced *only after* running the previous version at scale, then a focused prompt or pipeline fix. The trail itself is more instructive than any single prompt-engineering snippet.
+
+### Stage 1 — Naive baseline (no scaffolding)
+
+No persona, no opener distribution, no scope discipline. Same first-N corpus topics get reused across batches; **"Build a mobile X" template dominates**; queries framed as a single page or screen, not a 0-to-1 app.
+
+### Stage 2 — Three-layer diversification ([commit 040a427](https://github.com/PlevanTem/queryMaker/commit/040a427))
+
+| Fix | Layer-A least-used topic dedup across batches via `corpus_usage.json` state · 5-bucket opener hash keyed by `query_id` · persona-tone semantic mapping from L2 → 5 ordinary-user archetypes |
+|---|---|
+| **Result** | Cross-batch corpus-topic overlap **100% → 0%**; "Build a" share **54% → 21%**; 5 distinct persona voices visible in batch |
+| **New pain** | Audit found **49.5% of queries** still framed as "Build a XX page where…" — opener now diverse but scope noun still page-level, causing downstream LLMs to generate single-page mocks |
+
+### Stage 3 — App-scope rewrite ([commit 07ed4af](https://github.com/PlevanTem/queryMaker/commit/07ed4af))
+
+| Fix | New rule 7 forbids `page / screen / view / section / module / feature / widget` as the top-level scope noun. Use `app` or a specific app type (`tracker / tool / reminder / planner / calculator / logger / manager / timer`) |
+|---|---|
+| **Result** | Single-page-framed queries **49.5% → 0%**; average word count unchanged (91 → 91, no length inflation) |
+| **New pain** | Audit found **76% of EN / 80% of ZH queries** contained negation words; **45% had outright grievance dump patterns** ("no stock photo, no cartoon, no confetti…") |
+
+**Real sample (v5 founder_like, wedding card creator) — BEFORE**:
+
+> Make a wedding invitation card creator that feels personal and handcrafted, **not like** some cookie-cutter template factory — I want a small set of maybe four or five elegant layouts I can actually customize with our names, date, and a short line of text, and the font choices should lean traditional and warm, **not** trendy sans-serif stuff. **No** stock photo backgrounds, **no** cartoon illustrations, **no** confetti animations — just clean, tasteful design with maybe a soft floral border option. It should feel like something I made myself, **not** something that came off an assembly line.
+
+### Stage 4 — Positive-framing rewrite · current ([commit ee04965](https://github.com/PlevanTem/queryMaker/commit/ee04965))
+
+| Fix | (1) Rewrote `founder_like` voice — was literally instructed to "explain what NOT to include as much as what to include" · (2) Flipped 3 "Do NOT" prompt rules to positive form ("Open with the substance" / "Use everyday vocabulary" / "Use 'app' as top-level noun") · (3) Added explicit positive-framing rule limiting negation words to ≤1 per query |
+|---|---|
+| **Result** | NEG words / query **1.08 → 0.66 (-39%)**; **grievance patterns 0.58 → 0.22 (-62%)**; by persona: curator **-56%**, maker **-57%**, planner **-39%**; residual negations are now feature-value descriptions ("auto-saves so you never lose"), not grievance dumps |
+
+**Real sample (v6 founder_like, ATS resume builder — same persona, same L2) — AFTER**:
+
+> Create a resume builder app that has its own quiet identity — one of those tools you actually feel good using — built around a small, carefully chosen set of ATS-friendly templates that are clean but still carry a bit of character, where I can fill in my experience and skills section by section and watch a live preview come together in a format that looks genuinely considered to a human reader while staying structured enough for automated hiring systems to parse without a fuss.
+
+**Why this matters**: every stage is a single, focused commit on `main` — fully reproducible. Quantitative deltas are computed against the same persona breakdown so improvements are not just topic luck. Interactive timeline with collapsible before/after samples lives in the [Live Demo Evolution section](https://plevantem.github.io/queryMaker/#evolution).
+
 ## Architecture
 
 Core logic is centralized; CLIs are thin wrappers.

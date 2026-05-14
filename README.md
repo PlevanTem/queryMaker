@@ -173,6 +173,46 @@ flowchart TD
 完整对比写作和数据见 [在线 Demo](https://plevantem.github.io/queryMaker/)，
 或在本地跑完 `scripts/test-corpus-methods.js` 后打开 `data/output/corpus_method_comparison.html`。
 
+## 演进路线：4 个阶段，4 次修复
+
+不是一次到位 —— 每个阶段都是上一版规模化跑批之后才暴露出来的真实痛点，再做一次聚焦的 prompt / 流水线修复。这条线索本身比单一 prompt 工程更有借鉴价值。
+
+### Stage 1 — 朴素基线（无任何脚手架）
+
+无 persona、无 opener 分布、无 scope 纪律。批次之间反复使用前 N 个相同的 corpus topic；**「Build a mobile X」模板占绝对主导**；query 框定为单页/单屏，不是 0-to-1 完整 app。
+
+### Stage 2 — 三层差异化 ([commit 040a427](https://github.com/PlevanTem/queryMaker/commit/040a427))
+
+| Fix | Layer-A 跨批次最少使用 topic 优先（持久化到 `corpus_usage.json`）· 5 桶 opener 哈希按 `query_id` 决定性分配 · persona-tone 按 L2 语义最佳匹配映射到 5 个普通用户 archetype |
+|---|---|
+| **Result** | 跨批次 corpus_topic 重叠率 **100% → 0%**；「Build a」开头占比 **54% → 21%**；批次内 5 种 persona 口吻清晰可辨 |
+| **New pain** | 审计发现 **49.5% query 仍以「Build a XX page where…」框定** —— opener 已分散，但 scope 名词仍在 page 级 |
+
+### Stage 3 — App-scope 改写 ([commit 07ed4af](https://github.com/PlevanTem/queryMaker/commit/07ed4af))
+
+| Fix | Rule 7 禁止 `page / screen / view / section / module / feature / widget` 作顶层 scope 名词；必须用 `app` 或具体 app 类型（`tracker / tool / reminder / planner / calculator / logger / manager / timer`） |
+|---|---|
+| **Result** | 单页框定 query：**49.5% → 0%**；平均词数无变化（91 → 91，无长度膨胀） |
+| **New pain** | 审计发现 **76% EN / 80% ZH** 含否定词；**45% 出现 grievance dump 模式**（"no stock photo, no cartoon, no confetti…"） |
+
+**真实样本（v5 founder_like 婚礼请柬制作器）—— BEFORE**：
+
+> Make a wedding invitation card creator that feels personal and handcrafted, **not like** some cookie-cutter template factory — I want a small set of maybe four or five elegant layouts I can actually customize with our names, date, and a short line of text, and the font choices should lean traditional and warm, **not** trendy sans-serif stuff. **No** stock photo backgrounds, **no** cartoon illustrations, **no** confetti animations — just clean, tasteful design with maybe a soft floral border option. It should feel like something I made myself, **not** something that came off an assembly line.
+
+### Stage 4 — 正向表达改写 · 当前 ([commit ee04965](https://github.com/PlevanTem/queryMaker/commit/ee04965))
+
+| Fix | (1) 改写 `founder_like` voice —— 之前字面要求 "explain what NOT to include as much as what to include" · (2) 把 3 条 "Do NOT" prompt 规则翻成正向（"Open with the substance" / "Use everyday vocabulary" / "Use 'app' as top-level noun"）· (3) 增加显式正向表达规则，限制每条 query 否定词 ≤1 个 |
+|---|---|
+| **Result** | 否定词人均 **1.08 → 0.66 (-39%)**；**Grievance 模式 0.58 → 0.22 (-62%)**；按 persona：curator **-56%**、maker **-57%**、planner **-39%**；残留否定词基本是功能价值描述（"auto-saves so you never lose"），不再是 grievance dump |
+
+**真实样本（v6 founder_like ATS 简历生成器，同 persona 同 L2，见对比）—— AFTER**：
+
+> Create a resume builder app that has its own quiet identity — one of those tools you actually feel good using — built around a small, carefully chosen set of ATS-friendly templates that are clean but still carry a bit of character, where I can fill in my experience and skills section by section and watch a live preview come together in a format that looks genuinely considered to a human reader while staying structured enough for automated hiring systems to parse without a fuss.
+
+**关键观察**：每个阶段都是 `main` 上一次聚焦的 commit —— 完全可复现；定量改善按相同 persona 拆分计算，确保不是 topic 选择的运气。完整可交互版本见 [docs/index.html 的 Evolution section](https://plevantem.github.io/queryMaker/#evolution)。
+
+---
+
 ## 多样性与去重策略
 
 > 真实跑批次发现：单次任务质量好不代表整批分布健康。两个隐藏盲点专门花了一个迭代解决。

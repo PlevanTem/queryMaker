@@ -380,6 +380,59 @@ table.cmp .neutral { color: var(--muted); }
 }
 .persona-chip .pc-emoji { font-size: 13px; }
 .persona-chip .pc-label { color: var(--text); font-weight: 500; }
+
+/* ── Evolution timeline ── */
+.tl-grid { display: grid; grid-template-columns: 88px 1fr; gap: 0; }
+.tl-step { display: contents; }
+.tl-rail { position: relative; display: flex; flex-direction: column; align-items: center; padding-top: 24px; }
+.tl-rail::before { content: ''; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--border); transform: translateX(-50%); }
+.tl-step:first-child .tl-rail::before { top: 24px; }
+.tl-step:last-child  .tl-rail::before { bottom: calc(100% - 30px); }
+.tl-dot { position: relative; z-index: 1; width: 14px; height: 14px; border-radius: 50%; background: var(--surface); border: 2px solid var(--muted); margin-bottom: 10px; }
+.tl-step.tl-current .tl-dot { background: var(--amber); border-color: var(--amber); box-shadow: 0 0 0 4px rgba(245,158,11,0.18); }
+.tl-vtag { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; color: var(--text); background: var(--surface2); padding: 3px 8px; border-radius: 4px; white-space: nowrap; }
+.tl-step.tl-current .tl-vtag { background: var(--amber); color: #fff; }
+.tl-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 22px; margin: 0 0 18px 14px; transition: border-color 0.12s; }
+.tl-card:hover { border-color: var(--accent-bd); }
+.tl-step:last-child .tl-card { margin-bottom: 0; }
+.tl-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.tl-title .tl-commit { font-family: 'SFMono-Regular', monospace; font-size: 11px; color: var(--muted); margin-left: 8px; font-weight: 400; }
+.tl-row { display: flex; gap: 12px; align-items: flex-start; margin: 8px 0; font-size: 13px; line-height: 1.65; }
+.tl-row .tl-key { flex: 0 0 56px; font-size: 10px; font-weight: 700; letter-spacing: 0.6px; padding-top: 3px; }
+.tl-row.tl-pain   .tl-key { color: var(--red); }
+.tl-row.tl-fix    .tl-key { color: var(--green); }
+.tl-row.tl-metric .tl-key { color: var(--accent); }
+.tl-row .tl-val { flex: 1; color: var(--muted); }
+.tl-row .tl-val strong { color: var(--text); font-weight: 500; }
+.tl-row .tl-val code { font-size: 12px; background: var(--bg); padding: 1px 6px; border-radius: 3px; color: var(--accent); }
+.tl-sample { margin-top: 12px; }
+.tl-sample summary { cursor: pointer; font-size: 12px; color: var(--muted); padding: 6px 0; user-select: none; list-style: none; display: inline-flex; align-items: center; gap: 6px; }
+.tl-sample summary::before { content: '▸'; font-size: 10px; transition: transform 0.15s; }
+.tl-sample[open] summary::before { transform: rotate(90deg); }
+.tl-sample summary:hover { color: var(--accent); }
+.tl-sample summary::-webkit-details-marker { display: none; }
+.tl-sample[open] summary { color: var(--accent); }
+.tl-sample-body {
+  background: var(--bg); border-left: 3px solid var(--border);
+  padding: 12px 16px; margin-top: 6px; border-radius: 0 6px 6px 0;
+  font-size: 12.5px; line-height: 1.75; color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'SFMono-Regular', monospace;
+  white-space: pre-wrap; word-break: break-word;
+}
+.tl-sample-body.tl-bad  { border-left-color: var(--red); }
+.tl-sample-body.tl-good { border-left-color: var(--green); }
+.tl-sample-body .tl-marker {
+  display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 0.6px;
+  padding: 2px 6px; border-radius: 3px; margin-right: 8px; vertical-align: middle;
+  font-family: -apple-system, sans-serif;
+}
+.tl-sample-body.tl-bad .tl-marker  { background: rgba(248,81,73,0.15); color: var(--red); }
+.tl-sample-body.tl-good .tl-marker { background: rgba(63,185,80,0.15); color: var(--green); }
+@media (max-width: 640px) {
+  .tl-grid { grid-template-columns: 60px 1fr; }
+  .tl-vtag { font-size: 10px; padding: 2px 5px; }
+  .tl-card { margin-left: 8px; padding: 14px 16px; }
+}
 .sample-head {
   padding: 14px 18px; border-bottom: 1px solid var(--border);
   display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
@@ -463,6 +516,7 @@ footer a { color: var(--accent); }
   <a href="#diversity" class="nav hide-sm" data-i18n="nav.diversity">Diversity</a>
   <a href="#persona" class="nav hide-sm" data-i18n="nav.persona">Persona</a>
   <a href="#evaluation" class="nav hide-sm" data-i18n="nav.eval">Evaluation</a>
+  <a href="#evolution" class="nav hide-sm" data-i18n="nav.evolution">Evolution</a>
   <a href="#samples" class="nav hide-sm" data-i18n="nav.samples">Samples</a>
   <a href="#quickstart" class="nav hide-sm" data-i18n="nav.quickstart">Quickstart</a>
   <div class="topbar-spacer"></div>
@@ -891,6 +945,110 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
 </section>
 
 <!-- ── Samples ── -->
+<!-- ── Evolution timeline ── -->
+<section class="block" id="evolution">
+  <div class="section-eyebrow" data-i18n="ev2.eyebrow">// HOW WE GOT HERE</div>
+  <h2 class="section-title" data-i18n="ev2.title">Iteration story: 4 stages, 4 fixes</h2>
+  <p class="section-sub" data-i18n="ev2.sub">
+    Each stage is a real production-grade pain we discovered <em>after</em> running the previous version at scale, then a focused prompt or pipeline fix. Click any "Sample query" to read the actual generated text — same persona, side by side, before vs after.
+  </p>
+
+  <div class="tl-grid">
+    <!-- Stage 1: naive baseline -->
+    <div class="tl-step">
+      <div class="tl-rail"><div class="tl-dot"></div><div class="tl-vtag">Stage 1</div></div>
+      <div class="tl-card">
+        <div class="tl-title" data-i18n="ev2.s1.t">Naive baseline — single prompt, no scaffolding</div>
+        <div class="tl-row tl-pain">
+          <div class="tl-key">PAIN</div>
+          <div class="tl-val" data-i18n="ev2.s1.p">No persona, no opener distribution, no scope discipline. Same first-N corpus topics get reused across batches; <strong>"Build a mobile X" pattern dominates</strong>; query framed as a single page or screen, not a 0-to-1 app.</div>
+        </div>
+        <details class="tl-sample">
+          <summary data-i18n="ev2.s1.sumr">Sample query (illustrative)</summary>
+          <div class="tl-sample-body tl-bad"><span class="tl-marker">BEFORE</span>Build a mobile travel scrapbook page where users can create entries with cover photo, trip title, date range, and a collage-style photo grid… [identical opener and "page" framing across the entire batch]</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- Stage 2: three-layer diversification -->
+    <div class="tl-step">
+      <div class="tl-rail"><div class="tl-dot"></div><div class="tl-vtag">Stage 2</div></div>
+      <div class="tl-card">
+        <div class="tl-title">
+          <span data-i18n="ev2.s2.t">Three-layer diversification</span>
+          <span class="tl-commit"><a href="https://github.com/PlevanTem/queryMaker/commit/040a427" target="_blank" rel="noopener">040a427</a></span>
+        </div>
+        <div class="tl-row tl-fix">
+          <div class="tl-key">FIX</div>
+          <div class="tl-val" data-i18n="ev2.s2.f">Layer-A least-used topic dedup across batches via <code>corpus_usage.json</code> state · 5-bucket opener hash (<code>Build a / Need a / Create a / Make a / no opener</code>) keyed by <code>query_id</code> · persona-tone semantic mapping from L2 → 5 ordinary-user archetypes.</div>
+        </div>
+        <div class="tl-row tl-metric">
+          <div class="tl-key">RESULT</div>
+          <div class="tl-val" data-i18n="ev2.s2.r">Cross-batch corpus-topic overlap: <strong>100% → 0%</strong>. "Build a" share: <strong>54% → 21%</strong>. 5 distinct persona voices visible in batch.</div>
+        </div>
+        <div class="tl-row tl-pain">
+          <div class="tl-key">NEW PAIN</div>
+          <div class="tl-val" data-i18n="ev2.s2.p">Audit found <strong>49.5% of queries</strong> still framed as "Build a XX page where…" — the opener is now diverse but the scope noun is still page-level, causing downstream LLMs to generate single-page mocks instead of complete apps.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 3: app-scope rewrite -->
+    <div class="tl-step">
+      <div class="tl-rail"><div class="tl-dot"></div><div class="tl-vtag">Stage 3</div></div>
+      <div class="tl-card">
+        <div class="tl-title">
+          <span data-i18n="ev2.s3.t">App-scope rewrite</span>
+          <span class="tl-commit"><a href="https://github.com/PlevanTem/queryMaker/commit/07ed4af" target="_blank" rel="noopener">07ed4af</a></span>
+        </div>
+        <div class="tl-row tl-fix">
+          <div class="tl-key">FIX</div>
+          <div class="tl-val" data-i18n="ev2.s3.f">New rule 7 forbids <code>page / screen / view / section / module / feature / widget</code> as the top-level scope noun. Use <code>app</code> or a specific app type (<code>tracker / tool / reminder / planner / calculator / logger / manager / timer</code>). Existing 200-row batch retrofitted via <code>scripts/rewrite-app-scope.js</code>.</div>
+        </div>
+        <div class="tl-row tl-metric">
+          <div class="tl-key">RESULT</div>
+          <div class="tl-val" data-i18n="ev2.s3.r">Single-page-framed queries: <strong>49.5% → 0%</strong>. Average word count unchanged (91 → 91, no length inflation).</div>
+        </div>
+        <div class="tl-row tl-pain">
+          <div class="tl-key">NEW PAIN</div>
+          <div class="tl-val" data-i18n="ev2.s3.p">Audit found <strong>76% of EN queries / 80% of ZH</strong> contained negation words; <strong>45% had outright grievance dump patterns</strong> ("no stock photo, no cartoon, no confetti…"). Real users describing 0-to-1 apps speak in positive terms — they're building something they want, not refining something they hate.</div>
+        </div>
+        <details class="tl-sample">
+          <summary data-i18n="ev2.s3.sumr">Sample query (real, founder_like persona, wedding card creator)</summary>
+          <div class="tl-sample-body tl-bad"><span class="tl-marker">BEFORE</span>Make a wedding invitation card creator that feels personal and handcrafted, <strong>not like</strong> some cookie-cutter template factory — I want a small set of maybe four or five elegant layouts I can actually customize with our names, date, and a short line of text, and the font choices should lean traditional and warm, <strong>not</strong> trendy sans-serif stuff. <strong>No</strong> stock photo backgrounds, <strong>no</strong> cartoon illustrations, <strong>no</strong> confetti animations — just clean, tasteful design with maybe a soft floral border option. It should feel like something I made myself, <strong>not</strong> something that came off an assembly line.</div>
+        </details>
+      </div>
+    </div>
+
+    <!-- Stage 4: positive-framing (CURRENT) -->
+    <div class="tl-step tl-current">
+      <div class="tl-rail"><div class="tl-dot"></div><div class="tl-vtag">Stage 4</div></div>
+      <div class="tl-card">
+        <div class="tl-title">
+          <span data-i18n="ev2.s4.t">Positive-framing prompt rewrite — current</span>
+          <span class="tl-commit"><a href="https://github.com/PlevanTem/queryMaker/commit/ee04965" target="_blank" rel="noopener">ee04965</a></span>
+        </div>
+        <div class="tl-row tl-fix">
+          <div class="tl-key">FIX</div>
+          <div class="tl-val" data-i18n="ev2.s4.f"><strong>(1)</strong> Rewrote <code>founder_like</code> voice — was literally instructed to "explain what NOT to include as much as what to include". <strong>(2)</strong> Flipped three "Do NOT" prompt rules into positive-form ("Open with the substance" / "Use everyday vocabulary" / "Use 'app' as top-level noun"). LLMs primed by negation imperatives mirror them in output. <strong>(3)</strong> Added explicit positive-framing rule limiting negation words to ≤1 per query.</div>
+        </div>
+        <div class="tl-row tl-metric">
+          <div class="tl-key">RESULT</div>
+          <div class="tl-val" data-i18n="ev2.s4.r">NEG words / query: <strong>1.08 → 0.66 (-39%)</strong>. <strong>Grievance patterns: 0.58 → 0.22 (-62%)</strong>. By persona: curator <strong>-56%</strong>, maker <strong>-57%</strong>, planner <strong>-39%</strong>. Residual negations are now feature-value descriptions ("auto-saves so you never lose"), not grievance dumps.</div>
+        </div>
+        <details class="tl-sample" open>
+          <summary data-i18n="ev2.s4.sumr">Sample query (real, founder_like persona, ATS resume builder)</summary>
+          <div class="tl-sample-body tl-good"><span class="tl-marker">AFTER</span>Create a resume builder app that has its own quiet identity — one of those tools you actually feel good using — built around a small, carefully chosen set of ATS-friendly templates that are clean but still carry a bit of character, where I can fill in my experience and skills section by section and watch a live preview come together in a format that looks genuinely considered to a human reader while staying structured enough for automated hiring systems to parse without a fuss.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <p class="aud-foot" style="margin-top:24px;" data-i18n="ev2.foot">
+    Each stage is a single, focused commit on <code>main</code> — fully reproducible. The full negation-density audit script is one inline node command; quantitative deltas are computed against the same persona breakdown so improvements are not just topic luck.
+  </p>
+</section>
+
 <section class="block" id="samples">
   <div class="section-eyebrow" data-i18n="sp.eyebrow">// THE RECEIPTS</div>
   <h2 class="section-title" data-i18n="sp.title">Real samples from a production run</h2>
@@ -1023,7 +1181,27 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
 <script id="data-i18n" type="application/json">
 {
   "en": {
-    "nav.audience":"Who","nav.pipeline":"Pipeline","nav.diversity":"Diversity","nav.persona":"Persona","nav.eval":"Evaluation","nav.samples":"Samples","nav.quickstart":"Quickstart",
+    "nav.audience":"Who","nav.pipeline":"Pipeline","nav.diversity":"Diversity","nav.persona":"Persona","nav.eval":"Evaluation","nav.evolution":"Evolution","nav.samples":"Samples","nav.quickstart":"Quickstart",
+    "ev2.eyebrow":"// HOW WE GOT HERE",
+    "ev2.title":"Iteration story: 4 stages, 4 fixes",
+    "ev2.sub":"Each stage is a real production-grade pain we discovered <em>after</em> running the previous version at scale, then a focused prompt or pipeline fix. Click any \"Sample query\" to read the actual generated text — same persona, side by side, before vs after.",
+    "ev2.s1.t":"Naive baseline — single prompt, no scaffolding",
+    "ev2.s1.p":"No persona, no opener distribution, no scope discipline. Same first-N corpus topics get reused across batches; <strong>\"Build a mobile X\" pattern dominates</strong>; query framed as a single page or screen, not a 0-to-1 app.",
+    "ev2.s1.sumr":"Sample query (illustrative)",
+    "ev2.s2.t":"Three-layer diversification",
+    "ev2.s2.f":"Layer-A least-used topic dedup across batches via <code>corpus_usage.json</code> state · 5-bucket opener hash (<code>Build a / Need a / Create a / Make a / no opener</code>) keyed by <code>query_id</code> · persona-tone semantic mapping from L2 → 5 ordinary-user archetypes.",
+    "ev2.s2.r":"Cross-batch corpus-topic overlap: <strong>100% → 0%</strong>. \"Build a\" share: <strong>54% → 21%</strong>. 5 distinct persona voices visible in batch.",
+    "ev2.s2.p":"Audit found <strong>49.5% of queries</strong> still framed as \"Build a XX page where…\" — the opener is now diverse but the scope noun is still page-level, causing downstream LLMs to generate single-page mocks instead of complete apps.",
+    "ev2.s3.t":"App-scope rewrite",
+    "ev2.s3.f":"New rule 7 forbids <code>page / screen / view / section / module / feature / widget</code> as the top-level scope noun. Use <code>app</code> or a specific app type (<code>tracker / tool / reminder / planner / calculator / logger / manager / timer</code>). Existing 200-row batch retrofitted via <code>scripts/rewrite-app-scope.js</code>.",
+    "ev2.s3.r":"Single-page-framed queries: <strong>49.5% → 0%</strong>. Average word count unchanged (91 → 91, no length inflation).",
+    "ev2.s3.p":"Audit found <strong>76% of EN queries / 80% of ZH</strong> contained negation words; <strong>45% had outright grievance dump patterns</strong> (\"no stock photo, no cartoon, no confetti…\"). Real users describing 0-to-1 apps speak in positive terms — they're building something they want, not refining something they hate.",
+    "ev2.s3.sumr":"Sample query (real, founder_like persona, wedding card creator)",
+    "ev2.s4.t":"Positive-framing prompt rewrite — current",
+    "ev2.s4.f":"<strong>(1)</strong> Rewrote <code>founder_like</code> voice — was literally instructed to \"explain what NOT to include as much as what to include\". <strong>(2)</strong> Flipped three \"Do NOT\" prompt rules into positive-form (\"Open with the substance\" / \"Use everyday vocabulary\" / \"Use 'app' as top-level noun\"). LLMs primed by negation imperatives mirror them in output. <strong>(3)</strong> Added explicit positive-framing rule limiting negation words to ≤1 per query.",
+    "ev2.s4.r":"NEG words / query: <strong>1.08 → 0.66 (-39%)</strong>. <strong>Grievance patterns: 0.58 → 0.22 (-62%)</strong>. By persona: curator <strong>-56%</strong>, maker <strong>-57%</strong>, planner <strong>-39%</strong>. Residual negations are now feature-value descriptions (\"auto-saves so you never lose\"), not grievance dumps.",
+    "ev2.s4.sumr":"Sample query (real, founder_like persona, ATS resume builder)",
+    "ev2.foot":"Each stage is a single, focused commit on <code>main</code> — fully reproducible. The full negation-density audit script is one inline node command; quantitative deltas are computed against the same persona breakdown so improvements are not just topic luck.",
     "aud.eyebrow":"// WHO THIS IS FOR",
     "aud.title":"Three concrete usage angles",
     "aud.sub":"Each card maps to a real situation where a team needs \"a batch of high-quality query data\" — not a benchmark, not a demo, but data that holds up in production or research.",
@@ -1120,7 +1298,27 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "ft.built":"Built with Claude · Self-contained showcase, no external dependencies"
   },
   "zh": {
-    "nav.audience":"谁会用","nav.pipeline":"流水线","nav.diversity":"多样性","nav.persona":"人格","nav.eval":"评估","nav.samples":"样例","nav.quickstart":"快速上手",
+    "nav.audience":"谁会用","nav.pipeline":"流水线","nav.diversity":"多样性","nav.persona":"人格","nav.eval":"评估","nav.evolution":"演进","nav.samples":"样例","nav.quickstart":"快速上手",
+    "ev2.eyebrow":"// 一路怎么来的",
+    "ev2.title":"演进路线：4 个阶段，4 次修复",
+    "ev2.sub":"每个阶段都是一个真实的生产级痛点 —— 在上一个版本规模化跑批<em>之后</em>才暴露出来，再做一次聚焦的 prompt 或流水线修复。点击任意一条「Sample query」可看到实际生成的文本：同一个 persona，前后并排对比。",
+    "ev2.s1.t":"朴素基线 —— 单 prompt，无任何脚手架",
+    "ev2.s1.p":"无 persona、无 opener 分布、无 scope 纪律。批次之间反复使用前 N 个相同的 corpus topic；<strong>「Build a mobile X」模板占绝对主导</strong>；query 框定为单个 page/screen，而非 0-to-1 的完整 app。",
+    "ev2.s1.sumr":"样例 query（示意）",
+    "ev2.s2.t":"三层差异化",
+    "ev2.s2.f":"Layer-A 跨批次最少使用 topic 优先（持久化到 <code>corpus_usage.json</code>）· 5 桶 opener 哈希（<code>Build a / Need a / Create a / Make a / 无 opener</code>）按 <code>query_id</code> 决定性分配 · persona-tone 按 L2 语义最佳匹配映射到 5 个普通用户 archetype。",
+    "ev2.s2.r":"跨批次 corpus_topic 重叠率：<strong>100% → 0%</strong>。「Build a」开头占比：<strong>54% → 21%</strong>。批次内 5 种 persona 口吻清晰可辨。",
+    "ev2.s2.p":"审计发现 <strong>49.5% 的 query</strong> 仍然以「Build a XX page where…」框定 —— opener 已分散，但 scope 名词仍在 page 级，导致下游 LLM 生成单页 mock 而非完整 app。",
+    "ev2.s3.t":"App-scope 改写",
+    "ev2.s3.f":"新增 rule 7 禁止 <code>page / screen / view / section / module / feature / widget</code> 作为顶层 scope 名词，必须用 <code>app</code> 或具体 app 类型（<code>tracker / tool / reminder / planner / calculator / logger / manager / timer</code>）。已有 200 条 batch 用 <code>scripts/rewrite-app-scope.js</code> 一键回填。",
+    "ev2.s3.r":"单页框定的 query：<strong>49.5% → 0%</strong>。平均词数无变化（91 → 91，无长度膨胀）。",
+    "ev2.s3.p":"审计发现 <strong>76% EN / 80% ZH</strong> 的 query 含否定词；<strong>45% 出现明显的 grievance dump 模式</strong>（「no stock photo, no cartoon, no confetti…」）。真实用户在描述 0-to-1 应用时是用正向语言的 —— 是在构建想要的东西，不是在抱怨现有东西。",
+    "ev2.s3.sumr":"样例 query（真实，founder_like persona，婚礼请柬制作器）",
+    "ev2.s4.t":"正向表达 prompt 改写 —— 当前",
+    "ev2.s4.f":"<strong>(1)</strong> 改写 <code>founder_like</code> voice —— 之前字面要求 persona「explain what NOT to include as much as what to include」。<strong>(2)</strong> 把三条「Do NOT」prompt 规则翻成正向（「Open with the substance」/「Use everyday vocabulary」/「Use 'app' as top-level noun」）—— 否定指令会让 LLM 在输出里镜像复制。<strong>(3)</strong> 增加显式正向表达规则，限制每条 query 否定词 ≤1 个。",
+    "ev2.s4.r":"否定词人均：<strong>1.08 → 0.66 (-39%)</strong>。<strong>Grievance 模式：0.58 → 0.22 (-62%)</strong>。按 persona 看：curator <strong>-56%</strong>、maker <strong>-57%</strong>、planner <strong>-39%</strong>。残留的否定词基本是功能价值描述（「auto-saves so you never lose」），不再是 grievance dump。",
+    "ev2.s4.sumr":"样例 query（真实，founder_like persona，ATS 简历模板生成器）",
+    "ev2.foot":"每个阶段都是 <code>main</code> 上一次聚焦的 commit —— 完全可复现。完整的否定词密度审计脚本是一行 node 命令；定量差值按相同 persona 拆分，确保改善不是 topic 选择运气。",
     "aud.eyebrow":"// 谁会用到这个仓库",
     "aud.title":"三类典型应用场景",
     "aud.sub":"每张卡对应一个真实场景 —— 不是 benchmark、不是 demo，而是一个团队需要「一批高质量 query 数据」时会真正用到的数据。",
