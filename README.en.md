@@ -352,13 +352,36 @@ node scripts/generate-analysis-report.js \
 - Full Stage 1 → Stage 4 automation
 - Online service / job orchestration
 
-## Contributing
+## Key References & Acknowledgements
 
-PRs welcome. The simplest place to start:
+A few of this project's core design decisions are directly indebted to the following research lines. Each entry includes a concrete "what we borrowed" note so readers can locate the idea source and so adjacent researchers can cross-reference.
 
-1. `npm install && npm test` — smoke tests should pass
-2. Skim [`scripts/README.md`](./scripts/README.md) for the CLI design contract
-3. Open an issue describing the change before larger refactors
+### Persona-driven synthetic data
+
+- **Scaling Synthetic Data Creation with 1,000,000,000 Personas** (PersonaHub) — Tao Ge, Xin Chan, Xiaoyang Wang, Dian Yu, Haitao Mi, Dong Yu. Tencent AI Lab, 2024. [arXiv:2406.20094](https://arxiv.org/abs/2406.20094)
+  - Reframed our view of personas: not decoration, but the central driver of multi-perspective synthesis. Where PersonaHub goes for billion-scale breadth, this project takes a vertical bet — 5 hand-tuned ordinary-user archetypes (`maker / planner / curator / operator / founder_like`) for the UI vibe-coding query niche, with persona-to-task assignment by L2 semantic best-fit (not random).
+
+### Instruction-tuning data synthesis
+
+- **Instruction-Tuning Data Synthesis from Scratch via Web Reconstruction (WebR)**, 2025. [arXiv:2504.15573](https://arxiv.org/abs/2504.15573)
+  - The "Web as Instruction / Web as Response" duality directly informs our `corpus-direct` pipeline: reconstruct realistic instructions from raw corpus seeds (xlsx scenario specs + 2,440 topics) via a single LLM step, instead of template stitching.
+
+- **Instruction Tuning for Large Language Models: A Survey** — Shengyu Zhang, Linfeng Dong, Xiaoya Li, Sen Zhang, Xiaofei Sun, Shuhe Wang, Jiwei Li, Runyi Hu, Tianwei Zhang, Fei Wu, Guoyin Wang. *ACM Computing Surveys*, 2025.
+  - Comprehensive survey of instruction-tuning data construction, quality assessment, and diversity metrics. Our authenticity / specificity / diversity 3-axis scoring rubric and the trigram-Jaccard within-scene peer dedup follow this paper's taxonomy.
+
+### Downstream UI / Web code-generation goal
+
+- **WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch**, 2025. [arXiv:2505.03733](https://arxiv.org/abs/2505.03733)
+  - Defines our acceptance criterion for the produced query dataset: queries should drive an LLM to generate a runnable 0-to-1 mini-app, not a single-page mock. Our recent "app-scope rewrite" (forbidding `page / screen / view` as the top-level noun, requiring `app / tracker / tool / reminder` etc.) was made specifically to align with this evaluation target.
+
+- **Code Aesthetics with Agentic Reward Feedback** — Bang Xiao, Lingjie Jiang, Shaohan Huang, Tengchao Lv, Yupan Huang, Xun Wu, Lei Cui, Furu Wei. Microsoft, 2025. [arXiv:2510.23272](https://arxiv.org/abs/2510.23272)
+  - Reminded us that a query carries aesthetic intent, not just functionality. Our 11 registered design styles (`Glassmorphism / Neumorphism / Cyberpunk / ...`) and the prompt rule that style hints should integrate naturally into the query (not be listed mechanically) ride the same wave as this work's "aesthetic feedback" idea.
+
+---
+
+If this project helps your synthetic-data, instruction-tuning, or UI/web code-generation baseline work, please open an issue describing your scenario — we're genuinely interested in real downstream usage and that's how the project evolves. Stars and forks welcome; usage is governed by [LICENSE](./LICENSE).
+
+> Want to contribute code? Pass `npm install && npm test`, skim [`scripts/README.md`](./scripts/README.md) for the CLI design contract, and open an issue before larger refactors.
 
 ## Star History
 

@@ -457,13 +457,36 @@ node scripts/generate-analysis-report.js \
 - Stage 1 → Stage 4 全自动
 - 在线服务 / 任务调度
 
-## 贡献指南
+## 核心参考与致谢
 
-欢迎 PR。起步路径：
+本项目的几个关键设计决策直接受益于下面这几条研究线。每条都附上具体的「借鉴点」，便于复用本项目的人定位思想源头，也便于做相关方向研究的同行交叉引用。
 
-1. `npm install && npm test` —— 冒烟测试要全绿
-2. 翻一遍 [`scripts/README.md`](./scripts/README.md) 了解 CLI 设计契约
-3. 较大重构请先开 issue 讨论
+### Persona-driven synthetic data
+
+- **Scaling Synthetic Data Creation with 1,000,000,000 Personas** (PersonaHub) — Tao Ge, Xin Chan, Xiaoyang Wang, Dian Yu, Haitao Mi, Dong Yu. Tencent AI Lab, 2024. [arXiv:2406.20094](https://arxiv.org/abs/2406.20094)
+  - 直接启发了本项目"persona 不是装饰、是合成数据多视角的核心驱动"这个判断。差异：PersonaHub 走十亿级别广度，本项目在 UI vibe-coding query 这个垂直场景里走 5 个手工打磨的 ordinary-user archetype（`maker / planner / curator / operator / founder_like`），并把"哪个 persona 适合这个 corpus topic"做成 L2 语义最佳匹配（而非随机）。
+
+### Instruction-tuning data synthesis
+
+- **Instruction-Tuning Data Synthesis from Scratch via Web Reconstruction (WebR)**, 2025. [arXiv:2504.15573](https://arxiv.org/abs/2504.15573)
+  - "Web as Instruction / Web as Response" 双策略给本项目的启示：从原始 corpus（xlsx 场景规格 + 2,440 条 topic）出发用 LLM 重构出真实分布的 instruction，而不是模板拼接。本项目 `corpus-direct` 流水线的"topic 锚定 + 单次 LLM 调用"工作方式与 WebR 思路同源。
+
+- **Instruction Tuning for Large Language Models: A Survey** — Shengyu Zhang, Linfeng Dong, Xiaoya Li, Sen Zhang, Xiaofei Sun, Shuhe Wang, Jiwei Li, Runyi Hu, Tianwei Zhang, Fei Wu, Guoyin Wang. *ACM Computing Surveys*, 2025.
+  - 系统综述了 instruction tuning 的数据构造、质量评估和多样性度量。本项目的「authenticity / specificity / diversity」三维评分、「同场景内 trigram-Jaccard 同辈相似度」去重，分类法和评估指标都参照了这篇 survey 的脉络。
+
+### UI / Web 代码生成下游目标
+
+- **WebGen-Bench: Evaluating LLMs on Generating Interactive and Functional Websites from Scratch**, 2025. [arXiv:2505.03733](https://arxiv.org/abs/2505.03733)
+  - 提供了本项目 query 数据集的下游验收标准 —— query 应能驱动 LLM 真正生成 0-to-1 可运行的 mini-app，而非单页 mock。最近一次的「app-scope rewrite」（禁止 `page / screen / view` 作为顶层名词，必须用 `app / tracker / tool / reminder` 等）正是为了对齐这个评测目标。
+
+- **Code Aesthetics with Agentic Reward Feedback** — Bang Xiao, Lingjie Jiang, Shaohan Huang, Tengchao Lv, Yupan Huang, Xun Wu, Lei Cui, Furu Wei. Microsoft, 2025. [arXiv:2510.23272](https://arxiv.org/abs/2510.23272)
+  - 提醒了「query 不只是功能描述，还应自然带出审美偏好」。本项目的 11 种注册设计风格（`Glassmorphism / Neumorphism / Cyberpunk / ...`）和「风格 hint 揉进 query 而非生硬罗列」的 prompt 写法，与这条工作的「美学反馈」思路同向。
+
+---
+
+如果本项目对你的合成数据、instruction tuning 数据集或 UI / Web 代码生成基线工作有用，欢迎在 issue 里说一声你的场景 —— 我们对真实 downstream 用法很感兴趣，也方便后续按真实需求迭代。Star 与 fork 都欢迎，使用方式见 [LICENSE](./LICENSE)。
+
+> 想贡献代码？跑通 `npm install && npm test`、过一眼 [`scripts/README.md`](./scripts/README.md) 的 CLI 设计契约，较大重构开个 issue 先聊聊。
 
 ## Star History
 
