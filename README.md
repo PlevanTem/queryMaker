@@ -48,6 +48,18 @@
 | **机器味太重** —— LLM 默认输出礼貌、结构化、一致的语气，跟真实用户提需求的方式不一样 | **persona 驱动语气** —— 5 类 archetype × 3 档复杂度，产出以用户目标为锚的第一人称变化 |
 | **视觉风格扁平** —— query 很少描述视觉风格，下游 UI 生成只能默认一种审美 | **设计风格感知** —— 11 个注册风格 × 3 种调用方式（默认 / 指定列表 / 启发式自动） |
 
+## 谁会用到这个仓库
+
+三类典型用法，每类都是真实场景中"找一批高质量 query 数据"会碰到的需求：
+
+| 视角 | 谁 / 什么场景 | 直接价值 |
+| --- | --- | --- |
+| **🏭 工业 · 产品落地** | 字节豆包 / 蚂蚁灵光 / Bolt / v0.dev / Builder.io 这类「自然语言 → mini-app 代码」产品 | 即用的 seed query 训练 / 评测集：2,440 条 topic × 5 persona × 11 设计风格，分布忠实 xlsx 场景比例，0-1 mini-app 框架而非单页 mock |
+| **🎓 学界 · 方法验证** | 做合成数据 / instruction tuning / UI 代码生成的研究者 | 控制变量评测 (`test-corpus-methods.js`) 实证 corpus 锚定 + persona 双因子的可加性；4 方法对比 + 三层差异化机制（Layer-A 去重 / opener hash / persona-tone）全开源，可直接复现或当 baseline |
+| **🛠 工业 · 内部团队** | 需要"快速做一批 seed query"的内部 ML / 工程团队 | 单条 ~3.3s · 200 条 ~7 分钟 · 跨批次自动去重 state · 中英双语 xlsx 直出。适用于 prompt 迭代、UX 测试集构造、API 上线前压测、产品 demo 等场景 |
+
+不在愿景里的：通用 LLM benchmark、UI 设计稿评测、视觉模型训练。本项目专注「query 这一侧」的真实分布合成。
+
 ## 项目亮点
 
 - **端到端流水线** —— Excel 场景规格 → plan → 生成 → 评分 → SQLite → dashboard

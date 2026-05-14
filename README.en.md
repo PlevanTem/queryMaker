@@ -50,6 +50,18 @@ templated distributions that don't generalize. ui-queryMaker attacks that on thr
 | **Robotic phrasing** — a single polite, structured voice that doesn't match how humans request UI | **Persona-driven voice** — five archetypes × three complexity tiers produce first-person variation grounded in user goals |
 | **Visually flat output** — queries rarely specify visual style, leaving downstream UI generation to one aesthetic | **Design-style aware** — 11 registered design styles × three invocation modes (default / fixed / heuristic-auto) |
 
+## Who this is for
+
+Three concrete usage angles — each maps to a real situation where someone needs "a batch of high-quality query data":
+
+| Angle | Who / when | What you get |
+| --- | --- | --- |
+| **🏭 Industry · Product** | Teams building NL → mini-app code products (Bolt, v0.dev, Builder.io, ByteDance Doubao, Ant Lingguang, etc.) | Drop-in seed query train/eval set: 2,440 topics × 5 personas × 11 design styles, distribution faithful to scene weights, framed as 0-to-1 mini-apps (not single-page mocks) |
+| **🎓 Research** | Synthetic-data, instruction-tuning, and UI code-generation researchers | Controlled-variable benchmark (`test-corpus-methods.js`) showing additive corpus-anchoring + persona effects; 4-method comparison and three diversification layers (Layer-A dedup / opener hash / persona-tone) all open-sourced — directly reproducible or usable as a baseline |
+| **🛠 Industry · Internal teams** | ML / engineering teams that need "a batch of seed queries, fast" | ~3.3s per query · ~7 min for 200 · cross-batch dedup state · bilingual (EN + 简体中文) xlsx out-of-the-box. Useful for prompt iteration, UX test sets, pre-launch API stress tests, internal product demos |
+
+Out of scope: general LLM benchmarks, UI design-mock evaluation, vision-model training. This repo focuses purely on the *query side* of realistic distribution synthesis.
+
 ## Highlights
 
 - **End-to-end pipeline** — Excel scenario spec → plan → generation → scoring → SQLite → dashboard

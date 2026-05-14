@@ -158,6 +158,25 @@ section.block {
 .ps-card .ps-good-body { font-size: 13px; color: var(--text); line-height: 1.55; }
 .ps-card hr { border: 0; border-top: 1px dashed var(--border); margin: 12px 0; }
 
+/* ── Audience / who-this-is-for cards ── */
+.aud-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
+.aud-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 22px; position: relative;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+.aud-card:hover { border-color: var(--accent-bd); transform: translateY(-1px); }
+.aud-card.aud-product { border-top: 3px solid var(--accent); }
+.aud-card.aud-research { border-top: 3px solid var(--green); }
+.aud-card.aud-team { border-top: 3px solid var(--amber); }
+.aud-card .aud-icon { font-size: 22px; margin-bottom: 14px; line-height: 1; }
+.aud-card .aud-who { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; }
+.aud-card .aud-title { font-size: 15px; font-weight: 600; margin-bottom: 14px; line-height: 1.4; }
+.aud-card .aud-body { font-size: 13px; color: var(--muted); line-height: 1.7; }
+.aud-card .aud-body strong { color: var(--text); font-weight: 500; }
+.aud-foot { font-size: 12px; color: var(--muted2); margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border); line-height: 1.6; }
+@media (max-width: 768px) { .aud-grid { grid-template-columns: 1fr; } }
+
 /* ── Pipeline diagram ── */
 .pipeline {
   display: grid;
@@ -426,6 +445,7 @@ footer a { color: var(--accent); }
 <!-- ── Top bar ── -->
 <div class="topbar">
   <div class="topbar-brand">ui-queryMaker<span class="dot">.</span></div>
+  <a href="#audience" class="nav hide-sm" data-i18n="nav.audience">Who</a>
   <a href="#pipeline" class="nav hide-sm" data-i18n="nav.pipeline">Pipeline</a>
   <a href="#diversity" class="nav hide-sm" data-i18n="nav.diversity">Diversity</a>
   <a href="#persona" class="nav hide-sm" data-i18n="nav.persona">Persona</a>
@@ -523,6 +543,44 @@ footer a { color: var(--accent); }
       <div class="ps-good-body" data-i18n="why.good3b">Eleven registered design styles × three invocation modes (default / fixed / heuristic-auto) inject visual intent.</div>
     </div>
   </div>
+</section>
+
+<!-- ── Who this is for ── -->
+<section class="block" id="audience">
+  <div class="section-eyebrow" data-i18n="aud.eyebrow">// WHO THIS IS FOR</div>
+  <h2 class="section-title" data-i18n="aud.title">Three concrete usage angles</h2>
+  <p class="section-sub" data-i18n="aud.sub">
+    Each card maps to a real situation where a team needs "a batch of high-quality query data" — not a benchmark, not a demo, but data that holds up in production or research.
+  </p>
+  <div class="aud-grid">
+    <div class="aud-card aud-product">
+      <div class="aud-icon">🏭</div>
+      <div class="aud-who" data-i18n="aud.p.who">Industry · Product</div>
+      <div class="aud-title" data-i18n="aud.p.title">NL → mini-app code generation products</div>
+      <div class="aud-body" data-i18n="aud.p.body">
+        Teams behind <strong>Bolt, v0.dev, Builder.io, ByteDance Doubao, Ant Lingguang</strong> and similar products need high-quality seed query data for training, eval, and prompt iteration. This repo ships a drop-in <strong>2,440-topic × 5-persona × 11-style</strong> dataset, distribution-faithful to scene weights, framed as 0-to-1 mini-apps (not single-page mocks).
+      </div>
+    </div>
+    <div class="aud-card aud-research">
+      <div class="aud-icon">🎓</div>
+      <div class="aud-who" data-i18n="aud.r.who">Research</div>
+      <div class="aud-title" data-i18n="aud.r.title">Synthetic data, instruction tuning, UI codegen</div>
+      <div class="aud-body" data-i18n="aud.r.body">
+        Controlled-variable benchmark in <code>test-corpus-methods.js</code> empirically shows <strong>corpus anchoring</strong> and <strong>persona injection</strong> are additive — both raise topic hit rate and authenticity independently. Three diversification layers (Layer-A dedup / opener hash / persona-tone) are open-sourced and directly reproducible as a baseline.
+      </div>
+    </div>
+    <div class="aud-card aud-team">
+      <div class="aud-icon">🛠</div>
+      <div class="aud-who" data-i18n="aud.t.who">Industry · Internal teams</div>
+      <div class="aud-title" data-i18n="aud.t.title">"A batch of seed queries, fast"</div>
+      <div class="aud-body" data-i18n="aud.t.body">
+        ML / engineering teams who need ad-hoc query batches for prompt iteration, UX test sets, pre-launch API stress tests, or product demos. <strong>~3.3s per query · ~7 min for 200</strong> · cross-batch dedup state · bilingual EN+ZH xlsx out-of-the-box.
+      </div>
+    </div>
+  </div>
+  <p class="aud-foot" data-i18n="aud.foot">
+    <strong>Out of scope:</strong> general LLM benchmarks, UI design-mock evaluation, vision-model training. This repo focuses purely on the <em>query side</em> of realistic distribution synthesis.
+  </p>
 </section>
 
 <!-- ── Pipeline ── -->
@@ -953,7 +1011,20 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
 <script id="data-i18n" type="application/json">
 {
   "en": {
-    "nav.pipeline":"Pipeline","nav.diversity":"Diversity","nav.persona":"Persona","nav.eval":"Evaluation","nav.samples":"Samples","nav.quickstart":"Quickstart",
+    "nav.audience":"Who","nav.pipeline":"Pipeline","nav.diversity":"Diversity","nav.persona":"Persona","nav.eval":"Evaluation","nav.samples":"Samples","nav.quickstart":"Quickstart",
+    "aud.eyebrow":"// WHO THIS IS FOR",
+    "aud.title":"Three concrete usage angles",
+    "aud.sub":"Each card maps to a real situation where a team needs \"a batch of high-quality query data\" — not a benchmark, not a demo, but data that holds up in production or research.",
+    "aud.p.who":"Industry · Product",
+    "aud.p.title":"NL → mini-app code generation products",
+    "aud.p.body":"Teams behind <strong>Bolt, v0.dev, Builder.io, ByteDance Doubao, Ant Lingguang</strong> and similar products need high-quality seed query data for training, eval, and prompt iteration. This repo ships a drop-in <strong>2,440-topic × 5-persona × 11-style</strong> dataset, distribution-faithful to scene weights, framed as 0-to-1 mini-apps (not single-page mocks).",
+    "aud.r.who":"Research",
+    "aud.r.title":"Synthetic data, instruction tuning, UI codegen",
+    "aud.r.body":"Controlled-variable benchmark in <code>test-corpus-methods.js</code> empirically shows <strong>corpus anchoring</strong> and <strong>persona injection</strong> are additive — both raise topic hit rate and authenticity independently. Three diversification layers (Layer-A dedup / opener hash / persona-tone) are open-sourced and directly reproducible as a baseline.",
+    "aud.t.who":"Industry · Internal teams",
+    "aud.t.title":"\"A batch of seed queries, fast\"",
+    "aud.t.body":"ML / engineering teams who need ad-hoc query batches for prompt iteration, UX test sets, pre-launch API stress tests, or product demos. <strong>~3.3s per query · ~7 min for 200</strong> · cross-batch dedup state · bilingual EN+ZH xlsx out-of-the-box.",
+    "aud.foot":"<strong>Out of scope:</strong> general LLM benchmarks, UI design-mock evaluation, vision-model training. This repo focuses purely on the <em>query side</em> of realistic distribution synthesis.",
     "hero.eyebrow":"Production pipeline · v2 corpus-direct branch",
     "hero.h1a":"Realistic UI query data,","hero.h1b":"synthesized with rigor.",
     "hero.sub":"A production pipeline for generating large, diverse, persona-grounded natural-language queries that describe UI to be built — anchored to a 2,440-topic real-world corpus, validated by trigram-similarity dedup, and benchmarked across four generation strategies.",
@@ -1036,7 +1107,20 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "ft.built":"Built with Claude · Self-contained showcase, no external dependencies"
   },
   "zh": {
-    "nav.pipeline":"流水线","nav.diversity":"多样性","nav.persona":"人格","nav.eval":"评估","nav.samples":"样例","nav.quickstart":"快速上手",
+    "nav.audience":"谁会用","nav.pipeline":"流水线","nav.diversity":"多样性","nav.persona":"人格","nav.eval":"评估","nav.samples":"样例","nav.quickstart":"快速上手",
+    "aud.eyebrow":"// 谁会用到这个仓库",
+    "aud.title":"三类典型应用场景",
+    "aud.sub":"每张卡对应一个真实场景 —— 不是 benchmark、不是 demo，而是一个团队需要「一批高质量 query 数据」时会真正用到的数据。",
+    "aud.p.who":"工业 · 产品落地",
+    "aud.p.title":"自然语言 → mini-app 代码生成产品",
+    "aud.p.body":"做 <strong>字节豆包、蚂蚁灵光、Bolt、v0.dev、Builder.io</strong> 这类产品的团队，需要高质量 seed query 数据用于训练、评测和 prompt 迭代。本仓库即用：<strong>2,440 topic × 5 persona × 11 设计风格</strong>，分布忠实场景配比，0-1 mini-app 框架而非单页 mock。",
+    "aud.r.who":"学界 · 方法验证",
+    "aud.r.title":"合成数据、Instruction Tuning、UI 代码生成",
+    "aud.r.body":"<code>test-corpus-methods.js</code> 控制变量评测实证：<strong>corpus 锚定</strong>与 <strong>persona 注入</strong>是可加的——两者独立提升 topic 命中率和真实感。三层差异化机制（Layer-A 去重 / opener hash / persona-tone）全部开源，可直接复现作为 baseline。",
+    "aud.t.who":"工业 · 内部团队",
+    "aud.t.title":"「快速做一批 seed query」",
+    "aud.t.body":"需要 ad-hoc query 批次用于 prompt 迭代、UX 测试集构造、API 上线前压测、内部产品 demo 的 ML / 工程团队。<strong>单条 ~3.3s · 200 条 ~7 分钟</strong> · 跨批次去重 state · 中英双语 xlsx 直出。",
+    "aud.foot":"<strong>不在愿景里的：</strong>通用 LLM benchmark、UI 设计稿评测、视觉模型训练。本仓库专注「query 这一侧」的真实分布合成。",
     "hero.eyebrow":"生产级流水线 · v2 corpus-direct 分支",
     "hero.h1a":"真实可用的 UI Query 数据，","hero.h1b":"以工程化方式合成。",
     "hero.sub":"一条生产级流水线，用于规模化生成多样、以真实人格为锚的 UI 自然语言指令——以 2,440 条真实场景语料为基础，三元组 Jaccard 相似度去重校验，并跨 4 种生成策略做了对照评估。",
