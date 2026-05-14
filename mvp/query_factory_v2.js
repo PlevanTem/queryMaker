@@ -2182,30 +2182,130 @@ async function buildDashboardAssets(dbPath, outputDir) {
  * Topic-anchored single-call prompt: no persona intermediary.
  * The corpus topic IS the specific use-case seed.
  */
+// ─────────────────────────────────────────────────────────────────────────────
+// CORPUS-DIRECT PERSONAS
+// ─────────────────────────────────────────────────────────────────────────────
+// 5 ordinary-user archetypes for vibe-coding query authoring. Each task is
+// matched to one persona based on its corpus L2 scene (semantic best-fit, NOT
+// random hash) — see scripts/corpus_persona_map.json. Voice descriptors are
+// intentionally short and qualitative (no example phrases) to preserve LLM
+// freedom while shaping tone.
+
+const CORPUS_DIRECT_PERSONAS = {
+  maker: {
+    id: "maker",
+    title_zh: "爱折腾的小白手艺人",
+    title_en: "an ordinary maker-type user — likes tinkering with small ideas, doesn't know dev/design jargon",
+    voice: "Talks casually about what they want to make and the use case it serves; doesn't worry about precise UI or layout.",
+  },
+  planner: {
+    id: "planner",
+    title_zh: "喜欢列清单的整理控",
+    title_en: "an ordinary list-maker — organized, methodical, plain-spoken",
+    voice: "Lists what they want in everyday language; mentions a couple specific things they care about; not technical.",
+  },
+  curator: {
+    id: "curator",
+    title_zh: "内容驱动的审美派",
+    title_en: "an ordinary content-curator user who cares about how things look and feel",
+    voice: "Describes the feel, vibe, and visual references; cares about taste; doesn't speak in component names.",
+  },
+  operator: {
+    id: "operator",
+    title_zh: "想偷懒的打工人 / 学生",
+    title_en: "an ordinary user who wants to remove a hassle from daily life",
+    voice: "Talks about the pain point or hassle they want removed; pragmatic; doesn't care how it looks.",
+  },
+  founder_like: {
+    id: "founder_like",
+    title_zh: "有点情怀的\"自留地\"用户",
+    title_en: "an ordinary user with strong opinions about what their personal tool should and shouldn't do",
+    voice: "Short, opinionated; explains what NOT to include as much as what to include; cares about identity.",
+  },
+};
+
+/**
+ * Load the L2 → persona-id map from disk. Returns { default, map } shape.
+ * Path defaults to scripts/corpus_persona_map.json relative to project root.
+ */
+function loadCorpusPersonaMap(filePath) {
+  const resolved = filePath || path.resolve(process.cwd(), "scripts/corpus_persona_map.json");
+  if (!fs.existsSync(resolved)) {
+    return { default: "maker", map: {} };
+  }
+  try {
+    const data = JSON.parse(fs.readFileSync(resolved, "utf8"));
+    return { default: data.default || "maker", map: data.map || {} };
+  } catch {
+    return { default: "maker", map: {} };
+  }
+}
+
+/**
+ * Pick the best-fit persona id for a task. Lookup by task.corpus_l2_key first,
+ * then by l2_scene_raw as fallback. Falls through to map.default.
+ */
+function pickCorpusPersonaForTask(task, personaMap) {
+  if (!personaMap) return "maker";
+  const map = personaMap.map || {};
+  const fallback = personaMap.default || "maker";
+  const k1 = task?.corpus_l2_key;
+  if (k1 && map[k1]) return map[k1];
+  const k2 = task?.l2_scene_raw;
+  if (k2 && map[k2]) return map[k2];
+  return fallback;
+}
+
 function buildCorpusDirectQueryPrompt(task) {
   const complexityInstruction = getComplexityInstruction(task.target_complexity);
   const styleInstruction = getEnglishStyleInstruction(task.design_style);
   const hasStyle = task.design_style && styleInstruction !== getEnglishStyleInstruction(null);
 
+  // Persona — picked by run-corpus.js via pickCorpusPersonaForTask() and stored on
+  // task.corpus_persona_id. Falls back to 'maker' if nothing was set upstream.
+  const personaId = task.corpus_persona_id || "maker";
+  const persona = CORPUS_DIRECT_PERSONAS[personaId] || CORPUS_DIRECT_PERSONAS.maker;
+
+  // Deterministically pick one of 5 openers per task to break model convergence on "Build a...".
+  // Hash on query_id (stable across reruns) → uniform distribution.
+  const OPENERS = [
+    { phrase: "Build a", instruction: 'MUST open the query with the exact phrase "Build a" (e.g., "Build a travel scrapbook app where...").' },
+    { phrase: "Need a",  instruction: 'MUST open the query with the exact phrase "Need a" (e.g., "Need a travel scrapbook app that lets me...").' },
+    { phrase: "Create a", instruction: 'MUST open the query with the exact phrase "Create a" (e.g., "Create a travel scrapbook page that shows...").' },
+    { phrase: "Make a",   instruction: 'MUST open the query with the exact phrase "Make a" (e.g., "Make a travel scrapbook screen with...").' },
+    { phrase: "(no formal opener)", instruction: 'MUST open by jumping STRAIGHT into describing the feature/screen itself, with NO formal opener. Start with the noun phrase or feature, e.g., "A travel scrapbook screen where..." or "Grid of polaroid cards grouped by trip..." or "Timeline of trips with..." — do NOT start with "Build", "Need", "Create", "Make", or any other verb-led opener.' },
+  ];
+  const hashSeed = String(task.query_id || task.persona_seed || task.corpus_topic || "");
+  const openerIdx = parseInt(hashText(hashSeed).slice(0, 8), 16) % OPENERS.length;
+  const opener = OPENERS[openerIdx];
+
   return [
-    "You are a real user at the given context sending a  front end development instruction query for a mobile app.",
-    "Output only the final query text — no labels, no markdown fences, no explanations.",
+    "You are roleplaying as a real ordinary user (not a developer, not a PM) submitting a vibe-coding front-end query for a mobile H5 app. Stay strictly in your assigned persona's voice.",
+    "Output only the raw final query text — no labels, no markdown, no explanations, no extra comments.",
     "",
-    "## Specific Topic (your primary anchor)",
+    "## Your Persona",
+    `You are: ${persona.title_zh} (${persona.title_en})`,
+    `Voice: ${persona.voice}`,
+    "",
+    "## Core Fixed Topic (must be the core focus of the query)",
     `"${task.corpus_topic}"`,
     "",
-    "## Scene Context",
+    "## Application Scene Context",
     `App category: ${task.l1_scene} / ${task.l2_scene_label}`,
     "",
-    "## Output Requirements",
-    `1. The query must be specifically about the topic: "${task.corpus_topic}"`,
-    "2. Start directly with the substance. NO greetings, NO openers (no 'hi', 'hey', 'hello', 'okay so', 'I want to'-style polite framing). Jump straight into the request.",
-    "3. Natural, slightly informal language is fine — it does not have to be perfectly structured.",
-    "4. Allow specific details, functional goals, and interaction hints that naturally emerge from the topic.",
-    `5. Complexity: ${task.target_complexity} — ${complexityInstruction}`,
-    hasStyle ? `6. Visual style hint: ${styleInstruction}` : null,
+    "## Query Writing Rules (follow your persona's speaking habit)",
+    "1. Keep the query one coherent paragraph, smooth and authentic, not rigidly structured like a document.",
+    `2. The query must be specifically about the topic: "${task.corpus_topic}"`,
+    "3. Start directly with the substance. NO greetings ('hi', 'hey', 'hello', 'okay so'), NO polite framing.",
+    `4. ${opener.instruction}`,
+    "5. Match your persona's voice. Do NOT use product/dev jargon (e.g. \"modal\", \"dashboard\", \"masonry grid\", \"auto-generate\", \"swipeable\", \"bottom sheet\", \"scrollable card\", \"tag chip\", \"GTD\", \"CTA\") unless your persona would naturally use such words. If you catch yourself reaching for one, rephrase as the persona would.",
+    "6. Only include the kinds of details your persona would naturally bring up — match the angle described in your Voice line. Skip details outside that angle.",
+    `7. Complexity: ${task.target_complexity} — ${complexityInstruction} (Phrased as the persona would.)`,
+    hasStyle
+      ? `8. Add natural visual style description following real user habit: ${styleInstruction} — integrate the style requirement into the query naturally instead of rigid listing.`
+      : null,
     "",
-    "Output in English only.",
+    "Output in natural English only, pure user request sentence.",
   ].filter(Boolean).join("\n");
 }
 
@@ -2454,6 +2554,76 @@ function allocateCorpusCountsByScenePlan(spec, total) {
 }
 
 /**
+ * Layer-A diversification: pick `count` topics from `topics`, preferring those
+ * least-used in `usageMap[l2Key]`. Stable secondary sort by original topic index.
+ * If count > topics.length, cycles through the sorted order.
+ *
+ * @param {string[]} topics  - all available topics for this L2
+ * @param {number}   count   - how many to pick
+ * @param {object}   usageMap - { topic: usageCount }; missing key counts as 0
+ * @returns {string[]}        - picked topics, length === count
+ */
+function pickLeastUsedTopics(topics, count, usageMap = {}) {
+  if (!topics.length) return [];
+  // Annotate with original index for stable tie-break
+  const annotated = topics.map((topic, idx) => ({
+    topic,
+    idx,
+    use: Number(usageMap[topic] || 0),
+  }));
+  // Sort: least-used first, then original index
+  annotated.sort((a, b) => (a.use - b.use) || (a.idx - b.idx));
+  // Cycle if count > topics.length
+  const picked = [];
+  for (let i = 0; i < count; i += 1) {
+    picked.push(annotated[i % annotated.length].topic);
+  }
+  return picked;
+}
+
+/**
+ * Load corpus usage state from disk. Returns { l2_key: { topic: count } } or {} if missing.
+ */
+function loadCorpusUsage(statePath) {
+  if (!statePath || !fs.existsSync(statePath)) return {};
+  try {
+    const data = JSON.parse(fs.readFileSync(statePath, "utf8"));
+    return data.usage || {};
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * Persist corpus usage state. Increments are computed from `usedTopicsByL2` argument
+ * (typically extracted from successfully generated rows), then merged with existing state.
+ *
+ * @param {string} statePath
+ * @param {object} usedTopicsByL2 - { l2_key: [topic1, topic2, ...] }  (one entry per task that was used)
+ */
+function saveCorpusUsage(statePath, usedTopicsByL2) {
+  ensureDirForFile(statePath);
+  const existing = loadCorpusUsage(statePath);
+  for (const [l2, topics] of Object.entries(usedTopicsByL2 || {})) {
+    existing[l2] = existing[l2] || {};
+    for (const t of topics) {
+      if (!t) continue;
+      existing[l2][t] = (existing[l2][t] || 0) + 1;
+    }
+  }
+  fs.writeFileSync(
+    statePath,
+    JSON.stringify(
+      { version: 1, last_updated: new Date().toISOString(), usage: existing },
+      null,
+      2,
+    ) + "\n",
+    "utf8",
+  );
+  return existing;
+}
+
+/**
  * Build a corpus-anchored generation plan.
  * Each task gets a corpus_topic sampled from corpusData[l2Key].topics.
  * application_type is overridden with corpus_topic for direct anchoring.
@@ -2464,6 +2634,8 @@ function allocateCorpusCountsByScenePlan(spec, total) {
  * @param {number} [options.total]          - total task count; allocates across L2 by xlsx ratio
  * @param {string[]} [options.complexityMix] - complexity rotation (default ["medium"])
  * @param {string|string[]} [options.designStyles] - see resolveDesignStyle
+ * @param {string[]} [options.excludeL1]    - L1 scene names (substring match) to exclude
+ * @param {object}   [options.corpusUsage]  - { l2_key: { topic: count } } for least-used-first sampling
  */
 function buildCorpusPlan(spec, corpusData, options = {}) {
   const tasks = [];
@@ -2471,14 +2643,26 @@ function buildCorpusPlan(spec, corpusData, options = {}) {
     ? options.complexityMix
     : DEFAULT_CORPUS_COMPLEXITY_MIX;
   const MN = complexityMix.length;
+  const corpusUsage = options.corpusUsage || {};
+  const excludeL1 = Array.isArray(options.excludeL1) ? options.excludeL1 : [];
+
+  // Filter scenarios by excludeL1 (substring match on l1_scene)
+  const filteredSpec = excludeL1.length
+    ? {
+        ...spec,
+        scenarios: spec.scenarios.filter(
+          (s) => !excludeL1.some((ex) => s.l1_scene.includes(ex)),
+        ),
+      }
+    : spec;
 
   // Allocate per-L2 counts: prefer options.total (scaled by xlsx ratio).
   // If not given, fall back to computeSeedCount per scenario (legacy behaviour).
   const countsByScenario = options.total
-    ? allocateCorpusCountsByScenePlan(spec, Number(options.total))
-    : spec.scenarios.map((s) => computeSeedCount(s.target_count, options));
+    ? allocateCorpusCountsByScenePlan(filteredSpec, Number(options.total))
+    : filteredSpec.scenarios.map((s) => computeSeedCount(s.target_count, options));
 
-  spec.scenarios.forEach((scenario, scenarioIndex) => {
+  filteredSpec.scenarios.forEach((scenario, scenarioIndex) => {
     const l2Key = findCorpusKeyForScenario(scenario, corpusData);
     const topics = (l2Key ? corpusData[l2Key]?.topics : null) || [];
 
@@ -2487,9 +2671,17 @@ function buildCorpusPlan(spec, corpusData, options = {}) {
 
     const applicationTypes = rotate(scenario.application_type_candidates, scenarioIndex);
 
+    // Layer-A: pick topics by least-used-first across batches.
+    // Tracks intra-batch increments locally so duplicate picks within this run are also avoided.
+    const localUsage = { ...(corpusUsage[l2Key] || {}) };
+    const pickedTopics = pickLeastUsedTopics(topics, count, localUsage);
+
     for (let i = 0; i < count; i += 1) {
       const groupIndex = Math.floor(i / Math.max(MN, 1));
-      const corpusTopic = topics.length ? topics[i % topics.length] : null;
+      const corpusTopic = pickedTopics[i] || (topics.length ? topics[i % topics.length] : null);
+      if (corpusTopic) {
+        localUsage[corpusTopic] = (localUsage[corpusTopic] || 0) + 1;
+      }
       // Prefer corpus topic as application_type anchor; fall back to heuristic
       const applicationType = corpusTopic || applicationTypes[groupIndex % applicationTypes.length];
       const productTypes = inferProductTypes(scenario.l1_scene, scenario.l2_scene_label, applicationType);
@@ -2588,6 +2780,12 @@ module.exports = {
   findCorpusKeyForScenario,
   generateQueryRecordWithCorpusPersona,
   DEFAULT_CORPUS_COMPLEXITY_MIX,
+  pickLeastUsedTopics,
+  loadCorpusUsage,
+  saveCorpusUsage,
+  CORPUS_DIRECT_PERSONAS,
+  loadCorpusPersonaMap,
+  pickCorpusPersonaForTask,
   // internal helpers exposed for test scripts
   resolveLlmConfig,
   callLlm,

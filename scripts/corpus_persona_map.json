@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "default": "maker",
+  "scheme": "L2 scene key → best-fit corpus-direct persona id (one of: maker / planner / curator / operator / founder_like). Drives buildCorpusDirectQueryPrompt to inject persona-specific tone.",
+  "map": {
+    "① 个人生活类": "curator",
+    "② 个人专业类": "founder_like",
+    "③ 办公/商务类": "founder_like",
+    "④ 文化/知识类": "curator",
+
+    "① Adding & Creating": "maker",
+    "② Editing & Updating": "operator",
+    "③ Searching & Finding": "operator",
+    "④ Selecting & Choosing": "planner",
+    "⑤ Filtering & Sorting": "operator",
+    "⑥ Deleting & Removing": "operator",
+    "⑦ Editing Profile": "curator",
+    "⑧ Uploading & Downloading": "operator",
+    "⑨ Copying & Duplicating": "operator",
+    "⑩ Misc": "maker",
+
+    "① 计算器/换算器": "operator",
+    "② 生活记录器": "maker",
+    "③ 社交辅助": "maker",
+    "④ 倒计时/纪念日": "curator",
+    "⑤ 文本处理": "operator",
+    "⑥ 随机生成器": "maker",
+    "⑦ 无障碍辅助": "operator",
+    "⑧ 其他长尾微工具": "maker",
+
+    "① 闪卡/单词记忆": "planner",
+    "② 备考自测/刷题": "planner",
+    "③ 学习打卡/进度追踪": "planner",
+    "④ 课程目录/课堂界面": "planner",
+    "⑤ 知识速查/公式表": "operator",
+
+    "① 待办清单/任务管理": "operator",
+    "② 番茄钟/专注计时": "operator",
+    "③ 日程/倒计时": "planner",
+    "④ 数据仪表盘/报表": "operator",
+    "⑤ 笔记/文档编辑": "curator",
+
+    "① 饮水/服药/习惯提醒": "planner",
+    "② 运动记录/健身计划": "planner",
+    "③ 体重/经期/睡眠追踪": "planner",
+    "④ 健康数据看板": "planner",
+    "⑤ 冥想/呼吸练习": "curator",
+
+    "① 行程规划器": "planner",
+    "② 打包清单/旅行准备": "planner",
+    "③ 地图/路线导航": "operator",
+    "④ 天气/实时信息查询": "operator",
+    "⑤ 交通时刻/票价查询": "operator",
+
+    "① 今天吃什么随机选择器": "maker",
+    "② 食物热量/升糖查询": "operator",
+    "③ 菜谱生成/食材搭配": "planner",
+    "④ 餐厅列表/点评浏览": "curator",
+
+    "① 文字猜谜/知识竞赛": "maker",
+    "② 抽签/转盘/随机决策": "maker",
+    "③ 经典小游戏": "maker",
+    "④ 情绪减压/解压玩具": "curator",
+
+    "① 图片编辑/滤镜/裁剪": "curator",
+    "② 海报/简历/卡片模板": "founder_like",
+    "③ 音视频播放界面": "curator",
+    "④ 内容创作工具": "curator",
+
+    "① 信息流/Feed浏览": "curator",
+    "② 文章详情/阅读模式": "curator",
+    "③ 订阅/频道管理": "planner",
+    "④ 搜索与筛选": "operator",
+
+    "① 商品详情/规格选择": "planner",
+    "② 购物车/结算": "operator",
+    "③ 订单/物流追踪": "operator"
+  }
+}

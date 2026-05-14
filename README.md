@@ -161,6 +161,116 @@ flowchart TD
 完整对比写作和数据见 [在线 Demo](https://plevantem.github.io/queryMaker/)，
 或在本地跑完 `scripts/test-corpus-methods.js` 后打开 `data/output/corpus_method_comparison.html`。
 
+## 多样性与去重策略
+
+> 真实跑批次发现：单次任务质量好不代表整批分布健康。两个隐藏盲点专门花了一个迭代解决。
+
+### 之前的两个盲点
+
+| 盲点 | 表现 |
+| --- | --- |
+| **朴素 topic rotate** | `topics[i % length]` 让不同批次的同 L2 都从第 0 条 topic 开始 → 跨批次 corpus_topic **100% 重叠** |
+| **Jaccard 同辈相似度只看 batch 内** | `scoreQueryRecords` 仅按 `scene_id` 分组比对当前 batch 兄弟，看不见历史。新跑的 query 与上次跑的可能逐字相似，没有任何信号 |
+| **LLM opener 收敛** | system prompt 提到 "mobile H5"，模型在 200 条里 54% 都用 `Build a mobile ...` 开头 |
+
+### Layer-A：Topic 层差异化采样
+
+`mvp/query_factory_v2.js` 新增三个函数：
+
+| API | 用途 |
+| --- | --- |
+| `pickLeastUsedTopics(topics, count, usageMap)` | 优先选累计使用次数最少的 topic；同次数按原始 index 决定性 tiebreak |
+| `loadCorpusUsage(statePath)` | 读 `data/state/corpus_usage.json` → `{ l2_key: { topic: count } }` |
+| `saveCorpusUsage(statePath, usedTopicsByL2)` | 跑完后增量写回（仅记录成功条目）|
+
+`buildCorpusPlan` 接受 `corpusUsage` 与 `excludeL1` 选项。`run-corpus.js` 默认在 `data/state/corpus_usage.json` 维护跨批次 state。
+
+### Opener Hash 强制分布
+
+`buildCorpusDirectQueryPrompt` 用 `hashText(query_id) % 5` 决定性分配开头到 5 桶之一：`Build a` / `Need a` / `Create a` / `Make a` / 无 formal opener。同一 `query_id` 永远拿到同一开头（idempotent rerun），200 条上自然均匀分布。
+
+### Persona-Tone 语义映射（Layer-C）
+
+> 第三个隐藏盲点：v4 query 虽然 topic 命中、开头多样化，但**口吻全是 PM/dev 腔**（"GTD inbox dashboard"、"auto-generate based on UV index"、"bottom card swipe up to expand"），完全不像普通用户提需求的方式。
+
+每个 task 按 **`corpus_l2_key` 语义最佳匹配**（非随机）分配一个普通用户 persona，prompt 里注入对应 voice 描述（**只描述特征、不给词汇示例**，避免模型生成僵化）。
+
+5 个 ordinary-user persona（`mvp/query_factory_v2.js` `CORPUS_DIRECT_PERSONAS`）：
+
+| id | title | voice descriptor |
+| --- | --- | --- |
+| `maker` | 爱折腾的小白手艺人 | Talks casually about what to make and the use case; doesn't worry about UI/layout. |
+| `planner` | 喜欢列清单的整理控 | Lists what they want in everyday language; mentions a few specific things; not technical. |
+| `curator` | 内容驱动的审美派 | Describes feel, vibe, visual references; cares about taste; doesn't speak in component names. |
+| `operator` | 想偷懒的打工人 / 学生 | Talks about pain points or hassles to remove; pragmatic; doesn't care how it looks. |
+| `founder_like` | 有点情怀的"自留地"用户 | Short, opinionated; explains what NOT to include as much as what to include. |
+
+L2 → persona 映射在 [`scripts/corpus_persona_map.json`](./scripts/corpus_persona_map.json)（61 entry，可手工调）。例：
+
+| L2 类别 | persona |
+| --- | --- |
+| 番茄钟 / 待办 / 健康打卡 | `operator`（关注省事痛点）|
+| 个人生活类 / 内容创作工具 / 餐厅点评 | `curator`（关注感觉氛围）|
+| 闪卡 / 行程规划 / 健康追踪 | `planner`（列要点、追求规律）|
+| 个人专业类 / 海报模板 | `founder_like`（短句、有取舍）|
+| Adding & Creating / 经典小游戏 / 长尾微工具 | `maker`（想到啥说啥）|
+
+prompt rule 5 同步增加 dev jargon 黑名单（"modal" / "dashboard" / "auto-generate" / "swipeable" / "bottom sheet" / "scrollable card" / "tag chip" / "GTD" / "CTA"），强约束 persona 不该使用的术语。
+
+### 实测对比（v3 → v4 → v5 同 200 条规模）
+
+| 指标 | v3（朴素） | v4（Layer-A + opener hash）| v5（+ persona-tone） |
+| --- | --- | --- | --- |
+| 与历史 corpus_topic 重叠 | 100%（同 plan） | **0%** | **0%** |
+| 开头 `Build a` 占比 | 54%（108/200） | 21%（41/200） | ~21% |
+| 主开头均衡度 | 1 个主导 | 38–48 均衡分布 | 38–48 均衡分布 |
+| 含 dev 术语的 query 占比 | 普遍出现 | **20%**（40/200） | **0.5%**（1/200） |
+| `dashboard` / `modal` / `bottom sheet` 等 | 11 / 5 / 6 | 11 / 5 / 6 | **0 / 0 / 0** |
+| 用户口吻区分度 | 全部"普通人"模板 | 全部"普通人"模板 | **5 种 persona 视角分散** |
+| 平均词数 | 102 | 103 | 91（更精炼）|
+
+### CLI 用法
+
+```bash
+# 默认：自动跨批次去重 + 自动 L2 → persona 语义匹配
+node scripts/run-corpus.js --total 200
+
+# 排除某些 L1（子串匹配，逗号分隔）
+node scripts/run-corpus.js --total 200 --exclude-l1 "深度研究,购物消费"
+
+# 自定义 state / persona-map 路径
+node scripts/run-corpus.js --total 200 \
+  --usage-state data/state/run_alpha.json \
+  --persona-map scripts/corpus_persona_map.json
+
+# 关掉 usage 跟踪（一次性试跑、不污染历史）
+node scripts/run-corpus.js --total 200 --no-usage-track
+```
+
+### Bootstrap：从历史 run 初始化 state
+
+首次启用 Layer-A 时，可一次性把已有 `queries.jsonl` 的 topic 使用情况导入 state：
+
+```bash
+node -e "
+const { saveCorpusUsage } = require('./mvp/query_factory_v2');
+const fs = require('fs');
+const tasks   = fs.readFileSync('data/output/<run>/plan.jsonl','utf8').split('\n').filter(Boolean).map(JSON.parse);
+const queries = fs.readFileSync('data/output/<run>/queries.jsonl','utf8').split('\n').filter(Boolean).map(JSON.parse);
+const okIds = new Set(queries.filter(r => !r.error).map(r => r.id));
+const used = {};
+for (const t of tasks) {
+  if (!okIds.has(t.query_id)) continue;
+  const k = t.corpus_l2_key, top = t.corpus_topic;
+  if (!k || !top) continue;
+  (used[k] = used[k] || []).push(top);
+}
+saveCorpusUsage('data/state/corpus_usage.json', used);
+"
+```
+
+> Layer-B（query 文本层 trigram-jaccard 跨批次去重 vs 历史蓄水池）已设计未实现，等 Layer-A + Layer-C 累积几个批次再判断必要性。
+
 ## 架构
 
 核心逻辑集中，CLI 是薄封装。
@@ -357,11 +467,11 @@ node scripts/generate-analysis-report.js \
 
 ## Star History
 
-<a href="https://star-history.com/#PlevanTem/queryMaker&Date">
+<a href="https://www.star-history.com/?type=date&repos=PlevanTem%2FqueryMaker">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=PlevanTem/queryMaker&type=Date&theme=dark" />
-    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=PlevanTem/queryMaker&type=Date" />
-    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=PlevanTem/queryMaker&type=Date" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=PlevanTem/queryMaker&type=date&theme=dark&legend=top-left" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=PlevanTem/queryMaker&type=date&legend=top-left" />
+    <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=PlevanTem/queryMaker&type=date&legend=top-left" />
   </picture>
 </a>
 

@@ -20,6 +20,15 @@
  *   node scripts/run-corpus.js --total 200 --concurrency 4
  *   node scripts/run-corpus.js --total 5 --dry-run               # 不调 LLM，看 plan
  *   node scripts/run-corpus.js --out data/output/corpus_v1       # 自定义输出目录
+ *   node scripts/run-corpus.js --total 200 --exclude-l1 "深度研究,购物消费"  # L1 子串过滤
+ *   node scripts/run-corpus.js --total 200 --usage-state path/to.json   # 自定义 Layer-A state
+ *   node scripts/run-corpus.js --total 200 --persona-map path/to.json   # 自定义 persona 映射
+ *   node scripts/run-corpus.js --total 200 --no-usage-track             # 关 usage 跟踪（一次性试跑）
+ *
+ * 三层多样性机制（默认全部启用）：
+ *   Layer-A 跨批次去重：data/state/corpus_usage.json 记录 (l2_key, topic) 累计使用次数；新批次优先选 least-used
+ *   Layer-B Opener hash：query_id 哈希到 5 桶之一（Build a / Need a / Create a / Make a / no formal opener）
+ *   Layer-C Persona 语义匹配：scripts/corpus_persona_map.json 按 L2 语义最佳匹配 5 种普通用户 persona，注入 voice 描述 + dev jargon 黑名单
  */
 
 const path = require("path");
@@ -40,6 +49,10 @@ const {
   normalizeQueryOutput,
   mapWithConcurrency,
   DEFAULT_CORPUS_COMPLEXITY_MIX,
+  loadCorpusUsage,
+  saveCorpusUsage,
+  loadCorpusPersonaMap,
+  pickCorpusPersonaForTask,
 } = require("../mvp/query_factory_v2");
 
 const {
@@ -76,6 +89,19 @@ async function main() {
   const noXlsx  = args["no-xlsx"] === true;     // default: write xlsx
   const limit =
     args.limit !== undefined && args.limit !== true ? Number(args.limit) : null;
+  const excludeL1 =
+    args["exclude-l1"] && args["exclude-l1"] !== true
+      ? String(args["exclude-l1"]).split(",").map((s) => s.trim()).filter(Boolean)
+      : [];
+  const usageStatePath = path.resolve(
+    process.cwd(),
+    args["usage-state"] || "data/state/corpus_usage.json",
+  );
+  const noUsageTrack = args["no-usage-track"] === true; // default: track + persist usage
+  const personaMapPath = path.resolve(
+    process.cwd(),
+    args["persona-map"] || "scripts/corpus_persona_map.json",
+  );
 
   const rootDir = process.cwd();
   const inputPath = args.input
@@ -93,6 +119,9 @@ async function main() {
   console.log(`│  total        : ${total}`);
   console.log(`│  complexity   : [${complexityMix.join(", ")}]`);
   console.log(`│  concurrency  : ${concurrency}`);
+  console.log(`│  exclude-l1   : ${excludeL1.length ? excludeL1.join(", ") : "(none)"}`);
+  console.log(`│  persona-map  : ${path.relative(rootDir, personaMapPath)}`);
+  console.log(`│  usage-track  : ${noUsageTrack ? "off" : `on → ${path.relative(rootDir, usageStatePath)}`}`);
   console.log(`│  scoring      : ${doScore ? "on" : "off (default)"}`);
   console.log(`│  xlsx export  : ${noXlsx ? "off" : "on (default)"}`);
   console.log(`│  dry-run      : ${isDryRun}`);
@@ -103,9 +132,31 @@ async function main() {
   const spec = parseRequirementsFromWorkbook(inputPath);
   console.log(`\n[1/5] 解析场景：${spec.total_scenarios} 个 L2 场景`);
 
-  // ── 2. Build corpus plan ──────────────────────────────────────────────────
+  // ── 2. Build corpus plan (with Layer-A least-used topic sampling) ────────
   const corpusData = require("./corpus_data.json");
-  const plan = buildCorpusPlan(spec, corpusData, { total, complexityMix });
+  const corpusUsage = noUsageTrack ? {} : loadCorpusUsage(usageStatePath);
+  const usageL2Count = Object.keys(corpusUsage).length;
+  const usageTopicCount = Object.values(corpusUsage).reduce(
+    (s, m) => s + Object.keys(m).length, 0,
+  );
+  if (!noUsageTrack && usageTopicCount > 0) {
+    console.log(`      ↳ 历史 corpus usage 已加载：${usageL2Count} 个 L2 / ${usageTopicCount} 个已用 topic`);
+  }
+  const plan = buildCorpusPlan(spec, corpusData, {
+    total,
+    complexityMix,
+    excludeL1,
+    corpusUsage,
+  });
+
+  // ── Persona-tone semantic mapping (Layer-B-tone) ─────────────────────────
+  // Look up best-fit persona per task by L2 key. Result stored on task itself
+  // so buildCorpusDirectQueryPrompt can read it.
+  const personaMap = loadCorpusPersonaMap(personaMapPath);
+  for (const t of plan.tasks) {
+    t.corpus_persona_id = pickCorpusPersonaForTask(t, personaMap);
+  }
+
   const planPath = path.join(outDir, "plan.jsonl");
   writeJsonl(planPath, plan.tasks);
 
@@ -118,6 +169,13 @@ async function main() {
   console.log(`[2/5] 计划：${plan.total_tasks} 个 task → ${path.relative(rootDir, planPath)}`);
   console.log(`      L1 分布：`);
   console.log(l1Lines.join("\n"));
+
+  const byPersona = {};
+  plan.tasks.forEach((t) => (byPersona[t.corpus_persona_id] = (byPersona[t.corpus_persona_id] || 0) + 1));
+  console.log(`      Persona 分布（按 L2 语义匹配）：`);
+  Object.entries(byPersona)
+    .sort((a, b) => b[1] - a[1])
+    .forEach(([id, n]) => console.log(`      ${String(n).padStart(3)}  ${id}`));
 
   // ── 3. Maybe limit ────────────────────────────────────────────────────────
   let tasks = plan.tasks;
@@ -178,6 +236,8 @@ async function main() {
       l1_scene: task.l1_scene,
       l2_scene_label: task.l2_scene_label,
       corpus_topic: task.corpus_topic,
+      corpus_l2_key: task.corpus_l2_key,
+      corpus_persona_id: task.corpus_persona_id,
       application_type: task.application_type,
       product_type: task.product_type,
       target_complexity: task.target_complexity,
@@ -287,6 +347,21 @@ async function main() {
     XLSX.utils.book_append_sheet(wb, l1Sheet, "l1_distribution");
 
     XLSX.writeFile(wb, xlsxPath);
+  }
+
+  // ── 6. Persist corpus usage state (Layer-A diversification) ──────────────
+  // Only count topics from successfully generated rows (skip failures + dry-run).
+  if (!noUsageTrack && !isDryRun) {
+    const usedByL2 = {};
+    for (const r of successes) {
+      const k = r.corpus_l2_key;
+      const t = r.corpus_topic;
+      if (!k || !t) continue;
+      (usedByL2[k] = usedByL2[k] || []).push(t);
+    }
+    saveCorpusUsage(usageStatePath, usedByL2);
+    const totalIncrements = Object.values(usedByL2).reduce((s, arr) => s + arr.length, 0);
+    console.log(`      usage    → ${path.relative(rootDir, usageStatePath)} (+${totalIncrements} 次使用记录)`);
   }
 
   console.log(`\n[5/5] ✅ ${successes.length}/${rows.length} ok, ${failures.length} fail (${elapsed}s)`);

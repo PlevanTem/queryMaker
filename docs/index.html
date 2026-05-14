@@ -597,6 +597,78 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
 
   <div style="font-size:13px;color:var(--muted);margin-bottom:14px;font-family:'SFMono-Regular',monospace;">// L1 DISTRIBUTION FROM A REAL 200-QUERY RUN</div>
   <div class="l1-bars" id="l1-bars"></div>
+
+  <div style="font-size:13px;color:var(--muted);margin:36px 0 14px;font-family:'SFMono-Regular',monospace;">// PAIN POINTS DISCOVERED IN BATCH GENERATION → FIXES SHIPPED</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+    <div class="formula-card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'SFMono-Regular',monospace;">// CROSS-BATCH</div>
+      <div style="font-size:16px;font-weight:600;margin-bottom:10px;" data-i18n="div.f3.t">Layer-A · Least-used topic sampling</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.6;" data-i18n="div.f3.d">
+        Naive <code>topics[i % length]</code> rotation makes consecutive batches pick identical
+        corpus topics. We persist <code>data/state/corpus_usage.json</code> — usage counts per
+        (l2_key, topic) — and prefer least-used topics for each new run. 100% → 0% topic
+        overlap with previous batch.
+      </div>
+      <div class="formula" style="margin-top:14px;">
+<span class="var">pickLeastUsedTopics</span>(<span class="var">topics</span>, <span class="var">n</span>, <span class="var">usageMap</span>)<br>
+&nbsp;&nbsp;<span style="color:var(--muted);">// stable tiebreak by original index</span>
+      </div>
+      <div class="threshold-table">
+        <span class="t-key">v3 → v4</span><span class="t-desc" data-i18n="div.f3.r1">topic overlap with prior batch</span><span class="t-val">100% → 0%</span>
+      </div>
+    </div>
+    <div class="formula-card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'SFMono-Regular',monospace;">// PROMPT CONVERGENCE</div>
+      <div style="font-size:16px;font-weight:600;margin-bottom:10px;" data-i18n="div.f4.t">Opener hash distribution</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.6;" data-i18n="div.f4.d">
+        With "mobile H5" in the system prompt, 54% of v3 outputs converged on
+        <code>Build a mobile ...</code>. We deterministically hash <code>query_id</code> into one
+        of 5 opener buckets (<code>Build a / Need a / Create a / Make a / no formal opener</code>),
+        forcing uniform distribution. Idempotent across reruns.
+      </div>
+      <div class="formula" style="margin-top:14px;">
+<span class="var">opener</span> <span class="op">=</span> <span class="var">OPENERS</span>[<span class="var">hash</span>(<span class="var">query_id</span>) <span class="op">%</span> 5]
+      </div>
+      <div class="threshold-table">
+        <span class="t-key">v3</span><span class="t-desc" data-i18n="div.f4.r1">"Build a" share</span><span class="t-val">54%</span>
+        <span class="t-key">v4</span><span class="t-desc" data-i18n="div.f4.r2">all 4 main openers</span><span class="t-val">38–48 each</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr;gap:24px;margin-top:24px;">
+    <div class="formula-card">
+      <div style="font-size:13px;color:var(--muted);margin-bottom:6px;font-family:'SFMono-Regular',monospace;">// VOICE / TONE</div>
+      <div style="font-size:16px;font-weight:600;margin-bottom:10px;" data-i18n="div.f5.t">Layer-C · Persona-tone semantic mapping</div>
+      <div style="font-size:13px;color:var(--muted);line-height:1.6;" data-i18n="div.f5.d">
+        v4 batches still read like PM specs ("GTD inbox dashboard", "auto-generate based on UV index", "bottom card swipe up to expand"). We define 5 ordinary-user personas
+        (<code>maker</code>, <code>planner</code>, <code>curator</code>, <code>operator</code>, <code>founder_like</code>) and assign each task
+        the best-fit persona <em>by L2 semantics</em> (not random hash) via
+        <code>scripts/corpus_persona_map.json</code>. The prompt injects each persona's voice descriptor —
+        purely <em>qualitative</em>, no example phrases (which would make output rigid). A jargon blacklist
+        (modal / dashboard / auto-generate / swipeable / bottom sheet ...) reinforces what each persona
+        wouldn't say.
+      </div>
+      <div class="formula" style="margin-top:14px;">
+<span class="var">persona</span> <span class="op">=</span> <span class="var">map</span>[<span class="var">task.corpus_l2_key</span>] <span class="op">||</span> <span class="var">"maker"</span><br>
+&nbsp;&nbsp;<span style="color:var(--muted);">// 61 L2 entries · semantic best-fit · NOT hash-random</span>
+      </div>
+      <div class="threshold-table">
+        <span class="t-key">curator</span><span class="t-desc" data-i18n="div.f5.r1">个人生活类 · 内容创作 · 餐厅点评 · 笔记编辑</span><span class="t-val"></span>
+        <span class="t-key">operator</span><span class="t-desc" data-i18n="div.f5.r2">番茄钟 · 待办 · 健康打卡 · 编辑/搜索/筛选</span><span class="t-val"></span>
+        <span class="t-key">planner</span><span class="t-desc" data-i18n="div.f5.r3">闪卡 · 行程 · 健康追踪 · 学习打卡</span><span class="t-val"></span>
+        <span class="t-key">founder_like</span><span class="t-desc" data-i18n="div.f5.r4">个人专业 · 海报 / 简历模板</span><span class="t-val"></span>
+        <span class="t-key">maker</span><span class="t-desc" data-i18n="div.f5.r5">长尾微工具 · 经典小游戏 · Adding & Creating</span><span class="t-val"></span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;padding:18px 22px;background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;font-size:13px;color:var(--muted);line-height:1.7;">
+    <strong style="color:var(--text);" data-i18n="div.bs.t">Bootstrap from existing run</strong> ·
+    <span data-i18n="div.bs.d">first time enabling Layer-A, seed the state file from a historical
+    <code>queries.jsonl</code> + <code>plan.jsonl</code> pair. Subsequent runs auto-update on success;
+    failed rows are not counted toward usage. Inspect <code>data/state/corpus_usage.json</code> any time.</span>
+  </div>
 </section>
 
 <!-- ── Pillar 2: Persona ── -->
@@ -909,6 +981,21 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "div.f2.t":"Trigram Jaccard dedup",
     "div.f2.d":"Each query is compared against its same-scene peers via trigram-set Jaccard similarity. The diversity score rewards low max-peer-similarity.",
     "div.f2.r1":"distinct enough","div.f2.r2":"strongly distinct",
+    "div.f3.t":"Layer-A · Least-used topic sampling",
+    "div.f3.d":"Naive <code>topics[i % length]</code> rotation makes consecutive batches pick identical corpus topics. We persist <code>data/state/corpus_usage.json</code> — usage counts per (l2_key, topic) — and prefer least-used topics for each new run. 100% → 0% topic overlap with previous batch.",
+    "div.f3.r1":"topic overlap with prior batch",
+    "div.f4.t":"Opener hash distribution",
+    "div.f4.d":"With \"mobile H5\" in the system prompt, 54% of v3 outputs converged on <code>Build a mobile ...</code>. We deterministically hash <code>query_id</code> into one of 5 opener buckets (<code>Build a / Need a / Create a / Make a / no formal opener</code>), forcing uniform distribution. Idempotent across reruns.",
+    "div.f4.r1":"\"Build a\" share","div.f4.r2":"all 4 main openers",
+    "div.f5.t":"Layer-C · Persona-tone semantic mapping",
+    "div.f5.d":"v4 batches still read like PM specs (\"GTD inbox dashboard\", \"auto-generate based on UV index\", \"bottom card swipe up to expand\"). We define 5 ordinary-user personas (<code>maker</code>, <code>planner</code>, <code>curator</code>, <code>operator</code>, <code>founder_like</code>) and assign each task the best-fit persona <em>by L2 semantics</em> (not random hash) via <code>scripts/corpus_persona_map.json</code>. The prompt injects each persona's voice descriptor — purely <em>qualitative</em>, no example phrases (which would make output rigid). A jargon blacklist (modal / dashboard / auto-generate / swipeable / bottom sheet ...) reinforces what each persona wouldn't say.",
+    "div.f5.r1":"个人生活类 · 内容创作 · 餐厅点评 · 笔记编辑",
+    "div.f5.r2":"番茄钟 · 待办 · 健康打卡 · 编辑/搜索/筛选",
+    "div.f5.r3":"闪卡 · 行程 · 健康追踪 · 学习打卡",
+    "div.f5.r4":"个人专业 · 海报 / 简历模板",
+    "div.f5.r5":"长尾微工具 · 经典小游戏 · Adding & Creating",
+    "div.bs.t":"Bootstrap from existing run",
+    "div.bs.d":"first time enabling Layer-A, seed the state file from a historical <code>queries.jsonl</code> + <code>plan.jsonl</code> pair. Subsequent runs auto-update on success; failed rows are not counted toward usage. Inspect <code>data/state/corpus_usage.json</code> any time.",
     "ps.title":"Authenticity through persona",
     "ps.sub":"Five archetypes drawn from how people actually request UI work. Each archetype carries per-complexity style hints, so the same persona phrases a vague request differently from a complex one — preserving voice while scaling specificity.",
     "ps.scope.t":"Persona scope: scene vs. task",
@@ -977,6 +1064,21 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "div.f2.t":"三元组 Jaccard 去重",
     "div.f2.d":"每条 query 与同场景内的同辈做 trigram 集合的 Jaccard 相似度比较；多样性分鼓励低的 max-peer-similarity。",
     "div.f2.r1":"足够独特","div.f2.r2":"明显独特",
+    "div.f3.t":"Layer-A · 最少使用 topic 优先采样",
+    "div.f3.d":"朴素的 <code>topics[i % length]</code> 轮换会让相邻批次反复挑到同样的 corpus topic。我们把每个 (l2_key, topic) 的累计使用次数持久化到 <code>data/state/corpus_usage.json</code>，新批次优先选最少使用过的 topic。100% → 0% 跨批次 topic 重叠。",
+    "div.f3.r1":"与上一批 topic 重叠率",
+    "div.f4.t":"开头哈希均匀分配",
+    "div.f4.d":"system prompt 里有 \"mobile H5\"，v3 输出 54% 都收敛到 <code>Build a mobile ...</code>。我们用 <code>query_id</code> 决定性哈希到 5 个开头桶之一（<code>Build a / Need a / Create a / Make a / 无 formal opener</code>），强制均匀分布；同 query_id 跑多次拿到同一开头。",
+    "div.f4.r1":"\"Build a\" 占比","div.f4.r2":"4 种主要开头",
+    "div.f5.t":"Layer-C · Persona 口吻语义映射",
+    "div.f5.d":"v4 输出虽然 topic 命中、开头多样化，但仍像 PM 文档（\"GTD inbox dashboard\"、\"基于 UV 指数自动生成\"、\"底部卡片上滑展开\"）。我们定义 5 个普通用户 persona（<code>maker</code>、<code>planner</code>、<code>curator</code>、<code>operator</code>、<code>founder_like</code>），通过 <code>scripts/corpus_persona_map.json</code>，按 L2 语义最佳匹配（非随机哈希）给每个 task 分配 persona。Prompt 里只注入<em>描述性</em>的 voice 提示，<em>不给词汇示例</em>（会让模型生成僵化）。同时配 dev 术语黑名单（modal / dashboard / auto-generate / swipeable / bottom sheet ...）反向约束 persona 不该说的词。",
+    "div.f5.r1":"个人生活类 · 内容创作 · 餐厅点评 · 笔记编辑",
+    "div.f5.r2":"番茄钟 · 待办 · 健康打卡 · 编辑/搜索/筛选",
+    "div.f5.r3":"闪卡 · 行程 · 健康追踪 · 学习打卡",
+    "div.f5.r4":"个人专业 · 海报 / 简历模板",
+    "div.f5.r5":"长尾微工具 · 经典小游戏 · Adding & Creating",
+    "div.bs.t":"从历史 run 引导 state",
+    "div.bs.d":"首次启用 Layer-A 时，可从已有 <code>queries.jsonl</code> + <code>plan.jsonl</code> 一次性导入历史 usage。后续 run 跑成功的条目自动累加；失败的不计入。任何时候打开 <code>data/state/corpus_usage.json</code> 即可查看当前状态。",
     "ps.title":"真实性：以人为中心的 query 生成",
     "ps.sub":"5 个原型，源自人们真实请求 UI 工作的方式。每个原型自带 3 档复杂度的口吻提示，因此同一人格说\"模糊\"和\"复杂\"需求时口吻一致、信息密度递增。",
     "ps.scope.t":"Persona scope：scene vs. task",

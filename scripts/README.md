@@ -123,6 +123,17 @@ node scripts/run-corpus.js --total 200 --concurrency 4
 
 # 自定义输出
 node scripts/run-corpus.js --total 200 --out data/output/corpus_v1
+
+# 排除 L1 场景（子串匹配，逗号分隔）
+node scripts/run-corpus.js --total 200 --exclude-l1 "深度研究,购物消费"
+
+# 自定义 Layer-A state / persona-map 路径
+node scripts/run-corpus.js --total 200 \
+  --usage-state data/state/run_alpha.json \
+  --persona-map scripts/corpus_persona_map.json
+
+# 关掉 usage 跟踪（一次性试跑、不污染历史）
+node scripts/run-corpus.js --total 200 --no-usage-track
 ```
 
 **参数：**
@@ -136,6 +147,16 @@ node scripts/run-corpus.js --total 200 --out data/output/corpus_v1
 | `--limit N` | 关 | 仅执行前 N 个 task |
 | `--input` | 自动 | xlsx 路径（默认从 `data/input/` 自动检测） |
 | `--out` | `data/output/corpus_run` | 输出目录 |
+| `--exclude-l1` | 无 | L1 场景子串过滤（逗号分隔），如 `"深度研究,购物消费"` |
+| `--usage-state` | `data/state/corpus_usage.json` | Layer-A 跨批次 topic 去重 state 文件 |
+| `--no-usage-track` | 关 | 关闭 Layer-A 跟踪（一次性试跑、不污染历史）|
+| `--persona-map` | `scripts/corpus_persona_map.json` | Layer-C L2 → persona 语义映射文件 |
+
+**三层多样性机制（默认全部启用）：**
+
+- **Layer-A 跨批次去重**：`data/state/corpus_usage.json` 记录 `(l2_key, topic)` 累计使用次数；新批次优先选 least-used，与历史 batch topic 重叠 100% → 0%
+- **Layer-B Opener hash**：`query_id` 决定性哈希到 5 桶之一（`Build a` / `Need a` / `Create a` / `Make a` / 无 formal opener），破除模型在 "Build a..." 上的收敛
+- **Layer-C Persona-tone 语义映射**：`scripts/corpus_persona_map.json` 按 L2 语义匹配 5 种普通用户 persona（`maker` / `planner` / `curator` / `operator` / `founder_like`），prompt 注入 voice 描述 + dev jargon 黑名单，把含 dev 术语的 query 占比从 20%（v4）压到 0.5%（v5）
 
 **复用关系：** 共享 `scripts/lib/claude-cli.js` 与 `test-corpus-methods.js`，两脚本对 claude CLI 调用统一一处实现。
 

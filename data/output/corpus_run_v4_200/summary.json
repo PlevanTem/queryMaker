@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-05-14T03:26:47.230Z",
+  "generated_at": "2026-05-14T02:44:53.253Z",
   "model": "claude-sonnet-4-6",
   "mode": "corpus-direct",
-  "dry_run": true,
+  "dry_run": false,
   "plan_total": 200,
   "executed_total": 200,
   "complexity_mix": [
@@ -14,7 +14,7 @@
   "pass_count": null,
   "pass_rate": null,
   "avg_quality_score": null,
-  "avg_word_count": 9,
+  "avg_word_count": 103,
   "l1_distribution": {
     "交互方式": 40,
     "实用工具": 40,
@@ -28,5 +28,5 @@
     "新闻资讯": 8,
     "购物消费": 3
   },
-  "elapsed_sec": 0
+  "elapsed_sec": 405.1
 }
