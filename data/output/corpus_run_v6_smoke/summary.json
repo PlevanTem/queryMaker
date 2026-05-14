@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-05-14T07:52:50.280Z",
+  "model": "claude-sonnet-4-6",
+  "mode": "corpus-direct",
+  "dry_run": false,
+  "plan_total": 200,
+  "executed_total": 5,
+  "complexity_mix": [
+    "medium"
+  ],
+  "successes": 5,
+  "failures": 0,
+  "scored": 0,
+  "pass_count": null,
+  "pass_rate": null,
+  "avg_quality_score": null,
+  "avg_word_count": 93,
+  "l1_distribution": {
+    "交互方式": 40,
+    "实用工具": 40,
+    "教育学习": 20,
+    "办公效率": 20,
+    "健康管理": 20,
+    "出行助手": 15,
+    "美食探店": 12,
+    "休闲游戏": 12,
+    "多媒体处理": 10,
+    "新闻资讯": 8,
+    "购物消费": 3
+  },
+  "elapsed_sec": 27.3
+}
