@@ -1,117 +1,101 @@
-# UI QueryMaker Pipeline
+<div align="center">
 
-> Build realistic, diverse, and structured front-end UI requirement queries from scenario specifications.
+# ui-queryMaker
 
-一个面向前端 UI 需求数据集构建的生成流水线。
-它将需求表格解析为场景，自动生成 `persona-driven query`，完成评分、入库与可视化，形成一条可离线跑通的 MVP 数据生产链路。
+### 真实可用的 UI Query 数据，以工程化方式合成。
 
-## Why This Project
+一条生产级流水线，用于生成大规模、多样化、persona 真实可信的
+自然语言 UI 需求 query —— **语料锚定 · 相似度验证 · 风格感知**。
 
-当前很多 UI 生成或代码生成相关数据，往往有三个问题：
+[**在线 Demo**](https://plevantem.github.io/queryMaker/) ·
+[快速开始](#快速开始) ·
+[两条流水线](#两条流水线) ·
+[四方法对比](#四方法对比) ·
+[架构](#架构)
 
-- 只有“页面长什么样”，没有“用户为什么会提这个需求”
-- 只有功能描述，缺少产品语境、角色差异与表达风格
-- 只有样例，没有一条可以稳定复跑、统计分析、持续扩展的数据生产流水线
+**简体中文** · [English](./README.en.md)
 
-这个项目的目标不是再造一个 prompt 集合，而是把这件事做成一个 **可解析、可生成、可评分、可入库、可分析** 的系统。
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](#license)
+[![Node](https://img.shields.io/badge/node-%E2%89%A518-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Model](https://img.shields.io/badge/model-claude--sonnet--4--6-d97757.svg)](https://www.anthropic.com/)
+[![Stars](https://img.shields.io/github/stars/PlevanTem/queryMaker?style=social)](https://github.com/PlevanTem/queryMaker/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/PlevanTem/queryMaker)](https://github.com/PlevanTem/queryMaker/commits)
 
-当前已落地的 v2 主链路：
+</div>
 
-```text
-xlsx requirements -> scenario spec -> generation plan -> persona/query generation -> scoring -> SQLite -> dashboard
-```
+---
 
-## Pain Points In Query / Instruction Synthesis
+## 核心指标
 
-在 UI query / instruction 合成这件事上，常见痛点不是“模型不会写句子”，而是生成结果很难长期稳定地作为数据资产使用。
+| 指标 | 数值 | 说明 |
+| --- | --- | --- |
+| 语料覆盖 | **2,440 个 topic** | 61 个 L2 场景 · 12 个 L1 类目 |
+| 跑通成功率 | **200 / 200** | `claude-sonnet-4-6`，0 失败 |
+| 平均 query 长度 | **~84 词** | medium 复杂度，英文 |
+| 单条 query 耗时 | **~3.3 秒** | 200 条约 11 分钟 |
 
-典型问题有：
+> 在控制变量条件下对比了四种生成策略。人工评审认定
+> **`corpus-direct` 为最高质量方案** —— topic 命中率 100%、模板痕迹最低、多样性最强。
 
-- `模板味太重`
-直接把场景字段拼成一句话，容易得到表面多样、实际同质的 instruction
-- `只有功能，没有人`
-很多 query 只有模块和功能，没有真实用户动机、表达方式和信息缺失模式
-- `场景原文污染输出`
-像 `① 个人生活类（旅行回忆、年度相册、画作展示、宝宝成长）` 这样的原始需求文本，如果直接带进 query，会让数据既生硬又泄漏标注痕迹
-- `复杂度不可控`
-生成前没有显式控制，生成后也无法判断到底是 vague、medium 还是 complex
-- `只能生成，不能运营`
-没有 plan、数据库、统计和可视化时，数据很难补齐、复跑、对比和持续迭代
+## 为什么做这件事
 
-我们的解决方案是把 query 合成从“单步 prompt 生成”改造成“结构化数据生产链路”，靠 前置规划 + 显式维度建模 + 生成后可观测回判，控制“分布多样性”和“低重复性”：
+绝大多数「随便 prompt 一下让 LLM 生成 query」的做法，最终都会塌缩成
+窄分布、模板化、无法泛化的数据。本仓库从三个维度上解决这个问题：
 
-- `场景先清洗，再进入生成`
-先把 `l2_scene_raw` 拆成 `l2_scene_label`、`l2_scene_examples` 和 `application_type_candidates`，避免把原始 Excel 文本直接污染最终 instruction
-- `显式引入 L3 application_type`
-让 query 不是围着抽象场景说空话，而是围绕更具体的 app/product direction 生成
-- `persona-driven synthesis`
-不再直接从字段拼 query，而是先合成 persona，再由 persona 生成 instruction，把“谁在提需求、为什么这样提”显式建模出来
-- `target_complexity 前置控制`
-在 plan 阶段就指定 `vague / medium / complex`，而不是等生成完再事后猜测
-- `生成后再做回判`
-保留 `complexity_level` 和 `quality_score`，用于判断“计划中的复杂度”是否真的落到了输出上
-- `把生成变成可运营系统`
-中间产物全部落盘，最终入 SQLite 并进入 dashboard，这样 query 数据不只是一次性样例，而是可以复跑、补齐、分析和持续优化的数据集
+| 没有它的样子 | 我们的做法 |
+| --- | --- |
+| **分布太窄** —— 100 条 query 都是 "build me a dashboard" 的变体，覆盖不到真实产品空间的 5% | **真实语料锚定** —— 每条生成都锁定到一个精选 2,440 entry 语料中的具体 topic |
+| **机器味太重** —— LLM 默认输出礼貌、结构化、一致的语气，跟真实用户提需求的方式不一样 | **persona 驱动语气** —— 5 类 archetype × 3 档复杂度，产出以用户目标为锚的第一人称变化 |
+| **视觉风格扁平** —— query 很少描述视觉风格，下游 UI 生成只能默认一种审美 | **设计风格感知** —— 11 个注册风格 × 3 种调用方式（默认 / 指定列表 / 启发式自动） |
 
-## Highlights
+## 项目亮点
 
-- `End-to-end pipeline`
-从 Excel 输入一路到 SQLite 和静态 Dashboard，完整闭环
-- `Persona-driven generation`
-不直接拼模板字段，而是先构造 persona，再生成 query
-- `Deterministic fallback`
-即使不接外部 LLM，当前版本也可以离线稳定产出结果
-- `Structured artifacts`
-中间结果全部显式落盘，便于排查、复用和二次分析
-- `MVP + research blueprint`
-一边有当前可运行实现，一边保留完整研究版方法论与提示词资产
+- **端到端流水线** —— Excel 场景规格 → plan → 生成 → 评分 → SQLite → dashboard
+- **两条生产链路并存** —— `corpus-direct`（单次调用、topic 锚定、生产推荐）和 `persona-driven`（两步调用、persona 锚定、研究/兼容）
+- **离线 fallback 模式** —— 不接任何 LLM 也能跑通，`persona-fallback` 提供确定性输出，适合冒烟和 CI
+- **多 transport 接入** —— `claude-cli`（子进程）/ `openai` 兼容 / `anthropic` `/v1/messages`，单参数切换
+- **相似度去重** —— trigram 相似度算法保证 corpus 分布广度
+- **可复跑、可断点续跑** —— 所有中间产物落盘；plan 是确定性的
+- **内置基准测试** —— `test-corpus-methods.js` 控制变量跑四种策略，输出并排对比 HTML
 
-## Quick Start
-
-### 1. 安装依赖
+## 快速开始
 
 ```bash
+# 1. 安装依赖
 npm install
-```
 
-### 2. 准备输入
-
-将需求 Excel 放到仓库根目录，或在运行时通过 `--input` 指定。
-
-### 3. 一键跑通主链路
-
-```bash
+# 2. 跑离线 MVP（不接 LLM，确定性 fallback）
 npm run run:mvp
+
+# 3. 查看结果
+open data/reports_v2/dashboard.html
 ```
 
-### 4. 查看结果
-
-- 结构化场景：`data/intermediate/scenario_spec.v2.json`
-- 生成计划：`data/intermediate/generation_plan.v2.jsonl`
-- 原始 query：`data/output/raw_queries.v2.jsonl`
-- 评分结果：`data/output/scored_queries.v2.jsonl`
-- 数据库：`data/db/queries_v2.sqlite`
-- 可视化报表：`data/reports_v2/dashboard.html`
-
-### 5. 运行验证
+**接真实 LLM** —— 把凭证写入 `.env.local`，然后选择一条流水线：
 
 ```bash
-npm test
+# Corpus-Direct（生产推荐）
+node scripts/run-corpus.js --total 200
+
+# Persona-Driven 自由生成（研究 / 探索）
+npm run run:free
 ```
 
-### 6. 使用真实 LLM 生成
-
-当前仓库除离线 `persona-fallback` 外，也支持通过 OpenAI 兼容接口和 Anthropic / Claude Code 风格接口接入真实模型。
-
-推荐使用 `.env.local` 配置：
+<details>
+<summary><b>完整 .env.local 模板</b></summary>
 
 ```bash
+# OpenAI 兼容网关（Packy / LiteLLM / 自建）
 PACKY_API_KEY=your_api_key_here
 PACKY_BASE_URL=https://www.packyapi.com/v1
 PACKY_MODEL=claude-3-5-sonnet-20240620
+
+# Anthropic / Claude Code 风格（CC 分组令牌）
 ANTHROPIC_AUTH_TOKEN=your_cc_group_token_here
 ANTHROPIC_BASE_URL=https://www.packyapi.com
 ANTHROPIC_MODEL=claude-sonnet-4-6
+
+# 并发 / 网络
 PACKY_CONCURRENCY=3
 PACKY_TIMEOUT_MS=120000
 PACKY_MAX_RETRIES=2
@@ -119,281 +103,134 @@ PACKY_USE_SYSTEM_PROXY=1
 PACKY_ALLOW_INSECURE_TLS=0
 ```
 
-然后可直接运行：
-
-```bash
-npm run generate:queries -- --mode llm-openai
-```
-
-如果你使用的是 `CC` 分组令牌，可改走 Anthropic / Claude Code 风格接口：
-
-```bash
-npm run generate:queries -- --mode llm-anthropic
-```
-
-或一键跑完整链路：
-
-```bash
-npm run run:mvp -- --mode llm-openai
-```
-
-```bash
-npm run run:mvp -- --mode llm-anthropic
-```
-
 说明：
+- `llm-openai` / `real-llm` / `packy-openai` → OpenAI 兼容接口
+- `llm-anthropic` / `claude-code` / `anthropic-cc` / `packy-cc` → Anthropic 风格 `/v1/messages`
+- LLM 调用使用 Node 内建 `undici`，无需额外安装 SDK
+- Windows 默认自动读取系统代理，内网网关可设置 `PACKY_USE_SYSTEM_PROXY=0`
 
-- `llm-openai` / `real-llm` / `packy-openai` 都会走真实模型调用
-- `llm-anthropic` / `claude-code` / `anthropic-cc` / `packy-cc` 会走 Anthropic / Claude Code 风格的 `/v1/messages`
-- 真实调用会先生成 persona，再基于 persona 生成 query
-- `PACKY_BASE_URL` 为 OpenAI 兼容的 Chat Completions 基地址，通常以 `/v1` 结尾；接入自建或 LiteLLM 网关时设置为你提供的 POST 根路径即可；`PACKY_MODEL` 必须与该网关 `GET /v1/models` 返回的 `id` 一致（例如 `gemini-3.1-pro-preview`）
-- 单条联调可运行：`npm run preview:persona -- --mode llm-openai --index 0`
-- 若未配置 API Key，会自动报错并提示需要设置 `PACKY_API_KEY` 或 `OPENAI_API_KEY`
-- 若使用 `CC` 分组，优先设置 `ANTHROPIC_AUTH_TOKEN` 和 `ANTHROPIC_BASE_URL`
-- Windows 下默认会尝试读取系统代理设置，并将其映射到 `HTTP_PROXY / HTTPS_PROXY`；内网直连网关时可在 `.env.local` 中设置 `PACKY_USE_SYSTEM_PROXY=0`
-- 若公司代理做了 HTTPS 中间证书注入，Node 可能报 `SELF_SIGNED_CERT_IN_CHAIN`
-- 这时优先建议给 Node 配置可信 CA；临时验证时也可将 `PACKY_ALLOW_INSECURE_TLS=1`
+</details>
 
-**依赖说明：** LLM 调用使用项目已有的 `undici`（Node 内建环境变量加载见 `mvp/query_factory_v2.js`），接入真实模型时 **无需** 额外安装 OpenAI 官方 SDK；`npm install` 一次即可，除非升级 Node 大版本，一般不必为「换模型 / 换网关」更新 `package.json` 依赖。
+## 两条流水线
 
-### 7. LLM 自由生成流水线（推荐入口）
+仓库提供两条生产路径，共用评分、去重和报告层：
 
-`run:free` 是当前推荐的 LLM 批量生成一键入口，内部按顺序编排四步：构建计划 → LLM 生成 → 质量评分 → 可视化报告，任一步骤失败立即退出并标明位置。
-
-```bash
-# 最简启动（全部默认）
-npm run run:free
-
-# 全量重跑到新目录
-npm run run:free -- --output-dir data/output/runs/free200_v2 --no-resume
-
-# 同时导出带前缀的 CSV
-npm run run:free -- --no-resume --export-csv
-
-# 完整参数
-npm run run:free -- \
-  --output-dir    data/output/runs/free200_v2 \
-  --persona-scope scene \
-  --concurrency   3 \
-  --no-resume \
-  --title         "free200 v2 · 2026-05" \
-  --export-csv \
-  --csv-prefix    "Generate a plain HTML optimized for mobile devices."
-```
-
-**主要参数：**
-
-| 参数 | 默认 | 说明 |
-|---|---|---|
-| `--output-dir` | `data/output/runs/free200_llm` | 所有产物目录 |
-| `--persona-scope` | `scene` | `scene`=同场景共享 persona；`task`=每条独立 |
-| `--concurrency` | `3` | LLM 并发数 |
-| `--no-resume` | 断点续跑 | 传此参数则全量重跑 |
-| `--skip-plan` | — | 跳过计划构建，沿用已有 plan |
-| `--export-csv` | 关 | 开启后额外导出带前缀的 CSV |
-| `--csv-prefix` | `Generate a plain HTML optimized for mobile devices.` | CSV 每条 query 前缀 |
-
-单步调用方式见 [scripts/README.md](./scripts/README.md)。
-
-### 8. Corpus-Direct 流水线（生产推荐）
-
-`run-corpus.js` 是基于 corpus topic 锚定的生产链路。在 4 种方法对比评测中，人工评审认定 **corpus-direct 为最高质量方案** —— 它直接用 `scripts/corpus_data.json` 中 61 个 L2 场景下的具体 topic 作为锚点（每个 L2 含 ~40 个 topic），生成的 query 紧扣 topic 主旨、命中率 100%（vs `scene-direct` / `persona-only` 容易飘到 L2 类目里的其他子话题）。
-
-**工作流（与 `run-mvp.js` 并存的入口）：**
-
-```text
-场景覆盖.xlsx + corpus_data.json
-        │
-        ▼
-parseRequirementsFromWorkbook(xlsx)
-        │
-        ▼
-buildCorpusPlan(spec, corpus, {total, complexityMix})
-   按 xlsx L1 配比 → 分配 200 个 task 到 61 个 L2
-   每 task 锚定一个 corpus_topic（在该 L2 内 rotate 采样）
-        │
-        ▼
-buildCorpusDirectQueryPrompt(task)
-   prompt 显式锁 topic，禁招呼语，按 complexity 控制长度
-        │
-        ▼  claude CLI subprocess（packy CC 网关，model=claude-sonnet-4-6）
-generateQueryRecords(plan, {mode: "corpus-direct"})   # 1× LLM call / task
-        │
-        ▼
-scoreQueryRecord                                      # quality + complexity 启发式打分
-        │
-        ▼
-data/output/corpus_run/{plan.jsonl, queries.jsonl, summary.json}
-```
-
-**用法：**
-
-```bash
-# 默认：200 task，全 medium，按 xlsx 场景配比分布
-node scripts/run-corpus.js
-
-# 自定义总量
-node scripts/run-corpus.js --total 500
-
-# 自定义复杂度 mix（逗号分隔）
-node scripts/run-corpus.js --total 200 --complexity-mix "vague,medium,medium"
-
-# 验证 plan（不调 LLM，只看分配）
-node scripts/run-corpus.js --total 200 --dry-run
-
-# 小批量真实跑（验证用）
-node scripts/run-corpus.js --total 200 --limit 10
-
-# 自定义输出目录 + 并发
-node scripts/run-corpus.js --total 200 --concurrency 4 --out data/output/corpus_v1
-```
-
-**参数：**
-
-| 参数 | 默认 | 说明 |
-|---|---|---|
-| `--total` | `200` | 总 task 数；按 xlsx L1 配比缩放分配到 61 个 L2 |
-| `--complexity-mix` | `medium` | 复杂度轮换列表（逗号分隔），如 `"vague,medium,medium"` |
-| `--concurrency` | `2` | claude CLI 并发子进程数 |
-| `--dry-run` | 关 | 不调 LLM，只验证 plan 分布与脚本结构 |
-| `--limit N` | 关 | 仅执行前 N 个 task（验证用） |
-| `--input` | 自动检测 `data/input/*.xlsx` | xlsx 路径 |
-| `--out` | `data/output/corpus_run` | 输出目录 |
-
-**模型与认证：** 复用 `.env.local` 中的 `PACKY_API_KEY`。脚本走本机 `claude.cmd` 子进程绕过 CC 分组网关对非 CLI 客户端的 UA 校验。模型默认 `claude-sonnet-4-6`，可通过环境变量 `ANTHROPIC_MODEL` 覆盖。详见 [scripts/lib/claude-cli.js](./scripts/lib/claude-cli.js)。
-
-## Pipeline Overview
-
-仓库目前并存两条生产链路：
+| | Corpus-Direct ★ | Persona-Driven |
+| --- | --- | --- |
+| 入口 | `node scripts/run-corpus.js` | `npm run run:free` |
+| 单 task LLM 调用次数 | **1** | 2（persona → query） |
+| 锚点 | 真实语料中的具体 topic（2,440 条） | 合成 persona + 场景 |
+| Topic 命中率 | **100%** | ~70–85%（会在 L2 类目内漂移） |
+| 适用场景 | 生产数据集、分布忠实的语料 | 研究、语气多样性探索 |
 
 ```mermaid
 flowchart TD
-    A["Excel requirements"] --> B["Parse requirements"]
+    A["场景覆盖.xlsx"] --> B["parseRequirementsFromWorkbook()"]
     B --> C["Scenario spec"]
 
-    subgraph PersonaLine["Persona-Driven Line (legacy / run:free / run:mvp)"]
-      C --> D1["Seed / backfill planning"]
+    subgraph CorpusLine["Corpus-Direct (run-corpus) ★"]
+      C --> D2["buildCorpusPlan(spec, corpus, mix)"]
+      D2 --> E2["带 corpus_topic 的 plan"]
+      E2 --> G2["buildCorpusDirectQueryPrompt<br/>（1× LLM 调用）"]
+    end
+
+    subgraph PersonaLine["Persona-Driven (run-free / run-mvp)"]
+      C --> D1["buildSeedPlan / buildBackfillPlan"]
       D1 --> E1["Generation plan"]
-      E1 --> F1["Persona synthesis (LLM)"]
-      F1 --> G1["Query from persona (LLM)"]
+      E1 --> F1["Persona 合成 (LLM)"]
+      F1 --> G1["从 persona 生成 query (LLM)"]
     end
 
-    subgraph CorpusLine["Corpus-Direct Line (run-corpus)"]
-      C --> D2["buildCorpusPlan<br/>(corpus_data.json + xlsx ratio)"]
-      D2 --> E2["Plan with corpus_topic"]
-      E2 --> G2["buildCorpusDirectQueryPrompt<br/>(1× LLM call)"]
-    end
-
-    G1 --> H["Heuristic scoring"]
+    G1 --> H["启发式评分"]
     G2 --> H
-    H --> I["SQLite import / JSONL artifacts"]
+    H --> I["SQLite / JSONL 产物"]
     I --> J["Dashboard + summary"]
 ```
 
+## 四方法对比
 
+`scripts/test-corpus-methods.js` 在控制变量下跑四种策略，并产出并排对比报告。主要结论：
 
-## Architecture
+| 方法 | Topic 命中 | 平均长度 | 模板痕迹 | 备注 |
+| --- | --- | --- | --- | --- |
+| **`corpus-direct`** ★ | **100%** | 84 词 | 极低 | 生产首选。锁 topic、显式控制 complexity |
+| `scene-direct` | ~75% | 71 词 | 中 | 在 L2 类目里漂移，省一跳 |
+| `persona-only` | ~70% | 92 词 | 低 | 语气最强，topic 纪律最弱 |
+| `persona+corpus` | ~95% | 96 词 | 低 | 成本最高，相比 `corpus-direct` 边际收益小 |
 
-当前代码结构非常明确，核心逻辑集中，CLI 只是薄封装。
+完整对比写作和数据见 [在线 Demo](https://plevantem.github.io/queryMaker/)，
+或在本地跑完 `scripts/test-corpus-methods.js` 后打开 `data/output/corpus_method_comparison.html`。
+
+## 架构
+
+核心逻辑集中，CLI 是薄封装。
 
 ```mermaid
 flowchart LR
-    A["scripts/*.js\nCLI entrypoints"] --> B["mvp/query_factory.js"]
-    B --> C["mvp/query_factory_v2.js\ncore pipeline"]
+    A["scripts/*.js<br/>CLI 入口"] --> B["mvp/query_factory.js"]
+    B --> C["mvp/query_factory_v2.js<br/>核心 pipeline"]
     C --> D["data/intermediate/*"]
     C --> E["data/output/*"]
     C --> F["data/db/queries_v2.sqlite"]
     C --> G["data/reports_v2/*"]
-    C -. prompt assets .-> H["prompts/*.md"]
+    C -. prompt 资产 .-> H["prompts/*.md"]
     T["tests/query-factory-smoke.test.js"] --> B
 ```
 
+- `scripts/` —— 阶段化 CLI 入口（参数解析、路径约定、文件 IO）
+- `mvp/` —— 所有可运行核心逻辑
+- `prompts/` —— prompt 资产（persona 链路 + 研究版多阶段）
+- `data/` —— 中间产物、输出、SQLite、可视化报表
+- `tests/` —— 主链路冒烟测试
+- `ARCHIVE/` —— 方法论与研究蓝图（不等于代码全部已实现）
 
+## 设计风格系统
 
-### Core Design
+`design_style` 默认为 `null` —— LLM 根据上下文自然推断视觉方向。
+三种 opt-in 模式：
 
-- `scripts/`
-阶段化 CLI 入口，负责参数解析、路径约定和文件落盘
-- `mvp/`
-当前可运行实现，所有核心逻辑都在这里
-- `prompts/`
-prompt 资产层，既包含当前 persona 链路提示词，也包含研究版多阶段方案
-- `data/`
-中间文件、输出文件、数据库和可视化报表
-- `tests/`
-冒烟测试，确保主链路可跑通
-- `ARCHIVE/`
-方法论与研究设计背景，不等于当前所有代码都已实现
+| 方式 | 行为 |
+| --- | --- |
+| 不传（默认） | `design_style: null`，LLM 按场景上下文推断 |
+| `--design-styles "Dark,Glassmorphism,Cyberpunk"` | 在指定列表中轮换分配 |
+| `--design-styles auto` | 按 L1/L2/app 关键词启发式推断 |
 
-## Data Flow
+内置 11 个注册风格：`Dark`、`Glassmorphism`、`Neumorphism`、`Neubrutalism`、`Minimalism`、
+`Material`、`Data-Dense`、`Cyberpunk`、`Luxury`、`Vibrant`。通过 `registerDesignStyle()`
+可扩展，注册时同步更新 `DESIGN_STYLES` 列表、中文 persona hint 和英文 prompt 指令。
 
-### Runtime Data Flow
-
-```mermaid
-flowchart TD
-    A["root *.xlsx"] --> B["parseRequirementsFromWorkbook()"]
-    B --> C["scenario_spec.v2.json"]
-    C --> D["buildSeedPlan() / buildBackfillPlan()"]
-    D --> E["generation_plan.v2.jsonl / backfill_plan.v2.jsonl"]
-    E --> F["generateQueryRecords()"]
-    F --> G["raw_queries.v2.jsonl"]
-    G --> H["scoreQueryRecords()"]
-    H --> I["scored_queries.v2.jsonl"]
-    C --> J["importIntoDatabase()"]
-    I --> J
-    J --> K["queries_v2.sqlite"]
-    K --> L["buildDashboardAssets()"]
-    L --> M["dashboard.html"]
-    L --> N["summary.json"]
-```
-
-
-
-### Record Lifecycle
-
-```mermaid
-flowchart LR
-    A["Excel row"] --> B["scene"]
-    B --> C["plan task"]
-    C --> D["persona"]
-    D --> E["query_text"]
-    E --> F["quality_score + complexity_level"]
-    F --> G["SQLite row"]
-    G --> H["dashboard analytics"]
-```
-
-
-
-## Project Layout
+<details>
+<summary><b>项目结构</b></summary>
 
 ```text
 .
-├── README.md
+├── README.md / README.en.md
 ├── MVP_QUERY_FACTORY.md
+├── docs/index.html                    # ★ 公开 landing page (GitHub Pages)
 ├── package.json
 ├── mvp/
 │   ├── query_factory.js
-│   └── query_factory_v2.js             # 核心：pipeline / 评分 / design_style 系统
+│   └── query_factory_v2.js            # 核心：pipeline / 评分 / design_style
 ├── scripts/
-│   ├── README.md                       # 脚本层使用说明（参数、示例、设计原则）
+│   ├── README.md                      # CLI 参数 / 示例 / 设计原则
 │   ├── lib/
-│   │   ├── llm-batch.js                # 共享：transports / 重试 / persona-query pipeline / 并发池
-│   │   └── claude-cli.js               # ★ 共享：claude CLI 子进程调用（绕过 packy CC 网关 UA 校验）
-│   ├── corpus_data.json                # ★ 61 个 L2 × ~40 corpus topics
-│   ├── build_corpus.py                 # corpus_data.json 构建脚本
-│   ├── gen_html.py                     # corpus 可视化 HTML 生成
-│   ├── run-corpus.js                   # ★ Corpus-Direct 一键流水线（生产推荐）
-│   ├── test-corpus-methods.js          # 4 方法对比评测（含控制变量实验）
-│   ├── run-free.js                     # ★ LLM 自由生成一键流水线（persona 链路）
-│   ├── batch-generate-queries.js       # LLM 批量生成（run-free 内部调用，也可单独使用）
-│   ├── build-free200-plan.js           # ★ 自由生成计划构建（200 条，persona-scope 控制）
-│   ├── build-expand200-plan.js         # 发散性拓展 plan（200 条，3 part 结构）
-│   ├── generate-analysis-report.js     # ★ 批次质量分析报告（含 persona 卡片）
-│   ├── score-queries.js                # 质量评分
-│   ├── export-queries-csv.js           # ★ 导出带前缀的 query CSV
-│   ├── build-query-comparison.js       # 多 run 横向对比 HTML
-│   ├── generate-extra-scenes.js        # 基于 L1 扩展新 L2 场景（41 个）
-│   ├── test-api-connectivity.js        # API 网关探活
+│   │   ├── llm-batch.js               # transports / 重试 / persona pipeline / 并发池
+│   │   └── claude-cli.js              # ★ claude CLI 子进程（绕过 CC 网关 UA 校验）
+│   ├── corpus_data.json               # ★ 61 个 L2 × ~40 topics
+│   ├── build_corpus.py                # corpus 构建脚本
+│   ├── gen_html.py                    # corpus 可视化
+│   ├── run-corpus.js                  # ★ Corpus-Direct 一键流水线（生产）
+│   ├── test-corpus-methods.js         # 4 方法对比评测
+│   ├── run-free.js                    # ★ LLM 自由生成一键流水线
+│   ├── batch-generate-queries.js      # LLM 批量生成（run-free 内部调用）
+│   ├── build-free200-plan.js          # ★ 自由生成 plan（200 条，persona-scope 控制）
+│   ├── build-expand200-plan.js        # 发散拓展 plan（200 条，3 part 结构）
+│   ├── generate-analysis-report.js    # ★ 批次质量分析 HTML（含 persona 卡片）
+│   ├── score-queries.js
+│   ├── export-queries-csv.js          # ★ 导出带前缀的 query CSV
+│   ├── build-query-comparison.js
+│   ├── generate-extra-scenes.js       # 基于 L1 扩展 L2 场景（41 个新）
+│   ├── test-api-connectivity.js
 │   ├── parse-requirements.js
 │   ├── build-generation-plan.js
 │   ├── build-backfill-plan.js
@@ -402,305 +239,142 @@ flowchart LR
 │   ├── import-queries.js
 │   ├── build-dashboard.js
 │   ├── preview-persona-flow.js
-│   ├── run-mvp.js                      # 旧版一键流水线（persona-fallback，无 LLM）
-│   └── legacy/                         # 已归档的一次性脚本
+│   ├── run-mvp.js                     # 旧版一键（persona-fallback，无 LLM）
+│   └── legacy/                        # 已归档一次性脚本
 ├── prompts/
 │   ├── persona_synthesis_prompt.md
 │   ├── query_from_persona_prompt.md
-│   ├── p1_industry_generation.md
-│   ├── p2_product_derivation.md
-│   ├── p3_social_extraction.md
-│   ├── p4_persona_query_gen.md
-│   └── p5_quality_scoring.md
+│   └── generate_corpus_prompt.md
+├── ARCHIVE/                           # 研究版方法论 (p1-p5)
 ├── tests/
 │   └── query-factory-smoke.test.js
-├── data/
-│   ├── intermediate/
-│   │   ├── generation_plan.v2.jsonl
-│   │   ├── generation_plan.expand200.jsonl
-│   │   ├── generation_plan.extra.jsonl
-│   │   └── generation_plan.free200.jsonl    # ★ 自由生成计划（build-free200-plan.js 产出）
-│   ├── output/
-│   │   └── runs/
-│   │       ├── expand200_llm/               # expand200 批次产物
-│   │       └── free200_llm/                 # ★ 自由生成批次产物
-│   │           ├── raw_queries.jsonl
-│   │           ├── scored_queries.jsonl
-│   │           ├── analysis_report.html
-│   │           └── export_prompts.csv
-│   ├── db/
-│   └── reports_v2/
-└── ARCHIVE/
-    └── README.md
+└── data/
+    ├── intermediate/
+    ├── output/
+    │   ├── corpus_run/                # ★ Corpus-Direct 输出
+    │   ├── corpus_method_comparison.html
+    │   └── runs/
+    │       ├── expand200_llm/
+    │       └── free200_llm/           # ★ 自由生成批次输出
+    ├── db/
+    └── reports_v2/
 ```
 
-## CLI Commands
+</details>
 
+<details>
+<summary><b>CLI 命令清单</b></summary>
 
-| Command                      | Purpose                      |
-| ---------------------------- | ---------------------------- |
-| `npm run parse:requirements` | 解析 Excel，输出标准化场景定义           |
-| `npm run plan:seed`          | 生成首轮 seed plan               |
-| `npm run plan:backfill`      | 对覆盖不足的场景生成补齐计划               |
-| `npm run generate:queries`   | 根据 plan 生成 query             |
-| `npm run preview:persona`    | 预览单条任务的 persona 与 query 生成过程 |
-| `npm run score:queries`      | 对 query 做启发式评分               |
-| `npm run import:queries`     | 将场景与 query 导入 SQLite         |
-| `npm run build:dashboard`    | 从数据库生成静态报表                   |
-| `npm run run:mvp`            | 一键跑通完整 v2 MVP 流程（旧版，persona-fallback，无 LLM） |
-| `npm run run:free`           | ★ LLM 自由生成一键流水线（persona-driven，plan → generate → score → report） |
-| `node scripts/run-corpus.js` | ★ Corpus-Direct 一键流水线（corpus topic 锚定，1× LLM/task，生产推荐） |
-| `npm run batch:generate`     | LLM 批量生成单步入口（支持 xlsx 抽样 / plan 输入 / 断点续跑） |
-| `npm run build:comparison`   | 把任意多个 batch run 拼成并排 HTML 对比报告 |
-| `npm run test:api`           | 探活：分别测 Anthropic 与 OpenAI 兼容端点 |
-| `npm test`                   | 运行冒烟测试                       |
+| 命令 | 用途 |
+| --- | --- |
+| `npm run parse:requirements` | 解析 Excel → 标准化场景规格 |
+| `npm run plan:seed` | 生成首轮 seed plan |
+| `npm run plan:backfill` | 对覆盖不足的场景生成补齐 plan |
+| `npm run generate:queries` | 根据 plan 生成 query |
+| `npm run preview:persona` | 预览单条任务的 persona + query 生成 |
+| `npm run score:queries` | 启发式质量评分 |
+| `npm run import:queries` | 将场景与 query 导入 SQLite |
+| `npm run build:dashboard` | 从 SQLite 生成静态 dashboard |
+| `npm run run:mvp` | 旧版一键流水线（persona-fallback，无 LLM） |
+| `npm run run:free` | ★ LLM 自由生成一键流水线（persona-driven） |
+| `node scripts/run-corpus.js` | ★ Corpus-Direct 一键流水线（生产） |
+| `npm run batch:generate` | LLM 批量生成单步入口（支持断点续跑） |
+| `npm run build:comparison` | 多 run 横向对比 HTML |
+| `npm run test:api` | 探活：Anthropic 与 OpenAI 兼容端点 |
+| `npm test` | 冒烟测试 |
 
-**扩展脚本（直接调用）：**
+**直接调用脚本：**
 
 ```bash
-# ★ 构建自由生成 plan（200 条，persona-scope 默认 scene）
-node scripts/build-free200-plan.js [--dry-run] [--persona-scope scene|task]
+# Corpus-Direct
+node scripts/run-corpus.js --total 200 --complexity-mix "vague,medium,medium"
+node scripts/run-corpus.js --total 200 --dry-run                          # 只验证 plan
+node scripts/run-corpus.js --total 200 --limit 10                          # 小批量真实跑
 
-# 构建发散拓展 plan（三部分结构，200 条）
-node scripts/build-expand200-plan.js [--dry-run] [--design-styles "Dark,Glassmorphism"]
+# 自由生成
+node scripts/run-free.js --output-dir data/output/runs/free200_v2 --no-resume --export-csv
 
-# 从任意 scored_queries.jsonl 生成可交互 HTML 分析报告（含 persona 卡片）
+# Plan 构建
+node scripts/build-free200-plan.js [--persona-scope scene|task]
+node scripts/build-expand200-plan.js [--design-styles "Dark,Glassmorphism"]
+
+# 分析报告
 node scripts/generate-analysis-report.js \
   --input  data/output/runs/<batch>/scored_queries.jsonl \
-  --output data/output/runs/<batch>/analysis_report.html \
-  [--title "批次名"] [--meta "N 条 · 模型信息"]
-
-# 导出带前缀的 query CSV
-node scripts/export-queries-csv.js \
-  --input  data/output/runs/<batch>/raw_queries.jsonl \
-  [--output <file.csv>] \
-  [--prefix "Generate a plain HTML optimized for mobile devices."]
+  --output data/output/runs/<batch>/analysis_report.html
 ```
 
+</details>
 
-## Key Artifacts
+## 评分规则
 
+`scoreQueryRecord()` 按复杂度独立打分：
 
-| Path                                         | Description       |
-| -------------------------------------------- | ----------------- |
-| `data/intermediate/scenario_spec.v2.json`    | 清洗后的场景规范          |
-| `data/intermediate/generation_plan.v2.jsonl` | 首轮生成任务列表          |
-| `data/intermediate/backfill_plan.v2.jsonl`   | 覆盖补齐任务列表          |
-| `data/output/raw_queries.v2.jsonl`           | 生成后的原始 query      |
-| `data/output/scored_queries.v2.jsonl`        | 带质量分和复杂度标签的 query |
-| `data/db/queries_v2.sqlite`                  | 最终分析数据库           |
-| `data/reports_v2/dashboard.html`             | 静态可视化面板           |
-| `data/reports_v2/summary.json`               | 聚合统计摘要            |
-
-
-## How Generation Works
-
-当前默认模式为 `persona-fallback`。
-它不是直接把字段机械拼接成句子，而是分两步生成：
-
-1. 先根据 `scene + application_type + design_style` 合成 persona（`product_type` 在默认开放路径下仅作元数据，不注入 prompt）
-2. 再由 persona 生成符合语气和复杂度目标的前端 UI query
-
-可选生成模式：
-
-- `persona-fallback`
-  默认模式。直接在本地生成 persona 和 query，适合跑通当前主链路。
-- `llm-openai`
-  通过 OpenAI 兼容接口调用真实模型，适合接入 `PackyAPI` 等统一网关。
-- `prompt-packets`
-  只输出 prompt 包，不直接生成最终 query，适合后续接入 Cursor 或外部 LLM。
-- `template-fallback`
-  使用更简单的模板化 query 兜底，适合做基础对照或最小可运行验证。
-
-当前实现特点：
-
-- 支持 `vague / medium / complex` 三档目标复杂度
-- 支持 `application_type`、`product_type`、`design_style` 的组合约束
-- 使用稳定的 `persona_seed` 保证结果可复现
-- 通过启发式规则回判 `complexity_level` 和 `quality_score`
-
-这条链路已经可以离线跑通，也支持通过 `--transport claude-cli / openai / anthropic` 接入真实 LLM 批量生成。
-
-## Design Style 系统
-
-### 默认行为：`null`（LLM 自由发挥）
-
-`buildSeedPlan()` / `buildBackfillPlan()` / `build-expand200-plan.js` 生成的所有 plan task，`design_style` 字段默认为 `null`。
-
-prompt 注入：
-- `design_style = null` → `"No fixed visual style is required — let the visual direction emerge naturally."`
-- `design_style = "Dark"` → `"Use a dark theme with strong contrast on key information."`
-
-### 三种 opt-in 方式
-
-| 方式 | 行为 |
-|------|------|
-| 不传（默认） | `design_style: null`，LLM 按场景上下文自然推断 |
-| `--design-styles "Dark,Glassmorphism,Cyberpunk"` | 在指定列表中循环分配 |
-| `--design-styles auto` | 按场景 L1/L2/app 关键词启发式推断（旧行为） |
-
-```bash
-# 不指定风格（推荐默认）
-node scripts/build-expand200-plan.js
-
-# 指定固定风格列表（循环分配）
-node scripts/build-expand200-plan.js --design-styles "Dark,Glassmorphism,Cyberpunk"
-
-# 按场景启发式推断
-node scripts/build-expand200-plan.js --design-styles auto
-```
-
-### 当前注册的设计风格
-
-| 名称 | 风格定义 |
-|------|------|
-| `Dark` | 深色主题，重点信息高对比突出 |
-| `Glassmorphism` | 玻璃拟态，卡片半透明 + 背景模糊 |
-| `Neumorphism` | 软质拟态，元素从背景浮起 |
-| `Neubrutalism` | 新粗野，边框阴影对比感强 |
-| `Minimalism` | 极简，留白充足，层级清晰 |
-| `Material` | Material 风格，交互反馈明确 |
-| `Data-Dense` | 信息密度高，适合快速扫读 |
-| `Cyberpunk` | 霓虹赛博感，视觉冲击强 |
-| `Luxury` | 高质感杂志专题，排版精致 |
-| `Vibrant` | 活泼，颜色饱和度高 |
-
-### 扩展新风格
-
-在任意调用方代码中：
-
-```js
-const { registerDesignStyle } = require('./mvp/query_factory_v2');
-
-registerDesignStyle(
-  'Y2K',                                                    // plan 字段值
-  '千禧复古风格，金属光泽渐变、霓虹色调、科技感配合怀旧元素',      // 中文 persona 提示
-  'Use a Y2K-inspired aesthetic with metallic gradients and neon accents.'  // 英文 query 指令
-);
-```
-
-注册后立即生效，同步更新 `DESIGN_STYLES` 列表、中文 prompt hint（`STYLE_HINTS`）和英文 prompt 指令（`_EN_STYLE_INSTRUCTIONS`）。
-
-### 评分器与 design_style
-
-评分器 `scoreQueryRecord()` 对 `design_style` 的处理：
-- `design_style` 字段有值 → Diversity 维度 **+1**
-- 不影响 Authenticity / Specificity 两个维度的评分
-
-因此：`design_style = null` 的 query 在 Diversity 维度最多得 4 分（而非 5 分）。如果 Diversity 基准分不够，可考虑通过 `--design-styles` 注入或场景本身 `application_type` 的具体程度来补偿。
-
-## Documentation Map
-
-这是整个仓库最重要的一节。
-如果不先理解文档关系，很容易把“当前实现”和“研究蓝图”混在一起。
-
-### A. 当前可运行实现
-
-
-| File                      | What it means                  |
-| ------------------------- | ------------------------------ |
-| `README.md`               | 仓库首页，帮助理解架构、数据流、目录和文档关系        |
-| `MVP_QUERY_FACTORY.md`    | 当前 v2 MVP 的操作说明、路径约定和关键 schema |
-| `mvp/query_factory_v2.js` | 当前真正执行逻辑的核心实现                  |
-
-
-### B. 当前 persona 链路提示词
-
-
-| File                                   | Relation to code                                |
-| -------------------------------------- | ----------------------------------------------- |
-| `prompts/persona_synthesis_prompt.md`  | 对应 `buildPersonaSynthesisPrompt()` 的 prompt 资产版 |
-| `prompts/query_from_persona_prompt.md` | 对应 `buildQueryPromptFromPersona()` 的 prompt 资产版 |
-
-
-说明：
-当前代码已经内置可运行 fallback，所以即使不接外部 LLM，也可以产出结构化 query。
-
-### C. 研究版完整方案
-
-
-| File                                | Meaning                     |
-| ----------------------------------- | --------------------------- |
-| `ARCHIVE/README.md`                 | 项目完整方法论总览                   |
-| `prompts/p1_industry_generation.md` | Stage 1，行业层级生成              |
-| `prompts/p2_product_derivation.md`  | Stage 2，产品类型衍生              |
-| `prompts/p3_social_extraction.md`   | Stage 2，社交内容结构化             |
-| `prompts/p4_persona_query_gen.md`   | Stage 3，完整 persona query 合成 |
-| `prompts/p5_quality_scoring.md`     | Stage 4，LLM 评分与标签提取         |
-
-
-说明：
-这部分描述的是更完整、更理想的 AI 数据工厂设计，不代表当前仓库中的每一步都已自动化接入。
-
-## Where To Start
-
-### 如果你想先跑起来
-
-1. 看 `README.md`
-2. 跑 `npm run run:mvp`
-3. 打开 `data/reports_v2/dashboard.html`
-
-### 如果你想先读代码
-
-1. 看 `scripts/run-mvp.js`
-2. 看 `mvp/query_factory_v2.js`
-3. 看 `tests/query-factory-smoke.test.js`
-
-### 如果你想升级为真实 LLM pipeline
-
-1. 看 `prompts/persona_synthesis_prompt.md`
-2. 看 `prompts/query_from_persona_prompt.md`
-3. 看 `generateQueryRecords()`
-4. 看 `buildPersonaSynthesisPrompt()`
-5. 看 `buildQueryPromptFromPersona()`
-
-### 如果你想理解方法论来源
-
-1. 看 `ARCHIVE/README.md`
-2. 看 `prompts/p1_industry_generation.md` 到 `prompts/p5_quality_scoring.md`
-
-## Current Status
-
-### Implemented
-
-- Excel -> scenario spec 解析链路
-- seed plan 与 backfill plan 生成（groupIndex 分组，同组 3 条任务共享 persona）
-- persona-driven fallback query 生成
-- LLM 两步生成：`batch-generate-queries.js` 支持 `claude-cli / openai / anthropic` 三种 transport
-- `constrained` 标志：`product_type` 默认仅作元数据，`constrained: true` 时才注入 prompt
-- **启发式质量评分（per-complexity 独立规则）**
-  - `vague`：词数 5–40、含 app 类型词、无尾问句、无 sign-off
-  - `medium / complex`：UI 组件词数、句子结构、推断复杂度对齐
-  - 评分公式：`Authenticity × 0.4 + Specificity × 0.4 + Diversity × 0.2`，通过阈值 ≥ 2.8
-- **Design Style 系统**：`design_style` 默认 `null`，LLM 自由发挥；支持 `--design-styles` opt-in 注入；`registerDesignStyle()` 动态扩展
-- **发散性拓展 plan**：`build-expand200-plan.js` 产出 200 条任务（3 part 结构，覆盖 19 个新领域）
-- **可复用质量分析报告 skill**：`generate-analysis-report.js` 从任意 scored JSONL 生成自包含 HTML（图表 + 交互筛选器 + 评分细则 + **persona 卡片展开**）
-- **自由生成流水线**：`run-free.js` 一键编排 plan → generate → score → report → (可选) CSV 导出；`build-free200-plan.js` 管理 persona-scope（默认 scene 共享）
-- **persona-scope 控制**：`--persona-scope scene`（默认）同场景共享 persona；`--persona-scope task` 每条独立；防止 task 级变量误混入 seed
-- **CSV 导出**：`export-queries-csv.js` 从任意 raw_queries.jsonl 导出带自定义前缀的 prompt CSV
-- SQLite 导入与静态 dashboard 输出
-- 主链路冒烟测试
-
-### Not Yet Implemented End-to-End
-
-- 基于 `p5` 的完整 LLM 评分与多维标签抽取
-- 从 Stage 1 到 Stage 4 的全自动研究版流水线
-- 在线服务化或任务调度系统
-
-## Limitations
-
-- 当前主链路默认使用 deterministic/persona fallback，不是线上模型调用
-- 当前评分是启发式版本，不是最终研究版质量评审
-- `ARCHIVE/` 和 `p1-p5` 更偏蓝图与研究设计
-- Dashboard 是静态 HTML，适合本地分析，不是生产 Web 服务
+- **`vague`** —— 词数 5–40、含 app 类型词、无尾问句、无 sign-off
+- **`medium` / `complex`** —— UI 组件词汇、句子结构、复杂度对齐
+- **加权公式** —— `Authenticity × 0.4 + Specificity × 0.4 + Diversity × 0.2`，通过阈值 ≥ 2.8
+- **`design_style` 影响** —— 字段有值时 Diversity 维度 +1；`null` 时 Diversity 最高 4 分
 
 ## Roadmap
 
-- 接入外部 LLM，替换 persona/query fallback
-- 将 `p5` 评分流程落地到实际批处理
-- 增强 backfill 策略，从按场景补齐升级为按分布热区补齐
-- 引入更细粒度的质量控制、去重与数据审计
+- [ ] LLM-based 质量评分（用 `p5` 设计替换启发式）
+- [ ] 端到端研究版流水线（Stage 1 → Stage 4 全自动）
+- [ ] 分布感知的 backfill（从按场景补齐升级为按热区补齐）
+- [ ] 在线服务化 / 定时批处理
+- [ ] 训练集规模去重（当前是 trigram、批次级别）
 
-## In One Sentence
+## 当前状态
 
-这是一个把“前端 UI 需求数据生成”从零散 prompt 工程，推进到 **可运行、可验证、可分析的 AI 数据流水线** 的仓库。
+**已实现**
+
+- Excel → scenario spec 解析
+- seed + backfill plan 生成（同组任务共享 persona）
+- Persona-driven 离线 fallback 生成
+- LLM 两步生成，三种 transport（`claude-cli` / `openai` / `anthropic`）
+- Corpus-Direct 生产流水线（单次调用、topic 锚定）
+- 4 方法控制变量基准评测
+- 启发式评分（按复杂度独立、design-style 感知）
+- 设计风格系统（11 种、3 种调用方式、动态注册）
+- 可复用质量分析报告 skill（交互式 HTML + persona 卡片）
+- 自由生成流水线（`run-free`、persona-scope 控制）
+- 带前缀 CSV 导出
+- SQLite 导入 + 静态 dashboard
+- 主链路冒烟测试
+
+**尚未端到端打通**
+
+- 基于 `p5` 的 LLM 评分
+- Stage 1 → Stage 4 全自动
+- 在线服务 / 任务调度
+
+## 贡献指南
+
+欢迎 PR。起步路径：
+
+1. `npm install && npm test` —— 冒烟测试要全绿
+2. 翻一遍 [`scripts/README.md`](./scripts/README.md) 了解 CLI 设计契约
+3. 较大重构请先开 issue 讨论
+
+## Star History
+
+<a href="https://star-history.com/#PlevanTem/queryMaker&Date">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=PlevanTem/queryMaker&type=Date&theme=dark" />
+    <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=PlevanTem/queryMaker&type=Date" />
+    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=PlevanTem/queryMaker&type=Date" />
+  </picture>
+</a>
+
+## License
+
+[ISC](./LICENSE) © 2026 ui-queryMaker contributors
+
+---
+
+<div align="center">
+
+**[在线 Demo](https://plevantem.github.io/queryMaker/)** ·
+**[English](./README.en.md)** ·
+**[报告 Bug](https://github.com/PlevanTem/queryMaker/issues)**
+
+</div>
