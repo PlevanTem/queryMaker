@@ -93,6 +93,52 @@ node scripts/run-corpus.js --total 200
 npm run run:free
 ```
 
+### 🆕 No-API 模式（推荐 · 走 Claude Code subagent，零 API 配额）
+
+当你**没有任何 LLM API key**、或者**packy 余额耗尽**、或者只想**完全免费跑**时，
+直接用 Claude Code 自身作为 LLM —— 把生成 / 翻译拆成 batch，每个 batch 由
+Claude Code 内置的 subagent（`Task` tool · model=`sonnet` 或 `haiku`）处理。
+**1000/500-mobile + 500-web** 整套数据集就是这么 0 成本跑出来的。
+
+```bash
+# Step 1: 在 Claude Code 里告诉我「跑 corpus-direct 500 条 mobile，no-API 模式」
+node scripts/run-corpus.js --total 500 --platform mobile --prep-only \
+  --out data/output/my_run_mobile_500
+# → 写出 plan.jsonl + 占位 queries.jsonl + _subagent_in/<platform>_b<NN>_in.json
+
+# Step 2: 在 Claude Code 里我会自动 spawn N 个 Sonnet subagents（每个吃一个 _in.json）
+#         它们写出对应的 _out.json
+
+# Step 3: 合并 subagent 输出回 queries.jsonl
+node scripts/merge-subagent-retry.js \
+  --in-dir     data/output/my_run_mobile_500/_subagent_in \
+  --target-dir data/output/my_run_mobile_500
+# → 500/500 OK，error 行被填回
+```
+
+**翻译同理**：
+
+```bash
+# Step 1: 拆 batch
+node scripts/prep-translate-batches.js --dir data/output/my_run_mobile_500
+
+# Step 2: Claude Code 里 spawn Haiku subagents 翻译每个 _in.json
+# （Haiku 偶尔会 emit 没转义的 ASCII " 在中文里，下一步会自动修）
+
+# Step 3: 合并
+node scripts/repair-haiku-json.js --dir data/output/my_run_mobile_500/_translate_in
+node scripts/merge-haiku-translations.js \
+  --temp-dir data/output/my_run_mobile_500/_translate_in
+# → queries.jsonl + queries.xlsx 都新增 query_text_zh 列
+```
+
+**为什么这是首选**：
+- ✅ **零成本** —— 完全不调外部 API
+- ✅ **天然并发** —— Claude Code 一次起 6-15 个 subagent 并行
+- ✅ **质量与 packy 路径相当** —— 同样的 corpus-direct prompt，Sonnet 4.6 直出
+- ✅ **可断点续跑** —— 任何一个 subagent 失败，只重跑那一个 batch
+- ✅ **审计友好** —— 每个 batch 的 prompt + 输出都落盘可查
+
 <details>
 <summary><b>完整 .env.local 模板</b></summary>
 

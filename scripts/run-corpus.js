@@ -221,6 +221,54 @@ async function main() {
     console.log(`[3/5] 执行全部 ${tasks.length} 个 task`);
   }
 
+  // ── 3.5 Prep-only mode (no-API path: bake batch input files for subagents) ─
+  // When --prep-only, skip the LLM phase entirely. Write per-task corpus-direct
+  // prompts into <out>/_subagent_in/<prefix>_b<NN>_in.json so Claude Code
+  // subagents (Sonnet) can ingest them. Companion script merge-subagent-retry.js
+  // writes results back to queries.jsonl.
+  if (args["prep-only"] === true) {
+    const BATCH = Number(args["prep-batch"] || 25);
+    const prepOutDir = path.join(outDir, "_subagent_in");
+    ensureDir(prepOutDir);
+    let batchN = 0;
+    for (let i = 0; i < tasks.length; i += BATCH) {
+      batchN += 1;
+      const slice = tasks.slice(i, i + BATCH);
+      const items = slice.map((task) => ({
+        id: task.query_id,
+        prompt: buildCorpusDirectQueryPrompt(task),
+      }));
+      const fp = path.join(prepOutDir, `${platform.id}_b${String(batchN).padStart(2, "0")}_in.json`);
+      writeJson(fp, items);
+    }
+    console.log(`\n[4/5] PREP-ONLY 模式 → 已写出 ${batchN} 个 subagent 输入 batch（${BATCH} 条/batch）至 ${path.relative(rootDir, prepOutDir)}`);
+    console.log("      下一步：在 Claude Code 用 Sonnet subagent 读取每个 *_in.json，写出对应 *_out.json，然后跑 merge-subagent-retry.js");
+    console.log("      详见 README「No-API 模式」章节");
+    // Write empty queries.jsonl placeholder so downstream merge scripts have a target
+    const placeholderRows = tasks.map((task) => ({
+      id: task.query_id,
+      scene_id: task.scene_id,
+      l1_scene: task.l1_scene,
+      l2_scene_label: task.l2_scene_label,
+      corpus_topic: task.corpus_topic,
+      corpus_l2_key: task.corpus_l2_key,
+      corpus_persona_id: task.corpus_persona_id,
+      platform: task.platform,
+      target_complexity: task.target_complexity,
+      design_style: task.design_style,
+      query_text: "",
+      word_count: 0,
+      duration_ms: 0,
+      generator_mode: "prep-only",
+      llm_model: "(pending subagent)",
+      created_at: new Date().toISOString(),
+      error: "PREP_ONLY_PENDING",
+    }));
+    writeJsonl(path.join(outDir, "queries.jsonl"), placeholderRows);
+    console.log(`      placeholder queries.jsonl written (${placeholderRows.length} rows, all error=PREP_ONLY_PENDING)`);
+    return;
+  }
+
   // ── 4. Generate queries ──────────────────────────────────────────────────
   console.log(`\n[4/5] 生成 query（concurrency=${concurrency}${isDryRun ? ", DRY-RUN" : ""}）`);
   const tStart = Date.now();

@@ -12,13 +12,26 @@ const fs   = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
 
-const tempDirIdx = process.argv.indexOf("--temp-dir");
-const TEMP_DIR = tempDirIdx >= 0 && process.argv[tempDirIdx + 1]
-  ? process.argv[tempDirIdx + 1]
-  : "data/output/_translate_haiku";
+function arg(name) {
+  const i = process.argv.indexOf("--" + name);
+  return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : null;
+}
+const TEMP_DIR = arg("temp-dir") || "data/output/_translate_haiku";
+const TARGET_DIR_OVERRIDE = arg("target-dir");
 
-// Auto-derive prefix from batch filenames (e.g. mobile2_b01 → prefix=mobile2)
+// Three modes:
+//   (1) --target-dir <path> → single run dir, accept ALL *_out.json
+//   (2) TEMP_DIR is INSIDE a run dir (matches data/output/<run>/_translate_in)
+//       → auto-derive target_dir as the parent
+//   (3) Default — legacy retry mapping (mobile/web v7 dirs)
 function autoDetectTargets() {
+  if (TARGET_DIR_OVERRIDE) return [{ prefix: "*", dir: TARGET_DIR_OVERRIDE }];
+  // mode 2: temp_dir is inside a run dir
+  const parent = path.dirname(TEMP_DIR);
+  if (fs.existsSync(path.join(parent, "queries.jsonl"))) {
+    return [{ prefix: "*", dir: parent }];
+  }
+  // mode 3: legacy
   const baseTargets = [
     { match: /^mobile2?_/, dir: "data/output/corpus_run_v7_mobile_500" },
     { match: /^web2?_/,    dir: "data/output/corpus_run_v7_web_500" },
@@ -40,7 +53,8 @@ const TARGETS = autoDetectTargets();
 
 function loadAllOutputs(prefix) {
   const map = new Map();
-  const files = fs.readdirSync(TEMP_DIR).filter((f) => f.startsWith(prefix + "_b") && f.endsWith("_out.json"));
+  const all = fs.readdirSync(TEMP_DIR).filter((f) => f.endsWith("_out.json"));
+  const files = prefix === "*" ? all : all.filter((f) => f.startsWith(prefix + "_b"));
   let foundBatches = [];
   for (const f of files.sort()) {
     const arr = JSON.parse(fs.readFileSync(path.join(TEMP_DIR, f), "utf8"));

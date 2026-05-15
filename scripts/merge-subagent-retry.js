@@ -13,16 +13,31 @@ const fs   = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
 
-const TEMP_DIR = "data/output/_retry_subagent";
-const TARGETS = [
-  { prefix: "mobile", dir: "data/output/corpus_run_v7_mobile_500" },
-  { prefix: "web",    dir: "data/output/corpus_run_v7_web_500" },
-];
+// Two modes:
+//   (A) Default — retry-mode for the v7 batches (legacy).
+//   (B) Single-run mode (no-API path): pass --in-dir <path> --target-dir <path>
+//       to merge subagent outputs from one run dir into its own queries.jsonl.
+function arg(name) {
+  const i = process.argv.indexOf("--" + name);
+  return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : null;
+}
+const IN_DIR_OVERRIDE     = arg("in-dir");
+const TARGET_DIR_OVERRIDE = arg("target-dir");
+
+const TEMP_DIR = IN_DIR_OVERRIDE || "data/output/_retry_subagent";
+const TARGETS  = TARGET_DIR_OVERRIDE
+  ? [{ prefix: "*", dir: TARGET_DIR_OVERRIDE }]   // single run dir, all *_out.json
+  : [
+      { prefix: "mobile", dir: "data/output/corpus_run_v7_mobile_500" },
+      { prefix: "web",    dir: "data/output/corpus_run_v7_web_500" },
+    ];
 
 function loadAllOutputs(prefix) {
   const map = new Map();
   const found = [];
-  const files = fs.readdirSync(TEMP_DIR).filter((f) => f.startsWith(prefix + "_b") && f.endsWith("_out.json"));
+  const allFiles = fs.readdirSync(TEMP_DIR).filter((f) => f.endsWith("_out.json"));
+  // prefix="*" means accept all _out.json in dir (single-run mode)
+  const files = prefix === "*" ? allFiles : allFiles.filter((f) => f.startsWith(prefix + "_b"));
   for (const f of files.sort()) {
     const arr = JSON.parse(fs.readFileSync(path.join(TEMP_DIR, f), "utf8"));
     found.push(`${f}=${arr.length}`);
@@ -98,13 +113,14 @@ function main() {
       const newText = map.get(r.id);
       if (!newText) { stillErrored++; return r; }
       recovered++;
+      const isPrepOnly = r.error === "PREP_ONLY_PENDING";
       return {
         ...r,
         query_text: newText,
         word_count: wordCount(newText),
         duration_ms: 0,
         error: null,
-        generator_mode: "subagent-retry",
+        generator_mode: isPrepOnly ? "subagent-prep-only" : "subagent-retry",
         retry_via: "claude-code-subagent",
       };
     });

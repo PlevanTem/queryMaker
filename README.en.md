@@ -95,6 +95,53 @@ node scripts/run-corpus.js --total 200
 npm run run:free
 ```
 
+### 🆕 No-API mode (recommended · uses Claude Code subagents, zero quota cost)
+
+When you have **no LLM API key**, your **packy balance is exhausted**, or you simply
+want a **fully free** run, use Claude Code itself as the LLM. Generation and
+translation are split into batches; each batch is processed by an in-process
+subagent (`Task` tool · `model="sonnet"` for generation, `"haiku"` for
+translation). The full **mobile 500 + web 500** dataset shipped in this repo
+was produced this way at $0 of external API spend.
+
+```bash
+# Step 1 (in Claude Code chat): prep batches
+node scripts/run-corpus.js --total 500 --platform mobile --prep-only \
+  --out data/output/my_run_mobile_500
+# → writes plan.jsonl + placeholder queries.jsonl + _subagent_in/<platform>_b<NN>_in.json
+
+# Step 2 (auto): I spawn N Sonnet subagents, one per *_in.json,
+#         each writing its corresponding *_out.json
+
+# Step 3: merge subagent output back into queries.jsonl
+node scripts/merge-subagent-retry.js \
+  --in-dir     data/output/my_run_mobile_500/_subagent_in \
+  --target-dir data/output/my_run_mobile_500
+# → 500/500 OK, error stub rows replaced with real queries
+```
+
+**Translation flow mirrors the same pattern**:
+
+```bash
+# Step 1: split queries.jsonl into Haiku batches
+node scripts/prep-translate-batches.js --dir data/output/my_run_mobile_500
+
+# Step 2 (in Claude Code): spawn Haiku subagents per *_in.json
+
+# Step 3: repair (Haiku occasionally emits unescaped " inside Chinese) + merge
+node scripts/repair-haiku-json.js --dir data/output/my_run_mobile_500/_translate_in
+node scripts/merge-haiku-translations.js \
+  --temp-dir data/output/my_run_mobile_500/_translate_in
+# → query_text_zh column added to queries.jsonl + queries.xlsx
+```
+
+**Why this is the preferred path**:
+- ✅ **Zero external cost** — no API spend, no rate-limit, no quota juggling
+- ✅ **Naturally parallel** — Claude Code happily runs 6-15 subagents concurrently
+- ✅ **Same quality as packy path** — same corpus-direct prompt, Sonnet 4.6 directly
+- ✅ **Resumable per batch** — if one subagent fails, only re-spawn that batch
+- ✅ **Audit-friendly** — every batch's prompt + output is plain JSON on disk
+
 <details>
 <summary><b>Full .env.local template</b></summary>
 
