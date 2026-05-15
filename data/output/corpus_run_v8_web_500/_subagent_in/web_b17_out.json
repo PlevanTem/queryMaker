@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_058_003",
+    "query_text": "Create a reader's club web app where book lovers can join monthly reading groups, share what they're currently reading, and leave short reviews for each other — I want a clean space on the left for browsing ongoing club discussions and a spot on the right where members can see who's read what this month, almost like a little community board for readers."
+  },
+  {
+    "id": "q_web_058_004",
+    "query_text": "Build a collaborative fact-checking tool for news readers, a web app where anyone can paste in a news article link and then the community can highlight specific claims and vote on whether they're accurate or misleading, with a running list of the most-disputed articles on the side so you can quickly see what's being questioned right now."
+  },
+  {
+    "id": "q_web_058_005",
+    "query_text": "A crowdsourced tip board tracker for investigative journalists, running in a desktop browser, where people can submit anonymous tips about a story, attach rough source details, and journalists can browse tips organized by topic or region — the home area shows recent tips with a little vote count so the most credible ones float to the top."
+  },
+  {
+    "id": "q_web_058_006",
+    "query_text": "Make a monthly reading challenge tracker for magazine subscribers, a web app where readers can log each article or issue they finish during the month and see a leaderboard showing who's read the most, with little profile pictures and a streak counter so there's some friendly competition going on between subscribers."
+  },
+  {
+    "id": "q_web_059_001",
+    "query_text": "Make a web app that pulls together all my RSS feeds in one place so I stop having to check ten different sites every morning — I want to add feed URLs, and then see everything in one big chronological list I can scroll through in my browser, with the option to mark things as read so they don't keep cluttering the top."
+  },
+  {
+    "id": "q_web_059_002",
+    "query_text": "Make a news search tool, a web app where I can type in any topic and instantly see the latest headlines from multiple sources all in one place, so I stop wasting time jumping between different news websites to piece together what's actually happening — I want the results sorted by date and grouped by source so I can scan fast."
+  },
+  {
+    "id": "q_web_059_003",
+    "query_text": "Need a calendar planner for a newsroom team to track which stories are being worked on, who's writing them, and when they're supposed to go live — a web app where editors can add story assignments to specific dates, see everything laid out in a monthly view, and quickly check each piece's current status without chasing people down for updates."
+  },
+  {
+    "id": "q_web_059_004",
+    "query_text": "Need a tracker for online publishers to test two different headlines for the same article and see which one actually gets more clicks — a web app where you can enter both headline versions, watch the click numbers come in side by side, and then quickly see a clear winner so you stop guessing and just go with what works."
+  },
+  {
+    "id": "q_web_059_005",
+    "query_text": "A press release writing and sending tool, a web app for desktop browsers, where you can fill in the basics — headline, body, contact info — and then send it out to a saved list of media contacts all at once, so you stop copying and pasting the same thing into a dozen emails every time your organization has news to share."
+  },
+  {
+    "id": "q_web_059_006",
+    "query_text": "Build a contact manager for journalists, a web app where you can save all your sources — their name, beat, phone, last time you talked — and add short notes after each conversation, so when a story breaks you can quickly search and find exactly who covers that topic rather than digging through your messy email history every single time."
+  },
+  {
+    "id": "q_web_060_001",
+    "query_text": "Create a museum website that feels like walking through a beautifully lit gallery — muted tones, generous white space, and large atmospheric photos of the collection — a website where visitors can explore current and upcoming exhibitions, see highlights from the permanent collection, and find practical info like hours and tickets, all with a calm, unhurried editorial feel."
+  },
+  {
+    "id": "q_web_060_002",
+    "query_text": "Create a website for an art festival that captures the energy and mood of the event — rich full-bleed photography, a warm color palette, and a layout that lets you drift between featured artists, the schedule of events, and a gallery of past editions, so browsing it on a desktop browser feels like flipping through a beautifully designed printed program."
+  },
+  {
+    "id": "q_web_060_003",
+    "query_text": "A heritage architecture showcase website for desktop browsers where you can browse historical buildings and landmarks one by one, each with a full-width atmospheric photograph, a short story about its history, and a location on a simple map — the whole thing should feel like a carefully curated travel editorial, quiet and dignified with a lot of breathing room between entries."
+  },
+  {
+    "id": "q_web_060_004",
+    "query_text": "A sacred places website for desktop browsers, where you can explore temples, churches, mosques, and shrines from around the world through large, reverent photography and short, thoughtful writeups about each site's history and significance — the vibe should be still and contemplative, almost like turning pages in a coffee-table book, with a soft neutral palette and plenty of space around each image."
+  },
+  {
+    "id": "q_web_060_005",
+    "query_text": "Create a website that shows off a public library system's digital collections in a way that actually makes people want to explore — think warm paper tones, carefully chosen typography, and a browsing experience on desktop that lets you wander through rare maps, vintage photographs, and digitized manuscripts the way you'd browse shelves in a beautiful reading room."
+  },
+  {
+    "id": "q_web_060_006",
+    "query_text": "Build a website for a national archive's digital exhibits that feels serious and beautiful at the same time — a deep, considered palette, refined typography, and a browsing experience for desktop where visitors can move through themed collections of historical documents, photographs, and recordings, with each exhibit given the kind of presentation you'd expect from a world-class institution."
+  },
+  {
+    "id": "q_web_061_001",
+    "query_text": "A historical records explorer website for desktop browsers where you can search and browse through old documents, photographs, and official papers organized by era and theme — the look should feel like a well-designed archive reading room, with aged paper textures, clean serif fonts, and enough space around each item that browsing through history actually feels like a pleasure rather than a chore."
+  },
+  {
+    "id": "q_web_061_002",
+    "query_text": "Create a research publishing website where scholars and thinkers can share their findings in a format that actually looks good — clean editorial layout, generous margins, and clear typographic hierarchy so readers on desktop can settle in and actually read something without their eyes fighting the page, with a browsable archive of past papers organized by topic or date."
+  },
+  {
+    "id": "q_web_061_003",
+    "query_text": "An advocacy manifesto website for desktop browsers where a cause or organization can publish their core statement in a way that feels bold and considered — strong typographic choices, a restrained color palette that still carries emotional weight, and a layout that lets the words breathe so visitors actually stop and read rather than scroll past, with a place to show who's already signed on."
+  },
+  {
+    "id": "q_web_061_004",
+    "query_text": "Need a website for posting official announcements and notices that actually looks like someone put thought into it — clean layout, clear date ordering, easy to scan on a desktop browser — where each notice has its own dedicated space with a title, the date it went out, and the full text, and there's a simple way to filter by category so you can find what's relevant to you quickly."
+  },
+  {
+    "id": "q_web_061_005",
+    "query_text": "Create a website for a city to publish its open data for residents in a way that feels welcoming and easy to navigate — warm, trustworthy tones, clear categories like transit, budgets, and permits, and a search experience on desktop where anyone can find the dataset they're looking for without needing to know government jargon, almost like browsing a well-organized library catalog."
+  },
+  {
+    "id": "q_web_061_006",
+    "query_text": "A digital oral history website for desktop browsers where you can listen to recorded interviews from community members and read along with a transcript at the same time — the mood should feel intimate and respectful, like a quiet listening room, with warm tones and generous spacing around each story, and a way to browse the collection by theme, region, or the decade the memory is from."
+  },
+  {
+    "id": "q_web_062_001",
+    "query_text": "Build a fundraising campaign website that actually has a soul — something that feels personal and heartfelt rather than generic charity-page beige, a web app where you can tell the story behind the cause with big emotional photography, show a live progress bar toward the goal, and let people donate with a quick and dignified process that respects their time on a desktop browser."
+  },
+  {
+    "id": "q_web_062_002",
+    "query_text": "An advocacy campaign website for desktop browsers that carries real conviction — it should feel like it was made by people who deeply believe in what they're fighting for, with a strong visual identity, a place to read the full campaign story, a petition-style sign-up where supporters can add their name, and a live counter showing how many people have joined so the momentum feels real and growing."
+  },
+  {
+    "id": "q_web_062_003",
+    "query_text": "Need a volunteer recruitment website that feels warm and genuine rather than corporate — a web app for desktop browsers where a nonprofit or community group can show what they do, list open volunteer roles with a short description of each, and let interested people fill out a simple sign-up form that asks just the basics, so the whole thing feels like an invitation from real people rather than a bureaucratic process."
+  }
+]

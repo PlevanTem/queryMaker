@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_018_007",
+    "query_text": "Need a web app where indie hackers and makers can post their weekly build progress, cheer each other on, and see everyone's projects on one shared feed — kind of like a build-in-public community tracker. I want people to be able to log a short update, mark a milestone, and see a running timeline of what they've shipped so far. There should also be a place to browse other people's projects sorted by how active they've been lately, so you can follow along with the ones you find interesting."
+  },
+  {
+    "id": "q_web_019_001",
+    "query_text": "Billable hours tracker for freelancers where you log time against different clients and get a clean breakdown of how many hours you've spent on each one and how much you've earned — all in a desktop browser app so I can actually see everything at once. I'm tired of digging through spreadsheets trying to figure out who owes me what, so the tracker needs to let me start and stop a timer per client, then see a per-client summary that shows total hours, hourly rate, and amount due for the month."
+  },
+  {
+    "id": "q_web_019_002",
+    "query_text": "A quarterly tax planner for self-employed people, browser-based so I can use it on my laptop when I'm doing my books — I'm always scrambling at the end of the quarter because I have no idea how much to set aside. The tool should let me enter my income for the quarter, pick my rough tax bracket, and get an estimate of what I owe, plus a payment schedule reminder so I actually remember to pay on time. Even just having the numbers laid out clearly in one place would save me so much stress."
+  },
+  {
+    "id": "q_web_019_003",
+    "query_text": "Create a portfolio builder web app for creative people like designers or photographers who need to show off their work without spending hours putting together a fancy site. The app should let you write up a case study for each project — what the brief was, what you did, and the result — with a spot to drop in images, and then show all your case studies in a clean list so potential clients can browse through them. It would be great to have a simple way to reorder projects and mark which ones to highlight at the top."
+  },
+  {
+    "id": "q_web_019_004",
+    "query_text": "Need a proposal generator tool for freelancers that runs in the browser and helps me stop writing the same proposal from scratch every single time a new client asks. The tool should let me fill in the project details, pick from a few service tiers with different price points, and spit out a finished proposal I can send — with all three pricing options clearly laid out so the client can choose what fits their budget. It would also help to have a list of past proposals I can copy from when a new project is similar to something I've done before."
+  },
+  {
+    "id": "q_web_019_005",
+    "query_text": "A client approval tool for freelancers that runs in a web browser, where I can upload a piece of work, share a link with the client, and they can leave comments and either approve it or ask for changes — all in one place instead of buried in an email thread. I want to be able to see the status of each piece at a glance, like whether it's waiting for feedback or already approved, so I'm not constantly chasing clients to find out where things stand."
+  },
+  {
+    "id": "q_web_019_006",
+    "query_text": "Need a lead manager for freelancers that works as a web app in the browser, so I can finally keep track of all my potential clients in one spot instead of losing them in my inbox. The tool should let me add a lead, write a note about where we left things, and move them through stages like first contact, proposal sent, and closed — so I can see at a glance which leads need a follow-up and which ones I've already landed."
+  },
+  {
+    "id": "q_web_019_007",
+    "query_text": "Need a statement of work generator for consultants that lives in the browser and saves me from writing the same boilerplate from scratch every engagement. The tool should let me fill in the client name, project scope, deliverables, timeline, and payment terms, then produce a clean ready-to-send document I can copy or download. It would be really useful to be able to save a few templates for different types of consulting work so I can just pick one and tweak the details instead of starting over each time."
+  },
+  {
+    "id": "q_web_020_001",
+    "query_text": "A showcase website for an artisan coffee roaster where visitors can feel the warmth and craft of the place just from browsing — the kind of site that makes you want to grab a cup immediately. It should walk through the café's vibe with some cozy photos of the space, then let each brew method have its own little spotlight explaining what makes it special, like pour-over vs. espresso vs. cold brew, so coffee lovers can actually learn something while they're browsing. Works as a web app for desktop browsers and should feel unhurried and inviting, not like a fast-food menu."
+  },
+  {
+    "id": "q_web_020_002",
+    "query_text": "Need a website for a small yoga studio that shows off each instructor — their photo, the style they teach, and a bit about their background — alongside a clear list of classes they offer with times and what level they're for, so new students can figure out who to try first without having to call. The site should work well for desktop browsers and feel calm and welcoming so people actually want to sign up for a class after reading it."
+  },
+  {
+    "id": "q_web_020_003",
+    "query_text": "Need a photo gallery website for a pet grooming salon that shows before-and-after shots of dogs and cats that came in looking rough and left looking adorable, so potential customers can actually see the quality of the work. The site should work well in a desktop browser and let visitors browse transformations by pet type, with each photo pair showing the same animal before and after the grooming appointment so the difference is obvious."
+  },
+  {
+    "id": "q_web_020_004",
+    "query_text": "A portfolio showcase website for a local tattoo studio where each artist gets their own space to display their work and show off their particular style — like whether they specialize in fine line, traditional, watercolor, or blackwork — so people can find the right artist for what they have in mind. The site should work great on desktop browsers and let visitors browse each artist's gallery separately so it's easy to tell one artist's style apart from another."
+  },
+  {
+    "id": "q_web_020_005",
+    "query_text": "Need a website for an auto detailing shop that shows the full list of services with prices and what's included in each package, plus a photo gallery of real cars that came in dirty or scratched up and left looking like new, so customers can see the kind of work the shop does. The site should be a proper web app built for desktop browsers, with both the service menu and the transformation gallery easy to navigate without any confusion about what you're getting for the money."
+  },
+  {
+    "id": "q_web_020_006",
+    "query_text": "Need a wine list website for a small wine bar that shows off their cellar selection in a way that feels curated and a little personal — not just a boring spreadsheet of bottles. The site should display each wine with its region, grape, and a short tasting note written like a real person said it, so guests browsing from their desktop browser can actually figure out what to order before they even sit down. It would also be handy to let the bar group wines by style, like light reds or crisp whites, so people can find something they'll enjoy."
+  },
+  {
+    "id": "q_web_020_007",
+    "query_text": "Need a website for a community music school that shows all the teachers with their photos, instruments, and a short bio, plus a clear breakdown of the programs they offer — like group lessons, private lessons, or summer camps — with age ranges and skill levels for each, so parents can figure out what's right for their kid without having to email. The site should work well in a desktop browser and make it easy to match a child's interest to the right teacher and program."
+  },
+  {
+    "id": "q_web_021_001",
+    "query_text": "Build a web app for a small auto repair shop that feels like flipping through a trustworthy neighborhood mechanic's advice column — warm and readable, not clinical and scary. The app should host short explainer articles about common car problems like why your check engine light comes on, what brake noises mean, or when to actually worry about an oil leak, written in plain language that non-car-people can follow. For desktop browsers, it should have a clean reading layout with articles organized by topic so customers can find the answer they're looking for without getting lost."
+  },
+  {
+    "id": "q_web_021_002",
+    "query_text": "Need a reading recommendation digest website for an independent bookstore where the staff can share what they've been loving lately — each pick presented with a photo of the cover, a few sentences from the person who read it, and some sense of who they think would enjoy it. The whole thing should feel like getting a note from a well-read friend, warm and personal, not like an Amazon listing. Works in a desktop browser and should let readers browse by staff member or by mood so they can find something that fits what they're looking for right now."
+  },
+  {
+    "id": "q_web_021_003",
+    "query_text": "Need a blog-style web app for a local tailor that shows before-and-after photos of alteration projects — like a dress that was three sizes too big now fitting perfectly, or a vintage jacket with a whole new lining — with a short story behind each one explaining what the client brought in and what transformed it. The whole thing should feel tactile and crafted, like the work itself, and be browsable on desktop browsers with the photos front and center so the skill speaks for itself."
+  },
+  {
+    "id": "q_web_021_004",
+    "query_text": "A journal-style web app for a neighborhood café that tells the story of where they came from and traces the journey of each coffee bean they use — which farm it came from, how it was processed, what the relationship with that grower looks like. The whole thing should feel warm and handwritten in spirit, like reading someone's travel diary, and work beautifully in a desktop browser with enough space to let the photos of farms and people breathe alongside the writing. Each bean origin should get its own entry so regulars can follow along as new sourcing relationships are added."
+  },
+  {
+    "id": "q_web_021_005",
+    "query_text": "Need a web app for a small print shop that spotlights their best design projects — the kind of thing where each project gets a full write-up about what the client wanted, what inspired the design direction, and photos of the final printed piece in the real world. The whole thing should feel like a proper creative journal, with a look and layout that does justice to beautiful printed work, and be easy to browse on desktop browsers by project type like packaging, posters, or stationery."
+  },
+  {
+    "id": "q_web_021_006",
+    "query_text": "Make a pet-of-the-month showcase website for a local grooming salon that feels joyful and a little editorial — like a tiny celebrity profile for each featured pet, with a big glamour shot, their name, breed, a fun blurb from the groomer, and maybe a little badge for what made them special that month. The site should live in a desktop browser and let the salon update the featured pet each month while keeping a scrollable archive of past stars so regulars can revisit their favorites."
+  },
+  {
+    "id": "q_web_021_007",
+    "query_text": "A behind-the-scenes blog website for an independent photography studio, built for desktop browsers, where each post tells the story of a shoot — the concept that sparked it, the location scouting, lighting decisions, little unexpected things that happened on the day, and then the final images alongside the raw moments that led to them. The whole thing should feel like the studio's creative diary, intimate and visually rich, with posts organized so readers can browse by shoot type like portraits, editorial, or commercial work."
+  },
+  {
+    "id": "q_web_022_001",
+    "query_text": "Need a sign-up web app for a fitness studio's free trial class offer that makes it dead simple for someone to pick a class, enter their name and contact info, and confirm their spot — all in one clean flow in the browser without having to create an account or jump through hoops. The studio owner should be able to see a list of who's signed up for which class and when, so they're not manually tracking it in a spreadsheet or missing people who signed up."
+  },
+  {
+    "id": "q_web_022_002",
+    "query_text": "Make a seasonal bundle promotion website for a pet grooming salon, desktop browser friendly, that shows off what's included in the current deal — like a bath, trim, nail clip, and teeth cleaning all bundled together at a discount for the season — with a simple form to book the bundle right on the page so customers can claim it before it expires. It should be easy for the salon to update the bundle details and the offer end date whenever a new promotion comes around."
+  },
+  {
+    "id": "q_web_022_003",
+    "query_text": "Need a pre-order web app for a bakery that lets customers browse birthday cake options, pick their size and flavor, enter a pickup date, and lock in the deal — all in a browser-based tool so orders are captured automatically and the bakery doesn't have to juggle phone calls and DMs. The bakery needs to see a simple list of all upcoming orders sorted by pickup date so they know what to bake and when, without having to chase anyone down for the details."
+  }
+]

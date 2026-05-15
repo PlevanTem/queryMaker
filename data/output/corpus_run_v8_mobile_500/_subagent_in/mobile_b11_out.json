@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_024_001",
+    "query_text": "Create a flashcard app for my phone that helps with learning country capitals and identifying flags, with the two things I care most about being: each card shows the country name on the front, then flips to reveal both the capital city and the flag image on the back, and there's a progress counter so I can see how many cards I've reviewed out of the full deck. It should go through all the countries in order and let me mark each one as learned or still practicing, so I can focus on the ones I keep getting wrong."
+  },
+  {
+    "id": "q_scene_024_002",
+    "query_text": "Build a sign language alphabet learning app for my phone where each card shows a letter of the alphabet alongside a clear hand gesture image, so I can go through A to Z one letter at a time. I want the app to let me tap through each card at my own pace, and on the back of each card show the letter name, the gesture photo, and a short note about how to position the fingers. A simple checklist of all 26 letters so I can tick off which ones I've practiced would be really useful too."
+  },
+  {
+    "id": "q_scene_024_003",
+    "query_text": "Create a French cuisine vocabulary flashcard app for culinary students that works on mobile, where the main screen lists all the vocabulary categories like sauces, techniques, and kitchen tools so you can pick which set to study. Each card shows the French term on the front and tapping it flips to show the English meaning plus a short example of how the word is used in a real kitchen context. I'd also like a way to mark words as mastered versus still learning, so the deck gets smaller as I actually remember things."
+  },
+  {
+    "id": "q_scene_024_004",
+    "query_text": "A Mandarin tonal pronunciation app for my phone where you go through cards one at a time, each showing a Chinese character with its pinyin spelling underneath and a clear tone mark highlighted in color so you can immediately see whether it's first, second, third, or fourth tone. The app should let me tap the card to hear the pronunciation, and there's a simple progress bar at the top so I always know how far through the deck I am. Being able to filter cards by tone number would help a lot for drilling just the ones I keep mixing up."
+  },
+  {
+    "id": "q_scene_024_005",
+    "query_text": "Create a math theorem and proof flashcard app for my phone that covers things like the Pythagorean theorem, the fundamental theorem of calculus, and similar key results, where the front of each card shows just the theorem name and the back shows the full statement plus a short outline of the proof steps. I want the cards grouped by topic area like geometry, algebra, and calculus so I can study one category at a time, and a small progress indicator so I can see how many cards in each group I've already reviewed."
+  },
+  {
+    "id": "q_scene_024_006",
+    "query_text": "Create a SAT reading vocabulary app for my phone where each card shows a word on the front and then flips to reveal the definition plus a short example sentence taken from a reading passage, so I can see how the word actually gets used in context. I want the words sorted into categories like \"frequently tested\" and \"medium difficulty\" so I can work through the most important ones first, and a simple counter showing how many words I've gone through in today's session."
+  },
+  {
+    "id": "q_scene_024_007",
+    "query_text": "A Bible verse memorization app for my phone where you flip through cards, each showing a verse reference on the front and the full verse text on the back, and every card is tagged with a theme like faith, hope, love, or courage so you can filter the deck down to just one theme at a time. The app should let me mark a verse as memorized once I feel confident, and show me how many verses I've memorized per theme so I can see which areas I've covered well and which still need work."
+  },
+  {
+    "id": "q_scene_024_008",
+    "query_text": "Make a mobile anatomy flashcard app where each card shows an outline diagram of a body part with labels you have to fill in or tap to reveal, covering things like bones, muscles, and organs grouped by body region. The front of each card shows the unlabeled diagram and the back reveals all the correct labels in place, and I want a category list on the home screen of the app so I can choose whether to study the upper body, lower body, or internal organs separately."
+  },
+  {
+    "id": "q_scene_024_009",
+    "query_text": "Need a financial term glossary flashcard app for my phone that covers terms like amortization, liquidity, yield, and similar concepts you'd encounter in finance courses or on the job. Each card should show the term on the front and flip to a plain-English definition on the back along with a simple example showing the term in use. I'd like the terms sorted into groups like investing basics, banking, and accounting so I can focus on one area at a time, plus a running count of how many I've reviewed today."
+  },
+  {
+    "id": "q_scene_025_001",
+    "query_text": "Make a driving theory test practice app for my phone that simulates the full exam, with a timed test mode that presents multiple-choice questions one at a time and shows you your score at the end with a breakdown of which categories you got wrong, like road signs, right of way, and speed limits. I also want a quick-drill mode where I can just go through questions in a specific category to focus on my weak spots, and a history list showing my scores from previous practice tests so I can see if I'm improving."
+  },
+  {
+    "id": "q_scene_025_002",
+    "query_text": "Create a real estate license exam prep app for my phone that lets me work through practice questions organized by topic, like contracts, property law, and financing, so I can study one subject area at a time. Each question should be multiple choice, and after I answer it the app shows whether I got it right along with a short explanation of why the correct answer is correct. I also want a tracker on the home screen of the app showing my overall correct percentage and which topics I still need the most work on."
+  },
+  {
+    "id": "q_scene_025_003",
+    "query_text": "Build a CFA Level 1 ethics case study practice app for my phone where each question presents a short scenario about an investment professional facing an ethical dilemma and asks me to pick the correct response according to the CFA Institute standards. After I answer, the app should show the right answer with a clear explanation tied to the specific Standard of Professional Conduct that applies. I want the questions grouped by ethics topic and a score summary at the end of each session so I can track which areas I keep getting wrong."
+  },
+  {
+    "id": "q_scene_025_004",
+    "query_text": "A Python coding challenge practice app for my phone where each challenge shows a short problem description and then gives me a text area to type in my answer or approach, and after submitting the app checks it and tells me right away whether my solution is correct with a brief explanation of what the right answer looks like. The challenges should be sorted by difficulty level so I can start easy and work my way up, and I want a list on the home screen of the app showing which challenges I've already completed versus which ones I still need to try."
+  },
+  {
+    "id": "q_scene_025_005",
+    "query_text": "Create a JLPT N2 grammar practice app for my phone where I can work through fill-in-the-blank and multiple-choice questions that test grammar patterns, with each question showing a Japanese sentence and asking me to pick the correct grammar form to complete it. After answering, the app shows the correct answer with a simple explanation in English of how that grammar pattern works. I want the questions grouped by grammar category so I can drill one pattern at a time, and a running score so I can see my accuracy for each session."
+  },
+  {
+    "id": "q_scene_025_006",
+    "query_text": "Make a TOPIK Korean language mock test app for my phone that puts me through a full practice test with reading and vocabulary questions just like the real exam format, with a countdown timer so I get used to working under time pressure. After finishing the test, the app should show my total score with a section-by-section breakdown so I can see exactly where I lost points, and I want to be able to save my results from each attempt so I can compare my scores over time."
+  },
+  {
+    "id": "q_scene_025_007",
+    "query_text": "Build an AWS certification practice quiz app for my phone where I can go through multiple-choice questions covering services like EC2, S3, IAM, and VPC, organized by exam domain so I can study one area at a time. Each question should show four answer options and after I pick one the app tells me immediately if I was right, and if I was wrong it gives a short plain-English explanation of why the correct answer is correct. I also want a progress summary showing my accuracy percentage per topic so I know where to spend more time studying."
+  },
+  {
+    "id": "q_scene_025_008",
+    "query_text": "Build a Google Analytics certification quiz app for my phone that walks me through practice questions on topics like setting up goals, reading reports, understanding attribution, and using segments, with each question in multiple-choice format and an instant result after I answer. The app should include a short explanation with each correct answer so I actually understand why it's right, and I want a home screen of the app that shows my overall quiz history and a score for each topic area so I can see at a glance where I'm strong and where I still need to review."
+  },
+  {
+    "id": "q_scene_025_009",
+    "query_text": "Make a CompTIA Security+ scenario practice app for my phone that gives me situation-based questions where a short story describes a security incident or IT setup and then asks what the best response or correct term is, just like the performance-based questions on the real exam. Each question should be multiple choice and after answering the app shows the right answer with a plain explanation of the underlying security concept. I want the scenarios sorted by domain like threats, cryptography, and identity management, plus a score tracker so I can see my accuracy per domain."
+  },
+  {
+    "id": "q_scene_026_001",
+    "query_text": "A daily word-count tracker app for my phone designed around creative writing goals, where I set a target number of words to write each day and then tap to log how many I actually wrote, with the home screen of the app showing today's goal, today's count, and a simple visual bar filling up as I get closer to hitting my target. I want a calendar view that highlights which days I met my goal so I can see my streak at a glance, and a running total showing cumulative words written for the current month."
+  },
+  {
+    "id": "q_scene_026_002",
+    "query_text": "Make a meditation streak tracker app for my phone with a calendar that shows which days I've meditated, where completed days are marked clearly so I can see my current streak at a glance without scrolling around. When I log a session I want to record the date and how many minutes I meditated, and the app should show my longest streak ever alongside my current one. A simple monthly summary showing how many days I meditated out of the total days in the month would also be really helpful."
+  },
+  {
+    "id": "q_scene_026_003",
+    "query_text": "Need a daily coding practice logger app for my phone that lets me check in each day after completing a coding kata or challenge, where I can note which problem I worked on and what topic it covered like sorting, recursion, or string manipulation. The app should show a streak counter on the home screen so I can see how many days in a row I've kept up my practice, and a list of all my past log entries sorted by date so I can look back and see what I've been working on over time."
+  },
+  {
+    "id": "q_scene_026_004",
+    "query_text": "An art practice tracker app for my phone where I log each drawing or painting session by adding the date, how long I practiced, and a photo of what I made, so everything is organized in one place. The tracker should have a gallery section that shows thumbnails of all my uploaded practice pieces in the order I made them, and I want a simple count of total sessions and total practice hours displayed at the top so I can see my consistency at a glance when I open the app."
+  },
+  {
+    "id": "q_scene_026_005",
+    "query_text": "A science chapter progress tracker app for my phone where I enter all the chapters from my textbook and then mark each one as not started, in progress, or finished as I work through them, so I always have a clear picture of where I am. The main screen of the app should show all the chapters in order with a small colored indicator next to each one, plus an overall completion percentage so I can see at a glance how close I am to finishing the whole book. Being able to add a short note to each chapter for things I need to revisit would be a nice extra."
+  },
+  {
+    "id": "q_scene_026_006",
+    "query_text": "Build a memory palace progress logger app for my phone where I can keep track of each memory palace I'm building by giving it a name, listing the locations or \"loci\" inside it, and marking each locus as either set up or still in progress. The app should let me add notes to each locus describing what image or information I've placed there, and show me a completion bar for each palace so I can see how fully built out each one is. A home screen list of all my palaces sorted by how recently I worked on them would make it easy to pick up where I left off."
+  },
+  {
+    "id": "q_scene_026_007",
+    "query_text": "Build a typing speed tracker app for my phone where I can log my words-per-minute score after each practice session along with the date, and the app plots my scores on a simple line graph over time so I can clearly see whether I'm getting faster. I want the home screen of the app to show my personal best score, my most recent score, and the graph covering at least the past 30 days of entries, so I get a quick snapshot of my progress every time I open it."
+  }
+]

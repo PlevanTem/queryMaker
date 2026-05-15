@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_042_005",
+    "query_text": "Need a mobile app that tells me what it actually feels like outside — not just the temperature number — and then tells me exactly what to wear. I hate stepping out in a t-shirt because it says 18°C and then freezing because the wind chill makes it feel like 10°C. Just show me the real-feel temperature and give me a quick clothing suggestion like \"light jacket + long pants\" so I can get out the door without thinking about it."
+  },
+  {
+    "id": "q_scene_042_006",
+    "query_text": "Create a ski resort checker app for my phone that shows me the snow depth and slope conditions at a glance before I bother driving all the way out there. I want to be able to look up a resort, see how many centimeters of snow are on the ground, which runs are open, and whether conditions are rated good, icy, or slushy — all on one screen so I can decide in under a minute if it's worth going."
+  },
+  {
+    "id": "q_scene_042_007",
+    "query_text": "A beach surf conditions checker for my phone where I can look up any beach and instantly see the current wave height along with a simple suitability rating — like whether it's good for beginners, experienced swimmers only, or just not safe to go in at all. The home screen of the app should show the rating big and clear so I can decide in two seconds whether to pack my bag or stay home."
+  },
+  {
+    "id": "q_scene_043_001",
+    "query_text": "Create a rideshare price comparison app for my phone that pulls up Uber, Didi, and Lyft side by side so I can see which one is cheapest right now without switching between three different apps. I just type in where I'm going and it shows me the estimated fare and wait time for each service on one screen, so I can tap the cheapest one and be done with it."
+  },
+  {
+    "id": "q_scene_043_002",
+    "query_text": "Build a mobile app for checking airport shuttle timetables and booking a seat without having to call anyone or dig through a website. I want to put in my airport and destination, see all the departure times for the day, pick the one that works, and reserve my spot right there — it's such a hassle to figure out shuttle schedules and I just want something that shows me the next few departures and lets me lock in a seat in a couple taps."
+  },
+  {
+    "id": "q_scene_043_003",
+    "query_text": "A carpooling matcher for my phone where I can enter my route and when I want to leave, and it finds other people going the same direction around the same time so we can share the ride. The main screen of the app should let me pick my departure time with a simple time selector, then show me a short list of available matches with their pickup spots, so I can confirm one without a bunch of back-and-forth."
+  },
+  {
+    "id": "q_scene_043_004",
+    "query_text": "Build a mobile app that shows me a map of all the bike-share stations nearby and tells me exactly how many bikes are available at each one right now. I'm always walking up to an empty dock and wasting time, so I want to open the app, see the stations around me marked with their current bike count, and just head straight to the one that actually has bikes ready to go."
+  },
+  {
+    "id": "q_scene_043_005",
+    "query_text": "An electric scooter finder app for my phone that shows me all the available scooters near my location on a little map, with each one showing its battery level so I can pick one that won't die halfway through my trip. The home screen of the app should load up my current area right away and highlight the closest scooters, so I can spot the nearest one with decent battery and just walk over to it."
+  },
+  {
+    "id": "q_scene_043_006",
+    "query_text": "Need a night bus alert app for my phone that tracks the last service times for the bus lines I actually use, and warns me before I miss them. I always lose track of time when I'm out and suddenly realize the buses have stopped running — I just want to set my usual routes, and have the app send me a reminder like \"last bus in 20 minutes\" so I'm not stranded at midnight trying to find a cab."
+  },
+  {
+    "id": "q_scene_043_007",
+    "query_text": "Make a park-and-ride planner app for my phone that shows me which park-and-ride lots are on my way into the city, what the shuttle schedule looks like from each one, and how much it costs to park there for the day. I just want to enter where I'm headed and see my options laid out simply — parking fee, next few shuttle times, and how long the ride takes — so I can pick one without hunting through different websites."
+  },
+  {
+    "id": "q_scene_044_001",
+    "query_text": "Make a \"what should I eat today\" random picker app for my phone that actually helps when I'm stuck staring at my delivery apps unable to decide. I can add my favorite foods or nearby places to a personal list, set some filters like mood or cuisine type, and then hit a button to get a random pick — so I stop spending twenty minutes every lunch break just trying to figure out what to order."
+  },
+  {
+    "id": "q_scene_044_002",
+    "query_text": "Make a random meal picker app for my phone that solves the daily \"what do we eat tonight\" argument — I want to be able to add different food options or restaurant types to a list, and then spin to get a random choice so we actually just commit and go with it. The app should also let me mark recent picks so it skips those for a while and keeps things fresh."
+  },
+  {
+    "id": "q_scene_044_003",
+    "query_text": "A daily meal decider app for my phone where I can store all the foods and restaurants I like, then tap a big button to get a random pick whenever I'm stuck on what to eat. The main screen of the app should show the randomly chosen meal in a big card with the option to re-spin if I really can't face that one today, plus a quick way to add new options to my personal list."
+  },
+  {
+    "id": "q_scene_044_004",
+    "query_text": "Build a \"what to eat\" random selector app for my phone that I can fill with my go-to meals and nearby spots, then just shake or tap to get a random suggestion when I can't make up my mind. I want to be able to group options by category — like Chinese, fast food, or home cooking — so when I'm in the mood for something specific I can narrow it down and still let the app pick for me."
+  },
+  {
+    "id": "q_scene_044_005",
+    "query_text": "Make a food picker app for my phone that randomly chooses what I eat today from a list I put together myself — restaurants I like, cuisines I'm in the mood for, or even just broad categories like \"soup\" or \"noodles.\" I want a simple spin button on the main screen, and the ability to save my list so I don't have to re-enter everything every time I open it."
+  },
+  {
+    "id": "q_scene_044_006",
+    "query_text": "Need a random food chooser app for my phone that ends the daily struggle of figuring out what to eat — I just want to type in all my usual options once, hit a button, and let the app decide for me. It should be easy to add or remove choices from my list, and maybe show me what I picked last time so I'm not eating the same thing two days in a row."
+  },
+  {
+    "id": "q_scene_045_001",
+    "query_text": "Need a FODMAP checker app for my phone that I can use when I have IBS and I'm not sure if a food is going to cause me problems. I want to be able to search for any food and quickly see whether it's low, moderate, or high FODMAP, and ideally get a safe serving size so I know how much I can actually have — because right now I'm just guessing and it's really not working out."
+  },
+  {
+    "id": "q_scene_045_002",
+    "query_text": "Make a food label scanner app for my phone that I can point at any packaged food ingredient list and it highlights the allergens and flags anything I've told it I need to avoid. I have a couple of allergies and reading every single label in the store takes forever — I just want to scan it and get a clear yes or no on whether it's safe for me, with the problem ingredients called out so I can see exactly what to watch for."
+  },
+  {
+    "id": "q_scene_045_003",
+    "query_text": "Need a sugar comparison tool for my phone that lets me look up any food or drink and see exactly how much sugar is in it, then compare a few options side by side so I can pick the one with less sugar. I keep grabbing drinks and snacks thinking they're fine and then finding out they're loaded — I just want a quick way to check and compare before I buy so I stop making the same mistake."
+  },
+  {
+    "id": "q_scene_045_004",
+    "query_text": "Build a calorie equivalence calculator app for my phone that shows me how much running or walking I'd have to do to burn off whatever food I just ate or am about to eat. I want to type in a food, see the calories, and then have it tell me in simple terms like \"that's about 5 km of running\" — so I actually understand what those numbers mean instead of just seeing \"450 kcal\" and having no idea if that's a lot or a little."
+  },
+  {
+    "id": "q_scene_045_005",
+    "query_text": "Build a portion size reference guide app for my phone that shows me what a correct serving of common foods actually looks like using everyday comparisons — like \"one serving of rice is about the size of your fist\" — because I genuinely have no idea how much I should be eating and measuring cups are a pain. I want to be able to search for a food and get a quick visual description with the standard serving size right there on the same screen."
+  },
+  {
+    "id": "q_scene_045_006",
+    "query_text": "Create a fasting tracker app for my phone that keeps track of my eating window when I'm doing intermittent fasting, shows me how many hours I have left in my fast, and also lets me log what I eat during my eating window with the calories. I keep losing track of when I started fasting or forgetting to check if I'm still in my eating window, so I just need something on my phone that keeps a running clock and a simple daily calorie total all in one place."
+  },
+  {
+    "id": "q_scene_046_001",
+    "query_text": "Need a recipe adapter app for my phone that takes any recipe and swaps out ingredients that contain common allergens like nuts, dairy, or gluten with safe substitutes. I want to be able to paste in a recipe or type in the ingredients, tell the app which allergens to avoid, and get back an adjusted version with simple swaps so I can actually cook it safely — right now I have to hunt around for substitutions one by one and it takes way too long."
+  },
+  {
+    "id": "q_scene_046_002",
+    "query_text": "A recipe scaler app for my phone where I can enter a recipe along with its original serving size, then just type in how many people I'm actually cooking for and it automatically adjusts every ingredient amount — cups, grams, spoons, everything. The main screen of the app should have the original recipe on one side and the scaled amounts updated live on the other, so I can cook for two or twelve without doing any of the math myself."
+  },
+  {
+    "id": "q_scene_046_003",
+    "query_text": "Need a leftover recipe idea app for my phone that I can open when I have random stuff in the fridge and tell it what's left over — like half a roast chicken and some wilting spinach — and it gives me a few simple recipe ideas to use those things up. I want to be able to tap through a short list of suggestions and see what other basic ingredients I'd need for each one, so I can pick the one that fits what I already have at home."
+  }
+]

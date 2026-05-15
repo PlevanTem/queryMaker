@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_021_003",
+    "query_text": "Create a color palette generator app for my phone that helps me come up with nice color combos for design projects — you pick a starting color and it spits out a full palette that works well together, like warm tones, muted shades, or bold contrasts. The main screen should show the generated colors as big swatches I can tap to copy the color code, and there should be a way to save palettes I like so I can come back to them later."
+  },
+  {
+    "id": "q_scene_021_004",
+    "query_text": "Create a random book title and genre generator tool for my phone that's fun to mess around with when I'm bored or trying to get writing ideas going. You tap a button and it comes up with a made-up book title plus a genre like sci-fi, romance, or mystery — the title and genre should feel like they actually go together. It'd be cool if you could also save the ones that spark something interesting so you can come back to them later."
+  },
+  {
+    "id": "q_scene_021_005",
+    "query_text": "A mobile app that shows you a random motivational quote every time you tap a button — kind of like a little daily pick-me-up you open on your phone when you need a boost. Each quote should clearly show who said it right underneath, and there should be a way to save the ones you really like so you can revisit them. It'd be nice if the quote changes with a smooth little animation each time you tap for a new one."
+  },
+  {
+    "id": "q_scene_021_006",
+    "query_text": "Build a random recipe generator app for my phone where I can type in whatever ingredients I've got sitting in my pantry and it suggests a recipe I can actually make with those things. The main screen should have a simple spot to add ingredients one by one, and when I hit a button it shows me a random recipe that uses what I have — including the steps to cook it. Great for when I'm staring at the fridge with no idea what to make."
+  },
+  {
+    "id": "q_scene_021_007",
+    "query_text": "Build a sci-fi name generator tool as a mobile app where you hit a button and it gives you a randomly made-up alien species name and a planet name that sound cool and otherworldly — good for when you're writing stories or just daydreaming about space stuff. The app should let you generate a bunch in a row and keep a little list of your favorite ones so you don't lose them. Bonus if the names have a bit of variety in style, like some sound harsh and guttural, others more smooth and alien."
+  },
+  {
+    "id": "q_scene_021_008",
+    "query_text": "A weekend hobby challenge generator app for your phone that throws a random fun activity at you when you have no idea how to spend your Saturday or Sunday. You open the app, tap a button, and it gives you a specific little challenge to try — like \"learn to juggle two items\" or \"sketch something in your room for 20 minutes\" — stuff that's actually doable in a day. It should also let you mark challenges as done and track which ones you've completed over time."
+  },
+  {
+    "id": "q_scene_021_009",
+    "query_text": "Create a startup name brainstorm generator app for my phone that helps when I'm stuck trying to think of a catchy name for a new business idea. You type in a keyword or two about what the startup does, tap a button, and it spits out a bunch of made-up name ideas that sound fresh and interesting — could be playful, punchy, or made-up words. There should also be a way to save the ones you like so you can show them to other people later."
+  },
+  {
+    "id": "q_scene_022_001",
+    "query_text": "Build a switch control accessibility app for mobile that makes it easier for people with limited hand movement to use their phone without precise tapping — the whole idea is that instead of tapping exactly, you can navigate using just one or two big buttons or keyboard keys. The app should highlight one thing at a time on the screen and let you step through choices at your own pace, so even someone who can only press a single switch can still get around and do things on their phone without frustration."
+  },
+  {
+    "id": "q_scene_022_002",
+    "query_text": "Create a focus mode app for my phone that's built for people with ADHD who get pulled away from what they're doing really easily. The whole point is to clear away everything distracting on the screen — notifications, extra stuff, all of it — and just show the one task or timer you're working on right now. There should also be a gentle nudge when the timer's up, and a simple way to set what task you're focusing on before you start."
+  },
+  {
+    "id": "q_scene_022_003",
+    "query_text": "A reading tool app for mobile that lets you switch between different fonts and adjust the spacing between letters — specifically made for people with dyslexia who struggle with standard fonts that look too cramped or too similar. On the main screen you paste in or type some text, and you can pick from a few dyslexia-friendly font options plus slide the letter spacing wider or tighter until it's comfortable to read. Really just want it to feel less exhausting to read stuff on my phone."
+  },
+  {
+    "id": "q_scene_022_004",
+    "query_text": "Make a braille display compatibility app for mobile that outputs text in a way that works nicely with external braille display devices — so visually impaired users can connect their braille reader and have the text on screen show up correctly on the device. The app should have a simple area where you type or paste text, and it formats and sends that content out in a clean, braille-friendly way, with settings to adjust things like text size or output speed so it works with different types of braille hardware."
+  },
+  {
+    "id": "q_scene_022_005",
+    "query_text": "Need a closed caption editor app for my phone that lets me customize how subtitles look when I'm watching something — like changing the text size, picking where the captions sit on the screen, and adjusting the font style so they're easier to read for me personally. The app should have a live preview area so I can see exactly what my caption settings look like as I tweak them, and a way to save my preferred settings so I can apply them quickly next time."
+  },
+  {
+    "id": "q_scene_022_006",
+    "query_text": "Build a text magnifier app for my phone that works like a magnifying glass — I point my camera at something small and hard to read, and the app zooms in on it and shows me the text nice and big so I can actually make it out without squinting. It should let me adjust how much it zooms in and freeze the image when I find the right spot so I can read without the screen shaking around. Really handy for small print on medicine bottles, menus, or anything tiny."
+  },
+  {
+    "id": "q_scene_022_007",
+    "query_text": "Build a quiz timer app for my phone that has a time extension option built right in — so if someone needs extra time to finish a question or task, they can tap a button to add more time without the whole thing restarting or messing up. The main screen should show the countdown clearly in big numbers, and there should be easy buttons to pause, add time in chunks like plus 1 or plus 5 minutes, and move to the next question when ready. Really useful for people who just need a bit more breathing room during timed stuff."
+  },
+  {
+    "id": "q_scene_022_008",
+    "query_text": "Create a mobile app that always shows a text label under every icon — kind of a permanent icon labels setting for people who can never remember what all the little symbols mean. The main screen should be a simple grid of icons where each one always has its name written below it in clear text, so there's zero guessing involved. You should be able to add your own icons and labels for things like shortcuts to apps or actions you use a lot, and rearrange them in whatever order makes sense to you."
+  },
+  {
+    "id": "q_scene_022_009",
+    "query_text": "A content filter app for mobile that helps people who are sensitive to certain topics or easily overwhelmed by intense content — you set up a list of words or themes that stress you out, and when text matching those topics shows up in the app, it gets blurred out or replaced with a gentle heads-up before you see it. The app should let you manage your list of sensitive topics easily and also let you choose whether to just see a warning first or skip that content entirely."
+  },
+  {
+    "id": "q_scene_023_001",
+    "query_text": "Make a mirror app for my phone that uses the front camera as a regular mirror, but with a few extra handy things built in — like being able to pinch to zoom in on a specific spot, a button to freeze the image so it holds still, and a grid overlay you can turn on if you need to check alignment or symmetry. Super useful for checking hair, makeup, or anything where you need a steadier look than just pointing your camera at yourself."
+  },
+  {
+    "id": "q_scene_023_002",
+    "query_text": "Create a coin flip and dice roller app for my phone that's quick and fun to pull out whenever I need to make a random decision or settle something with friends. The main screen should have a big coin you can tap to flip with a nice little animation, and a separate area where you can set how many dice to roll and how many sides each one has — like roll 3 six-sided dice or a single twenty-sided one. Tap to roll and the results pop up instantly."
+  },
+  {
+    "id": "q_scene_023_003",
+    "query_text": "Build a UV index tracker app for my phone that shows the current UV level throughout the day and also keeps running track of how much sun exposure I've racked up so far — and gives me a heads-up alert when I've been in the sun long enough that I should put on sunscreen or go inside. The main screen should have a clear readout of the current UV level with a simple description like low, moderate, or high, plus a little running total of my daily exposure time."
+  },
+  {
+    "id": "q_scene_023_004",
+    "query_text": "Make a Wi-Fi signal checker app for my phone that shows how strong the signal is in the spot I'm standing in and which channel the network is running on, so I can figure out why the internet is slow or where the best place to sit in the house is. The main screen should show the signal strength in a clear bar or number, and list out nearby networks with their channels so I can see if there's too much crowding on the same one."
+  },
+  {
+    "id": "q_scene_023_005",
+    "query_text": "Build a battery health tracker app for my phone that logs each time I charge my phone and keeps count of my total charge cycles over time, so I can get a sense of whether my battery is aging well or starting to wear out. The main screen should show the current charge cycle count, a rough estimate of battery health as a percentage, and a simple history of recent charging sessions so I can see my habits at a glance."
+  },
+  {
+    "id": "q_scene_023_006",
+    "query_text": "Build a tally counter app for my phone that lets me run several different counts at the same time on one screen — so I can track multiple things happening at once without switching around. Each counter should have its own label I can name, a big tap area to add one, and a running total shown clearly. Really handy for things like counting inventory, tracking different groups of people, or keeping score in a game with multiple categories."
+  },
+  {
+    "id": "q_scene_023_007",
+    "query_text": "Need a stopwatch app for my phone that goes beyond basic start and stop — I want to be able to tap a lap button while it's running to record split times, see a list of all my laps with the time for each one below the main timer, and when I'm done, save or share the whole list of lap times as a simple text file so I can refer back to it later. Good for tracking workout intervals or timing any kind of repeated activity."
+  },
+  {
+    "id": "q_scene_023_008",
+    "query_text": "A step counter app for my phone that tracks how many steps I've taken and also lets me mark laps so I can see how far I went in each stretch of a walk or run — like splitting it up by block or by loop around the park. The main screen should show my total step count big and clear, and below that a list of each lap with the steps and estimated distance for that segment. Simple and focused, just for tracking walks on my phone."
+  },
+  {
+    "id": "q_scene_023_009",
+    "query_text": "Make a colour picker tool app for my phone where I can point the camera at anything around me — a wall, a piece of fabric, a flower — and tap on any spot in the live camera view to instantly grab that exact color. The app should show the picked color as a big swatch along with its hex code and RGB values so I can use it in design stuff, and let me save a collection of colors I've picked over time so I can build up a little personal palette."
+  }
+]

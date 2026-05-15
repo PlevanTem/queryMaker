@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_009_006",
+    "query_text": "Create a mobile app for comparing items side by side so I can actually decide between two or more things without losing track. The comparison screen should line up each item in its own column with the key details — price, specs, whatever matters — listed row by row so I can scan down and spot the differences instantly. I want to be able to tap to add items to the comparison, and there should be a clear way to remove one from the lineup if I change my mind. Two things I really care about: the columns should stay lined up even when I scroll, and I should be able to select which details I want to compare so the view stays tidy."
+  },
+  {
+    "id": "q_scene_009_007",
+    "query_text": "Build a mobile app that gives me AI-powered top picks whenever I'm trying to choose something, with a clear indicator showing how confident the suggestion is. On the main screen, the app should show the top recommended options ranked in order, and next to each one there's a confidence bar or percentage so I know whether the AI is very sure or just guessing. I want to be able to see a short reason for why each pick was recommended, and I can tap any suggestion to learn more. The two things I care most about are seeing the confidence level at a glance and being able to quickly accept or skip a suggestion right from the list."
+  },
+  {
+    "id": "q_scene_009_008",
+    "query_text": "Need a mobile app for picking audio tracks where I can see the sound wave shape and the length of each track before I choose. The track list should show each audio file with its title, a small waveform picture so I can see if it's loud or quiet, and the total duration right next to it. I should be able to tap play on any track to hear a quick preview without leaving the list, and tap again to stop. Two specific things I want: the waveform should update while the preview plays so I can see where I am in the clip, and I want to mark favorites so my go-to tracks are easy to find next time for my phone."
+  },
+  {
+    "id": "q_scene_010_001",
+    "query_text": "Create a mobile app that lets me save my favorite filter combinations as named presets so I can apply them in one tap instead of setting everything up from scratch every single time. The main screen should show a list of my saved filter setups with clear name labels I can customize, and tapping one instantly applies all those filters to whatever I'm browsing. I should be able to create a new preset from my current filter choices, edit an existing one, and delete ones I no longer need. The whole point is saving me from the repetitive hassle of dialing in the same filters over and over for my phone."
+  },
+  {
+    "id": "q_scene_010_002",
+    "query_text": "Need a mobile app where the number of matching results updates live as I tap different filter options, so I never have to hit a search button and wait to find out there are zero results. The filter area should show the count updating in real time right next to the apply button as I check or uncheck each option, and if a combination would give me zero matches the count turns red so I know before I waste a tap. I want the result list below to also refresh automatically as I change filters. The main thing I care about is that the count is always visible and always current — no guessing how many things are left before I confirm."
+  },
+  {
+    "id": "q_scene_010_003",
+    "query_text": "Make a mobile app for tracking my online orders where I can filter the order list by status with a row of labeled buttons at the top — things like All, Pending, Shipped, Delivered, and Returned — so I can get straight to what I need. Tapping a status button shows only orders in that state, and the count of orders in each status appears right on the button so I can see at a glance how many are still in transit. Each order card should show the item name, a thumbnail, the status, and the expected arrival date. I'm tired of scrolling through a giant mixed list just to find my in-transit packages, so this filter row needs to be right there every time I open the app."
+  },
+  {
+    "id": "q_scene_010_004",
+    "query_text": "Create a mobile shopping app where I can narrow down products by picking multiple options at once — like choosing several colors, more than one size, and a couple of brands at the same time — without having to search again between each choice. The filter area should let me tap to select as many colors, sizes, and brand names as I want, and the product list updates to show only things matching all my picks together. Each selected option should appear highlighted so I can see what's active, and there should be an easy way to clear all filters at once. I really want the multi-select to work across all three categories simultaneously so I can zero in on exactly what I'm looking for without the back-and-forth hassle on my phone."
+  },
+  {
+    "id": "q_scene_010_005",
+    "query_text": "An inbox manager app for my phone that lets me quickly filter my messages by status — unread, starred, or flagged — so I can stop digging through everything just to find what matters right now. At the top of the inbox there should be a row of filter buttons for each status type, and tapping one shows only messages matching that status while the rest are hidden. Unread messages should have a clear visual mark so they stand out in the list, starred ones have a little star icon, and flagged ones look distinct from both. I want to be able to combine filters too, like seeing only starred unread messages, so I can actually work through my inbox in a sensible order on this mobile app."
+  },
+  {
+    "id": "q_scene_010_006",
+    "query_text": "Create a mobile quiz app where I can filter the available quizzes by difficulty level — Easy, Medium, or Hard — so I can jump straight to the right challenge without scrolling through a big mixed list. The quiz list screen should have clearly labeled difficulty buttons at the top, and tapping one shows only quizzes at that level. Each quiz card should show the topic name, the number of questions, and a colored difficulty badge so I can confirm the level before I tap in. I want to be able to tap more than one difficulty at once if I feel like mixing it up, and there should be a small count showing how many quizzes are available at each level so I can plan ahead on my phone."
+  },
+  {
+    "id": "q_scene_010_007",
+    "query_text": "Make a mobile booking app with a calendar that lets me filter available time slots by time of day — like morning, afternoon, or evening — so I can find an open slot that actually works for me without reading through every single time entry. The calendar should highlight which days have slots matching my chosen time range, and tapping a day shows only the available openings in that window. Slots that are already taken should look visibly different from open ones so I never accidentally try to book something that's gone. The two things I care about most are being able to filter by time of day before picking a date, and seeing the available count for each day at a glance right on the calendar for my phone."
+  },
+  {
+    "id": "q_scene_010_008",
+    "query_text": "A file manager app for my phone where I can filter my saved files by type — like photos, documents, audio, or video — and also set a size range to only show files above or below a certain size, so I can track down the big stuff eating up my storage without going file by file. The filter area at the top should have clearly labeled type buttons I can tap, plus a simple slider or pair of input boxes for setting the minimum and maximum file size. The file list below updates to show only files matching whatever I've selected, and each entry shows the file name, type icon, and exact size. A count of matched files should stay visible so I know how many are in the filtered view at any moment."
+  },
+  {
+    "id": "q_scene_011_001",
+    "query_text": "Make a mobile social manager app where I can go to any account I follow and choose to unfollow them, and right after unfollowing it gives me a quick follow-up option to also mute or block that person if I want to. After I tap unfollow, the app should show a small prompt with two extra choices — mute, which keeps them from appearing in my feed, or block, which stops all contact — and I can pick one or just skip past it. The list of people I follow should be easy to browse, and each profile should show their name, photo, and a clear unfollow button. The main thing I want is that clean two-step flow: unfollow first, then optionally mute or block, all without having to hunt through separate settings on my phone."
+  },
+  {
+    "id": "q_scene_011_002",
+    "query_text": "Create a mobile subscription manager app where canceling a subscription is straightforward but shows me a special offer — like a discount or a pause option — before I finalize the cancellation, so I have all the information I need to make a real choice. When I tap cancel on any subscription, the app should show an in-between screen with a retention offer clearly laid out, with the option to accept the deal or continue with the cancellation. My subscriptions should be listed with the name, price, renewal date, and a cancel button right on the card. I want the offer screen to be honest and readable, not buried in fine print — just a clear deal I can accept or decline with one tap on my phone."
+  },
+  {
+    "id": "q_scene_011_003",
+    "query_text": "Create a mobile photo album app where I can remove a photo from any album without that photo disappearing from my phone entirely — it should just leave the album while staying safe in my camera roll. On the album view, each photo should have a remove-from-album option that's clearly separate from a full delete, so there's no risk of accidentally losing the original. When I tap remove, a quick confirmation should appear just to make sure, and then the photo is gone from that album but still findable in my main library. The key thing I need is that the album removal and the actual file deletion are two very different actions, clearly labeled, so I never mix them up on my phone."
+  },
+  {
+    "id": "q_scene_011_004",
+    "query_text": "Make a mobile account settings app where I can deactivate my account but the app gives me the option to download all my data first before I confirm anything. On the deactivation screen, there should be a clearly marked download-my-data step that I can tap to request my files, and only after that does the final confirm button for deactivation become available. The downloaded data should include things like my posts, profile info, and activity history, and the app should tell me when the download is ready. Two things I care about: the download step has to come before the confirmation, and the whole flow has to be on my phone — clear, step by step, with no surprises about what gets deleted."
+  },
+  {
+    "id": "q_scene_011_005",
+    "query_text": "Need a mobile payment manager app where I can remove a saved card or payment method, but before it actually gets deleted the app shows me the most recent charge made to that card so I can verify it's the right one and there's nothing pending. The saved payment methods should be listed with the card type, last four digits, and an option to remove each one. When I tap remove, a summary of the latest transaction on that card should appear — amount, date, merchant — so I can confirm before the deletion goes through. The whole flow should feel safe and clear, with a final confirmation step after I see the charge details, all on my phone so I can manage this on the go."
+  },
+  {
+    "id": "q_scene_011_006",
+    "query_text": "A group manager app for my phone where the admin can remove a member from the group and is asked to write a short reason before the removal is confirmed, so there's a clear record of why it happened. On the member list, each person should have a remove option, and tapping it opens a step where I type a brief reason — just a line or two — before a final confirm button appears. The reason should be saved in the group's activity log so it can be referred back to later if needed. I want the confirmation step to clearly show the member's name and the reason I entered before I finalize it, so I don't accidentally remove the wrong person or leave the reason field blank in this mobile app."
+  },
+  {
+    "id": "q_scene_011_007",
+    "query_text": "Need a mobile writing app where if I try to close or leave a draft I'm working on, the app catches me and asks whether I want to save it, discard it, or keep editing — so I never lose something I meant to keep. When I tap back or close on a draft that has unsaved changes, a prompt should appear with those three clear choices, and if I choose discard the app should still offer to recover the draft once more just in case I change my mind. My list of drafts should be easy to browse with the last-edited time shown, and auto-save should kick in every few minutes so the recovery option always has something recent to work with. The key thing I want is that safety net before anything gets permanently thrown away on my phone."
+  },
+  {
+    "id": "q_scene_011_008",
+    "query_text": "Need a mobile notes or task manager app that lets me select multiple items at once and remove a specific label from all of them in a single action, so I don't have to open each one individually and edit it by hand. The list view should have a multi-select mode I can turn on with one tap, and once I've checked off the items I want, I can choose which label to strip from all of them at the same time. A quick summary before confirming — like \"Remove label 'Work' from 12 items?\" — should appear so I know what's about to happen. The two things I really care about are the ability to select many items at once and the single-tap label removal that hits all of them together on my phone."
+  },
+  {
+    "id": "q_scene_012_001",
+    "query_text": "Build a mobile app for managing all the outside accounts I've connected — things like Google, GitHub, or Spotify — where I can see at a glance which connections are active and which ones have gone stale or need to be re-linked. The connected accounts screen should feel clean and a bit refined, like a well-organized settings page with each service showing its logo, the connected username, and a colored status indicator that's green when everything is working and amber or red when the connection has expired or needs attention. I should be able to tap any account to see more details or disconnect it, and reconnecting a stale one should take me straight to the right place. The visual hierarchy should make the healthy connections feel calm and the ones needing action feel obvious without being alarming, designed for my phone."
+  },
+  {
+    "id": "q_scene_012_002",
+    "query_text": "Create a mobile app for managing language and region preferences that feels thoughtful and polished — not just a plain dropdown list. The settings area should let me pick my display language from a nicely presented list where each option shows the language written in its own script alongside the translated name, and separately I can set my region for things like date format and currency. A live preview somewhere on the screen should update as I make changes — like showing a sample date, time, and price in the chosen format — so I can see exactly how the app will feel before I confirm. The whole experience should feel considered and calm on my phone, like something that actually respects that I care about getting these details right."
+  },
+  {
+    "id": "q_scene_012_003",
+    "query_text": "Need a mobile app that lets me personalize how the whole experience looks and moves — things like adjusting the text size, switching to a higher-contrast color scheme, and turning off animations — all from one place that feels coherent and well designed. The preferences area should have a slider for font size with a live preview of text updating as I drag, a toggle for high-contrast mode that instantly shifts the whole color palette, and an option to reduce or stop motion effects for anything that moves on screen. Each setting should show a before/after feel as I adjust it so I know what I'm choosing. I want the controls to be big enough to tap comfortably and the whole screen to feel calm and considered, not like a developer's settings dump, for my phone."
+  },
+  {
+    "id": "q_scene_012_004",
+    "query_text": "Create a mobile profile app where I can display all the badges and achievements I've earned and arrange them in the order I want by pressing and holding to drag them around. The badge showcase section of the profile should look gorgeous — maybe soft glowing icons on a dark card, or a clean grid with subtle shadows — and each badge should show its name and a short description when I tap it. I want to be able to hold and drag any badge to a new position in the grid so I can put my favorites front and center for anyone who visits my profile. The reordering should feel smooth and satisfying, with a gentle visual cue showing where the badge will land, all optimized for my phone."
+  },
+  {
+    "id": "q_scene_012_005",
+    "query_text": "A professional profile app for my phone where I can add skills to my profile and send a request to specific connections asking them to endorse each skill, so my profile feels curated and credible rather than self-declared. The skills section should display each skill I've added with an elegant look — maybe soft pill shapes with the skill name and a count of endorsements — and tapping a skill lets me choose which contacts I'd like to invite to endorse it. The endorsement request should go out looking polished, like a short personal note with my name and the skill they're being asked to vouch for. I want the whole flow to feel intentional and tasteful, not like a spam request, so that the people I reach out to actually want to respond."
+  },
+  {
+    "id": "q_scene_012_006",
+    "query_text": "Make a mobile profile manager app where I can add and organize all my personal links — portfolio site, social handles, custom URLs — in a way that looks curated and intentional rather than just a list of raw links. The links section of the profile should let me add a display name and a URL for each entry, and I should be able to reorder them so the most important ones sit at the top. Each link should show a small icon or thumbnail pulled from the destination if possible, so the list has a visual rhythm to it. I want the whole thing to feel like a personal link hub — clean, elegant, easy to update on the fly — for anyone browsing my profile on their phone."
+  }
+]

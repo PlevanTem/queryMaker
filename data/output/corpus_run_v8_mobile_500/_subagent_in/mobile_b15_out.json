@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_035_008",
+    "query_text": "Personal best milestone celebration tracker for my phone where I can log each new record I hit — fastest run, longest workout, most reps — and the app marks it with a little trophy or badge so I can clearly see my progress over time. I want each milestone to show the date, what the record was, and maybe a short note I can add, all listed in order so I can go back and see how far I've come."
+  },
+  {
+    "id": "q_scene_036_001",
+    "query_text": "Build a PMS symptom and mood tracker app for my phone where I can log each day leading up to my period — things like cramps, headaches, bloating, mood swings, and energy levels — and then see a simple chart that shows which symptoms tend to hit on which days of my cycle. I want to be able to pick from a checklist of common symptoms, add a mood rating, and have the app show me a clear pattern over a couple of months so I can actually predict when to expect the rough days."
+  },
+  {
+    "id": "q_scene_036_002",
+    "query_text": "Make a sleep recorder app for my phone that lets me tap to log when I actually fall asleep and when I wake up each morning, so I can keep track of my hours night by night. The home screen of the app should show today's sleep time and a simple list of the past week, and I also want a chart that shows how my sleep times shift across the week so I can spot patterns like staying up too late on weekends."
+  },
+  {
+    "id": "q_scene_036_003",
+    "query_text": "Build a sleep quality tracker app for my phone that pulls in my sleep score from my fitness band or smartwatch and shows me a clear number and rating — like poor, fair, good — for each night. I want the home screen of the app to show this week's scores in a row so I can see at a glance which nights were good and which were rough, and I also want a monthly average so I know if things are improving over time."
+  },
+  {
+    "id": "q_scene_036_004",
+    "query_text": "Make a pregnancy week-by-week milestone tracker app that I can use on my phone throughout my whole pregnancy, where each week has its own entry showing what's happening with the baby — size, development — plus a checklist of things I should do or prepare that week. I want to be able to tap into any week, check off items as I do them, and add a short note or photo for the memory, so I have an organized log of the whole journey."
+  },
+  {
+    "id": "q_scene_036_005",
+    "query_text": "Postpartum recovery tracker app for my phone that helps me log the milestones after giving birth — things like first time walking, when stitches healed, first full night of sleep, first workout — organized as a running list with the date and a short note for each one. The app should also let me mark which milestones I've hit and which are still coming up, so I have a clear, satisfying record of how my body is recovering week by week."
+  },
+  {
+    "id": "q_scene_036_006",
+    "query_text": "Need a body composition tracker app that lets me log my muscle percentage and body fat percentage each week so I can watch both numbers move over time on my phone. I want the app to show a simple side-by-side chart of muscle vs fat trend lines so it's easy to see if I'm gaining muscle while losing fat, and I can also enter my weight to go along with it so everything is in one organized place."
+  },
+  {
+    "id": "q_scene_036_007",
+    "query_text": "Waist-to-height ratio tracker app for my phone that lets me enter my waist measurement and height and then calculates my ratio and shows me where I land — healthy, borderline, or at risk. I want to log each measurement with a date and see a simple line chart of how my ratio changes over weeks and months, so I can track real progress and know whether my waist is getting closer to the healthy range."
+  },
+  {
+    "id": "q_scene_036_008",
+    "query_text": "Need a sleep debt calculator app for my phone that tracks how much sleep I get each night versus my target hours, adds up how much I'm short or over across the week, and tells me how many extra hours I need to recover. I want to be able to enter my bedtime and wake time each day, see a running total of my sleep debt, and get a simple suggestion for how many extra hours to aim for on the weekend to catch up."
+  },
+  {
+    "id": "q_scene_037_001",
+    "query_text": "Create a daily vitals summary app for my phone that lets me log my heart rate, blood pressure, blood oxygen, and temperature each day and see all four numbers together in one clear overview. The home screen of the app should show today's readings with a simple color indicator for whether each number is in a normal range, and I also want a history list so I can scroll back and compare readings from the past two weeks."
+  },
+  {
+    "id": "q_scene_037_002",
+    "query_text": "Make a weekly health score tracker app for my phone that gives me an overall health score each week based on things like sleep, steps, and how I feel, then shows me a simple trend line so I can see whether my score is going up or down over the past month. I want the app to break down what went into the score — like sleep was good but activity was low — so I know exactly which area to focus on the following week."
+  },
+  {
+    "id": "q_scene_037_003",
+    "query_text": "Medication tracker app for my phone where I can set up all the pills I take — name, dose, and how often — and then check them off each day as I take them, so the app can show me my overall adherence rate for the week and month. I want to see a simple percentage on the main screen of the app, like \"you took your meds 85% of the time this month,\" and a daily log so I can quickly spot which days I missed."
+  },
+  {
+    "id": "q_scene_037_004",
+    "query_text": "Make a step count and active minutes tracker app for my phone that shows me a weekly summary of how many steps I walked each day and how many minutes I was actually moving, so I can see my activity across the whole week in one place. I want a simple bar chart for steps and a separate section for active minutes, plus a weekly total so I know at a glance if I hit my target or how close I came."
+  },
+  {
+    "id": "q_scene_037_005",
+    "query_text": "Need a sleep quality trend tracker app for my phone that lets me rate my sleep each morning on a simple scale and then shows me a weekly chart so I can see how my sleep quality changes from one week to the next. I want to be able to add a quick note about what might have affected my sleep — like stress or caffeine — and see a month-view summary so I can spot which weeks consistently had better or worse rest."
+  },
+  {
+    "id": "q_scene_037_006",
+    "query_text": "Build a blood glucose tracker app for my phone that lets me log my readings throughout the day — before meals, after meals, before bed — and shows me a clear trend line so I can see how my levels are moving over the week. I want the app to highlight readings that are too high or too low with a color flag so I can spot patterns quickly, and I also want a weekly average so I can share it with my doctor."
+  },
+  {
+    "id": "q_scene_037_007",
+    "query_text": "Create a blood pressure log app for my phone where I can enter my systolic and diastolic numbers each time I measure and see a running chart that marks the safe zone versus the high zone so I know right away if a reading is a concern. I want each entry to include the time of day and whether I had just exercised or was resting, and I want the app to show me my average over the past two weeks at a glance."
+  },
+  {
+    "id": "q_scene_037_008",
+    "query_text": "Make a lab results tracker app for my phone where I can enter my blood test numbers — things like cholesterol, blood sugar, hemoglobin — each time I get tested, and the app shows each result alongside the normal reference range so I can immediately see if I'm inside or outside the healthy zone. I want a list of all my past tests organized by date, and I want to be able to tap on any result to see how it's trended over my last few checkups."
+  },
+  {
+    "id": "q_scene_038_001",
+    "query_text": "Create a panic attack breathing aid app for my phone that kicks in immediately when I need it — a calm, dim screen with a slow pulsing circle that guides me to breathe in and out at an easy pace to help me get through a panic attack. The whole vibe should feel grounding and safe, almost like a night light, with very soft colors — maybe deep blue or warm grey — and gentle audio cues so I can follow along even when I can barely focus."
+  },
+  {
+    "id": "q_scene_038_002",
+    "query_text": "Need a 5-minute desk break breathing timer app for my phone that gives me a quick, calming reset right at my desk — a soft animated visual that guides my breath in and out for a few rounds, with a gentle, minimal look that feels like a pause from the chaos of work. The vibe should be clean and quiet, maybe a slow wave or expanding circle, with a subtle end chime so I know when the five minutes are done without it feeling jarring."
+  },
+  {
+    "id": "q_scene_038_003",
+    "query_text": "Need a sleep hypnosis audio player app for my phone with a warm, dimly lit feel — like you're already half in a dream — where I can pick a spoken sleep session and let a calming voice guide me off to sleep. The listening screen of the app should feel deeply restful, with a slow fading visual and a sleep timer so the audio gently fades out after I've drifted off, and the overall mood should be hushed and cozy, not clinical."
+  },
+  {
+    "id": "q_scene_038_004",
+    "query_text": "Make a gratitude morning meditation app for my phone that eases me into each day with a warm, golden-hour feel — soft sunrise colors, a gentle guiding voice, and a short breathing moment before I jot down three things I'm grateful for that morning. The whole app should feel like a quiet ritual, unhurried and beautiful, with the gratitude entries saved in a scrollable journal section so I can look back and revisit the good moments on harder days."
+  },
+  {
+    "id": "q_scene_038_005",
+    "query_text": "Need a nature soundscape relaxation player app for my phone that feels like stepping outside into a peaceful place — rain on leaves, a flowing stream, birdsong — with a visually immersive background that shifts to match the sound, like a misty forest or a sunlit meadow. I want to be able to mix a couple of sounds together, set a gentle timer so it fades out while I'm resting, and have the whole experience feel atmospheric and transportive rather than like a plain music app."
+  },
+  {
+    "id": "q_scene_038_006",
+    "query_text": "Make a breath count meditation app for my phone with a very still, temple-like feel — a clean dark background with a single glowing ring that pulses slowly as I breathe, and a soft bell that rings after every set number of breaths to help me keep count without losing focus. The whole app should feel quiet and intentional, with the option to set how many breath cycles I want, so each session has a clear beginning and a serene end."
+  },
+  {
+    "id": "q_scene_038_007",
+    "query_text": "Build a Zen walking meditation guide app for my phone that plays a calm, softly spoken audio guide for kinhin — the slow, mindful walking practice — with a gentle ambient background sound that feels like a monastery garden, quiet and unhurried. I want the app to show a simple timer for the walk session and let me choose the pace — slow or very slow — so the voice cues match my steps, and the whole look and feel should be minimal and grounding, like the practice itself."
+  },
+  {
+    "id": "q_scene_038_008",
+    "query_text": "Need a alternate nostril breathing guide app for my phone that walks me through the pranayama practice step by step with a visual that shows which nostril to use at each moment — inhale left, hold, exhale right — so I can follow along without memorizing the pattern. The app should feel serene and focused, with soft earthy tones and a gentle audio cue for each phase, plus a timer so I can set how many rounds I want to do and track my session length."
+  }
+]

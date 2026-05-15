@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_036_006",
+    "query_text": "An open-source project showcase site for desktop browsers that feels like it actually has a personality — the kind of place where a project earns its spot rather than just gets listed. Each project card should show contributor stats in a way that reads as a little story: how many people built it, when it was last active, who the key contributors are. The whole thing should carry a quiet, curated identity — like someone with taste hand-picked every project here, even if they didn't."
+  },
+  {
+    "id": "q_web_036_007",
+    "query_text": "Create a web app that serves as a public changelog and release notes timeline for a product — the kind that feels worth reading, not just skimming. Each release entry should have a clean date stamp, a clear title, and enough room to explain what changed and why it matters, so readers actually feel something when a good update ships. The whole thing should live in a browser-based format that works well on desktop, with a left-side timeline running down the page and entries unfolding to the right — something that respects the craft of shipping."
+  },
+  {
+    "id": "q_web_037_001",
+    "query_text": "Need a web app that collects startup failure post-mortems and gives them the respect they deserve — real stories from founders about what went wrong, organized and searchable so the honest lessons don't get buried. The site should feel like a proper archive, not a listicle, with each story getting its own space and a way to filter by industry or failure type so you can actually learn from it rather than just scroll through. It should work well in desktop browsers with a clean reading experience that honors how hard these stories were to write."
+  },
+  {
+    "id": "q_web_037_002",
+    "query_text": "Make a web app that works as a tutorial and code sample library — a browser-based tool where people can find guides and working examples organized by topic or skill level, so they can actually learn something rather than wade through noise. The home screen of the app should make it immediately obvious how things are organized, with a left sidebar for browsing by category and a main reading area that shows the content cleanly, with code examples that are easy to copy and follow. The whole thing should feel like a well-kept personal library — curated, intentional, useful."
+  },
+  {
+    "id": "q_web_037_003",
+    "query_text": "Make a web app that reads like a proper blog dedicated to tearing down SaaS products — the kind of publication that actually has opinions about how products are priced, designed, grown, and eventually succeeded or failed. Each post should get room to breathe, with a clean reading layout for desktop browsers and a way to browse by product category or topic so readers can find the teardowns that matter to them. The whole thing should carry the voice of someone who's spent years thinking about this stuff and finally decided to write it all down."
+  },
+  {
+    "id": "q_web_037_004",
+    "query_text": "Create a web app that works as a resource site about startup pricing strategies — the kind of place where someone building a product can actually understand how to price it, with real breakdowns of different approaches like freemium, usage-based, flat-rate, and what situations each one fits. The site should work well on desktop browsers and let people browse by business model or stage so they can find what's relevant to them, with each topic having enough depth to actually be useful rather than just high-level fluff."
+  },
+  {
+    "id": "q_web_037_005",
+    "query_text": "Create a web app that archives founder AMA transcripts and Q&A sessions in a way that makes them worth revisiting — not just a dump of text, but a properly organized library where you can search by founder, topic, or question type so the real insights are findable. The whole thing should feel like someone cared enough to curate it, with a desktop-first layout that gives the content room to be read properly, and each AMA getting its own dedicated space with the best questions surfaced rather than buried."
+  },
+  {
+    "id": "q_web_037_006",
+    "query_text": "A company culture and hiring values site that actually says something real — the kind of web app that reads like a document the team genuinely believes in, not a list of buzzwords someone copied from another company's careers page. The site should work well in desktop browsers with a layout that gives each value or principle its own space to be explained properly, alongside a section that shows what the hiring process actually looks like, so candidates can tell whether they'd fit before they ever apply."
+  },
+  {
+    "id": "q_web_037_007",
+    "query_text": "Build a web app that works as a documentation and onboarding guide site for developers getting started with a product's integration — the kind of place that actually makes a good first impression because it's clear, well-organized, and doesn't waste anyone's time. The site should feel like it was written by someone who has helped a lot of people get unstuck, with a sidebar for navigating between topics and a main reading area that steps through concepts in order, with examples that make the whole thing feel approachable for desktop browsers."
+  },
+  {
+    "id": "q_web_038_001",
+    "query_text": "Need a web app that works as a hub for customer case studies and video testimonials — something that feels like a genuine collection of real stories, with each case study getting its own dedicated space to explain the problem, the outcome, and what actually changed for that customer. The app should live in a browser-based format that works well on desktop, with a way to filter by industry or use case so visitors can find the story that matches their situation, and video testimonials embedded naturally alongside the written ones."
+  },
+  {
+    "id": "q_web_038_002",
+    "query_text": "Build a web app for managing webinar signups and hosting an on-demand replay library, so people can register for upcoming sessions and come back later to watch recordings they missed — all in one place on a desktop browser. The registration side should be clean and quick to fill out, and the replay library should let people browse past sessions by topic or date so it's easy to find what's worth watching without having to dig through a messy list."
+  },
+  {
+    "id": "q_web_038_003",
+    "query_text": "Create a web app that works as a proper press kit and media assets site — the kind of place a journalist or partner can land on and immediately find what they need, like logos, product screenshots, founder photos, and a company description, all organized and ready to grab. The site should feel polished and intentional, working well on desktop browsers, with assets grouped into clear sections and download links that actually work, so the whole thing reflects the kind of identity the brand wants to carry."
+  },
+  {
+    "id": "q_web_038_004",
+    "query_text": "Need a web app that works as an affiliate and referral program portal for a SaaS product — a browser-based place where people can sign up to refer customers, see how much they've earned, grab their referral links, and understand the payout structure without having to contact anyone. The whole thing should feel trustworthy and clean, with a personal home area that shows their stats and a clear breakdown of the commission tiers so there's no guessing involved."
+  },
+  {
+    "id": "q_web_038_005",
+    "query_text": "Build a web app for collecting email newsletter signups — something that works in a desktop browser and actually makes people want to hand over their address because the page communicates a real reason to subscribe. The landing experience should focus on what the newsletter is about, how often it goes out, and a few sample headlines or topics so visitors know what they're signing up for, with a simple signup form that confirms your spot right away."
+  },
+  {
+    "id": "q_web_038_006",
+    "query_text": "Build a web app that works as a directory of third-party integrations and tools that connect with a product — the kind of place where a user can browse by category, see what each integration does, and understand how to get started without having to hunt around. The app should run in a desktop browser with a sidebar for filtering by type of tool and a main area that shows each integration as its own card with a short description, connection status, and a link to learn more, so it feels like a well-kept marketplace rather than a wall of logos."
+  },
+  {
+    "id": "q_web_038_007",
+    "query_text": "Create a web app that works as a public changelog and release notes site — the kind of place that actually makes customers feel good about keeping up with what's new, because the writing is clear and each update explains why it matters, not just what changed. The app should work well on desktop browsers with a chronological timeline of releases going down the page, each entry having a date, a clear title, and a few sentences of honest explanation, with a way to filter by release type so power users can track the things they care about."
+  },
+  {
+    "id": "q_web_039_001",
+    "query_text": "Make a web app for managing invoices and billing so I can stop chasing people down and losing track of what's been paid — a browser-based tool where I can create and send invoices, mark them as paid, and see at a glance which ones are overdue without having to open a spreadsheet. It should have a list of all invoices with statuses, a simple way to add a new one with client name, amount, and due date, and some kind of summary at the top showing what's outstanding versus what's already been collected."
+  },
+  {
+    "id": "q_web_039_002",
+    "query_text": "A web app that handles partner reseller sign-ups and lets them track their commissions without having to email someone every time they want to know where they stand — a browser-based tool where a reseller can enroll, see their active status, check how much they've earned this month, and get their referral materials all in one place. The whole thing should be practical and clear, so a reseller can log in on a desktop browser and immediately see their numbers and what they need to do next."
+  },
+  {
+    "id": "q_web_039_003",
+    "query_text": "Make a web app that handles the whole process from sending a quote to collecting payment — a browser-based tool where a SaaS team can put together a quote for a customer, send it off, track whether it's been accepted, and then automatically move it along to invoicing and payment collection without anyone having to manually pick up the next step. The main list should show every deal in progress with its current stage so nothing falls through the cracks, and each quote should be easy to fill in with line items and a price."
+  },
+  {
+    "id": "q_web_039_004",
+    "query_text": "A self-service account management app for desktop browsers where customers can see their current plan, compare what's included in each tier, and switch up or down on their own without having to talk to anyone — because right now the process is way too slow and people end up churning just because they can't figure out how to change their plan. The app should clearly show what they're paying now, what changes if they switch, and let them confirm the change in just a couple of clicks with a simple confirmation summary."
+  },
+  {
+    "id": "q_web_039_005",
+    "query_text": "Make a web app for tracking and routing incoming sales leads — a browser-based tool where the team can see every new lead that comes in, know right away how likely it is to convert based on a simple score, and assign it to the right salesperson so nobody's sitting on a hot lead by accident. The main list should show leads with their score, company size, and assigned rep all visible at once, and there should be a way to filter by score range or rep so the sales team can prioritize without wading through everything."
+  },
+  {
+    "id": "q_web_039_006",
+    "query_text": "Need a web app that shows me exactly where people are dropping off in the trial-to-paid process so I can actually do something about it — a browser-based tool where I can see how many trial users make it through each stage, which steps have the biggest drop-off, and what the overall conversion rate looks like right now. The main view should lay out the funnel steps in order with numbers attached to each one, so it's immediately obvious where the biggest problem is and I can stop guessing."
+  },
+  {
+    "id": "q_web_039_007",
+    "query_text": "Build a web app for evaluating vendors and keeping a shortlist when we're trying to buy something for the company — a browser-based tool where anyone on the team can add a vendor, fill in basic details like pricing and what they offer, score them against a few criteria, and see a ranked comparison so we're not just going with whoever sent the most emails. It should keep everything in one place so when it's time to make a decision, we're not digging through spreadsheets and email threads to remember why we liked one option over another."
+  },
+  {
+    "id": "q_web_040_001",
+    "query_text": "Build a web app that handles scheduling video calls with beta users who want to give product feedback — a browser-based tool where a user can pick a time slot that works for them, fill in a short form about what they use the product for, and get a confirmation so both sides actually show up. The scheduling side should show available times without any back-and-forth, and there should be a simple list on the team's end showing upcoming calls with the user's name and their notes, so the conversation can start with some context already in place."
+  },
+  {
+    "id": "q_web_040_002",
+    "query_text": "Need a web app that lets our team set up research interview slots and lets participants pick a time and book themselves without anyone having to coordinate it manually — a browser-based scheduler where participants can see available times, choose one, answer a short screener about their role and experience, and get a confirmation email right away. On the team side, there should be a calendar-style view of all the upcoming interviews so nothing overlaps and everyone knows who's up next."
+  }
+]

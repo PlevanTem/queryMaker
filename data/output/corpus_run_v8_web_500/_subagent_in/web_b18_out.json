@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_062_004",
+    "query_text": "Fundraising campaign app with real soul — the kind that feels like it was made for one specific cause, not stamped out of a template. For desktop browsers, the main area should show the campaign story alongside a live donation tracker that feels honest and human, not like a flashy telethon counter. The whole thing should carry a personality, like a handwritten note turned into a website — earnest, a little literary, nothing slick or corporate."
+  },
+  {
+    "id": "q_web_062_005",
+    "query_text": "Museum membership annual drive website that actually feels like it belongs to a place with taste and history — for desktop browsers, the kind of site where the layout breathes, the copy has weight, and joining feels like being let into something meaningful rather than just picking a pricing tier. The membership levels should be laid out side by side so you can see what each one offers, and there should be a spot that tells the story of why this drive matters this year specifically, not just generic \"support the arts\" filler."
+  },
+  {
+    "id": "q_web_062_006",
+    "query_text": "Create a symphony orchestra season ticket promotional website that feels like putting on a good suit — elegant, confident, and a little timeless, for desktop browsers. The app should have a section that lays out this season's concert lineup with dates and program highlights, and a part where you can compare ticket packages and choose yours. The whole thing should carry the identity of a serious cultural institution, not look like a generic events ticketing site — the typography and spacing alone should tell you this is something worth showing up for."
+  },
+  {
+    "id": "q_web_063_001",
+    "query_text": "Make a souvenir store web app for a museum or cultural site so visitors can browse and buy gifts without having to hunt down a staff member or dig through a cramped physical shop, all from a desktop browser. The store should show items organized by category — like postcards, replicas, books, and local crafts — with a simple cart so people can pick what they want and check out in one go. Nothing fancy needed, just something that actually works without friction so visitors aren't left empty-handed because they couldn't find what they wanted in time."
+  },
+  {
+    "id": "q_web_063_002",
+    "query_text": "Need a ticket sales web app for cultural events and venues so people can actually buy tickets online without calling anyone or showing up in person just to find out something's sold out, all accessible from a desktop browser. The app should let you pick an event from a list, choose how many tickets you want, and pay right there — with a clear summary of what you bought and a confirmation you can save or print. It should handle the whole thing start to finish so nobody has to figure out where to go next."
+  },
+  {
+    "id": "q_web_063_003",
+    "query_text": "Need a donation tool web app that makes it easy for someone to give money to a cultural organization without having to jump through hoops or figure out where to send a check, usable from a desktop browser. The app should let you pick an amount — with a few suggested options and a box to type your own — choose whether it's a one-time gift or recurring, and then just pay without creating yet another account if possible. The confirmation at the end should feel like a receipt, not a generic \"thank you\" that tells you nothing about what happens next with your money."
+  },
+  {
+    "id": "q_web_063_004",
+    "query_text": "Create a membership renewal web app for a cultural organization so members don't have to chase down a form or wait for someone to email them back when it's time to renew, all from a desktop browser. The app should show you your current membership status and when it expires, let you pick your renewal tier, and walk you through paying in a few clicks — no long forms, just what's actually needed. Getting this done should take under two minutes so people actually do it instead of letting their membership lapse because the process was annoying."
+  },
+  {
+    "id": "q_web_063_005",
+    "query_text": "Build a museum art print and reproduction licensing store web app where people can browse available artworks, see what licensing options exist — like personal prints versus commercial use — and just pay and get what they need without emailing a rights department and waiting a week for a response. For desktop browsers, the store should let you filter by artist or collection, show a clear preview of each work, and lay out the licensing tiers so you know exactly what you're getting and what it costs before you commit."
+  },
+  {
+    "id": "q_web_063_006",
+    "query_text": "Need a guided tour booking and payment web app for heritage sites so visitors can actually reserve a spot with a real guide ahead of time, pay right there, and not show up hoping someone's available that day, all from a desktop browser. The app should show which tours are running, what dates and times are open, let you pick your group size, and complete the payment in one flow — with a booking confirmation you can refer back to. It should cut out all the back-and-forth of calling or emailing just to ask if there's space."
+  },
+  {
+    "id": "q_web_064_001",
+    "query_text": "Make a visit reservation web app for a museum or cultural site so people can book their entry slot ahead of time instead of just showing up and hoping it's not packed, all from a desktop browser. The app should show a calendar of available dates with the time slots still open, let you pick how many people are coming, and confirm the booking right away. It should be fast enough that someone can do it in a couple of minutes without having to read instructions — just pick, confirm, done."
+  },
+  {
+    "id": "q_web_064_002",
+    "query_text": "Create an event sign-up web app for cultural programs and workshops so people can see what's coming up, register for something they want to attend, and actually get a confirmation — all without having to email someone and wait to hear back, for desktop browsers. The app should list upcoming events with dates, a short description, and how many spots are left, then let you fill in your name and contact info to register in one shot. Simple as that — just a clean way to handle sign-ups so organizers stop getting buried in messages."
+  },
+  {
+    "id": "q_web_064_003",
+    "query_text": "Build a guided tour reservation web app for a museum or heritage site so visitors can look up which tours are available, pick a time that works, and book a spot without needing to call anyone or stand in a line, for desktop browsers. The app should show the tour options with a short description and the available time slots for each, let you choose your preferred slot and number of people, and send a booking summary once you're done. The whole point is that someone can figure out exactly what's available and lock in their spot on their own time, from home."
+  },
+  {
+    "id": "q_web_064_004",
+    "query_text": "Create a museum timed-entry ticket booking web app so visitors can pick a specific time slot for their visit instead of everyone piling in at once and the place feeling like a rush hour subway, for desktop browsers. The app should show a calendar where you can see which entry times still have spots open, let you choose how many tickets you need, and walk you through paying and getting a confirmation you can show at the door. It should be clear enough that someone who's never used it before can get through the whole thing without any help."
+  },
+  {
+    "id": "q_web_064_005",
+    "query_text": "Build a library study room reservation web app so students can actually see which rooms are free and book one without having to walk over just to find they're all taken, usable from a desktop browser. The app should show a simple layout of all the study rooms available, let you pick a date and time block, and confirm your reservation right away — maybe with a quick reminder of the rules like how long you can book. The whole point is cutting out the guesswork so you can plan your study session before you even leave the house."
+  },
+  {
+    "id": "q_web_064_006",
+    "query_text": "Make a private gallery viewing scheduler web app so art collectors or serious visitors can book a curator-led session without calling the gallery and playing phone tag for days, for desktop browsers. The app should show available time slots for curator-led private viewings, let you pick one that fits your schedule, fill in a few details about what you're interested in seeing, and submit the request — with a confirmation that tells you what to expect when you arrive. Just a clean, no-fuss way to get a real appointment locked in."
+  },
+  {
+    "id": "q_web_065_001",
+    "query_text": "Need a science education resource library web app where people can find and browse through popular science content — things like explainer articles, short videos, and learning guides — organized by topic so it's easy to find what you're looking for, for desktop browsers. The app should let you filter by subject area like biology, space, or climate, and show each resource with a title, a brief description, and the type of content it is. I also want a way to save resources to a personal list so you can come back to them later without having to search again."
+  },
+  {
+    "id": "q_web_065_002",
+    "query_text": "Create a digital archive web app where people can browse through historical documents, photos, and records organized by time period and category, for desktop browsers. The app should have a clear way to search or filter by year, topic, or collection type, and each item should show a preview image or description so you know what you're looking at before you open it. I also want a way to mark items as favorites so researchers or curious visitors can build their own little list of things they want to come back to."
+  },
+  {
+    "id": "q_web_065_003",
+    "query_text": "Build an open course listing web app where learners can browse available classes, see what each one covers, and sign up for the ones they want, for desktop browsers. The app should organize courses by subject or skill area, show each course with a title, a short description, and the schedule or format, and let you register with just your basic info. I also want a way to track which courses you've signed up for so you can keep your own tidy list of what you're enrolled in without having to check your email every time."
+  },
+  {
+    "id": "q_web_065_004",
+    "query_text": "Civic transparency learning portal web app for helping regular people understand how their local government actually works — things like how the budget is decided, how meetings run, and how to get involved — organized so it's easy to find a specific topic without wading through walls of legal text, for desktop browsers. The app should have content organized by topic area with plain-language summaries, and a way to mark things as read or save items to revisit, so someone can work through it in pieces at their own pace."
+  },
+  {
+    "id": "q_web_065_005",
+    "query_text": "Public library digital reading and skills hub web app where anyone can find e-books to borrow, sign up for skills workshops, and keep track of what they've read or completed — all organized neatly so nothing gets lost, for desktop browsers. The app should let you browse books by genre and workshops by topic, show what's currently available versus what has a waitlist, and give you a personal shelf where you can see everything you've borrowed or registered for in one spot. Just a clean, organized way to get the most out of what the library already offers."
+  },
+  {
+    "id": "q_web_065_006",
+    "query_text": "Build an endangered language learning web app where people can explore lessons, listen to audio recordings, and track their progress through a structured set of vocabulary and phrases, for desktop browsers. The app should organize content by difficulty level — beginner, intermediate, and so on — and let you mark lessons as done so you always know where you left off. I also want a section where contributors can submit new recordings or written examples, so the collection actually grows over time with help from native speakers and community members."
+  },
+  {
+    "id": "q_web_066_001",
+    "query_text": "Make a volunteer community web app where people who want to help out with cultural events or local projects can sign up, see what opportunities are available, and connect with others who are doing the same kind of work, for desktop browsers. The app should show a list of active volunteer opportunities with a short description of each and how to join, plus a community area where members can post updates or share what they've been up to. I want it to feel like a real gathering place for people who actually care, not just a sign-up sheet stuck on a wall."
+  },
+  {
+    "id": "q_web_066_002",
+    "query_text": "Build a topic discussion web app where people can bring up cultural or civic issues they care about, start a conversation thread, and let others weigh in — kind of like a focused forum that stays on topic instead of going everywhere, for desktop browsers. The app should let anyone post a new discussion topic with a short description, and then other users can reply and react to what's been said. I'd also want a way to sort discussions by how recent or how active they are, so the good conversations don't get buried."
+  },
+  {
+    "id": "q_web_066_003",
+    "query_text": "Need a member community web app for a faith group or cultural organization where members can sign in, see updates from the community, post their own messages, and check on events coming up — the kind of space that actually keeps people connected between in-person gatherings, for desktop browsers. The app should have a main feed of posts and announcements, a member directory so people can find each other, and a simple events list showing what's happening and when. Just something that works like a real online home for the community without needing anyone to figure out a complicated tool."
+  },
+  {
+    "id": "q_web_066_004",
+    "query_text": "A neighborhood arts collective web app where local artists can show off their work and people in the community can leave comments or start conversations about what they see, living entirely in a browser for desktop use. The app should have a gallery-style area where each artist has a little profile and a set of pieces they've shared, plus a discussion space under each work where people can talk about it or ask the artist questions. The idea is to give the collective a real online home where the work and the conversation happen in the same place."
+  }
+]

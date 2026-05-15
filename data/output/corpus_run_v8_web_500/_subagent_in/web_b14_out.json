@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_047_004",
+    "query_text": "A web-based tool for companies to put together their own training packages — you pick the courses, set the number of seats, choose delivery format, and the whole thing spits out a quote you can actually send to someone. I spend so much time manually emailing back and forth just to figure out pricing, so I want a self-service portal where a corporate client can mix and match training topics, see a running price estimate on the side, and submit the whole request in one go. Works in the desktop browser, nothing fancy needed."
+  },
+  {
+    "id": "q_web_047_005",
+    "query_text": "Need a web app that makes it dead simple for HR managers to buy course seats in bulk without having to call anyone or dig through spreadsheets. You pick the course, type in how many seats you need, it shows you the per-seat price and total right away, and you can check out or send the order for approval. I want a clean purchasing tool for desktop browsers where I can also see past orders and download invoices, because right now tracking all this stuff is a total mess."
+  },
+  {
+    "id": "q_web_047_006",
+    "query_text": "A calculator tool for figuring out whether company training programs are actually worth the money — you type in what you spent on training, how many employees went through it, and some basic numbers like productivity or sales changes afterward, and it shows you a simple summary of the return. I want this as a web app I can use in the browser at my desk, with a place to save or print out a basic report so I can show my boss the numbers without having to cobble it together in Excel every single time."
+  },
+  {
+    "id": "q_web_047_007",
+    "query_text": "Need a web app where procurement teams can look up different training vendors side by side — you search by topic or industry, see a list of providers with their pricing, what courses they offer, and some ratings or reviews, and you can pick a few to compare in a table. Right now I have to open like ten browser tabs and take notes manually just to compare options, so I want a tool for desktop browsers where I can filter vendors by budget or course type and save a shortlist to come back to."
+  },
+  {
+    "id": "q_web_048_001",
+    "query_text": "Need a school open day booking tool that lives on the web so parents and students can sign up for a visit slot without having to call the admissions office. You pick a date from a calendar, choose a time slot, fill in your name and contact info, and get a confirmation right away. I want the tool to show which slots are still open and which are full, and send a reminder email before the day. Using it in the browser on a desktop computer should feel really straightforward — no hunting around for a form buried on some page."
+  },
+  {
+    "id": "q_web_048_002",
+    "query_text": "Make a booking tool for a web app where people can sign up for a free trial class or a one-on-one consultation with an advisor, so they can actually try things out before committing. You pick a subject or topic area, see which time slots the teacher or advisor has open, and grab the one that works for you. I want a confirmation with all the details sent right after you book, so nobody has to chase anyone for information. The whole thing should work smoothly in a desktop browser without any back-and-forth."
+  },
+  {
+    "id": "q_web_048_003",
+    "query_text": "Make a web app where families applying to a school can book their student's admissions interview without emailing back and forth with the office. You log in, see a calendar of available interview slots, pick one that fits, and get a confirmation with all the details right away. I want it to show the interview format and location too, so nobody shows up confused. The whole thing runs in the browser on a desktop, and the school staff should be able to see all the booked appointments in one place without digging through their inbox."
+  },
+  {
+    "id": "q_web_048_004",
+    "query_text": "A one-on-one tutoring booking app for K-12 students where you can browse tutors by subject, see their open time slots for the week, and book a session in just a few clicks — no emails, no waiting for someone to confirm. Parents or students use it in the browser on a desktop computer, and after booking you get all the session details right away. I also want a place where you can see your upcoming sessions at a glance and reschedule if something comes up, because managing tutoring schedules manually is way too much back-and-forth."
+  },
+  {
+    "id": "q_web_048_005",
+    "query_text": "Build a web app for a language school where students can reserve speaking practice slots with native-speaking conversation partners. You log into the site, see a weekly schedule of available time slots organized by language and partner, pick one that fits your week, and it's confirmed right there. I want it to send a reminder before the session so students actually show up, and the whole reservation process should take less than a minute when you're doing it from a desktop browser."
+  },
+  {
+    "id": "q_web_048_006",
+    "query_text": "Need a web app that helps parents or students find and book music lessons with the right teacher — you tell it what instrument you play, your skill level, and when you're free, and it shows you teachers who match, along with their open slots for the week. You pick a teacher, book a time, and you're done. I want this to work on desktop browsers and have a simple calendar so you can see all your upcoming lessons in one place, because right now coordinating schedules by text messages is driving me crazy."
+  },
+  {
+    "id": "q_web_048_007",
+    "query_text": "Build a web app for prospective university students to book a campus tour without having to call or email the admissions office. You go to the site on your desktop browser, pick a tour date and time from a calendar, fill in a short form with your name and contact info, and get a confirmation right away. I want the app to show how many spots are left on each tour and automatically send a reminder a day before, so the whole process is clear and nobody shows up to a cancelled or full tour."
+  },
+  {
+    "id": "q_web_049_001",
+    "query_text": "Need a web app that works as an online course platform — somewhere I can browse courses by topic, see what's inside each one before signing up, track which lessons I've finished, and pick up right where I left off. I want a clear list of all the courses I'm enrolled in, with a progress bar for each one so I can see at a glance how far along I am. The whole thing should work in a desktop browser and keep everything organized so I know exactly what to do next without hunting around."
+  },
+  {
+    "id": "q_web_049_002",
+    "query_text": "A learning management tool for desktop browsers where teachers can set up courses, post lessons and assignments, and students can log in to see exactly what's due and when — all in one organized place. I want a clear list of all my courses on the left, and when I click into one I can see the lessons in order, mark them as done, and check my assignment submissions. It should also show upcoming due dates so nothing slips through the cracks, because right now everything is scattered across emails and different files."
+  },
+  {
+    "id": "q_web_049_003",
+    "query_text": "A question bank and practice test app for desktop browsers where I can pick a subject, choose how many questions I want, and take a timed mock test right there on the site. After I finish, I want to see which questions I got wrong with the correct answers explained, and a summary of my score so I can track how I'm improving over time. I also want the questions organized by topic so I can focus on the areas I'm weakest in, instead of just doing random questions every time."
+  },
+  {
+    "id": "q_web_049_004",
+    "query_text": "Make a flashcard study tool for a website that lets me make decks of cards for any subject, flip through them to test myself, and have the app show me the ones I keep getting wrong more often than the ones I already know. I want to be able to type in the front and back of each card, organize decks by subject, and see a simple summary of how many cards I've mastered. The whole thing should work in a desktop browser so I can study at my computer without needing a separate app installed."
+  },
+  {
+    "id": "q_web_049_005",
+    "query_text": "Need a web app tracker for keeping up with academic papers I'm reading — I can add a paper, jot down notes or highlights on it, mark it as in progress or finished, and see at a glance how many I've read this week. I want a list of all my papers with a status label on each one, and when I click into a paper I can write and save my own notes alongside it. This should all work in the browser on a desktop so I can have my notes and the paper open side by side."
+  },
+  {
+    "id": "q_web_049_006",
+    "query_text": "Make a study group planner for desktop browsers where students taking the same course can find each other, set up a group, pick meeting times that work for everyone, and keep a shared list of what to cover each session. I want to be able to post what subject and course I'm studying so others can find my group, and inside the group there's a simple shared agenda where anyone can add topics. Having everything in one web app means I stop losing track of who said what in different chat apps."
+  },
+  {
+    "id": "q_web_049_007",
+    "query_text": "Need a vocabulary builder app that runs in a desktop browser, where I can look up words in the language I'm learning, hear an audio clip of a native speaker pronouncing each one, and save words to my personal list so I can review them later. I want the words organized by topic or level so I can work through them in some kind of order, and a simple review mode where the app plays the audio and I try to guess the word before seeing it. Keeping my word list and the audio all in one place would make daily practice so much easier."
+  },
+  {
+    "id": "q_web_050_001",
+    "query_text": "Need a web app alumni network for a school or university where graduates can make a profile, search for other alumni by graduation year or field they work in, and send each other messages to reconnect or ask for advice. I want it to work smoothly in a desktop browser, and there should be a directory you can browse with filters so it's easy to find someone from your own batch or someone working in the industry you're interested in. It'd be great if alumni can also post job openings or mentorship offers that others can see."
+  },
+  {
+    "id": "q_web_050_002",
+    "query_text": "Create a student community app for a web browser where students at the same school can post questions, share notes or resources, join groups by subject or interest, and comment on each other's posts. I'm thinking something like a simple forum but friendlier and organized by topic so it's easy to find what you're looking for. I want people to be able to follow certain subjects and see new posts from those topics right when they log in, so the community stays active and people actually use it instead of just posting into the void."
+  },
+  {
+    "id": "q_web_050_003",
+    "query_text": "Create a web app for a school parent communication group where teachers can post announcements, share photos or files from class, and parents can reply or ask questions in a thread — all organized by class or grade so nothing gets mixed up. I want it to work on a desktop browser and have a clear list of all the groups on the side so a parent with kids in different classes can check each one separately. Teachers should be able to pin important notices to the top so they're easy to find, because important messages getting buried is such a headache."
+  },
+  {
+    "id": "q_web_050_004",
+    "query_text": "Build a web app marketplace for university students where you can list yourself as a tutor for courses you've already passed, or browse and book a session with a fellow student tutor for a class you're struggling with. I want the app to run in a desktop browser and let you filter tutors by course name, their rating, and price per hour, so it's easy to find someone who actually knows the material. There should be a simple profile for each tutor showing what they've helped with before so you know they're legit."
+  },
+  {
+    "id": "q_web_050_005",
+    "query_text": "Build a web app for online learners to find study groups for courses they're enrolled in — you sign up, pick the course you're taking, and the app shows you other people studying the same thing so you can join an existing group or start a new one. I want it to work from a desktop browser and let group members agree on a regular meeting time, keep a shared list of topics to go over, and post links or resources for the group. Finding study partners right now feels like shouting into a void, so having a proper place to connect would really help."
+  },
+  {
+    "id": "q_web_050_006",
+    "query_text": "Create a web app where graduate students can find a faculty mentor who matches what they're researching or interested in — you fill out a short profile about your area of study and what kind of guidance you're looking for, and the app shows you professors or researchers who are open to mentoring in that space. I want it to work in a desktop browser, and each faculty member should have a profile showing their research interests and whether they currently have open spots. Students can send a short introduction message right from the app so it's less awkward than cold-emailing a professor out of nowhere."
+  },
+  {
+    "id": "q_web_050_007",
+    "query_text": "Need a web app for students in the same course to build and share lecture notes together, kind of like a wiki where everyone can add to the notes from each class session, fix mistakes, and organize everything by week or topic. I want it to work from a desktop browser and let students in the course see the full history of edits so nothing important gets accidentally deleted. It'd also be nice if you can leave comments on a specific section to ask a question or flag something that might be wrong, so the whole group can keep the notes accurate."
+  }
+]

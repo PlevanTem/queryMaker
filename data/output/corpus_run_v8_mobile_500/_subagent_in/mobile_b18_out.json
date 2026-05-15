@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_046_004",
+    "query_text": "Create a seasonal harvest recipe generator app for my phone that suggests dishes based on what's in season right now — I want to be able to pick the current month and get a list of matching ingredients, then tap one to see a simple recipe for it. Two things I really care about: the ingredient list should clearly show what's freshest that time of year, and each recipe card should have the steps laid out in order so I can follow along without getting lost."
+  },
+  {
+    "id": "q_scene_046_005",
+    "query_text": "Create a beginner recipe guide app for my phone that only uses five ingredients per dish, so nothing feels overwhelming for someone just starting to cook. The main screen should show a clean list of recipes grouped by meal type like breakfast, lunch, and dinner, and tapping one should show the five ingredients with simple step-by-step instructions. I really want each recipe to have a short note about which ingredient does what, just so beginners actually understand what they're making."
+  },
+  {
+    "id": "q_scene_046_006",
+    "query_text": "A world street food recipe explorer app that you can use on your phone, organized by country or region, where you can browse through street dishes from places like Thailand, Mexico, Turkey, and Japan. The home screen should have a list sorted by region, and tapping a dish pulls up the recipe with the key ingredients and steps listed in order. I especially care about having a short note on each dish that explains where it comes from and what makes it distinctive — that context is what makes it interesting."
+  },
+  {
+    "id": "q_scene_047_001",
+    "query_text": "A restaurant finder app for my phone centered around a group-size filter, where the whole vibe feels warm and social — like you're planning a night out with a big crew and the app actually gets that. The main screen should let you set how many people you're bringing, anywhere from a couple to a big party of ten or more, and the results should instantly shift to show only places that can seat everyone comfortably. I love the idea of each restaurant card having a soft, inviting look with a photo that feels curated, not stock-photo generic."
+  },
+  {
+    "id": "q_scene_047_002",
+    "query_text": "A mobile app for finding lunch spots near you that are fast enough for a proper work break — the whole feel should be clean and professional, like something you'd actually open in between meetings without feeling flustered. The main screen should let you filter by how quickly a place can serve you, so you can separate the sit-down-and-wait spots from the ones that move fast, and each result card should clearly show estimated wait time or service style alongside a polished photo of the food. It should feel effortless to scan through on your phone."
+  },
+  {
+    "id": "q_scene_047_003",
+    "query_text": "Late-night dining finder app for your phone with an open-right-now filter front and center, so you're never stuck Googling whether a place is still serving at midnight. The atmosphere of the app itself should feel a little moody and after-hours — dark tones, warm accent colors, the kind of thing that actually matches the vibe of eating late. Each restaurant card should show the closing time clearly and have a photo that makes the food look good even at night, so you can just scroll through and pick something that feels right."
+  },
+  {
+    "id": "q_scene_047_004",
+    "query_text": "Need a mobile app for finding restaurants that clearly labels dietary options like vegan, halal, and gluten-free, so people with specific needs can actually trust what they're seeing. The visual style should feel considered and inviting — the kind of app where each dietary label has its own distinct look so you can spot what you need at a glance without reading every line of text. When you tap into a restaurant, I want a dedicated section that breaks down exactly which menu items match each label, so there's no guesswork."
+  },
+  {
+    "id": "q_scene_047_005",
+    "query_text": "Need a restaurant keeper app for my phone that saves all my favourite places in one spot and then reminds me to go back to them if I haven't visited in a while — like a gentle nudge that says \"hey, you loved this place three months ago, maybe revisit it.\" The saved list should feel like a personal collection, with each spot showing a cover photo and a small note section where I can jot down what I usually order. The reminder part should feel soft and friendly, not like a notification spam, just a tasteful little prompt when enough time has passed."
+  },
+  {
+    "id": "q_scene_047_006",
+    "query_text": "Make a friend-review social app for your phone where you can see what restaurants your friends have been to and what they actually thought of them, so their honest opinions show up before any algorithm-curated stranger reviews. The feel should be warm and personal — like a group chat about food but in a clean, browsable format, with each friend's face next to their recommendation and a short snippet of what they said. There should also be a way to send a place directly to a friend as a suggestion, which feels like sharing a tip over text but built right into the app."
+  },
+  {
+    "id": "q_scene_048_001",
+    "query_text": "Need a daily riddle app for my phone where a new riddle shows up every day and you have a set amount of time to figure it out before the answer slowly reveals itself — like a countdown that builds suspense. The riddle should be the main focus of the screen with the timer ticking down visibly, and when time's up it reveals the answer step by step rather than all at once. I also want a simple streak tracker so I can see how many days in a row I've played, because that kind of thing keeps me coming back."
+  },
+  {
+    "id": "q_scene_048_002",
+    "query_text": "Need a geography quiz app for my phone where you're shown a country and have to name its capital, or the other way around — shown a capital and pick the matching country. I want multiple choice answers so it's not too punishing for people still learning, and a score tracker at the top so you can see how well you're doing as you go. It'd be great if the app also keeps track of which countries you keep getting wrong so you can practice those ones again."
+  },
+  {
+    "id": "q_scene_048_003",
+    "query_text": "Need a science true-or-false game app for my phone where it throws a quick science statement at you and you tap either true or false as fast as you can. The game should show one statement at a time, give you a few seconds to answer, then immediately tell you if you were right with a short explanation of why. I'd love a running score that adds up across multiple rounds, and maybe a way to pick a topic like space, biology, or chemistry so you can focus on whatever you're into."
+  },
+  {
+    "id": "q_scene_048_004",
+    "query_text": "Build a celebrity photo quiz app for my phone where you see a cropped or blurred photo of a famous person and have to guess their name from a few choices — kind of like a guessing game you'd play with friends. The photos should reveal a little more with each wrong guess so it gets easier over time, and I want a points system where you score more if you guess correctly on the first try. It would also be fun to have different categories like musicians, athletes, and actors so people can play whichever genre they know best."
+  },
+  {
+    "id": "q_scene_048_005",
+    "query_text": "Create a movie quote completion game app for my phone where it shows you the beginning of a famous movie line with a blank at the end, and you pick the correct ending from a few options. I want the quotes to be from all kinds of movies — classics, recent hits, comedies, action films — so there's something for everyone. Each round should show ten quotes and tally your score at the end, and it'd be really satisfying if it shows you the full quote with the movie title after you answer, so you get that \"oh right!\" moment."
+  },
+  {
+    "id": "q_scene_049_001",
+    "query_text": "A team pairing generator app for your phone where you type in a list of names and it randomly shuffles everyone into balanced pairs or small groups with one tap, so you stop wasting time trying to do it fairly by hand. The main screen should be simple — just a place to add names, a button to shuffle, and a clear display of the final pairings. I'd also love a way to lock certain people together or apart before the shuffle happens, because sometimes there are people who definitely should or shouldn't be on the same team."
+  },
+  {
+    "id": "q_scene_049_002",
+    "query_text": "Make a vacation destination picker app for my phone where you add a bunch of places you're considering and then spin a wheel to randomly land on one — so when you and your friends just can't agree, you let the app decide. The wheel should be big and satisfying to spin on the phone screen, and each destination slot can have a little label and maybe a color so it's easy to tell them apart. I'd also like the option to remove a destination from the wheel after it gets picked, in case you want to spin again for a backup choice."
+  },
+  {
+    "id": "q_scene_049_003",
+    "query_text": "Build a movie randomizer app for your phone that helps you stop endlessly scrolling through your watchlist every Friday night by just picking something for you. You can add movie titles to a list, and when you're ready, hit a big button that picks one at random and shows you the title with a short description of why you added it. It'd be great if you could sort your list by mood or genre before randomizing, so if you're feeling like a comedy tonight it only picks from those — cuts down the decision fatigue a lot."
+  },
+  {
+    "id": "q_scene_049_004",
+    "query_text": "Make a daily challenge randomizer app for my phone that gives you one random activity to try each day — things like taking a ten-minute walk, trying a new food, writing three things you're grateful for, or doing something creative. The main screen should show today's challenge front and center with a button to mark it done, and there should be a way to add your own activities to the pool so the suggestions feel personal. A simple calendar showing which days you completed a challenge would be a nice touch so you can see your streak."
+  },
+  {
+    "id": "q_scene_049_005",
+    "query_text": "A scavenger hunt app for your phone where you can set up a list of locations or clue stops and then draw one at random to figure out where to go next, so the hunt feels genuinely unpredictable for everyone playing. The main screen should let you enter all your locations beforehand, then when the hunt starts it draws one and reveals it with a little animation so it feels like a proper reveal. You can mark each location as found and the app will keep drawing from the remaining ones until the whole list is cleared."
+  },
+  {
+    "id": "q_scene_050_001",
+    "query_text": "Need a Tetris-style falling blocks game for my phone where differently shaped pieces drop down and you arrange them to fill complete rows, which then clear to give you more space. The controls should work well on a touchscreen — tapping sides to move the piece left or right and tapping the middle to rotate it, so it actually feels natural to play without a keyboard. I want a score counter that goes up as rows clear and a small preview showing what piece is coming next, so you can actually plan ahead."
+  },
+  {
+    "id": "q_scene_050_002",
+    "query_text": "Create a sliding puzzle game app for my phone based on the classic 15-piece grid where one tile is missing and you slide the others around to get everything back in the right order. The tiles should be numbered so it's easy to know where each one goes, and I want a move counter so I can see how many slides it took me to solve it and try to beat my own record. It would be great if the app also has a shuffle button to mix everything up again for another round, plus maybe a few difficulty levels so beginners can start with a smaller grid."
+  },
+  {
+    "id": "q_scene_050_003",
+    "query_text": "Create a Sokoban box-pushing puzzle game for my phone where you move a little character around a grid and push boxes onto marked target spots to solve each level. The controls should be simple taps or swipes to move in any direction, because fiddly buttons never feel good on a phone screen. I'd like a good handful of levels built in, with a level select so you can go back and replay ones you've already beaten, and a clear indication when you've solved a level so there's that satisfying moment of completion."
+  },
+  {
+    "id": "q_scene_050_004",
+    "query_text": "Need a Simon-style memory game app for my phone where the game lights up a sequence of colored buttons and you have to repeat the pattern by tapping them in the same order. Each round should add one more step to the sequence so it keeps getting harder, and if you tap the wrong button the round ends and shows you how far you got. I want a high score saved so I can try to beat it next time, and the color flashes should be big and obvious enough to see clearly on a phone screen without squinting."
+  },
+  {
+    "id": "q_scene_050_005",
+    "query_text": "Make a solitaire card game app for my phone with the classic setup where you deal a row of face-down stacks, flip cards over one at a time from the draw pile, and try to sort everything into four suit piles from ace to king. The cards should be big enough to tap and drag comfortably on a phone screen, and I want a timer running while you play so you can compare how fast you finish each game. A simple undo button would really help too, because sometimes you move a card and immediately regret it."
+  },
+  {
+    "id": "q_scene_051_001",
+    "query_text": "A virtual slime toy app for your phone that you can poke, pull, and stretch with your fingers and it squishes and bounces back in a really satisfying way — the kind of thing you open for thirty seconds when you need to decompress. The slime should feel thick and gooey looking, with a glossy finish and maybe a few pastel color options to swap between so it feels cute and calming rather than harsh. There should also be little sound effects when you tap or drag it that match the texture, because the sound is honestly half the satisfaction."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_043_007",
+    "query_text": "Make a web-based scheduling and notes tool for user research — I'm tired of juggling calendar links, messy docs, and scattered interview notes all over the place. The tool should let me set up interview slots that people can book, and then attach notes directly to each interview session so everything stays in one place. It should work in the browser on desktop so I can have the calendar on one side and my notes open on the other while I'm on a call. A simple way to tag each session by topic or project would also be really helpful."
+  },
+  {
+    "id": "q_web_044_001",
+    "query_text": "Build a school website that has all the key information organized in one place — the kind of site a parent or student can open in a browser and actually find what they're looking for without clicking around forever. I want a home section with a quick intro and the school's main highlights, a spot for announcements or news, a list of programs and departments, contact details, and a map. The layout should be clean with a top menu that links to each section, and it should work well on desktop browsers."
+  },
+  {
+    "id": "q_web_044_002",
+    "query_text": "Create a campus life showcase website where visitors can see what student life actually looks like — photos from activities, clubs, sports, and events all organized in a neat gallery that's easy to browse on a desktop browser. I want sections for different categories like sports, arts, and community events, with photos and short captions for each. There should also be a way to filter by category so people can jump to what they're interested in. The whole thing should feel like flipping through a well-organized album."
+  },
+  {
+    "id": "q_web_044_003",
+    "query_text": "A teacher directory website where each staff member has their own little card with their photo, name, subject, and a short bio — the kind of thing a new student or parent can open in a desktop browser and quickly find out who teaches what. The main listing should show all teachers in a clean grid, and clicking on someone's card opens a bit more detail about their background and teaching style. Filtering by subject or department would be really useful so you're not scrolling through everybody to find the science teachers."
+  },
+  {
+    "id": "q_web_044_004",
+    "query_text": "Make a university course catalog website where students can look up every program and course the school offers, all in one place on a desktop browser. I want a browsable list of all degree programs grouped by faculty or department, and when you click into a program it shows the courses inside with descriptions, credit hours, and any requirements. A search bar at the top so you can just type a course name or code and find it fast would also be essential."
+  },
+  {
+    "id": "q_web_044_005",
+    "query_text": "A website that showcases alumni success stories — what they studied, where they ended up working, and a short piece about their career journey — all laid out in a clean, easy-to-read format for desktop browsers. I want a listing of alumni profiles that you can filter by graduating year or field of work, and each profile has their photo, a headline about their current role, and a little write-up about how the school shaped their career. There should also be a summary section up top showing some quick stats like average starting salaries or top employer names."
+  },
+  {
+    "id": "q_web_044_006",
+    "query_text": "Need a website that shows off all the accreditations and awards our school has received, organized and easy to scan on a desktop browser. I want each accreditation or award listed with the name of the awarding body, the year it was received, and a short explanation of what it means. Grouping them by type — like academic accreditations, rankings, and special recognition — would make it easier to navigate. The whole thing should feel trustworthy and straightforward, like a proper record of achievements."
+  },
+  {
+    "id": "q_web_044_007",
+    "query_text": "Make a student project gallery website where graduating students can show off their capstone work, and visitors can browse through all the projects in a web app on desktop browsers. Each project entry should have a title, a short description, the student's name, and some photos or a preview image. I want visitors to be able to filter by subject area or graduation year so they can find relevant work quickly, and clicking on a project card should open the full details with a longer write-up."
+  },
+  {
+    "id": "q_web_045_001",
+    "query_text": "Need a campus news website where all the school's announcements and stories are collected in one tidy place that's easy to read in a desktop browser. I want a main listing of articles sorted by date, each with a headline, a short summary, the date posted, and a category label like Sports, Academic, or Events. Clicking an article opens the full story. There should also be a sidebar with recent posts and a way to filter by category so I'm not scrolling through everything just to find the club announcements."
+  },
+  {
+    "id": "q_web_045_002",
+    "query_text": "Make a web app for browsing academic publications from a university or research institution — the kind of thing you'd open in a desktop browser to look up what papers a department has put out. I want a clean list of publications sorted by year, with each entry showing the title, authors, journal name, and year. There should be a way to filter by year or subject area, and clicking a paper opens a detail view with the abstract and a link to read the full thing."
+  },
+  {
+    "id": "q_web_045_003",
+    "query_text": "A research output tracker website where a university lab or department can display all their completed research projects in one organized place, accessible in a desktop browser. Each project card should show the project title, the lead researcher, the timeframe, a short summary of findings, and the funding source if there is one. Visitors should be able to filter by research area or year, and clicking into a project shows the full details including any publications linked to it."
+  },
+  {
+    "id": "q_web_045_004",
+    "query_text": "An education news hub website where teachers, parents, and students can come to a desktop browser and catch up on what's happening in the world of education — policy changes, new teaching methods, school funding updates, that kind of thing. I want articles sorted by date with clear headlines and a category filter so you can narrow down to just the topics you care about. Each article should have a short intro on the listing, and clicking through takes you to the full piece."
+  },
+  {
+    "id": "q_web_045_005",
+    "query_text": "Build a faculty directory website where you can look up any professor or researcher at the institution, see their bio, and find out what they're working on — all in a clean web app that works well on desktop browsers. I want a searchable list of faculty members with their photo, title, department, and research interests shown on each card. Clicking someone's name opens their full profile with a biography, a list of their recent publications, and their contact information."
+  },
+  {
+    "id": "q_web_045_006",
+    "query_text": "Make a web-based alumni magazine that collects career success stories and personal journeys from graduates — the kind of thing you'd settle in to read at your desk on a browser. I want a listing of featured alumni stories sorted by most recent, each with a cover photo, a headline, and a short teaser. Clicking opens the full article with their career timeline, quotes, and photos. There should also be a filter to browse stories by industry or graduation era so the content feels relevant to whoever's reading."
+  },
+  {
+    "id": "q_web_045_007",
+    "query_text": "Build a website where students can browse and download free course materials and lecture notes from various subjects, all in one place that works well on a desktop browser. I want a catalog organized by subject area — math, history, science, and so on — with each course listing showing the title, a short description, and a download or view button for the materials. There should be a search bar at the top so you can find a specific topic fast, and a way to see what's been added recently."
+  },
+  {
+    "id": "q_web_046_001",
+    "query_text": "An admissions landing website for a school that gives prospective students all the info they need to decide whether to apply — laid out clearly for desktop browsers so nothing important gets buried. I want sections covering the programs offered, tuition and scholarship info, application deadlines, and a quick snapshot of campus life. There should also be a prominent spot to start an inquiry or request more information, and a simple checklist of application steps so the process feels less overwhelming."
+  },
+  {
+    "id": "q_web_046_002",
+    "query_text": "Build a course promotion website for a training school or tutoring center where potential students can see all the available classes at a glance in a desktop browser. I want each course listed with a title, a short description, the schedule, price, and how many spots are left. There should be a way to filter by subject or level, and clicking a course card shows more details plus a button to sign up or ask a question. The whole site should feel organized and make it easy to compare options."
+  },
+  {
+    "id": "q_web_046_003",
+    "query_text": "Need a website that promotes public open classes from an educational institution so people can find and sign up for free or low-cost lectures, workshops, and seminars easily in a desktop browser. I want a calendar-style listing of upcoming sessions with the topic, date, time, host instructor, and a quick sign-up button. Filtering by topic or date range would help visitors find something that fits their schedule, and each event page should have a full description and any prerequisites mentioned."
+  },
+  {
+    "id": "q_web_046_004",
+    "query_text": "Build a school open day registration website where families and prospective students can find out about upcoming campus visit events and sign up to attend, all in a web app designed for desktop browsers. I want a list of scheduled open day events with dates, times, and what's included in each visit, plus a simple sign-up form that collects the visitor's name, contact info, and which programs they're interested in. After signing up they should see a confirmation with the event details."
+  },
+  {
+    "id": "q_web_046_005",
+    "query_text": "Need a web app where someone can sign up for a free trial lesson at a tutoring or education center — something clean and straightforward that works well on a desktop browser. I want a landing page that explains what the trial lesson covers, shows available subjects or class types, and has a simple sign-up form asking for name, contact details, preferred subject, and a time slot. After submitting the form the person should see a confirmation message with next steps clearly listed out."
+  },
+  {
+    "id": "q_web_046_006",
+    "query_text": "Make a web app that showcases alumni career outcomes and success stories to help prospective students understand where graduates actually end up — the kind of page you'd browse in a desktop browser before deciding to enroll. I want a list of featured alumni profiles with their name, graduation year, current job title, and company, plus a short paragraph about their story. There should also be a summary section up top with key stats like top industries and average time to first job, and a filter so you can look at outcomes by program."
+  },
+  {
+    "id": "q_web_046_007",
+    "query_text": "Create a website for a corporate training provider where companies can browse training packages, see what's included in each one, and send an inquiry or request a price quote — all from a desktop browser. I want a catalog of training programs with a short description of each, the topics covered, the typical duration, and a \"request a quote\" option. There should be a simple form for the company to fill in their details and what they're looking for, so the training provider can follow up with a customized proposal."
+  },
+  {
+    "id": "q_web_047_001",
+    "query_text": "Need a web app where students or working adults can browse available courses, see the price and what's included, and actually pay and enroll without having to email someone or go through five steps just to sign up. It should work in a desktop browser and show all available courses in a list with filters for topic and price range. Clicking a course shows the full details, and there's a straightforward checkout flow that confirms enrollment once payment goes through."
+  },
+  {
+    "id": "q_web_047_002",
+    "query_text": "Need a web-based shop where students can browse and buy textbooks, study guides, and school merchandise all in one place without having to hunt across different sites. It should work well in a desktop browser with a product catalog organized by category — textbooks, stationery, branded gear — with prices shown clearly, a way to add things to a cart, and a checkout flow that actually works. Each product page should have a description, a photo, and stock availability so you know before you click buy."
+  },
+  {
+    "id": "q_web_047_003",
+    "query_text": "Create a web app where people can browse available professional certification programs, pick the one they want, and pay for it online without having to call anyone or wait for an email reply. It should work smoothly in a desktop browser with a clear listing of each certificate — what it covers, how long it takes, how much it costs, and what you get at the end. There's a detail page for each one, and a simple checkout flow so the whole purchase is done in a few clicks."
+  }
+]

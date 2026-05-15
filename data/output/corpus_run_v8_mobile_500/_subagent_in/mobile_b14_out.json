@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_032_007",
+    "query_text": "Need a mobile tracker that automatically pulls together all my electricity, gas, and water usage in one place so I stop having to dig through paper bills every month — I just want to log my meter readings, see how much I'm using compared to last month, and get a quick summary of which utility is costing me the most so I can actually do something about it."
+  },
+  {
+    "id": "q_scene_032_008",
+    "query_text": "Build a mobile app that shows my team's sprint velocity and task completion over time in a simple chart so I can stop manually copying numbers into spreadsheets every two weeks — I want to log how many story points we finished each sprint, see a bar or line chart of how we're trending, and quickly spot whether we're speeding up or slowing down without having to crunch anything myself."
+  },
+  {
+    "id": "q_scene_033_001",
+    "query_text": "Need a mobile note-searching app where I can type any word or phrase and instantly find it across every single note I've ever written — the results should feel clean and elegant, with the matching bits highlighted so they pop right off the screen, and the whole thing should have that calm, minimal aesthetic where everything just breathes and feels considered rather than cluttered."
+  },
+  {
+    "id": "q_scene_033_002",
+    "query_text": "Build a mobile handwriting note app where I can write naturally with a stylus directly on the screen, with that smooth ink-on-paper feel where the line actually follows your pen pressure and doesn't lag behind — the canvas should feel like a premium notebook, with a warm off-white background and ink that looks rich and deliberate, and I want to be able to flick between my handwritten pages like turning through a beautiful journal."
+  },
+  {
+    "id": "q_scene_033_003",
+    "query_text": "Create a mobile note app where I can open a drawing canvas right inside my notes whenever I want to sketch something out — the canvas should feel airy and expansive on my phone screen, with a few clean brush options and a soft color palette that doesn't feel like a children's paint app, so my quick sketches and diagrams actually look nice sitting alongside my typed notes."
+  },
+  {
+    "id": "q_scene_033_004",
+    "query_text": "Need a mobile notes app that lets me drop a clean, well-designed table anywhere inside a note and then tap a column header to sort the rows instantly — the table should look elegant and minimal on my phone, with nicely spaced rows and a gentle highlight when I select a cell to edit it, so it actually feels like a polished part of the note rather than something bolted on."
+  },
+  {
+    "id": "q_scene_033_005",
+    "query_text": "Create a mobile note-writing app that displays code beautifully with colors that make different parts of the code easy to read at a glance — the whole app should feel dark and refined, like a premium editor, where the code sections have a deep background with softly glowing syntax colors and everything is nicely spaced so reading snippets on my phone actually feels pleasant rather than cramped."
+  },
+  {
+    "id": "q_scene_033_006",
+    "query_text": "Need a mobile note app that lets me drop photos and files right into my notes wherever I want them — images should display inline with a tasteful rounded border, filling the width of the note in a way that feels intentional and editorial rather than just dumped in, and attached files should show up as clean little cards with the file name so the whole note still looks beautiful even when it has a bunch of stuff in it."
+  },
+  {
+    "id": "q_scene_033_007",
+    "query_text": "Make a mobile note app that lets me export any note as a PDF, DOCX, or Markdown file with one tap — the exported PDF especially should look polished and well-formatted, with nice typography and proper spacing so it actually looks like something I'd be proud to share, rather than a raw dump of text, and I want to choose the format right from within the note itself without digging through menus."
+  },
+  {
+    "id": "q_scene_033_008",
+    "query_text": "Need a mobile note app where I can link two notes together so that when I'm reading one note, I can see at the bottom which other notes have also linked back to it — the connections should feel elegant and intentional, maybe shown as a soft list of related note titles that I can tap to jump between them, giving the whole app that beautiful web-of-ideas feeling like my thoughts are actually talking to each other."
+  },
+  {
+    "id": "q_scene_034_001",
+    "query_text": "Build a mobile bedtime reminder app that walks me through a short sleep hygiene checklist each night — things like dimming my phone, stopping caffeine, putting away screens — where I can set the time I want to start winding down, tap each habit off as I do it, and see a simple streak counter so I can tell how many nights in a row I actually followed through."
+  },
+  {
+    "id": "q_scene_034_002",
+    "query_text": "Need a mobile sunscreen reminder app that checks the UV level for the day and sends me a nudge to apply sunscreen when it's high — I want to set my usual times for going outside, log when I actually applied it, and see a simple list of which days I remembered so I can see whether I'm actually being consistent about it or just forgetting whenever it matters most."
+  },
+  {
+    "id": "q_scene_034_003",
+    "query_text": "Create a mobile eye-rest reminder app for my phone that pings me on a regular schedule to take a break from looking at my screen — I want to set how often the reminders come (like every 30 or 45 minutes), have it show a short countdown when I take a break, and keep a log of how many breaks I actually took each day so I can see if I'm following through or just ignoring it."
+  },
+  {
+    "id": "q_scene_034_004",
+    "query_text": "Build a mobile posture reminder app that tracks how long I've been sitting at my desk and reminds me to check my posture after I've been sitting for a set amount of time — I want to log my start time each work session, pick how often I want the posture nudge (like every 30 minutes), and tap to confirm I actually sat up straight so the app knows I didn't just dismiss it."
+  },
+  {
+    "id": "q_scene_034_005",
+    "query_text": "Need a mobile flossing tracker for my phone that reminds me every evening and lets me tap one button to mark that I did it — I want to see a calendar showing which days I flossed and which I skipped, a running streak count so I feel motivated to keep it going, and a simple summary of my completion rate for the month so I can see honestly how good my habit actually is."
+  },
+  {
+    "id": "q_scene_034_006",
+    "query_text": "A daily reading habit reminder for my phone that nudges me once a day to read at least 10 pages, where I can tap to log how many pages I read and see a running total for the month — the home screen of the app should show my current streak and a simple bar for today so I can see at a glance whether I've hit my pages yet or still need to pick up the book."
+  },
+  {
+    "id": "q_scene_034_007",
+    "query_text": "Need a mobile gratitude journal reminder app that sends me a daily prompt at a time I pick and gives me a simple space to write down three things I'm grateful for that day — I want to be able to look back through past entries in a clean list, see a streak of how many days in a row I've written, and have the prompts feel warm and varied rather than the same question every single day."
+  },
+  {
+    "id": "q_scene_034_008",
+    "query_text": "Make a mobile breathing exercise app that I can open whenever I'm feeling stressed and immediately start a guided breathing round — I want a few preset patterns like box breathing or a simple 4-7-8 rhythm, a calm visual that pulses in and out to guide my breath, and a log that shows me how many sessions I've done this week so I can see whether I'm actually using it when I need it."
+  },
+  {
+    "id": "q_scene_035_001",
+    "query_text": "Build a mobile HIIT timer app where I can set how long my work intervals and rest intervals are, how many rounds I want to do, and then just hit start and have it count everything down for me — I want a big round counter on the main screen so I always know which round I'm on, and a sound or buzz when each interval switches so I can keep my phone down and actually focus on the workout."
+  },
+  {
+    "id": "q_scene_035_002",
+    "query_text": "A body measurement tracker app for my phone where I can log numbers like waist, hips, chest, arms, and thighs on a regular basis and then see a simple chart showing how each measurement has changed over time — I want to pick which body parts I care about tracking, enter new measurements whenever I take them, and see them all laid out in a clean list so I can actually tell if my training is moving the numbers."
+  },
+  {
+    "id": "q_scene_035_003",
+    "query_text": "Create a mobile rest day log app where I can record what kind of recovery I did on my off days — things like stretching, walking, or foam rolling — set whether the day was a full rest or active recovery, and see a monthly calendar view showing which days were workouts and which were recovery days so I can make sure I'm actually balancing training and rest properly."
+  },
+  {
+    "id": "q_scene_035_004",
+    "query_text": "Build a mobile workout reminder app focused on warm-ups and cool-downs, where I can set up a short list of warm-up steps before my workout and cool-down steps after, and the app walks me through each one with a simple timer so I don't just skip straight into lifting or stop the second I finish my last set — I want to be able to check off each step as I go and see how consistently I'm actually doing both ends of my sessions."
+  },
+  {
+    "id": "q_scene_035_005",
+    "query_text": "Create a mobile exercise library app where I can browse movements organized by muscle group, tap on any exercise to see a short video showing the correct form, and save my favorites to a personal list so I can quickly pull them up when I'm building a workout — I want the browsing experience to feel clean and easy to use on my phone, with exercises grouped in a way that makes sense even if I'm not super experienced."
+  },
+  {
+    "id": "q_scene_035_006",
+    "query_text": "Create a mobile strength training planner for my phone where I can set up a weekly push, pull, and legs split — mapping each day to the right type of session — and then log the exercises, sets, and reps I plan to do each day, so I always know exactly what I'm supposed to be doing when I walk into the gym and can check things off as I finish them."
+  },
+  {
+    "id": "q_scene_035_007",
+    "query_text": "Make a mobile running plan builder app where I pick my current level and my goal race distance — anything from a 5K up to a full marathon — and it gives me a week-by-week training schedule with the runs laid out in a simple calendar so I always know what I'm supposed to run that day, and I can check off each run as done and see how far I've come through the plan."
+  }
+]

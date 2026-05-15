@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_008_002",
+    "query_text": "Need a web app where photographers can browse and buy preset packs and LUT collections all in one place — right now I'm jumping between a dozen random sites and it's a mess. The shop should let you filter by style or camera type so you're not scrolling forever, and each pack should have a preview so you can actually see what the look does before you buy it. Just something clean and functional where you can grab what you need and get on with editing."
+  },
+  {
+    "id": "q_web_008_003",
+    "query_text": "Create a web app marketplace where freelance designers can sell and buy ready-made presentation templates without having to hunt through a million different sites for something decent. The store should let sellers upload their slide decks with a preview image and a short description, and buyers can filter by style or industry so they're not wading through stuff that's totally irrelevant to their project. Basic cart and download flow is all I need — nothing complicated, just something that actually works in a desktop browser."
+  },
+  {
+    "id": "q_web_008_004",
+    "query_text": "Create a web app storefront where niche content creators can sell their ebooks and PDF guides directly to readers without going through some big platform that takes a huge cut. Sellers should be able to list their files with a cover image, a short description, and a price, and buyers can browse by topic or category to find what they're looking for. After purchase the file should just download automatically — the whole thing should work smoothly in a desktop browser and be easy enough that you're not spending hours figuring it out."
+  },
+  {
+    "id": "q_web_008_005",
+    "query_text": "An all-in-one booking and payment manager for commissioned artwork, built as a web app so clients can find it easily from any desktop browser. The tool should let artists set up an intake form where clients describe what they want — style, size, any reference images — and then pick an available slot from a calendar showing current queue openings. Once a slot is confirmed, the client pays a deposit right there in the same place, so the artist never has to chase anyone down for payment separately."
+  },
+  {
+    "id": "q_web_008_006",
+    "query_text": "Build a web app shop where people can browse and instantly download printable planners, journals, and stationery pages without having to sign up for some big platform. The store should organize items by type — like weekly planners, to-do sheets, decorative notepaper — so you can find what you want quickly, and each listing should show a preview of what the printed page actually looks like. After paying, the PDF just downloads straight away so there's zero wait and zero hassle."
+  },
+  {
+    "id": "q_web_008_007",
+    "query_text": "Create a web app marketplace where creatives can find and grab plugins and extensions for the design and editing software they already use, all in one place instead of bouncing around different developer sites. The store should let you filter by which software it works with — say Photoshop, Premiere, Blender, and so on — so you're only seeing stuff that's actually relevant to your setup. Each listing should show what the plugin does in plain terms and how many people have downloaded it, so you know what's actually useful before you bother installing anything."
+  },
+  {
+    "id": "q_web_009_001",
+    "query_text": "Need a web app tool for indie podcast hosts to keep track of guest bookings and plan out upcoming episodes without letting things fall through the cracks. Right now I'm juggling emails and spreadsheets to remember who's confirmed, who's still pending, and which episodes are already recorded versus still being scheduled — it's exhausting. The tool should have a simple calendar where you can see upcoming recording slots and a list of guests with their status, contact info, and which episode they're lined up for, all in one place on a desktop browser."
+  },
+  {
+    "id": "q_web_009_002",
+    "query_text": "Build a web app booking tool for writers who want to schedule manuscript critique sessions with a writing coach, so they're not back-and-forth emailing just to find a time that works. The tool should show the coach's available time slots in a simple calendar, let the writer pick a slot and submit a brief description of what they want feedback on — genre, word count, main concerns — and then confirm the appointment with an automated summary. Everything should be easy to use in a desktop browser without needing to log into three different tools to get a single session booked."
+  },
+  {
+    "id": "q_web_009_003",
+    "query_text": "Create a web app planner for online calligraphy artists to manage their custom order queue and keep new client bookings from piling up into chaos. The tool should let the artist set how many orders they're currently taking, so new clients can only book when there's actually an open slot — and each booking should collect the client's wording request, size, paper preference, and deadline all in one form. The artist should be able to see all pending and confirmed orders in a simple list so nothing gets lost or forgotten."
+  },
+  {
+    "id": "q_web_009_004",
+    "query_text": "Create a web app booking tool for portrait photographers where clients can pick a session date from a live availability calendar and then build a shared mood board together before the shoot day, so there's no back-and-forth over email trying to explain the vibe they're going for. Clients fill in a short intake form with what they're looking for — occasion, preferred setting, outfit ideas — and can pin reference photos to the mood board right in the same place. The photographer sees all upcoming sessions and their attached mood boards in one spot, which makes prep way less of a scramble."
+  },
+  {
+    "id": "q_web_009_005",
+    "query_text": "Create a web app scheduler for freelance video editors where potential clients can book a scoping call to talk through their project before any work starts, so editors stop wasting time on vague inquiries that go nowhere. The tool should let the editor set their available time slots and require clients to fill in a short project brief first — things like the type of video, rough length, deadline, and budget range — before they can even pick a time. That way the editor shows up to every call already knowing if the project is actually a good fit."
+  },
+  {
+    "id": "q_web_009_006",
+    "query_text": "Create a web app booking portal for motion designers where clients can describe their animation project and schedule a consultation call all in one place, instead of sending a bunch of emails just to get the basic details across. The tool should have a short project brief form — asking things like animation style, length, deadline, and how the finished file will be used — that clients fill in before they pick an available time slot from the designer's calendar. The designer can then review each brief ahead of the call so the conversation is actually useful from the start."
+  },
+  {
+    "id": "q_web_009_007",
+    "query_text": "A commission request manager for concept artists who do character design work, available as a web app so clients can fill out a request from any desktop browser without needing to track the artist down on social media. The tool should let clients describe the character they want — species, personality, references, any specific details — and attach inspiration images, then the artist can review the queue of incoming requests and either accept or decline each one with a note. Accepted commissions move into an active list so the artist always knows what's on their plate and in what order."
+  },
+  {
+    "id": "q_web_010_001",
+    "query_text": "Need a web app learning hub focused on photography composition where I can work through lessons in order and also see what the weekly challenge is without hunting around. I want the lessons organized clearly — like rule of thirds, leading lines, framing, and so on — so I know exactly where I am and what's next. The weekly challenge should show the theme, let me upload a photo as my submission, and show a gallery of what others submitted that week so I can actually learn from seeing different approaches."
+  },
+  {
+    "id": "q_web_010_002",
+    "query_text": "Need a web app marketplace for music production courses where I can browse lessons by skill level — like complete beginner, some experience, or more advanced — and by topic, whether that's mixing, sound design, beat making, or specific software. Each course listing should show what's covered, how long it is, and what level it's aimed at so I can figure out if it's actually right for me before buying. I also want to be able to track which courses I've already bought and where I left off, all in one place without having to dig around."
+  },
+  {
+    "id": "q_web_010_003",
+    "query_text": "Build a web app learning site for 3D modeling that takes you from absolute beginner all the way to a more advanced level in a clear, step-by-step path so you always know what to do next and you're not just randomly picking videos. The curriculum should be organized into stages — like basic shapes and navigation first, then more complex modeling techniques, then materials and rendering — and each stage should show which lessons are done and which are still ahead. A progress tracker that shows how far along I am overall would be really helpful so I can see I'm actually moving forward."
+  },
+  {
+    "id": "q_web_010_004",
+    "query_text": "Need a web app workshop platform focused on screenwriting where I can watch lessons on story structure, character arcs, and dialogue, and also paste in chunks of my own script to get notes on things like pacing and scene length. I want the lessons organized by topic so I can go straight to what I'm struggling with rather than watching everything in order, and the script analysis part should highlight specific lines and give plain-language feedback I can actually act on. Something I can use in a desktop browser while I'm working on my script at the same time would be ideal."
+  },
+  {
+    "id": "q_web_010_005",
+    "query_text": "Create a web app membership library for watercolor lessons where I can browse video tutorials organized by technique — like wet-on-wet, glazing, dry brush — and by skill level, so I know which ones are right for where I currently am. Each video should show the materials used and a finished example of what the technique produces so I can decide if it's what I'm looking for. I also want to be able to save the videos I plan to watch into a personal list so I'm not searching for the same thing twice."
+  },
+  {
+    "id": "q_web_010_006",
+    "query_text": "Make a web app subscription platform for digital painting masterclasses focused on brushwork, where I can browse classes by instructor and by what kind of brushes or techniques they cover — like textured strokes, blending, or inking. Each class listing should show a sample clip and a breakdown of what's taught so I know what I'm getting before I commit to watching the whole thing. I want to track which classes I've completed and be able to resume right where I left off, all in one tidy place on a desktop browser."
+  },
+  {
+    "id": "q_web_010_007",
+    "query_text": "Build a web app learning hub for comic storytelling and sequential art where the lessons are laid out in a sensible order — starting with things like panel layout and pacing, then moving into character expressions and visual storytelling — so I'm always clear on what to tackle next. I want each lesson to include example pages I can actually study, and a spot to save my own notes on what I'm learning so I can look back at them later. A checklist of completed lessons would help too, so I can see how far I've come without losing my place."
+  },
+  {
+    "id": "q_web_011_001",
+    "query_text": "Create a web app community site for music producers to share beats and let other producers remix them, kind of like a collaborative playground where the whole point is building on each other's work. Producers can upload a beat with tags for genre and tempo so it's easy to find the kind of sound you're looking for, and anyone can download the stems to remix it and post their version linked back to the original. There should be a way to leave comments on individual beats so people can give feedback or just say what they liked about the track."
+  },
+  {
+    "id": "q_web_011_002",
+    "query_text": "A community app for photographers where groups of people can put together curated gallery walls together — not just posting their own shots but actually voting and selecting which photos go up as a collection for the week or month. The app should live in a desktop browser so it's easy to view photos at full size and compare them side by side when the group is deciding what to include. Each gallery wall should show who contributed which photo and let visitors leave a short comment on any image they like."
+  },
+  {
+    "id": "q_web_011_003",
+    "query_text": "Create a web app streak tracker for creator accountability groups where a small group of friends or collaborators can each log what they made or worked on each day and see everyone else's streaks at a glance. Each person gets their own running streak count that resets if they skip a day, and the group can see a simple board showing whose streak is longest and how many days everyone has kept going. There should also be a quick daily post spot where each person can drop a line or two about what they actually did that day, so the group stays connected and not just watching numbers."
+  },
+  {
+    "id": "q_web_011_004",
+    "query_text": "Make a web app community for podcast listeners where you can discuss specific moments in an episode by leaving a comment tied to the exact timestamp where something interesting or worth talking about happened. Each episode gets its own discussion thread in the app, and comments are pinned to the timeline so you can see what other listeners thought at each part of the episode as it played. There should also be a way to reply to someone's comment so conversations can actually develop, not just a wall of unconnected thoughts."
+  },
+  {
+    "id": "q_web_011_005",
+    "query_text": "Make a web app showcase site where indie game developers can post their games and players can leave real feedback in a dedicated forum for each game, so developers actually know what's working and what's confusing instead of guessing. Each game gets its own page with a description, some screenshots, and a link to play or download it, and players can start threads about bugs, suggestions, or just stuff they enjoyed. There should be a browsing page where visitors can sort games by genre or newest releases so it's easy to discover something worth trying."
+  }
+]

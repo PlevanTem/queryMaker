@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_040_003",
+    "query_text": "An enterprise onboarding kickoff call booking tool for a web app where new SaaS clients can pick a time slot right after signing up, so we stop going back and forth over email just to schedule that first call. It should show the available times in the client's timezone, let them pick a slot, and then automatically send a confirmation — so I'm not chasing anyone down or manually coordinating. The team calendar side should also show all upcoming kickoff calls in one place so nothing falls through the cracks."
+  },
+  {
+    "id": "q_web_040_004",
+    "query_text": "Build a web app that handles scheduling quarterly business review calls between our customer success team and clients — right now everything is just a mess of emails and calendar invites flying around and stuff gets dropped. The app should let clients book a QBR slot from a list of available times, send them a reminder before the call, and keep a running list on our side of who has a meeting coming up and who's overdue for one so we can actually stay on top of accounts."
+  },
+  {
+    "id": "q_web_040_005",
+    "query_text": "Create a web app that lets people on a free trial book a quick call to talk about upgrading, so they can just pick a time themselves instead of waiting for someone to reach out. The booking tool should show open slots based on who's available on our side, confirm the appointment right away, and let the person add a note about what they want to cover on the call — that way whoever takes the call knows what's coming and we stop wasting time on back-and-forth emails."
+  },
+  {
+    "id": "q_web_040_006",
+    "query_text": "Make a web app scheduler for setting up the kickoff call when a new client is starting a SaaS implementation project — the whole thing is a headache to coordinate manually and stuff always slips. It should let the client pick from a list of available time slots on their own, confirm the meeting right away, and also give our internal team a simple list view of all upcoming kickoff calls so we can see what's queued up and who still needs to book."
+  },
+  {
+    "id": "q_web_040_007",
+    "query_text": "Build a web app where advisory board members can each set their own availability and then founders or team members can go in and book a one-on-one slot with whoever they want to talk to, so we stop playing email tag every time someone needs a quick conversation. It should show each advisor's open times in a clean list, let you pick a slot and add a short agenda, and send a confirmation to both sides automatically — nothing fancy, just something that actually works for desktop browsers."
+  },
+  {
+    "id": "q_web_041_001",
+    "query_text": "Make a web app where you can put together an interactive step-by-step walkthrough of your SaaS product to use when giving demos — I want to be able to add each step with a short description and a screenshot or image, then arrange the steps in order so it flows like a guided tour. It should let me save different walkthroughs for different use cases, and when someone views it in a browser they can click through each step at their own pace, which is way better than just sharing a slide deck."
+  },
+  {
+    "id": "q_web_041_002",
+    "query_text": "Need a web app for keeping our startup's internal wiki organized — somewhere the whole team can write and look up how we do things, what tools we use, decisions we've made, stuff like that. The big thing I care about is a smart search that actually finds what you're looking for even if you don't type the exact words, so people stop asking the same questions over and over in Slack. It should also let you organize pages into topics or sections so the wiki doesn't turn into a big pile of unlinked notes."
+  },
+  {
+    "id": "q_web_041_003",
+    "query_text": "Make a web app that works as a training and learning tracker for a small SaaS startup team — somewhere to put short courses or lessons about the product, processes, or tools we use, and let each person work through them and mark things done. I want to be able to add new learning materials easily, and see at a glance on the main screen who's completed what and who still has things to finish, so we can actually make sure everyone's up to speed instead of just assuming they are."
+  },
+  {
+    "id": "q_web_041_004",
+    "query_text": "Need a web app where users can take a short assessment or quiz to get certified on our SaaS product, earn a badge or certificate when they pass, and then have that credential saved somewhere they can reference or share. I want to be able to set up a few different certification tracks for different parts of the product, and users should be able to see which ones they've completed and which ones are still available to take — all accessible through a regular desktop browser without any extra installs."
+  },
+  {
+    "id": "q_web_041_005",
+    "query_text": "Make a web app that works as a case study browser, where visitors can look through real customer stories and filter them by industry or by what problem they were trying to solve, so people actually find the examples that are relevant to them instead of scrolling through a long undifferentiated list. Each case study should have a title, a short summary, the industry it's from, and the main use case it covers, and the filtering should update the list instantly as you click so it's quick to use on a desktop browser."
+  },
+  {
+    "id": "q_web_041_006",
+    "query_text": "A changelog site for a web app where every update entry also has a short tutorial right there on the same page showing how to actually use the new thing — so users don't have to go digging through separate docs just to figure out what changed and how it works. The changelog list on one side should let you click into any entry, and on the other side you see the description plus a few steps walking you through the feature, all in the browser without having to leave the page."
+  },
+  {
+    "id": "q_web_041_007",
+    "query_text": "Create a web app that works as a glossary reference for a SaaS product team — a searchable list of terms, acronyms, and concepts with plain-language explanations so new people and even existing team members can look things up quickly. I want to be able to add and edit entries easily, and each term should be alphabetically sorted so you can browse through them or jump to a letter. It should work well in a desktop browser and feel like a quick-reference tool the whole team can actually rely on day to day."
+  },
+  {
+    "id": "q_web_042_001",
+    "query_text": "Create a web app where a startup can post its product updates and users can react to each one and leave comment threads, so it actually feels like a conversation instead of just a one-way announcement board. I want each changelog entry to show what changed, and users should be able to leave emoji reactions and reply in threads under each update so feedback is tied to the specific thing being released — it'd be really useful to have a sidebar listing all past updates so you can scroll back through the history without leaving the page."
+  },
+  {
+    "id": "q_web_042_002",
+    "query_text": "Build a web app that works as a central hub for developers who want to use your product's connection points and talk to other people building with it — kind of like a mini developer community site. It should have a section where the technical how-to guides are easy to read and browse, plus a forum area where developers can post questions, share what they've built, and help each other out, all in one place accessible from a regular desktop browser so everything isn't scattered across different sites."
+  },
+  {
+    "id": "q_web_042_003",
+    "query_text": "Make a web app where power users can sign up to become ambassadors for the product — basically a signup flow that asks them a few questions about how they use the tool and why they want to join, then shows them what perks or benefits come with being part of the program. It should feel welcoming and clear about what the program is about, with a simple form that collects their info and a confirmation after they apply, so the whole thing runs on its own in a browser without needing someone to manually walk each person through it."
+  },
+  {
+    "id": "q_web_042_004",
+    "query_text": "Make a web app that's basically a shared wiki where community members can write and edit articles, and anyone can vote up the most helpful ones so the good stuff floats to the top, kind of like a community-maintained knowledge base. It should let people browse topics, search for answers, and upvote articles they found useful, and whoever wrote a well-liked article should get some credit shown on the entry — the whole thing should work cleanly in a desktop browser so it's easy to read and contribute to."
+  },
+  {
+    "id": "q_web_042_005",
+    "query_text": "A web app for a community library of tutorials and how-to guides, all written and contributed by the users themselves, so people can share what they've figured out and help others who are learning the same thing. It should let anyone submit a guide, organize them by topic or category so they're easy to browse, and show which ones are popular or well-liked so the most useful stuff is easy to find from the main area of the app — works in a desktop browser so contributors can write comfortably with a full keyboard."
+  },
+  {
+    "id": "q_web_042_006",
+    "query_text": "Create a web app where users can publicly report bugs they've found in the product, see what other people have already reported, and upvote the issues that matter most to them so the team can see what's actually bothering people the most. It should let anyone submit a new bug report with a title and description, show a running list of all reports sorted by how many votes they've gotten, and let people click into any report to see the details and add their vote — accessible from a desktop browser so it's easy to use at a computer."
+  },
+  {
+    "id": "q_web_042_007",
+    "query_text": "Need a web app that works like a recognition wall for the people who joined the product earliest and helped shape it — a browser-based display where early adopters get a profile card showing when they joined, maybe a short bio they can fill in, and a badge or label that marks them as founding users. The wall itself should show everyone at a glance, and I'd like there to be a way to sort or highlight the very earliest ones so they feel genuinely special and recognized compared to people who came later."
+  },
+  {
+    "id": "q_web_043_001",
+    "query_text": "Need a web app that works as a documentation hub for a developer-facing SaaS tool — somewhere technical folks can go to read how everything works, look up specific endpoints or options, and find examples without having to email someone. The left side should have a navigation list of all the topics so you can jump around quickly, and the main area shows the actual content with code examples clearly laid out — all in a desktop browser so developers can keep it open in one tab while they're working in another."
+  },
+  {
+    "id": "q_web_043_002",
+    "query_text": "An onboarding checklist builder for a web app that lets you put together a step-by-step list of everything a new customer needs to do to get set up with your SaaS product, so they actually make it through setup instead of just stalling out because they don't know what to do next. It should let you add, reorder, and edit each checklist step easily, and customers should be able to check things off as they go and see how far along they are — the kind of thing you can just hand off and it guides people through on its own."
+  },
+  {
+    "id": "q_web_043_003",
+    "query_text": "Need a web app that lets you set up different versions of a pricing page and then track which one actually gets more people to sign up, so you can figure out what pricing layout or message is working best. It should let you create a couple of pricing options with different text or plan arrangements, show a split of traffic going to each version, and then display simple numbers on how many people clicked through or signed up from each one — nothing complicated, just a browser-based tool that shows what's actually converting so you stop guessing."
+  },
+  {
+    "id": "q_web_043_004",
+    "query_text": "Create a web app that lets a startup keep track of who owns what percentage of the company, how many shares everyone has, and what happens to the ownership split when new investment comes in or options get issued — right now it's all in a spreadsheet that nobody trusts. It should show a clear breakdown of all shareholders and their stakes, let you log new share grants or transfers, and update the numbers automatically so you always have an accurate picture of the cap table in a desktop browser without having to recalculate everything by hand."
+  },
+  {
+    "id": "q_web_043_005",
+    "query_text": "A monthly recurring revenue tracker for a web app where you can see how your subscription income is growing over time, broken down into things like new subscriptions, upgrades, cancellations, and downgrades, so you actually understand what's driving the number up or down each month. It should let you enter or sync your subscription data and then show it in a simple running summary with a graph so you can spot trends at a glance — the kind of reporting tool that saves you from digging through a payment processor every time someone asks how the business is doing."
+  },
+  {
+    "id": "q_web_043_006",
+    "query_text": "Build a web app that works as an internal knowledge base for a small startup — a place to write down processes, decisions, how-tos, and anything the team needs to remember so it doesn't just live in someone's head or get lost in Slack. It should let anyone on the team add or update articles, organize them into folders or topics, and search through everything quickly in a desktop browser so the whole team can actually find what they're looking for without asking around every time."
+  }
+]

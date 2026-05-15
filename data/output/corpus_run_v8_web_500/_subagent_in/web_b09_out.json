@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_029_005",
+    "query_text": "Make a podcast hub for our company's series — a web app where all our episodes live in one place with the kind of editorial weight they deserve, not scattered across some generic player. The left side should show the different series organized by season, and when you click an episode the main area gives you the full story: show notes, transcript excerpt, a clean audio player, and a way to browse older episodes without losing your place. It should feel like something the brand actually cares about, not a template anyone could have."
+  },
+  {
+    "id": "q_web_029_006",
+    "query_text": "Build a web app that serves as a proper home for our company's documentary films and video series — something that has a real identity and feels curated, not just a dumping ground with thumbnails. Each series should have its own distinct space with a cover, a short description of what it stands for, and a list of episodes in order. When someone clicks into an episode, they get the full video, a written summary, and easy navigation to the next one. The whole thing should carry the weight of the stories it holds — this is the kind of content that deserves a real showcase, not just a playlist."
+  },
+  {
+    "id": "q_web_029_007",
+    "query_text": "Need a web app that collects and showcases employee culture stories and spotlights in a way that feels genuinely personal, like it was built for real humans and not just an HR checkbox. It should have a browsable feed of stories where each entry gets room to breathe — a photo, the person's name and team, and their story in full — plus a sidebar where you can filter by department or theme. The kind of place where people actually want to read what's there, because it looks like someone took care putting it together."
+  },
+  {
+    "id": "q_web_030_001",
+    "query_text": "Need a portal for recruiting global brand ambassadors — a web app that has a genuine sense of who we are and why someone would want to represent us, rather than just another application form. There should be a section that tells the story of what being an ambassador actually means for this brand, followed by a structured sign-up flow where candidates fill in their region, background, and why they're a fit. The whole thing should carry a voice and an aesthetic that matches the brand — this is a first impression, and it should feel like one."
+  },
+  {
+    "id": "q_web_030_002",
+    "query_text": "Create a holiday gift configurator as a browser-based tool where people can build and personalize a gift set step by step — pick a theme, choose individual items, add a personal note, and see a live preview of the final bundle as they go. The experience should feel warm and intentional, like someone actually thought about what gift-giving should feel like, with clean visuals that make each choice feel considered. At the end, they should be able to save or share their configured gift with a unique link."
+  },
+  {
+    "id": "q_web_030_003",
+    "query_text": "Need a lookbook site that works as a proper editorial experience for our seasonal collections — a web app where each look is presented with taste, not just a product grid with prices slapped on. The main screen should feel like flipping through a well-designed magazine, with full-width editorial photography and collection stories, and when someone wants to shop a specific look they can click into the items featured in that image and go straight to buying. The seasonal chapters should be distinct and browsable from a sidebar so the whole archive stays organized."
+  },
+  {
+    "id": "q_web_030_004",
+    "query_text": "Make a microsite for our company's rebranding reveal — a web app that tells the story of where we came from, what we decided to become, and why, with the kind of pacing and care that makes people actually read it instead of skipping past. It should scroll through the narrative in chapters: the old identity, the thinking behind the change, the new visual direction, and what it means going forward. Each chapter should have room for real writing alongside the visuals — this isn't just a logo drop, it's a story, and it should read like one."
+  },
+  {
+    "id": "q_web_030_005",
+    "query_text": "A trade show portal that works as both a presence and a lead collection tool for desktop browsers — visitors see our key products and brand story on the main screen, and there's a clean form where interested parties can leave their contact info, what they're looking for, and which product category caught their eye. The leads should stack up in a simple list view that the team can scan and sort by interest area during or after the show, so nothing gets lost on a business card."
+  },
+  {
+    "id": "q_web_030_006",
+    "query_text": "Need a brand-sponsored content hub as a web app for desktop browsers — a place where all the editorial pieces, articles, and stories the brand has put its name behind live in one well-organized home with a real personality. There should be a way to browse by topic or series on the left, and the reading experience in the main area should feel unhurried and editorial, with good typography and the brand's visual identity carried through consistently. This should feel like a publication worth reading, not a sponsored links page."
+  },
+  {
+    "id": "q_web_030_007",
+    "query_text": "Create an interactive annual report tool for desktop browsers where the company's yearly numbers and highlights actually feel worth looking at — real charts you can hover over to dig into specific figures, a timeline of major milestones through the year, and sections for each business area with their key stats presented visually. The whole thing should have a confident, considered design that matches the scale of the company, and readers should be able to jump between sections from a fixed navigation without losing their place."
+  },
+  {
+    "id": "q_web_031_001",
+    "query_text": "Need a customer service ticket manager as a web app so our team stops drowning in email threads trying to figure out who's handling what — it should show all incoming tickets in one list with the customer name, issue summary, and current status visible at a glance, and the team should be able to assign a ticket to someone, mark it as in progress or resolved, and leave internal notes. The whole thing should live in the browser so anyone on the team can pull it up without installing anything."
+  },
+  {
+    "id": "q_web_031_002",
+    "query_text": "Need a business travel planner as a web app that handles both booking requests and expense tracking in one place, so I stop switching between a travel agency email, a spreadsheet, and a pile of receipts every time I take a work trip. Employees should be able to submit a trip request with dates, destination, and purpose, and then after the trip log all their expenses with category and amount so everything is in one submission ready for approval. The manager side should let someone review and approve or flag a trip request without a back-and-forth email chain."
+  },
+  {
+    "id": "q_web_031_003",
+    "query_text": "Make a self-service HR portal as a web app where employees can handle the stuff that always means emailing HR and waiting two days for an answer — things like checking their remaining leave balance, submitting a time-off request, and reviewing which benefits they're enrolled in. There should also be a simple spot to update personal info like emergency contacts or bank details for payroll. The whole point is that people can sort out the routine HR stuff themselves during the workday without having to track down someone in the HR team."
+  },
+  {
+    "id": "q_web_031_004",
+    "query_text": "Build a contract tracker as a web app where the team can see every active contract in one place — who it's with, the key dates like start, renewal, and expiry, and what stage it's currently in. Right now contracts are spread across email attachments and shared drives and we always miss renewal windows, so the main thing is that it flags upcoming deadlines clearly and lets someone update the contract status as it moves through review, signature, and execution. Filtering by client or contract type would make it much easier to find what we need fast."
+  },
+  {
+    "id": "q_web_031_005",
+    "query_text": "Need a partner onboarding and certification tool as a browser-based app so we stop manually emailing every new partner their setup steps and then losing track of where they are in the process — new partners should be able to log in, see their onboarding checklist, upload required documents, and work through any certification training steps in order. On the admin side, someone from our team should be able to see each partner's progress at a glance and mark steps as verified without digging through email chains to figure out what's been submitted."
+  },
+  {
+    "id": "q_web_031_006",
+    "query_text": "Create a press room manager as a web app so journalists and media contacts can find what they need without emailing us every time — there should be a section for press releases organized by date, a library of approved brand assets like logos and product photos that can actually be downloaded, and a contact form for media inquiries. Right now everything is scattered across folders and old emails, and this just needs to be one clean place where everything is current and findable in a browser without needing any special access."
+  },
+  {
+    "id": "q_web_031_007",
+    "query_text": "Create a product knowledge base as a web app where the team can actually find answers fast instead of pinging someone every time a question comes up — it should have a left-side menu organized by product line and topic so you can navigate to what you need, a search bar that actually works, and each article should be easy to read with clear headings. The goal is to get rid of the situation where everyone has their own copy of some outdated PDF and nobody knows which version is current, so there should be a visible last-updated date on every page."
+  },
+  {
+    "id": "q_web_032_001",
+    "query_text": "Make a plant tour scheduler as a web app so we stop taking tour requests over email and losing track of who's coming and when — visitors or internal requesters should be able to pick an available date and time slot, fill in how many people are in the group and their purpose for visiting, and get a confirmation. On the admin side, someone should be able to see all upcoming tours on a calendar view and close off dates when the floor isn't available for visitors. The whole thing should work in a desktop browser and take five minutes to figure out without any training."
+  },
+  {
+    "id": "q_web_032_002",
+    "query_text": "Create a legal consultation booking tool as a web app so employees can actually schedule time with the in-house legal team without sending an email and waiting to hear back — they should be able to see when each legal contact is available, pick a time slot, describe the topic they need help with, and get a confirmed appointment. The legal team should have a simple way to view their upcoming bookings for the day or week and mark a slot as unavailable when they're in a conflict. The whole thing should live in a browser and be usable without explaining it to anyone."
+  },
+  {
+    "id": "q_web_032_003",
+    "query_text": "A cybersecurity risk assessment scheduler as a web app for desktop browsers — teams that need a security review should be able to request a time slot, pick the system or area they want assessed, and describe the scope in a short form. The security team's side should show all pending requests in a list they can accept and assign to an assessor, plus a calendar that shows when assessments are scheduled so nothing gets double-booked. The whole point is to stop scheduling these over email where requests get buried and nobody knows the current queue."
+  },
+  {
+    "id": "q_web_032_004",
+    "query_text": "Need a roadshow meeting scheduler as a web app so the investor relations team and incoming investors can book their one-on-ones without the back-and-forth of finding a time that works for everyone — investors should be able to see available slots by date and city, pick a time, and submit their firm name and meeting focus, while the IR team should be able to manage their availability and see the full schedule for each roadshow event in one place. It needs to work cleanly in a desktop browser since the team is coordinating across multiple locations at once."
+  },
+  {
+    "id": "q_web_032_005",
+    "query_text": "Make a commercial property viewing scheduler as a web app so prospective tenants or buyers can book a time to visit a property without having to call or email back and forth — they should be able to browse the available properties, pick one, see the open viewing slots for that property, and book a time with their contact info and what kind of space they're looking for. The agent side should show all upcoming viewings in a list and let them add or block off time slots for each property. Something that works in a browser and saves everyone from playing phone tag."
+  },
+  {
+    "id": "q_web_032_006",
+    "query_text": "Make a leadership workshop enrollment tool as a web app so employees can sign up for development workshops without going through a manager approval chain or waiting for HR to manually send them a link — they should be able to browse upcoming workshops with dates, topics, and available seats, sign up with one click, and see their confirmed enrollments in one place. Whoever runs the program should be able to add new workshops, set seat limits, and see who's registered for each session without having to chase down a spreadsheet."
+  },
+  {
+    "id": "q_web_032_007",
+    "query_text": "Create a speaking engagement request tool as a browser-based app so event organizers can submit a request for one of our executives to speak without the process going through five different inboxes — they should fill in the event details, date, audience size, topic they're hoping to cover, and their contact info, and the submission should land somewhere the comms or executive team can actually review and respond to. There should be a simple list of all pending and past requests that shows status so nothing falls through the cracks when multiple events are being evaluated at once."
+  },
+  {
+    "id": "q_web_033_001",
+    "query_text": "Build a bootcamp registration portal as a web app where engineering teams can find upcoming skills bootcamps, see the schedule and topics covered, and sign up with their name, team, and which track they want to join. I want a clear list of all open bootcamps with dates and remaining spots so it's easy to know what's available, plus a confirmation summary after someone registers so they have the details saved. It should also let admins add new bootcamps and see who's enrolled in each one — basically a clean, organized system in the browser so registration stops happening over chat messages and spreadsheets."
+  }
+]

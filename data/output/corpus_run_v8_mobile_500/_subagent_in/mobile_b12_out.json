@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_026_008",
+    "query_text": "Need a handwriting practice logger for my phone where I can record each session of practicing a foreign script — things like which alphabet or characters I worked on, how many minutes I spent, and whether I felt confident or shaky. I want a simple check-in screen for each day's practice plus a running log I can scroll back through to see my consistency over time, and a small summary at the top showing my total sessions this month."
+  },
+  {
+    "id": "q_scene_026_009",
+    "query_text": "Chess rating progression tracker — a mobile app where I can log my rating after each game or tournament and see a clear line chart of how my rating has moved over time. I want to be able to add a new entry with the date, my rating number, and which platform or event it was from, and the chart should update right away so I can see the trend at a glance. A simple list of my recent entries below the chart would also be good."
+  },
+  {
+    "id": "q_scene_027_001",
+    "query_text": "Build a mobile app where learners can view their certificate of completion after finishing a course, with a clean certificate layout showing their name, the course title, and the date they finished. There should be a button right on that screen to share it directly to LinkedIn, and the certificate should also be saved in the app so they can come back and view or re-share it anytime from a list of all their earned certificates."
+  },
+  {
+    "id": "q_scene_027_002",
+    "query_text": "Build a course progress tracker for my phone that shows me how far along I am in each course I'm taking, with a progress bar for every course and a clear \"next up\" prompt telling me exactly which lesson or section to do next. I want to be able to see all my active courses in one list, tap any of them to see the full breakdown of completed and remaining lessons, and get a little nudge at the top of the home screen pointing me to whatever I should pick up next."
+  },
+  {
+    "id": "q_scene_027_003",
+    "query_text": "Create a course manager for my phone where each lesson or section is locked until the previous one is completed, so learners have to finish things in order before moving on. Each locked section should clearly show what needs to be done to unlock it, and there should be a visible progress indicator showing how far along someone is toward unlocking the next part. The whole thing should feel like a step-by-step path where you can clearly see what's open, what's locked, and how close you are to the next unlock."
+  },
+  {
+    "id": "q_scene_027_004",
+    "query_text": "Create a lesson player app for my phone where flashcards appear at the right moments while you're going through lesson content, so you can test yourself on key terms as you learn rather than having to switch to a separate study tool. After reading a section, a flashcard pops up with a question or term on the front and you tap to flip it and see the answer. I want to be able to mark each flashcard as got it or still learning, and see a quick summary at the end of the lesson showing how many I got right."
+  },
+  {
+    "id": "q_scene_027_005",
+    "query_text": "A course review app for my phone where students can rate a course and write a short review once they finish it. The rating should be a simple star selector from one to five, and there should be a text box for a written review. After submitting, I want the person to see a confirmation and be able to view all the reviews for that course in a scrollable list, with the average star rating shown at the top so it's easy to see at a glance what other learners thought."
+  },
+  {
+    "id": "q_scene_027_006",
+    "query_text": "Create a class progress leaderboard app for my phone that shows how everyone in a group or cohort is doing on their course, ranked by how much they've completed. I want to see my own rank highlighted so I always know where I stand, and a list of everyone else's progress shown as a percentage or number of lessons done. The list should update as people complete more, and tapping someone's name should show a short breakdown of their recent activity."
+  },
+  {
+    "id": "q_scene_027_007",
+    "query_text": "Make a video player app for my phone that lets me watch lesson videos with subtitles I can toggle on or off, plus a transcript I can pull up below the video so I can follow along in text while I watch. The subtitles should be easy to turn on with one tap, and the transcript should scroll along as the video plays so I can always see where we are. Being able to tap a line in the transcript to jump to that moment in the video would be really useful too."
+  },
+  {
+    "id": "q_scene_027_008",
+    "query_text": "Build a note-taking app for my phone where I can jot down my own notes while going through a lesson, so everything stays in one place and I don't have to switch between apps. I want a simple text area I can type into freely, and my notes should save automatically and be organized by which lesson they belong to. Later I should be able to go back and read all my notes for a course in one place, with each set of notes labeled by lesson name."
+  },
+  {
+    "id": "q_scene_027_009",
+    "query_text": "Need a file manager for my phone that keeps all the downloadable resources and attachments from my courses in one organized list, so I can find and access them without hunting through emails or old messages. Each item should show the file name, what type it is, and which course it's from, with a clear download or open button. I also want a way to filter or sort by course so I can quickly find everything related to a specific class I'm studying."
+  },
+  {
+    "id": "q_scene_028_001",
+    "query_text": "Need a world history timeline app for my phone that gives me a quick, organized summary of all the major events and periods I'm always forgetting before a test — things like when empires rose and fell, key wars, and turning points in history. I want to be able to scroll through the timeline chronologically, tap any event to get a short plain-language summary, and filter by region or era so I'm not scrolling through everything when I just need one part."
+  },
+  {
+    "id": "q_scene_028_002",
+    "query_text": "Build a logical fallacy guide app for my phone that lists all the common fallacies in one place so I can actually look them up fast when I'm reading an argument or writing an essay and can't remember what a specific one is called. Each fallacy should have a short, plain-English description and a simple example so I can tell right away whether it matches what I'm looking at. A search bar at the top would save me from scrolling through the whole list every time."
+  },
+  {
+    "id": "q_scene_028_003",
+    "query_text": "Create a music theory reference app for my phone that shows me all the intervals and common chord shapes in one place so I don't have to keep digging through textbooks every time I forget how to build a chord. I want a clean diagram for each chord type showing which notes are in it, and a section that explains intervals with a simple visual so I can see the relationships between notes at a glance. Being able to tap a chord or interval to see a bit more detail would be handy."
+  },
+  {
+    "id": "q_scene_028_004",
+    "query_text": "Build a nutrition reference app for my phone that has all the major macros and micronutrients laid out clearly, so when I'm trying to figure out whether I'm hitting my daily needs I can just look it up instead of Googling every single thing separately. I want to be able to tap any nutrient to see what it does, the recommended daily amount, and a list of common foods it's found in. Organizing the nutrients into clear groups like vitamins, minerals, and macros would make it much easier to navigate."
+  },
+  {
+    "id": "q_scene_028_005",
+    "query_text": "A survival phrases app for my phone covering the most useful expressions in a foreign language, organized by situation so I can find what I need fast without scrolling through a random list. The app should have categories like ordering food, getting directions, or handling emergencies, and each phrase should show the original text, a pronunciation guide, and what it means in English. Being able to tap to hear how a phrase sounds would make it actually useful on the go."
+  },
+  {
+    "id": "q_scene_028_006",
+    "query_text": "An astronomy reference app for my phone that has all the major constellations and well-known stars in one place, so when I'm curious about what I'm looking at in the sky I don't have to dig through a book. The app should let me tap a constellation to see which stars are in it and a simple dot-pattern of how they connect, along with a short note on where to spot it and what time of year it's visible. A searchable list to jump straight to a specific star or constellation would also be really handy."
+  },
+  {
+    "id": "q_scene_028_007",
+    "query_text": "Build a reference tool for my phone that has all the main electrical circuit laws and formulas in one spot — things like Ohm's Law, Kirchhoff's rules, and power formulas — so I can look them up in seconds instead of digging through my notes every time I need to solve a problem. Each formula should have a clear label, the actual equation, and a quick note on what each variable means. Grouping them by topic like series circuits, parallel circuits, and power would make it way easier to find what I need."
+  },
+  {
+    "id": "q_scene_028_008",
+    "query_text": "Make a statistics helper app for my phone that walks me through choosing the right test for my data step by step, since I always get confused about whether I need a t-test, chi-square, ANOVA, or something else. I answer a few simple questions about my data — like how many groups I have or whether my data is numerical or categorical — and the app tells me which test fits, with a short plain-English explanation of why. A list of all the common tests with brief descriptions would also be good to browse when I want to double-check something."
+  },
+  {
+    "id": "q_scene_028_009",
+    "query_text": "Need a reference app for my phone that lays out the major project management approaches — like Waterfall, Scrum, Kanban, and a few others — side by side so I can actually see how they differ without reading a whole article. I want a comparison table showing things like best use cases, how planning works, and team size fit, and the ability to tap any row to get a slightly more detailed explanation. Having all of this in one place on my phone would save me so much time when I need to explain or choose between them."
+  },
+  {
+    "id": "q_scene_029_001",
+    "query_text": "Build a task manager for my phone where I can break any big task into smaller subtasks that sit under it in an indented list, so I can see the whole structure at once without it feeling overwhelming. I want to be able to tap to collapse a task and hide all its subtasks when I just want to see the top-level items, and expand it again when I need the detail. Each task and subtask should have a simple checkbox so I can tick things off as I go."
+  },
+  {
+    "id": "q_scene_029_002",
+    "query_text": "Make a time tracker app for my phone where I can start and stop a timer on any task so I always know exactly how long I've spent on things throughout the day. I want a log that records each start and stop time so I can see the full history for a task, and a running total of time spent on it. Being able to switch between tasks quickly with one tap would be really helpful when I'm juggling a few things and need to keep track without breaking my flow."
+  },
+  {
+    "id": "q_scene_029_003",
+    "query_text": "A daily focus planner for my phone where I can pick just five things I absolutely have to get done today and keep them front and center so I stop drowning in a never-ending list. The main screen should show just those five tasks — nothing else — and I can check them off as I finish them. Each morning I want to be able to quickly set my five for the day, and at the end of the day I can see which ones I actually completed before starting fresh tomorrow."
+  },
+  {
+    "id": "q_scene_029_004",
+    "query_text": "Make a personal goals tracker for my phone that lets me set a few big objectives for the quarter, break each one into key results I can measure, and then link my daily tasks to whichever goal they help with. I want to see at a glance how much progress I've made on each goal based on the tasks I've checked off, and a simple score or percentage showing how close I am to hitting each one. The main screen should show all my active goals with their progress so I always know what I'm working toward."
+  },
+  {
+    "id": "q_scene_029_005",
+    "query_text": "Need a sprint board app for my phone where my team can track what's in the backlog, what's being worked on, and what's done, all in one simple place we can check from anywhere. I want to be able to add tasks to a list, move them to in-progress when someone picks them up, and mark them done when they're finished. Each task should show who it's assigned to and roughly how much work it is, so we always have a clear picture of where the sprint stands without having to sit down at a computer."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_029_006",
+    "query_text": "Create a shared chore rotation manager for my phone where me and my roommates can finally stop arguing about whose turn it is to clean what. The app should let us add all the chores, assign them to people on a rotating schedule, and automatically shuffle who does what each week so no one gets stuck with the same job forever. It should have a checklist on the main screen so whoever finishes a chore can just tap it done, and everyone can see what's left."
+  },
+  {
+    "id": "q_scene_029_007",
+    "query_text": "A reading queue manager for my phone where I can dump in all the articles, papers, and books I keep meaning to get to but always forget about. The tracker should let me add things with a title and a link or note, mark them as read when I'm done, and sort the list by priority so the most important stuff sits at the top. I constantly save things to read later and then lose track of them, so having them all in one place on my phone where I can just tap through the list would save me so much time hunting around."
+  },
+  {
+    "id": "q_scene_029_008",
+    "query_text": "Create a delegated task reminder app for my phone that helps me track everything I've handed off to other people so I stop forgetting to follow up. I hand stuff to coworkers or classmates all the time and then completely blank on checking back, so I need a place where I can log each task, who I gave it to, and when I need to follow up. The app should show me a list of pending follow-ups sorted by due date, and let me mark a task as done once the person gets back to me."
+  },
+  {
+    "id": "q_scene_030_001",
+    "query_text": "A focus timer for my phone that actually ties into the goals I'm trying to finish, so each pomodoro session is linked to a specific task and counts toward completing it. I get distracted because regular timers just count down with no connection to what I'm actually working on — if each session is attached to a real to-do item and I can see how many sessions I've done toward finishing that goal, I'd stay on track so much better. The timer should show the task name while it's running and mark the task done once I hit the target number of sessions."
+  },
+  {
+    "id": "q_scene_030_002",
+    "query_text": "Build a focus streak tracker for my phone that rewards me with little badges the longer I keep up my daily focus sessions without breaking the chain. I always start strong and then slack off after a few days, so I need something that shows my current streak, hands out badges at milestones like 3 days, 7 days, and 30 days, and gives me a small sense of achievement even when I feel like nothing's getting done. The main screen should show my current streak front and center and a row of earned badges so I can see my progress at a glance."
+  },
+  {
+    "id": "q_scene_030_003",
+    "query_text": "Build a break activity suggester for my phone that tells me what to do during my breaks so I actually rest instead of just opening social media again. After every focus session the app should pop up a simple suggestion — like a quick stretch, drink some water, or do the 20-20-20 eye rest thing — and let me tap to say I did it. I end up sitting frozen at my desk the whole day and feel terrible by evening, so having something that nudges me to actually take care of my body during breaks would help a lot. The suggestions should rotate so it doesn't feel repetitive every single time."
+  },
+  {
+    "id": "q_scene_030_004",
+    "query_text": "A voice-controlled focus timer for my phone where I can just say \"start\" or \"stop\" out loud instead of having to unlock my phone and tap anything when my hands are busy or I'm in the zone. The timer app should listen for voice commands to kick off a 25-minute focus session or pause it, and show the countdown clearly on screen the whole time. I keep losing focus just because I have to physically interact with my phone to start or stop the timer, and that kills my momentum every single time."
+  },
+  {
+    "id": "q_scene_030_005",
+    "query_text": "Make a focus time tracker for my phone that lets me log how many minutes I actually spent on each of my different projects each day, so I can stop guessing where all my time went. I juggle several things at once and have no idea at the end of the day whether I actually put in enough time on the important stuff. The tracker should let me pick a project, run a timer, and at the end show me a simple breakdown of how much time went to each project that day. Keeping it simple is fine — I just need the numbers."
+  },
+  {
+    "id": "q_scene_030_006",
+    "query_text": "Build a focus timer for my phone that keeps running in the background and sends me a notification or vibration when the session is up, so I don't have to sit staring at the screen the whole time. I keep checking my phone every few minutes to see how much time is left, which completely defeats the point of focusing, so I just need the timer to buzz me when it's done and let me know it's break time. The app should let me set the session length before I start and keep ticking even if I switch to another app."
+  },
+  {
+    "id": "q_scene_030_007",
+    "query_text": "Make a focus mode blocker for my phone that lets me set a timer and block my most distracting websites and apps during that window so I actually get things done. I waste so much time mindlessly opening the same sites over and over even when I have deadlines, so I need a tool where I can add a list of things to block, hit start, and have them locked out until the session ends. The mobile app should show me how much time is left in the focus session right on the main screen so I know when I'm free again."
+  },
+  {
+    "id": "q_scene_030_008",
+    "query_text": "Create a daily energy logger for my phone where I can rate how energetic or tired I feel a few times a day and see how that lines up with the focus sessions I completed. I never know if I'm actually more productive in the morning or afternoon, and I want to stop guessing. The logger should let me tap a quick energy level rating — like low, medium, or high — at any point during the day and then show a simple chart that puts my energy scores next to my focus time so I can spot when I'm actually at my best."
+  },
+  {
+    "id": "q_scene_031_001",
+    "query_text": "Need a travel buffer planner for my phone that automatically adds a bit of extra travel time between events in my schedule so I stop showing up late to everything. I always schedule things back to back and then realize I forgot to account for getting from one place to the other. The planner should let me enter events with a location, and when I add a new event it should prompt me to set a travel time gap before the next one so nothing overlaps. A clear list view of my day with those buffers shown between events would be perfect."
+  },
+  {
+    "id": "q_scene_031_002",
+    "query_text": "Build a birthday and anniversary reminder for my phone that keeps track of all the important dates for the people I care about and nudges me ahead of time with a suggestion for what gift to get. I always remember these dates way too late or completely blank on them, so I want an app where I can save each person's name, their date, and maybe a note about what they like, and then get a reminder a week before so I actually have time to do something thoughtful. The main screen should show who's coming up next in a simple list sorted by how soon the date is."
+  },
+  {
+    "id": "q_scene_031_003",
+    "query_text": "Make an exam countdown planner for my phone that shows how many days are left until each of my exams and lets me schedule study slots leading up to them so I'm not cramming the night before. I have multiple exams across different subjects and I always lose track of when each one is until it's too late to prepare properly. The planner should let me add exams with a date, then block out study times on a simple weekly schedule tied to each subject, and show the countdown ticking down on the main screen so the urgency is always visible."
+  },
+  {
+    "id": "q_scene_031_004",
+    "query_text": "Need a project timeline planner for my phone that shows all my project milestones laid out on a horizontal bar chart so I can see at a glance what's due when and how everything overlaps. I'm always juggling multiple deadlines and I lose track of what's coming up because everything is buried in documents or chat threads. The planner should let me add projects, set milestone names and dates, and display them in a bar format by date so I can scroll through the timeline on my phone and instantly see if things are piling up."
+  },
+  {
+    "id": "q_scene_031_005",
+    "query_text": "Need a product launch countdown tracker for my phone that shows a big countdown to launch day at the top and a shared task list below it so the whole team can see what still needs to get done before we ship. I'm always scrambling to remember what's pending and who's responsible as the launch date gets close, and I want one place where everything is visible at a tap. The app should let me add tasks, assign them to team members, and mark them done, with the countdown updating in real time so we all feel the urgency."
+  },
+  {
+    "id": "q_scene_031_006",
+    "query_text": "A conference schedule viewer for my phone where I can see all the sessions for an event laid out by time slot so I can quickly figure out which talks I want to attend without digging through a PDF. The planner should show sessions in a clean list grouped by day, with the time, room, and topic for each one, and let me tap a session to save it to my personal picks so I have my own agenda ready to go. Being able to filter by topic or track would be a nice touch so I can skip past stuff that's not relevant to me."
+  },
+  {
+    "id": "q_scene_031_007",
+    "query_text": "A weekly review scheduler for my phone that reminds me to sit down once a week and walks me through a set of reflection questions so I actually process how the week went instead of just rushing into the next one. The planner should let me set a recurring day and time for my review, and when that time arrives it should show me a simple prompt list — things like what went well, what I want to do differently, and what my top priorities are for next week. I want to be able to type short answers right in the app and save them so I can look back over time."
+  },
+  {
+    "id": "q_scene_031_008",
+    "query_text": "Make a meeting planner for my phone that helps me schedule events with teammates in different countries without having to manually figure out what time it is for everyone. I work with people in several time zones and I always get confused about whether a time that works for me is reasonable for them. The planner should let me add team members with their time zones, pick a time in my own zone, and then show me what that looks like for everyone else on a simple list before I confirm the event."
+  },
+  {
+    "id": "q_scene_032_001",
+    "query_text": "Build a marketing campaign tracker for my phone where I can punch in the spend and results for each campaign and instantly see which ones actually made money and which ones were a waste. I have to dig through spreadsheets every time someone asks about ROI and it kills me, so I need a simple mobile app where I can log each campaign's name, how much we spent, and how much revenue it brought in, and the app shows a clear bar chart comparing the return across all campaigns so I can just pull out my phone and have the answer ready."
+  },
+  {
+    "id": "q_scene_032_002",
+    "query_text": "A product usage heatmap tool for my phone where I can paste in or upload feature usage data and see which parts of my product people are actually using versus ignoring, displayed as a color-coded grid so hot and cold spots are obvious at a glance. I spend way too long staring at raw numbers trying to figure out where users are spending time, so I want a mobile-friendly reporter that turns that data into a visual grid where darker colors mean more usage and I can tap any cell to see the actual numbers. It should cover at least a week's worth of data at a time."
+  },
+  {
+    "id": "q_scene_032_003",
+    "query_text": "Need a customer churn risk reporter for my phone that shows me which customers are most likely to leave based on things like how long since they last logged in or how much their usage has dropped, so I can go after the at-risk ones before it's too late. Right now I have no way to spot these people until they're already gone, and by then it's too late to do anything. The mobile app should show a list of at-risk customers ranked by risk level with a few key stats for each one, so I can quickly see who needs attention and take action."
+  },
+  {
+    "id": "q_scene_032_004",
+    "query_text": "Need a support ticket reporter for my phone that shows me how many tickets came in each day and how quickly they got resolved, so I can stop manually tallying things up in a spreadsheet every time my boss asks for an update. The reporter should display the ticket volume over time as a simple line graph and show the average resolution time somewhere obvious, and let me filter by date range so I can pull up last week or last month on demand from my phone. Just something clean I can check in thirty seconds and share a screenshot of."
+  },
+  {
+    "id": "q_scene_032_005",
+    "query_text": "Make a conversion rate tracker for my phone that pulls in daily sales and visitor numbers and shows me a line graph of how our conversion rate has been trending over the past few weeks, so I can actually see if changes we make to the store are helping or hurting. I'm always trying to eyeball the trend from a table of numbers and it takes forever, so I want a simple mobile reporter where I can enter or paste the daily data and the graph updates right away. It should also show me the current conversion rate in a big number at the top so I can see the headline stat instantly."
+  },
+  {
+    "id": "q_scene_032_006",
+    "query_text": "Build a review sentiment analyzer for my phone where I can paste in a bunch of app store reviews and instantly see whether people are mostly positive, negative, or mixed, broken down by topic so I know exactly what users love and what's frustrating them. Right now I manually read through dozens of reviews every week and try to categorize them in my head, which takes forever and I always miss things. The mobile app should show a simple breakdown of sentiment percentages and group the main themes that keep coming up so I can get the full picture in a few seconds."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_051_001",
+    "query_text": "Make a student portal web app for desktop browsers that puts everything I need in one place — my class schedule, upcoming deadlines, and grades all visible without clicking through five different systems. It should have a sidebar that lists all my courses so I can jump straight to whichever one I need, and a main area that shows today's tasks sorted by due date so I never have to go hunting for what's actually urgent."
+  },
+  {
+    "id": "q_web_051_002",
+    "query_text": "Make a course scheduling tool as a web app for desktop browsers where students can actually see what time slots are open and just pick the ones that work, instead of having to refresh the school system every five minutes hoping a seat opens up. It should show all available courses in a list on one side and let you drag them onto a weekly calendar on the other side to see if they conflict before you commit to anything."
+  },
+  {
+    "id": "q_web_051_003",
+    "query_text": "Create a homework and exam tracker as a web app for desktop browsers where I can log all my assignments in one place, set due dates, and actually see what's coming up this week at a glance. It should have a simple list of everything pending on one side and a calendar on the other so I stop missing stuff because it was buried in some course folder somewhere."
+  },
+  {
+    "id": "q_web_051_004",
+    "query_text": "Create an attendance tracker for K-12 schools as a web app for desktop browsers where teachers can mark students present, absent, or late in seconds each morning without hunting through spreadsheets. It should show the full class list on one side with quick buttons to mark each student, and a summary column that highlights anyone who's been absent more than a few times so the teacher can catch patterns early."
+  },
+  {
+    "id": "q_web_051_005",
+    "query_text": "Need a transcript request tool as a website for desktop browsers where students can fill out one simple form to request their official transcripts, pick how many copies they need and where to send them, and then actually track the status of that request so they're not emailing the registrar's office every week asking if it got processed yet. It should save your basic info so you're not typing the same stuff every time you need to request another one."
+  },
+  {
+    "id": "q_web_051_006",
+    "query_text": "Create a lesson plan builder as a web app for desktop browsers where teachers can write up their plans for the week without starting from scratch every time — they should be able to browse a shared library of plans other teachers have already made, grab one that fits, and just tweak it for their own class. It should have a left panel for browsing the shared plans and a right panel for editing your own version so you can see both at the same time."
+  },
+  {
+    "id": "q_web_051_007",
+    "query_text": "Need a grading rubric builder as a browser-based tool for desktop where teachers can set up their scoring criteria once and reuse it across assignments without retyping the whole thing every time. You should be able to add categories like \"content\" or \"grammar,\" set point values for each level from excellent to poor, and save the whole rubric so it's ready to pull up when you're sitting down to grade a stack of papers."
+  },
+  {
+    "id": "q_web_052_001",
+    "query_text": "Create an author profile site as a web app for desktop browsers that feels like flipping through a beautifully curated literary magazine — warm, unhurried, with the writer's photo and bio taking up a generous header that sets the mood before anything else. Below that, their published pieces should be laid out with just enough breathing room that each one feels considered, maybe with a soft pull-quote to give a taste of the writing, and a gentle color palette that stays out of the way of the words themselves."
+  },
+  {
+    "id": "q_web_052_002",
+    "query_text": "Need a awards archive app for a media organization, built as a website for desktop browsers, that looks prestigious and weighty — the kind of thing you'd expect from a publication that's been around for decades and takes its craft seriously. Each award entry should have the year, the category, and a short note about the winning piece, displayed in a clean timeline layout with a muted gold or deep charcoal color scheme that feels timeless rather than flashy."
+  },
+  {
+    "id": "q_web_052_003",
+    "query_text": "Create a brand centennial history site as a web app for desktop browsers that unfolds like a coffee table book — rich visuals, a sense of gravity, and a timeline that actually makes you want to scroll through all one hundred years. Each era should feel distinct, maybe with a slightly different background tone or typographic treatment to signal that time has passed, and archival photos should be given real estate to breathe rather than being squeezed into thumbnails."
+  },
+  {
+    "id": "q_web_052_004",
+    "query_text": "Create a magazine cover archive gallery for desktop browsers that feels like wandering through a museum of graphic design history — every cover gets its moment, displayed large enough that you can actually appreciate the typography and color choices from each decade. The browsing experience should let you filter by era so you can jump straight to the seventies or the nineties, and clicking a cover should expand it so you can really take it in without leaving the gallery."
+  },
+  {
+    "id": "q_web_052_005",
+    "query_text": "Build a historical newspaper front page browser as a website for desktop browsers that has the mood of a real archive room — slightly aged, serious, like you're actually looking at history. The main experience should be browsing front pages by decade, with the papers displayed at a generous size so the headlines are actually readable, and a sidebar where you can filter by publication name or time period to find exactly what you're looking for."
+  },
+  {
+    "id": "q_web_052_006",
+    "query_text": "Need a book catalog showcase app for a publishing house, built as a website for desktop browsers, that has the warmth and quiet confidence of a well-stocked independent bookshop — covers displayed prominently, with enough white space around each one that it feels curated rather than crowded. There should be a way to filter by genre or year so visitors can browse by mood, and clicking a title should bring up a little more detail about the book without pulling you away from the overall flow of the catalog."
+  },
+  {
+    "id": "q_web_052_007",
+    "query_text": "Make a literary journal archive browser as a web app for desktop browsers that has the quiet, scholarly feel of a university library reading room — muted tones, elegant typography, the kind of layout that makes you want to settle in and read. Each issue should be displayed with its cover art given proper space, organized by year, and when you click into an issue you should be able to see the table of contents so you can find a specific essay or story you're looking for."
+  },
+  {
+    "id": "q_web_053_001",
+    "query_text": "Make a news portal site for desktop browsers that has the gravitas of a serious publication but feels alive and easy to move around in — a wide, confident layout with a strong lead story taking up real estate at the top, supported by a grid of secondary stories below that each get a proper photo and headline. The color palette should feel editorial and grounded, maybe deep navy or charcoal with clean white space, so reading feels like a considered choice rather than scrolling through noise."
+  },
+  {
+    "id": "q_web_053_002",
+    "query_text": "Make an online magazine as a web app for desktop browsers that has the visual richness and editorial intention of a print publication you'd actually pay for — full-width cover stories with beautiful photography, a layout that varies between articles so it never feels like a template repeating itself, and a typography pairing that feels like someone with real taste picked it out. The overall vibe should be somewhere between a style magazine and a culture journal, unhurried and confident."
+  },
+  {
+    "id": "q_web_053_003",
+    "query_text": "Build a long-form features column as a web app for desktop browsers where each piece gets a proper editorial treatment — a full-bleed header image that sets the mood, a byline that actually looks like it belongs there, and body text that's wide enough to read comfortably but not so wide that your eyes get lost crossing the line. The collection of stories on the main screen should feel curated, like the front of a Sunday supplement, with story thumbnails that hint at the depth of what's inside."
+  },
+  {
+    "id": "q_web_053_004",
+    "query_text": "Create a podcast show site as a web app for desktop browsers that has the warm, personality-driven feel of an independent radio station — a strong visual identity for the show at the top, then a clean list of episodes below where each one has a title, a short description, and a play button that you can actually get to without hunting. The overall layout should feel like the host has taste and thought about how they want the show to live on the web, not just a default feed dump."
+  },
+  {
+    "id": "q_web_053_005",
+    "query_text": "Make an e-journal reader as a web app for desktop browsers that has the clean, focused feel of reading a well-designed academic or cultural publication — the current issue front and center with a cover that sets the tone, a table of contents that's easy to navigate on the left, and an article reading experience that keeps distractions out of the way with generous margins and a typeface that's actually pleasant to read for long stretches."
+  },
+  {
+    "id": "q_web_053_006",
+    "query_text": "Build a long-form investigative journalism site focused on local stories as a web app for desktop browsers where the writing and photography get the space they deserve — none of that cluttered look where ads and sidebars fight with the actual story. The mood should feel serious and trustworthy, like a regional magazine that really cares about its community, with a front page that surfaces the most important investigations prominently and a clean reading view that makes you want to sit with a piece all the way through."
+  },
+  {
+    "id": "q_web_053_007",
+    "query_text": "Create a photo essay and photojournalism publication as a website for desktop browsers where images are genuinely the star — full-width spreads that actually let the photography breathe, with captions that feel part of the design rather than an afterthought, and a layout that shifts rhythm between text-heavy passages and purely visual moments the way a great print essay would. The overall feeling should be serious and cinematic, the kind of site that makes you stop scrolling and actually look."
+  },
+  {
+    "id": "q_web_054_001",
+    "query_text": "Create a subscription paywall site as a web app for desktop browsers for a digital publication that feels like a graceful invitation rather than a hard stop — beautiful editorial design that lets a taste of the content show through, a clean presentation of what subscribers actually get, and a sign-up flow that feels considered and trustworthy rather than pushy. The color palette and typography should match the publication's editorial identity so the whole experience feels coherent."
+  },
+  {
+    "id": "q_web_054_002",
+    "query_text": "Build a membership benefits site as a web app for desktop browsers for a media brand that has the warmth and exclusivity of a private club rather than a generic pricing table — each tier should feel visually distinct and aspirational, with enough space devoted to describing what you actually get that people feel genuinely excited about joining rather than just comparing numbers. The overall feeling should be generous and editorial, like the brand itself is presenting this with taste."
+  },
+  {
+    "id": "q_web_054_003",
+    "query_text": "Make an event promotion landing site as a web app for desktop browsers that has the energy and visual confidence of a really good poster — bold type, a strong image that captures the mood of the event up front, and all the key details like date, location, and how to register easy to find without scrolling forever. The vibe should feel like whoever designed it actually cared about the event, not like it was knocked together in an afternoon."
+  },
+  {
+    "id": "q_web_054_004",
+    "query_text": "Create a digital magazine newsletter signup site as a web app for desktop browsers that feels like being welcomed into something worth reading — a front page that shows off the publication's visual identity and a few teaser stories to give a sense of the editorial voice, with a signup area that feels elegant and considered rather than like a form dropped in at the bottom. The palette and type choices should feel consistent with a publication that has a clear point of view and real aesthetic conviction."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_004_005",
+    "query_text": "A password checker tool for the browser where I can paste in any password and immediately see how strong it is — things like whether it's too short, has no symbols, or is just plain obvious — and also whether that password has shown up in any known data breaches so I know if I need to change it right away. I'm tired of guessing whether my passwords are actually safe, so this web app should just tell me clearly, with some kind of strength rating and a breach warning if it's been compromised."
+  },
+  {
+    "id": "q_web_004_006",
+    "query_text": "A home inventory cataloger as a web app for desktop browsers where I can take a photo of something I own, upload it, add a name and a few notes, and save it — so when I need to remember what I have or find something specific, I can just search and it pops right up. I've got boxes of stuff I can never track down when I need them, so the whole point is being able to search by name or category and actually find what I'm looking for without digging through everything physically."
+  },
+  {
+    "id": "q_web_004_007",
+    "query_text": "Create a goal tracker web app that helps me set my big objectives for the year and break them down into smaller results I can actually measure, then check in every week to update my progress so I stop losing track of what I was even trying to do. The home screen of the app should show all my current goals and how far along each one is, and each week it should prompt me to fill in a quick update on what I did and what's next, so I don't have to remember to do it manually in some random notes app."
+  },
+  {
+    "id": "q_web_005_001",
+    "query_text": "A font specimen site for a typeface designer that feels like flipping through a beautifully printed type catalog — the kind where each font gets its own spread with generous white space, sample text at different sizes, and a moody palette that lets the letterforms breathe. This would be a website where visitors can read about the story behind each typeface and see it rendered in different weights and styles, and the overall vibe should feel editorial and considered, like something from a high-end print studio, not a generic software listing page."
+  },
+  {
+    "id": "q_web_005_002",
+    "query_text": "Make a book showcase site for an author that feels like stepping into a well-curated independent bookshop — warm, quiet, and a little literary — where each book gets its own space on the website with a cover, a mood-setting description, and a peek at a chapter excerpt so readers can feel the writing before they commit. The whole thing should have that slow, considered quality where the typography does most of the heavy lifting, and the layout on desktop browsers feels like a reading experience in itself, not just a list of titles."
+  },
+  {
+    "id": "q_web_005_003",
+    "query_text": "Create a film archive site for an indie filmmaker that has the cinematic, late-night-festival-screening energy — dark and immersive, with each project getting its own space where visitors can read about the story behind the film and watch the trailer right there on the website without being redirected somewhere else. The site should feel like a director's personal cabinet of work, with a timeline or grid of projects that makes the whole body of work feel intentional and curated, for desktop browsers where you can really take your time browsing."
+  },
+  {
+    "id": "q_web_005_004",
+    "query_text": "Build a musician discography site where the album artwork takes center stage — large, lush, with that gallery feeling you get from a record store where you want to just stand and look — and clicking into any album on this web app reveals the tracklist alongside the full artwork so the visual and the music feel connected. The mood should feel personal and artistic, like the musician's own hand-picked retrospective, not a streaming service grid, and everything on desktop should have enough room to breathe and feel like a real showcase."
+  },
+  {
+    "id": "q_web_005_005",
+    "query_text": "Build a project gallery site for an architecture studio where the work feels as considered as the buildings themselves — clean and spatial, with each project displayed through a set of atmospheric photos that you can linger over, alongside a floor plan you can actually view properly without it being squished into a thumbnail. This would be a website for desktop browsers where the layout has that calm, wide-open quality that good architecture photography deserves, and each project page lets the images and the plan sit together so visitors understand both the look and the logic of the design."
+  },
+  {
+    "id": "q_web_005_006",
+    "query_text": "Need a lookbook site for a fashion designer that reads like the best editorial spreads — full-bleed photography, unhurried pacing, the kind of web app where every scroll feels intentional and the clothes and the images together tell a story rather than just showing product. On desktop browsers the layout should have that glossy magazine quality, where the photography has real room to land, and each collection has its own distinct mood and color world so visitors feel like they're moving through different chapters of a visual story."
+  },
+  {
+    "id": "q_web_005_007",
+    "query_text": "Create a portfolio site for an interior designer that lets the transformation speak for itself — the main attraction on this web app is a before-and-after comparison for each project where you drag a slider to reveal how the space changed, and the difference is genuinely satisfying to see. The overall feel should be calm and residential, like a shelter magazine, with each project on desktop getting a proper spread that shows the space at its best and gives visitors a real sense of the designer's eye and approach."
+  },
+  {
+    "id": "q_web_006_001",
+    "query_text": "Need a serialized fiction site for an independent novelist that feels like a real literary destination — the kind of website where the reading experience itself feels designed, with good typography, a calm layout, and a sense that someone who loves books made it. Readers on desktop should be able to browse chapters in order, pick up where they left off, and subscribe to get notified when new installments drop, and the whole thing should have that intimate, independent-press quality rather than looking like a generic blog."
+  },
+  {
+    "id": "q_web_006_002",
+    "query_text": "A webcomic hosting site that has the energy of a beloved underground zine — somewhere between cozy and slightly offbeat — where each comic series gets its own space on the website with its cover art front and center and readers can flip through pages in a way that feels satisfying and unhurried on a desktop browser. The subscription side of this web app should feel like joining a small creative community, where supporters get early access to new strips and the whole experience has a handcrafted, creator-first warmth to it."
+  },
+  {
+    "id": "q_web_006_003",
+    "query_text": "Make a food writing portfolio site that has the warmth and generosity of a really good cookbook — somewhere between a personal essay collection and a recipe archive — where each piece on this website gets room to breathe with beautiful food photography alongside the writing so the two feel inseparable. On desktop browsers the layout should feel like reading a long-form food magazine, unhurried and sensory, and readers should be able to browse by theme or ingredient so they can find their way around the whole body of work."
+  },
+  {
+    "id": "q_web_006_004",
+    "query_text": "Make a travel writing site that feels like the best kind of personal essay collection — somewhere between a literary journal and a travel memoir — where each piece on this website pairs the written story with photo essays so the images and words feel like they're telling the same story together. On desktop browsers the reading experience should feel generous and immersive, with the photos given real space rather than crammed into sidebars, and readers should be able to browse by destination or theme so the whole archive feels navigable and alive."
+  },
+  {
+    "id": "q_web_006_005",
+    "query_text": "Make a digital garden site for collecting and sharing personal notes and ideas that has the quiet, growing quality of a real garden — things connected to each other in unexpected ways, with a sense that it's always being tended and added to. This web app for desktop browsers should let visitors wander through topics and follow links between related notes, and the visual style should feel hand-drawn and organic rather than slick and corporate, like a personal notebook that's been opened up and made public in the most thoughtful way."
+  },
+  {
+    "id": "q_web_006_006",
+    "query_text": "Create a public reading list site that has the feel of a well-marked personal library — the kind where you can tell exactly what the reader thinks about every book, with marginalia and opinions baked into the experience — where each book on this website comes with handwritten-style annotations and short commentary that make it feel like a genuine recommendation rather than a bare list. On desktop browsers the layout should feel like browsing someone's actual shelves, warm and curated, with a way to filter by mood or subject so it's genuinely useful and not just decorative."
+  },
+  {
+    "id": "q_web_006_007",
+    "query_text": "Create a podcast hub site that has the clean, readable quality of a really good magazine archive — where each episode on this website gets its own space with the show notes written out properly and a full transcript you can actually read through rather than having to listen to find what you need. On desktop browsers the layout should feel like a well-edited publication, with a clear way to browse past episodes by topic or guest, and the whole thing should feel like it values the written word as much as the audio."
+  },
+  {
+    "id": "q_web_007_001",
+    "query_text": "Create a waitlist landing page for an online course that has a strong point of view — it should feel like it was made by someone who actually cares about the subject matter, with a warm but confident tone and a sign-up form that feels personal rather than corporate. This is a website for desktop browsers where the course topic and the value of joining early are both communicated clearly, and I want visitors to feel like they're getting early access to something genuinely worth waiting for, with maybe a short description of what the course covers and when it launches."
+  },
+  {
+    "id": "q_web_007_002",
+    "query_text": "Make a sponsorship pitch site for creators that feels like a real media kit you'd actually be proud to send — polished and self-assured, with a clear personality that makes you stand out from the pile of generic decks brands usually see. This web app for desktop browsers should show who you are, what your audience looks like, what collaboration formats you offer, and how to get in touch, all laid out in a way that feels like it has a distinct creative identity rather than just filling in a template."
+  },
+  {
+    "id": "q_web_007_003",
+    "query_text": "Build a newsletter sign-up site that has the kind of personality that makes people actually want to subscribe — it should feel like it belongs to a real person with a real point of view, not a faceless brand, and the lead magnet should be front and center on this web app in a way that makes the value of signing up immediately obvious. For desktop browsers I want the design to feel like it has taste — something typographically considered with a clear sense of what this newsletter is about and why it's worth being in your inbox every week."
+  },
+  {
+    "id": "q_web_007_004",
+    "query_text": "Create a season premiere announcement site for a podcast that has the energy of a proper launch moment — something that feels like an event, with a strong title treatment, a teaser of what this season is about, and a way for people to subscribe or set a reminder right there on the page. This web app for desktop browsers should have a personality that matches the show's vibe, with room for a short trailer or audio clip and maybe a list of what's coming so listeners know exactly why they should be excited about this new season."
+  },
+  {
+    "id": "q_web_007_005",
+    "query_text": "Need a virtual event ticket sales site that has a real sense of occasion — it should feel like this event is actually worth showing up for, with a strong visual identity and enough information about the event on this web app to get someone genuinely excited before they decide to buy. On desktop browsers I want a clear layout where the event details, the speakers or lineup, and the ticket tiers are all easy to find without scrolling forever, and the whole thing should have the kind of craft that makes you feel like the people behind the event take it seriously."
+  },
+  {
+    "id": "q_web_007_006",
+    "query_text": "Build a creator collaboration discovery web app for desktop browsers where creators can put up a profile showing who they are, what kind of content they make, and what they're looking for in a collaboration partner, and then browse through other creators to find people whose work and audience feel like a genuine match. The site should have the kind of warmth and personality you'd want from a creative community rather than feeling like a cold business directory, and the browsing experience should make it easy to filter by niche or format so you're not just scrolling through everyone."
+  },
+  {
+    "id": "q_web_007_007",
+    "query_text": "Build a membership sign-up site that has the kind of considered, layered quality that makes each tier feel genuinely desirable rather than just a pricing table — where the benefits at each level are described with care and personality on this web app, so visitors on desktop browsers can really feel the difference between tiers and understand what they're joining. The whole thing should have a clear identity and feel like a club worth being part of, with the sign-up experience feeling welcoming and intentional rather than transactional."
+  },
+  {
+    "id": "q_web_008_001",
+    "query_text": "Create a beat and music sample licensing store as a web app for desktop browsers where producers can browse a catalog of beats and samples, preview them with a play button right on the listing, and pick a license type that fits how they plan to use the track — so they're not spending an hour emailing back and forth just to find out if a beat is available and what it costs. The store should make it straightforward to filter by genre or tempo, see the licensing options clearly with what each one covers, and just check out without a bunch of extra friction."
+  }
+]

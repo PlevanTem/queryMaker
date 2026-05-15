@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_056_002",
+    "query_text": "Create a news feed reader app for my phone where you can scroll through a bunch of stories from different topics all in one place, kind of like flipping through a magazine, and each story shows a thumbnail image, the headline, and a little tag showing what category it is so you can tell at a glance what you're about to read — tech, sports, lifestyle, whatever. Tapping a story takes you into the full article, and there should be a way to save ones you want to come back to later."
+  },
+  {
+    "id": "q_scene_056_003",
+    "query_text": "A mobile news reader app where stories roll in as a continuous feed you can scroll through on your phone, with each card showing the headline, a small image, and how long ago it was posted, so you always know what's fresh. The home screen of the app groups stories loosely by topic so you can tell at a glance if something is sports vs. world news vs. entertainment, and tapping any card opens the full story right inside the app."
+  },
+  {
+    "id": "q_scene_056_004",
+    "query_text": "Create a news browsing app for mobile where the home screen is basically a flowing list of story cards you scroll through — each one has the article title, a picture, the source name, and roughly when it was posted. There should be a row of topic tabs at the top like Technology, Sports, Health so you can quickly jump to only the kind of news you feel like reading right now, and tapping any card opens the full article in a clean reading view."
+  },
+  {
+    "id": "q_scene_056_005",
+    "query_text": "Need a news feed app for my phone that pulls together headlines from lots of different topics into one scrollable list, where each story shows the headline, a photo, and the source so I know where it's coming from. The app should let me pick a few topics I care about when I first open it so my feed feels personal right away, and there should be a simple way to mark stories as read so I can keep track of what I've already gone through."
+  },
+  {
+    "id": "q_scene_057_001",
+    "query_text": "Create a mobile article reader app that feels really thoughtful and curated, where after you finish reading a piece there's a beautiful strip of related articles right at the bottom — kind of like how a good magazine always makes you want to keep flipping pages. The related pieces should show a small cover image and headline for each one, arranged so you can slide through them horizontally, and the whole thing should have that warm editorial feel where every next story looks genuinely worth your time."
+  },
+  {
+    "id": "q_scene_057_002",
+    "query_text": "Make a mobile article reading app where you can highlight any sentence or passage you love and instantly turn it into a gorgeous shareable image — the kind that looks polished enough to post on social media. The quote should be displayed in a clean, stylish card with a nice background and the article source credited at the bottom, so it feels like something worth sharing rather than just a plain screenshot. The overall reading experience should feel calm and editorial, like a well-designed magazine on your phone."
+  },
+  {
+    "id": "q_scene_057_003",
+    "query_text": "Create a mobile news reader app where every article has a listen button so you can have the text read aloud to you while you're walking or cooking or just resting your eyes — the voice should sound natural and pleasant, not robotic. The reading screen should feel serene and clean, with soft typography and good line spacing so it's just as nice to read as it is to listen to, and there should be simple controls to pause or jump back a bit if you missed something."
+  },
+  {
+    "id": "q_scene_057_004",
+    "query_text": "A bilingual article reading app for your phone where each piece shows the original language on one side and a translation alongside it — perfect for language learners who want to read real news while picking up vocabulary. The two versions flow in parallel so your eye can easily match up sentences, and the typography is clean and airy so it never feels cramped even though there are two columns of text. Tapping an unfamiliar word highlights it across both versions, making the whole reading experience feel intentional and beautiful."
+  },
+  {
+    "id": "q_scene_057_005",
+    "query_text": "Need a mobile news reader app where the comment section at the bottom of each article actually feels worth reading — comments sorted so the most interesting or highly liked ones float to the top rather than just showing everything in the order people posted. There should be a simple way to switch between sorting by most liked and sorting by newest, and each comment shows the person's name, their reply, and a like count so you can quickly spot what the crowd thinks is worth your attention."
+  },
+  {
+    "id": "q_scene_058_001",
+    "query_text": "Build a news subscription manager app for mobile where I can see all the channels and sources I follow in one place, and for each one I can flip a switch to turn notifications on or off so I'm only getting pinged by the sources that actually matter to me. I want to be able to set different alerts for different channels — like get notified right away for breaking news from one source but stay quiet for another — all from a clean list I can scroll through on my phone."
+  },
+  {
+    "id": "q_scene_058_002",
+    "query_text": "Need a news subscription manager app for my phone that lets me pick how often I want to hear from each channel I follow — like choose between getting stories sent instantly as they come out, bundled once a day in a morning digest, or rolled up into a weekly roundup. I want a simple screen where I can see all my subscribed sources and set the delivery pace for each one individually, so I'm in control of how much hits my inbox and when."
+  },
+  {
+    "id": "q_scene_058_003",
+    "query_text": "A news filter manager app for your phone where you can type in words or topics you're totally tired of hearing about and make the app hide any stories that mention them — so if you're sick of reading about a certain celebrity or a particular political topic, you just add it to your mute list and it disappears from your feed. There should be a tidy list of everything you've muted so you can review and remove items whenever you change your mind, keeping the whole thing easy to manage."
+  },
+  {
+    "id": "q_scene_058_004",
+    "query_text": "Need a news subscription manager app for my phone where I can easily stop following or completely block any source I don't want to see anymore — so if I'm following a channel and it keeps posting stuff I don't care about, I can pull up that source and remove it or block it in just a couple of taps. There should be a clear list of all the sources I'm currently subscribed to, and blocking a source means it won't show up anywhere in my feed going forward."
+  },
+  {
+    "id": "q_scene_058_005",
+    "query_text": "Build a news subscription manager app for my phone that lets me import a whole list of feeds I already follow from another reader app all at once, so I don't have to re-add them one by one. The app should be able to read the standard file format that most RSS readers export and just load everything in automatically, then show me a list of everything it imported so I can confirm it worked and maybe organize channels into folders from there."
+  },
+  {
+    "id": "q_scene_059_001",
+    "query_text": "Need a news search app for my phone that actually lets me filter results by country or region so I'm only seeing stories from the places I care about, instead of wading through a pile of international stuff that has nothing to do with me. There should be a clear way to pick one or more countries from a list and apply that to my search, and the results should refresh right away to show only news from those places alongside the normal search bar at the top."
+  },
+  {
+    "id": "q_scene_059_002",
+    "query_text": "Need a news search app for my phone that lets me search across multiple languages and then filter the results by whichever language I actually want to read in — so I can look something up and tell the app to show me only English articles, or only Spanish ones, rather than getting a jumbled mix I have to sort through myself. The language picker should be easy to find and quick to change so switching between languages while searching takes barely any effort."
+  },
+  {
+    "id": "q_scene_059_003",
+    "query_text": "A news filter tool for your phone where you can pick what kind of tone you're in the mood for before browsing — positive stories, straightforward neutral reporting, or more critical takes — so you have some control over the emotional weight of what you're reading on any given day. The filter sits right at the top of the feed and is easy to switch between, and the stories update right away to match whatever mood setting you picked, making it way less exhausting to stay informed."
+  },
+  {
+    "id": "q_scene_059_004",
+    "query_text": "A news reader app for your phone with a fact-checked filter toggle right at the top of the feed, so when you turn it on you only see stories that have gone through some kind of verification process and you're not scrolling past questionable stuff. The toggle should be easy to hit with your thumb and the feed should update right away when you flip it, and each story that passes the filter could show a small checkmark or label so it's obvious which ones have been looked at."
+  },
+  {
+    "id": "q_scene_059_005",
+    "query_text": "Make a news tracker app for my phone where I can sort everything by the most recent stories or flip it to show only breaking news at the top — because half the time I just need to know what's happening right now and the regular feed is already hours old by the time I check it. There should be a clearly labeled sort button so I can switch between latest first and breaking news without digging around, and breaking stories should have some kind of tag or flag so I can spot them immediately while scrolling."
+  },
+  {
+    "id": "q_scene_060_001",
+    "query_text": "Create a product detail app for my phone where I can browse all the color options and size or style variations for an item — I want to see the actual color swatches I can tap on, and when I pick one the product photo updates to match so I know exactly what I'm getting. There should also be a clear indicator when a certain combo is sold out so I'm not trying to add something to my cart that's unavailable, and the whole picking process should feel quick and easy on a small screen."
+  },
+  {
+    "id": "q_scene_060_002",
+    "query_text": "Make a mobile shopping tool where I can check if an accessory actually works with the main product I'm looking at before I buy both — like I'm looking at a phone case and I need to know if it fits my specific phone model, or I'm buying headphones and want to confirm they're compatible with my laptop. I just want to enter or select what I already own and have the app instantly tell me yes this works or no it doesn't, right there on the product page on my phone."
+  },
+  {
+    "id": "q_scene_061_001",
+    "query_text": "Build a shopping checkout app for my phone where there's a clear spot to enter a coupon or promo code and the app checks it right away and shows me exactly how much I'm saving before I finish paying — so I'm never guessing if my code worked or not. It should tell me clearly if a code is expired or invalid so I can try a different one, and the updated total should be visible right on the same checkout screen without any extra steps."
+  },
+  {
+    "id": "q_scene_061_002",
+    "query_text": "Make a mobile shopping checkout app where I can see how many loyalty points I've earned and choose to put some or all of them toward my current order to bring the total down, all right there before I confirm payment. There should be a simple way to slide or type in how many points I want to use, and the app should immediately show me the updated price after the points are applied so I know exactly what I'm actually paying without any surprises."
+  },
+  {
+    "id": "q_scene_062_001",
+    "query_text": "Build a package tracker app for my phone that shows me the expected delivery date for my orders and actually sends me a phone notification whenever that estimated time changes — so if my package is running late or arriving earlier than expected I find out right away instead of checking manually all day. The main screen of the app should show all my active orders with their current status and the latest delivery estimate, and I want the notifications to say something useful like what changed and the new expected time."
+  },
+  {
+    "id": "q_scene_062_002",
+    "query_text": "A delivery tracker app for your phone where once your package is marked as delivered you can tap right in and see the actual photo the courier took at your door — so if someone says it was delivered but you can't find it, you have proof of exactly where they left it. The tracker should show the full delivery timeline for each order on its own screen, with the proof photo displayed clearly at the bottom once the delivery is confirmed, and you should be able to pinch and zoom in to see the details of where it was placed."
+  }
+]

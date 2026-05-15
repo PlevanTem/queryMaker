@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_039_001",
+    "query_text": "Offline map download manager for a trip zone — a mobile app where I can pick a region on a map, see the download size before committing, and save the map tiles to my phone so I can use them without a signal. I want to be able to manage multiple downloaded areas, see how much storage each one takes up, and delete the ones I no longer need. Useful to have a progress indicator while the download is happening and a clear label showing when the map was last updated."
+  },
+  {
+    "id": "q_scene_039_002",
+    "query_text": "Make a group trip planner app for my phone where everyone in the trip can add ideas and edit the schedule together. I want a shared day-by-day itinerary where each person can add places to visit, and everyone sees updates right away. There should be a way to vote or mark which plans people agree on, plus a clear list of who's joined the trip so I know everyone is on the same page."
+  },
+  {
+    "id": "q_scene_039_003",
+    "query_text": "Make a flight status tracker app for my phone that shows real-time delay notifications in a clear card format — flight number, current status, updated departure time, and gate changes all in one place. I want to be able to add multiple flights at once and get a quick at-a-glance card for each one, with the most urgent updates shown at the top so I never miss a change while I'm at the airport."
+  },
+  {
+    "id": "q_scene_039_004",
+    "query_text": "A visa requirement checker tool — a mobile app where I pick my passport country and the destination I want to visit, and it gives me a clear list of exactly what I need: whether I need a visa in advance, if there's a visa on arrival option, how many days I'm allowed to stay, and any documents I should prepare. I want each destination's requirements laid out in a simple checklist so I can go through it step by step before I book anything."
+  },
+  {
+    "id": "q_scene_039_005",
+    "query_text": "Make a travel insurance comparison tool for my phone that lines up different plans side by side so I can quickly see what each one covers — medical limit, trip cancellation, luggage loss, and the price. I want to be able to filter by trip length and destination, and each plan should show a simple breakdown of what's included so I can pick the right one for my trip without reading walls of fine print."
+  },
+  {
+    "id": "q_scene_039_006",
+    "query_text": "Create a currency exchange rate tracker app for mobile that shows the rate between my home currency and the currency at my destination, updated regularly so the numbers are current. The main part of the app should have a quick converter where I type in an amount and instantly see what it's worth in the local currency, plus a short list of the rates I check most often so I can pull them up in one tap while I'm traveling."
+  },
+  {
+    "id": "q_scene_039_007",
+    "query_text": "Build a packing list generator app for my phone that takes the trip destination, travel dates, and expected weather and then gives me a suggested list of things to pack — organized into categories like clothes, toiletries, and documents. I want to be able to check off items as I pack them, and the list should adjust based on how many days the trip is so I'm not over-packing or forgetting something obvious."
+  },
+  {
+    "id": "q_scene_040_001",
+    "query_text": "Create a carry-on vs checked bag organizer app for my phone that helps me decide what goes in which bag before a flight. I want to list out all the items I'm packing and then assign each one to either the carry-on or the checked bag, with the app tracking the total count and estimated weight for each bag separately. There should also be a quick reminder section for items that airlines typically restrict in carry-ons so I catch those before I get to the gate."
+  },
+  {
+    "id": "q_scene_040_002",
+    "query_text": "Need a carry-on rules guide app for my phone that covers TSA liquid limits and what you can and can't bring in your carry-on bag. I want a simple checklist I can go through before I leave for the airport — each item clearly marked as allowed, restricted, or not allowed — with a section specifically for liquids showing the 3-1-1 rule and common examples like shampoo, sunscreen, and medication so I'm not guessing at security."
+  },
+  {
+    "id": "q_scene_040_003",
+    "query_text": "Build a hiking and camping gear packing list app for my phone that helps me organize everything I need to bring on an outdoor trip. I want the gear sorted into categories like shelter, clothing, cooking, and safety, with checkboxes so I can tick things off as I pack. It should let me save different list setups for different trip types — like a weekend hike versus a multi-day camping trip — so I can reuse them without starting from scratch every time."
+  },
+  {
+    "id": "q_scene_040_004",
+    "query_text": "Build a beach holiday checklist app for my phone that covers all the essentials for a beach trip — sunscreen, towels, swimwear, snacks, water, and so on. I want the items organized into categories like sun protection, swimming gear, food and drinks, and things to do, with checkboxes I can tap to mark off as I pack my bag. It should also let me add my own items to the list so I can customize it for different trips."
+  },
+  {
+    "id": "q_scene_040_005",
+    "query_text": "Need a business travel packing guide app for my phone that helps me pack light and smart for work trips. I want a minimal, no-fuss checklist that covers the essentials — a few outfits that mix and match, work documents, chargers, and toiletries — organized so I can get through it fast before a trip. There should be a way to save a standard list I use every time and adjust it slightly depending on how many nights I'm away."
+  },
+  {
+    "id": "q_scene_040_006",
+    "query_text": "A winter packing advice app for my phone where I enter the destination and the temperatures expected during my trip, and the app gives me a clear layering guide — what base layers, mid layers, and outer layers to bring so I stay warm without overpacking. I want the list organized by clothing type with brief notes on why each item matters, like which fabrics actually keep you warm when wet, so I can pack confidently for cold destinations."
+  },
+  {
+    "id": "q_scene_040_007",
+    "query_text": "Need a one-bag travel packing list app for my phone that helps me fit everything into a single carry-on sized bag. I want a checklist that's already trimmed down to only the true essentials — clothes that mix and match for multiple days, a compact toiletry set, and a small tech pouch — with each item showing roughly how much space it takes up so I can stay within the bag's limits. It should also show a running tally of how full the bag is so I know when to stop adding things."
+  },
+  {
+    "id": "q_scene_041_001",
+    "query_text": "Create a nearby places finder app for my phone that lets me browse spots around me by category — food, coffee, ATMs, pharmacies, gas stations — so I can quickly find what I need without typing a full search every time. I want a simple category bar at the top, and tapping one shows a list of matching places sorted by distance with name, how far away it is, and whether it's currently open, so I can just pick one and go."
+  },
+  {
+    "id": "q_scene_041_002",
+    "query_text": "Create a saved places manager app for my phone that keeps all my pinned spots in one tidy list so I can find them again without digging through old chats or notes. I want to be able to add a place with a name, a short note about why I saved it, and a category like food, hotel, or attraction, and then browse my saved places by category when I need them. Tapping a place should show me its location on a map so I can get there easily."
+  },
+  {
+    "id": "q_scene_041_003",
+    "query_text": "Build a live location sharing app for my phone that lets me share my real-time location with a travel companion so we can always find each other without the back-and-forth of \"where are you\" texts. I want a simple map that shows both of us as dots that update as we move, with a distance indicator so I know roughly how far apart we are, and an easy link or code I can send to get the other person set up quickly."
+  },
+  {
+    "id": "q_scene_041_004",
+    "query_text": "A traffic alert app for my phone where I enter my route and it watches for slowdowns or accidents and tells me right away if I need to take a different way. I want a clear notification when something changes on my route — showing how many minutes the delay adds — plus a suggested alternate path I can switch to with one tap, so I'm not sitting in traffic wondering if I should have turned off earlier."
+  },
+  {
+    "id": "q_scene_041_005",
+    "query_text": "A toll cost calculator for my phone where I enter the start and end points of a road trip and it figures out all the toll roads along the way and adds up the total cost. I want the main part of the app to show a breakdown of each toll point and how much it charges, so I can see exactly where the money goes and decide if it's worth taking a toll-free route instead."
+  },
+  {
+    "id": "q_scene_041_006",
+    "query_text": "Make a mobile EV charging station finder app that shows charging spots along my planned route so I know exactly where I can stop to top up the battery. I want to enter my starting point and destination and see a list of charging stations along the way — each one showing what connector types it has, how many spots are available, and roughly how long a charge takes — so I can plan my stops before I even leave home."
+  },
+  {
+    "id": "q_scene_041_007",
+    "query_text": "Make a parking finder app for my phone that shows available parking spots near a destination I'm heading to so I can plan ahead and stop circling the block. I want to type in where I'm going and get a list of nearby parking options with the distance, price per hour, and whether they have open spots right now, so I can pick one before I arrive and go straight there."
+  },
+  {
+    "id": "q_scene_042_001",
+    "query_text": "Need a weather comfort checker app for my phone that tells me how the humidity and heat index are actually going to feel outside — not just the temperature number — so I know whether it's actually bearable before I head out. I want a simple meter or reading that translates the conditions into plain terms like \"comfortable,\" \"sticky,\" or \"dangerously hot,\" plus the raw humidity and feels-like temperature so I can decide what to wear or whether to go at all."
+  },
+  {
+    "id": "q_scene_042_002",
+    "query_text": "Need a sunrise and golden hour tracker app for my phone that shows me the exact times for sunrise, sunset, and the golden hour window for whatever location I'm in or heading to. I want the times laid out clearly for the current day and the next few days so I can plan around them — useful when I'm traveling and want to catch the best light without having to piece the information together from multiple places."
+  },
+  {
+    "id": "q_scene_042_003",
+    "query_text": "A moon phase and tide timing app for my phone where I can look up the current moon phase and see the high and low tide times for a coastal location I'm visiting. I want a simple monthly calendar view showing the moon phase for each day, and when I tap a date it shows the tide schedule for that day — like what time high tide hits and how high it gets — so I can plan beach activities or fishing trips around it."
+  },
+  {
+    "id": "q_scene_042_004",
+    "query_text": "Make a rain radar app for my phone that shows an animated map of where rain is right now and where it's moving, so I can see whether the rain is going to reach me in the next hour or pass by without hitting me. I want the animation to play automatically when I open the app so I can quickly read the situation, and I want to be able to zoom into my area for a closer look without losing the movement of the storm."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_026_001",
+    "query_text": "A shared calendar app for the little shops and stalls along our street — where each merchant can log in and post their own events, like a weekend sale or a tasting session, and everyone's stuff shows up together on one big monthly view in the browser so neighbors can see what's happening nearby. Each event should show which shop posted it, and merchants should be able to edit or remove their own entries. Would be great if there's a sidebar listing all the participating shops so you can filter by who's posting."
+  },
+  {
+    "id": "q_web_026_002",
+    "query_text": "A referral network web app for local service folks — plumbers, cleaners, tutors, repair shops, that kind of thing — where each person can list what they do and who they've referred or been referred by, so the whole neighborhood can see a web of trusted connections. On the home screen, you'd see a list of service providers with a little blurb about them and a spot to leave a referral note. People should be able to browse by service type and click through to see each provider's full profile with their referral history right there in the browser."
+  },
+  {
+    "id": "q_web_026_003",
+    "query_text": "Create a pre-order and curbside pickup scheduler app for a local food vendor, where customers can browse today's available dishes, pick what they want, choose a pickup time slot, and submit their order — all from a desktop browser. The vendor side should show a simple list of incoming orders sorted by pickup time, and the vendor can mark orders as ready. Keep it focused: a menu of items with quantities, a time-slot picker, and an order list — nothing fancy, just something a small food stall could actually use."
+  },
+  {
+    "id": "q_web_026_004",
+    "query_text": "Make a neighborhood odd-job matching web app where folks can post small tasks they need done — like moving a couch, fixing a leaky tap, or walking a dog — and local helpers can browse the board and say they're available to take it on, so the two sides can get connected. Each job post should show what's needed, roughly when, and where in the neighborhood, and helpers can leave a short note when they respond. The person who posted can then pick who they want from the responses, right there in the browser."
+  },
+  {
+    "id": "q_web_026_005",
+    "query_text": "A group-buying portal web app for small vendors in the same neighborhood — where each vendor can post a bulk item they want to order in together with others, like a crate of cooking oil or a box of packaging bags, and other vendors can join in by adding how much they want. The home screen shows all the open group orders with how many vendors have already joined and what the minimum quantity is to actually trigger the purchase. Works right in the desktop browser, and each vendor can track which orders they've joined on their own little profile area."
+  },
+  {
+    "id": "q_web_026_006",
+    "query_text": "Make a flash-deal announcement web app for local merchants where each shop can post a limited-time deal with a countdown timer showing how long it's still on, so neighbors browsing in their desktop browser can see all the active deals at a glance and know exactly how much time is left. The main board shows all live deals sorted by time remaining, each with the shop name, what the deal is, and the ticking countdown. Merchants should be able to post a new deal by filling in a short form with the offer details and end time."
+  },
+  {
+    "id": "q_web_026_007",
+    "query_text": "Create a collaborative newsletter platform for small shops in the same neighborhood, where each merchant can log in and contribute a short blurb — a new product, a weekly tip, a local story — and all the contributions get stitched together into one shared newsletter that the whole area can read in a browser. There should be a simple editor where merchants type their piece, and a published view that shows all the contributions for the current edition laid out cleanly, with each shop's name attached to their bit."
+  },
+  {
+    "id": "q_web_027_001",
+    "query_text": "Create a price quote calculator web app for home repair businesses that makes it dead simple to stop doing quotes by hand — you pick the type of job like plumbing, painting, or electrical, enter the square footage or hours, and it spits out a total estimate based on preset rates. There should be a way to adjust the rates for materials and labor separately, and once you've filled everything in you get a clean summary you can print or copy to send to the customer. Running it right in a desktop browser, no installation needed."
+  },
+  {
+    "id": "q_web_027_002",
+    "query_text": "Create a business license renewal reminder web app that actually keeps track of all the different permits and licenses a small business has to renew, because I'm constantly missing deadlines and getting fined for it. You enter each license with its name, the renewal date, and maybe a note about what documents you need, and the app shows everything in a list sorted by how soon it's due, with color indicators for ones that are coming up soon or already overdue. Works in a desktop browser and lets you add or remove licenses whenever things change."
+  },
+  {
+    "id": "q_web_027_003",
+    "query_text": "Create a monthly tax estimation web app for people who run their own little shop and have no idea how much tax they owe until it's too late. You enter your monthly income and rough expenses, pick the business type, and it calculates a ballpark figure of what you probably owe so you can actually set money aside on time. There should be a simple running total that updates as you fill in the numbers, and a summary at the bottom showing the estimated tax amount for that month. Just something basic that works in a desktop browser."
+  },
+  {
+    "id": "q_web_027_004",
+    "query_text": "Create a menu builder web app for a small restaurant or cafe where you can just drag food items around to arrange the menu the way you want, add new dishes with a name, price, and short description, and group things into sections like starters, mains, and drinks — all without needing to rewrite the whole thing from scratch every time something changes. The left side shows all your dishes, and you drag them into the right spot in the menu layout. Works in a desktop browser and you can preview what the final menu looks like before saving."
+  },
+  {
+    "id": "q_web_027_005",
+    "query_text": "A business hours editor web app where you set your regular opening and closing times for each day of the week, and then separately handle public holidays by overriding just those specific dates with different hours or marking them as closed entirely — because right now I'm manually telling customers our holiday hours every single time. The main area of the app shows the weekly schedule in a simple grid, and there's a spot below where you can add holiday date overrides one by one. Works from a desktop browser and saves everything so you can come back and edit whenever hours change."
+  },
+  {
+    "id": "q_web_027_006",
+    "query_text": "Make a customer review aggregator web app for a local shop that pulls together reviews from different places — Google, a food delivery platform, whatever — so you can see them all in one spot in the browser without having to flip between tabs all day. You'd enter which platforms to track, and the app shows a combined feed of recent reviews sorted by date, with the source clearly labeled and a star rating visible at a glance. Should also give a quick average rating summary across all sources so you know where you actually stand."
+  },
+  {
+    "id": "q_web_027_007",
+    "query_text": "Create a weekly social post scheduler web app for small neighborhood shops that takes the pain out of remembering to post online every week — you write your posts for Monday through Sunday, pick what time each one should go live, and see the whole week laid out in a simple calendar grid in the desktop browser so nothing gets forgotten. There should be a spot to draft the post text and attach a note about which platform it's for, and you can edit or swap things around as the week goes on. Just a clean planner that keeps the posting schedule visible."
+  },
+  {
+    "id": "q_web_028_001",
+    "query_text": "An innovation lab showcase web app where a company can put its R&D projects and breakthrough moments on display — the kind of thing that should feel like walking into a real lab, not a boring corporate brochure. Each project gets its own spotlight card with a headline, a short story of what it's trying to solve, and the team behind it, and there's a browsable grid of all the highlights so visitors can explore at their own pace right in the desktop browser. The identity should feel sharp and forward-looking, with a sidebar to filter by research area or year."
+  },
+  {
+    "id": "q_web_028_002",
+    "query_text": "Need a clean, no-nonsense investor relations microsite that actually looks like it takes the company seriously — a web app for desktop browsers where you can put annual results, key financial highlights, and earnings announcements in one place with a clear sense of chronological order. The tone should feel trustworthy and polished, like the company has something worth showing, with a timeline of financial milestones and a spot for recent press releases or reports that visitors can download. Nothing flashy — just confidence and clarity."
+  },
+  {
+    "id": "q_web_028_003",
+    "query_text": "Timeline of a company's founding story and heritage — a web app for desktop browsers that lets visitors scroll through the key moments in the company's history, from the very first day to now, with each milestone showing the year, a short description, and an old photo or image if there is one. It should feel like reading a proper story, not a Wikipedia stub — something with a bit of warmth and character that makes you actually care about how the company got here. A sidebar or top bar to jump to different decades would make it easy to navigate."
+  },
+  {
+    "id": "q_web_028_004",
+    "query_text": "Create a web app for desktop browsers that showcases a company's industry awards and recognition — the kind of site that actually makes the accolades feel worth something instead of just listing them in a footer nobody reads. Each award gets its own card with the award name, the year, the giving organization, and a sentence about why it matters, arranged in a clean gallery you can browse by year or category. The whole thing should feel proud but not self-congratulatory — like a quiet, confident record of genuine achievement."
+  },
+  {
+    "id": "q_web_028_005",
+    "query_text": "Need a corporate social responsibility showcase web app that makes the company's community work feel real and meaningful, not like a checkbox exercise — a website for desktop browsers where you can show specific projects, the communities they affected, and the actual impact in plain language that people can connect with. Each initiative should have its own story card with what was done, where, and what changed, and there should be a way to browse by theme like environment, education, or local giving. The overall feel should be genuine and grounded, not glossy and hollow."
+  },
+  {
+    "id": "q_web_028_006",
+    "query_text": "Create a technology patents and intellectual property showcase web app for desktop browsers that gives a company's innovations the kind of presentation they actually deserve — something that feels serious and considered, not just a database dump. Each patent or IP entry should have a title, a plain-language explanation of what it does, the year it was filed or granted, and the technology area it belongs to. There should be a browsable index on the side so visitors can filter by category or time period and get a real sense of the company's inventive track record."
+  },
+  {
+    "id": "q_web_028_007",
+    "query_text": "Build a strategic partner and supplier directory web app for desktop browsers that actually reflects how important these relationships are — a site where each partner or supplier gets a proper profile with their name, what they do, how long the partnership has been going, and what kind of work they do together, rather than just a logo wall that means nothing. Visitors should be able to browse by industry or partnership type, and the overall feel should be warm and collaborative, like a genuine ecosystem, not a vendor list."
+  },
+  {
+    "id": "q_web_029_001",
+    "query_text": "Need a company knowledge base web app for desktop browsers that actually feels like a place people want to go when they have a question — organized, calm, and easy to navigate — not some sprawling mess where docs go to die. Employees should be able to browse by topic category on one side and search for specific things on the other, and each article should be clean to read with a clear title and the last-updated date visible so you know the info is fresh. The identity of the whole thing should carry the same quiet authority as a well-kept reference library."
+  },
+  {
+    "id": "q_web_029_002",
+    "query_text": "Build a brand editorial magazine web app for desktop browsers that feels like an actual magazine worth reading — beautiful long articles, a clear sense of visual identity, and a layout that makes you slow down instead of skim. The home screen should show featured stories with a strong headline and a compelling image, and clicking through should open the full piece in a focused reading view with enough breathing room around the text. Categories along the top let readers filter by theme, and the whole thing should feel like the brand has a real point of view, not just content for content's sake."
+  },
+  {
+    "id": "q_web_029_003",
+    "query_text": "Build a corporate case study and client story library web app for desktop browsers that makes real customer stories feel worth reading instead of feeling like sales collateral — each story should have a client name, the challenge they faced, what the company did, and the outcome in plain honest language. The library home shows all the stories in a browsable grid sorted by industry or solution type, and clicking one opens the full story in a focused reading layout. The identity should feel credible and human, like proof that the company actually cares about the people it works with."
+  },
+  {
+    "id": "q_web_029_004",
+    "query_text": "A white paper and research archive web app for desktop browsers where a company can store and present its published reports and studies in a way that actually signals intellectual seriousness — the kind of place that makes you trust the thinking behind the work. Each publication gets a clean entry with the title, a one-paragraph abstract, the publication date, and the topic area it covers, and visitors can browse the full archive filtered by theme or year on a sidebar. The reading experience when you open a paper should feel calm and focused, like the content itself is worth your full attention."
+  }
+]

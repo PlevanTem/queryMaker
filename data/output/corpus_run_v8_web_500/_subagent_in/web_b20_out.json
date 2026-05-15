@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_070_006",
+    "query_text": "Make a web app that puts the spotlight on all the people and companies who have backed an open-source project — like a living wall of supporters where you can see each sponsor's name, logo, and how long they've been supporting the project, with a little blurb about bigger backers and maybe a tier breakdown so gold sponsors stand out from regular ones."
+  },
+  {
+    "id": "q_web_071_001",
+    "query_text": "A donation and sponsorship tracker for developers who run open-source projects — I always lose track of who donated what and when, so I need a web app where I can log incoming donations, see totals at a glance, and have a simple thank-you list that shows each supporter's name and amount so I don't have to dig through emails or payment receipts every time someone asks."
+  },
+  {
+    "id": "q_web_071_002",
+    "query_text": "Make a Pro subscription manager for a developer tool — something on the web where users can see what's included in the free plan versus the paid Pro plan side by side, then sign up or upgrade with a click, and once they're subscribed they can check their billing date and cancel if they need to, all without having to email anyone or hunt through settings."
+  },
+  {
+    "id": "q_web_071_003",
+    "query_text": "Build a web app that works like a marketplace for tools you connect to via the internet, where people can browse available options, pick the ones they want to use, and then track exactly how much they've used each one so the bill at the end of the month isn't a surprise — with a clear breakdown of costs per tool and a running total so you always know where you stand."
+  },
+  {
+    "id": "q_web_071_004",
+    "query_text": "Build a web app where companies can buy proper commercial licenses for an open-source tool, manage the licenses they've already purchased, and see renewal dates all in one place — right now I have to handle all of this over email and spreadsheets which is a total mess, so I want something that lets businesses self-serve and gives me a clean list of who's licensed and when they expire."
+  },
+  {
+    "id": "q_web_071_005",
+    "query_text": "Create a pricing comparison tool for a software service aimed at developers — a website where visitors can see the free, starter, and pro plans laid out clearly next to each other, with checkmarks showing which features you get at each level and the monthly versus yearly prices, so people can figure out which plan fits them without having to chase down a salesperson."
+  },
+  {
+    "id": "q_web_071_006",
+    "query_text": "A client project tracker for a small tech consulting firm — I spend way too much time chasing down project status and sending update emails, so I want a web app where clients can log in and see their project's current progress, any files or deliverables we've shared, and a simple timeline of what's coming next, all in one browser-based place so everyone stays on the same page without the back-and-forth."
+  },
+  {
+    "id": "q_web_072_001",
+    "query_text": "Make a technical wiki tool for a web browser where I can write and organize documentation across multiple topics, with a sidebar showing the full list of pages so I can jump around quickly, a search box to find things by keyword, and the ability to link between pages so everything stays connected — I want to be able to keep all my notes and guides in one tidy place instead of scattered across random files."
+  },
+  {
+    "id": "q_web_072_002",
+    "query_text": "Create a reference browser for looking up how different parts of a software tool work — a web app where all the functions and options are listed in a sidebar organized by category, you can click into any one to see a description, the inputs it takes, what it gives back, and a short example, and there's a search bar at the top so I can find exactly what I need without scrolling through everything."
+  },
+  {
+    "id": "q_web_072_003",
+    "query_text": "Build a tutorial website where people can learn things step by step — I want it to have a clear list of lessons on the side so you always know where you are, each lesson has its own page with text and maybe a code example, and there's a way to mark lessons as done so you can track your progress as you go through the whole thing in a browser."
+  },
+  {
+    "id": "q_web_072_004",
+    "query_text": "Make a learning tool that works right in the browser where someone can go through an interactive textbook — each topic has a short reading part, then a quick hands-on exercise or quiz right below it so you're actually practicing as you read, and there's a progress tracker on the side showing which chapters you've finished so you always know how far along you are."
+  },
+  {
+    "id": "q_web_072_005",
+    "query_text": "Need a coding challenge website that lives in the browser where problems start easy and get harder as you go — you can pick a challenge, read what it wants you to do, write your answer in a little text area, and check whether your solution is right, with the challenges sorted into beginner, medium, and hard groups so I always know what level I'm tackling and can work my way up at my own pace."
+  },
+  {
+    "id": "q_web_072_006",
+    "query_text": "Make a system design study tool for desktop browsers where I can look through a collection of common interview topics like load balancing or database design, each one having a clear diagram with labeled parts and notes explaining what each piece does and why, organized by category on the side so I can work through them in a logical order while preparing for technical interviews."
+  },
+  {
+    "id": "q_web_073_001",
+    "query_text": "A web-based forum app where people who tinker with code can post threads, reply to each other, and organize conversations by topic — I want it to have a main list of recent threads with the newest ones on top, a simple way to start a new thread with a title and some text, and topics grouped into a handful of categories so the whole thing stays organized and easy to browse on a desktop."
+  },
+  {
+    "id": "q_web_073_002",
+    "query_text": "Create a Q&A website for developers where people can post questions, others can write answers, and the community can vote on which answers are most helpful — the home screen of the app should show recent unanswered questions so someone can quickly jump in and help, and each question page should show all the answers sorted by votes so the best one floats to the top, all running in a browser for desktop use."
+  },
+  {
+    "id": "q_web_073_003",
+    "query_text": "A landing page app for an online community that lives on Discord — something on a website where visitors can see what the community is about, a few highlights of recent conversations or topics going on inside, and a big obvious button to join that takes them straight to the Discord server, so people stumbling on the project have a reason to actually click through and become part of the group."
+  },
+  {
+    "id": "q_web_073_004",
+    "query_text": "Make a web app for an open-source community hub where members can browse ongoing projects, see who's working on what, and find good first tasks to jump into — I want a desktop-friendly layout with a sidebar for filtering by project type or activity level, so newcomers can quickly spot where they'd fit in and regulars can keep tabs on everything happening across the community."
+  },
+  {
+    "id": "q_web_073_005",
+    "query_text": "Need a web app where developers can paste and share small bits of code they find useful, others can browse through them, and everyone can upvote or downvote each snippet to show whether it actually works well — the main area should show a feed of recently shared snippets with the language labeled and a quick preview, so you can skim through and grab what you need without opening every single one."
+  },
+  {
+    "id": "q_web_073_006",
+    "query_text": "Need a web app that works like a gallery for discovering cool open-source projects — you can browse through them like cards on a wall, each one showing the project name, a short description, and what kind of thing it is, and you can filter by category or sort by how new or popular they are, so it's easy to stumble onto something interesting without already knowing what you're looking for."
+  },
+  {
+    "id": "q_web_074_001",
+    "query_text": "Build a web app that's basically a playground for trying out little interactive experiments right in the browser — I want a grid of small demos you can click into, each one doing something fun or surprising when you interact with it like hovering or clicking, and a way to add a new experiment with a title and a description, so the whole thing grows into a personal collection of neat little things I've made."
+  },
+  {
+    "id": "q_web_074_002",
+    "query_text": "A browser-based calculator collection where each tool does a specific job — like one for figuring out how long a task will take, another for converting units, and maybe one for estimating costs — all listed on the left side so you can jump between them easily, and each one has the inputs and the result laid out clearly so you just fill in the boxes and get your answer right there in the browser."
+  },
+  {
+    "id": "q_web_074_003",
+    "query_text": "Create a resource collection website for developers where all the useful links, tools, and references are gathered in one place, grouped by topic like \"design tools\" or \"learning sites\" so you can find what you need quickly, with a search bar at the top and each resource showing a name, short description, and link — the kind of site you'd actually bookmark and use weekly in a desktop browser."
+  },
+  {
+    "id": "q_web_074_004",
+    "query_text": "Build a developer tools directory as a web app where people can browse a big searchable list of tools organized by what they do — editors, testing helpers, deployment stuff, and so on — with each entry showing a name, what it's for, and a link to check it out, plus a way to filter by category from a sidebar so you're not scrolling through hundreds of things just to find the one you want."
+  },
+  {
+    "id": "q_web_074_005",
+    "query_text": "Make a web-based request testing tool where you can type in a web address, pick whether it's a GET or POST or whatever, add any extra info you want to send along, hit send, and see exactly what comes back — I want to save my favorite requests so I don't have to retype them every time, and the whole thing should run in a browser so I can use it anywhere without installing anything."
+  },
+  {
+    "id": "q_web_074_006",
+    "query_text": "A browser-based regex tester where you type a pattern in one box and some sample text in another, and it instantly highlights all the parts that match so you can see right away whether your pattern is working — the tool should also show a list of every match it found below so you can count them and double-check, great for when you're trying to figure out a tricky text search without constantly running code somewhere else."
+  }
+]

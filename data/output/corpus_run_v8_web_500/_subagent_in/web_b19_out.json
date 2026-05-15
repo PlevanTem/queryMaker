@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_066_005",
+    "query_text": "Create a web app where people in a town or village can share old stories and memories about local places, traditions, and people — like a community archive that anyone can add to. I want visitors to be able to browse stories by neighborhood or theme, and each story can have a few photos attached so it feels more alive and real. The idea is to give locals somewhere to save all those tales that would otherwise just disappear over time."
+  },
+  {
+    "id": "q_web_066_006",
+    "query_text": "Make a web app for organizing all the moving parts of a community festival — volunteers and vendors especially. I'm thinking something where you can sign up as a volunteer for specific time slots, and vendors can register their booth details all in one place. It should work well on a desktop browser so the organizers can see at a glance who's coming, what shifts are covered, and which vendor spots are still open. Really just want to get rid of the spreadsheet chaos every year."
+  },
+  {
+    "id": "q_web_067_001",
+    "query_text": "Make a public services portal web app for desktop where residents can find all the city or government services they need in one place, like applying for documents, checking office hours, or figuring out which department handles which thing — right now it's a total mess to figure out where to go and what forms to fill out, so I just want a clean place that lists everything clearly and lets you look up what you need without bouncing between five different websites."
+  },
+  {
+    "id": "q_web_067_002",
+    "query_text": "Build a government services hall web app where people can look up which office to visit for common tasks like registering a residence, applying for permits, or getting documents notarized, and also check things like required materials and estimated wait times, all from a desktop browser — I'm so tired of showing up somewhere only to be told I'm missing a form or went to the wrong window, so I want everything laid out clearly before I even leave the house."
+  },
+  {
+    "id": "q_web_067_003",
+    "query_text": "Need a virtual exhibition web app where you can walk through a digital gallery space in your browser and browse artworks or artifacts organized into themed rooms, each item showing a photo and a short description — I want to be able to set up my own exhibition and share the link with people so they can explore it at their own pace without needing to install anything or be in the same place as me."
+  },
+  {
+    "id": "q_web_067_004",
+    "query_text": "A web-based permit tracker where you fill out a simple application form for common government permits — like building work, events, or business licenses — and then log back in anytime to see exactly where your application is in the process, whether it's under review, needs more info, or has been approved, all from a desktop browser so you're not left wondering and calling the office every week just to get an update."
+  },
+  {
+    "id": "q_web_067_005",
+    "query_text": "A grant management tool for small nonprofits, runs in the browser on desktop, where you can keep track of every grant you're applying for — the deadlines, what documents you need to submit, and then later what reports are due and when, so nothing slips through the cracks. Right now everything is scattered across emails and sticky notes and it's way too easy to miss a reporting deadline and lose funding, so I just want one tidy place to see the whole picture."
+  },
+  {
+    "id": "q_web_067_006",
+    "query_text": "Build a digital archive and search tool for cultural heritage sites — basically a web app where you can look up historical sites, ruins, old buildings, or cultural landmarks, see photos and a description of each one, and filter by region or type of heritage. I keep having to dig through random PDFs and scattered websites to find this stuff, so I want a single place for desktop browsers where everything is organized and actually searchable."
+  },
+  {
+    "id": "q_web_068_001",
+    "query_text": "Need a GitHub profile showcase website that I can show people when they want to know what I'm working on — something that pulls together my top projects with little cards showing the repo name, what it does, and maybe the main language used, plus a short bio section at the top. I want it to work well in a desktop browser and feel like a real personal landing spot rather than just a raw GitHub page, so people get the gist of my stuff at a glance without digging around."
+  },
+  {
+    "id": "q_web_068_002",
+    "query_text": "A website for an open-source project that lives in the browser and gives visitors a clear picture of what the project does — the main home area should explain the idea in plain language, show a few key features with simple icons or examples, and have an obvious link to the source code so people can jump in and contribute. It should also have a section listing recent updates or versions so returning visitors know the project is still alive and moving forward."
+  },
+  {
+    "id": "q_web_068_003",
+    "query_text": "Make a personal tech portfolio website for desktop browsers where I can show off the projects I've worked on — each project gets its own card with a title, a short description of what it is, and a link to see more. I also want a little about-me section at the top where I can say what kinds of things I like to build, so when someone lands on the site they immediately get a sense of who I am and what I'm into making."
+  },
+  {
+    "id": "q_web_068_004",
+    "query_text": "Need a personal tech branding website that works on desktop browsers and basically acts as my home base online — a place where people can learn who I am, see the kinds of things I like to build or write about, and find links to my work. I want it to feel like it has a consistent identity and personality rather than just a generic template, with a spot for a short statement about what I do and maybe a list of topics or skills I care about most."
+  },
+  {
+    "id": "q_web_068_005",
+    "query_text": "Need a developer résumé website that's actually fun to look at, where my work experience and projects are listed like any normal résumé but there's also a little spot where visitors can type and run small code snippets right there in the browser to try things out — I want it to live on a web page on desktop so I can share the link instead of sending a PDF, and the interactive coding area should feel like a playful way for people to see how I think rather than just reading about it."
+  },
+  {
+    "id": "q_web_068_006",
+    "query_text": "Make a website for our engineering team that shows who we are and what we actually do all day — I want cards for each team member with their name, a fun fact or two, and what they specialize in, plus a section that gives a peek into our team's culture like how we work together and what we care about. It should live on a desktop browser and feel warm and genuine so that people reading it actually want to reach out or join us, not just skim past a boring org chart."
+  },
+  {
+    "id": "q_web_069_001",
+    "query_text": "Make a tech blog website for desktop browsers where I can write posts about things I'm learning or building, organized by topic so readers can find what they're interested in, and each post has a clear title, date, and the actual content laid out in a readable way — I want it to feel like a real personal blog where people can browse past posts and get a sense of what I've been tinkering with over time, and I'd love a simple sidebar or top area showing categories so navigating around feels easy."
+  },
+  {
+    "id": "q_web_069_002",
+    "query_text": "Need a web app for desktop where a small team can write and browse design documents and proposals — like a place where you write up an idea or plan, others can see it organized by date or topic, and everything stays readable and easy to find later instead of getting buried in chat history. I want it to feel like a shared notebook specifically for bigger written decisions and plans, where each entry has a title, a status like draft or approved, and the full text below."
+  },
+  {
+    "id": "q_web_069_003",
+    "query_text": "Build a changelog website for a software project where each update gets its own entry showing the version number, the date it came out, and a plain-language summary of what changed or got fixed — I want it to work in desktop browsers so users can quickly scroll through the history and find when something they care about was added, with newer entries at the top and older ones further down, keeping everything in one tidy place that's way easier to read than digging through commit messages."
+  },
+  {
+    "id": "q_web_069_004",
+    "query_text": "Build a tech newsletter website for desktop browsers where each weekly issue gets its own page with a title, date, and a curated list of interesting links and short write-ups about what's been happening in the tech world that week — I want readers to be able to browse past issues and find something specific without scrolling forever, maybe with a simple way to filter by topic or search by keyword so nothing good gets lost in the archive."
+  },
+  {
+    "id": "q_web_069_005",
+    "query_text": "Need a web app for desktop browsers where a software team can keep all their internal knowledge in one place — like a handbook new people can read when they join, covering things like how we set up our tools, what our processes are, and answers to questions that come up all the time. Right now this stuff is scattered across random docs and chat threads so new folks have a rough first week, and I just want somewhere organized where you can search for a topic and actually find a clear answer."
+  },
+  {
+    "id": "q_web_069_006",
+    "query_text": "Create a web app for desktop browsers where a software team can store and browse all the big decisions they've made about how the system is built — like why we chose this approach over that one, when the decision was made, and what the tradeoffs were. I want it to be searchable and organized so that months later when someone new joins or we're revisiting an old choice, we can look it up and actually understand the reasoning instead of having to ask around or guess."
+  },
+  {
+    "id": "q_web_070_001",
+    "query_text": "A website for an open-source project that gives it a proper home on the internet, the kind you'd open in a desktop browser to find out what the project is about, how to get started, and why you'd want to use it in the first place — I want the main part to explain the idea clearly with some sample usage, and a section showing off the cool things it can do, so visitors who land on the site actually understand what they're looking at and feel excited to try it out."
+  },
+  {
+    "id": "q_web_070_002",
+    "query_text": "Build a hackathon website for desktop browsers where people can see all the details about an upcoming event — the theme, the schedule, how to sign up, and what the prizes are — and also browse the projects that teams submitted after the event is over, each one with a title, description, and link to see more. I want it to feel energetic and easy to navigate so participants and visitors can find everything they need without hunting around."
+  },
+  {
+    "id": "q_web_070_003",
+    "query_text": "Build a developer conference website that works on desktop browsers and gives attendees everything they need in one spot — the event schedule with talk titles and speaker names, a list of speakers with a short bio for each one, and the info about venue and registration. I want it to feel clean and easy to scan so someone visiting for the first time can quickly figure out if this is the kind of conference they'd want to attend and how to get a ticket."
+  },
+  {
+    "id": "q_web_070_004",
+    "query_text": "A product website for a software tool that developers use to connect things together, kind of a launch page that lives on the internet and tells the story of what the product does and why it's useful — I want it to work well on a desktop browser, with a clear headline at the top that explains the value right away, a section showing a few real usage examples so visitors can picture how they'd use it, and a spot where people can sign up or get access."
+  },
+  {
+    "id": "q_web_070_005",
+    "query_text": "Create a website for a developer toolkit where visitors can read about what the tool does, see some usage examples, and actually try writing a bit of code right there in the browser without having to install anything — I want it to feel like a proper showcase that lives on the web and works great on desktop, where the main area explains the key things the tool can do and the hands-on coding area lets people experiment and see real output so they immediately get why it's useful."
+  }
+]

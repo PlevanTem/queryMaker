@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_015_008",
+    "query_text": "A keyboard shortcut cheatsheet tool for my phone where you can pull up a panel from the bottom anytime and browse all the shortcuts in one place — I want to make it for myself because I always forget which keys do what when I switch between different apps, so the idea is you pick a category like \"browser\" or \"editor\" and it shows the shortcuts for that one, nice and readable on a small screen, like a little reference guide I can pop open on my H5 app whenever I need a quick reminder."
+  },
+  {
+    "id": "q_scene_016_001",
+    "query_text": "Need a mobile calculator app that figures out how much concrete or other building materials I'll need for a job — I'm so tired of doing the math by hand every time I pour a slab or mix mortar, so I just want to type in the length, width, and depth of what I'm filling, pick the material type, and get back the volume and rough quantity right away, all usable on my phone without any fuss."
+  },
+  {
+    "id": "q_scene_016_002",
+    "query_text": "Build a recipe scaling tool for my phone that takes a recipe meant for a certain number of people and adjusts all the ingredient amounts when I change the serving count — I hate doing the math myself every time I want to cook for two instead of six, so I want to type in each ingredient and its amount, set the original servings, then just drag a slider or tap a number to get the scaled quantities instantly, and the whole thing should be easy to use on a mobile H5 page."
+  },
+  {
+    "id": "q_scene_016_003",
+    "query_text": "Build a carbon footprint calculator for my phone where I can enter stuff about my everyday life — like how often I drive, what I eat, how much I fly — and it adds it all up to show me roughly how much carbon I'm putting out each year, broken down by category so I can see which habits matter most, all in a simple mobile-friendly H5 app I can pull up anytime."
+  },
+  {
+    "id": "q_scene_016_004",
+    "query_text": "Make a compound interest calculator app for my phone where I can punch in how much I'm starting with, how much I add each month, the yearly interest rate, and how many years I'm letting it sit, and it spits out the final total plus a simple chart showing how the money grows over time — I always want to quickly check if it's actually worth saving a certain amount and right now I just have to guess, so I want a mobile H5 tool that does it all for me in seconds."
+  },
+  {
+    "id": "q_scene_016_005",
+    "query_text": "Need a tax estimator tool on my phone that helps me figure out roughly how much I might get back or owe at the end of the year — I never know what to expect until it's too late, so I want to enter my income, a few typical deductions like work expenses or donations, and get a quick estimate of my refund or payment, all in a simple mobile H5 calculator I can use anytime without digging through official forms."
+  },
+  {
+    "id": "q_scene_016_006",
+    "query_text": "Need a clothing size converter tool for my phone that lets me pick a size from one country — like a US 8 or a European 38 — and instantly see what that is in other regions like UK, Japan, or China, covering tops, bottoms, and shoes separately, because I always mess up when shopping from overseas sites and have to google it every single time — I just want a quick mobile H5 app I can open on the spot and get the right answer."
+  },
+  {
+    "id": "q_scene_016_007",
+    "query_text": "Create a fuel cost calculator for my phone where I type in the distance I'm driving, my car's fuel consumption rate, and the current gas price, and it tells me exactly how much the trip will cost me and how efficient my car is — I always forget to account for gas when I plan road trips and end up surprised at the pump, so I want a simple mobile H5 tool that does the math instantly so I can plan ahead."
+  },
+  {
+    "id": "q_scene_016_008",
+    "query_text": "Build a power usage and electricity bill estimator for my phone where I can add the appliances in my home — like the fridge, air conditioner, washing machine — put in their wattage and how many hours a day I use them, and it calculates roughly how much each one costs me per month based on my electricity rate, so I can finally figure out which things are eating up my bill without guessing, all in a simple mobile H5 app."
+  },
+  {
+    "id": "q_scene_016_009",
+    "query_text": "Create a body fat percentage calculator for my phone where I enter some basic measurements — like my height, weight, waist, and maybe neck or hip size — and it gives me an estimated body fat percentage along with a rough idea of what category I'm in, like \"healthy\" or \"high\", so I don't have to search around online every time I want to check in on my progress, all in a straightforward mobile H5 app."
+  },
+  {
+    "id": "q_scene_016_010",
+    "query_text": "Build a tile and flooring calculator for my phone where I put in the room dimensions and the tile size I'm planning to use, and it figures out how many tiles I need plus a little extra for cuts and breakage — I'm about to redo my bathroom floor and every time I try to work this out myself I end up buying too much or too little, so I just want a quick mobile H5 tool I can use while I'm standing in the store."
+  },
+  {
+    "id": "q_scene_017_001",
+    "query_text": "Need a spending diary app for my phone where I can quickly jot down every purchase throughout the day — just tap a button, type what I bought, the amount, and pick a category like food or transport, and it keeps a running list so I can look back at where my money went at the end of the week, all in a simple mobile H5 app that makes logging feel as easy as sending a message."
+  },
+  {
+    "id": "q_scene_017_002",
+    "query_text": "Create a step count and active minutes logger for my phone where I can enter my steps and how long I was moving each day, and it keeps a history I can scroll through to see how active I've been over the past couple of weeks — I want to see a simple summary at the top showing my weekly totals, and below that a day-by-day list so I can spot which days I slacked off, all in a mobile H5 app I built myself."
+  },
+  {
+    "id": "q_scene_017_003",
+    "query_text": "Create a reading tracker app for my phone where I can log each reading session — just the book name, how many pages I got through, and roughly how long I read — so I can see my progress over time and know when I finished something, it would be cool if it shows a little progress bar for each book based on total pages vs pages read, and a list of all my sessions at the bottom, all living inside a simple mobile H5 app I can open from my browser."
+  },
+  {
+    "id": "q_scene_017_004",
+    "query_text": "Need a screen time and focus logger for my phone where I can start a timer when I sit down to do focused work, stop it when I'm done, and jot down what I was working on, so at the end of the day I can see a list of all my focus sessions and how long each one lasted — I want to get a clearer picture of how many actual productive hours I'm putting in, all tracked inside a simple mobile H5 app."
+  },
+  {
+    "id": "q_scene_017_005",
+    "query_text": "Build a weather-mood tracker app for my phone where each day I can log how the weather feels — sunny, rainy, cloudy — and pick an emoji or word for my mood, and over time the app shows me a little history so I can start to spot if gloomy days really do make me feel worse, with each day displayed as a simple row showing weather and mood side by side, all in a quick-to-open mobile H5 app."
+  },
+  {
+    "id": "q_scene_017_006",
+    "query_text": "A household chore tracker for my phone that lets me keep a running log of what got done around the house — things like vacuuming, dishes, laundry — where I tap a chore, mark it done, and it saves the date and time so I can see when I last did each thing, the app should let me add my own chores to the list and show a simple recent-history view for each one, all in a mobile H5 app I can pull up while cleaning."
+  },
+  {
+    "id": "q_scene_017_007",
+    "query_text": "A study timer and session logger that works right in my phone's browser — I want something I can open on my H5 app while studying where I hit start, it counts up while I work, then I stop it and write a quick note about what I studied, and all my sessions get saved so I can see how many hours I put in over the week, with a simple list of past sessions showing the subject and how long I spent on it."
+  },
+  {
+    "id": "q_scene_017_008",
+    "query_text": "Need a medicine and symptom logger app for my phone where I can record each dose I take — the medicine name, the amount, and the time — and also jot down any symptoms I'm noticing that day, so I can look back and show my doctor a clear picture of what's been happening, with entries sorted by date and easy to scroll through on a mobile H5 app I can open from my phone's browser anytime."
+  },
+  {
+    "id": "q_scene_017_009",
+    "query_text": "Create a travel journal app for my phone where I can write a short entry for each day of a trip — what I did, where I went, how I felt — and attach a place name or city so everything is organized by trip and by day, I want to flip back through past days easily while I'm still on the road, and the whole thing should live as a mobile H5 app I can just open in my browser without installing anything."
+  },
+  {
+    "id": "q_scene_017_010",
+    "query_text": "Create a daily inspiration logger for my phone where I can quickly drop in a creative idea, a sentence that hit me, or a little note about something I made that day, organized by date so I can scroll back through my past sparks whenever I need a boost, with a simple text entry at the top and a reverse-chronological list below — I want to build this as a mobile H5 app so I can open it straight from my browser whenever something comes to me."
+  },
+  {
+    "id": "q_scene_018_001",
+    "query_text": "A conflict resolution phrase guide app that you can open on your phone whenever you're in a tricky conversation and need the right words — the idea is you pick the situation you're in, like \"someone's upset with me\" or \"I need to say something awkward\", and it shows you a handful of ready-to-use phrases that come across as calm and considerate rather than defensive, all organized in a way that's easy to browse on a mobile H5 page mid-argument or right before a tough talk."
+  },
+  {
+    "id": "q_scene_018_002",
+    "query_text": "Create a group name and motto generator tool for my phone where you type in a few words about what the group is about — like the vibe, the activity, or a shared interest — and it spits out a bunch of fun name ideas along with a catchy motto for each one, so you can pick your favorite and copy it straight away, all wrapped up in a simple mobile H5 app I can share with friends when we're brainstorming our team or club name."
+  },
+  {
+    "id": "q_scene_018_003",
+    "query_text": "Make a toast and speech composer for my phone where I can pick the type of event — like a wedding, birthday, or graduation — fill in a couple of details like the person's name and something personal about them, and it puts together a short, warm speech template I can actually read out loud without it sounding robotic, all in a mobile H5 app I can pull up right before I have to stand up and say something."
+  },
+  {
+    "id": "q_scene_018_004",
+    "query_text": "Make a thank-you note writer app for my phone where I type in who I'm thanking, what they did, and maybe one personal detail, and it drafts a warm, genuine-sounding note I can actually send without it feeling copy-pasted, with a few different tone options like heartfelt or casual so I can pick the right vibe for the situation, all in a simple mobile H5 app I can use on the spot right after someone does something kind."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_006_005",
+    "query_text": "Need a workout routine builder app for my phone where I can browse through a library of exercises and pick the ones I want to string together into a custom routine — things like choosing between chest, legs, or core exercises, then arranging them in the order I want. It'd be great if each exercise shows a little description and maybe a suggested set and rep count so I know what I'm doing, and the whole thing saves as a named routine I can pull up later."
+  },
+  {
+    "id": "q_scene_006_006",
+    "query_text": "Build a gift idea tracker app for my phone where I can quickly jot down gift ideas whenever they pop into my head, attach them to a specific person, and mark a rough budget range like under $20 or $50 to $100. The app should let me flip through ideas by person so when someone's birthday comes up I already have a list ready to go, and I can mark ideas as bought once I've actually picked something."
+  },
+  {
+    "id": "q_scene_006_007",
+    "query_text": "A trip planner app for mobile where you type in a destination and it suggests a bunch of interesting places to visit — restaurants, landmarks, parks, that kind of thing — and you can tap the ones you like to add them to your itinerary day by day. The app arranges everything into a day-by-day schedule so you can see what you're doing each day at a glance, and you can drag things around to swap them between days if the order doesn't feel right."
+  },
+  {
+    "id": "q_scene_006_008",
+    "query_text": "Build a reading list manager for my phone where I can add books or articles I want to read and for each one set roughly how long it'll take — like 2 hours or a weekend — plus mark it as high, medium, or low priority so I know what to tackle first. The main screen of the app should show everything sorted by priority so my most important reads are always at the top, and I can tap any item to mark it done once I finish it."
+  },
+  {
+    "id": "q_scene_007_001",
+    "query_text": "Create a product inventory manager for my phone that saves me from having to update prices and stock counts one by one — I want to be able to select a bunch of listings at once and change the price or stock number for all of them in one go. It's such a pain doing it manually every time there's a sale or restocking, so the app should let me tick multiple products, type in the new price or quantity, and hit save to apply the change across everything I selected."
+  },
+  {
+    "id": "q_scene_007_002",
+    "query_text": "Build a note editor app for my phone where I can write and format notes with things like bold text, bullet points, and headings, and most importantly have a proper undo button so I can step back through my changes when I accidentally delete something or mess up my formatting. I'm always making small mistakes while editing on mobile and then losing work, so being able to tap back through recent changes one step at a time would save me a lot of frustration."
+  },
+  {
+    "id": "q_scene_007_003",
+    "query_text": "Create a habit tracker app for my phone that lets me fix my streak when I miss a day for a real reason — like I was sick or traveling — without just losing everything. I want to be able to tap a missed day, write a short note about why I missed it, and have the streak stay intact so I'm not punished for one off day. The app should show my habits and streak count on the main screen, and the missed-day excuse option should be something I can only use once in a while so I don't abuse it."
+  },
+  {
+    "id": "q_scene_007_004",
+    "query_text": "Make a contact cleaner app for my phone that goes through my saved contacts and finds the ones that look like duplicates — same name or same number saved twice — then shows them to me side by side so I can decide which info to keep and merge them into one clean entry. I have so many contacts that are saved multiple times with slightly different details and it's annoying to scroll through the mess, so just being able to review and combine them quickly on my phone would be a huge help."
+  },
+  {
+    "id": "q_scene_007_005",
+    "query_text": "A photo organizer app for mobile where the main screen shows all your photos in a grid and you can press and hold any photo to start dragging it to a new spot in the album, rearranging things the way you want. The key thing is having an undo button somewhere easy to reach so if you drag something to the wrong place by accident you can just tap once to put it back — rearranging photos on your phone should feel as easy as shuffling cards around a table."
+  },
+  {
+    "id": "q_scene_007_006",
+    "query_text": "Create a report correction tool for my phone so when I spot a wrong number or wrong name in a report I can tap that field, type the correct value, and write a short reason for why I'm changing it — like 'typo in original entry' or 'updated after client confirmation.' The app should keep a running log of every change made so you can always look back and see what was changed, when, and why, which saves everyone from arguing about what the original data said."
+  },
+  {
+    "id": "q_scene_007_007",
+    "query_text": "Need a settings app for my phone where I can flip different options on and off and instantly see what the result looks like in a preview right on the same screen, so I don't have to keep going back and forth to check how things changed. Right now I have to guess what a setting does, save it, then go look — I just want to toggle something and immediately see the effect in a live preview below so I can make up my mind without all the back and forth."
+  },
+  {
+    "id": "q_scene_007_008",
+    "query_text": "A template editing tool on mobile where you can open any saved template, make changes to the text or layout, and then pull up a side-by-side comparison showing exactly what's different between the old version and the new one — like the lines you changed are highlighted so you can clearly see what you touched. It's really handy when you're tweaking a template you use a lot and you want to make sure you only changed what you meant to change before saving the new version."
+  },
+  {
+    "id": "q_scene_008_001",
+    "query_text": "A search builder tool on mobile where I can combine multiple search conditions using AND, OR, and NOT without having to write them out manually — just pick conditions from a list, choose how they connect, and the app shows me how many results match before I actually run the search. I deal with big lists of records at work and right now finding the right ones requires jumping through multiple steps, so having one place where I can set up a complex search and check the count first would save me a lot of trial and error."
+  },
+  {
+    "id": "q_scene_008_002",
+    "query_text": "Need a nearby finder app for my phone that lets me set a distance — like within 1 km or 5 km from where I'm standing — and then shows me everything that matches on a map with little grouped pins where there are a bunch close together, so the map stays easy to read. I'm always trying to find things near me without wading through results that are way too far away, so being able to just set my radius and see everything plotted on a map would make the whole process so much faster."
+  },
+  {
+    "id": "q_scene_008_003",
+    "query_text": "Create a notebook app for my phone where I can take photos of my handwritten notes and then search through them by typing a word — the app reads the handwriting and finds the right pages for me so I don't have to flip through everything manually. I fill up paper notebooks all the time but then can never find the specific thing I wrote down, so having a mobile app that recognizes the handwriting and pulls up the matching pages when I type a keyword would be a game changer."
+  },
+  {
+    "id": "q_scene_008_004",
+    "query_text": "A scanner tool on mobile where you point your phone camera at a barcode or QR code and it instantly looks up the product or resource linked to that code and shows you the details right on screen — no typing needed. I'm always getting confused about which product is which when items look similar, and scanning the barcode to pull up the info immediately would save so much time compared to searching for it manually or trying to read tiny labels."
+  },
+  {
+    "id": "q_scene_008_005",
+    "query_text": "Build a search results tool for my phone where I can control how the results are sorted — like choose to sort by price, by date, or by rating — and switch between them with a tap so I can quickly see the list reshuffled in the order that matters to me right now. Sometimes I care most about the newest first, sometimes the cheapest, and having to reload a page every time or dig through settings just to change the order is annoying, so I want a quick sorting picker right at the top of the results."
+  },
+  {
+    "id": "q_scene_008_006",
+    "query_text": "Need a unified search tool for my phone that lets me search across all the different places where my stuff is stored — like notes, files, contacts, and messages — all at once from a single search bar, so I get one combined list of results instead of having to check each place separately. I'm always forgetting where I saved something and having to open multiple apps one by one to track it down, so one search that covers everything connected to the app would save me a ton of time every day."
+  },
+  {
+    "id": "q_scene_008_007",
+    "query_text": "Create a record finder app for my phone with a date filter built right in so I can pick a start and end date and the results instantly narrow down to only things from that time period — no wading through everything ever logged. I'm always trying to look up something that happened last month or in a specific week and having to scroll through pages of records to find it is exhausting, so a simple date range picker that filters the results on the spot would make looking things up so much easier."
+  },
+  {
+    "id": "q_scene_008_008",
+    "query_text": "Build a smarter search tool for my phone that understands what I'm actually looking for even when I type something slightly different from how it's saved — like if I type 'sofa' it also finds results for 'couch', or if I make a typo it notices and asks 'did you mean this instead?' so I still get the right results. Right now I have to remember the exact word used or I get zero results, which is so frustrating, and a search that's a little more flexible about wording and spelling mistakes would fix that completely."
+  },
+  {
+    "id": "q_scene_009_001",
+    "query_text": "Build a size guide tool as a mobile app where shoppers can answer a few quick questions about their measurements — like height, weight, and chest size — and the app tells them exactly which size to pick for a specific product, with a clear breakdown of how each size compares so there's no guessing. I want the size recommendation to show up right next to the size options so it's easy to pick the right one without leaving the page, and the guide should feel simple enough that anyone can use it quickly on their phone."
+  },
+  {
+    "id": "q_scene_009_002",
+    "query_text": "Build a message sender app for my phone where I can pull up my contacts and pick multiple people to send something to all at once, with each person labeled by their relationship to me — like family, coworker, or friend — so I can quickly find the right group without scrolling through everyone. I need to be able to check off several names, see them listed at the top so I know who I've picked, and send to all of them in one go rather than repeating the whole thing for each person individually."
+  },
+  {
+    "id": "q_scene_009_003",
+    "query_text": "A map planner on mobile where you can tap any spot on the map to select it as a point of interest, and when you tap it a small card pops up showing the place name, a photo, and a brief description so you know what it is before deciding to add it to your list. The app lets you build up a collection of selected spots that you can review all together, which makes it easy to plan out which places are worth visiting and roughly what order makes sense based on where they are on the map."
+  },
+  {
+    "id": "q_scene_009_004",
+    "query_text": "Build a notes app for my phone that has a built-in emoji picker so I can add emojis to my notes easily — the picker should organize emojis into categories like faces, food, and travel so I can browse by topic, and there should also be a search bar so I can just type 'fire' or 'heart' and jump straight to the one I want. I'm always copying emojis from random websites because my keyboard picker is too small and hard to navigate, so having it built right into the note-taking app would make everything faster."
+  },
+  {
+    "id": "q_scene_009_005",
+    "query_text": "Create a tagging tool for my phone where I can assign multiple labels to any item — like a note or a photo — by tapping through a list of my existing tags, and the app also suggests a few relevant tags based on what I'm looking at so I don't always have to think of them myself. I want to see which tags I've already selected at the top so I can keep track, and if a suggested tag looks right I should be able to tap it to add it instantly without having to go hunting for it in the list."
+  }
+]

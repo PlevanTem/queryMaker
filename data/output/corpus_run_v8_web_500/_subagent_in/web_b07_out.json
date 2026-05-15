@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_022_004",
+    "query_text": "An auto repair shop new-customer coupon claim tool where first-time visitors can punch in their phone number or license plate and instantly get a discount voucher they can show at the counter — all in a web app that works fine on a desktop browser. I just want the whole thing to be dead simple: the customer fills in one short form, hits claim, and sees a coupon code right away with the deal clearly spelled out, so the shop owner stops having to manually hand out paper coupons every single time."
+  },
+  {
+    "id": "q_web_022_005",
+    "query_text": "Make a laundry service bulk drop-off discount manager that handles the whole promo in one place for a web app running on desktop browsers — customers land on the site, see exactly how the deal works (like 10 kg minimum for 20% off), fill in their name and contact info, and then get a confirmation right there on the spot so neither side has to chase each other down later with phone calls or paper slips."
+  },
+  {
+    "id": "q_web_022_006",
+    "query_text": "A flower shop Valentine's Day bundle deal tool for a desktop browser where customers can browse the available bundles — roses plus chocolates, wrapped bouquets with a card, that kind of thing — see the discounted price for each combo, and just pick the one they want and leave their name and phone number so the shop can confirm the order, cutting out all the back-and-forth messaging I'd normally have to deal with."
+  },
+  {
+    "id": "q_web_022_007",
+    "query_text": "Need a tutoring center back-to-school enrollment promo tool that lives on a website so parents can open it on their computer, see what subjects and grade levels are available, check the limited-time discount for signing up before the semester starts, and fill in the kid's info to lock in the deal — so the front desk stops having to field the same questions over and over by phone every August."
+  },
+  {
+    "id": "q_web_023_001",
+    "query_text": "Build a local loyalty punch-card tracker for a web app where the shop owner can log in on a desktop browser, add customers by name or phone number, and record every time someone makes a purchase so their punch count goes up automatically — then when they hit the required number the system flags them as due for a free reward, so nobody has to dig around for paper punch cards ever again."
+  },
+  {
+    "id": "q_web_023_002",
+    "query_text": "A table reservation and deposit collection tool for a small independent restaurant built as a web app that works on desktop browsers — the owner gets a simple calendar showing open time slots, customers can pick a date and party size, and the site collects a small deposit to hold the table so there are no more no-shows eating into revenue, with a list of upcoming bookings the owner can glance at in one place."
+  },
+  {
+    "id": "q_web_023_003",
+    "query_text": "Need a stock reorder reminder tracker for a web app on desktop browsers where a small shop owner can list all the products they carry, set a minimum number for each one, and then have the tool flag anything that's running low so they get a clear alert before they actually run out — instead of walking the aisle and guessing what needs restocking every few days like it's some kind of treasure hunt."
+  },
+  {
+    "id": "q_web_023_004",
+    "query_text": "A wholesale price list tool for a web app on desktop browsers where local food and beverage suppliers can post all their products with current prices, minimum order quantities, and category filters like beverages, dry goods, or fresh produce — so restaurant and shop buyers can open the site, search what they need, and see updated prices in one place rather than having to call around or dig through old price sheets every week."
+  },
+  {
+    "id": "q_web_023_005",
+    "query_text": "Create a service portfolio and client case study tool for a small agency that runs as a website on desktop browsers — the home area shows a clean list of services the agency offers, and clicking into any one of them pulls up two or three real client stories with a short description of the problem, what was done, and the result, so potential clients can actually see what they'd be getting without having to email and wait three days for a brochure."
+  },
+  {
+    "id": "q_web_023_006",
+    "query_text": "An e-signature contract tool for independent local service providers that works as a web app on desktop browsers — the provider uploads a contract, enters the client's email, and the client gets a link where they can read through the whole thing and sign with their mouse or type their name, with a signed copy saved for both sides, so nobody has to print, scan, or chase anyone down in person just to start a job."
+  },
+  {
+    "id": "q_web_023_007",
+    "query_text": "Build a daily sales reconciliation tool for a small shop with multiple product categories that runs in a desktop browser as a web app — the owner punches in each category's cash and card sales at the end of the day, the tool adds everything up and shows the total alongside a running weekly summary, so closing time stops being twenty minutes of manual addition and cross-checking receipts to make sure the numbers match."
+  },
+  {
+    "id": "q_web_024_001",
+    "query_text": "Need a nail salon slot booking tool that works as a website for desktop browsers, where customers can see which time slots are open for the day or week, pick a slot, and either lock it in for a regular appointment or flag it as a walk-in so the salon knows roughly when to expect them — cutting out the constant back-and-forth texts and phone calls every time someone wants to come in."
+  },
+  {
+    "id": "q_web_024_002",
+    "query_text": "Make a tattoo artist portfolio and session booking tool for a web app on desktop browsers — the artist can show off their work in a clean gallery grouped by style like traditional, blackwork, or fine line, and clients can scroll through, pick a style they like, and request a session by filling in their idea, size, and preferred dates, so the artist stops having to answer the same DMs a hundred times just to figure out if someone is actually serious about booking."
+  },
+  {
+    "id": "q_web_024_003",
+    "query_text": "Need a recurring home cleaning service booking tool that works as a website on desktop browsers, where customers can pick how often they want a cleaner — weekly, every two weeks, or monthly — choose a time slot that works for them, and then have it automatically reserved going forward so they're not re-booking the same thing manually every single time, and the cleaning company always knows who's coming on which day."
+  },
+  {
+    "id": "q_web_024_004",
+    "query_text": "Need a private chef home dinner booking tool that runs as a web app on desktop browsers — clients can browse available dinner dates, see a short description of the cuisine style or menu theme the chef is offering that evening, pick a date that works, enter how many guests they're bringing, and put in a deposit to confirm, so the chef isn't juggling texts and emails just to figure out who actually wants to book a night."
+  },
+  {
+    "id": "q_web_024_005",
+    "query_text": "Need a drop-in yoga class reservation tool for a small neighborhood studio that works as a website on desktop browsers — students can see this week's class schedule with the instructor name and how many spots are still open, click to reserve a spot in the class they want, and get a simple confirmation, so the front desk stops taking reservations over the phone and then scrambling to remember who said they were coming."
+  },
+  {
+    "id": "q_web_024_006",
+    "query_text": "Need a massage therapist appointment and package booking tool that works as a web app on desktop browsers — clients can see available time slots for the week, pick the type of session they want like a 60-minute or 90-minute massage, and also browse pre-paid packages such as five sessions at a discount, then book and pay in one go so the therapist doesn't have to follow up with every single person individually just to confirm a time."
+  },
+  {
+    "id": "q_web_024_007",
+    "query_text": "Need a new patient appointment scheduler for a small dental clinic that works as a website on desktop browsers — someone who's never been to the clinic before can fill in their name and contact info, pick from the available appointment slots shown on a simple calendar, and select the reason for their visit like a checkup or tooth pain, so the front desk stops spending half the morning answering calls just to get one person booked in."
+  },
+  {
+    "id": "q_web_025_001",
+    "query_text": "Build a social media marketing learning tool for neighborhood store owners that runs as a web app on desktop browsers — I want it to cover the basics in short lessons organized by topic, things like how to post consistently, which platforms actually matter for local shops, and how to write a caption that gets people to visit the store, with a progress tracker on the side so I know which lessons I've finished and which ones are still waiting."
+  },
+  {
+    "id": "q_web_025_002",
+    "query_text": "A POS system selection and setup guide tool for small retailers, built as a web app for desktop browsers, that walks through the key things to think about when picking a checkout system — like whether it tracks inventory, handles split payments, and works without internet — with a side-by-side comparison of a few common options and a step-by-step checklist for getting the chosen one up and running in the store."
+  },
+  {
+    "id": "q_web_025_003",
+    "query_text": "Build a health inspection checklist and food safety learning tool for small food businesses that works as a web app on desktop browsers — I want a structured list of all the common things inspectors check, grouped by area like kitchen hygiene, food storage, and staff practices, so the owner can go through each one, mark it as ready or needs attention, and also read a short plain-language explanation of why each rule exists and what they actually need to do to pass."
+  },
+  {
+    "id": "q_web_025_004",
+    "query_text": "Build a service pricing guide tool for independent contractors that runs as a web app on desktop browsers — it should walk through how to figure out what to charge, covering things like calculating your own costs, understanding what the local market rate looks like, and deciding whether to charge by the hour or by the job, with a simple calculator that lets me plug in my numbers and see a suggested price range so I stop undercharging for my work."
+  },
+  {
+    "id": "q_web_025_005",
+    "query_text": "Build a labor law basics learning tool for small business owners who are hiring staff for the first time, as a web app that works in a desktop browser — I want the lessons broken into clear topics like minimum wage rules, what to put in a work contract, how many hours someone can work before overtime kicks in, and what breaks employees are legally entitled to, with a short quiz at the end of each topic so I can check I actually understood it."
+  },
+  {
+    "id": "q_web_025_006",
+    "query_text": "A local search visibility learning tool for physical store owners, built as a web app for desktop browsers, that explains step by step how to get the shop showing up when people nearby search for it online — covering things like setting up a business listing, getting reviews, making sure the address and hours are consistent everywhere, and what kinds of words to use on the store's own website, with a checklist so I can tick things off as I go."
+  },
+  {
+    "id": "q_web_025_007",
+    "query_text": "Need a cash flow forecasting learning tool for small business owners that runs as a web app in a desktop browser — it should explain the basics in plain language, walk through how to estimate money coming in and going out each month, and include a simple practice exercise where I can enter my own numbers to see how the next few months might look, so I actually understand where my money is going instead of just hoping things work out at the end of the month."
+  }
+]

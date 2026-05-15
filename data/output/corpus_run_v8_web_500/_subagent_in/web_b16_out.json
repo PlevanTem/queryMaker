@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_054_005",
+    "query_text": "Create a media kit and advertising packages showcase site that feels like flipping through a beautifully curated brand magazine — rich full-bleed visuals, a warm editorial color palette, and the kind of tasteful typography that makes you want to linger on every detail. The web app should have a left sidebar showing the different ad package tiers, and when you click one, the main area opens up with elegant audience stats, reach numbers, and placement examples laid out like a proper editorial spread. Everything should feel premium and intentional, like something a luxury brand would hand to a potential partner."
+  },
+  {
+    "id": "q_web_054_006",
+    "query_text": "A promotional showcase app for a podcast network's listener growth campaign, the kind of thing that draws you in with bold, punchy visuals and a real sense of momentum — think dark backgrounds with electric accent colors, big listener milestone numbers that feel celebratory, and show artwork displayed in a way that makes each podcast feel like a world of its own. The website should have a warm, energetic vibe that makes sponsors and new listeners alike want to be part of this growing community, with a section showing growth charts styled beautifully and featured shows highlighted in a way that feels curated, not cluttered. For desktop browsers especially, it should use the full width to create an immersive, magazine-quality feel."
+  },
+  {
+    "id": "q_web_054_007",
+    "query_text": "A seasonal book bundle deals showcase app for a publisher, styled like a gorgeous independent bookshop window display — warm autumn tones for the fall collection, icy blues and silvers for winter picks, that kind of intentional seasonal mood-setting. The web app should let visitors browse the current season's bundle deals with book cover art front and center, grouped by theme or genre, with the pricing feeling secondary to the story of why these books belong together. For desktop browsers the layout should feel expansive and unhurried, like wandering through a well-curated shop, with enough breathing room between bundles that each one feels special rather than just another deal."
+  },
+  {
+    "id": "q_web_055_001",
+    "query_text": "Make a paid subscription tracker web app where I can see all the media subscriptions I'm paying for in one place — what I'm paying each month, when each one renews, and which ones I've actually been using recently. Right now I keep getting surprised by charges I forgot about, and I want something that shows me at a glance in a browser whether a subscription is worth keeping or if I should cancel it. It should let me add each service with the price and renewal date, and have a simple way to mark which ones I actually used this month."
+  },
+  {
+    "id": "q_web_055_002",
+    "query_text": "Build a web app for browsing and buying books and creative merchandise from independent publishers, where I can search by topic or vibe, see what's actually in stock, and add things to a cart without jumping between five different tabs. Right now buying stuff from small publishers means hunting around their messy sites or emailing someone, which is such a hassle — I just want to find the book or tote bag I'm looking for, see a clear price, and check out in one go, all in a desktop browser experience that actually works properly."
+  },
+  {
+    "id": "q_web_055_003",
+    "query_text": "Make a tipping and donation tool for content creators that makes it dead simple for readers to send a little money to say thanks — no account creation required, just pick an amount, leave an optional note, and done. I want to set this up as a web app where my readers can land on a clean page, see a few preset amounts like a coffee or a meal, type in their own amount if they want, and send it through without a bunch of friction getting in the way. Should also show a running total of tips received so readers feel like they're part of something."
+  },
+  {
+    "id": "q_web_055_004",
+    "query_text": "Make a digital magazine subscription manager web app where I can see all my active magazine subscriptions, know exactly when each one renews, and switch between plans or cancel without having to dig through old emails to find account details. I'm always confused about what tier I'm on and whether I'm getting charged monthly or yearly, so I need something in a desktop browser where everything is listed out clearly — subscription name, plan type, next billing date, and a simple way to update payment info or pause a subscription when I need to."
+  },
+  {
+    "id": "q_web_055_005",
+    "query_text": "Build a press release distribution marketplace web app where brands can upload a press release, pick which journalists or media outlets they want to reach, and actually track whether anyone opened or picked it up. Right now the whole process is a mess of spreadsheets and cold emails that go nowhere, and I want a browser-based tool where you can browse a list of media contacts by category, send your release to a targeted batch, and then see a simple status update for each one — sent, opened, or covered — all in one place."
+  },
+  {
+    "id": "q_web_055_006",
+    "query_text": "Make a sponsored content placement marketplace web app where publishers can list available spots on their site and brands can browse and book them directly, cutting out all the back-and-forth negotiation that wastes everyone's time. I want something in a desktop browser where a publisher fills in their audience size, topic focus, and available placements with prices, and then brands can search, compare, and request a booking right there without needing to send seventeen emails first. A simple status tracker so both sides know where a deal stands would save so much headache."
+  },
+  {
+    "id": "q_web_055_007",
+    "query_text": "An editorial content licensing and rights management app for people who want to buy or sell the rights to use written articles, photos, or other published content — the kind of tool where a publisher can list what they have available, set terms for how it can be reused and for how long, and then someone who wants to license it can browse by topic or content type and request the rights without needing to track down a contracts person. Runs as a web app for desktop browsers, and should keep a clear record of what's been licensed to whom and when it expires, so nobody has to chase down paperwork later."
+  },
+  {
+    "id": "q_web_056_001",
+    "query_text": "Make a journalist interview booking web app where PR folks and spokespeople can set their available times and reporters can pick a slot and confirm an interview without the endless back-and-forth of scheduling emails. I'm constantly wasting time just trying to lock down a 30-minute call, and I want something in a desktop browser where someone can see open slots, pick one, fill in what the interview is about, and get a confirmation automatically — and where the person being interviewed can see all their upcoming bookings in one clear list."
+  },
+  {
+    "id": "q_web_056_002",
+    "query_text": "Make a press conference seat reservation web app for credentialed journalists where reporters can log in, browse upcoming press events, check how many seats are left, and claim a spot in about two clicks. Right now everything is done by emailing a PR contact and hoping they get back to you before seats fill up, which is incredibly stressful when you're on a deadline. I want a desktop browser tool where you can see all upcoming events in a clear list, filter by date or topic, and reserve your seat with your press credential info already saved so you're not re-entering it every time."
+  },
+  {
+    "id": "q_web_056_003",
+    "query_text": "Create a book signing event registration app for fans who want to meet their favorite authors, where they can browse upcoming signing events, see which authors will be there, pick a time slot, and register without having to sign up for yet another confusing platform. The web app should show available events in a clean list with author info and location details, let fans grab a spot and get a simple confirmation, and make it easy to see their upcoming registrations in one place so they're not digging through email to find out when their slot is."
+  },
+  {
+    "id": "q_web_056_004",
+    "query_text": "Need a slot booking tool for literary festival attendees who want to meet authors for a quick one-on-one, where you can see which authors have open meet-and-greet times, how long each slot is, and grab a time without any confusion about whether it's taken. The whole process of finding and booking author sessions at festivals is such a mess — I want a web app for desktop browsers where the available authors are listed clearly, you can see their open slots in a simple calendar layout, pick one, enter your name, and get a confirmation right away so I'm not refreshing my email wondering if it went through."
+  },
+  {
+    "id": "q_web_056_005",
+    "query_text": "Create a podcast guest scheduling web app where people who want to appear on a show can submit a short pitch about who they are and what they'd talk about, and podcast hosts can browse submissions, accept ones they like, and set up recording times all in one place. I'm running a podcast and right now managing guest pitches and scheduling is total chaos — some people email, some DM, and I lose track of who I said yes to. I want a desktop browser tool where interested guests fill out a simple form with their topic and availability, I can review them in a list, mark ones I want to book, and we both get a confirmed recording time without ten follow-up messages."
+  },
+  {
+    "id": "q_web_056_006",
+    "query_text": "Make a press credentials application and pickup scheduling web app where journalists can fill out their credential request for an event, upload the required documents, and then pick a time slot to collect their badge without standing in a chaotic line. Right now the credentialing process for big events is just a wall of emails and PDF forms that go into a black hole, and I want something in a desktop browser where you submit everything online, see the status of your application, and book a specific pickup window so you're not showing up blind and waiting an hour."
+  },
+  {
+    "id": "q_web_056_007",
+    "query_text": "Create a newsroom tour booking web app for journalism students who want to visit a real working newsroom, where they can see available tour dates and times, find out what the tour covers, pick a slot for their group, and register without needing to call anyone or wait for an email reply. The web app should work cleanly in a desktop browser, show upcoming tour slots with how many spots are still open, let a student enter their school name and group size, and send a confirmation so they actually know they're booked — no more uncertainty about whether the reservation went through."
+  },
+  {
+    "id": "q_web_057_001",
+    "query_text": "Make a knowledge topic hub web app where articles and explainers on a specific subject are organized by subtopic so you can actually find what you're looking for without just scrolling endlessly. I want it to have a sidebar listing all the main categories, a main reading area that shows the articles under each one, and a way to mark things as read or saved so I can keep track of what I've already gone through. It should run in a desktop browser and feel like a well-organized reference site, the kind where you can tell at a glance how much there is on a topic and where to start."
+  },
+  {
+    "id": "q_web_057_002",
+    "query_text": "Build a long-form investigative reporting collection app for desktop browsers where deep-dive articles and multi-part series are organized by topic and easy to browse through. I want each article to show the title, the publication date, roughly how long it takes to read, and what subject it covers, with a way to filter by category so I'm not scrolling through everything to find what I want. There should also be a way to save articles to read later and mark them as finished, so I can keep a running list of what I've read and what's still waiting."
+  },
+  {
+    "id": "q_web_057_003",
+    "query_text": "Need a science explainer archive web app for desktop browsers where you can browse through clearly written explanations of scientific concepts, organized by topic like space, biology, or climate, and then test yourself with a short quiz after reading each one to see if it actually stuck. I want each entry to have the explainer text, maybe a simple diagram or illustration, and then a few questions at the end you can answer right there — and a way to track which topics you've already gone through so you can work your way through systematically instead of just picking randomly every time."
+  },
+  {
+    "id": "q_web_057_004",
+    "query_text": "Make a web app for learning how investigative journalism actually works — covering things like source verification, public records requests, data analysis, and structuring a long investigation — organized so you can work through it step by step or jump to whatever skill you need right now. I want it to have a clear list of topics on one side and the lesson content on the other, with a way to mark each section done as you go through it so you can see your progress. Should run cleanly in a desktop browser and feel like a real organized course, not just a pile of links."
+  },
+  {
+    "id": "q_web_057_005",
+    "query_text": "Make a historical newspaper digitization and research web app where old newspaper scans are organized by date and topic, with added notes and context explaining what was happening at the time so the articles actually make sense to someone reading them today. I want to be able to browse by year or by subject, read the original text alongside researcher annotations, and save pages I find interesting to a personal collection. The app should work in a desktop browser and feel like a proper archive tool — organized, searchable by keyword, and easy to navigate so you can follow a story across multiple issues without losing your place."
+  },
+  {
+    "id": "q_web_057_006",
+    "query_text": "A data journalism learning hub for desktop browsers where step-by-step tutorials on working with data — things like finding datasets, making charts, and fact-checking numbers — are collected in one organized place alongside real project examples that show how journalists actually used those skills in published stories. The app should list tutorials by skill level and topic so you know where to start, let you browse finished projects to see how the techniques look in practice, and have a way to save tutorials you want to come back to so you can build up your skills in a structured way."
+  },
+  {
+    "id": "q_web_058_001",
+    "query_text": "Build a reader comments web app that I can add to any article or blog post where readers can leave a comment, reply to other comments in a threaded way, and upvote replies they find helpful — basically a self-contained little community space underneath content. I want something I can drop into a website where the comments show up in a clean list, replying to someone collapses neatly under their original comment, and there's a simple way for me as the site owner to delete anything spammy. Should work well in a desktop browser where you can see the whole conversation laid out without everything feeling cramped."
+  },
+  {
+    "id": "q_web_058_002",
+    "query_text": "Create a user-submitted content platform web app where readers can write and submit their own articles or stories for a community publication, and editors can review what comes in and decide what gets published. I want something where a reader fills out a simple submission form with their piece and a short bio, it goes into a queue, and the editor can open each submission, read it, and either approve it to go live or send it back with a note. Works in a desktop browser, and should keep the submission list organized so nothing gets lost or forgotten."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_018_005",
+    "query_text": "Need a Secret Santa organizer app for my phone where I can add everyone's name to a list, hit a button to randomly draw pairs, and then each person can see who they got as their giftee — all without anyone else seeing the results. It'd be great if I could set a gift budget limit that shows up alongside the match, so everyone knows how much to spend."
+  },
+  {
+    "id": "q_scene_018_006",
+    "query_text": "Make a professional self-introduction builder tool for mobile where I fill in a few things about myself — like my job, what I'm good at, and what kind of opportunities I'm looking for — and it puts together a short, polished pitch I can use when meeting new people or networking. It should let me tweak the tone so it sounds more casual or more formal depending on the situation, and I can copy the final text straight to my clipboard."
+  },
+  {
+    "id": "q_scene_018_007",
+    "query_text": "Create a LinkedIn connection message personalizer tool as a mobile app where I type in a few details about the person I want to connect with — like their job title, what we have in common, or why I'm reaching out — and it spits out a short, personal message I can send them. The app should let me pick from a few different tones, like friendly or professional, and show me the finished message so I can copy it straight to my clipboard."
+  },
+  {
+    "id": "q_scene_018_008",
+    "query_text": "Need a birthday card creator app for my phone where I type in someone's name and a little message, pick a fun animated theme like confetti or balloons, and get a cute card I can screenshot and send to them over chat. It should feel lively and festive, and I want to be able to choose from a few different animation styles so each card feels a bit different."
+  },
+  {
+    "id": "q_scene_018_009",
+    "query_text": "Build a language tone checker tool for mobile where I paste in something I wrote — like an email or a message — and it tells me how formal or casual it sounds, maybe on a simple scale from very casual to very formal. It'd be really handy if it also gave me a quick suggestion or two on how to adjust the tone to fit whatever situation I need, like making it more professional for work or more relaxed for friends."
+  },
+  {
+    "id": "q_scene_019_001",
+    "query_text": "Fitness challenge tracker app for my phone with a big, satisfying progress ring right on the main screen that fills up a little more each day you check in — the kind that looks like an Apple Watch ring, all clean and motivating. You set your challenge length at the start, like a 30-day or 75-day challenge, and each day you tap to mark it done, the ring grows and the day count ticks up, with a small celebration animation when you hit milestones."
+  },
+  {
+    "id": "q_scene_019_002",
+    "query_text": "Build a product launch countdown app for the marketing team that lives on mobile so everyone can glance at it on their phones and feel the excitement building. It should have a bold, polished look with big numbers counting down the days, hours, minutes, and seconds until launch day, and each team member can set the exact launch date and give the countdown a custom name so it's clear which product or campaign it belongs to."
+  },
+  {
+    "id": "q_scene_019_003",
+    "query_text": "Create a conference and live event countdown app for mobile that has this crisp, editorial feel — like something you'd see on a sleek event website. You add your event name, date, and maybe a short tagline, and the app shows a gorgeous ticking countdown with days, hours, minutes, and seconds. It should let you save multiple upcoming events so you can flip between them, and each event card has its own subtle color or accent so they're easy to tell apart at a glance."
+  },
+  {
+    "id": "q_scene_019_004",
+    "query_text": "Retirement countdown tracker for mobile where you set your retirement date and your savings goal, and the app shows two things front and center: how many days are left until you retire, and a visual bar showing how far along you are toward your savings target. The whole thing should feel calm and reassuring, like a slow steady march toward something good — warm tones, clean layout, nothing cluttered or stressful."
+  },
+  {
+    "id": "q_scene_019_005",
+    "query_text": "Make a flight departure countdown app for my phone that looks clean and airport-board inspired — dark background, crisp white text — where I enter my flight number, gate, and departure time and it shows me a live countdown ticking down to boarding, plus a status label like \"On Time\" or \"Boarding\" that I can update myself. It should feel urgent but calm, the kind of thing I can glance at quickly while rushing through the terminal."
+  },
+  {
+    "id": "q_scene_019_006",
+    "query_text": "Build a festival and cultural celebration countdown app for mobile that feels festive and rich — warm colors, maybe a bit decorative depending on the holiday — where I can add upcoming cultural events like Lunar New Year, Diwali, Eid, or any local festival, set the date, and see a beautiful countdown ticking away. Each festival entry should have its own color palette or little decorative touch that matches the celebration's vibe, so the whole app feels alive and full of anticipation."
+  },
+  {
+    "id": "q_scene_019_007",
+    "query_text": "Build a sports season opener countdown app for mobile that feels energetic and bold — big team colors, loud typography, the kind of look that gets you hyped just opening it. You pick your sport and team, set the date of the first game, and the app counts down every second until the season starts, with a fun little animation when the big day finally arrives. It should feel like a fan made it, with real excitement baked into the design."
+  },
+  {
+    "id": "q_scene_019_008",
+    "query_text": "Countdown tracker for an upcoming book or album release that I'm excited about, designed as a mobile app with a moody, artistic feel — think dark backgrounds, elegant typography, maybe the cover art displayed big and beautiful. You enter the title, artist or author name, the release date, and whether it's a pre-order, and the app shows a sleek countdown running to the drop date, with an option to add a short personal note about why you're hyped for this one."
+  },
+  {
+    "id": "q_scene_019_009",
+    "query_text": "Subscription renewal tracker for my phone where I can add all the services I pay for — streaming, apps, memberships — set each renewal date, and see a clean countdown showing exactly how many days until each one renews. The home screen of the app should list everything in order of what's renewing soonest, so I always know what's coming up and never get surprised by a charge I forgot about."
+  },
+  {
+    "id": "q_scene_020_001",
+    "query_text": "QR code generator tool for my phone where I just paste in any link or type out any text and it instantly spits out a QR code I can screenshot and share — tired of searching for random online tools every time I need one. The mobile app should also let me download the QR code as an image and give me a small preview of what the code will look like before I save it."
+  },
+  {
+    "id": "q_scene_020_002",
+    "query_text": "Make a Base64 converter tool for my phone that handles both directions — I paste in plain text and it converts it to Base64, or I paste in a Base64 string and it decodes it back to readable text. I always have to Google a tool for this and it's annoying, so I want a simple mobile app where I just paste, tap convert, and copy the result in one go."
+  },
+  {
+    "id": "q_scene_020_003",
+    "query_text": "Build a hash generator tool for my phone where I type or paste any text and it instantly shows me the hash in MD5, SHA-256, and SHA-512 all at once so I can compare them side by side. Each hash should have a quick copy button so I can grab just the one I need without selecting the whole string manually — that part always takes way longer than it should."
+  },
+  {
+    "id": "q_scene_020_004",
+    "query_text": "Text comparison tool for my phone where I paste two versions of the same document — like a before and after — and it clearly highlights what changed between them, with added lines in one color and removed lines in another so I can spot differences instantly. It's so frustrating having to read through both versions manually, so I just want a clean mobile tool that does the highlighting for me and lets me scroll through the changes easily."
+  },
+  {
+    "id": "q_scene_020_005",
+    "query_text": "Create a regex tester tool for mobile where I type in a pattern and paste in some sample text, and it instantly highlights all the matches right in the text so I can see what it's catching. It should also show me a list of any captured groups below, broken out clearly, so I don't have to guess what the pattern is actually pulling out — really useful when I'm trying to figure out why a pattern isn't working the way I expect."
+  },
+  {
+    "id": "q_scene_020_006",
+    "query_text": "Make a HTML special characters converter tool for my phone that works both ways — I paste in raw text with things like ampersands and angle brackets and it converts them to their safe HTML versions, and I can also go the other direction and paste in encoded text to get the readable version back. It should be a simple, no-fuss mobile tool where I paste, tap a button, and copy the result."
+  },
+  {
+    "id": "q_scene_020_007",
+    "query_text": "Create a color converter tool for my phone where I type in a hex color code and it instantly shows me the matching values in RGB, HSL, and CMYK all at once, with a little color preview swatch so I can confirm it's the right shade — I keep needing to convert colors for different projects and always end up on random websites that are cluttered and slow to use on mobile."
+  },
+  {
+    "id": "q_scene_020_008",
+    "query_text": "Need a Morse code translator app for my phone that works both ways — I type in regular text and it shows me the dots and dashes, or I tap in the Morse code and it converts back to readable letters. It'd be really fun if there was also a playback button that blinks or beeps out the Morse rhythm so I can actually hear what it sounds like."
+  },
+  {
+    "id": "q_scene_020_009",
+    "query_text": "Make a barcode label text generator tool for my phone where I type in a product name, SKU, or any short info, and it spits out a barcode along with the label text neatly arranged below it so I can screenshot it or print it. I run a small side hustle selling handmade stuff and I'm tired of doing labels by hand, so I need a quick mobile tool that makes simple, clean barcode labels I can use on my packages."
+  },
+  {
+    "id": "q_scene_021_001",
+    "query_text": "Need a D&D dice roller app for my phone that lets me roll any combination of dice — like 2d6 or 1d20 plus a bonus — with a satisfying roll animation, and also has a random encounter generator where I pick a terrain type like dungeon or forest and it gives me a quick encounter idea to throw at my players. It saves me from having to look things up mid-session and keeps the game moving."
+  },
+  {
+    "id": "q_scene_021_002",
+    "query_text": "Make a random workout move picker app for my phone where I can tap a button and it pulls a random exercise from a built-in list of moves — stuff like squats, push-ups, jumping jacks — and tells me how many reps or seconds to do it for. I want to be able to filter by type like cardio or strength so I'm always getting something that fits what I'm in the mood for that day, and it's way more fun than staring at a fixed routine."
+  }
+]

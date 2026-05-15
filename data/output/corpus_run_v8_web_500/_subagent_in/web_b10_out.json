@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_033_002",
+    "query_text": "Need a learning center web app for our customer success team where all the training materials are organized in one place — things like onboarding guides, product walkthroughs, and best practice playbooks. I want each resource to have a clear category so people can find what they need fast, and there should be a way to mark items as completed so the team can track what they've gone through. Works in the browser on desktop, with a left-side list of topics and the content showing up on the right."
+  },
+  {
+    "id": "q_web_033_003",
+    "query_text": "A channel partner training portal for a web app where partners can log in, see all their required accreditation courses in order, and track which ones they've finished. The main screen should list all the training steps clearly so partners always know what's next, and there's a spot to see their current certification status — whether they're in progress, passed, or still pending. Should work comfortably in a desktop browser with a clean sidebar for navigation."
+  },
+  {
+    "id": "q_web_033_004",
+    "query_text": "Build a searchable internal knowledge base and wiki tool for our company, as a web app people use in their desktop browser. The main thing I need is a really good search bar at the top so anyone can type a keyword and immediately find the right article or document — no endless clicking through folders. Articles should be organized by topic category in a sidebar on the left, and each article page should be easy to read with a clear title and the last-updated date showing so people know if the info is current."
+  },
+  {
+    "id": "q_web_033_005",
+    "query_text": "A learning and development progress tracker for a desktop browser web app where managers can see how each employee is doing across all the training programs we run. The main screen should show a list of learners with a clear progress bar next to each name so you can tell at a glance who's on track and who's fallen behind. There should also be a summary area at the top with key numbers like total courses completed this month and overall completion rate, and you can click into any individual to see a detailed breakdown of what they've finished and what's still pending."
+  },
+  {
+    "id": "q_web_033_006",
+    "query_text": "Create a daily microlearning library app for enterprise employees, running as a web app in the desktop browser. Every day employees see one short lesson — a quick read, a short video clip, or a few practice questions — organized by topic so people can also browse the full content library whenever they want. I want a clear checklist feel where employees can see which daily lessons they've completed and which are still waiting, and there should be categories like Leadership, Compliance, and Product Knowledge so the content stays easy to find."
+  },
+  {
+    "id": "q_web_033_007",
+    "query_text": "Need a peer mentorship matching and tracking platform as a web app for desktop browsers, where employees can sign up as either a mentor or a mentee, fill in their areas of interest and skills, and then get matched with a suitable partner. Once matched, each pair should have a simple log where they can record their check-in dates and what topics they covered each session, so there's an actual record of the mentorship happening. There should also be a list view that shows all active mentorship pairs and whether each relationship is on track or overdue for a meeting."
+  },
+  {
+    "id": "q_web_034_001",
+    "query_text": "Create a technology partner directory and integration forum web app for desktop browsers where companies can browse all the partners in the ecosystem — each partner has a profile showing what they do and what products they connect with — and there's also a community area where people can post questions or tips about specific integrations. I want it to be easy to filter the directory by category or product type so you can quickly find the right partner, and the forum threads should be organized by integration topic so the useful conversations don't get buried."
+  },
+  {
+    "id": "q_web_034_002",
+    "query_text": "An employee innovation challenge site for a desktop browser web app where anyone at the company can submit a new idea for a challenge, describe the problem they're trying to solve, and let their coworkers vote on it and leave comments. Each idea card on the main listing should show the title, who submitted it, how many votes it has, and what challenge round it belongs to — so it's easy to scan through everything at a glance. There should also be a simple form for submitting a new idea with fields for the idea name, description, and which business area it relates to."
+  },
+  {
+    "id": "q_web_034_003",
+    "query_text": "Make a customer co-creation and ideation tool as a web app for desktop browsers where customers can join a workshop session, post their ideas on a shared board, and react to or build on what others have posted. I want a simple way to group ideas by theme so the organizer can cluster similar suggestions together, and there should be a voting button on each idea so participants can surface the ones they care about most. The whole thing should feel like a lively, open brainstorming space rather than a formal survey."
+  },
+  {
+    "id": "q_web_034_004",
+    "query_text": "Make a loyalty member community web app for desktop browsers where members can see their points balance and tier status right at the top of the home screen, browse available rewards they can redeem, and check out all the achievement badges they've unlocked so far. There should be a community feed where members share tips or celebrate milestones with each other, and a clear list of ways to earn more points — like completing activities or hitting spending thresholds — so members always know what to do next to level up."
+  },
+  {
+    "id": "q_web_034_005",
+    "query_text": "Create a brand-sponsored industry discussion forum web app for desktop browsers where professionals can join topic-based threads, share insights, and respond to questions in their field. The forum should have clearly labeled topic categories across the top so it's easy to jump into the conversations that matter to you, and each thread should show the original post plus replies in a clean readable layout. There should also be a featured section on the home screen where the sponsoring brand can highlight a weekly discussion question or a pinned expert perspective."
+  },
+  {
+    "id": "q_web_034_006",
+    "query_text": "Need a corporate volunteer coordination tracker as a web app that works in a desktop browser, where employees can browse upcoming volunteer events, sign up for the ones they want to join, and log the hours they contributed afterward. I want a simple overview that shows each event with the date, location, how many spots are still open, and how many hours it counts for — so it's easy to decide what to sign up for. There should also be a personal summary for each employee showing their total volunteer hours and the causes they've supported, so the company can actually see the overall impact."
+  },
+  {
+    "id": "q_web_034_007",
+    "query_text": "Need a customer success story showcase tool as a web app for desktop browsers where customers can submit their own story through a simple form — describing their challenge, what they did, and the result they got — and after review it gets published to a public gallery for everyone to read. Each published story should have the customer's name, industry, and a short summary visible on the listing, and there should be a filter so visitors can browse stories by industry or company size. The submission form itself should be straightforward with just a few fields so customers actually fill it out."
+  },
+  {
+    "id": "q_web_035_001",
+    "query_text": "A brand asset manager for the web browser where all our logos, colors, fonts, photos, and approved graphics are stored in one place so nobody has to dig through old email chains to find the right file version. The main screen should let you filter by asset type — like logos vs. photos vs. templates — and show a quick preview of each file so you know what you're grabbing before you download it. It should also show which version is the current approved one so people stop using outdated stuff."
+  },
+  {
+    "id": "q_web_035_002",
+    "query_text": "Make a performance review and goal tracking tool as a web app for desktop browsers where employees can write their own self-assessment, set their quarterly goals, and see how their scores have changed over time. Managers should be able to pull up any team member's goals, mark progress on each one, and add rating notes — all without chasing people down for updates. The goals list for each person should show whether each target is on track, at risk, or done, so there's no mystery about where things stand."
+  },
+  {
+    "id": "q_web_035_003",
+    "query_text": "Build a purchase request and approval tool as a web app for desktop browsers where any employee can fill out a simple form to request something they need to buy — item, amount, reason — and then it gets sent to their manager to approve or push back on. I want the approver to see all pending requests in a list sorted by date, be able to approve or reject each one with a comment, and have the requester get notified of the decision right away. No more emailing spreadsheets back and forth just to buy a desk lamp."
+  },
+  {
+    "id": "q_web_035_004",
+    "query_text": "A supplier scorecard and qualification tracker for a desktop browser web app where we can keep a list of all our vendors, score each one across a few standard criteria like quality, delivery, and pricing, and see at a glance which ones are qualified versus which ones have issues that need addressing. Each supplier entry should show their overall score, their qualification status, and when they were last reviewed — so the whole evaluation process is visible in one place instead of buried in spreadsheets. There should also be a way to add review notes whenever a supplier's score changes."
+  },
+  {
+    "id": "q_web_035_005",
+    "query_text": "A carbon footprint calculator and sustainability reporting tool for the browser that makes it actually easy to enter our company's emissions data — things like energy use, business travel, and shipping — and then shows a clear summary of our total footprint broken down by category. I want a running total that updates as you enter numbers so you can see the impact of each area right away, and a report summary at the end that lays out the key figures in plain language so it's ready to share with stakeholders. Tired of trying to do this in a mess of spreadsheets."
+  },
+  {
+    "id": "q_web_035_006",
+    "query_text": "Make a compliance training certification tracker for desktop browsers as a web app where the company can see exactly which employees have completed which required training courses and whose certificates are about to expire. The main list should show every employee with a color indicator — green for all current, yellow for expiring soon, red for overdue — so managers can immediately see who needs a nudge. Each employee's detail view should list every required course with the completion date and certificate expiry, so there's one place to check instead of hunting through HR emails."
+  },
+  {
+    "id": "q_web_035_007",
+    "query_text": "Create a sales territory planning and quota management tool as a web app for desktop browsers where sales managers can assign regions to reps, set each rep's quarterly quota, and then track how everyone is pacing against their target as the quarter goes on. The main screen should show all reps side by side with their territory, their quota number, and their current attainment percentage so you can see at a glance who needs help and who's crushing it. There should also be a way to adjust quotas mid-quarter with a note explaining why, so the history is always there."
+  },
+  {
+    "id": "q_web_036_001",
+    "query_text": "Make a public product roadmap site that feels honest and considered — not a glossy marketing page, just a real look at what the team is working on and what's coming next. The web app should have a clear timeline layout that groups upcoming features into \"Now,\" \"Next,\" and \"Later\" so visitors always know where things stand, and each item should have a short plain-language description so people understand what the feature actually does. I want it to feel like something a small team built with care, not a generic corporate template."
+  },
+  {
+    "id": "q_web_036_002",
+    "query_text": "Build a customer success stories web app that has personality and actually makes you want to read the cases, not just skim them and leave. It should feel warm and human — each story should have the customer's photo or logo, a short headline, and the key result they got, laid out so you can browse them in a desktop browser like flipping through something you'd want to share. Filters to sort by industry or outcome would be great so it doesn't just become a wall of logos. The whole thing should have a distinctive identity, not look like every other testimonials page."
+  },
+  {
+    "id": "q_web_036_003",
+    "query_text": "Make a SaaS integration marketplace and partners directory that feels curated, not like a dumping ground of logos. The web app should live in a desktop browser and let visitors browse integrations by category — like \"Finance,\" \"HR,\" \"Communication\" — with each partner showing a clear name, what they do in one line, and a link to learn more. The whole thing should have a clean, opinionated look that feels like someone actually thought about which integrations belong together, rather than just listing everything alphabetically and calling it done."
+  },
+  {
+    "id": "q_web_036_004",
+    "query_text": "A company culture website that actually captures what it feels like to work somewhere, not a list of buzzwords next to a stock photo. The web app for desktop browsers should lead with real team photos and let each person have a short quote or a line about what they care about, alongside a section where the company's values are written out in plain, specific language rather than vague corporate-speak. The tone should feel personal and a little candid — the kind of page that makes someone think \"these seem like real people\" before they decide whether to apply."
+  },
+  {
+    "id": "q_web_036_005",
+    "query_text": "Create a pricing comparison tool as a web app for desktop browsers that actually makes it easy to tell what's in each plan at a glance — none of that tiny-font confusion where you can't figure out what you're paying for. I want a clean side-by-side layout showing each plan's price and a checklist of what's included vs. what's not, with the most popular plan visually highlighted so visitors know what most people pick. The whole thing should have a confident, no-nonsense feel — clear enough that a visitor can make a decision in under a minute."
+  }
+]
