@@ -12,11 +12,31 @@ const fs   = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
 
-const TEMP_DIR = "data/output/_translate_haiku";
-const TARGETS = [
-  { prefix: "mobile", dir: "data/output/corpus_run_v7_mobile_500" },
-  { prefix: "web",    dir: "data/output/corpus_run_v7_web_500" },
-];
+const tempDirIdx = process.argv.indexOf("--temp-dir");
+const TEMP_DIR = tempDirIdx >= 0 && process.argv[tempDirIdx + 1]
+  ? process.argv[tempDirIdx + 1]
+  : "data/output/_translate_haiku";
+
+// Auto-derive prefix from batch filenames (e.g. mobile2_b01 → prefix=mobile2)
+function autoDetectTargets() {
+  const baseTargets = [
+    { match: /^mobile2?_/, dir: "data/output/corpus_run_v7_mobile_500" },
+    { match: /^web2?_/,    dir: "data/output/corpus_run_v7_web_500" },
+  ];
+  const files = fs.existsSync(TEMP_DIR) ? fs.readdirSync(TEMP_DIR) : [];
+  const seenPrefixes = new Set();
+  for (const f of files) {
+    const m = f.match(/^([a-z0-9]+)_b\d+_out\.json$/i);
+    if (m) seenPrefixes.add(m[1]);
+  }
+  const targets = [];
+  for (const prefix of seenPrefixes) {
+    const base = baseTargets.find((t) => t.match.test(prefix + "_"));
+    if (base) targets.push({ prefix, dir: base.dir });
+  }
+  return targets;
+}
+const TARGETS = autoDetectTargets();
 
 function loadAllOutputs(prefix) {
   const map = new Map();

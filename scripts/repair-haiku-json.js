@@ -4,7 +4,11 @@
 const fs   = require("fs");
 const path = require("path");
 
-const dir = "data/output/_translate_haiku";
+// Allow --dir override (default backward-compatible)
+const dirArgIdx = process.argv.indexOf("--dir");
+const dir = dirArgIdx >= 0 && process.argv[dirArgIdx + 1]
+  ? process.argv[dirArgIdx + 1]
+  : "data/output/_translate_haiku";
 const all = fs.readdirSync(dir).filter((f) => f.endsWith("_out.json"));
 
 let fixedFiles = 0;
