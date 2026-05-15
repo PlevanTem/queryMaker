@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-05-14T09:29:26.327Z",
+  "model": "claude-sonnet-4-6",
+  "mode": "corpus-direct",
+  "platform": "web",
+  "dry_run": false,
+  "plan_total": 50,
+  "executed_total": 5,
+  "complexity_mix": [
+    "medium"
+  ],
+  "successes": 5,
+  "failures": 0,
+  "scored": 0,
+  "pass_count": null,
+  "pass_rate": null,
+  "avg_quality_score": null,
+  "avg_word_count": 105,
+  "l1_distribution": {
+    "深度研究展示": 8,
+    "交互方式": 10,
+    "实用工具": 8,
+    "教育学习": 5,
+    "办公效率": 5,
+    "健康管理": 5,
+    "出行助手": 5,
+    "美食探店": 4
+  },
+  "elapsed_sec": 62.9
+}

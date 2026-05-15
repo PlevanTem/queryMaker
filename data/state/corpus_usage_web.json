@@ -1,0 +1,390 @@
+{
+  "version": 1,
+  "last_updated": "2026-05-14T11:01:54.344Z",
+  "usage": {
+    "个人用户 · 展示型": {
+      "个人主页": 1,
+      "交互式简历": 1,
+      "年度回顾/纪念日站": 1,
+      "Personal photography portfolio with EXIF metadata display": 1,
+      "Developer open-source contribution showcase and stats page": 1,
+      "Personal travel map with visited-countries photo log": 1,
+      "Artist illustration gallery with work-in-progress panels": 1
+    },
+    "个人用户 · 内容型": {
+      "个人博客": 1,
+      "日记/生活记录": 1,
+      "家庭纪念册": 1,
+      "Personal recipe collection and seasonal food journal": 1,
+      "Travel memoir site with destination photo journals": 1,
+      "Personal book review blog and reading progress log": 1,
+      "Movie watching diary with personal ratings and reflections": 1
+    },
+    "个人用户 · 学习型": {
+      "学习打卡站": 1,
+      "目标追踪站": 1,
+      "personal spaced-repetition flashcard review site": 1,
+      "daily reading log and book annotation tracker": 1,
+      "language learning progress dashboard for self-studiers": 1,
+      "coding practice journal for self-taught developers": 1,
+      "personal linked knowledge base and note wiki": 1
+    },
+    "个人用户 · 工具型": {
+      "个人记账/追踪器 Web 版": 1,
+      "家庭工具站": 1,
+      "Personal habit streak tracker with calendar heatmap": 1,
+      "Online resume builder with ATS keyword suggestions": 1,
+      "Personal knowledge base with bidirectional linked notes": 1,
+      "Web Pomodoro timer with daily session history log": 1,
+      "Subscription cost tracker and renewal alert calendar": 1
+    },
+    "创作者 · 展示型": {
+      "作品集 Portfolio": 1,
+      "画廊/虚拟展厅": 1,
+      "艺术家主页": 1,
+      "摄影师作品站": 1,
+      "Illustrator showcase site with animated artwork reveals": 1,
+      "Motion designer reel site with video loop previews": 1,
+      "3D character artist portfolio with WebGL model viewer": 1
+    },
+    "创作者 · 内容型": {
+      "创作博客": 1,
+      "Newsletter 站": 1,
+      "创作日志": 1,
+      "灵感笔记本": 1,
+      "Personal essay publishing platform for independent writers": 1,
+      "Long-form article portfolio site for freelance journalists": 1,
+      "Weekly digest curation site for niche topic communities": 1
+    },
+    "创作者 · 营销型": {
+      "粉丝订阅落地页": 1,
+      "新作发布页": 1,
+      "众筹预售页": 1,
+      "creator affiliate link hub and tracking page": 1,
+      "independent artist merch storefront site": 1,
+      "limited-edition digital download sales page": 1,
+      "creator media kit and press page": 1
+    },
+    "创作者 · 商务型": {
+      "印刷品/数字商品店": 1,
+      "付费作品": 1,
+      "周边商店": 1,
+      "Digital asset licensing marketplace for independent illustrators": 1,
+      "Font and typeface shop for graphic designers": 1,
+      "Stock photo and video clip store for solo creators": 1,
+      "Online course and workshop sales platform for creatives": 1
+    },
+    "创作者 · 预约型": {
+      "约拍/约稿系统": 1,
+      "1v1 辅导预约": 1,
+      "Freelance illustrator commission intake and scheduling portal": 1,
+      "Music producer beat session booking and sample upload site": 1,
+      "Voice actor recording session scheduler for indie game studios": 1,
+      "Wedding videographer inquiry, quote, and contract booking platform": 1,
+      "Custom tattoo artist appointment booking with design preview upload": 1
+    },
+    "创作者 · 学习型": {
+      "创作教程站": 1,
+      "付费在线课程": 1,
+      "技法分享": 1,
+      "illustration fundamentals course platform with peer critique": 1,
+      "typography mastery workshop site for graphic designers": 1,
+      "creative writing craft lesson library with instructor feedback": 1,
+      "motion design tutorial subscription for web animators": 1
+    },
+    "创作者 · 社区型": {
+      "粉丝社群": 1,
+      "作品评论区": 1,
+      "会员专属站": 1,
+      "fan-powered creative challenge voting platform": 1,
+      "indie comic artist community hub with serialized reading": 1,
+      "open critique board for illustrators and visual artists": 1,
+      "collaborative web fiction co-authoring community": 1
+    },
+    "创作者 · 工具型": {
+      "创作辅助工具": 1,
+      "素材管理站": 1,
+      "AI-powered blog post outline generator for writers": 1,
+      "Web-based storyboard creator for video producers": 1,
+      "Online screenplay formatter and collaboration editor": 1,
+      "Creative writing prompt randomizer and session tracker": 1,
+      "Font pairing preview and download tool for designers": 1
+    },
+    "自由职业 · 展示型": {
+      "专业主页": 1,
+      "案例集": 1,
+      "资质展示": 1,
+      "Freelance photographer portfolio with client testimonials": 1,
+      "Independent web designer work showcase site": 1,
+      "Freelance illustrator gallery and case studies page": 1,
+      "Independent consultant project case study library": 1
+    },
+    "自由职业 · 内容型": {
+      "专业博客": 1,
+      "白皮书/洞察": 1,
+      "行业报告": 1,
+      "Independent consultant newsletter archive and subscriber portal": 1,
+      "Freelance writer published clips and byline showcase": 1,
+      "Independent researcher open notes and literature review site": 1,
+      "UX consultant case study library with project walkthroughs": 1
+    },
+    "自由职业 · 营销型": {
+      "服务介绍落地页": 1,
+      "个人品牌站": 1,
+      "Freelance designer portfolio with conversion-focused case studies": 1,
+      "Independent consultant authority blog and lead magnet hub": 1,
+      "Professional speaker booking page with keynote topics showcase": 1,
+      "Freelance copywriter sample work gallery and inquiry funnel": 1,
+      "Client testimonial wall with quantified results display": 1
+    },
+    "自由职业 · 预约型": {
+      "咨询预约系统": 1,
+      "会诊/问诊系统": 1,
+      "法律咨询预约": 1,
+      "Freelance photographer session booking platform": 1,
+      "Independent financial advisor appointment scheduler": 1,
+      "Personal fitness trainer online booking site": 1,
+      "Private music teacher lesson scheduling platform": 1
+    },
+    "自由职业 · 学习型": {
+      "Workshop/培训": 1,
+      "付费资源下载": 1,
+      "专业课程": 1,
+      "Freelance skill certification and digital badge platform": 1,
+      "Peer mentorship matching site for independent consultants": 1,
+      "Portfolio-linked learning path progress tracker for freelancers": 1,
+      "Business and finance literacy hub for self-employed professionals": 1
+    },
+    "自由职业 · 社区型": {
+      "客户社群": 1,
+      "Freelance writer peer critique and feedback forum": 1,
+      "Independent consultant mastermind group platform": 1,
+      "Remote designer accountability partner matching site": 1,
+      "Freelancer rate transparency and pay sharing community": 1,
+      "Open-source contributor recognition and discussion board": 1,
+      "Solopreneur daily co-working accountability group site": 1
+    },
+    "自由职业 · 工具型": {
+      "专业计算器": 1,
+      "自助评估工具": 1,
+      "freelance hourly rate calculator with market benchmarks": 1,
+      "client onboarding checklist generator for freelance consultants": 1,
+      "project scope and timeline estimator for developers": 1,
+      "freelance invoice generator with automated tax calculation": 1,
+      "contract clause builder for independent contractors": 1
+    },
+    "小微商户 · 展示型": {
+      "门店官网": 1,
+      "品牌形象站": 1,
+      "环境/菜单展示": 1,
+      "婚礼主题站": 1,
+      "neighborhood bakery showcase with rotating seasonal menu gallery": 1,
+      "independent hair salon stylist portfolio and lookbook site": 1,
+      "family-owned florist arrangement gallery and seasonal display": 1
+    },
+    "小微商户 · 内容型": {
+      "公告/新品上新": 1,
+      "门店故事": 1,
+      "品牌日志": 1,
+      "Local bakery weekly recipe and baking tips blog": 1,
+      "Neighborhood hair salon stylist portfolio showcase site": 1,
+      "Independent florist seasonal arrangement inspiration gallery": 1,
+      "Local yoga studio instructor bio and class philosophy page": 1
+    },
+    "小微商户 · 营销型": {
+      "优惠活动页": 1,
+      "团购/拼团页": 1,
+      "节日 campaign": 1,
+      "开业引流页": 1,
+      "Local barbershop loyalty reward stamp web page": 1,
+      "Restaurant flash sale countdown landing page": 1,
+      "Nail salon refer-a-friend discount portal": 1
+    },
+    "小微商户 · 商务型": {
+      "在线菜单": 1,
+      "小型电商": 1,
+      "外卖下单": 1,
+      "会员储值": 1,
+      "service quote calculator for small home repair contractors": 1,
+      "staff rota planner web app for micro-restaurant teams": 1,
+      "freelance caterer invoice and receipt generation portal": 1
+    },
+    "小微商户 · 预约型": {
+      "订座/预约服务": 1,
+      "上门服务预约": 1,
+      "试妆/咨询预约": 1,
+      "pet grooming salon appointment booking site": 1,
+      "local music tutor one-on-one lesson booking platform": 1,
+      "photography studio portrait session reservation site": 1,
+      "small auto repair shop service appointment scheduler": 1
+    },
+    "小微商户 · 学习型": {
+      "使用教程": 1,
+      "产品知识普及": 1,
+      "tax filing step-by-step guide for micro-business owners": 1,
+      "local business license application walkthrough portal": 1,
+      "food safety certification prep course for restaurant staff": 1,
+      "retail inventory management basics tutorial site": 1,
+      "customer service scripts library for small shop staff": 1
+    },
+    "小微商户 · 社区型": {
+      "会员/粉丝圈": 1,
+      "大众点评入口": 1,
+      "neighborhood small-business directory with community ratings": 1,
+      "local artisan marketplace with peer reviews and forums": 1,
+      "community bulletin board for neighborhood service promotions": 1,
+      "neighborhood group-buying site for independent local shops": 1,
+      "multi-merchant loyalty stamp card aggregator for local stores": 1
+    },
+    "小微商户 · 工具型": {
+      "选房/选座工具": 1,
+      "门店定位查询": 1,
+      "online appointment booking calendar for small salons and barbershops": 1,
+      "digital invoice generator for local freelance tradespeople": 1,
+      "small business inventory tracker with low-stock email alerts": 1,
+      "staff shift scheduling board for micro-restaurant teams": 1,
+      "customer loyalty punch-card web app for neighborhood cafes": 1
+    },
+    "中大型企业 · 展示型": {
+      "企业官网": 1,
+      "品牌故事": 1,
+      "年报/ESG 报告": 1,
+      "文化展示站": 1,
+      "Corporate executive leadership team profile showcase": 1,
+      "Global office locations interactive map microsite": 1,
+      "Enterprise product portfolio visual showcase site": 1
+    },
+    "中大型企业 · 内容型": {
+      "新闻中心": 1,
+      "企业博客": 1,
+      "投资者关系": 1,
+      "行业洞察": 1,
+      "Corporate ESG and sustainability reporting hub": 1,
+      "Interactive annual report microsite for stakeholders": 1,
+      "Executive thought leadership content platform": 1
+    },
+    "中大型企业 · 营销型": {
+      "产品发布页": 1,
+      "campaign 站": 1,
+      "周年庆专题": 1,
+      "渠道招募": 1,
+      "brand heritage timeline interactive microsite": 1,
+      "limited-edition product drop countdown landing page": 1,
+      "corporate sustainability impact report microsite": 1
+    },
+    "中大型企业 · 商务型": {
+      "官方旗舰店": 1,
+      "B2B/B2C 电商": 1,
+      "经销商系统": 1,
+      "Corporate investor relations and earnings reporting portal": 1,
+      "Enterprise procurement and vendor sourcing platform": 1,
+      "Global supply chain tracking and visibility hub": 1,
+      "Corporate ESG and sustainability reporting site": 1
+    },
+    "中大型企业 · 预约型": {
+      "销售线索表单": 1,
+      "合作洽谈": 1,
+      "渠道申请": 1,
+      "Enterprise software product demo booking portal": 1,
+      "Corporate IT infrastructure audit scheduling site": 1,
+      "Executive briefing center visit reservation system": 1,
+      "B2B trade show one-on-one meeting slot booking": 1
+    },
+    "中大型企业 · 学习型": {
+      "企业大学": 1,
+      "员工培训门户": 1,
+      "产品手册": 1,
+      "Corporate compliance certification and audit trail portal": 1,
+      "New hire onboarding learning journey platform": 1,
+      "Sales team product knowledge certification hub": 1,
+      "Leadership development curriculum and cohort tracking site": 1
+    },
+    "中大型企业 · 社区型": {
+      "客户社区": 1,
+      "用户案例站": 1,
+      "品牌粉丝圈": 1,
+      "Enterprise developer advocate community portal with Q&A boards": 1,
+      "Brand ambassador program hub with tiered leaderboard": 1,
+      "Corporate alumni professional networking and job board": 1,
+      "Customer advisory council voting and proposal platform": 1
+    },
+    "中大型企业 · 工具型": {
+      "客户自助服务": 1,
+      "产品配置器": 1,
+      "售后工单系统": 1,
+      "enterprise vendor onboarding portal with compliance checklist": 1,
+      "corporate expense report submission and approval tool": 1,
+      "B2B contract lifecycle management and e-signature platform": 1,
+      "internal IT asset inventory and request management portal": 1
+    },
+    "初创公司 · 展示型": {
+      "融资/团队介绍": 1,
+      "品牌站": 1,
+      "关于页/Manifesto": 1,
+      "SaaS product launch page with animated feature walkthrough": 1,
+      "Interactive product demo site with live sandbox preview": 1,
+      "Startup investor pitch deck as scrollable web experience": 1,
+      "Press kit and media assets download page": 1
+    },
+    "初创公司 · 内容型": {
+      "技术博客": 1,
+      "更新日志 Changelog": 1,
+      "成长故事": 1,
+      "founder interview publication for early-stage SaaS teams": 1,
+      "public product roadmap and feature announcement board": 1,
+      "customer success case study showcase site": 1,
+      "SaaS industry benchmarks and metrics report hub": 1
+    },
+    "初创公司 · 营销型": {
+      "SaaS 产品落地页": 1,
+      "Pricing 页": 1,
+      "功能对比页": 1,
+      "开发者宣传页": 1,
+      "Free trial signup page with live social proof": 1,
+      "Product waitlist page with viral referral counter": 1,
+      "Interactive ROI calculator lead-gen landing page": 1
+    },
+    "初创公司 · 商务型": {
+      "订阅购买": 1,
+      "增值服务购买": 1,
+      "SaaS enterprise pricing calculator with annual contract options": 1,
+      "B2B sales proposal and quote generation platform": 1,
+      "SaaS ARR and revenue forecasting dashboard for teams": 1,
+      "Multi-tier subscription plan comparison and selection page": 1,
+      "Customer expansion revenue and upsell opportunity tracker": 1
+    },
+    "初创公司 · 预约型": {
+      "Demo 预约": 1,
+      "Sales 洽谈": 1,
+      "Waitlist 登记": 1,
+      "Investor pitch call scheduling page for pre-seed founders": 1,
+      "Co-founder matching speed-dating session booking site": 1,
+      "Startup mentor office-hours slot reservation portal": 1,
+      "Accelerator cohort interview time-slot booking platform": 1
+    },
+    "初创公司 · 学习型": {
+      "产品文档": 1,
+      "教程/学院": 1,
+      "最佳实践库": 1,
+      "Interactive API sandbox with live code execution": 1,
+      "SaaS onboarding checklist portal for new team members": 1,
+      "Feature adoption analytics dashboard for product teams": 1,
+      "Customer education portal with multi-tier certification tracks": 1
+    },
+    "初创公司 · 社区型": {
+      "用户论坛": 1,
+      "Discord/Slack 入口": 1,
+      "Feature Request": 1,
+      "public product roadmap voting board for SaaS users": 1,
+      "customer story submission and showcase portal": 1,
+      "open beta tester recruitment and sign-up site": 1
+    },
+    "初创公司 · 工具型": {
+      "SaaS 应用本体": 1,
+      "Dashboard": 1,
+      "数据分析台": 1,
+      "Feature flag management console for SaaS teams": 1,
+      "Team roadmap and sprint planning web app": 1
+    }
+  }
+}

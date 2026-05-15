@@ -1,0 +1,1574 @@
+{
+  "generated_at": "2026-05-14T09:48:49.427Z",
+  "version": "v2",
+  "source_file": "全网网站类型全景矩阵.md",
+  "source_sheet": "main_matrix",
+  "platform": "web",
+  "total_scenarios": 74,
+  "scenarios": [
+    {
+      "id": "web_001",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 1,
+      "l1_scene": "个人用户",
+      "l2_scene_raw": "个人用户 × ① 展示型",
+      "l2_scene_label": "个人用户 · 展示型",
+      "l2_scene_examples": [
+        "个人主页",
+        "交互式简历",
+        "年度回顾/纪念日站"
+      ],
+      "application_type_candidates": [
+        "个人主页应用",
+        "交互式简历应用",
+        "年度回顾/纪念日站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_002",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 2,
+      "l1_scene": "个人用户",
+      "l2_scene_raw": "个人用户 × ② 内容型",
+      "l2_scene_label": "个人用户 · 内容型",
+      "l2_scene_examples": [
+        "个人博客",
+        "日记/生活记录",
+        "家庭纪念册"
+      ],
+      "application_type_candidates": [
+        "个人博客应用",
+        "日记/生活记录应用",
+        "家庭纪念册应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_003",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 6,
+      "l1_scene": "个人用户",
+      "l2_scene_raw": "个人用户 × ⑥ 学习型",
+      "l2_scene_label": "个人用户 · 学习型",
+      "l2_scene_examples": [
+        "学习打卡站",
+        "目标追踪站"
+      ],
+      "application_type_candidates": [
+        "学习打卡站应用",
+        "目标追踪站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_004",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 8,
+      "l1_scene": "个人用户",
+      "l2_scene_raw": "个人用户 × ⑧ 工具型",
+      "l2_scene_label": "个人用户 · 工具型",
+      "l2_scene_examples": [
+        "个人记账/追踪器 Web 版",
+        "家庭工具站"
+      ],
+      "application_type_candidates": [
+        "个人记账/追踪器 Web 版应用",
+        "家庭工具站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_005",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 9,
+      "l1_scene": "创作者",
+      "l2_scene_raw": "创作者 × ① 展示型",
+      "l2_scene_label": "创作者 · 展示型",
+      "l2_scene_examples": [
+        "作品集 Portfolio",
+        "画廊/虚拟展厅",
+        "艺术家主页",
+        "摄影师作品站"
+      ],
+      "application_type_candidates": [
+        "作品集 Portfolio应用",
+        "画廊/虚拟展厅应用",
+        "艺术家主页应用",
+        "摄影师作品站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_006",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 10,
+      "l1_scene": "创作者",
+      "l2_scene_raw": "创作者 × ② 内容型",
+      "l2_scene_label": "创作者 · 内容型",
+      "l2_scene_examples": [
+        "创作博客",
+        "Newsletter 站",
+        "创作日志",
+        "灵感笔记本"
+      ],
+      "application_type_candidates": [
+        "创作博客应用",
+        "Newsletter 站应用",
+        "创作日志应用",
+        "灵感笔记本应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_007",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 11,
+      "l1_scene": "创作者",
+      "l2_scene_raw": "创作者 × ③ 营销型",
+      "l2_scene_label": "创作者 · 营销型",
+      "l2_scene_examples": [
+        "粉丝订阅落地页",
+        "新作发布页",
+        "众筹预售页"
+      ],
+      "application_type_candidates": [
+        "粉丝订阅落地页应用",
+        "新作发布页应用",
+        "众筹预售页应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_008",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 12,
+      "l1_scene": "创作者",
+      "l2_scene_raw": "创作者 × ④ 商务型",
+      "l2_scene_label": "创作者 · 商务型",
+      "l2_scene_examples": [
+        "印刷品/数字商品店",
+        "付费作品",
+        "周边商店"
+      ],
+      "application_type_candidates": [
+        "印刷品/数字商品店应用",
+        "付费作品应用",
+        "周边商店应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_009",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 13,
+      "l1_scene": "创作者",
+      "l2_scene_raw": "创作者 × ⑤ 预约型",
+      "l2_scene_label": "创作者 · 预约型",
+      "l2_scene_examples": [
+        "约拍/约稿系统",
+        "1v1 辅导预约"
+      ],
+      "application_type_candidates": [
+        "约拍/约稿系统应用",
+        "1v1 辅导预约应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_010",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 14,
+      "l1_scene": "创作者",
+      "l2_scene_raw": "创作者 × ⑥ 学习型",
+      "l2_scene_label": "创作者 · 学习型",
+      "l2_scene_examples": [
+        "创作教程站",
+        "付费在线课程",
+        "技法分享"
+      ],
+      "application_type_candidates": [
+        "创作教程站应用",
+        "付费在线课程应用",
+        "技法分享应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_011",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 15,
+      "l1_scene": "创作者",
+      "l2_scene_raw": "创作者 × ⑦ 社区型",
+      "l2_scene_label": "创作者 · 社区型",
+      "l2_scene_examples": [
+        "粉丝社群",
+        "作品评论区",
+        "会员专属站"
+      ],
+      "application_type_candidates": [
+        "粉丝社群应用",
+        "作品评论区应用",
+        "会员专属站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_012",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 16,
+      "l1_scene": "创作者",
+      "l2_scene_raw": "创作者 × ⑧ 工具型",
+      "l2_scene_label": "创作者 · 工具型",
+      "l2_scene_examples": [
+        "创作辅助工具",
+        "素材管理站"
+      ],
+      "application_type_candidates": [
+        "创作辅助工具应用",
+        "素材管理站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_013",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 17,
+      "l1_scene": "自由职业",
+      "l2_scene_raw": "自由职业 / 专业人士 × ① 展示型",
+      "l2_scene_label": "自由职业 · 展示型",
+      "l2_scene_examples": [
+        "专业主页",
+        "案例集",
+        "资质展示"
+      ],
+      "application_type_candidates": [
+        "专业主页应用",
+        "案例集应用",
+        "资质展示应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_014",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 18,
+      "l1_scene": "自由职业",
+      "l2_scene_raw": "自由职业 / 专业人士 × ② 内容型",
+      "l2_scene_label": "自由职业 · 内容型",
+      "l2_scene_examples": [
+        "专业博客",
+        "白皮书/洞察",
+        "行业报告"
+      ],
+      "application_type_candidates": [
+        "专业博客应用",
+        "白皮书/洞察应用",
+        "行业报告应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_015",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 19,
+      "l1_scene": "自由职业",
+      "l2_scene_raw": "自由职业 / 专业人士 × ③ 营销型",
+      "l2_scene_label": "自由职业 · 营销型",
+      "l2_scene_examples": [
+        "服务介绍落地页",
+        "个人品牌站"
+      ],
+      "application_type_candidates": [
+        "服务介绍落地页应用",
+        "个人品牌站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_016",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 21,
+      "l1_scene": "自由职业",
+      "l2_scene_raw": "自由职业 / 专业人士 × ⑤ 预约型",
+      "l2_scene_label": "自由职业 · 预约型",
+      "l2_scene_examples": [
+        "咨询预约系统",
+        "会诊/问诊系统",
+        "法律咨询预约"
+      ],
+      "application_type_candidates": [
+        "咨询预约系统应用",
+        "会诊/问诊系统应用",
+        "法律咨询预约应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_017",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 22,
+      "l1_scene": "自由职业",
+      "l2_scene_raw": "自由职业 / 专业人士 × ⑥ 学习型",
+      "l2_scene_label": "自由职业 · 学习型",
+      "l2_scene_examples": [
+        "Workshop/培训",
+        "付费资源下载",
+        "专业课程"
+      ],
+      "application_type_candidates": [
+        "Workshop/培训应用",
+        "付费资源下载应用",
+        "专业课程应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_018",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 23,
+      "l1_scene": "自由职业",
+      "l2_scene_raw": "自由职业 / 专业人士 × ⑦ 社区型",
+      "l2_scene_label": "自由职业 · 社区型",
+      "l2_scene_examples": [
+        "客户社群"
+      ],
+      "application_type_candidates": [
+        "客户社群应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_019",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 24,
+      "l1_scene": "自由职业",
+      "l2_scene_raw": "自由职业 / 专业人士 × ⑧ 工具型",
+      "l2_scene_label": "自由职业 · 工具型",
+      "l2_scene_examples": [
+        "专业计算器",
+        "自助评估工具"
+      ],
+      "application_type_candidates": [
+        "专业计算器应用",
+        "自助评估工具应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_020",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 25,
+      "l1_scene": "小微商户",
+      "l2_scene_raw": "小微商户 / 本地服务业 × ① 展示型",
+      "l2_scene_label": "小微商户 · 展示型",
+      "l2_scene_examples": [
+        "门店官网",
+        "品牌形象站",
+        "环境/菜单展示",
+        "婚礼主题站"
+      ],
+      "application_type_candidates": [
+        "门店官网应用",
+        "品牌形象站应用",
+        "环境/菜单展示应用",
+        "婚礼主题站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_021",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 26,
+      "l1_scene": "小微商户",
+      "l2_scene_raw": "小微商户 / 本地服务业 × ② 内容型",
+      "l2_scene_label": "小微商户 · 内容型",
+      "l2_scene_examples": [
+        "公告/新品上新",
+        "门店故事",
+        "品牌日志"
+      ],
+      "application_type_candidates": [
+        "公告/新品上新应用",
+        "门店故事应用",
+        "品牌日志应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_022",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 27,
+      "l1_scene": "小微商户",
+      "l2_scene_raw": "小微商户 / 本地服务业 × ③ 营销型",
+      "l2_scene_label": "小微商户 · 营销型",
+      "l2_scene_examples": [
+        "优惠活动页",
+        "团购/拼团页",
+        "节日 campaign",
+        "开业引流页"
+      ],
+      "application_type_candidates": [
+        "优惠活动页应用",
+        "团购/拼团页应用",
+        "节日 campaign应用",
+        "开业引流页应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_023",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 28,
+      "l1_scene": "小微商户",
+      "l2_scene_raw": "小微商户 / 本地服务业 × ④ 商务型",
+      "l2_scene_label": "小微商户 · 商务型",
+      "l2_scene_examples": [
+        "在线菜单",
+        "小型电商",
+        "外卖下单",
+        "会员储值"
+      ],
+      "application_type_candidates": [
+        "在线菜单应用",
+        "小型电商应用",
+        "外卖下单应用",
+        "会员储值应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_024",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 29,
+      "l1_scene": "小微商户",
+      "l2_scene_raw": "小微商户 / 本地服务业 × ⑤ 预约型",
+      "l2_scene_label": "小微商户 · 预约型",
+      "l2_scene_examples": [
+        "订座/预约服务",
+        "上门服务预约",
+        "试妆/咨询预约"
+      ],
+      "application_type_candidates": [
+        "订座/预约服务应用",
+        "上门服务预约应用",
+        "试妆/咨询预约应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_025",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 30,
+      "l1_scene": "小微商户",
+      "l2_scene_raw": "小微商户 / 本地服务业 × ⑥ 学习型",
+      "l2_scene_label": "小微商户 · 学习型",
+      "l2_scene_examples": [
+        "使用教程",
+        "产品知识普及"
+      ],
+      "application_type_candidates": [
+        "使用教程应用",
+        "产品知识普及应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_026",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 31,
+      "l1_scene": "小微商户",
+      "l2_scene_raw": "小微商户 / 本地服务业 × ⑦ 社区型",
+      "l2_scene_label": "小微商户 · 社区型",
+      "l2_scene_examples": [
+        "会员/粉丝圈",
+        "大众点评入口"
+      ],
+      "application_type_candidates": [
+        "会员/粉丝圈应用",
+        "大众点评入口应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_027",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 32,
+      "l1_scene": "小微商户",
+      "l2_scene_raw": "小微商户 / 本地服务业 × ⑧ 工具型",
+      "l2_scene_label": "小微商户 · 工具型",
+      "l2_scene_examples": [
+        "选房/选座工具",
+        "门店定位查询"
+      ],
+      "application_type_candidates": [
+        "选房/选座工具应用",
+        "门店定位查询应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_028",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 33,
+      "l1_scene": "中大型企业",
+      "l2_scene_raw": "中大型企业 / 品牌 × ① 展示型",
+      "l2_scene_label": "中大型企业 · 展示型",
+      "l2_scene_examples": [
+        "企业官网",
+        "品牌故事",
+        "年报/ESG 报告",
+        "文化展示站"
+      ],
+      "application_type_candidates": [
+        "企业官网应用",
+        "品牌故事应用",
+        "年报/ESG 报告应用",
+        "文化展示站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_029",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 34,
+      "l1_scene": "中大型企业",
+      "l2_scene_raw": "中大型企业 / 品牌 × ② 内容型",
+      "l2_scene_label": "中大型企业 · 内容型",
+      "l2_scene_examples": [
+        "新闻中心",
+        "企业博客",
+        "投资者关系",
+        "行业洞察"
+      ],
+      "application_type_candidates": [
+        "新闻中心应用",
+        "企业博客应用",
+        "投资者关系应用",
+        "行业洞察应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_030",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 35,
+      "l1_scene": "中大型企业",
+      "l2_scene_raw": "中大型企业 / 品牌 × ③ 营销型",
+      "l2_scene_label": "中大型企业 · 营销型",
+      "l2_scene_examples": [
+        "产品发布页",
+        "campaign 站",
+        "周年庆专题",
+        "渠道招募"
+      ],
+      "application_type_candidates": [
+        "产品发布页应用",
+        "campaign 站应用",
+        "周年庆专题应用",
+        "渠道招募应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_031",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 36,
+      "l1_scene": "中大型企业",
+      "l2_scene_raw": "中大型企业 / 品牌 × ④ 商务型",
+      "l2_scene_label": "中大型企业 · 商务型",
+      "l2_scene_examples": [
+        "官方旗舰店",
+        "B2B/B2C 电商",
+        "经销商系统"
+      ],
+      "application_type_candidates": [
+        "官方旗舰店应用",
+        "B2B/B2C 电商应用",
+        "经销商系统应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_032",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 37,
+      "l1_scene": "中大型企业",
+      "l2_scene_raw": "中大型企业 / 品牌 × ⑤ 预约型",
+      "l2_scene_label": "中大型企业 · 预约型",
+      "l2_scene_examples": [
+        "销售线索表单",
+        "合作洽谈",
+        "渠道申请"
+      ],
+      "application_type_candidates": [
+        "销售线索表单应用",
+        "合作洽谈应用",
+        "渠道申请应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_033",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 38,
+      "l1_scene": "中大型企业",
+      "l2_scene_raw": "中大型企业 / 品牌 × ⑥ 学习型",
+      "l2_scene_label": "中大型企业 · 学习型",
+      "l2_scene_examples": [
+        "企业大学",
+        "员工培训门户",
+        "产品手册"
+      ],
+      "application_type_candidates": [
+        "企业大学应用",
+        "员工培训门户应用",
+        "产品手册应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_034",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 39,
+      "l1_scene": "中大型企业",
+      "l2_scene_raw": "中大型企业 / 品牌 × ⑦ 社区型",
+      "l2_scene_label": "中大型企业 · 社区型",
+      "l2_scene_examples": [
+        "客户社区",
+        "用户案例站",
+        "品牌粉丝圈"
+      ],
+      "application_type_candidates": [
+        "客户社区应用",
+        "用户案例站应用",
+        "品牌粉丝圈应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_035",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 40,
+      "l1_scene": "中大型企业",
+      "l2_scene_raw": "中大型企业 / 品牌 × ⑧ 工具型",
+      "l2_scene_label": "中大型企业 · 工具型",
+      "l2_scene_examples": [
+        "客户自助服务",
+        "产品配置器",
+        "售后工单系统"
+      ],
+      "application_type_candidates": [
+        "客户自助服务应用",
+        "产品配置器应用",
+        "售后工单系统应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_036",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 41,
+      "l1_scene": "初创公司",
+      "l2_scene_raw": "初创公司 / SaaS 团队 × ① 展示型",
+      "l2_scene_label": "初创公司 · 展示型",
+      "l2_scene_examples": [
+        "融资/团队介绍",
+        "品牌站",
+        "关于页/Manifesto"
+      ],
+      "application_type_candidates": [
+        "融资/团队介绍应用",
+        "品牌站应用",
+        "关于页/Manifesto应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_037",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 42,
+      "l1_scene": "初创公司",
+      "l2_scene_raw": "初创公司 / SaaS 团队 × ② 内容型",
+      "l2_scene_label": "初创公司 · 内容型",
+      "l2_scene_examples": [
+        "技术博客",
+        "更新日志 Changelog",
+        "成长故事"
+      ],
+      "application_type_candidates": [
+        "技术博客应用",
+        "更新日志 Changelog应用",
+        "成长故事应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_038",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 43,
+      "l1_scene": "初创公司",
+      "l2_scene_raw": "初创公司 / SaaS 团队 × ③ 营销型",
+      "l2_scene_label": "初创公司 · 营销型",
+      "l2_scene_examples": [
+        "SaaS 产品落地页",
+        "Pricing 页",
+        "功能对比页",
+        "开发者宣传页"
+      ],
+      "application_type_candidates": [
+        "SaaS 产品落地页应用",
+        "Pricing 页应用",
+        "功能对比页应用",
+        "开发者宣传页应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_039",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 44,
+      "l1_scene": "初创公司",
+      "l2_scene_raw": "初创公司 / SaaS 团队 × ④ 商务型",
+      "l2_scene_label": "初创公司 · 商务型",
+      "l2_scene_examples": [
+        "订阅购买",
+        "增值服务购买"
+      ],
+      "application_type_candidates": [
+        "订阅购买应用",
+        "增值服务购买应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_040",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 45,
+      "l1_scene": "初创公司",
+      "l2_scene_raw": "初创公司 / SaaS 团队 × ⑤ 预约型",
+      "l2_scene_label": "初创公司 · 预约型",
+      "l2_scene_examples": [
+        "Demo 预约",
+        "Sales 洽谈",
+        "Waitlist 登记"
+      ],
+      "application_type_candidates": [
+        "Demo 预约应用",
+        "Sales 洽谈应用",
+        "Waitlist 登记应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_041",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 46,
+      "l1_scene": "初创公司",
+      "l2_scene_raw": "初创公司 / SaaS 团队 × ⑥ 学习型",
+      "l2_scene_label": "初创公司 · 学习型",
+      "l2_scene_examples": [
+        "产品文档",
+        "教程/学院",
+        "最佳实践库"
+      ],
+      "application_type_candidates": [
+        "产品文档应用",
+        "教程/学院应用",
+        "最佳实践库应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_042",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 47,
+      "l1_scene": "初创公司",
+      "l2_scene_raw": "初创公司 / SaaS 团队 × ⑦ 社区型",
+      "l2_scene_label": "初创公司 · 社区型",
+      "l2_scene_examples": [
+        "用户论坛",
+        "Discord/Slack 入口",
+        "Feature Request"
+      ],
+      "application_type_candidates": [
+        "用户论坛应用",
+        "Discord/Slack 入口应用",
+        "Feature Request应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_043",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 48,
+      "l1_scene": "初创公司",
+      "l2_scene_raw": "初创公司 / SaaS 团队 × ⑧ 工具型",
+      "l2_scene_label": "初创公司 · 工具型",
+      "l2_scene_examples": [
+        "SaaS 应用本体",
+        "Dashboard",
+        "数据分析台"
+      ],
+      "application_type_candidates": [
+        "SaaS 应用本体应用",
+        "Dashboard应用",
+        "数据分析台应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_044",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 49,
+      "l1_scene": "教育",
+      "l2_scene_raw": "教育 / 培训机构 × ① 展示型",
+      "l2_scene_label": "教育 · 展示型",
+      "l2_scene_examples": [
+        "学校/机构官网",
+        "校园风采",
+        "教师团队页"
+      ],
+      "application_type_candidates": [
+        "学校/机构官网应用",
+        "校园风采应用",
+        "教师团队页应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_045",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 50,
+      "l1_scene": "教育",
+      "l2_scene_raw": "教育 / 培训机构 × ② 内容型",
+      "l2_scene_label": "教育 · 内容型",
+      "l2_scene_examples": [
+        "校园新闻",
+        "学术发表",
+        "研究成果",
+        "教育资讯"
+      ],
+      "application_type_candidates": [
+        "校园新闻应用",
+        "学术发表应用",
+        "研究成果应用",
+        "教育资讯应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_046",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 51,
+      "l1_scene": "教育",
+      "l2_scene_raw": "教育 / 培训机构 × ③ 营销型",
+      "l2_scene_label": "教育 · 营销型",
+      "l2_scene_examples": [
+        "招生页",
+        "课程宣传",
+        "公开课推广",
+        "招生会报名"
+      ],
+      "application_type_candidates": [
+        "招生页应用",
+        "课程宣传应用",
+        "公开课推广应用",
+        "招生会报名应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_047",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 52,
+      "l1_scene": "教育",
+      "l2_scene_raw": "教育 / 培训机构 × ④ 商务型",
+      "l2_scene_label": "教育 · 商务型",
+      "l2_scene_examples": [
+        "课程购买",
+        "教材/周边店",
+        "证书购买"
+      ],
+      "application_type_candidates": [
+        "课程购买应用",
+        "教材/周边店应用",
+        "证书购买应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_048",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 53,
+      "l1_scene": "教育",
+      "l2_scene_raw": "教育 / 培训机构 × ⑤ 预约型",
+      "l2_scene_label": "教育 · 预约型",
+      "l2_scene_examples": [
+        "开放日预约",
+        "试听/咨询",
+        "入学面试预约"
+      ],
+      "application_type_candidates": [
+        "开放日预约应用",
+        "试听/咨询应用",
+        "入学面试预约应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_049",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 54,
+      "l1_scene": "教育",
+      "l2_scene_raw": "教育 / 培训机构 × ⑥ 学习型",
+      "l2_scene_label": "教育 · 学习型",
+      "l2_scene_examples": [
+        "在线课程平台",
+        "学习管理系统 LMS",
+        "题库/模拟测试"
+      ],
+      "application_type_candidates": [
+        "在线课程平台应用",
+        "学习管理系统 LMS应用",
+        "题库/模拟测试应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_050",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 55,
+      "l1_scene": "教育",
+      "l2_scene_raw": "教育 / 培训机构 × ⑦ 社区型",
+      "l2_scene_label": "教育 · 社区型",
+      "l2_scene_examples": [
+        "校友网络",
+        "学生社区",
+        "家长沟通群"
+      ],
+      "application_type_candidates": [
+        "校友网络应用",
+        "学生社区应用",
+        "家长沟通群应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_051",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 56,
+      "l1_scene": "教育",
+      "l2_scene_raw": "教育 / 培训机构 × ⑧ 工具型",
+      "l2_scene_label": "教育 · 工具型",
+      "l2_scene_examples": [
+        "学生门户",
+        "选课/排课系统",
+        "考试/作业平台"
+      ],
+      "application_type_candidates": [
+        "学生门户应用",
+        "选课/排课系统应用",
+        "考试/作业平台应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_052",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 57,
+      "l1_scene": "媒体",
+      "l2_scene_raw": "媒体 / 出版机构 × ① 展示型",
+      "l2_scene_label": "媒体 · 展示型",
+      "l2_scene_examples": [
+        "作者/编辑主页",
+        "获奖档案",
+        "品牌百年史"
+      ],
+      "application_type_candidates": [
+        "作者/编辑主页应用",
+        "获奖档案应用",
+        "品牌百年史应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_053",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 58,
+      "l1_scene": "媒体",
+      "l2_scene_raw": "媒体 / 出版机构 × ② 内容型",
+      "l2_scene_label": "媒体 · 内容型",
+      "l2_scene_examples": [
+        "新闻门户",
+        "在线杂志",
+        "特稿专栏",
+        "播客节目站",
+        "电子期刊"
+      ],
+      "application_type_candidates": [
+        "新闻门户应用",
+        "在线杂志应用",
+        "特稿专栏应用",
+        "播客节目站应用",
+        "电子期刊应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_054",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 59,
+      "l1_scene": "媒体",
+      "l2_scene_raw": "媒体 / 出版机构 × ③ 营销型",
+      "l2_scene_label": "媒体 · 营销型",
+      "l2_scene_examples": [
+        "订阅墙",
+        "会员页",
+        "活动宣传页"
+      ],
+      "application_type_candidates": [
+        "订阅墙应用",
+        "会员页应用",
+        "活动宣传页应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_055",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 60,
+      "l1_scene": "媒体",
+      "l2_scene_raw": "媒体 / 出版机构 × ④ 商务型",
+      "l2_scene_label": "媒体 · 商务型",
+      "l2_scene_examples": [
+        "付费订阅",
+        "书籍/文创购买",
+        "打赏系统"
+      ],
+      "application_type_candidates": [
+        "付费订阅应用",
+        "书籍/文创购买应用",
+        "打赏系统应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_056",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 61,
+      "l1_scene": "媒体",
+      "l2_scene_raw": "媒体 / 出版机构 × ⑤ 预约型",
+      "l2_scene_label": "媒体 · 预约型",
+      "l2_scene_examples": [
+        "采访预约"
+      ],
+      "application_type_candidates": [
+        "采访预约应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_057",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 62,
+      "l1_scene": "媒体",
+      "l2_scene_raw": "媒体 / 出版机构 × ⑥ 学习型",
+      "l2_scene_label": "媒体 · 学习型",
+      "l2_scene_examples": [
+        "知识专题站",
+        "深度报道合集"
+      ],
+      "application_type_candidates": [
+        "知识专题站应用",
+        "深度报道合集应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_058",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 63,
+      "l1_scene": "媒体",
+      "l2_scene_raw": "媒体 / 出版机构 × ⑦ 社区型",
+      "l2_scene_label": "媒体 · 社区型",
+      "l2_scene_examples": [
+        "读者评论区",
+        "UGC 投稿",
+        "读者俱乐部"
+      ],
+      "application_type_candidates": [
+        "读者评论区应用",
+        "UGC 投稿应用",
+        "读者俱乐部应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_059",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 64,
+      "l1_scene": "媒体",
+      "l2_scene_raw": "媒体 / 出版机构 × ⑧ 工具型",
+      "l2_scene_label": "媒体 · 工具型",
+      "l2_scene_examples": [
+        "RSS 聚合",
+        "新闻搜索"
+      ],
+      "application_type_candidates": [
+        "RSS 聚合应用",
+        "新闻搜索应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_060",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 65,
+      "l1_scene": "文化",
+      "l2_scene_raw": "文化 / 公益 / 政务组织 × ① 展示型",
+      "l2_scene_label": "文化 · 展示型",
+      "l2_scene_examples": [
+        "博物馆官网",
+        "展览/艺术节",
+        "建筑/古迹站",
+        "宗教场所站"
+      ],
+      "application_type_candidates": [
+        "博物馆官网应用",
+        "展览/艺术节应用",
+        "建筑/古迹站应用",
+        "宗教场所站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_061",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 66,
+      "l1_scene": "文化",
+      "l2_scene_raw": "文化 / 公益 / 政务组织 × ② 内容型",
+      "l2_scene_label": "文化 · 内容型",
+      "l2_scene_examples": [
+        "历史档案",
+        "研究发布",
+        "倡议宣言",
+        "公告通知"
+      ],
+      "application_type_candidates": [
+        "历史档案应用",
+        "研究发布应用",
+        "倡议宣言应用",
+        "公告通知应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_062",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 67,
+      "l1_scene": "文化",
+      "l2_scene_raw": "文化 / 公益 / 政务组织 × ③ 营销型",
+      "l2_scene_label": "文化 · 营销型",
+      "l2_scene_examples": [
+        "筹款活动页",
+        "倡议 campaign",
+        "志愿者招募",
+        "募捐专题"
+      ],
+      "application_type_candidates": [
+        "筹款活动页应用",
+        "倡议 campaign应用",
+        "志愿者招募应用",
+        "募捐专题应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_063",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 68,
+      "l1_scene": "文化",
+      "l2_scene_raw": "文化 / 公益 / 政务组织 × ④ 商务型",
+      "l2_scene_label": "文化 · 商务型",
+      "l2_scene_examples": [
+        "纪念品商店",
+        "门票销售",
+        "捐赠通道",
+        "会员续费"
+      ],
+      "application_type_candidates": [
+        "纪念品商店应用",
+        "门票销售应用",
+        "捐赠通道应用",
+        "会员续费应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_064",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 69,
+      "l1_scene": "文化",
+      "l2_scene_raw": "文化 / 公益 / 政务组织 × ⑤ 预约型",
+      "l2_scene_label": "文化 · 预约型",
+      "l2_scene_examples": [
+        "参观预约",
+        "活动报名",
+        "导览预约"
+      ],
+      "application_type_candidates": [
+        "参观预约应用",
+        "活动报名应用",
+        "导览预约应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_065",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 70,
+      "l1_scene": "文化",
+      "l2_scene_raw": "文化 / 公益 / 政务组织 × ⑥ 学习型",
+      "l2_scene_label": "文化 · 学习型",
+      "l2_scene_examples": [
+        "科普教育资源",
+        "数字档案馆",
+        "开放课程"
+      ],
+      "application_type_candidates": [
+        "科普教育资源应用",
+        "数字档案馆应用",
+        "开放课程应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_066",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 71,
+      "l1_scene": "文化",
+      "l2_scene_raw": "文化 / 公益 / 政务组织 × ⑦ 社区型",
+      "l2_scene_label": "文化 · 社区型",
+      "l2_scene_examples": [
+        "志愿者社区",
+        "议题讨论区",
+        "信徒/会员圈"
+      ],
+      "application_type_candidates": [
+        "志愿者社区应用",
+        "议题讨论区应用",
+        "信徒/会员圈应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_067",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 72,
+      "l1_scene": "文化",
+      "l2_scene_raw": "文化 / 公益 / 政务组织 × ⑧ 工具型",
+      "l2_scene_label": "文化 · 工具型",
+      "l2_scene_examples": [
+        "公共服务门户",
+        "办事大厅",
+        "虚拟展览"
+      ],
+      "application_type_candidates": [
+        "公共服务门户应用",
+        "办事大厅应用",
+        "虚拟展览应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_068",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 73,
+      "l1_scene": "开发者",
+      "l2_scene_raw": "开发者 / 技术团队 × ① 展示型",
+      "l2_scene_label": "开发者 · 展示型",
+      "l2_scene_examples": [
+        "GitHub Profile",
+        "开源项目主页",
+        "技术 Portfolio",
+        "个人技术品牌"
+      ],
+      "application_type_candidates": [
+        "GitHub Profile应用",
+        "开源项目主页应用",
+        "技术 Portfolio应用",
+        "个人技术品牌应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_069",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 74,
+      "l1_scene": "开发者",
+      "l2_scene_raw": "开发者 / 技术团队 × ② 内容型",
+      "l2_scene_label": "开发者 · 内容型",
+      "l2_scene_examples": [
+        "技术博客",
+        "RFC/设计文档",
+        "Changelog",
+        "技术周刊"
+      ],
+      "application_type_candidates": [
+        "技术博客应用",
+        "RFC/设计文档应用",
+        "Changelog应用",
+        "技术周刊应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_070",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 75,
+      "l1_scene": "开发者",
+      "l2_scene_raw": "开发者 / 技术团队 × ③ 营销型",
+      "l2_scene_label": "开发者 · 营销型",
+      "l2_scene_examples": [
+        "开源项目 Landing",
+        "Hackathon 站",
+        "Dev Conference"
+      ],
+      "application_type_candidates": [
+        "开源项目 Landing应用",
+        "Hackathon 站应用",
+        "Dev Conference应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_071",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 76,
+      "l1_scene": "开发者",
+      "l2_scene_raw": "开发者 / 技术团队 × ④ 商务型",
+      "l2_scene_label": "开发者 · 商务型",
+      "l2_scene_examples": [
+        "Donation/Sponsor",
+        "Pro 版订阅"
+      ],
+      "application_type_candidates": [
+        "Donation/Sponsor应用",
+        "Pro 版订阅应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_072",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 78,
+      "l1_scene": "开发者",
+      "l2_scene_raw": "开发者 / 技术团队 × ⑥ 学习型",
+      "l2_scene_label": "开发者 · 学习型",
+      "l2_scene_examples": [
+        "技术文档/Wiki",
+        "API 参考",
+        "教程站",
+        "交互式教材"
+      ],
+      "application_type_candidates": [
+        "技术文档/Wiki应用",
+        "API 参考应用",
+        "教程站应用",
+        "交互式教材应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_073",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 79,
+      "l1_scene": "开发者",
+      "l2_scene_raw": "开发者 / 技术团队 × ⑦ 社区型",
+      "l2_scene_label": "开发者 · 社区型",
+      "l2_scene_examples": [
+        "论坛/BBS",
+        "Q&A 站",
+        "Discord 入口",
+        "开源社区"
+      ],
+      "application_type_candidates": [
+        "论坛/BBS应用",
+        "Q&A 站应用",
+        "Discord 入口应用",
+        "开源社区应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    },
+    {
+      "id": "web_074",
+      "source_file": "全网网站类型全景矩阵.md",
+      "source_sheet": "main_matrix",
+      "source_row_id": 80,
+      "l1_scene": "开发者",
+      "l2_scene_raw": "开发者 / 技术团队 × ⑧ 工具型",
+      "l2_scene_label": "开发者 · 工具型",
+      "l2_scene_examples": [
+        "实验性/交互站",
+        "工具站/计算器",
+        "资源聚合站",
+        "Directory 站"
+      ],
+      "application_type_candidates": [
+        "实验性/交互站应用",
+        "工具站/计算器应用",
+        "资源聚合站应用",
+        "Directory 站应用"
+      ],
+      "target_count": 7,
+      "notes": ""
+    }
+  ]
+}

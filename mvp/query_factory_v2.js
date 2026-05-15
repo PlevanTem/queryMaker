@@ -2183,6 +2183,30 @@ async function buildDashboardAssets(dbPath, outputDir) {
  * The corpus topic IS the specific use-case seed.
  */
 // ─────────────────────────────────────────────────────────────────────────────
+// PLATFORM TARGETING
+// ─────────────────────────────────────────────────────────────────────────────
+// Each platform maps to a phrase used in the prompt's first line and in the
+// "complete 0-to-1 mini-app" framing rule. Default = mobile (preserves backward
+// compat with all existing v1-v6 runs).
+
+const CORPUS_PLATFORMS = {
+  mobile: {
+    id: "mobile",
+    title_en: "mobile H5 app",
+    title_zh: "移动端 H5 应用",
+    framing_hint: "mobile-first, single-screen-per-tap interaction",
+  },
+  web: {
+    id: "web",
+    title_en: "web app (desktop-first, responsive)",
+    title_zh: "Web 应用（桌面优先，响应式）",
+    framing_hint: "desktop browser layout with mouse + keyboard, multi-pane or sidebar layouts are natural",
+  },
+};
+
+const DEFAULT_CORPUS_PLATFORM = "mobile";
+
+// ─────────────────────────────────────────────────────────────────────────────
 // CORPUS-DIRECT PERSONAS
 // ─────────────────────────────────────────────────────────────────────────────
 // 5 ordinary-user archetypes for vibe-coding query authoring. Each task is
@@ -2266,6 +2290,16 @@ function buildCorpusDirectQueryPrompt(task) {
   const personaId = task.corpus_persona_id || "maker";
   const persona = CORPUS_DIRECT_PERSONAS[personaId] || CORPUS_DIRECT_PERSONAS.maker;
 
+  // Platform — set on task by run-corpus.js based on --platform CLI flag.
+  // Falls back to mobile (preserves backward compat with all v1-v6 runs).
+  const platformId = task.platform || DEFAULT_CORPUS_PLATFORM;
+  const platform = CORPUS_PLATFORMS[platformId] || CORPUS_PLATFORMS[DEFAULT_CORPUS_PLATFORM];
+  // Phrasing options the model can use to satisfy rule 8 (platform mention).
+  // mobile: phrases real users would naturally say.
+  const platformMentionExamples = platformId === "web"
+    ? '"a web app", "a browser-based tool", "a website", "for desktop browsers", "browser-side"'
+    : '"a mobile app", "a mini-program", "an H5 page", "for my phone", "mobile-first"';
+
   // Deterministically pick one of 5 openers per task to break model convergence on "Build a...".
   // Hash on query_id (stable across reruns) → uniform distribution.
   const OPENERS = [
@@ -2280,12 +2314,15 @@ function buildCorpusDirectQueryPrompt(task) {
   const opener = OPENERS[openerIdx];
 
   return [
-    "You are roleplaying as a real ordinary user (not a developer, not a PM) submitting a vibe-coding front-end query for a mobile H5 app. Stay strictly in your assigned persona's voice.",
+    `You are roleplaying as a real ordinary user (not a developer, not a PM) submitting a vibe-coding front-end query for a ${platform.title_en}. Stay strictly in your assigned persona's voice.`,
     "Output only the raw final query text — no labels, no markdown, no explanations, no extra comments.",
     "",
     "## Your Persona",
     `You are: ${persona.title_zh} (${persona.title_en})`,
     `Voice: ${persona.voice}`,
+    "",
+    "## Target Platform",
+    `${platform.title_en} — ${platform.framing_hint}`,
     "",
     "## Core Fixed Topic (must be the core focus of the query)",
     `"${task.corpus_topic}"`,
@@ -2301,10 +2338,11 @@ function buildCorpusDirectQueryPrompt(task) {
     "5. Use everyday vocabulary your persona would naturally say. Words like \"modal\", \"dashboard\", \"masonry grid\", \"auto-generate\", \"swipeable\", \"bottom sheet\", \"scrollable card\", \"tag chip\", \"GTD\", \"CTA\" belong in dev specs — keep them out of a real user's request.",
     "6. Only include the kinds of details your persona would naturally bring up — match the angle described in your Voice line. Skip details outside that angle.",
     "7. Frame the request as building a complete 0-to-1 mini-app. The top-level noun is \"app\" or a specific app type (\"tracker\", \"tool\", \"reminder\", \"planner\", \"calculator\", \"logger\", \"manager\", \"timer\", etc.). Words like \"page\", \"screen\", \"view\", \"section\", \"module\", \"feature\", \"widget\" stay below the top level (e.g. \"the home screen of the app\" mid-query is fine).",
-    "8. Express what you WANT, not what you don't want. Real users describing a 0-to-1 app speak in positive terms — they're building something they want, not refining something they hate. Limit negation words (\"don't / not / unlike / instead of / without / 不要 / 不用 / 不像\") to at most 1 per query, and only when negation is the most natural way to state a real preference.",
-    `9. Complexity: ${task.target_complexity} — ${complexityInstruction} (Phrased as the persona would.)`,
+    `8. The query MUST explicitly mention the target platform somewhere in the text — naturally woven in, not as a rigid prefix. Use a phrasing your persona would actually say, e.g. ${platformMentionExamples}. The reader should be able to tell at a glance whether this request is for ${platform.title_en} vs the other.`,
+    "9. Express what you WANT, not what you don't want. Real users describing a 0-to-1 app speak in positive terms — they're building something they want, not refining something they hate. Limit negation words (\"don't / not / unlike / instead of / without / 不要 / 不用 / 不像\") to at most 1 per query, and only when negation is the most natural way to state a real preference.",
+    `10. Complexity: ${task.target_complexity} — ${complexityInstruction} (Phrased as the persona would.)`,
     hasStyle
-      ? `10. Add natural visual style description following real user habit: ${styleInstruction} — integrate the style requirement into the query naturally instead of rigid listing.`
+      ? `11. Add natural visual style description following real user habit: ${styleInstruction} — integrate the style requirement into the query naturally instead of rigid listing.`
       : null,
     "",
     "Output in natural English only, pure user request sentence.",
@@ -2526,17 +2564,25 @@ const DEFAULT_CORPUS_COMPLEXITY_MIX = ["medium"];
  *
  * Returns one integer count per scenario (same order as spec.scenarios), summing to `total`.
  */
-function allocateCorpusCountsByScenePlan(spec, total) {
+function allocateCorpusCountsByScenePlan(spec, total, options = {}) {
   if (!total || total <= 0) return spec.scenarios.map(() => 0);
 
-  // Count L2 siblings per L1 for de-duping merged target_count
+  // Two weight modes:
+  //   - default (xlsx pattern): target_count is L1-level (replicated to each L2 row
+  //     by fillMergedCells), so divide by sibling-count to get per-L2 share.
+  //   - flatPerL2 (web spec pattern): target_count is already per-L2; use directly.
+  const flat = !!options.flatPerL2;
+
+  // Count L2 siblings per L1 for de-duping merged target_count (default mode only)
   const siblingsByL1 = {};
-  for (const s of spec.scenarios) {
-    siblingsByL1[s.l1_scene] = (siblingsByL1[s.l1_scene] || 0) + 1;
+  if (!flat) {
+    for (const s of spec.scenarios) {
+      siblingsByL1[s.l1_scene] = (siblingsByL1[s.l1_scene] || 0) + 1;
+    }
   }
 
-  // Per-L2 fractional share (handles fillMergedCells duplication)
   const shares = spec.scenarios.map((s) => {
+    if (flat) return Number(s.target_count) || 0;
     const siblings = siblingsByL1[s.l1_scene] || 1;
     return (Number(s.target_count) || 0) / siblings;
   });
@@ -2660,8 +2706,9 @@ function buildCorpusPlan(spec, corpusData, options = {}) {
 
   // Allocate per-L2 counts: prefer options.total (scaled by xlsx ratio).
   // If not given, fall back to computeSeedCount per scenario (legacy behaviour).
+  // options.flatPerL2 = true skips the L1-sibling division (web spec pattern).
   const countsByScenario = options.total
-    ? allocateCorpusCountsByScenePlan(filteredSpec, Number(options.total))
+    ? allocateCorpusCountsByScenePlan(filteredSpec, Number(options.total), { flatPerL2: !!options.flatPerL2 })
     : filteredSpec.scenarios.map((s) => computeSeedCount(s.target_count, options));
 
   filteredSpec.scenarios.forEach((scenario, scenarioIndex) => {
@@ -2788,6 +2835,8 @@ module.exports = {
   CORPUS_DIRECT_PERSONAS,
   loadCorpusPersonaMap,
   pickCorpusPersonaForTask,
+  CORPUS_PLATFORMS,
+  DEFAULT_CORPUS_PLATFORM,
   // internal helpers exposed for test scripts
   resolveLlmConfig,
   callLlm,

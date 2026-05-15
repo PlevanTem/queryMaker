@@ -1,21 +1,21 @@
 {
-  "generated_at": "2026-05-14T09:55:32.744Z",
+  "generated_at": "2026-05-14T11:01:54.291Z",
   "model": "claude-sonnet-4-6",
   "mode": "corpus-direct",
   "platform": "web",
-  "dry_run": true,
+  "dry_run": false,
   "plan_total": 500,
   "executed_total": 500,
   "complexity_mix": [
     "medium"
   ],
-  "successes": 500,
-  "failures": 0,
+  "successes": 298,
+  "failures": 202,
   "scored": 0,
   "pass_count": null,
   "pass_rate": null,
   "avg_quality_score": null,
-  "avg_word_count": 4,
+  "avg_word_count": 97,
   "l1_distribution": {
     "个人用户": 28,
     "创作者": 56,
@@ -28,5 +28,5 @@
     "文化": 48,
     "开发者": 42
   },
-  "elapsed_sec": 0
+  "elapsed_sec": 1741.3
 }

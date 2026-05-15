@@ -53,6 +53,8 @@ const {
   saveCorpusUsage,
   loadCorpusPersonaMap,
   pickCorpusPersonaForTask,
+  CORPUS_PLATFORMS,
+  DEFAULT_CORPUS_PLATFORM,
 } = require("../mvp/query_factory_v2");
 
 const {
@@ -98,27 +100,52 @@ async function main() {
     args["usage-state"] || "data/state/corpus_usage.json",
   );
   const noUsageTrack = args["no-usage-track"] === true; // default: track + persist usage
+  const platformArg = (args.platform && args.platform !== true) ? String(args.platform) : DEFAULT_CORPUS_PLATFORM;
+  if (!CORPUS_PLATFORMS[platformArg]) {
+    throw new Error(`未知的 --platform 值：${platformArg}。可选：${Object.keys(CORPUS_PLATFORMS).join(", ")}`);
+  }
+  const platform = CORPUS_PLATFORMS[platformArg];
+
+  // Per-platform default file paths. CLI flags override.
+  const isWeb = platformArg === "web";
+  const sceneSpecPath = args["scene-spec"] && args["scene-spec"] !== true
+    ? path.resolve(process.cwd(), String(args["scene-spec"]))
+    : (isWeb ? path.resolve(process.cwd(), "scripts/web_scene_spec.json") : null);
+  const corpusDataPath = args["corpus-data"] && args["corpus-data"] !== true
+    ? path.resolve(process.cwd(), String(args["corpus-data"]))
+    : (isWeb ? path.resolve(process.cwd(), "scripts/corpus_data_web.json") : path.resolve(process.cwd(), "scripts/corpus_data.json"));
+  const personaMapAuto = isWeb ? "scripts/corpus_persona_map_web.json" : "scripts/corpus_persona_map.json";
   const personaMapPath = path.resolve(
     process.cwd(),
-    args["persona-map"] || "scripts/corpus_persona_map.json",
+    args["persona-map"] || personaMapAuto,
   );
 
   const rootDir = process.cwd();
-  const inputPath = args.input
-    ? path.resolve(rootDir, args.input)
-    : autoDetectWorkbook(rootDir + path.sep + "data" + path.sep + "input") ||
-      autoDetectWorkbook(rootDir);
+  // For mobile platform: parse xlsx (legacy). For web (or any platform with
+  // --scene-spec): load pre-built JSON spec instead.
+  const inputPath = sceneSpecPath
+    ? null
+    : (args.input
+        ? path.resolve(rootDir, args.input)
+        : autoDetectWorkbook(rootDir + path.sep + "data" + path.sep + "input") ||
+          autoDetectWorkbook(rootDir));
   const outDir = path.resolve(rootDir, args.out || "data/output/corpus_run");
   ensureDir(outDir);
 
   console.log("┌─ run-corpus.js ────────────────────────────────────────────");
   console.log("│  mode         : corpus-direct (1× LLM call per task)");
   console.log(`│  model        : ${CLI_MODEL}`);
-  console.log(`│  input xlsx   : ${path.relative(rootDir, inputPath)}`);
+  if (sceneSpecPath) {
+    console.log(`│  scene spec   : ${path.relative(rootDir, sceneSpecPath)} (JSON, flatPerL2)`);
+  } else {
+    console.log(`│  input xlsx   : ${path.relative(rootDir, inputPath)}`);
+  }
+  console.log(`│  corpus data  : ${path.relative(rootDir, corpusDataPath)}`);
   console.log(`│  output dir   : ${path.relative(rootDir, outDir)}`);
   console.log(`│  total        : ${total}`);
   console.log(`│  complexity   : [${complexityMix.join(", ")}]`);
   console.log(`│  concurrency  : ${concurrency}`);
+  console.log(`│  platform     : ${platform.id} (${platform.title_en})`);
   console.log(`│  exclude-l1   : ${excludeL1.length ? excludeL1.join(", ") : "(none)"}`);
   console.log(`│  persona-map  : ${path.relative(rootDir, personaMapPath)}`);
   console.log(`│  usage-track  : ${noUsageTrack ? "off" : `on → ${path.relative(rootDir, usageStatePath)}`}`);
@@ -128,12 +155,18 @@ async function main() {
   if (limit !== null) console.log(`│  limit        : ${limit}`);
   console.log("└────────────────────────────────────────────────────────────");
 
-  // ── 1. Parse xlsx ─────────────────────────────────────────────────────────
-  const spec = parseRequirementsFromWorkbook(inputPath);
-  console.log(`\n[1/5] 解析场景：${spec.total_scenarios} 个 L2 场景`);
+  // ── 1. Load scene spec ───────────────────────────────────────────────────
+  // Two paths: xlsx (mobile legacy) or pre-built JSON spec (web / any platform
+  // that ships its own spec). JSON spec uses flatPerL2 weighting since each
+  // scenario row already has its own per-L2 target_count.
+  const usingFlatSpec = !!sceneSpecPath;
+  const spec = usingFlatSpec
+    ? JSON.parse(require("fs").readFileSync(sceneSpecPath, "utf8"))
+    : parseRequirementsFromWorkbook(inputPath);
+  console.log(`\n[1/5] 解析场景：${spec.total_scenarios} 个 L2 场景${usingFlatSpec ? "（来自 JSON 配置）" : "（来自 xlsx）"}`);
 
   // ── 2. Build corpus plan (with Layer-A least-used topic sampling) ────────
-  const corpusData = require("./corpus_data.json");
+  const corpusData = require(corpusDataPath);
   const corpusUsage = noUsageTrack ? {} : loadCorpusUsage(usageStatePath);
   const usageL2Count = Object.keys(corpusUsage).length;
   const usageTopicCount = Object.values(corpusUsage).reduce(
@@ -147,14 +180,16 @@ async function main() {
     complexityMix,
     excludeL1,
     corpusUsage,
+    flatPerL2: usingFlatSpec,
   });
 
-  // ── Persona-tone semantic mapping (Layer-B-tone) ─────────────────────────
+  // ── Persona-tone semantic mapping (Layer-B-tone) + platform tag ─────────
   // Look up best-fit persona per task by L2 key. Result stored on task itself
-  // so buildCorpusDirectQueryPrompt can read it.
+  // so buildCorpusDirectQueryPrompt can read it. Also stamp the platform.
   const personaMap = loadCorpusPersonaMap(personaMapPath);
   for (const t of plan.tasks) {
     t.corpus_persona_id = pickCorpusPersonaForTask(t, personaMap);
+    t.platform = platform.id;
   }
 
   const planPath = path.join(outDir, "plan.jsonl");
@@ -238,6 +273,7 @@ async function main() {
       corpus_topic: task.corpus_topic,
       corpus_l2_key: task.corpus_l2_key,
       corpus_persona_id: task.corpus_persona_id,
+      platform: task.platform,
       application_type: task.application_type,
       product_type: task.product_type,
       target_complexity: task.target_complexity,
@@ -275,6 +311,7 @@ async function main() {
     generated_at: new Date().toISOString(),
     model: CLI_MODEL,
     mode: "corpus-direct",
+    platform: platform.id,
     dry_run: isDryRun,
     plan_total: plan.total_tasks,
     executed_total: rows.length,
@@ -298,14 +335,17 @@ async function main() {
     const sheetRows = rows.map((r, i) => ({
       "#": i + 1,
       id: r.id,
+      platform: r.platform || "",
       l1_scene: r.l1_scene,
       l2_scene_label: r.l2_scene_label,
       corpus_topic: r.corpus_topic,
+      corpus_persona_id: r.corpus_persona_id || "",
       target_complexity: r.target_complexity,
       word_count: r.word_count,
       duration_ms: r.duration_ms,
       ...(doScore ? { quality_score: r.quality_score, quality_pass: r.quality_pass } : {}),
       query_text: r.query_text,
+      query_text_zh: r.query_text_zh || "",
       error: r.error || "",
     }));
     const ws = XLSX.utils.json_to_sheet(sheetRows);
