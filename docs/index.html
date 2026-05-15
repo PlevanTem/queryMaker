@@ -344,6 +344,78 @@ table.cmp .neutral { color: var(--muted); }
 
 /* ── L1 distribution bars ── */
 .l1-bars { display: flex; flex-direction: column; gap: 8px; }
+
+/* ── Distribution tabs (L1 bars vs corpus network) ── */
+.dist-tabs {
+  display: inline-flex; gap: 0; margin-bottom: 16px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 3px;
+}
+.dist-tab {
+  background: transparent; border: 0; cursor: pointer;
+  padding: 6px 14px; border-radius: 4px;
+  font-size: 12px; color: var(--muted); font-weight: 500;
+  transition: background 0.12s, color 0.12s;
+}
+.dist-tab:hover { color: var(--text); }
+.dist-tab.active { background: var(--bg); color: var(--text); }
+.dist-panel { display: none; }
+.dist-panel.active { display: block; }
+
+/* ── Corpus network viz (minimalist radial) ── */
+.cv-wrap {
+  display: flex; flex-direction: column; align-items: center;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px;
+}
+.cv-meta {
+  display: flex; gap: 18px; flex-wrap: wrap; justify-content: center;
+  margin-bottom: 8px; font-size: 12px; color: var(--muted);
+}
+.cv-meta strong { color: var(--text); font-weight: 600; }
+.cv-platform-toggle {
+  display: inline-flex; gap: 4px; margin-bottom: 14px;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 999px; padding: 3px;
+}
+.cv-platform-toggle button {
+  background: transparent; border: 0; cursor: pointer;
+  padding: 5px 14px; border-radius: 999px;
+  font-size: 11px; color: var(--muted); font-weight: 500;
+}
+.cv-platform-toggle button.active { background: var(--surface); color: var(--text); }
+.cv-svg { width: 100%; max-width: 720px; height: 560px; }
+.cv-svg .cv-edge {
+  stroke: var(--border); stroke-width: 0.6; fill: none;
+  transition: stroke 0.15s;
+}
+.cv-svg .cv-edge.dim { opacity: 0.25; }
+.cv-svg .cv-l1-node {
+  fill: var(--bg); stroke: var(--text); stroke-width: 1.2;
+  cursor: pointer; transition: all 0.15s;
+}
+.cv-svg .cv-l1-label {
+  font-size: 11px; fill: var(--text); font-weight: 600;
+  text-anchor: middle; pointer-events: none;
+}
+.cv-svg .cv-l2-node {
+  fill: var(--text); stroke: none;
+  transition: all 0.15s;
+}
+.cv-svg .cv-l2-node.dim { opacity: 0.18; }
+.cv-svg .cv-l1-node:hover, .cv-svg .cv-l1-node.hover { stroke: var(--accent); stroke-width: 2; }
+.cv-svg .cv-edge.hover { stroke: var(--accent); stroke-width: 1.2; opacity: 1; }
+.cv-svg .cv-l2-node.hover { fill: var(--accent); }
+.cv-svg .cv-center-text {
+  font-size: 11px; fill: var(--muted); text-anchor: middle;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  text-transform: uppercase; letter-spacing: 0.8px;
+}
+.cv-tooltip {
+  position: fixed; background: var(--bg); border: 1px solid var(--accent-bd); border-radius: 6px;
+  padding: 8px 12px; font-size: 12px; color: var(--text); pointer-events: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4); z-index: 100;
+  max-width: 220px; line-height: 1.5;
+}
+.cv-tooltip .cv-tt-label { color: var(--muted); font-size: 10px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
 .l1-row {
   display: grid; grid-template-columns: 160px 1fr 50px; align-items: center; gap: 12px; font-size: 13px;
 }
@@ -380,6 +452,14 @@ table.cmp .neutral { color: var(--muted); }
 }
 .persona-chip .pc-emoji { font-size: 13px; }
 .persona-chip .pc-label { color: var(--text); font-weight: 500; }
+.platform-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 999px;
+  font-size: 10px; font-weight: 600; letter-spacing: 0.5px; line-height: 1;
+  text-transform: uppercase;
+}
+.platform-chip.p-mobile { background: rgba(63,185,80,0.13); color: var(--green); }
+.platform-chip.p-web    { background: rgba(88,166,255,0.13); color: var(--accent); }
 
 /* ── Evolution timeline ── */
 .tl-grid { display: grid; grid-template-columns: 88px 1fr; gap: 0; }
@@ -720,8 +800,30 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     </div>
   </div>
 
-  <div style="font-size:13px;color:var(--muted);margin-bottom:14px;font-family:'SFMono-Regular',monospace;">// L1 DISTRIBUTION FROM A REAL 200-QUERY RUN</div>
-  <div class="l1-bars" id="l1-bars"></div>
+  <div class="dist-tabs" role="tablist">
+    <button class="dist-tab active" data-tab="bars" data-i18n="div.tab.bars">// L1 distribution</button>
+    <button class="dist-tab" data-tab="network" data-i18n="div.tab.network">// Corpus network</button>
+  </div>
+
+  <div class="dist-panel active" data-panel="bars">
+    <div class="l1-bars" id="l1-bars"></div>
+  </div>
+
+  <div class="dist-panel" data-panel="network">
+    <div class="cv-wrap">
+      <div class="cv-platform-toggle" role="tablist">
+        <button class="active" data-platform="mobile">📱 Mobile</button>
+        <button data-platform="web">💻 Web</button>
+      </div>
+      <div class="cv-meta" id="cv-meta"></div>
+      <svg class="cv-svg" id="cv-svg" viewBox="0 0 720 560" preserveAspectRatio="xMidYMid meet"></svg>
+      <div style="font-size:11px;color:var(--muted);margin-top:10px;text-align:center;line-height:1.6;" data-i18n="div.cv.note">
+        Each <strong style="color:var(--text)">⬤ inner node</strong> is an L1 category;
+        <strong style="color:var(--text)">· outer dot</strong> is an L2 sub-scene.
+        Hover any L1 to highlight its branch. Topic counts shown in tooltips.
+      </div>
+    </div>
+  </div>
 
   <div style="font-size:13px;color:var(--muted);margin:36px 0 14px;font-family:'SFMono-Regular',monospace;">// PAIN POINTS DISCOVERED IN BATCH GENERATION → FIXES SHIPPED</div>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
@@ -1123,6 +1225,10 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
 {"深度研究展示":"Deep research / showcase","交互方式":"Interaction patterns","实用工具":"Utilities","教育学习":"Education","办公效率":"Office productivity","健康管理":"Health","出行助手":"Travel assistant","美食探店":"Food discovery","休闲游戏":"Casual games","多媒体处理":"Media processing","新闻资讯":"News","购物消费":"Shopping"}
 </script>
 
+<script id="data-corpus" type="application/json">
+{"mobile":[{"l1":"深度研究展示","l2":[{"n":"个人生活类","c":40},{"n":"个人专业类","c":40},{"n":"办公/商务类","c":40},{"n":"文化/知识类","c":40}]},{"l1":"交互方式","l2":[{"n":"Adding & Creating 新建与创建","c":40},{"n":"Editing & Updating 编辑与更新","c":40},{"n":"Searching & Finding 搜索与查找","c":40},{"n":"Selecting & Choosing 选择与选取","c":40},{"n":"Filtering & Sorting 筛选与排序","c":40},{"n":"Deleting & Removing 删除与移除","c":40},{"n":"Editing Profile 编辑个人资料","c":40},{"n":"Uploading & Downloading 上传与下载","c":40},{"n":"Copying & Duplicating 复制与副本","c":40},{"n":"Misc 其他","c":40}]},{"l1":"实用工具","l2":[{"n":"计算器/换算器 ★","c":40},{"n":"生活记录器 ★","c":40},{"n":"社交辅助 ★","c":40},{"n":"倒计时/纪念日","c":40},{"n":"文本处理","c":40},{"n":"随机生成器","c":40},{"n":"无障碍辅助","c":40},{"n":"其他长尾微工具","c":40}]},{"l1":"教育学习","l2":[{"n":"闪卡/单词记忆 ★","c":40},{"n":"备考自测/刷题 ★","c":40},{"n":"学习打卡/进度追踪 ★","c":40},{"n":"课程目录/课堂界面","c":40},{"n":"知识速查/公式表","c":40}]},{"l1":"办公效率","l2":[{"n":"待办清单/任务管理 ★","c":40},{"n":"番茄钟/专注计时 ★","c":40},{"n":"日程/倒计时 ★","c":40},{"n":"数据仪表盘/报表 ★","c":40},{"n":"笔记/文档编辑","c":40}]},{"l1":"健康管理","l2":[{"n":"饮水/服药/习惯提醒 ★","c":40},{"n":"运动记录/健身计划 ★","c":40},{"n":"体重/经期/睡眠追踪 ★","c":40},{"n":"健康数据看板","c":40},{"n":"冥想/呼吸练习","c":40}]},{"l1":"出行助手","l2":[{"n":"行程规划器 ★","c":40},{"n":"打包清单/旅行准备","c":40},{"n":"地图/路线导航","c":40},{"n":"天气/实时信息查询","c":40},{"n":"交通时刻/票价查询","c":40}]},{"l1":"美食探店","l2":[{"n":"\"今天吃什么\"随机选择器 ★","c":0},{"n":"食物热量/升糖查询 ★","c":40},{"n":"菜谱生成/食材搭配","c":40},{"n":"餐厅列表/点评浏览","c":40}]},{"l1":"休闲游戏","l2":[{"n":"文字猜谜/知识竞赛 ★","c":40},{"n":"抽签/转盘/随机决策 ★","c":40},{"n":"经典小游戏","c":40},{"n":"情绪减压/解压玩具","c":40}]},{"l1":"多媒体处理","l2":[{"n":"图片编辑/滤镜/裁剪","c":40},{"n":"海报/简历/卡片模板 ★","c":40},{"n":"音视频播放界面","c":40},{"n":"内容创作工具","c":40}]},{"l1":"新闻资讯","l2":[{"n":"信息流/Feed 浏览","c":0},{"n":"文章详情/阅读模式","c":40},{"n":"订阅/频道管理","c":40},{"n":"搜索与筛选","c":40}]},{"l1":"购物消费","l2":[{"n":"商品详情/规格选择","c":40},{"n":"购物车/结算","c":40},{"n":"订单/物流追踪","c":40}]}],"web":[{"l1":"个人用户","l2":[{"n":"个人用户 · 展示型","c":30},{"n":"个人用户 · 内容型","c":30},{"n":"个人用户 · 学习型","c":30},{"n":"个人用户 · 工具型","c":30}]},{"l1":"创作者","l2":[{"n":"创作者 · 展示型","c":30},{"n":"创作者 · 内容型","c":30},{"n":"创作者 · 营销型","c":30},{"n":"创作者 · 商务型","c":30},{"n":"创作者 · 预约型","c":30},{"n":"创作者 · 学习型","c":30},{"n":"创作者 · 社区型","c":30},{"n":"创作者 · 工具型","c":30}]},{"l1":"自由职业","l2":[{"n":"自由职业 · 展示型","c":30},{"n":"自由职业 · 内容型","c":30},{"n":"自由职业 · 营销型","c":30},{"n":"自由职业 · 预约型","c":30},{"n":"自由职业 · 学习型","c":30},{"n":"自由职业 · 社区型","c":30},{"n":"自由职业 · 工具型","c":30}]},{"l1":"小微商户","l2":[{"n":"小微商户 · 展示型","c":30},{"n":"小微商户 · 内容型","c":30},{"n":"小微商户 · 营销型","c":30},{"n":"小微商户 · 商务型","c":30},{"n":"小微商户 · 预约型","c":30},{"n":"小微商户 · 学习型","c":30},{"n":"小微商户 · 社区型","c":30},{"n":"小微商户 · 工具型","c":30}]},{"l1":"中大型企业","l2":[{"n":"中大型企业 · 展示型","c":30},{"n":"中大型企业 · 内容型","c":30},{"n":"中大型企业 · 营销型","c":30},{"n":"中大型企业 · 商务型","c":30},{"n":"中大型企业 · 预约型","c":30},{"n":"中大型企业 · 学习型","c":30},{"n":"中大型企业 · 社区型","c":30},{"n":"中大型企业 · 工具型","c":30}]},{"l1":"初创公司","l2":[{"n":"初创公司 · 展示型","c":30},{"n":"初创公司 · 内容型","c":30},{"n":"初创公司 · 营销型","c":30},{"n":"初创公司 · 商务型","c":30},{"n":"初创公司 · 预约型","c":30},{"n":"初创公司 · 学习型","c":30},{"n":"初创公司 · 社区型","c":30},{"n":"初创公司 · 工具型","c":30}]},{"l1":"教育","l2":[{"n":"教育 · 展示型","c":30},{"n":"教育 · 内容型","c":30},{"n":"教育 · 营销型","c":30},{"n":"教育 · 商务型","c":30},{"n":"教育 · 预约型","c":30},{"n":"教育 · 学习型","c":30},{"n":"教育 · 社区型","c":30},{"n":"教育 · 工具型","c":30}]},{"l1":"媒体","l2":[{"n":"媒体 · 展示型","c":30},{"n":"媒体 · 内容型","c":30},{"n":"媒体 · 营销型","c":30},{"n":"媒体 · 商务型","c":30},{"n":"媒体 · 预约型","c":30},{"n":"媒体 · 学习型","c":30},{"n":"媒体 · 社区型","c":30},{"n":"媒体 · 工具型","c":30}]},{"l1":"文化","l2":[{"n":"文化 · 展示型","c":30},{"n":"文化 · 内容型","c":30},{"n":"文化 · 营销型","c":30},{"n":"文化 · 商务型","c":30},{"n":"文化 · 预约型","c":30},{"n":"文化 · 学习型","c":30},{"n":"文化 · 社区型","c":30},{"n":"文化 · 工具型","c":30}]},{"l1":"开发者","l2":[{"n":"开发者 · 展示型","c":30},{"n":"开发者 · 内容型","c":30},{"n":"开发者 · 营销型","c":30},{"n":"开发者 · 商务型","c":30},{"n":"开发者 · 学习型","c":30},{"n":"开发者 · 社区型","c":30},{"n":"开发者 · 工具型","c":30}]}]}
+</script>
+
 <script id="data-personas" type="application/json">
 [
   {"id":"maker","title_zh":"正在自己动手做产品的人","title_en":"The hands-on builder","styles":{"vague":{"zh":"说法比较口语，只会给出大方向和感受。","en":"Casual phrasing, only direction and vibe."},"medium":{"zh":"会说清楚目标，并补充一两个结构或交互要求。","en":"States the goal plus one or two structural / interaction asks."},"complex":{"zh":"会把目标、展示内容和关键交互讲得比较完整。","en":"Spells out goal, content, and key interactions in full."}}},
@@ -1140,39 +1246,52 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
 <script id="data-samples" type="application/json">
 [
   {
+    "platform":"mobile",
     "persona":"maker","persona_emoji":"🛠️","persona_label_en":"Maker","persona_label_zh":"爱折腾的小白",
-    "l1_zh":"休闲游戏","l1_en":"Casual games","l2":"经典小游戏",
-    "topic":"Match-3 color gem cascade game","words":94,"complexity":"medium",
-    "en":"Need a match-3 color gem game where you tap or swap colorful gems on a grid and when three or more of the same color line up they burst and the gems above come falling down to fill the space, I want it to feel satisfying with little pop animations when gems disappear and maybe a score counter at the top so you can see how well you're doing, nothing too complicated just a clean fun little game I can open on my phone browser and play for a few minutes when I'm bored.",
-    "zh":"想做一个消消乐风格的彩色宝石游戏，在格子上点击或滑动交换宝石，三个或三个以上相同颜色的宝石连成一排就会爆开消除，上方的宝石随即落下填补空位，希望消除的时候有那种爽快的弹出动画，顶部放个分数计数器方便看自己的成绩，不用太复杂，界面干净好看就行，主要是能在手机浏览器上打开，无聊的时候随手玩几分钟的那种小游戏。"
+    "l1_zh":"休闲游戏","l1_en":"Casual games","l2":"抽签/转盘/随机决策",
+    "topic":"Yes/No magic 8-ball style oracle","words":116,"complexity":"medium",
+    "en":"Build a fun little mobile app that works like a magic 8-ball where you shake or tap to get a yes or no answer, kind of like asking the universe for a quick decision when you're stuck — I want it to feel mystical and satisfying on your phone, so maybe there's a big glowing orb in the middle of the screen that you tap, it does a cool swirling animation, and then reveals a dramatic yes or no message in big text, and it'd be great if there were a few different oracle \"moods\" to pick from, like a confident fortune teller versus a cryptic mysterious one, so the answers have different flavors each time.",
+    "zh":"做一个有趣的手机应用，就像个魔法8球，你摇一摇或点击得到一个是或否答案，有点像当你卡住时问宇宙要个快速决定——我想要它在手机上感觉神秘和满足，可能屏幕中间有个大发光的球，你点击它做个整洁的漩涡动画，然后显示个戏剧性的是或否信息很大的文字，而且有几种不同的神谕「心情」可以选择就太好了，比如自信的算命者对比神秘的那种，这样每次答案有不同的风格。"
   },
   {
+    "platform":"mobile",
     "persona":"operator","persona_emoji":"⚙️","persona_label_en":"Operator","persona_label_zh":"想偷懒的打工人",
-    "l1_zh":"交互方式","l1_en":"Interaction patterns","l2":"Searching & Finding",
-    "topic":"Multi-criteria filter-then-search with chip display","words":99,"complexity":"medium",
-    "en":"A search app where you pick a bunch of filters first — like category, price range, or location — before you even start typing, and then every filter you've picked shows up as a small removable label right above the results so you can actually see what's active without having to remember. I always forget what I filtered by and then wonder why the results look weird, so it needs to be really clear which filters are on, and tapping one of those labels should immediately drop it and refresh the results without making me start over from scratch.",
-    "zh":"一个搜索应用，用户在开始输入之前就能先选好一堆筛选条件——比如分类、价格区间或者位置，选完之后，所有已选的筛选项会以小标签的形式显示在结果列表正上方，这样就能一眼看清哪些条件是生效的，不用靠自己去记。我老是忘了自己筛了什么，然后搞不懂为什么结果看起来很奇怪，所以一定要让当前生效的筛选条件一目了然，而且点击某个标签就能立刻把它移除并刷新结果，不需要重新从头开始操作。"
+    "l1_zh":"实用工具","l1_en":"Utilities","l2":"文本处理",
+    "topic":"JSON formatter and syntax validator","words":121,"complexity":"medium",
+    "en":"Need a mobile tool app for my phone where I can paste in a chunk of raw JSON and have it instantly clean it up into something readable and also tell me if there are any mistakes in it, like missing brackets or commas, because whenever I get JSON from a coworker or copy it out of some response log it's always one giant ugly blob and I have to squint at it forever to find the typo — the main screen should have a big text area to paste into, a button to run the format and check, and then show the nicely indented result below with any error spots called out clearly so I can fix them right away.",
+    "zh":"需要一个手机工具应用我能粘贴一段原生JSON，应用即刻把它清理成可读的形式还告诉我有没有错误比如缺少括号或逗号，因为同事给的JSON或我从响应日志复制的总是一团糟我得费老劲盯着找拼写错误 — 主屏幕应该有大文本区粘贴进去，一个按钮运行格式和检查，下面显示漂亮缩进的结果和任何错误地方清楚地指出来这样我能立时修复。"
   },
   {
-    "persona":"planner","persona_emoji":"📋","persona_label_en":"Planner","persona_label_zh":"喜欢列清单的整理控",
-    "l1_zh":"健康管理","l1_en":"Health","l2":"运动记录/健身计划",
-    "topic":"HIIT workout timer with round counter","words":95,"complexity":"medium",
-    "en":"A HIIT timer app where the round counter is always clearly visible at the top — something like \"Round 3 of 8\" so I always know where I am in the workout. The big countdown clock in the middle should switch between work time and rest time and change color so I can tell at a glance which phase I'm in, and there should be a simple label underneath saying \"Work\" or \"Rest\" in plain text. The start, pause, and reset buttons need to be big enough to tap quickly without stopping to look carefully.",
-    "zh":"做一个HIIT计时器应用，顶部要始终清晰显示当前轮次，比如\"第3轮 / 共8轮\"这样的格式，让我随时知道训练进度。中间的大倒计时在工作时间和休息时间之间切换时要变换颜色，一眼就能分辨当前处于哪个阶段，下方用普通文字显示\"训练\"或\"休息\"的简单标签。开始、暂停和重置按钮要足够大，不用仔细看就能快速点到。"
-  },
-  {
+    "platform":"mobile",
     "persona":"curator","persona_emoji":"🎨","persona_label_en":"Curator","persona_label_zh":"内容驱动的审美派",
-    "l1_zh":"实用工具","l1_en":"Utilities","l2":"倒计时/纪念日",
-    "topic":"Memorial and tribute date annual reminder","words":89,"complexity":"medium",
-    "en":"Create a memorial and tribute date reminder app that feels quiet and reverent — like flipping through an old photo album in the late afternoon light — where each remembered person or moment gets their own soft card with a portrait-style photo, their name, and the annual date that marks them, and as the date draws near the whole app shifts into a warmer, more muted tone almost like candlelight, so it never feels like a cold calendar alert but more like a gentle nudge to pause and remember.",
-    "zh":"做一个纪念与追思日期提醒的应用，整体氛围要安静而庄重，就像在午后柔和的光线里慢慢翻阅一本老相册——每一位被铭记的人或每一段值得珍藏的时刻，都有专属的柔和卡片，配上竖版人像照片、姓名，以及每年循环的纪念日期；当日期临近时，整个应用的色调会自动过渡到更温暖、更沉静的感觉，像烛光一样，让人感受不到任何冰冷的日历提醒，更像是一次轻柔的提示，让你停下来，静静地想起那个人。"
+    "l1_zh":"深度研究展示","l1_en":"Deep research / showcase","l2":"文化/知识类",
+    "topic":"Traditional Craft Heritage","words":130,"complexity":"medium",
+    "en":"A mobile app for exploring traditional craft heritage that feels like flipping through a beautifully curated artisan journal — warm earthy tones, aged paper textures, and close-up photography that really captures the handwork and material detail. The home screen of the app should have a gallery-like pacing, unhurried and immersive, where each craft entry feels like a small visual story rather than a plain list. Browsing by region or craft type would be lovely, and tapping into any one opens a fuller view with layered imagery, a short origin narrative, and a soft amber-and-ochre palette that feels genuinely rooted in heritage. The whole thing should read as a labor of love on mobile H5 — the kind of app that makes people pause and actually read, not just scroll past.",
+    "zh":"一个移动应用来探索传统手工艺遗产，感觉像翻精心策划的工匠日记——温暖泥土色调、陈年纸质纹理、特写摄影真的抓住手工和材料细节。应用的首屏应该有画廊式的节奏，不仓促、沉浸式的，每个手工艺条目感觉像个小视觉故事而不是平白列表。按地区或工艺类型浏览会很好，点进任何一个打开一个更完整的视图，分层图像、一个简短的来源故事、一个感觉真的植根于遗产的柔和琥珀和赭色色板。整个东西应该在移动H5上读成一个爱的劳动——那种会让人停下来、真的读而不是只是滚过的应用。"
   },
   {
+    "platform":"web",
     "persona":"founder_like","persona_emoji":"✨","persona_label_en":"Founder-like","persona_label_zh":"自留地用户",
-    "l1_zh":"多媒体处理","l1_en":"Media processing","l2":"海报/简历/卡片模板",
-    "topic":"Wedding invitation card creator","words":95,"complexity":"medium",
-    "en":"Make a wedding invitation card creator that feels personal and handcrafted, not like some cookie-cutter template factory — I want a small set of maybe four or five elegant layouts I can actually customize with our names, date, and a short line of text, and the font choices should lean traditional and warm, not trendy sans-serif stuff. No stock photo backgrounds, no cartoon illustrations, no confetti animations — just clean, tasteful design with maybe a soft floral border option. It should feel like something I made myself, not something that came off an assembly line.",
-    "zh":"做一个婚礼请柬制作工具，要有那种亲手设计的温馨感，而不是流水线出来的千篇一律模板——我想要四五种精致的排版样式，能真正自定义我们的名字、日期和一句简短的文字，字体要偏传统、有温度，不要那种时髦的无衬线风格。不要素材库里的背景图，不要卡通插画，不要撒纸屑的动画效果——就是干净、有品味的设计，可以加一个淡雅的花卉边框选项。整体感觉要像是我自己亲手做的，不像是机器批量生产出来的。"
+    "l1_zh":"初创公司","l1_en":"Startups · SaaS","l2":"内容型",
+    "topic":"SaaS industry benchmarks and metrics report hub","words":120,"complexity":"medium",
+    "en":"Build a web app that carries the feel of a carefully curated editorial journal — a SaaS industry benchmarks and metrics report hub where the numbers actually have a personality, made for desktop browsers so you can sit down properly and take it seriously. The whole thing should feel like it belongs to someone with taste: key growth benchmarks, retention curves, and conversion comparisons laid out with editorial intention, the kind of design that signals conviction rather than template. Give it a clear identity — a home section that greets you with the most relevant industry snapshot of the moment, and a browsable library of past benchmark reports that feels like flipping through a run of a magazine you respect.",
+    "zh":"建一个感觉像精心策展的编辑期刊的Web应用——一个SaaS行业基准和指标报告中心，数字真的有性格，为桌面浏览器设计所以你能好好坐下来认真看待。整个东西要感觉属于有品味的人：关键增长基准、留存曲线、转化对比，用编辑意图排列，那种设计表达信念而不是模板。给它一个清晰的身份——一个首屏部分用当下最相关的行业快照欢迎你，一个可浏览的过往基准报告库，感觉像在翻阅你尊敬的杂志的过期刊。"
+  },
+  {
+    "platform":"web",
+    "persona":"curator","persona_emoji":"🎨","persona_label_en":"Curator","persona_label_zh":"内容驱动的审美派",
+    "l1_zh":"媒体","l1_en":"Media · Publishing","l2":"营销型",
+    "topic":"Media kit and advertising packages showcase","words":81,"complexity":"medium",
+    "en":"Create a media kit showcase tool for desktop browsers that feels like a premium brand lookbook — the kind of web app where each advertising package is presented with its own visual identity, the numbers are styled so they read as editorial highlights rather than a rate card, and the whole experience has the kind of quiet confidence you'd expect from a publication that takes its design seriously, with a contact area that feels like an invitation rather than a form.",
+    "zh":"做一个媒体资料包展示工具，在桌面浏览器上感觉像高端品牌产品手册——网页应用里每个广告位都有自己的视觉身份、数字排版得像编辑亮点而非报价单、整体氛围有认真对待设计的出版社应有的克制自信、联系区域像邀请而非表单。"
+  },
+  {
+    "platform":"web",
+    "persona":"planner","persona_emoji":"📋","persona_label_en":"Planner","persona_label_zh":"喜欢列清单的整理控",
+    "l1_zh":"教育","l1_en":"Education","l2":"学习型",
+    "topic":"Flashcard and spaced-repetition study tool","words":70,"complexity":"medium",
+    "en":"Make a flashcard study app for the web browser that lets me create decks of cards, flip through them one at a time, mark which ones I know and which ones I need to review again, and then shows me the cards I struggled with more often — I want a simple list of all my decks on the home screen so I can jump into any one right away.",
+    "zh":"做一个网站的闪卡学习应用，可以创建卡片组、逐张翻转、标记已掌握和需要复习的卡片、然后更频繁地复习不熟悉的卡片——我想在首页看到所有卡片组的简单列表，这样可以立即进入任何一个。"
   }
 ]
 </script>
@@ -1257,6 +1376,9 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "div.f5.r5":"长尾微工具 · 经典小游戏 · Adding & Creating",
     "div.bs.t":"Bootstrap from existing run",
     "div.bs.d":"first time enabling Layer-A, seed the state file from a historical <code>queries.jsonl</code> + <code>plan.jsonl</code> pair. Subsequent runs auto-update on success; failed rows are not counted toward usage. Inspect <code>data/state/corpus_usage.json</code> any time.",
+    "div.tab.bars":"// L1 distribution",
+    "div.tab.network":"// Corpus network",
+    "div.cv.note":"Each <strong style=\"color:var(--text)\">⬤ inner node</strong> is an L1 category; <strong style=\"color:var(--text)\">· outer dot</strong> is an L2 sub-scene. Hover any L1 to highlight its branch. Topic counts shown in tooltips.",
     "ps.title":"Authenticity through persona",
     "ps.sub":"Five archetypes drawn from how people actually request UI work. Each archetype carries per-complexity style hints, so the same persona phrases a vague request differently from a complex one — preserving voice while scaling specificity.",
     "ps.scope.t":"Persona scope: scene vs. task",
@@ -1374,6 +1496,9 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "div.f5.r5":"长尾微工具 · 经典小游戏 · Adding & Creating",
     "div.bs.t":"从历史 run 引导 state",
     "div.bs.d":"首次启用 Layer-A 时，可从已有 <code>queries.jsonl</code> + <code>plan.jsonl</code> 一次性导入历史 usage。后续 run 跑成功的条目自动累加；失败的不计入。任何时候打开 <code>data/state/corpus_usage.json</code> 即可查看当前状态。",
+    "div.tab.bars":"// L1 分布",
+    "div.tab.network":"// 语料网络",
+    "div.cv.note":"<strong style=\"color:var(--text)\">⬤ 内圈节点</strong> 是 L1 类目；<strong style=\"color:var(--text)\">· 外圈点</strong> 是 L2 子场景。悬停任意 L1 高亮其分支，topic 数量见 tooltip。",
     "ps.title":"真实性：以人为中心的 query 生成",
     "ps.sub":"5 个原型，源自人们真实请求 UI 工作的方式。每个原型自带 3 档复杂度的口吻提示，因此同一人格说\"模糊\"和\"复杂\"需求时口吻一致、信息密度递增。",
     "ps.scope.t":"Persona scope：scene vs. task",
@@ -1424,6 +1549,143 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
   const PERSONAS = JSON.parse(document.getElementById('data-personas').textContent);
   const STYLES = JSON.parse(document.getElementById('data-styles').textContent);
   const SAMPLES = JSON.parse(document.getElementById('data-samples').textContent);
+  const CORPUS = JSON.parse(document.getElementById('data-corpus').textContent);
+
+  // ── Distribution tabs ──
+  document.querySelectorAll('.dist-tab').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.dist-tab').forEach(b => b.classList.toggle('active', b === btn));
+      const target = btn.getAttribute('data-tab');
+      document.querySelectorAll('.dist-panel').forEach(p => p.classList.toggle('active', p.getAttribute('data-panel') === target));
+      if (target === 'network') renderNetwork(currentPlatform);
+    });
+  });
+
+  // ── Corpus network viz ──
+  let currentPlatform = 'mobile';
+  const cvSvg = document.getElementById('cv-svg');
+  const cvMeta = document.getElementById('cv-meta');
+  document.querySelectorAll('.cv-platform-toggle button').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cv-platform-toggle button').forEach(b => b.classList.toggle('active', b === btn));
+      currentPlatform = btn.getAttribute('data-platform');
+      renderNetwork(currentPlatform);
+    });
+  });
+
+  let tipEl = null;
+  function showTip(html, ev) {
+    if (!tipEl) { tipEl = document.createElement('div'); tipEl.className = 'cv-tooltip'; document.body.appendChild(tipEl); }
+    tipEl.innerHTML = html;
+    tipEl.style.left = (ev.clientX + 12) + 'px';
+    tipEl.style.top  = (ev.clientY + 12) + 'px';
+    tipEl.style.display = 'block';
+  }
+  function hideTip() { if (tipEl) tipEl.style.display = 'none'; }
+
+  function renderNetwork(platform) {
+    const data = CORPUS[platform];
+    cvSvg.innerHTML = '';
+    const W = 720, H = 560, cx = W / 2, cy = H / 2;
+    const RING_L1 = 130, RING_L2 = 230;
+
+    // Total L2 count for angle distribution
+    const totalL2 = data.reduce((s, l1) => s + l1.l2.length, 0);
+    const totalTopics = data.reduce((s, l1) => s + l1.l2.reduce((sa, l2) => sa + l2.c, 0), 0);
+
+    // Build positions: each L1 takes angle proportional to its L2 count
+    let angAcc = -Math.PI / 2; // start at top (12 o'clock)
+    const positions = data.map((l1) => {
+      const fraction = l1.l2.length / totalL2;
+      const span = fraction * Math.PI * 2;
+      const center = angAcc + span / 2;
+      const l2Pos = l1.l2.map((l2, i) => {
+        // distribute L2 within segment, with small padding
+        const inner = l1.l2.length === 1 ? center : angAcc + (span * (i + 0.5) / l1.l2.length);
+        return { l2, ang: inner };
+      });
+      const slot = { l1: l1.l1, ang: center, l2: l2Pos, span };
+      angAcc += span;
+      return slot;
+    });
+
+    // Center label
+    const centerText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    centerText.setAttribute('x', cx);
+    centerText.setAttribute('y', cy);
+    centerText.setAttribute('class', 'cv-center-text');
+    centerText.textContent = platform === 'mobile' ? 'mobile · 2,440 topics' : 'web · 2,220 topics';
+    cvSvg.appendChild(centerText);
+
+    // Edges + nodes per L1
+    positions.forEach((slot, idx) => {
+      const x1 = cx + Math.cos(slot.ang) * RING_L1;
+      const y1 = cy + Math.sin(slot.ang) * RING_L1;
+      // L2 dots first (so L1 sits on top)
+      slot.l2.forEach((l2obj) => {
+        const x2 = cx + Math.cos(l2obj.ang) * RING_L2;
+        const y2 = cy + Math.sin(l2obj.ang) * RING_L2;
+        const edge = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+        edge.setAttribute('class', 'cv-edge');
+        edge.setAttribute('x1', x1); edge.setAttribute('y1', y1);
+        edge.setAttribute('x2', x2); edge.setAttribute('y2', y2);
+        edge.setAttribute('data-l1-idx', idx);
+        cvSvg.appendChild(edge);
+
+        const dot = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        dot.setAttribute('class', 'cv-l2-node');
+        dot.setAttribute('cx', x2); dot.setAttribute('cy', y2);
+        dot.setAttribute('r', 3 + Math.min(2, l2obj.l2.c / 30));
+        dot.setAttribute('data-l1-idx', idx);
+        dot.addEventListener('mouseenter', (ev) => {
+          dot.classList.add('hover');
+          showTip('<div class="cv-tt-label">L2</div>' + l2obj.l2.n + '<div class="cv-tt-label" style="margin-top:6px">topics</div>' + l2obj.l2.c, ev);
+        });
+        dot.addEventListener('mousemove', (ev) => showTip(tipEl.innerHTML, ev));
+        dot.addEventListener('mouseleave', () => { dot.classList.remove('hover'); hideTip(); });
+        cvSvg.appendChild(dot);
+      });
+
+      // L1 node
+      const l1Node = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      l1Node.setAttribute('class', 'cv-l1-node');
+      l1Node.setAttribute('cx', x1); l1Node.setAttribute('cy', y1);
+      l1Node.setAttribute('r', 6);
+      l1Node.setAttribute('data-l1-idx', idx);
+      l1Node.addEventListener('mouseenter', (ev) => {
+        l1Node.classList.add('hover');
+        // dim non-matching, highlight matching
+        cvSvg.querySelectorAll('.cv-l2-node, .cv-edge').forEach(n => {
+          if (n.getAttribute('data-l1-idx') === String(idx)) n.classList.add('hover');
+          else n.classList.add('dim');
+        });
+        showTip('<div class="cv-tt-label">L1</div>' + slot.l1 + '<div class="cv-tt-label" style="margin-top:6px">L2 / topics</div>' + slot.l2.length + ' · ' + slot.l2.reduce((s,l)=>s+l.l2.c,0), ev);
+      });
+      l1Node.addEventListener('mousemove', (ev) => showTip(tipEl.innerHTML, ev));
+      l1Node.addEventListener('mouseleave', () => {
+        l1Node.classList.remove('hover');
+        cvSvg.querySelectorAll('.cv-l2-node, .cv-edge').forEach(n => n.classList.remove('hover', 'dim'));
+        hideTip();
+      });
+      cvSvg.appendChild(l1Node);
+
+      // L1 label outside the L2 ring
+      const labRad = RING_L2 + 22;
+      const lx = cx + Math.cos(slot.ang) * labRad;
+      const ly = cy + Math.sin(slot.ang) * labRad;
+      const lab = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      lab.setAttribute('class', 'cv-l1-label');
+      lab.setAttribute('x', lx); lab.setAttribute('y', ly);
+      lab.setAttribute('dy', '0.35em');
+      lab.textContent = slot.l1;
+      cvSvg.appendChild(lab);
+    });
+
+    cvMeta.innerHTML =
+      '<span><strong>' + data.length + '</strong> L1</span>' +
+      '<span><strong>' + totalL2 + '</strong> L2</span>' +
+      '<span><strong>' + totalTopics.toLocaleString() + '</strong> topics</span>';
+  }
 
   // ── L1 distribution bars ──
   const l1Box = document.getElementById('l1-bars');
@@ -1477,8 +1739,12 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
           '<span class="pc-label" data-p-zh="' + (s.persona_label_zh || '') + '" data-p-en="' + (s.persona_label_en || '') + '">' + (s.persona_label_en || '') + '</span>' +
         '</span>'
       : '';
+    const platformChip = s.platform
+      ? '<span class="platform-chip p-' + s.platform + '">' + (s.platform === 'mobile' ? '📱 Mobile' : '💻 Web') + '</span>'
+      : '';
     card.innerHTML =
       '<div class="sample-head">' +
+        platformChip +
         '<span class="badge" data-l1-zh="' + s.l1_zh + '" data-l1-en="' + s.l1_en + '">' + s.l1_en + '</span>' +
         personaChip +
         '<span class="topic-chip">' + s.topic + '</span>' +
