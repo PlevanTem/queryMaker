@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_056_002",
+    "query_text": "Make a web app for handling book launch RSVPs and seat selection so I can stop juggling spreadsheets and email threads every time there's an event — just let people pick a seat from a venue map, confirm their spot, and get a reminder, all in one place for desktop browsers."
+  },
+  {
+    "id": "q_web_056_003",
+    "query_text": "Create a web app for advance press screening reservations so film critics can log in, browse upcoming screenings with dates and venues, claim a seat, and get a confirmation without having to email anyone — the whole thing runs in the browser and keeps track of who's booked what so there's no double-booking."
+  },
+  {
+    "id": "q_web_056_004",
+    "query_text": "Need a web app that handles all the back-and-forth of booking guests for a radio talk show — producers can browse a list of potential guests, send a booking request with the show date and topic, and the guest gets a briefing document link once confirmed, so everything is in one place and nobody has to dig through emails to find out who's coming when."
+  },
+  {
+    "id": "q_web_057_001",
+    "query_text": "Make a web app for an editorial writing craft masterclass and feedback platform where learners can browse a list of lessons organized by skill — things like structuring an argument, writing leads, editing for clarity — work through each one at their own pace, submit a writing sample for feedback, and track which lessons they've finished, all accessible from a desktop browser."
+  },
+  {
+    "id": "q_web_057_002",
+    "query_text": "Build a web app that works as a fact-checking workflow guide and practice tool for newsroom editors, where you can walk through a step-by-step checklist for verifying a story — source confirmation, quote accuracy, date checks — mark each step done, add notes per item, and save your progress so you can come back to it later, all running in the browser."
+  },
+  {
+    "id": "q_web_057_003",
+    "query_text": "Need a web app that works like a reading room for long-form narrative pieces where the text stays clean and readable, authors can leave annotations at specific passages to explain their choices or add context, and readers can click through those notes without losing their place — the left side shows the article and the right side shows the author's annotations as you scroll, for desktop browsers."
+  },
+  {
+    "id": "q_web_057_004",
+    "query_text": "Make a web app for classroom educators that works as a media literacy curriculum portal — teachers can browse lessons organized by topic like spotting misinformation, understanding news sourcing, and evaluating images, save the ones they want to use, and see a checklist of which lessons they've already taught, all in a clean layout for desktop browsers."
+  },
+  {
+    "id": "q_web_058_001",
+    "query_text": "Build a web app where fans of a licensed novel series can upload their fan fiction, browse what others have written, and rate each other's stories — I want it to be a proper little archive where you can filter by character or storyline, leave a rating, and read everything right in the browser without having to download anything."
+  },
+  {
+    "id": "q_web_058_002",
+    "query_text": "Create a web app for literary magazine subscribers where you can read articles and highlight passages you find interesting, leave a short annotation on any section, and then see a discussion thread for that article where other subscribers are doing the same thing — so it feels like a book club but for the magazine, all running in the browser for desktop readers."
+  },
+  {
+    "id": "q_web_058_003",
+    "query_text": "Create a web app where podcast fans can collectively build transcripts for episodes — you pick an episode, claim a chunk of audio to transcribe, type out what you hear, and submit it, then once enough chunks are done the full transcript gets stitched together and published on the episode's page for everyone to read, all happening in the browser."
+  },
+  {
+    "id": "q_web_058_004",
+    "query_text": "Build a web app for newsletter writers who want to find other writers to swap shoutouts with — you can list your newsletter with a short description and audience size, browse other writers by topic or reader count, send a cross-promotion request, and track which swaps are pending or confirmed, all from the browser so it's easy to manage from your desk."
+  },
+  {
+    "id": "q_web_059_001",
+    "query_text": "Make a media kit builder web app for digital news brands where you can fill in your publication's key stats — monthly readers, social following, ad formats, audience demographics — and it assembles a shareable media kit you can send to advertisers, so I don't have to format a document from scratch every single time someone asks."
+  },
+  {
+    "id": "q_web_059_002",
+    "query_text": "Make a fact-checking tool as a web app for editors where you paste in an article and go through a checklist of things to verify — claims, quotes, dates, sources — marking each one as checked or flagged, adding a note if something needs a fix, so everything that needs review is tracked in one place and nothing slips through before publishing."
+  },
+  {
+    "id": "q_web_059_003",
+    "query_text": "Need a news wire monitoring app that runs in the browser where I can add the keywords or topics I care about, and it shows me a live feed of matching stories with timestamps so I can catch anything important as it breaks — plus let me flag items or set up a simple alert so I'm not refreshing manually all day."
+  },
+  {
+    "id": "q_web_059_004",
+    "query_text": "Need a freelance byline tracker as a web app where I can log every article I've written — publication name, headline, date, link — and it builds a portfolio list I can share with editors, plus I can see at a glance how many pieces I've published and for which outlets, all from a desktop browser without any manual spreadsheet work."
+  },
+  {
+    "id": "q_web_060_001",
+    "query_text": "Create a performing arts center web app that feels like flipping through a beautifully laid-out season brochure — each production gets a rich full-bleed photo, a mood-setting description, and performance dates, and there's also a history section that scrolls through past seasons with archival imagery and a sense of the center's legacy, all designed for desktop browsers with an elegant, editorial feel."
+  },
+  {
+    "id": "q_web_060_002",
+    "query_text": "Create a city symphony orchestra website that has the gravitas and warmth you'd expect from a great cultural institution — an upcoming concerts section with rich photography and program notes, a section to meet the musicians with portraits and short bios, and a season calendar that feels curated and intentional, all built for desktop browsers with a refined typographic style."
+  },
+  {
+    "id": "q_web_060_003",
+    "query_text": "A national park visitor information app for desktop browsers that feels as immersive as the parks themselves — sweeping landscape photography anchoring each section, a trails and points-of-interest guide with seasonal tips, and a heritage timeline that tells the story of the land in a way that actually makes you want to go — the kind of site where every scroll feels like stepping deeper into the wilderness."
+  },
+  {
+    "id": "q_web_060_004",
+    "query_text": "An indigenous peoples cultural heritage documentation site for desktop browsers that carries real weight and beauty — a collection of stories, traditions, and artifacts presented with the care they deserve, organized by community or region, with photography that feels respectful and intimate, and a sense that every piece of content has been thoughtfully placed rather than just uploaded."
+  },
+  {
+    "id": "q_web_061_001",
+    "query_text": "A nonprofit annual impact report site for desktop browsers that reads like a beautifully crafted editorial piece — each program or initiative gets its own chapter with a striking photo, a headline stat, and a human story woven in, so donors and supporters feel the real-world weight of the work rather than just scanning numbers in a PDF."
+  },
+  {
+    "id": "q_web_061_002",
+    "query_text": "Create a cultural heritage site virtual documentation portal as a web app for desktop browsers where historic buildings, artifacts, and traditions are documented with rich photography, detailed descriptions, and a map or timeline showing their place in history — the kind of site that feels like a curated museum visit, with a calm, scholarly aesthetic that respects the material."
+  },
+  {
+    "id": "q_web_061_003",
+    "query_text": "An environmental NGO field research digest site for desktop browsers that turns raw findings into something people actually want to read — each research entry gets a location, a striking field photo, a plain-language summary of what was found, and a visual like a chart or map to make the data land, presented with a clean earthy aesthetic that feels serious but approachable."
+  },
+  {
+    "id": "q_web_061_004",
+    "query_text": "Need a web app dedicated to preserving and learning indigenous languages that feels warm and alive rather than like a dusty archive — a resource site for desktop browsers where visitors can listen to words and phrases, read cultural context behind the language, and find lessons organized by topic, with a design that honors the communities behind the language rather than treating it like an academic database."
+  },
+  {
+    "id": "q_web_062_001",
+    "query_text": "Build a campaign site as a web app for a national park's centennial anniversary that feels genuinely celebratory and earned — something for desktop browsers with a timeline of the park's hundred years, a gallery of landmark moments and photos, and a section where people can share their own memories or messages to the park, the kind of site that makes you feel proud just visiting it."
+  },
+  {
+    "id": "q_web_062_002",
+    "query_text": "A city tourism promotional campaign site for desktop browsers that has a strong sense of identity — not generic stock-photo travel content, but something that feels like it was made by people who actually love the city, with a curated highlights section that shows off neighborhoods and hidden gems, an events calendar with real character, and a visual tone that makes visitors feel like they're already there."
+  }
+]

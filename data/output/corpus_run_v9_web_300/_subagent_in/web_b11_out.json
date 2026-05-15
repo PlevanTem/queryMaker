@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_062_003",
+    "query_text": "Need a web app for a theater company that feels like it actually belongs to the troupe — the kind of place where each production gets its own moment to breathe, with a spotlight on the cast, the story behind the show, and a clean way for people to grab tickets right there without getting lost in some soulless booking flow."
+  },
+  {
+    "id": "q_web_062_004",
+    "query_text": "A cultural festival site for desktop browsers that carries the mood of the event itself — a place where the lineup feels alive and each act or exhibition has its own little moment, with an audience engagement area where people can signal interest or share why they're going, and a ticketing section that feels like part of the experience rather than an afterthought."
+  },
+  {
+    "id": "q_web_063_001",
+    "query_text": "Make a web app for booking venue spaces at a cultural center where I can just see which rooms are free on a given date, pick the one I need, fill in what I'm using it for, and submit a reservation request without having to call anyone or email back and forth for three days."
+  },
+  {
+    "id": "q_web_063_002",
+    "query_text": "Need a web app for buying performing arts season tickets where I can see all the shows in the season laid out clearly, pick a package that covers the ones I actually want, and just pay and get a confirmation — so I stop missing early-bird deadlines because the current process is buried in emails."
+  },
+  {
+    "id": "q_web_063_003",
+    "query_text": "Need a web app for a nonprofit charity auction where people can browse the items up for bid, place a bid without creating a complicated account, see if they've been outbid, and come back to raise their offer — so the whole thing runs online and the organizers stop having to manage bids over text messages."
+  },
+  {
+    "id": "q_web_063_004",
+    "query_text": "Create a web app for paying government permit fees where I can look up the permit type I need, see exactly how much it costs, fill in my application details, and pay right there on the same site — so I stop having to figure out which office handles which permit and whether I need to show up in person."
+  },
+  {
+    "id": "q_web_064_001",
+    "query_text": "Make a web app for booking theater backstage tours where you can see the available tour dates and time slots, pick one that works, enter your group size, and get a booking confirmation without needing to call the theater or wait for someone to email you back."
+  },
+  {
+    "id": "q_web_064_002",
+    "query_text": "Create a web app for signing up for pottery workshops at a cultural center where I can see the upcoming sessions with dates, times, and how many spots are left, pick a class, fill in my info, and register in one go — so I stop finding out a class was full only after I've already emailed to ask."
+  },
+  {
+    "id": "q_web_064_003",
+    "query_text": "Build a web app for reserving a screening room at a film archive where researchers and film buffs can check room availability by date, select a time slot and the equipment they need, and submit the reservation request from a desktop browser — so nobody has to call in and manually coordinate schedules over the phone anymore."
+  },
+  {
+    "id": "q_web_064_004",
+    "query_text": "Create a web app for applying for photography permits at historic sites where I can pick the site I want to shoot at, choose my date and whether it's for personal or commercial use, pay the permit fee, and download the permit confirmation — all in one place on the website so I stop having to track down which department handles each site."
+  },
+  {
+    "id": "q_web_065_001",
+    "query_text": "Need a web app for nonprofit volunteer training where volunteers can see a list of available courses organized by skill area, enroll in the ones relevant to their role, track which ones they've completed, and view a simple record of their progress — so coordinators can also see who has finished which training at a glance."
+  },
+  {
+    "id": "q_web_065_002",
+    "query_text": "Create a web app for a community public health education resource center where people can browse a well-organized list of health topics, find articles, guides, and local programs sorted by category like nutrition, mental health, or preventive care, and save the ones they want to come back to — all accessible in a desktop browser with clear labels so nothing is hard to find."
+  },
+  {
+    "id": "q_web_065_003",
+    "query_text": "Build a web app that serves as an open learning repository for indigenous cultural knowledge, where content is organized into clearly labeled categories like language, traditional practices, oral histories, and crafts, so people can browse by topic, read or watch materials, and easily find related entries — accessible in a desktop browser with a clean structure that respects the depth of the content."
+  },
+  {
+    "id": "q_web_065_004",
+    "query_text": "A web app that explains government budgets and fiscal policy in plain terms, organized into clearly labeled sections like where the money comes from, where it goes, and what the big policy decisions mean — with simple charts for the numbers and a list of key terms explained in everyday language, so anyone can open it in a desktop browser and actually understand what's going on with public spending."
+  },
+  {
+    "id": "q_web_066_001",
+    "query_text": "Make a web app that works like a community network for sharing and preserving indigenous cultural knowledge, where people can post stories, traditional skills, songs, or historical records, and others in the community can browse by region or cultural group, add comments or related knowledge, and build it up over time — something that lives in a desktop browser and feels like a living library that the community actually owns."
+  },
+  {
+    "id": "q_web_066_002",
+    "query_text": "Build a web app that works like a mutual aid board where people in a community can post things they have to give away or services they can offer, and others can post what they need, with a simple way to browse by category and reach out to connect — the kind of thing that runs in a desktop browser and makes it easy for neighbors to help each other without any money changing hands."
+  },
+  {
+    "id": "q_web_066_003",
+    "query_text": "Need a web app for a community food pantry where volunteers can sign up for open shifts and donors can see what items are most needed right now, with a simple list that updates so people bringing donations know what to bring — something that runs on a website so the pantry coordinator can keep everything in one place instead of managing it through group chats and paper sign-up sheets."
+  },
+  {
+    "id": "q_web_066_004",
+    "query_text": "A collaboration workspace app for desktop browsers where multiple nonprofits in a coalition can work on shared projects together — each organization can see the projects they're part of, add updates or files, assign tasks to people across different groups, and track what's been done, so everyone stays in sync without having to forward emails or maintain separate spreadsheets for every initiative."
+  },
+  {
+    "id": "q_web_067_001",
+    "query_text": "Make a web app for submitting public comments and civic feedback where residents can see a list of open issues or proposals from their local government, pick one, write their comment, and submit it — so citizens can actually weigh in on things that affect them from a desktop browser without having to attend a meeting in person or mail a letter."
+  },
+  {
+    "id": "q_web_067_002",
+    "query_text": "Build a web app for a public library's digital catalog where I can search for books or other materials, see which branch has them or whether they're available to borrow, and if my library doesn't have it, submit an interlibrary loan request right there — so I stop having to go to the library in person just to find out a book isn't on the shelf."
+  },
+  {
+    "id": "q_web_067_003",
+    "query_text": "Need a web app for matching volunteers with nonprofit opportunities where I can browse open volunteer positions filtered by cause or time commitment, see what each role involves, and express interest or sign up directly — so nonprofits stop losing potential volunteers who give up trying to figure out how to contact them, and volunteers can actually find a good fit in one place."
+  },
+  {
+    "id": "q_web_067_004",
+    "query_text": "A government spending tracker for desktop browsers where you can see how public money is being spent broken down by department or category, with simple charts that make the numbers readable and a search so you can look up a specific program or contract — so regular people can actually follow where tax money goes without needing to dig through dense PDFs."
+  },
+  {
+    "id": "q_web_068_001",
+    "query_text": "Need a web app that shows open-source contributor stats and a leaderboard for a project or set of projects, where you can see who's contributed the most commits or pull requests, browse individual contributor profiles with their activity over time, and maybe filter by time period — the kind of thing you'd put up on a website to celebrate the community and motivate people to get involved."
+  },
+  {
+    "id": "q_web_068_002",
+    "query_text": "A personal engineering blog website where the home screen shows a list of posts with a short preview so readers can tell at a glance which ones are deep technical walkthroughs versus lighter pieces, and each post page has room for long-form writing with code snippets and diagrams — the kind of site that feels like it belongs to one person who really knows their stuff and wants to share the thinking behind their projects."
+  },
+  {
+    "id": "q_web_068_003",
+    "query_text": "Make a web app that showcases an API and lets people actually try it out right in the browser — you can browse the list of available endpoints, pick one, fill in the parameters, hit send, and see the real response come back, so developers exploring the API can get a feel for how it works without having to set anything up locally first."
+  }
+]

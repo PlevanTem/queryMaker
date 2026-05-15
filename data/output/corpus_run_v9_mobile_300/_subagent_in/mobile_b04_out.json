@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_009_005",
+    "query_text": "Create a notification preferences manager for my phone where I can go through all the different channels — push, email, SMS, in-app — and check off the ones I actually want, with a clear list showing which ones are on and which are off so I can always see the full picture at a glance, plus a way to save different combinations for different types of alerts like promotions versus account security."
+  },
+  {
+    "id": "q_scene_010_001",
+    "query_text": "Create a food finder app for my phone that finally lets me filter out everything I can't eat without scrolling through a hundred irrelevant options — I want to tap multiple dietary restrictions at once like gluten-free, nut-free, and vegetarian so only food that actually works for me shows up, and the results should update right away without me having to resubmit anything."
+  },
+  {
+    "id": "q_scene_010_002",
+    "query_text": "Need a sensor monitor app for my phone that lets me type in specific number thresholds for each IoT sensor so I only get alerted when readings actually go above or below what matters to me — tired of wading through a constant stream of normal readings when all I want to know is when something crosses a real limit, with each sensor having its own high and low cutoff I can set myself."
+  },
+  {
+    "id": "q_scene_010_003",
+    "query_text": "Make a report viewer app for my phone where I can save the audience segments I filter by all the time — like repeat buyers in a specific region — so I don't have to rebuild the same filter combination from scratch every single time I need to check my analytics, and the saved segment names show up at the top of the filter options so I can apply them in one tap."
+  },
+  {
+    "id": "q_scene_010_004",
+    "query_text": "Create a task manager app for my phone that lets me pin the most important filtered results to the very top of the list so they stay visible even when I scroll through a long list, with a bar that sticks at the top showing what filter is currently applied so I always know what I'm looking at without having to scroll back up to check."
+  },
+  {
+    "id": "q_scene_010_005",
+    "query_text": "A customer analytics tool for my phone where I can filter my customer list by how much they've spent in total — breaking them into tiers like high-value, mid-range, and occasional buyers — so I can focus my attention on the right group without manually sorting through everyone every time, and each tier shows a quick count so I know how big each segment is."
+  },
+  {
+    "id": "q_scene_011_001",
+    "query_text": "Make a messaging app for my phone where I can take back a message I sent by mistake within a few minutes of sending it, and if the other person has already read it the app gives me a heads-up so I know they saw it before I recalled it — saves me the awkward situation of thinking I erased something they already read."
+  },
+  {
+    "id": "q_scene_011_002",
+    "query_text": "Create a document collaboration app for my phone where I can remove my own highlights or comments from a shared file without accidentally wiping the whole discussion thread underneath — I just want to clean up my own markup while keeping all the back-and-forth replies intact so the conversation context stays there for everyone else."
+  },
+  {
+    "id": "q_scene_011_003",
+    "query_text": "Create a connected apps manager for my phone where I can disconnect a third-party service and know for sure that it can't still access my account — shows me a confirmation that the access token was actually cancelled, not just removed from the list, so I don't have to wonder if the connection is really gone."
+  },
+  {
+    "id": "q_scene_011_004",
+    "query_text": "Make a social posting app for my phone where I can remove a photo or video from a post after the fact while keeping all the text I wrote completely untouched — just want to strip off the media attachment without losing my caption or having to retype anything, and it should be obvious which part I'm removing before I confirm."
+  },
+  {
+    "id": "q_scene_011_005",
+    "query_text": "Need a social media scheduler app for my phone that lets me cancel a post I've already lined up to go out later and moves it straight back into my drafts instead of just deleting it — so I don't lose all the work I put into writing it and can come back to reschedule or edit it whenever I want."
+  },
+  {
+    "id": "q_scene_012_001",
+    "query_text": "Build a profile management app for my phone that guides me through deleting my account in a way that feels considered and respectful — not a cold single-button wipe, but a few quiet, clearly worded steps that spell out exactly what data gets removed and give me one last chance to pause before everything is gone for good, with a calm visual tone that feels safe rather than alarming."
+  },
+  {
+    "id": "q_scene_012_002",
+    "query_text": "Create a profile settings app for my phone that makes changing my email address feel polished and trustworthy — it should walk me through confirming the new address, send a verification to both my old and new email so nothing gets hijacked, and give me a short window to undo the change if I made a mistake, all presented in a clean flow that feels reassuring rather than stressful."
+  },
+  {
+    "id": "q_scene_012_003",
+    "query_text": "Need a profile editor app for my phone that lets me set my pronouns and also type in whatever identity label feels right to me — not just a dropdown of preset options, but an open text field where I can write exactly what I want, displayed on my profile in a way that looks intentional and tasteful rather than like an afterthought tucked away in a settings menu."
+  },
+  {
+    "id": "q_scene_012_004",
+    "query_text": "Create a personal safety profile app for my phone that walks me through setting up my emergency contacts and key health details in a step-by-step flow — one piece of information at a time, each step feeling calm and purposeful, with soft transitions between sections and a sense that the whole setup process is something worth doing carefully rather than rushing through."
+  },
+  {
+    "id": "q_scene_012_005",
+    "query_text": "A volunteer profile app for my phone where I can fill in the causes I care about and the skills I can actually offer — like event coordination, translation, or graphic design — laid out in a way that feels warm and community-oriented rather than like a job application, with the causes and skills displayed as a soft curated collection on my profile that reflects who I actually am."
+  },
+  {
+    "id": "q_scene_013_001",
+    "query_text": "Need a video downloader app for my phone where I can actually pick the quality before I save anything — a simple choice between 4K, HD, and SD so I'm not stuck with a massive file when I just needed something quick to share, or a blurry one when I wanted the full resolution, with the file size shown next to each option so I can make an informed choice."
+  },
+  {
+    "id": "q_scene_013_002",
+    "query_text": "Need an expense tracker app for my phone that lets me export a whole batch of invoices and receipts as PDFs at once — I'm tired of downloading them one by one when I need to submit expenses at the end of the month, so I want to check off a date range or a set of specific records and get them all bundled into one download."
+  },
+  {
+    "id": "q_scene_013_003",
+    "query_text": "Create a message manager app for my phone where I can see all the file attachments from a conversation thread in one organized list and download the ones I actually need — instead of scrolling through the whole chat history hunting for that one PDF someone sent weeks ago, just show me everything attached to that thread with the sender and date so I can grab what I want quickly."
+  },
+  {
+    "id": "q_scene_013_004",
+    "query_text": "Build a backup settings app for my phone where syncing only happens over Wi-Fi by default to save my mobile data, but I can also force a sync right now over my data connection when I actually need it — just a clear toggle for the Wi-Fi-only rule and a separate button to override it on demand, nothing complicated."
+  },
+  {
+    "id": "q_scene_013_005",
+    "query_text": "Build a contract signing app for my phone where I can sign a legal document digitally and upload it in one smooth flow — I want to draw or type my signature, attach it to the right spot on the contract, and send it off without having to print anything or use three different apps, with a confirmation at the end so I know the signed file actually went through."
+  },
+  {
+    "id": "q_scene_014_001",
+    "query_text": "Build a food ordering app for my phone where I can reorder something I've bought before with a single tap that copies over the whole previous order — same items, same quantities — so I don't have to rebuild my usual lunch order from scratch every time, with a quick review step so I can make any changes before I actually confirm."
+  },
+  {
+    "id": "q_scene_014_002",
+    "query_text": "Make a flashcard study app for my phone where I can duplicate an entire deck so I can make a tweaked version for a different grammar tense or language variant without messing up my original — just copy the whole deck into a new one I can rename and edit freely, so I can study two related but slightly different sets side by side."
+  },
+  {
+    "id": "q_scene_014_003",
+    "query_text": "Create a monitoring alert tool for my phone where I can clone an existing alert rule and just change the number threshold on the copy — so if I already have a rule set up for one metric I don't have to configure everything from scratch for a similar one, just duplicate it and adjust the cutoff value and I'm done."
+  },
+  {
+    "id": "q_scene_014_004",
+    "query_text": "Need a deployment manager app for my phone that lets me copy my settings from the test environment over to the live one in one action — so I stop manually re-entering all the same config values every time I'm ready to push something live, with a side-by-side comparison showing what will change before I confirm the copy."
+  }
+]

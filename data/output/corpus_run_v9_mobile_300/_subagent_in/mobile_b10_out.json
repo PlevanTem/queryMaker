@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_039_001",
+    "query_text": "A festival and event calendar planner app for my phone that overlays local festivals, public holidays, and seasonal events onto any destination I'm planning to visit, so I can see at a glance what's happening during my travel dates — I want to pick a destination, set my date range, and see a simple calendar view with events marked on each day, plus a short description of each one when I tap it."
+  },
+  {
+    "id": "q_scene_039_002",
+    "query_text": "Make a guided audio tour downloader app for my phone that lets me browse heritage sites by city or country, see a list of available audio guides for each site with the tour length and language options, and download the ones I want to listen to offline during my visit — I really care about being able to save them ahead of time so I have everything ready when I'm actually at the site without needing data."
+  },
+  {
+    "id": "q_scene_039_003",
+    "query_text": "Make a ride comparison tool for my phone that shows the estimated price and wait time for taxis and rideshare options like Uber and Grab side by side for any destination I'm traveling to, so I can quickly pick the cheapest or fastest option without opening three different apps — I want to enter a pickup and drop-off location and see all the options listed in one place with clear price and time labels."
+  },
+  {
+    "id": "q_scene_039_004",
+    "query_text": "A car rental planner app for my phone where I can enter my trip destination, choose pick-up and drop-off locations and dates, and keep track of the key details for each rental in one organized place — I want to see the rental period clearly, store the pick-up address and confirmation number, and get a reminder the day before I need to collect or return the car so I don't miss anything."
+  },
+  {
+    "id": "q_scene_040_001",
+    "query_text": "Create a baby and toddler travel packing guide app for my phone that gives me a ready-made checklist of everything I need to bring when traveling with a young child — organized into categories like feeding, sleeping, diaper bag, and entertainment — where I can check off items as I pack them and add a few of my own items to the list so nothing gets forgotten before we leave."
+  },
+  {
+    "id": "q_scene_040_002",
+    "query_text": "Need a photography gear travel checklist app for my phone that has a built-in list of all the camera equipment I might need to pack for a trip — organized into sections like camera body, lenses, accessories, and batteries and memory — where I can check things off as I pack them, mark which items I actually brought, and save different versions of the list for different types of trips like landscape versus portrait shoots."
+  },
+  {
+    "id": "q_scene_040_003",
+    "query_text": "Build a travel insurance document preparation guide app for my phone that walks me through all the key documents and information I need to gather before buying or filing a claim on travel insurance — things like my passport details, booking confirmations, and emergency contact numbers — organized as a checklist with a section for each document type so I can check things off and feel confident I haven't missed anything important."
+  },
+  {
+    "id": "q_scene_040_004",
+    "query_text": "Build a customs duty reference app for my phone where I can look up the duty-free allowance limits for any country I'm traveling to or from — things like alcohol, tobacco, cash, and goods — organized by country so I can quickly check the rules before I pack my bags, with a simple list showing the limit for each category and a note on what happens if I go over."
+  },
+  {
+    "id": "q_scene_041_001",
+    "query_text": "Create a historical city map overlay app for my phone that lets me pick any tourist destination and see a layer of old city maps or historical street layouts placed on top of the modern map, so I can actually understand how the city used to look while I'm walking around — it would save me from having to dig through Wikipedia just to get a basic sense of what a neighborhood looked like 100 or 200 years ago."
+  },
+  {
+    "id": "q_scene_041_002",
+    "query_text": "Create a green route planner app for my phone that finds me walking or cycling paths through parks and nature areas when I'm getting around a city, instead of just routing me down busy main roads — I just want to enter where I'm starting and where I need to go, and have it show me a route that passes through as many green spaces as possible, with the total distance and rough time it'll take."
+  },
+  {
+    "id": "q_scene_041_003",
+    "query_text": "Build a street sign translation app for my phone that I can use when I'm traveling abroad and can't read the local language — I want to point my phone camera at a sign and instantly see the translation overlaid on screen in English, so I can figure out street names, directions, and shop signs without having to manually type anything out or switch between apps."
+  },
+  {
+    "id": "q_scene_041_004",
+    "query_text": "A hiking trail info app for my phone where I can look up any trail and immediately see the total distance, elevation gain, and a simple elevation profile chart, so I know before I set off whether the hike is actually manageable for me — I always end up at a trailhead with no idea how steep it's going to get, and I just want a quick way to check those numbers for any trail without wading through forum posts."
+  },
+  {
+    "id": "q_scene_042_001",
+    "query_text": "Need a destination weather comparison tool for my phone that lets me enter two or three places I'm considering for a trip and see their weather side by side for the dates I'm looking at — things like temperature, rain chance, and humidity — so I can just pick the one with the best forecast without having to check each location separately in different weather apps and try to remember the numbers."
+  },
+  {
+    "id": "q_scene_042_002",
+    "query_text": "Need a marine weather forecast app for my phone that gives me the key sailing conditions in one place — wind speed and direction, wave height, and visibility — for any coastal location I enter, shown as a simple day-by-day forecast so I can plan whether it's safe to head out without having to piece together information from three different maritime weather sites."
+  },
+  {
+    "id": "q_scene_042_003",
+    "query_text": "A daily weather briefing app for construction sites on my phone that shows me the key things that affect outdoor work — temperature, rain, wind speed, and any extreme weather warnings — for the site location, laid out as a simple morning summary I can check at the start of each day so the whole crew knows what to expect and can plan the work schedule around the forecast."
+  },
+  {
+    "id": "q_scene_042_004",
+    "query_text": "Make a weather suitability scorer for runners and cyclists on my phone that takes today's weather conditions and gives a simple score or rating for whether it's a good day to head out for a run or a bike ride — factoring in things like temperature, wind, and rain chance — so I don't have to interpret raw weather data myself and can just glance at the app and know whether to lace up or stay home."
+  },
+  {
+    "id": "q_scene_043_001",
+    "query_text": "Create a multi-leg trip cost calculator app for my phone that lets me enter each leg of a journey — like train, then bus, then ferry — with the ticket price for each, and automatically adds everything up into a total trip cost with a clear breakdown showing what each leg costs and what percentage of the total it is, so I can see at a glance where my travel money is going and compare different route options."
+  },
+  {
+    "id": "q_scene_043_002",
+    "query_text": "Build a discount fare lookup app for my phone that lets me search for student and senior ticket prices on trains, buses, and other public transport, so I can quickly check what reduced fares are available and whether I qualify — I want to enter a route or transport type and see the standard price next to the discounted rate with a note on what ID or proof is needed to get the cheaper ticket."
+  },
+  {
+    "id": "q_scene_043_003",
+    "query_text": "A group ticket booking organizer app for my phone where I can enter how many people are in my group, choose the transport type, and see the available group passes or bulk ticket options with the total and per-person cost clearly shown — I always end up doing this math in my head and second-guessing which option is cheaper, so I just want one place to compare group fare options and figure out the best deal before committing."
+  },
+  {
+    "id": "q_scene_043_004",
+    "query_text": "Build a cancellation and refund policy checker app for my phone where I can enter the type of ticket or booking I have — like a train ticket, hotel, or flight — and quickly see what the cancellation terms are, including the deadline for a full refund and any fees that apply, so I don't have to hunt through the original booking confirmation email every time I need to know whether it's worth canceling."
+  },
+  {
+    "id": "q_scene_044_001",
+    "query_text": "Make a random meal picker app for my phone that helps me and my friends settle the daily \"what should we eat\" debate — we just open it on the phone, tap a big spin button, and it randomly picks a cuisine or meal type from a list we've put together ourselves, with the option to re-spin if nobody likes the result and a filter to skip cuisines someone doesn't eat that day."
+  },
+  {
+    "id": "q_scene_044_002",
+    "query_text": "Make a lunch randomizer app for my phone that I can use when I'm at the office and can't decide where to eat — I add a bunch of nearby restaurants or meal types to my personal list, hit the randomize button, and it picks one for me, with the option to mark places as \"not today\" so it won't pick them again until tomorrow and I'm not stuck with the same choice twice in a row."
+  },
+  {
+    "id": "q_scene_044_003",
+    "query_text": "A spin-the-wheel dinner decider app for my phone where my roommates and I each add our food suggestions to a shared list, then spin to get a random pick for tonight's dinner — it's really just for those nights when everyone has an opinion but nobody can agree, so the wheel makes the final call, and we can see the history of past picks so we don't repeat the same thing too many nights in a row."
+  },
+  {
+    "id": "q_scene_044_004",
+    "query_text": "Build a random food chooser app for my phone that solves the daily struggle of deciding what to eat — I want to set up a few personal lists like \"quick meals,\" \"takeout options,\" and \"something healthy,\" then just tap a button to get a random suggestion from whichever list fits my mood, and have it remember what I've picked recently so it doesn't keep suggesting the same thing."
+  },
+  {
+    "id": "q_scene_045_001",
+    "query_text": "Need a fiber content lookup app for my phone that lets me search any food and instantly see how much dietary fiber it has per serving, with foods ranked from highest to lowest so I can easily spot which options are best for gut health — I always forget which vegetables and grains are actually high in fiber and end up eating the same few things, so I want a quick reference I can check while grocery shopping or meal planning."
+  }
+]

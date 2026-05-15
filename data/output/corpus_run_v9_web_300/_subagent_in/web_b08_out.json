@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_043_004",
+    "query_text": "Create a web app for tracking which customers are about to leave and which groups of users are sticking around over time, so I can finally stop digging through spreadsheets every Monday morning to figure out who's at risk — I just want to see the at-risk accounts listed somewhere obvious, and be able to click into any monthly signup group to see how many are still active after 30, 60, or 90 days."
+  },
+  {
+    "id": "q_web_044_001",
+    "query_text": "Build a website for a campus virtual tour where people can browse key spots on campus one by one, each with a 360-degree view they can look around in, plus a simple list of all the locations on the side so you can jump to whichever building or area you want to see next."
+  },
+  {
+    "id": "q_web_044_002",
+    "query_text": "Create a web app for showcasing a department's research highlights and published papers, with a clean list of publications organized by year, each entry showing the title, authors, and a link to read more, plus a way to filter by research topic so visitors can find what they care about quickly."
+  },
+  {
+    "id": "q_web_044_003",
+    "query_text": "A website for campus open day events where visitors can see a list of all the sessions happening that day, including start times, locations, and a short description of each, with a simple sign-up form so they can reserve a spot for the sessions they want to attend."
+  },
+  {
+    "id": "q_web_044_004",
+    "query_text": "Make a web app for browsing scholarship programs and financial aid options, with a list of available scholarships showing the award amount, eligibility requirements, and deadline for each one, plus a way to filter by student type or field of study so you can zero in on what applies to you."
+  },
+  {
+    "id": "q_web_045_001",
+    "query_text": "Need a web app for storing and browsing graduate theses and dissertations, where you can search by title, author, or subject area and get a list of matching results with the year, degree type, and a link to read the full paper, and the whole thing works in a desktop browser so it's easy to use from a university computer."
+  },
+  {
+    "id": "q_web_045_002",
+    "query_text": "Make a web app for keeping track of all the department's past seminar recordings and upcoming events, with a list of seminars sorted by date that shows the speaker name, topic, and a link to watch the recording, plus a schedule of future sessions so you know what's coming up and can plan ahead."
+  },
+  {
+    "id": "q_web_045_003",
+    "query_text": "A browser-based tool for browsing and reading books and academic monographs published by a university press, where the home screen shows a list of all available titles organized by subject, each with a cover image, author, and short description, and you can click into any title to read it or find a link to purchase it."
+  },
+  {
+    "id": "q_web_045_004",
+    "query_text": "A website for a series of educational podcasts hosted by faculty, where all the episodes are listed in order with the episode title, host name, topic, and a player you can use right in the browser, plus a way to browse episodes by subject area so students can find the ones that match what they're studying."
+  },
+  {
+    "id": "q_web_046_001",
+    "query_text": "A website for promoting a summer intensive program that shows all the available courses with dates, pricing, and a brief description of what each one covers, with a simple enrollment form on the same page so interested students can sign up right away without having to hunt around for a separate registration link, and the whole thing is designed for desktop browsers."
+  },
+  {
+    "id": "q_web_046_002",
+    "query_text": "Build a web app for a student referral and discount program where students can see what rewards they've earned for referring friends, check their current discount balance, and share a personal referral link — the main area should show a clear list of referrals with their status, and there should be a spot to browse available discounts they can redeem."
+  },
+  {
+    "id": "q_web_046_003",
+    "query_text": "Need a web app that lays out all the available certification programs side by side so I can easily compare things like duration, cost, what's covered, and whether there are prerequisites, with an enroll button right there for each option so I don't have to go digging around on a separate page — just a clean comparison tool in a desktop browser that helps me pick the right program and sign up."
+  },
+  {
+    "id": "q_web_046_004",
+    "query_text": "Build a web app for a live webinar series where people can see a list of upcoming sessions with the date, time, topic, and a register button, and also browse past sessions with a replay link, so everything is organized in one place in a desktop browser and you don't have to chase down recordings through email."
+  },
+  {
+    "id": "q_web_047_001",
+    "query_text": "Need a web app for company admins to manage bulk course enrollments for their team, where you can upload a list of employees, assign them to specific courses, and see at a glance who's enrolled, who's completed, and who still hasn't started — I just want to stop handling this over email and spreadsheets and have it all in one place in a browser."
+  },
+  {
+    "id": "q_web_047_002",
+    "query_text": "Need a web app where business clients can log in and handle all their training invoices and payments in one place — see a list of past and upcoming invoices, check which ones are paid or due, and pay outstanding ones directly from the browser, so we can stop chasing people through email every time a payment is late."
+  },
+  {
+    "id": "q_web_047_003",
+    "query_text": "Create a web app for managing reseller partners where new partners can go through an onboarding checklist to get set up, and once they're active they can see a running total of their commissions, a breakdown of which sales generated what earnings, and the current payout status — I want this all in a browser so partners can check their numbers any time without having to ask us."
+  },
+  {
+    "id": "q_web_047_004",
+    "query_text": "A browser-based tool for B2B clients to configure their own branded course catalog, where they can pick which courses to include, set custom pricing for their organization, and preview how the finished catalog will look before sharing it with their employees — all in one place so our team stops getting requests to manually put these together every time a new client signs on."
+  },
+  {
+    "id": "q_web_048_001",
+    "query_text": "Need a web app where prospective bootcamp students can answer a short eligibility questionnaire and then pick a time slot for a discovery call with the admissions team, all in one flow in a desktop browser, so we stop playing email tag with every applicant just to figure out if they qualify and book a basic intro call."
+  },
+  {
+    "id": "q_web_048_002",
+    "query_text": "Make a web app for scheduling SAT and ACT tutoring sessions, where students or parents can see the tutor's available time slots on a calendar, pick a session, and get a confirmation right away, so nobody has to go back and forth over text or email just to lock in a weekly prep session."
+  },
+  {
+    "id": "q_web_048_003",
+    "query_text": "Make a web app for employees to browse upcoming soft-skills workshops and reserve a seat in the ones they want to attend, with a simple list of sessions showing the topic, date, available spots, and a one-click sign-up — the whole thing runs in a desktop browser so HR doesn't have to manually track who signed up for what in a spreadsheet anymore."
+  },
+  {
+    "id": "q_web_048_004",
+    "query_text": "A browser-based booking tool for students to schedule office hours with their online course instructor, where you can see all the instructor's open time slots for the week, click one to claim it, and get a confirmation with any meeting link — so students stop flooding the course chat with questions about availability and instructors can just share one link instead."
+  },
+  {
+    "id": "q_web_049_001",
+    "query_text": "Need a web app for a coding bootcamp where students can see the full curriculum laid out week by week, check off completed lessons, and submit their projects through the same tool, so everything is in one place in a desktop browser and nobody has to juggle a separate submission form, a separate syllabus doc, and a separate checklist."
+  },
+  {
+    "id": "q_web_049_002",
+    "query_text": "A website for K-12 students to find homework help and book live tutoring sessions, with a list of available tutors organized by subject, each showing their grade-level specialties, available times, and a rate, plus a way for students or parents to filter by subject and schedule a session directly from the browser."
+  },
+  {
+    "id": "q_web_049_003",
+    "query_text": "A browser-based exam prep tool for professional certification tests, where you can work through practice questions organized by topic, see your score after each set, and track which areas you've covered and which ones still need more work — with a list of all the exam topics on the side so it's easy to jump to whatever section you want to drill next."
+  },
+  {
+    "id": "q_web_049_004",
+    "query_text": "Make a web app that combines a full university course catalog with a four-year degree planner, where you can search and browse all available courses, then drag or add them into a semester-by-semester plan that shows how many credits you've mapped out so far and what requirements you've already covered — all accessible in a desktop browser so it's easy to sit down and plan out your whole degree in one session."
+  }
+]

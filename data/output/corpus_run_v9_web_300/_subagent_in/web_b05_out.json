@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_025_001",
+    "query_text": "Build a web app that walks you step by step through the whole business registration and permit process, where the home screen shows a checklist of every stage you need to complete — like choosing a business structure, filing the registration forms, getting the right local permits — and each item has a short plain-English explanation of what it means and a place to mark it done, plus a separate list on the side showing which documents you still need to gather."
+  },
+  {
+    "id": "q_web_025_002",
+    "query_text": "A food handler certification study planner for desktop browsers where you can see all the topics you need to cover laid out as a checklist — things like temperature safety, cross-contamination, personal hygiene, and storage rules — and for each topic there's a short reading section followed by a few practice questions, so you can work through the material at your own pace and track which topics you've finished and which ones still need review."
+  },
+  {
+    "id": "q_web_025_003",
+    "query_text": "Build a web app that teaches visual merchandising and window display techniques step by step, where the main area has a list of topics to work through — things like how to use color blocking, how to arrange products at different heights, and how to set up seasonal themes — and each topic has a photo example alongside a short explanation, plus a checklist you can tick off as you finish each one so you always know where you left off."
+  },
+  {
+    "id": "q_web_025_004",
+    "query_text": "Build a web app that teaches bookkeeping basics to shop owners from scratch, where you can work through a numbered list of lessons covering things like recording daily sales, tracking expenses by category, and reading a simple profit-and-loss summary, and each lesson has a short written explanation plus a small practice exercise you can fill in directly in the browser, with a progress tracker on the side so you can see which lessons you've completed."
+  },
+  {
+    "id": "q_web_026_001",
+    "query_text": "A community gift card exchange marketplace for local shops — basically a web app where neighbors can list gift cards they're not going to use and browse cards from nearby stores they actually want, and each listing shows the shop name, the card value, and what someone is asking to swap for it, with a simple way to contact the person and arrange the trade."
+  },
+  {
+    "id": "q_web_026_002",
+    "query_text": "A neighborhood handyman and home-repair job listing board for desktop browsers where homeowners can post jobs they need done — like fixing a leaky faucet, painting a room, or patching drywall — and local handymen can browse the listings and send a message to the person who posted it, with each listing showing the type of job, the rough location in the neighborhood, and when they need it done."
+  },
+  {
+    "id": "q_web_026_003",
+    "query_text": "Create a web app where local shops on the same block can coordinate a joint discount campaign together — each merchant can sign up, post what deal they're offering during the campaign period, and see what the other shops are running so they can make their offers line up nicely, and there's a shared calendar showing when the campaign runs so everyone stays on the same page."
+  },
+  {
+    "id": "q_web_026_004",
+    "query_text": "Make a community feedback and suggestion app for the local block shops that lives in the browser on desktop — neighbors can drop in a comment or suggestion for any shop on the block, like asking a bakery to stock a certain item or telling a hardware store they'd love extended hours, and each shop owner can log in to read and respond to their own feedback so the conversation feels two-way and genuine."
+  },
+  {
+    "id": "q_web_027_001",
+    "query_text": "Create a daily cash-flow ledger tool for market stall vendors as a web app, where you can quickly type in each sale and expense throughout the day and the app keeps a running total so you always know if you're ahead or behind, and at the end of the day it shows a simple summary of total income, total spending, and what's left — so I stop doing this all in my head or on scraps of paper."
+  },
+  {
+    "id": "q_web_027_002",
+    "query_text": "Create a supplier unit-price comparison tool for small buyers as a web app for desktop browsers, where you can enter the same product from multiple suppliers — name, price per unit, minimum order quantity — and it lines them all up side by side so you can instantly see who's actually cheapest after you factor in the order size, because doing this manually in a notepad every time is a real headache."
+  },
+  {
+    "id": "q_web_027_003",
+    "query_text": "Create a work-hour timesheet tracker for desktop browsers where you can enter each employee's name and log their daily start and end times throughout the week, and at the end of the month you just hit one button to download the whole thing as a PDF ready to hand to whoever needs it — so I stop copying everything by hand into a separate document every single month."
+  },
+  {
+    "id": "q_web_027_004",
+    "query_text": "Create a delivery coverage zone tool as a web app for desktop browsers where you can open up a street map, draw out the area your shop actually delivers to by clicking around the boundary, and save it so you have a clear visual you can refer back to — because right now I'm just describing the zone in words to customers and it always causes confusion."
+  },
+  {
+    "id": "q_web_028_001",
+    "query_text": "A customer success showcase app for desktop browsers that feels genuinely curated — where each case study has its own story arc, the kind you'd actually want to read, with the client's real challenge front and center before you ever get to the results, and the whole collection is browsable by industry so visitors land on something that speaks directly to their world."
+  },
+  {
+    "id": "q_web_028_002",
+    "query_text": "Need a website that presents a company's art collection and cultural sponsorships with the kind of quiet confidence that good taste deserves — each piece of artwork or sponsored project gets its own space with the story behind why the company chose it, and the overall feel should be more like walking into a thoughtful gallery than flipping through a corporate report, viewable on desktop browsers."
+  },
+  {
+    "id": "q_web_028_003",
+    "query_text": "A flagship product launch microsite for desktop browsers that actually feels like an event — the kind of site where the product's story unfolds as you scroll, with a moment that introduces what makes it different and a section that captures the energy of the launch itself, so visitors come away feeling like they witnessed something rather than just read a spec sheet."
+  },
+  {
+    "id": "q_web_028_004",
+    "query_text": "Create a brand identity and design system site for desktop browsers that feels like it was built with genuine conviction — a place where the logo, color palette, and typography are shown with enough context that you understand the thinking behind each choice, and there's a section where you can see the core visual rules laid out clearly so anyone on the team can reference it and stay consistent."
+  },
+  {
+    "id": "q_web_029_001",
+    "query_text": "Need a corporate social responsibility portal that carries real weight — a web app for desktop browsers where the company's community programs and impact numbers are presented with honesty and depth, organized by cause area so visitors can dig into what they actually care about, and each initiative has a short story attached so it reads like something the company genuinely believes in, not just a compliance box."
+  },
+  {
+    "id": "q_web_029_002",
+    "query_text": "Build a product launch editorial site for desktop browsers that has its own distinct voice — not a catalog, but a proper web app where the product's story is told through well-chosen words and images that build anticipation, with a section that captures the moment of the launch itself and another that lets visitors sign up to be among the first to get access."
+  },
+  {
+    "id": "q_web_029_003",
+    "query_text": "Build a corporate event recap and conference highlights hub for desktop browsers where every key moment from the event has its own place — talks get a short summary with the main takeaway, photos are grouped by moment rather than just dumped in a grid, and the whole thing has the feeling of something worth revisiting rather than just a press release you scroll past once."
+  },
+  {
+    "id": "q_web_029_004",
+    "query_text": "A company history timeline site for desktop browsers where the brand's story unfolds year by year in a way that actually feels worth following — each milestone gets a short honest description and an image that anchors it in time, the kind of site where you scroll through it and come away with a real sense of what the company stands for and how it got here."
+  },
+  {
+    "id": "q_web_030_001",
+    "query_text": "Need a product demo request and free trial portal that feels considered rather than pushy — a web app for desktop browsers where a potential customer can describe what they want to see in a demo and pick a time that actually works for them, and the free trial sign-up section is calm and clear so the whole experience feels like the company trusts you rather than chasing you."
+  },
+  {
+    "id": "q_web_030_002",
+    "query_text": "Create a co-branding partnership campaign announcement site for desktop browsers that carries the identity of both brands equally and with confidence — a web app where visitors can immediately feel the shared spirit behind the collaboration, with a section that tells the story of why these two brands came together and another that shows the actual campaign work so people understand what they're being invited into."
+  },
+  {
+    "id": "q_web_030_003",
+    "query_text": "Need a sweepstakes and user-generated content contest site for desktop browsers that feels genuinely exciting to participate in — a web app where the rules are laid out in plain language so anyone can understand how to enter, people can submit their photo or story directly through the site, and there's a live gallery showing entries coming in so the whole thing feels alive and communal rather than just a form you fill out."
+  },
+  {
+    "id": "q_web_030_004",
+    "query_text": "Make a new market launch campaign site for desktop browsers that draws people in rather than just informing them — a web app with the kind of immersive feel where the brand's entry into this new territory has a real arc to it, from the opening moment that sets the scene to a section where visitors can register their interest, so the whole experience feels like an invitation rather than an announcement."
+  },
+  {
+    "id": "q_web_031_001",
+    "query_text": "Need a business KPI reporting tool as a web app for desktop browsers where I can pull together all the numbers that matter — sales targets, team performance, project completion rates — into one place that updates when I need it to, so I stop spending an hour every Monday morning copying figures from five different spreadsheets just to answer the same basic questions about how the business is doing."
+  }
+]

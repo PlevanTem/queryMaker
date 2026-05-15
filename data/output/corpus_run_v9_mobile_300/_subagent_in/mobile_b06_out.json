@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_019_002",
+    "query_text": "Build a baby due date countdown app for mobile that feels warm and dreamy — think soft pastels, gentle gradients, maybe a tiny heartbeat animation somewhere on the home screen — where you enter your due date and it shows the days, weeks, and months left in a beautifully layered layout, and as you get closer to the date the color palette shifts from calm blues to rosy sunrise tones, giving the whole thing a sense of anticipation and joy."
+  },
+  {
+    "id": "q_scene_019_003",
+    "query_text": "Create a final exam countdown timer app for my phone that feels urgent but still beautiful — the kind of visual that actually makes you want to open it every morning — with a big bold number showing how many days are left until the exam, a subtle color shift as D-day gets closer (maybe from calm green to deep amber to red), and a small motivational quote that changes each day to keep the mood from tipping into pure dread."
+  },
+  {
+    "id": "q_scene_019_004",
+    "query_text": "An event ticket countdown timer — the kind of mobile-first app that makes the wait for a show feel like part of the excitement — where you drop in the event name, date, and maybe the venue vibe (concert, festival, theater), and it counts down with days, hours, and minutes in a layout that feels like a real ticket stub, with a color palette and energy that matches the genre of the show, so every time you open it you feel that pre-show buzz building."
+  },
+  {
+    "id": "q_scene_019_005",
+    "query_text": "Make a retirement countdown app for my phone that feels reflective and elegant rather than gloomy — you enter your birth year and your target retirement age, and the app shows the years, months, and days still left in a clean typographic layout with a quiet, unhurried visual style, almost like a fine watch face, with a gentle progress ring that slowly fills as the years pass, so glancing at it feels like a calm reminder to live fully rather than a ticking clock of dread."
+  },
+  {
+    "id": "q_scene_019_006",
+    "query_text": "Build a sports season opening countdown app for mobile where you pick your team or sport and it shows a beautifully styled countdown to the first game of the season — bold team colors filling the background, a stadium-atmosphere vibe with crowd silhouettes or field imagery woven into the design, and big chunky numbers for days and hours remaining so every time you check it the hype just keeps building until opening day."
+  },
+  {
+    "id": "q_scene_020_001",
+    "query_text": "A Roman numeral converter tool I can pull up on my phone whenever I hit something like \"Chapter XLVII\" or a copyright year in a film credit and have absolutely no idea what number it actually is — you type in the Roman numerals and it instantly spits out the regular number, and it also works the other way so I can convert a regular number into Roman numerals if I ever need to write something fancy, with a clean history list of recent conversions so I don't have to keep re-entering the same ones."
+  },
+  {
+    "id": "q_scene_020_002",
+    "query_text": "Make a mobile emoji lookup tool I can open on my phone whenever I need to know what an emoji is actually called or find its exact code — you tap or paste any emoji and it immediately shows the official name and the Unicode codepoint, plus you can search by keyword to find the right emoji when you can only describe it in words, so I stop wasting time scrolling through the whole picker just to find the right one."
+  },
+  {
+    "id": "q_scene_020_003",
+    "query_text": "Build a text case converter app for my phone so I can stop manually retyping things just to change the capitalization — you paste in any text and tap a button to instantly flip it to ALL CAPS, all lowercase, Title Case, or sentence case, with a one-tap copy button right there so I can immediately paste the result wherever I need it without any extra steps."
+  },
+  {
+    "id": "q_scene_020_004",
+    "query_text": "A word and character counter tool on my phone where I can paste in any chunk of text and instantly see the total word count, character count, and which words or phrases show up the most so I know if I'm being repetitive — really useful when I'm trying to hit a target length for an essay or check if I've been overusing the same word in a report, with the counts updating live as I type or edit."
+  },
+  {
+    "id": "q_scene_020_005",
+    "query_text": "Create a duplicate line remover tool I can use on my phone whenever I end up with a messy list full of repeated entries — you paste in a block of text or a list and it strips out all the duplicate lines and phrases in one tap, then shows you a clean version you can copy right away, with an option to also sort the remaining lines alphabetically so the output is actually useful and not just randomly ordered."
+  },
+  {
+    "id": "q_scene_021_001",
+    "query_text": "Need a weekend adventure randomizer app that helps me and my friends actually decide what to do instead of spending an hour going back and forth — you add a bunch of activity ideas to a list on your phone, hit the randomize button, and it picks one for you, with the option to filter by things like \"outdoors\" or \"stay in\" and \"free\" or \"costs money\" so the result is at least something realistic for that weekend."
+  },
+  {
+    "id": "q_scene_021_002",
+    "query_text": "Make a random word-of-the-day picker app for my phone where every day it surfaces a new word from a language I'm trying to learn — you can choose which language, and the app shows the word, how to pronounce it, what it means, and a simple example sentence so there's actually enough context to remember it, plus a little log of past words so I can scroll back and review ones I've already seen."
+  },
+  {
+    "id": "q_scene_021_003",
+    "query_text": "Create a dinner menu spin wheel app for my phone that my household can use every evening when nobody can agree on what to eat — you set up your own list of meals or food types, spin the wheel, and it lands on tonight's dinner, with the ability to add and remove options anytime so the wheel stays relevant and doesn't keep suggesting things nobody feels like eating anymore."
+  },
+  {
+    "id": "q_scene_021_004",
+    "query_text": "Create a workout exercise random picker app for my phone that I can use when I show up to the gym with no plan — you build a list of exercises grouped by muscle group or workout type, hit the random button, and it picks a set number of exercises for you so you've got an instant routine, with the ability to save the generated workout so you can repeat a good one later."
+  },
+  {
+    "id": "q_scene_021_005",
+    "query_text": "A movie night randomizer app on my phone where I can finally stop spending thirty minutes trying to pick something to watch — you add movies to a personal list, tag them by genre like comedy or thriller or sci-fi, and when you hit randomize it picks one for you, with the option to filter by genre first if you're in a specific mood, so the decision is made in seconds and you can actually just start watching."
+  },
+  {
+    "id": "q_scene_022_001",
+    "query_text": "Build a keyboard navigation trainer app for mobile that helps people practice using a device entirely through keyboard shortcuts and tab-key navigation — it walks you through common tasks like filling out a form or moving through a list using only keyboard controls, shows a live highlight of what element is currently focused so you always know where you are, and gives feedback after each task so you can actually build the muscle memory to navigate hands-free."
+  },
+  {
+    "id": "q_scene_022_002",
+    "query_text": "Create a navigation helper app for my phone that clearly shows which part of any page or app you're currently in — like a live label that always tells you whether you're in the main content area, the top menu, a sidebar, or the footer, so people who rely on assistive tools can always orient themselves without losing track of where they are on the screen, with a simple visual indicator that updates as you move around."
+  },
+  {
+    "id": "q_scene_022_003",
+    "query_text": "A screen reader companion app for my phone that reads out whatever is on the screen in real time — you open it and it just starts narrating the text and labels it can detect on the current screen, with controls to pause, speed up, or slow down the voice, and the option to tap any part of the screen to have that specific element read out loud immediately so you're never stuck guessing what something says."
+  },
+  {
+    "id": "q_scene_022_004",
+    "query_text": "Make a mobile tool that takes any image I upload and automatically writes a plain-English description of what's in it — really useful when I'm managing a website or posting content and need to write alt text for images but can't think of how to describe them, the app just generates a clear, natural-sounding description I can copy straight into the alt text field without having to stare at the image and guess what words to use."
+  },
+  {
+    "id": "q_scene_022_005",
+    "query_text": "Need a live caption generator app for my phone that shows real-time text captions of whatever audio is playing or being spoken nearby — whether it's a video, a meeting, or someone talking, it picks up the sound and displays the words as rolling captions on screen so I can follow along without missing anything, with the option to also upload a short audio or video clip and get a full text transcript back."
+  },
+  {
+    "id": "q_scene_023_001",
+    "query_text": "Make a screen mirroring companion app for my phone that I can use when presenting something from my laptop — the app acts as a remote clicker and slide preview so I can see my current slide and the next one on my phone screen while the audience sees the presentation on the big display, with a simple timer running in the corner so I know how long I've been talking and a big easy-to-tap button to advance to the next slide."
+  },
+  {
+    "id": "q_scene_023_002",
+    "query_text": "Create a star map app for my phone where I can point my camera at the night sky and it uses AR to identify and label whatever stars, planets, and constellations are visible right in front of me — I want to be able to tap on any labeled object and get a quick description of what it is, how far away it is, and maybe a fun fact, so I can actually learn what I'm looking at instead of just guessing which bright dot is Jupiter."
+  },
+  {
+    "id": "q_scene_023_003",
+    "query_text": "Build a parking location saver app for my phone that lets me drop a quick pin the second I park somewhere so I never wander around a parking garage for twenty minutes trying to remember where I left my car — you tap one big button to save your current spot, give it a quick label if you want like \"Level 3 near elevator\", and when you're ready to find it the app shows you the saved location with a direction pointer so you can walk straight back."
+  },
+  {
+    "id": "q_scene_023_004",
+    "query_text": "Make a pill identifier app for my phone where I can take a photo of any tablet or capsule and it tells me what medication it is — really handy when you find a loose pill in a bag or need to confirm you're taking the right thing, the app matches the shape, color, and any markings it can see in the photo and gives you the name and basic info about the medication so you know what you're looking at."
+  },
+  {
+    "id": "q_scene_023_005",
+    "query_text": "Build a dream journal app for my phone where I can quickly jot down whatever I remember from a dream right when I wake up before it fades — each entry gets saved with the date and I can tag it with recurring symbols or themes like \"flying\" or \"water\" or \"being chased\", and the app builds a personal glossary over time that shows which symbols keep appearing and lets me add my own notes about what I think each one means to me."
+  }
+]

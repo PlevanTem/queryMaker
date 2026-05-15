@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_031_002",
+    "query_text": "Need a web app for corporate conference and event registration that stops me from chasing people down to confirm attendance — employees should be able to log in, browse upcoming company events, and register in a couple of clicks, and I should be able to see a live headcount for each event without digging through email threads."
+  },
+  {
+    "id": "q_web_031_003",
+    "query_text": "Make a web app that handles the whole RFQ and vendor bidding process for the company so I don't have to keep juggling spreadsheets and email chains — vendors should be able to submit their bids through the tool, and I can compare them side by side and track which ones are still pending vs. already responded, all in the browser."
+  },
+  {
+    "id": "q_web_031_004",
+    "query_text": "Build a web app that acts as the one place everyone goes to find the official company brand assets and style rules, so people stop asking me where the logo is or what the approved colors are — it should let you browse and download things like logos, fonts, and approved templates, and the main screen should make it easy to find what you need by category."
+  },
+  {
+    "id": "q_web_032_001",
+    "query_text": "Make a web app where IT managers or project leads can book a cloud migration strategy session with a consultant — you pick a time slot from what's available, fill in some basic info about your current setup and migration goals, and get a confirmation, so nobody has to go back and forth on email just to lock in a meeting time."
+  },
+  {
+    "id": "q_web_032_002",
+    "query_text": "Create a web app that takes the pain out of getting new employees signed up for the company wellness program — they should be able to browse the available sessions, pick the ones that fit their schedule, and book their onboarding slots themselves, so HR doesn't have to manually coordinate every single person's start date and program preferences."
+  },
+  {
+    "id": "q_web_032_003",
+    "query_text": "A booking tool for desktop browsers where vendor reps can request a time slot to give a product demo to our team — they fill in their company name, the product they're presenting, and pick from available time slots, and on our side we see all the scheduled presentations in one list so nothing falls through the cracks."
+  },
+  {
+    "id": "q_web_032_004",
+    "query_text": "Need a web app that lets visitors book a guided tour of our corporate headquarters without calling anyone — they pick a date and time, choose how many people are coming, and submit their details, and the person managing tours can see all the upcoming reservations in one place so they know how many groups to prepare for each day."
+  },
+  {
+    "id": "q_web_033_001",
+    "query_text": "Build a web app for our internal video lecture library where employees can browse all the training videos organized by topic, click into any lecture and see a list of chapters on the side so they can jump straight to the part they need, and track which ones they've already watched so they know where they left off."
+  },
+  {
+    "id": "q_web_033_002",
+    "query_text": "Need a web app that helps employees figure out where their skills are missing and make a development plan to fill those gaps — it should let you rate yourself on a set of skills, show you which areas are below the expected level for your role, and let you add specific courses or goals to a personal plan you can come back to and update."
+  },
+  {
+    "id": "q_web_033_003",
+    "query_text": "A course builder tool for desktop browsers where the learning and development team can put together new training courses by dragging content blocks into the right order — things like video lessons, quiz questions, and reading sections — and once a course is set up they can publish it so employees can start enrolling, with a simple list view showing all existing courses and their current status."
+  },
+  {
+    "id": "q_web_033_004",
+    "query_text": "Build a web app that lists all the available soft skills workshops the company offers — things like communication, time management, and leadership — where employees can see the schedule, read a short description of each workshop, and sign up for the sessions that fit their goals, with their enrolled workshops collected in one spot so they can keep track."
+  },
+  {
+    "id": "q_web_034_001",
+    "query_text": "Create a web app that works like a directory for all the user group chapters inside our company, where people can see which chapters exist, what region or department they belong to, and what events each chapter has coming up, so if someone wants to join a group or attend a meetup they can find the right one and see the details without asking around."
+  },
+  {
+    "id": "q_web_034_002",
+    "query_text": "An exclusive content hub for desktop browsers where the brand's most devoted fans get early access to things like behind-the-scenes videos, new product previews, and special announcements before anyone else sees them — members log in, land on a feed of the latest drops, and can click into anything to read or watch, with a small badge or label showing what's brand new."
+  },
+  {
+    "id": "q_web_034_003",
+    "query_text": "Make a web app that gives our beta testers a proper place to submit feedback and report bugs after trying new features, where they can fill out a short form describing what went wrong or what they think, tag it as a bug or a suggestion, and see a running list of everything they've submitted so far, making it way easier than collecting feedback through random chat messages."
+  },
+  {
+    "id": "q_web_034_004",
+    "query_text": "Make a web app that brings together everyone taking part in the company's CSR campaigns, where employees can join active campaigns, log their participation hours or actions, and see how the whole team is progressing toward the campaign's goals — like a running total or a simple progress bar — so people actually feel connected to the cause and can see the collective impact building up."
+  },
+  {
+    "id": "q_web_035_001",
+    "query_text": "An employee onboarding tracker for the web that gives new hires a clear checklist of everything they need to do in their first few weeks — things like setting up accounts, completing mandatory training, and meeting key people — where they can check things off as they go and see a progress bar showing how far along they are, so nothing important gets missed."
+  },
+  {
+    "id": "q_web_035_002",
+    "query_text": "Make a web app that tracks every software license the company owns along with when each one expires, so I can finally stop finding out a renewal deadline passed only after the software stops working — each license should have its expiry date visible, and the main screen should flag anything that's coming up soon so it's impossible to miss."
+  },
+  {
+    "id": "q_web_035_003",
+    "query_text": "Build a web app where warehouse or operations staff can see current stock levels across all our locations in one place, submit a transfer request to move inventory from one site to another, and track the status of requests they've already submitted, so people aren't calling each other to figure out where stock is sitting or whether a transfer got approved."
+  },
+  {
+    "id": "q_web_035_004",
+    "query_text": "A budget planning tool for desktop browsers where department heads can enter their team's expected costs for the year, broken down by spending category, and see how their total compares to the budget they've been allocated — with a clear summary at the top showing how much has been planned, how much is left, and whether any category is already over."
+  },
+  {
+    "id": "q_web_036_001",
+    "query_text": "Make a security and compliance trust center that feels serious and credible — not flashy, just honest and well-organized — a website where potential customers and partners can see exactly what certifications we hold, how we handle data, and what our security practices look like, with each compliance standard given its own section so nothing feels buried or vague."
+  },
+  {
+    "id": "q_web_036_002",
+    "query_text": "Build a careers website that actually feels like it belongs to a real company with a distinct personality — one where open roles are listed cleanly with the team, location, and a short honest description, and the perks section has a bit of voice to it instead of reading like a generic HR checklist, so people who'd genuinely fit here feel that immediately when they land on it."
+  },
+  {
+    "id": "q_web_036_003",
+    "query_text": "Make a developer portal website that feels like it was built by people who actually care about the developer experience — clean, confident, with the API docs front and center and quick-start code examples that don't feel like an afterthought, so a developer landing on it for the first time knows exactly where to go and feels like this product is worth their time."
+  },
+  {
+    "id": "q_web_036_004",
+    "query_text": "A landing page website for our affiliate and referral program that feels warm and generous rather than salesy — it should explain how the program works in plain language, show what people can earn, and have a clear spot to sign up or grab your referral link, with enough personality that someone reading it actually wants to share the product with their friends."
+  },
+  {
+    "id": "q_web_037_001",
+    "query_text": "Need a web app that gives our startup team a proper place to collect and revisit retrospective notes from every product launch we've done — each launch gets its own entry with what we shipped, what worked, what didn't, and the key lessons learned, so this institutional knowledge doesn't live scattered across random docs and actually becomes something we reference before the next launch."
+  },
+  {
+    "id": "q_web_037_002",
+    "query_text": "Make a wiki-style web app for our startup where we write down how we actually run the company — the processes, decisions, hiring approach, and operational playbooks — organized by topic so any teammate can look something up without having to ask, and the whole thing feels like it belongs to us and reflects how we think, not like a generic corporate handbook."
+  }
+]

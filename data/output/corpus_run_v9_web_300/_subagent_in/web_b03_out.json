@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_012_003",
+    "query_text": "Need a wiki-style manager for web browsers where I can keep track of all the characters and worlds I build for my stories — I want to make a page for each character with their name, personality, backstory, and how they're connected to other characters, plus separate sections for places and history in the world, and I can link between entries so when I'm in the middle of writing and forget something I set up earlier, I can just click over to the right page and find it."
+  },
+  {
+    "id": "q_web_012_004",
+    "query_text": "Make a chord tool for the browser where I can pick a key and a mood and it spits out a few chord progression ideas I can try on guitar or piano, and then I can click on any progression to see the chords written out with the chord names above the beat, and save the ones I like into a little list so I can come back to them the next time I sit down to write a song."
+  },
+  {
+    "id": "q_web_013_001",
+    "query_text": "Create a showcase site for a web app that feels like a personal corner of the internet — somewhere a data analyst can put their best work and have it carry a specific kind of voice, with each project presented as a clean write-up that shows the question they started with, what they found, and a chart or two that tells the story, all organized so a visitor can get a real sense of the person's thinking rather than just scrolling through a list of project names."
+  },
+  {
+    "id": "q_web_013_002",
+    "query_text": "Need a portfolio archive for desktop browsers that actually feels like it belongs to someone with taste — a place where a content strategist can collect every piece they've published, organized by client or topic, where each entry has a short note on the strategy behind it and a link to the live piece, and the whole thing has a quiet, editorial identity that says \"this person has a point of view\" rather than just dumping links on a page."
+  },
+  {
+    "id": "q_web_013_003",
+    "query_text": "Make a gallery app for desktop browsers where an independent interior designer can show their before-and-after project work in a way that has real personality — each project gets its own spread with a side-by-side comparison of the space before and after the redesign, a short story about what the client wanted and how the designer solved it, and the whole collection should feel like a curated editorial book, not a generic grid of photos."
+  },
+  {
+    "id": "q_web_013_004",
+    "query_text": "Create a showcase site on the web where a freelance developer can put their open-source contributions front and center — with each project listed alongside a plain-language explanation of what it does and what the dev actually built or fixed, so visitors get a real sense of the craft and thinking involved, not just a wall of repo links, and the whole thing should carry a distinct identity that feels personal and intentional."
+  },
+  {
+    "id": "q_web_014_001",
+    "query_text": "A documentation site for the browser where a freelance content strategist can lay out exactly how they work — the kind of tool that has its own quiet identity and feels like a craftsperson's handbook, with each process written up as a clear, honest explanation of the steps involved, the decisions behind them, and the reasoning that shapes the outcome, organized so a potential client can walk through it and feel like they already understand how this person thinks."
+  },
+  {
+    "id": "q_web_014_002",
+    "query_text": "An archive site for desktop browsers where a niche industry expert can collect all their written commentary and opinions in one place — the kind of tool that feels curated and deliberate, not like a generic blog, where each piece is organized by topic and year so readers can trace how the thinking evolved over time, and the overall identity carries real weight, like a writer who knows exactly what they stand for."
+  },
+  {
+    "id": "q_web_014_003",
+    "query_text": "A hub site for the browser where an independent educator can organize their lecture notes and study materials in a way that feels personal and intentional — each course or topic gets its own area where the notes, readings, and handouts live together, and the tool should carry an identity that says this person cares about how knowledge is presented, not just that it exists somewhere online."
+  },
+  {
+    "id": "q_web_014_004",
+    "query_text": "Need a talk archive site for desktop browsers that has a real sense of identity — somewhere a professional speaker can collect every talk they've given, with the transcript and the slide deck together in one place for each event, organized by year and topic so visitors can see how the ideas developed, and the whole thing should feel like a proper body of work rather than a random pile of PDFs."
+  },
+  {
+    "id": "q_web_015_001",
+    "query_text": "Build a showreel site as a web app that has a distinct visual personality — somewhere a freelance video producer can put their best clips front and center with a clean, editorial feel, where each project has a short description of the brief and what the video was made for, and potential clients can easily reach out to start a conversation about a new project, all without the site feeling like a generic template."
+  },
+  {
+    "id": "q_web_015_002",
+    "query_text": "Make a professional site for a desktop browser that a translator can actually feel proud of — where they can lay out their language pairs and the fields they specialize in, like legal or literary, show a short list of the kinds of clients they've worked with, and the whole thing carries a tone that says precision and craft matter to this person, not just availability."
+  },
+  {
+    "id": "q_web_015_003",
+    "query_text": "Need a site that works as a proper calling card for a UX researcher on desktop browsers — somewhere they can walk potential clients through exactly how they approach research, what methods they use and why, with each methodology described in plain language that shows how it connects to real outcomes, and a clear way for interested clients to get in touch, all wrapped in an identity that feels thoughtful and exact rather than slick."
+  },
+  {
+    "id": "q_web_015_004",
+    "query_text": "Create a portfolio site as a web app for desktop browsers that an independent architect can use to show off their project gallery with proper pride — each project gets generous space for photos, the design thinking behind it, and key details like scale and materials, and then there's a clear section where prospective clients can learn what working together looks like and take a first step toward starting a conversation."
+  },
+  {
+    "id": "q_web_016_001",
+    "query_text": "Need a booking site for desktop browsers that takes the back-and-forth out of scheduling property showings — clients pick a listing, see which time slots are open, and book directly without me having to answer a dozen messages just to confirm a time, and I should get a simple list of all upcoming appointments with the property address and client name in one place so I don't have to dig through my email every morning."
+  },
+  {
+    "id": "q_web_016_002",
+    "query_text": "Need a booking site for desktop browsers that lets clients schedule a wardrobe consultation without me having to go back and forth over email — they pick a session type, see my available times, and confirm the booking themselves, and I get a clear view of all my upcoming consultations in one place so I'm not scrambling to keep track of who's coming when."
+  },
+  {
+    "id": "q_web_016_003",
+    "query_text": "Build a session scheduler as a web app for desktop browsers where clients can book a goal-setting call with me on their own — they see my available times, pick one that works, fill in a short note about what they want to work on, and that's it, no back-and-forth needed, and I can log in and see all my upcoming sessions and any notes clients left without having to dig through my email."
+  },
+  {
+    "id": "q_web_016_004",
+    "query_text": "A project scoping call scheduler as a web app for desktop browsers where potential clients can see my available time slots and book a call directly — they answer a few quick questions about their project when they book so I show up prepared, and on my end I have a simple list of all upcoming calls with the project notes attached so I'm not hunting through my inbox before every meeting."
+  },
+  {
+    "id": "q_web_017_001",
+    "query_text": "Need a talk archive tool for the browser where I can save conference talks I've watched, add timestamped notes at the exact moments I want to remember, and then browse back through everything by topic or speaker — I want each saved talk to show my annotations alongside the timestamp so I can quickly find that one insight without rewatching the whole thing, plus a simple search so I can look up any term across all my notes at once."
+  },
+  {
+    "id": "q_web_017_002",
+    "query_text": "A case study library for desktop browsers where freelance strategists can browse a collection of real business cases organized by industry and challenge type, with each case study having its own discussion thread where people can leave comments and questions, and a simple way to save favorite cases to a personal reading list so the most relevant ones are easy to find again later."
+  },
+  {
+    "id": "q_web_017_003",
+    "query_text": "Create a training site for desktop browsers focused on client negotiation and communication skills, where the content is organized into clear topics like setting rates, handling scope changes, and giving feedback, each topic has a short lesson and a list of key takeaways I can actually use, and there's a simple progress tracker so I can see which lessons I've finished and which ones I still need to go through."
+  },
+  {
+    "id": "q_web_017_004",
+    "query_text": "Need a book club app for the browser where a group of us can follow along with a technical book together — each week has its own discussion thread where members can post their thoughts and reply to each other on their own schedule, and there's a simple reading schedule on the main screen so everyone can see which chapters are up for that week, plus a way to mark yourself as done with the reading so the group can see who's caught up."
+  },
+  {
+    "id": "q_web_018_001",
+    "query_text": "Make a Q&A platform for desktop browsers where experts in a specific niche can answer questions and share what they know — anyone in the community can post a question, and the experts who know the topic can write answers that others can upvote, and there's a way to browse questions by topic area so if you're looking for something specific you don't have to scroll through everything to find it."
+  },
+  {
+    "id": "q_web_018_002",
+    "query_text": "Build a peer network app for desktop browsers where freelance accountants and finance folks can connect with each other — members can post questions about tricky situations they're dealing with, share useful tools or templates they've made, and browse a simple directory of other members so they can find someone who specializes in exactly the niche they need help with, whether that's crypto taxes or small business bookkeeping."
+  },
+  {
+    "id": "q_web_018_003",
+    "query_text": "Make a community site for the browser where creative freelancers dealing with burnout or mental health stuff can support each other — people can share what they're going through in a low-pressure way, reply to others with encouragement or advice, and browse topic areas like setting boundaries or dealing with creative blocks, and the whole thing should feel like a safe, welcoming space where you actually want to check in rather than something clinical or overwhelming."
+  }
+]

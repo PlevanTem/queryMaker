@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_068_004",
+    "query_text": "Need a developer talk archive app where I can collect all the conference videos I want to revisit — a web app for desktop where I can browse by topic or year, see a thumbnail and title for each talk, and click through to watch the video along with a short note about why it was worth my time."
+  },
+  {
+    "id": "q_web_069_001",
+    "query_text": "Make a production incident post-mortem archive for our team — a web app where we can store and read through past outage write-ups, organized by date and severity, with a simple reading layout so it is easy to sit at your desk and actually absorb what went wrong and what was fixed."
+  },
+  {
+    "id": "q_web_069_002",
+    "query_text": "Need a developer tutorial hub where I can collect and organize step-by-step walkthroughs on different coding topics — a web app for desktop where each tutorial is laid out with a clear progress path so I can follow along from step one to the end without losing my place, and I can filter by tech stack or difficulty."
+  },
+  {
+    "id": "q_web_069_003",
+    "query_text": "Build a web app for desktop browsers where developers can read through API reference docs in a clean, easy-to-navigate way — the app should have a left-side list of all the endpoints or methods so you can jump around quickly, and the main area shows the details for whatever you clicked, with code examples visible right on the same page."
+  },
+  {
+    "id": "q_web_069_004",
+    "query_text": "Build a web app for desktop where you can browse through notes and summaries from tech conference talks — organized by event and speaker, so you can quickly find a talk you heard about, read the key takeaways someone wrote up, and see who else spoke at the same event without having to dig through a mess of files or tabs."
+  },
+  {
+    "id": "q_web_070_001",
+    "query_text": "A website for a tech startup that wants to show off what it is like to work on the engineering team — a web app on desktop where visitors can read about the team culture, see the kind of problems engineers work on day to day, and find open roles they can apply to, all in one place without bouncing between different tabs or external job boards."
+  },
+  {
+    "id": "q_web_070_002",
+    "query_text": "Build a web app for desktop that helps people compare pricing across different cloud infrastructure tools side by side — where you can pick a few services you are evaluating, see their pricing tiers laid out in a table so the differences are obvious, and maybe filter by use case like storage or compute so you are not comparing apples to oranges."
+  },
+  {
+    "id": "q_web_070_003",
+    "query_text": "Build a web app for desktop where developers who want early access to a new tool can sign up for the beta waitlist — with a short explanation of what the tool does, a simple form to drop in your email and what kind of project you are working on, and a confirmation that tells you roughly where you are in line or when to expect an invite."
+  },
+  {
+    "id": "q_web_070_004",
+    "query_text": "A showcase website for a programming framework that wants to show how many teams are actually using it in real projects — a web app for desktop browsers where you can see which companies and open-source projects have adopted the framework, browse by industry or project type, and find links to real repos or case studies so it feels credible and not just marketing fluff."
+  },
+  {
+    "id": "q_web_071_001",
+    "query_text": "A website for a software vendor partner program where companies can read through what the partnership tiers look like, see what they get at each level, and fill out an enrollment form to apply — a web app for desktop that makes it easy to figure out which tier fits your situation and just get signed up without having to email someone back and forth."
+  },
+  {
+    "id": "q_web_071_002",
+    "query_text": "Make a web app for desktop where developers can browse upcoming conferences, pick the one they want to attend, choose a ticket type, and complete registration all in one place — with a clear summary of what is included in each ticket tier and a simple checkout so you are not jumping between five different tabs just to lock in your spot."
+  },
+  {
+    "id": "q_web_071_003",
+    "query_text": "Build a web app for desktop browsers where you can browse available technical certification exams, buy a voucher for the one you want, and then pick a date and time slot to sit the exam — all in one place so you are not hunting through different websites just to figure out when you can actually take the test."
+  },
+  {
+    "id": "q_web_071_004",
+    "query_text": "Build a web app for desktop where you can sign up for a code review subscription, choose a plan based on how many projects you need reviewed per month, and then track each submitted project through the review process — so you always know which ones are waiting, which are in progress, and which ones have feedback ready for you to read."
+  },
+  {
+    "id": "q_web_072_001",
+    "query_text": "Make a web app for desktop that helps first-time open-source contributors figure out where to start — with a checklist-style guide walking through things like setting up your local environment, finding beginner-friendly issues, and submitting your first pull request, plus a way to track which steps you have already done so you always know what comes next."
+  },
+  {
+    "id": "q_web_072_002",
+    "query_text": "Create a web app for desktop where you can browse through a big archive of tech conference talks, search by keyword or speaker name so you can actually find what you are looking for, and read the full transcript right there on the same page alongside the talk title and event info."
+  },
+  {
+    "id": "q_web_072_003",
+    "query_text": "Build a web app for desktop where developers can map out their learning path — pick the skills or topics they want to learn, arrange them in the order that makes sense, and then check things off as they go so they can see at a glance how far along they are and what is still on the list."
+  },
+  {
+    "id": "q_web_072_004",
+    "query_text": "Make a web app for desktop that walks you through classic computer science algorithms step by step — where you can pick an algorithm like sorting or searching, watch it run through an example with each step highlighted in order, and see a plain explanation of what is happening at each stage so it actually makes sense."
+  },
+  {
+    "id": "q_web_073_001",
+    "query_text": "A web app for desktop where people joining a hackathon can post what they are working on and what kind of teammates they are looking for, browse other project ideas to find one they want to join, and once teams are formed, keep a shared list of tasks and milestones so everyone knows what needs to get done before the deadline."
+  },
+  {
+    "id": "q_web_073_002",
+    "query_text": "Create a web app for desktop where the team can post technical RFC proposals, read through what others have written, leave comments or reactions, and cast a vote on whether a proposal should move forward — so all the discussion and decisions around big technical choices are in one place and easy to look back on later."
+  },
+  {
+    "id": "q_web_073_003",
+    "query_text": "A browser-based listing board for open-source bounties and small grants where contributors can browse available tasks with their reward amounts, filter by programming language or project type, and click through to claim a bounty or apply for a grant — so finding paid open-source work is actually straightforward and not scattered across a dozen different places."
+  },
+  {
+    "id": "q_web_073_004",
+    "query_text": "Make a web app for desktop that is basically a searchable directory of developer tools — where you can browse by category, see a star rating and a short description for each tool that comes from real people in the community, and add your own rating and a note after you have tried it out."
+  },
+  {
+    "id": "q_web_074_001",
+    "query_text": "Build a browser-based tool where you can paste in a chunk of JSON, check it against a schema to see if everything is valid, and also get it formatted in a clean, easy-to-read layout — so you can quickly spot errors or just make a messy blob of JSON actually readable without having to install anything."
+  },
+  {
+    "id": "q_web_074_002",
+    "query_text": "A web app for desktop that helps you work with cron expressions — where you can type in a cron string and it tells you in plain words exactly when it will run and shows you the next few upcoming times, or you can describe a schedule in everyday language and it spits out the right cron expression so you are not guessing at the syntax."
+  },
+  {
+    "id": "q_web_074_003",
+    "query_text": "Create a browser-based tool where you can paste in a git commit message and it checks whether it follows a clean, consistent format — flagging things like missing type prefixes or subject lines that are too long, and showing you a cleaned-up version you can copy and use, so your commit history stays tidy without having to memorize all the rules."
+  },
+  {
+    "id": "q_web_074_004",
+    "query_text": "Build a web app for desktop where you can paste in a SQL query and it formats it into something clean and readable, then walks you through what each part of the query actually does in plain language — so you can understand what a messy query is doing or just clean up something you wrote in a hurry."
+  }
+]

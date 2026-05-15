@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_029_001",
+    "query_text": "Build a task planner app for my phone where I can set a deadline on any task and it automatically puts a time block on my calendar for that day — I hate having to manually go into two separate apps to add the task AND then create a calendar event, so I want it to handle both in one tap when I enter the due date."
+  },
+  {
+    "id": "q_scene_029_002",
+    "query_text": "Make a habit tracker app for my phone that shows my current streak for each daily habit and has a streak-protection option I can use once in a while — so if I miss a day by accident I can burn a saved grace and keep my streak alive instead of watching it reset to zero and losing all my motivation."
+  },
+  {
+    "id": "q_scene_029_003",
+    "query_text": "A work backlog organizer app for my phone where I can dump all my pending tasks in one list, then quickly drag each one into priority order and add a rough time estimate like \"30 min\" or \"2 hrs\" so I actually know how much I'm taking on before I commit to getting things done this week."
+  },
+  {
+    "id": "q_scene_029_004",
+    "query_text": "Make a shared shopping list app for my phone where me and my roommates can all add items to the same grocery list in real time — I want to split it into categories like produce, snacks, and household stuff so we're not scrolling through one giant mess at the store, and anyone can check off items as they grab them."
+  },
+  {
+    "id": "q_scene_029_005",
+    "query_text": "Need a daily task triage app for my phone that makes me sort everything on my to-do list into three buckets — urgent, important but not urgent, and stuff that can wait — so when I sit down to work I can stop wasting time staring at a huge pile of tasks and just focus on what actually matters today."
+  },
+  {
+    "id": "q_scene_030_001",
+    "query_text": "A focus time tracker app for my phone that shows a side-by-side comparison of how many hours I actually focused on weekdays versus weekends — I want to log each focus session by tapping start and stop, and then see a simple weekly chart that breaks down my weekday total versus my weekend total so I can tell if my weekend hustle is real or just a story I tell myself."
+  },
+  {
+    "id": "q_scene_030_002",
+    "query_text": "Build a focus analyzer app for my phone that tracks when during the day I actually get my best work done — I log each focus session with a start time and duration, and the app shows me a chart of my productivity by hour so I can figure out whether I'm actually a morning person or if I'm just kidding myself and really peak in the afternoon."
+  },
+  {
+    "id": "q_scene_030_003",
+    "query_text": "Build a quick sprint timer app for my phone that lets me kick off a 5-minute focused work dash with a single tap — I want a big countdown display so I can see the seconds ticking down, and after it finishes it logs the sprint so I can see how many I've done today and feel like I actually made progress even on my most scattered days."
+  },
+  {
+    "id": "q_scene_030_004",
+    "query_text": "A focus timer app for my phone where the home screen shows a big countdown clock and two or three preset session lengths I can start in one tap — like 25 minutes, 45 minutes, and a quick 10-minute burst — so I can stop fiddling with settings every time and just hit go the moment I want to start working."
+  },
+  {
+    "id": "q_scene_030_005",
+    "query_text": "Make a Pomodoro timer app for my phone that runs 25-minute focus sessions followed by a 5-minute break, plays a sound when each phase ends so I actually notice it, and shows how many full Pomodoros I've finished today on the home screen — I want the whole cycle to be automatic so I stop having to restart it manually every single round."
+  },
+  {
+    "id": "q_scene_031_001",
+    "query_text": "Need a sports calendar app for my phone that lets me add all the fixtures and key dates for a whole season in one place — I want to enter each match with the date, opponent, and venue, see everything laid out in a clean month-by-month view, and get a reminder a day before each game so I never miss a fixture."
+  },
+  {
+    "id": "q_scene_031_002",
+    "query_text": "Build a subscription tracker app for my phone where I can add each service I'm paying for, enter the renewal date and cost, and get a reminder a few days before it's about to charge me again — I want a clean list showing all my subscriptions sorted by upcoming renewal date so I can see at a glance what's coming due and decide if I still want to keep it."
+  },
+  {
+    "id": "q_scene_031_003",
+    "query_text": "Make a yearly planner app for my phone where I can lay out all my big goals and milestones for the year organized by quarter, with key dates and deadlines filled in — I want to scroll through the whole year at a glance and tap into each quarter to see the breakdown, so I have a clear picture of what I'm working toward and when things are due."
+  },
+  {
+    "id": "q_scene_031_004",
+    "query_text": "Need a team availability planner for my phone where everyone on my small team can mark which time slots they're free this week, and the app highlights the windows where we all overlap so we can just pick one of those for the daily stand-up without going back and forth over chat for half an hour."
+  },
+  {
+    "id": "q_scene_031_005",
+    "query_text": "Need a personal weekly planner app for my phone where I can lay out my whole week day by day, add things I need to do each day with a rough time slot, and check them off as I go — I want to see the full week at a glance on the home screen and be able to carry anything I didn't finish over to the next day without having to re-enter it."
+  },
+  {
+    "id": "q_scene_032_001",
+    "query_text": "Build a defect rate tracker app for my phone that logs quality inspection results each day and shows a trend line over time so I can see at a glance whether the defect rate is going up or down — I want to enter the number of units checked and how many had defects, then see a simple chart showing how the rate has moved week over week."
+  },
+  {
+    "id": "q_scene_032_002",
+    "query_text": "A content performance tracker app for my phone where I can log stats for each piece of content I publish — views, shares, and engagement — and see them broken down by category like short video, article, or photo post, so I can finally tell which type of content is actually worth my time instead of guessing."
+  },
+  {
+    "id": "q_scene_032_003",
+    "query_text": "Need a grant budget tracker app for my phone where I can enter the total grant amount, log each expense against the right budget category, and see a simple summary showing how much I've spent versus what's left in each line item — I want it to flag me if I'm getting close to the limit on any category so I don't end up with a compliance headache."
+  },
+  {
+    "id": "q_scene_032_004",
+    "query_text": "Need a clinic outcomes tracker app for my phone where I can log each patient's treatment and record a simple result after each visit — like improved, stable, or needs follow-up — so at the end of the week I can pull up a quick summary showing how many patients fall into each outcome category and spot patterns in how the clinic is performing."
+  },
+  {
+    "id": "q_scene_032_005",
+    "query_text": "Make a sales performance tracker app for my phone that shows my key numbers — revenue this month, deals closed, and how I'm tracking against my target — so I can check in during the day without having to dig through spreadsheets, and see a simple progress bar showing how close I am to hitting my monthly goal."
+  },
+  {
+    "id": "q_scene_033_001",
+    "query_text": "Need a note reminder app for my phone that lets me attach a deadline and a gentle alert to any note I write — I want the notes to feel warm and personal, like a softly lit journal page, and when a deadline is coming up the reminder should surface the note right there on the home screen so it feels like a friendly nudge rather than a harsh alarm."
+  },
+  {
+    "id": "q_scene_033_002",
+    "query_text": "Build a step-by-step procedure writer app for my phone that makes it easy to document any process in clean numbered steps — I want each step to feel distinct and easy to read, with a bit of breathing room between them, and I should be able to reorder steps by dragging them around so the whole thing stays neat and presentable when I share it with someone."
+  },
+  {
+    "id": "q_scene_033_003",
+    "query_text": "Create a personal knowledge base app for my phone that lets me write notes and link them to each other by typing the note title inside brackets — I want it to feel like a calm, minimal wiki where I can follow a thread of ideas by tapping the linked words, and the home screen shows a clean list of all my notes with a soft, editorial feel."
+  },
+  {
+    "id": "q_scene_033_004",
+    "query_text": "Need a meeting notes app for my phone that captures what I type during a meeting and then surfaces a tidy summary at the end — I want the summary to pull out key decisions and action items in a clean, readable layout that I can share straight away without having to reformat a wall of messy notes, so the whole thing looks polished enough to send directly to the team."
+  },
+  {
+    "id": "q_scene_033_005",
+    "query_text": "Create a daily work log app for my phone that lets me jot down what I worked on and any meeting notes throughout the day in a clean, journal-style layout — I want each day's entry to feel like a proper page with a date header and a calm, uncluttered look, so when I scroll back through the week it actually feels good to read rather than like staring at a dump of random text."
+  }
+]

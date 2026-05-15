@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_001_001",
+    "query_text": "Need a film tracker web app that feels like a beautiful personal cinema archive, where every decade from the 1920s through the 2020s gets its own richly textured band on the ratings wall — warm sepia tones for the classics fading into cooler, more saturated palettes as you move toward modern films — and each movie you've seen sits in its era like a little poster, glowing with the star rating you gave it, so the whole thing reads like a visual essay on your taste across time."
+  },
+  {
+    "id": "q_web_001_002",
+    "query_text": "Create a visual catalog website for a personal vinyl record collection that has that warm, collector's-den atmosphere — think deep wood tones and cream backgrounds, with each album displayed as a large square cover art tile that feels like you're flipping through actual crates, and when you hover over a record it subtly reveals the release year, genre mood, and a little note you wrote about why it matters to you, all browsable in a desktop browser where the full cover art can breathe."
+  },
+  {
+    "id": "q_web_001_003",
+    "query_text": "Make a baby milestone journal app that feels like a beautifully curated family heirloom — the kind of thing grandparents in another city can open in a browser and just feel the warmth of it, with each milestone laid out like a softly lit photo spread where the images have room to be big and lovely, the typography feels handpicked and tender, and the whole palette has that golden-hour, linen-and-sage vibe that makes every first smile and first step feel like the precious moment it is."
+  },
+  {
+    "id": "q_web_001_004",
+    "query_text": "A home renovation documentation site where each room gets its own before-and-after story told through a side-by-side photo comparison that really lets the transformation land — the kind of web app where you can flip between the dusty bare walls and the finished space with a satisfying visual reveal, and each project entry has that editorial magazine feel with the photos large and centered, the material choices and color palette noted in an understated caption style that feels intentional rather than clinical."
+  },
+  {
+    "id": "q_web_001_005",
+    "query_text": "Need a professional learning timeline app that turns the story of your certifications and courses into something visually compelling rather than just a list — a web app where each credential sits on a flowing timeline with a clean, editorial aesthetic, the certificates displayed like beautifully framed milestones with their dates and issuing organizations rendered in a typographic style that feels considered and personal, so the whole arc of your learning journey reads like a curated visual narrative you'd actually want to share."
+  },
+  {
+    "id": "q_web_002_001",
+    "query_text": "Make a personal newsletter archive site that has that distinctive independent-publication feeling — the kind of web app where your past issues are displayed like a beautiful editorial catalog, each issue thumbnail evoking the mood and topic of that edition, with a public-facing home that feels warm and inviting to new subscribers while still being the kind of clean, typographically considered space that makes the writing itself feel worth reading, all laid out beautifully for desktop browsers."
+  },
+  {
+    "id": "q_web_002_002",
+    "query_text": "A companion site for a video essay channel where each essay lives as its own richly presented entry — the kind of website that feels like a thoughtful editorial platform rather than just a transcript dump, with the video thumbnail and title given real visual presence at the top, the transcript flowing beneath in a clean readable typeface with generous spacing, and a sidebar layout on desktop that lets you navigate between essays without losing your place, giving the whole thing that slow-journalism, curated-reading-room atmosphere."
+  },
+  {
+    "id": "q_web_002_003",
+    "query_text": "Need a photography portfolio website that has the quiet confidence of a serious artist's book — a web app where each image gets its full moment, displayed large against a neutral background with the technical details like camera, lens, and settings presented as understated text beneath, and the personal story behind the shot offered as a short piece of writing that makes the viewer feel like they're being let into something real rather than just browsing a gallery, all designed for desktop browsers where the photos can truly fill the space."
+  },
+  {
+    "id": "q_web_002_004",
+    "query_text": "Build a handwriting and calligraphy showcase website that captures the quiet, tactile beauty of ink on paper — a web app where each practice piece is displayed as a high-quality scan with enough breathing room that the brushwork or letterforms can actually be appreciated, organized by script style and date so you can see the progression over time, with the overall atmosphere feeling like a refined art journal rather than a skill-tracking tool, warm and inviting for desktop browsers."
+  },
+  {
+    "id": "q_web_002_005",
+    "query_text": "Need a woodworking build log and project gallery web app that captures both the raw, process-driven beauty of the craft and the satisfaction of the finished pieces — somewhere you can document each build with progress photos that show the wood grain and joinery up close, add notes about the techniques and materials used along the way, and then present the completed project in a gallery that gives the final piece the same handsome, unhurried presentation you'd see in a quality craft magazine browsed on desktop."
+  },
+  {
+    "id": "q_web_003_001",
+    "query_text": "Build a web app for managing an academic paper reading list where I can add papers with their titles and links, mark them as to-read, reading, or finished, and save highlighted passages or key quotes for each one, with a sidebar that lets me filter by topic or status so I can actually find things again when I need them, for desktop browsers."
+  },
+  {
+    "id": "q_web_003_002",
+    "query_text": "Create a certification exam study planner web app where I can enter my exam date and it shows me a countdown with how many days are left, lays out a study roadmap broken down by topic area, and lets me check off subtopics as I finish them so I can see my overall progress at a glance, all organized in a way that makes it easy to stay on track from a desktop browser."
+  },
+  {
+    "id": "q_web_003_003",
+    "query_text": "A memory trainer web app where I can add the things I want to memorize — vocab words, facts, sequences — and then test myself with recall exercises that score how well I did each time, with a simple history showing my scores over multiple sessions so I can see whether I'm actually improving, accessible in a browser on desktop so I can use it alongside other study materials."
+  },
+  {
+    "id": "q_web_003_004",
+    "query_text": "Create a daily writing journal web app that gives me a new writing prompt each day and tracks how many words I write for each entry, with a simple calendar or streak view so I can see which days I actually sat down and wrote and how my word counts compare week to week, designed for desktop browsers where I can write comfortably in a proper text area."
+  },
+  {
+    "id": "q_web_003_005",
+    "query_text": "Create a web app for keeping track of YouTube tutorials I want to watch, where I can add videos by pasting their link, organize them into topics like design or coding, and mark each one as watched once I've finished it, with a simple counter or progress bar showing how many I've completed in each topic so I can actually see myself making headway, all in a desktop browser."
+  },
+  {
+    "id": "q_web_004_001",
+    "query_text": "Need a flashcard web app that takes the pain out of deciding what to study next — I want to be able to create decks of cards with a question on one side and answer on the other, rate how well I remembered each card after I flip it, and have the app automatically figure out when I should review each card again based on how I've been doing, so I stop wasting time going over stuff I already know and focus on what I keep forgetting, all in a browser-based tool I can use at my desk."
+  },
+  {
+    "id": "q_web_004_002",
+    "query_text": "Build a travel planner web app that solves the headache of figuring out where all my money is going on a trip — I want to lay out my itinerary day by day, add activities, transport, and accommodation for each day, and have it automatically tally up the cost per day and a running total so I know if I'm blowing my budget before I've even boarded the flight, with everything organized in a clear layout for desktop browsers."
+  },
+  {
+    "id": "q_web_004_003",
+    "query_text": "Create a time log web app where I can record what I actually spent my time on throughout the day — just a quick entry with the activity and how long it took — and at the end of the week it automatically summarizes where my hours went, broken down by category like deep work, meetings, or admin, so I can stop wondering why the week felt so unproductive and actually see the numbers in a desktop browser."
+  },
+  {
+    "id": "q_web_004_004",
+    "query_text": "Create a job application tracker web app where I can add each position I've applied to with the company name, role, date applied, and current status — like waiting, phone screen, interview, or offer — and see all my applications laid out in columns by status so I can quickly tell what needs follow-up and what's gone cold, all in a web app I use in my desktop browser without having to dig through my email to piece together where things stand."
+  },
+  {
+    "id": "q_web_004_005",
+    "query_text": "A code snippet manager web app where I can paste in chunks of code I want to save, give each one a title and a few labels, and have the code displayed with proper color coding so it's actually readable — then when I need to find something later I can search by label or keyword and pull it up instantly, all in a browser-based tool I can keep open in another tab while I work on desktop."
+  },
+  {
+    "id": "q_web_005_001",
+    "query_text": "An indie game developer showcase website with that electric, handcrafted energy where each game gets its own richly atmospheric entry — the game's thumbnail art displayed large and moody against a dark background, a playable demo embedded right there on the page so visitors can just drop in and try it without leaving the site, and the whole desktop-first layout feeling like flipping through a zine of weird, personal game worlds rather than a sterile catalog."
+  },
+  {
+    "id": "q_web_005_002",
+    "query_text": "Make a product designer portfolio website that has that quiet editorial confidence of a well-designed case study book — a web app where each project unfolds as a long-form visual story for desktop browsers, starting with the final product looking its absolute best, then leading the reader through the research, sketches, and iterations with a rhythm that feels considered rather than rushed, using generous whitespace and a palette that steps back to let the work itself do all the talking."
+  },
+  {
+    "id": "q_web_005_003",
+    "query_text": "Create a UX designer portfolio website that feels like an invitation into a thoughtful design process rather than just a highlights reel — a web app designed for desktop browsers where each case study has enough room to breathe, the interactive prototype for each project embedded inline so recruiters or collaborators can actually click around rather than just look at static screenshots, with the surrounding design language feeling calm, precise, and quietly confident."
+  },
+  {
+    "id": "q_web_005_004",
+    "query_text": "Build a ceramics studio showcase website that has the warmth and texture of the work itself — a web app for desktop browsers where each piece is photographed beautifully and presented with room to appreciate the form, and the glazing process is documented through a series of photos that take the viewer from raw clay through each firing stage, so the finished object arrives with the full weight of how it was made, all with an earthy, craft-forward aesthetic that feels true to the medium."
+  },
+  {
+    "id": "q_web_006_001",
+    "query_text": "Need a video essay publishing site that has the feel of a serious long-form journal — a web app for desktop browsers where each essay has its own beautifully typeset page with the full script presented as a pleasure to read on its own, research notes and sources organized alongside the text in a way that rewards the curious reader who wants to go deeper, and the overall atmosphere having that slow, considered quality of a publication that values ideas over clicks."
+  }
+]

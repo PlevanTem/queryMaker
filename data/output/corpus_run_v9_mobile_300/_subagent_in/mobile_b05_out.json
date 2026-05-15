@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_014_005",
+    "query_text": "A tax filing tool for my phone where every time a new filing season starts, it pulls in all my info from last year — income figures, deductions, the stuff I entered manually — and drops it straight into the current year's form so I don't have to type the same things over again, with a clear side-by-side so I can see what changed and update whatever needs updating before submitting."
+  },
+  {
+    "id": "q_scene_015_001",
+    "query_text": "Need a mobile app where users can report bugs right inside the app without leaving what they're doing — just tap a little \"report issue\" button, a small form pops up on the same screen, they can type what went wrong, attach a screenshot from their camera roll or take a new one right there, and hit send, all without jumping to email or another app."
+  },
+  {
+    "id": "q_scene_015_002",
+    "query_text": "Create a sync conflict resolver app for mobile H5 that pops up whenever the same data has been changed in two places at once — it shows both versions side by side so the user can see what's different, then lets them pick which one to keep or merge them together, and once they choose it saves cleanly and moves on."
+  },
+  {
+    "id": "q_scene_015_003",
+    "query_text": "Create a mobile app that handles the subscription paywall experience — when someone hits the locked content, it shows them what they'll get with the paid plan, gives them a clear option to start a free trial first before committing, and after the trial it smoothly transitions them into picking a plan, all on one clean screen on their phone."
+  },
+  {
+    "id": "q_scene_015_004",
+    "query_text": "Make a mobile app that scans a web page or app for accessibility problems — like missing labels, low contrast, or things that are hard to tap — and shows a list of what it found with a simple explanation of each issue, plus a one-tap way to apply common fixes right there without needing to dig into any code manually."
+  },
+  {
+    "id": "q_scene_015_005",
+    "query_text": "Need a mobile app that walks you through setting up Face ID and fingerprint login step by step — it guides you through scanning your face and registering your fingerprint, shows which methods your phone supports, lets you enable or disable each one separately, and confirms everything is saved so next time you open the app it just unlocks with a glance or a touch."
+  },
+  {
+    "id": "q_scene_016_001",
+    "query_text": "Need a molecular weight calculator app on my phone where I can just type in a chemical formula like H2O or C6H12O6 and it instantly tells me the total molecular weight in grams per mole, with each element broken down so I can double-check the math — super useful for chemistry homework when I'm tired of doing it by hand."
+  },
+  {
+    "id": "q_scene_016_002",
+    "query_text": "Build a real estate investment calculator app for mobile where I can punch in the property price, annual rental income, and operating expenses, and it spits out the cap rate right away so I know if a deal is worth looking at, with a saved history of properties I've already run the numbers on so I can compare them side by side."
+  },
+  {
+    "id": "q_scene_016_003",
+    "query_text": "Build a payroll calculator app for my phone where I enter my gross salary and it works out exactly what I'll actually take home after taxes, social insurance, and any other deductions, showing me a clear breakdown of each cut so I finally stop guessing why my paycheck is always less than I expected."
+  },
+  {
+    "id": "q_scene_016_004",
+    "query_text": "Make a currency converter app for my phone that pulls in real-time exchange rates so I can type in an amount in one currency and instantly see what it's worth in another, with a quick list of my most-used currency pairs at the top so I can switch between them fast when I'm traveling or shopping overseas."
+  },
+  {
+    "id": "q_scene_016_005",
+    "query_text": "Need a BMI calculator app for my phone that actually accounts for body frame size — small, medium, or large — so the result is more accurate than just plugging in height and weight, with a simple way to figure out my frame size using wrist measurement, and a plain-language explanation of what the result means for my health."
+  },
+  {
+    "id": "q_scene_016_006",
+    "query_text": "Need a fuel efficiency converter app for my phone that lets me enter a car's MPG rating and instantly see it in liters per 100km so I can actually compare American and European cars without doing the math in my head every time, with a quick flip so I can go the other direction too."
+  },
+  {
+    "id": "q_scene_017_001",
+    "query_text": "Need a daily gratitude logger app on my phone where every morning it nudges me to write down exactly three things I'm grateful for that day, keeps a running list so I can scroll back through past entries, and maybe shows a little streak counter so I can see how many days in a row I've kept it up."
+  },
+  {
+    "id": "q_scene_017_002",
+    "query_text": "Create a caffeine tracker app for my phone where I can log every coffee or energy drink I have throughout the day, pick from a list of common drinks with their caffeine amounts already filled in, and see a simple running total so I know when I'm getting close to my daily limit and should probably switch to water."
+  },
+  {
+    "id": "q_scene_017_003",
+    "query_text": "Create a reading tracker app for my phone where I can add the books I'm currently reading, enter the total number of pages and update how far I've gotten each time I read, and see a progress bar for each book so I can feel good about how much I've read and stay motivated to finish."
+  },
+  {
+    "id": "q_scene_017_004",
+    "query_text": "Need a screen time logger app for my phone where I can manually log how long I spent in different kinds of apps — social media, games, work stuff, reading — each day, then see a simple breakdown showing where my time actually went, so I can tinker with my habits and see if I'm improving week by week."
+  },
+  {
+    "id": "q_scene_017_005",
+    "query_text": "Build a personal cash flow logger app for my phone where I can quickly jot down money coming in and going out each day — just the amount and a short note about what it was for — and at the end of the day or week I can see a simple total of how much I earned versus spent, so I have a real picture of where my money goes."
+  },
+  {
+    "id": "q_scene_017_006",
+    "query_text": "A symptom and side effect journal app for my phone where I can log how I'm feeling each day — what symptoms showed up, which medication I took, and any side effects I noticed — with timestamps so I can show my doctor a clear picture of what's been happening, and a simple way to flip back through past entries by date."
+  },
+  {
+    "id": "q_scene_018_001",
+    "query_text": "A daily compliment reminder app for my phone that pings me once a day to give someone in my life a genuine compliment — it has a little prompt to help me think of something specific to say, lets me log who I complimented and what I said, and shows a streak so I can see how many days in a row I've kept up the habit."
+  },
+  {
+    "id": "q_scene_018_002",
+    "query_text": "Create a mobile app that generates icebreaker questions for parties, work events, or first meetings — you pick the vibe like casual, funny, or deep, and it gives you a handful of questions to kick off conversations, with a tap to get more if you want, so you always have something interesting to say instead of just talking about the weather."
+  },
+  {
+    "id": "q_scene_018_003",
+    "query_text": "Make a mobile conversation helper app for people who get anxious in social situations — it gives you a card with a simple, low-pressure conversation opener you can use in a specific situation like meeting someone new at work or chatting at a party, so you always have something to say and never have to stand there panicking about what to talk about."
+  },
+  {
+    "id": "q_scene_018_004",
+    "query_text": "Make a mobile tool that helps me write a personalized LinkedIn connection message — I type in a little info about the person like their job title or something we have in common, and it generates a short friendly note I can actually send, so I stop using the same generic template for everyone and actually get responses."
+  },
+  {
+    "id": "q_scene_018_005",
+    "query_text": "Need a thank-you note generator app on my phone where I pick the occasion — gift, dinner, job referral, whatever — fill in a couple of details like the person's name and what they did, and it spits out a warm, ready-to-send note I can copy straight into a message, so I actually follow through on thanking people instead of forgetting."
+  },
+  {
+    "id": "q_scene_018_006",
+    "query_text": "Make a mobile apology message builder app where I type out what happened and who I'm apologizing to, and it helps me put together a genuine message that actually sounds sorry without being overdramatic, plus a quick tone check so I can make sure it reads as sincere before I hit send."
+  },
+  {
+    "id": "q_scene_019_001",
+    "query_text": "A 21-day habit countdown tracker that feels more like a ritual than a to-do list — something you open on your phone each morning with a warm, calming vibe, where you mark off one day at a time and watch a beautiful visual slowly fill in as you get closer to the finish line, with a little moment of celebration when you hit day 21 so it actually feels like an achievement."
+  }
+]

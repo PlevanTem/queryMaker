@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_034_001",
+    "query_text": "Build a social connection reminder app for my phone that helps me keep track of which friends I want to call and when — I want to add each person to a list, set a reminder frequency like \"every 2 weeks\" or \"once a month,\" and get a notification when it's been too long since I last reached out. It should also let me log the date after I actually make the call so the streak resets properly."
+  },
+  {
+    "id": "q_scene_034_002",
+    "query_text": "Need a journaling streak tracker app for my phone that shows my current streak clearly on the home screen and lets me log each day I write — I want a \"streak guard\" option where I can bank one or two grace days so a single missed day doesn't wipe out my whole streak, and a simple calendar view so I can see which days I actually journaled at a glance."
+  },
+  {
+    "id": "q_scene_034_003",
+    "query_text": "Create a daily evening reflection tracker app for my phone where I rate how satisfied I feel with my day on a simple 1–5 scale, add a short note about what went well, and see my scores plotted on a small chart so I can spot patterns over time — it should send me a nightly reminder at a set time to fill in the score before I go to sleep."
+  },
+  {
+    "id": "q_scene_034_004",
+    "query_text": "Build a weekly habit review planner app for mobile where every Sunday it prompts me to look back at my habits from the past seven days — I want to see a checklist of all my habits, mark each one as \"kept up\", \"slipped\", or \"skipped\", and write a short note about what I want to do differently next week, with a running log of past weekly reviews I can scroll back through."
+  },
+  {
+    "id": "q_scene_034_005",
+    "query_text": "Need a daily water intake tracker app for my phone that counts up to 8 glasses each day — I want to tap a glass icon every time I drink a cup, see how many I've had and how many I still need, and get a reminder if it's midday and I'm still behind on my count, plus a simple history showing whether I hit my 8-glass goal each day this week."
+  },
+  {
+    "id": "q_scene_035_001",
+    "query_text": "Build a fitness data manager app for my phone that can pull in workout stats from my wearable device — I want to connect it once and have it automatically import things like step count, heart rate, and active minutes each day, then display them in a clean list so I can scroll back through my recent activity without having to open the manufacturer's app."
+  },
+  {
+    "id": "q_scene_035_002",
+    "query_text": "A workout periodization planner for mobile where I can lay out my training in blocks — like a base-building block, a strength block, and a peak block — each with a set number of weeks, specific goals like \"increase squat weight by 10%\", and a checklist of the key sessions to hit that week, so I can see at a glance where I am in the whole plan and what's coming up next."
+  },
+  {
+    "id": "q_scene_035_003",
+    "query_text": "Create a rehab exercise tracker app for my phone where I can add each exercise my physio gave me, set the reps and sets I'm supposed to do, and check them off after each session — I want it to show a daily checklist so I stay on track, log a pain or difficulty level after completing each exercise, and keep a history of past sessions so I can show my physio how consistently I've been doing the work."
+  },
+  {
+    "id": "q_scene_035_004",
+    "query_text": "Build a competition countdown training planner app for mobile where I enter my competition date and it counts down the days on the home screen — I want to map out my training weeks leading up to the event, mark each week's focus like \"taper\" or \"speed work\", and tick off completed sessions so I can see how my prep is progressing as the competition gets closer."
+  },
+  {
+    "id": "q_scene_035_005",
+    "query_text": "Create a seasonal sport training log app for my phone where I can organize my workouts by season — like spring base training, summer race prep, fall off-season — and log each session with the sport type, duration, and a quick note about how it went, so I can look back year over year and see how my training volume changes across seasons."
+  },
+  {
+    "id": "q_scene_036_001",
+    "query_text": "Build a jet lag recovery sleep adjuster app for my phone where I enter my home time zone and the destination time zone, and it gives me a simple day-by-day plan for shifting my bedtime and wake time gradually before and after travel — I want daily reminders for when to go to sleep and wake up, and a way to check off each day so I can follow the schedule without having to do the math myself."
+  },
+  {
+    "id": "q_scene_036_002",
+    "query_text": "Make a sleep environment logger app for my phone where I record the temperature, whether the room was light or dark, and how noisy it was before bed each night — I want to rate each condition on a simple scale, add a note about how well I slept, and see a week's worth of logs so I can figure out which settings give me the best night's sleep."
+  },
+  {
+    "id": "q_scene_036_003",
+    "query_text": "Build a menstrual cycle symptom predictor app for my phone that tracks my cycle dates and the symptoms I tend to get each phase — I want it to show a card a few days before my period is due listing what symptoms are likely coming and what I should prep, like ibuprofen on hand or a heating pad, based on patterns from my past few cycles."
+  },
+  {
+    "id": "q_scene_036_004",
+    "query_text": "Make a period flow intensity logger app for my phone where I log each day of my period and mark whether it's a light, medium, or heavy flow day — I also want to note how many pads or tampons I used so I have a concrete record, and a simple month view that color-codes the days by intensity so I can compare cycles at a glance."
+  },
+  {
+    "id": "q_scene_036_005",
+    "query_text": "A period pain tracker app for my phone where I rate my cramp pain level from 1 to 10 each day and note what I did to manage it — like took ibuprofen, used a heat pad, or rested — so I can see over a few cycles which interventions actually help and on which days my pain tends to peak, with a simple log I can show my doctor if needed."
+  },
+  {
+    "id": "q_scene_037_001",
+    "query_text": "Create a symptom frequency calendar app for my phone where I can log which symptoms I experienced each day and see them mapped onto a monthly calendar — I want the days color-coded by how many symptoms I had so I can spot which weeks or times of month are rougher, and be able to tap a day to see exactly which symptoms I logged that day."
+  },
+  {
+    "id": "q_scene_037_002",
+    "query_text": "Make a calorie balance tracker app for my phone where I can log my daily calories eaten and calories burned through exercise, and see a simple chart showing whether I'm in a surplus or deficit each day — I want a running weekly total and a clear visual like a bar showing calories in versus calories out so I can stay on top of my intake without complicated calculations."
+  },
+  {
+    "id": "q_scene_037_003",
+    "query_text": "A VO2 max and fitness age calculator app for my phone where I enter a few basic stats — like my resting heart rate, age, and how fast I run a mile — and it gives me an estimated VO2 max score along with a \"fitness age\" showing whether I'm ahead or behind average for my real age, with a history log so I can track how it changes as I get fitter."
+  },
+  {
+    "id": "q_scene_037_004",
+    "query_text": "Make a daily UV exposure tracker app for my phone where I log how much time I spent outdoors in sunlight, the approximate UV index for that day, and whether I applied sunscreen — I want it to tally up my cumulative exposure for the day and show a simple indicator of whether I'm in a safe range, so I can make better sunscreen habits and protect my skin."
+  },
+  {
+    "id": "q_scene_037_005",
+    "query_text": "Need a weekly health goals report app for my phone that pulls together how I did on a set list of goals each week — things like hitting my step count, drinking 8 glasses of water daily, and getting 7 hours of sleep — and shows a simple checklist of which goals I met and which I missed, along with a short summary card I can screenshot and save at the end of each week."
+  },
+  {
+    "id": "q_scene_038_001",
+    "query_text": "Create a kids' calm-down breathing game app for mobile with a soft, playful feel — think gentle pastel colors and a cute animated character like a little cloud or bear that slowly expands and shrinks to guide the breathing pace, so a child can follow along by watching the animation rather than reading instructions. It should have a few simple breath patterns to pick from and play a gentle chime when the session ends so the child knows they're done."
+  },
+  {
+    "id": "q_scene_038_002",
+    "query_text": "Need a couples synchronized breathing app for mobile that feels warm and intimate — two soft glowing orbs that pulse together on the screen, one for each person, so both partners can follow the same breathing rhythm even if they're in different rooms, with a gentle shared timer and a calming color palette that shifts from soft blue at the start of each inhale to warm amber on the exhale."
+  },
+  {
+    "id": "q_scene_038_003",
+    "query_text": "Need a grief and compassion meditation app for my phone with a quiet, tender atmosphere — muted earthy tones, slow gentle animations, and a soft-spoken audio guide that walks through a compassion meditation for processing loss, with sessions that feel unhurried and never clinical, so the whole experience feels like a safe, gentle space rather than a structured exercise."
+  },
+  {
+    "id": "q_scene_038_004",
+    "query_text": "Make a postpartum relaxation breathing guide app for mobile with a very calm, nurturing visual feel — soft warm tones, minimal text, and a gentle animated breathing circle that slowly rises and falls to guide each breath, designed for tired new moms who just need something soothing and easy to follow during a quiet moment, with a few short session lengths to choose from like 3, 5, or 10 minutes."
+  },
+  {
+    "id": "q_scene_038_005",
+    "query_text": "Need a 4-7-8 breathing anxiety relief timer app for my phone that feels calm and grounding — a clean, minimal design with a softly animated circle that expands for the 4-count inhale, holds for the 7 count, and slowly contracts for the 8-count exhale, with a gentle tone at each phase change so I can close my eyes and just follow the sound, and a round counter so I know how many breath cycles I've completed."
+  }
+]

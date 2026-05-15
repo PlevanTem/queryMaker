@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_050_001",
+    "query_text": "Need a web app for coding bootcamp cohort members to stay connected and find jobs together — basically a place where people from the same batch can post updates, share what they're building, cheer each other on, and also browse job listings that bootcamp grads or hiring partners have posted, with each member having a little profile showing their skills and what kind of role they're after."
+  },
+  {
+    "id": "q_web_050_002",
+    "query_text": "Create a language partner matching app for people enrolled at the same language school, where you can browse other students' profiles showing which language they speak natively and which one they're learning, send a quick message to request a practice session, and keep a list of your current exchange partners so you can easily pick up where you left off — all running in the browser as a web app so it's easy to use on a desktop during study breaks."
+  },
+  {
+    "id": "q_web_050_003",
+    "query_text": "Create a web app for teachers to share lesson ideas, swap teaching resources, and have conversations about what's working in the classroom — it should have a forum-style area where you can post a question or tip and others can reply, plus a spot to upload or link to materials like worksheets or slide decks so the whole community can benefit from what everyone has made."
+  },
+  {
+    "id": "q_web_050_004",
+    "query_text": "Build a web app for coordinating school volunteers where parents and staff can sign up for open slots, see what help is needed for upcoming events, and get a quick reminder when their shift is coming up — the main part of the app should show a list of volunteer opportunities with how many spots are still open, and organizers can add new events and see who has signed up so far."
+  },
+  {
+    "id": "q_web_051_001",
+    "query_text": "Make a web app where I can see all my grades and assignment scores in one place so I stop having to dig through five different portals every time I want to know how I'm doing — it should show each subject with the current grade, upcoming deadlines, and a simple chart of how scores have changed over the semester so I can spot if something is slipping before it's too late."
+  },
+  {
+    "id": "q_web_051_002",
+    "query_text": "Make a web app that lets teachers draw out a classroom seating chart without having to redo it by hand every time someone moves — you can set up the room layout with rows and desks, type in student names and drag them into seats, and save different arrangements so switching between them for different class periods takes just one click."
+  },
+  {
+    "id": "q_web_051_003",
+    "query_text": "Create a web app where instructors can upload student submissions and instantly see a side-by-side view of which parts of the text were flagged as matching other sources, with a percentage score at the top and the specific matched passages highlighted so you can quickly decide whether something is actually a problem or just a common phrase — saves so much time compared to reading through reports one by one."
+  },
+  {
+    "id": "q_web_051_004",
+    "query_text": "Create a web app for scheduling parent-teacher conferences that lets parents pick from available time slots on a calendar without any back-and-forth emails, and lets teachers block off when they're free ahead of time — there should also be a messaging area so teachers can send a quick note to a parent before or after the meeting without needing to hunt down contact info separately."
+  },
+  {
+    "id": "q_web_052_001",
+    "query_text": "Create a podcast directory app for a browser that feels like flipping through a beautifully designed magazine — each show gets its own richly styled cover image and a short description, and clicking into a show reveals all its episodes laid out in a clean, readable list with artwork and brief summaries, so the whole thing feels less like a database and more like a curated shelf you actually want to browse."
+  },
+  {
+    "id": "q_web_052_002",
+    "query_text": "Need a web app to showcase a documentary film series where each film gets a dedicated space with its synopsis, a handful of stunning production stills displayed almost like a photo essay, and maybe a short mood-setting quote or two from the filmmakers — the overall feel should be cinematic and editorial, the kind of thing that makes someone want to actually sit down and watch the films."
+  },
+  {
+    "id": "q_web_052_003",
+    "query_text": "Create a website that celebrates the visual identity and typography heritage of a news brand — it should feel like an elegant archive where you can explore the evolution of their mastheads, typefaces, and design language over the decades, with high-quality scans or reproductions displayed in a way that reads more like an art book than a history report, something a design lover would genuinely linger over in their desktop browser."
+  },
+  {
+    "id": "q_web_052_004",
+    "query_text": "Create a web app that takes you on a visual journey through bestseller list history across different eras — each year or decade gets its own look and feel with cover art for the top titles, and you can scroll along a timeline to see how tastes shifted, with the aesthetic of each period reflected in the typography and color palette so the whole thing feels like a living cultural scrapbook rather than just a list."
+  },
+  {
+    "id": "q_web_053_001",
+    "query_text": "Make a web app that works like a beautifully designed newsroom for turning dense scientific research into stories regular people actually want to read — each piece should have a strong visual presence with a striking header image, a clear headline that captures the real-world meaning of the finding, and the full article below written in plain language, with a sidebar showing related stories so the whole experience feels cohesive and worth bookmarking."
+  },
+  {
+    "id": "q_web_053_002",
+    "query_text": "Make a literary web app for desktop browsers that feels like a thoughtfully curated reading journal — each entry features a handpicked excerpt from a book with elegant typography that makes the passage really breathe on the page, followed by a personal essay-style review that captures the mood and meaning of the work, and the home screen arranges recent pieces in a way that feels editorial and considered rather than just chronological."
+  },
+  {
+    "id": "q_web_053_003",
+    "query_text": "Build a web app that serves as a companion archive for a documentary film series, where each film has its own richly designed space with the full transcript readable in clean, well-spaced text alongside essays and contextual notes that deepen the viewing experience — the overall aesthetic should feel like a serious film journal, the kind of thing that makes watching and reading feel like one continuous act of engagement."
+  },
+  {
+    "id": "q_web_053_004",
+    "query_text": "Create a data journalism web app where each story leads with a striking visual chart or graphic that immediately makes the numbers feel real and worth caring about, followed by the reporting that explains the story behind the data — the whole thing should have an editorial feel with strong typography and a layout that makes complex information look approachable, something that feels like a premium publication rather than a spreadsheet."
+  },
+  {
+    "id": "q_web_054_001",
+    "query_text": "Create a landing page website for an exclusive early-access preview of a documentary series — it should feel like getting a private invitation, with a cinematic full-screen visual at the top, a short teaser description that builds intrigue, and a simple sign-up form for people to request access, the whole page should have that rare, premium feeling where every design choice reinforces how special and limited this preview is."
+  },
+  {
+    "id": "q_web_054_002",
+    "query_text": "Build a holiday gift subscription campaign website for a news outlet that feels warm and genuinely giftable — the page should lead with the emotional appeal of giving someone the gift of staying informed, show the different subscription tiers clearly so it's easy to pick one, and include a spot to write a personal gift message, all wrapped in a festive visual tone that feels elevated rather than salesy, something you'd actually feel good sharing with someone you care about."
+  },
+  {
+    "id": "q_web_054_003",
+    "query_text": "Make a book launch website for an author's upcoming release with a live countdown timer ticking toward the release date, a beautiful cover reveal front and center, and a preorder button that feels like the obvious next step — the whole vibe should match the mood of the book itself, with typography and color choices that feel intentional and atmospheric rather than generic, the kind of microsite that makes the wait feel exciting."
+  },
+  {
+    "id": "q_web_054_004",
+    "query_text": "Create a web app where writers, bloggers, and content creators can sign up for a publisher's affiliate and referral rewards program — the enrollment experience should feel clean and welcoming rather than bureaucratic, with a clear explanation of how the rewards work, a simple form to apply, and after joining a personal area where they can track how many referrals they've made and what rewards they've earned so far."
+  },
+  {
+    "id": "q_web_055_001",
+    "query_text": "Make a web app where I can track all my book royalties and advance earnings without having to cobble together spreadsheets every quarter — I want to log payments from different publishers, see at a glance how much of each advance I've earned out, and get a running total of what I'm owed versus what I've already received so I always know exactly where I stand financially as an author."
+  },
+  {
+    "id": "q_web_055_002",
+    "query_text": "Build a web app that acts as a media kit and advertising rate card for a B2B publication — potential advertisers should be able to come to this website, see the audience stats and reach numbers clearly laid out, browse the different ad placement options with their pricing, and download a PDF version of the full media kit so sales conversations stop starting from scratch every single time someone asks."
+  },
+  {
+    "id": "q_web_055_003",
+    "query_text": "Make a web app marketplace where podcast networks can list their available ad slots and brands can browse and book them directly — the main part of the app shows available inventory organized by show name, audience size, and category so buyers can filter down to what they actually want, and once they find a match they can submit a booking request right there without having to track down an email address or wait for a sales call."
+  },
+  {
+    "id": "q_web_055_004",
+    "query_text": "Make a web app that connects newsletter publishers with sponsors who want to reach their readers — publishers can list their newsletter with audience size and niche, and sponsors can browse through them and send a sponsorship inquiry directly from the app, with each publisher also having a simple tracker showing which sponsorship slots are open or already filled so both sides can manage everything from one place in the browser."
+  },
+  {
+    "id": "q_web_056_001",
+    "query_text": "Make a web app for freelance writers to book editorial consultation slots with an editor — writers should be able to see the editor's available times on a calendar, pick a slot that works for them, and fill in a short form explaining what they need help with, and the editor gets a clean list of all upcoming appointments with the notes attached so there's no more back-and-forth email chains just to schedule a single conversation."
+  }
+]
