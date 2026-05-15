@@ -12,17 +12,25 @@
 const fs   = require("fs");
 const path = require("path");
 const XLSX = require("xlsx");
+const { loadCorpusUsage, saveCorpusUsage } = require("../mvp/query_factory_v2");
 
 // Two modes:
 //   (A) Default — retry-mode for the v7 batches (legacy).
 //   (B) Single-run mode (no-API path): pass --in-dir <path> --target-dir <path>
 //       to merge subagent outputs from one run dir into its own queries.jsonl.
+// Pass --usage-state <path> to update Layer-A corpus usage after merge (recommended).
+// Pass --no-usage-track to skip usage state update.
 function arg(name) {
   const i = process.argv.indexOf("--" + name);
   return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : null;
 }
+function flag(name) {
+  return process.argv.includes("--" + name);
+}
 const IN_DIR_OVERRIDE     = arg("in-dir");
 const TARGET_DIR_OVERRIDE = arg("target-dir");
+const USAGE_STATE_PATH    = arg("usage-state");   // explicit path; auto-detect if omitted
+const NO_USAGE_TRACK      = flag("no-usage-track");
 
 const TEMP_DIR = IN_DIR_OVERRIDE || "data/output/_retry_subagent";
 const TARGETS  = TARGET_DIR_OVERRIDE
@@ -129,6 +137,31 @@ function main() {
     fs.writeFileSync(jsonlPath, updated.map((r) => JSON.stringify(r)).join("\n") + "\n", "utf8");
     console.log(`  📝 ${jsonlPath}`);
     if (rebuildXlsx(updated, xlsxPath)) console.log(`  📊 ${xlsxPath}`);
+
+    // Update Layer-A usage state so future batches skip recovered topics.
+    if (!NO_USAGE_TRACK && recovered > 0) {
+      // Resolve state path: explicit flag > auto-detect from summary.json > skip.
+      let statePath = USAGE_STATE_PATH;
+      if (!statePath) {
+        const summaryPath = path.join(target.dir, "summary.json");
+        if (fs.existsSync(summaryPath)) {
+          const summary = JSON.parse(fs.readFileSync(summaryPath, "utf8"));
+          const platform = summary.platform;
+          if (platform) {
+            statePath = path.join("data", "state", `corpus_usage_${platform}.json`);
+          }
+        }
+      }
+      if (statePath) {
+        const recoveredRows = updated.filter((r) => !r.error && r.corpus_l2_key && r.corpus_topic);
+        const usedByL2 = {};
+        for (const r of recoveredRows) {
+          (usedByL2[r.corpus_l2_key] = usedByL2[r.corpus_l2_key] || []).push(r.corpus_topic);
+        }
+        saveCorpusUsage(statePath, usedByL2);
+        console.log(`  usage    → ${statePath} (+${recoveredRows.length} 次使用记录)`);
+      }
+    }
   }
   console.log("\n✅ Done");
 }

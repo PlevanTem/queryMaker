@@ -266,6 +266,20 @@ async function main() {
     }));
     writeJsonl(path.join(outDir, "queries.jsonl"), placeholderRows);
     console.log(`      placeholder queries.jsonl written (${placeholderRows.length} rows, all error=PREP_ONLY_PENDING)`);
+
+    // Persist Layer-A usage state so future batches skip these topics.
+    if (!noUsageTrack) {
+      const usedByL2 = {};
+      for (const task of tasks) {
+        const k = task.corpus_l2_key;
+        const t = task.corpus_topic;
+        if (!k || !t) continue;
+        (usedByL2[k] = usedByL2[k] || []).push(t);
+      }
+      saveCorpusUsage(usageStatePath, usedByL2);
+      const totalIncrements = Object.values(usedByL2).reduce((s, arr) => s + arr.length, 0);
+      console.log(`      usage    → ${path.relative(rootDir, usageStatePath)} (+${totalIncrements} 次使用记录)`);
+    }
     return;
   }
 
