@@ -81,56 +81,52 @@ npm run run:free -- --persona-scope task --no-resume
 **工作流（与 `run:free` 并存的独立入口）：**
 
 ```
-parseRequirementsFromWorkbook(xlsx)          # 解析 61 个 L2
+parseRequirementsFromWorkbook(xlsx)          # 解析场景（mobile: xlsx；web: JSON spec）
        ↓
-buildCorpusPlan(spec, corpus, {              # 按 xlsx L1 配比分配 N 个 task
-  total: 200,                                # 总量（必填默认）
-  complexityMix: ["medium"],                 # 复杂度轮换（默认全 medium）
+buildCorpusPlan(spec, corpus, {              # 按场景配比分配 N 个 task；Layer-A 最少使用采样
+  total: 500,
+  complexityMix: ["medium"],
+  corpusUsage: loadCorpusUsage(...)          # data/state/corpus_usage_{platform}.json
 })
        ↓
-buildCorpusDirectQueryPrompt(task)           # 显式锁 corpus_topic，禁招呼语
+buildCorpusDirectQueryPrompt(task)           # 显式锁 corpus_topic；Layer-B opener hash；Layer-C persona 注入
        ↓
 claude CLI subprocess（lib/claude-cli.js）   # 走 packy CC 网关，model=claude-sonnet-4-6
-       ↓
-scoreQueryRecord                             # 启发式打分
+       ↓                                     # —— 或 --prep-only 模式：跳过此步，写 _subagent_in/ ——
+scoreQueryRecord                             # 启发式打分（--score 开启）
        ↓
 data/output/corpus_run/
-   ├── plan.jsonl                            # 完整计划（每 task 含 corpus_topic）
-   ├── queries.jsonl                         # 每条 query + score + word_count + duration
-   └── summary.json                          # 汇总：L1 分布 / 平均质量 / 通过率 / 耗时
+   ├── plan.jsonl                            # 完整计划（每 task 含 corpus_topic + corpus_l2_key）
+   ├── queries.jsonl                         # 每条 query + word_count + duration（+ score 如启用）
+   ├── queries.xlsx                          # 同内容 Excel（默认生成）
+   ├── summary.json                          # 汇总：L1 分布 / 平均质量 / 通过率 / 耗时 / platform
+   └── _subagent_in/                         # --prep-only 时：subagent 批次输入文件
+       └── {platform}_b01_in.json …
 ```
 
 **用法：**
 
 ```bash
-# 默认：200 task，全 medium，按 xlsx L1 配比分布
+# 默认：200 task，全 medium，mobile 平台
 node scripts/run-corpus.js
 
-# 自定义总量
-node scripts/run-corpus.js --total 500
+# 生产批次：500 条 web 端
+node scripts/run-corpus.js --platform web --total 500 --out data/output/corpus_run_web_500
 
 # 自定义复杂度 mix
 node scripts/run-corpus.js --total 200 --complexity-mix "vague,medium,medium"
 
 # 验证 plan 分布（不调 LLM）
-node scripts/run-corpus.js --total 200 --dry-run
-
-# 验证用：只跑前 N 条真实 LLM
-node scripts/run-corpus.js --total 200 --limit 5
+node scripts/run-corpus.js --total 500 --dry-run
 
 # 提高并发
-node scripts/run-corpus.js --total 200 --concurrency 4
-
-# 自定义输出
-node scripts/run-corpus.js --total 200 --out data/output/corpus_v1
+node scripts/run-corpus.js --total 500 --concurrency 8
 
 # 排除 L1 场景（子串匹配，逗号分隔）
 node scripts/run-corpus.js --total 200 --exclude-l1 "深度研究,购物消费"
 
-# 自定义 Layer-A state / persona-map 路径
-node scripts/run-corpus.js --total 200 \
-  --usage-state data/state/run_alpha.json \
-  --persona-map scripts/corpus_persona_map.json
+# No-API 模式：只生成 subagent 批次文件，不调 LLM（详见下方「No-API 模式」章节）
+node scripts/run-corpus.js --platform mobile --total 500 --prep-only --out data/output/corpus_run_mobile_500
 
 # 关掉 usage 跟踪（一次性试跑、不污染历史）
 node scripts/run-corpus.js --total 200 --no-usage-track
@@ -140,25 +136,148 @@ node scripts/run-corpus.js --total 200 --no-usage-track
 
 | 参数 | 默认 | 说明 |
 |---|---|---|
-| `--total` | `200` | 总 task 数；按 xlsx L1 配比缩放分配 |
+| `--platform` | `mobile` | 平台：`mobile`（xlsx 场景 + `corpus_data.json`）或 `web`（JSON spec + `corpus_data_web.json`） |
+| `--total` | `200` | 总 task 数；按场景配比缩放分配 |
 | `--complexity-mix` | `"medium"` | 复杂度轮换（逗号分隔），如 `"vague,medium,medium"` |
 | `--concurrency` | `2` | claude CLI 子进程并发数 |
 | `--dry-run` | 关 | 不调 LLM，验证 plan 分布与脚本结构 |
-| `--limit N` | 关 | 仅执行前 N 个 task |
-| `--input` | 自动 | xlsx 路径（默认从 `data/input/` 自动检测） |
+| `--limit N` | 关 | 仅执行前 N 个 task（调试用） |
+| `--input` | 自动 | xlsx 路径（mobile 平台；默认从 `data/input/` 自动检测） |
 | `--out` | `data/output/corpus_run` | 输出目录 |
-| `--exclude-l1` | 无 | L1 场景子串过滤（逗号分隔），如 `"深度研究,购物消费"` |
-| `--usage-state` | `data/state/corpus_usage.json` | Layer-A 跨批次 topic 去重 state 文件 |
+| `--exclude-l1` | 无 | L1 场景子串过滤（逗号分隔） |
+| `--usage-state` | `data/state/corpus_usage_{platform}.json` | Layer-A 跨批次 topic 去重 state；不同平台自动隔离 |
 | `--no-usage-track` | 关 | 关闭 Layer-A 跟踪（一次性试跑、不污染历史）|
-| `--persona-map` | `scripts/corpus_persona_map.json` | Layer-C L2 → persona 语义映射文件 |
+| `--persona-map` | `scripts/corpus_persona_map[_web].json` | Layer-C L2 → persona 语义映射文件 |
+| `--prep-only` | 关 | No-API 模式：只写 subagent 批次文件，不调 LLM（见下方章节） |
+| `--prep-batch` | `25` | `--prep-only` 每批次 task 数 |
+| `--score` | 关 | 开启启发式质量评分 |
+| `--no-xlsx` | 关 | 跳过 xlsx 导出 |
 
 **三层多样性机制（默认全部启用）：**
 
-- **Layer-A 跨批次去重**：`data/state/corpus_usage.json` 记录 `(l2_key, topic)` 累计使用次数；新批次优先选 least-used，与历史 batch topic 重叠 100% → 0%
+- **Layer-A 跨批次去重**：`data/state/corpus_usage_{platform}.json` 记录 `(l2_key, topic)` 累计使用次数；新批次优先选 least-used，与历史 batch topic 重叠 100% → 0%。当某 L2 topic 池全部耗尽时输出 `[Layer-A WARN]` 提示（此时可运行 `grow-corpus.js` 扩池）
 - **Layer-B Opener hash**：`query_id` 决定性哈希到 5 桶之一（`Build a` / `Need a` / `Create a` / `Make a` / 无 formal opener），破除模型在 "Build a..." 上的收敛
-- **Layer-C Persona-tone 语义映射**：`scripts/corpus_persona_map.json` 按 L2 语义匹配 5 种普通用户 persona（`maker` / `planner` / `curator` / `operator` / `founder_like`），prompt 注入 voice 描述 + dev jargon 黑名单，把含 dev 术语的 query 占比从 20%（v4）压到 0.5%（v5）
+- **Layer-C Persona-tone 语义映射**：`scripts/corpus_persona_map[_web].json` 按 L2 语义匹配 5 种普通用户 persona（`maker` / `planner` / `curator` / `operator` / `founder_like`），prompt 注入 voice 描述 + dev jargon 黑名单，把含 dev 术语的 query 占比从 20%（v4）压到 0.5%（v5）
 
 **复用关系：** 共享 `scripts/lib/claude-cli.js` 与 `test-corpus-methods.js`，两脚本对 claude CLI 调用统一一处实现。
+
+## No-API 模式：`--prep-only` + subagent + merge
+
+> 当 Packy API 额度耗尽或需要零 token 成本生产时，使用此三步流程。
+
+**流程：**
+
+```
+Step 1  run-corpus.js --prep-only
+        → 生成 plan.jsonl + 占位 queries.jsonl（全 error=PREP_ONLY_PENDING）
+        → 写 <out>/_subagent_in/{platform}_b01_in.json … _bNN_in.json（每批 25 条）
+        → 持久化 Layer-A usage state（与正常模式一致）
+
+Step 2  Claude Code subagent × N（并行）
+        → 每个 subagent 读取一个 *_in.json（25 条 prompt）
+        → 对每条 prompt 调用 claude -p --bare 生成 query_text
+        → 输出对应的 *_out.json（[{ id, query_text }, ...]）
+
+Step 3  node scripts/merge-subagent-retry.js --in-dir <out>/_subagent_in --target-dir <out>
+        → 将 *_out.json 的 query_text 回写到 queries.jsonl
+        → 重建 queries.xlsx
+        → 自动更新 Layer-A usage state（从 summary.json 自动识别平台）
+```
+
+**Step 1 示例（500 条移动端）：**
+
+```bash
+node scripts/run-corpus.js \
+  --platform mobile --total 500 \
+  --prep-only --prep-batch 25 \
+  --out data/output/corpus_run_mobile_500
+# → 写出 20 个 batch（mobile_b01_in.json … mobile_b20_in.json）
+# → Layer-A state 已更新
+```
+
+**Step 2 示例（在 Claude Code 内，每批开一个 subagent）：**
+
+```
+对每个 _subagent_in/mobile_b01_in.json，创建一个 subagent：
+  读取 mobile_b01_in.json（JSON 数组，含 25 个 { id, prompt }）
+  对每条 item 用 callClaudeCli(item.prompt) 生成 item.query_text
+  写出 mobile_b01_out.json（[{ id, query_text }, ...]）
+```
+
+**Step 3 示例：**
+
+```bash
+node scripts/merge-subagent-retry.js \
+  --in-dir data/output/corpus_run_mobile_500/_subagent_in \
+  --target-dir data/output/corpus_run_mobile_500
+# → queries.jsonl + queries.xlsx 更新
+# → corpus_usage_mobile.json 自动增量更新
+```
+
+## 语料池扩展：`grow-corpus.js`
+
+> 当某个 L2 的 topic 池全部用完（Layer-A 触发 WARN）时，运行此脚本扩充语料。
+
+**工作原理：**
+
+1. 扫描 `corpus_data[_web].json`，找出剩余新鲜 topic 数 < `--threshold` 的 L2
+2. 对每个目标 L2，调用 Claude 生成 `--expand-by` 个新 topic 候选
+3. Jaccard 相似度去重（阈值 0.4），过滤过于相似的候选
+4. 追加到 `corpus_data[_web].json`（in-place）
+
+```bash
+# 查看哪些 L2 需要扩充（不写文件）
+node scripts/grow-corpus.js --platform mobile --dry-run
+
+# 扩充移动端所有耗尽 L2（每个 +20 topic）
+node scripts/grow-corpus.js --platform mobile
+
+# 指定单个 L2
+node scripts/grow-corpus.js --platform mobile --only "① 个人生活类" --expand-by 30
+
+# web 端
+node scripts/grow-corpus.js --platform web
+```
+
+**参数：**
+
+| 参数 | 默认 | 说明 |
+|---|---|---|
+| `--platform` | `mobile` | 目标语料文件（`mobile` = `corpus_data.json`；`web` = `corpus_data_web.json`） |
+| `--threshold` | `10` | 剩余新鲜 topic < N 时触发扩充；`0` = 仅扩充完全耗尽的 L2 |
+| `--expand-by` | `20` | 每个 L2 目标新增 topic 数 |
+| `--only` | 无 | 只扩充指定 L2 key（精确匹配） |
+| `--dry-run` | 关 | 只打印计划，不调 Claude，不写文件 |
+| `--no-usage-track` | 关 | 忽略 usage state，仅按 pool 大小判断 |
+
+> **注意**：需要 Claude API 额度（通过 `lib/claude-cli.js` 调用）。Packy 额度耗尽时用 `--dry-run` 确认目标 L2，补充额度后再运行。
+
+## 历史 batch 补充：`merge-subagent-retry.js`
+
+> 将 subagent 生成的 `*_out.json` 结果合并回已有 `queries.jsonl`，替换 error 行。
+
+**用途：**
+
+- No-API 流程的 Step 3（见上方）
+- 手动补全某次生产跑的失败条目
+
+```bash
+# No-API 模式（单 run dir）
+node scripts/merge-subagent-retry.js \
+  --in-dir data/output/corpus_run_mobile_500/_subagent_in \
+  --target-dir data/output/corpus_run_mobile_500
+
+# 跳过 usage state 更新（试跑）
+node scripts/merge-subagent-retry.js \
+  --in-dir <in> --target-dir <target> --no-usage-track
+```
+
+| 参数 | 说明 |
+|---|---|
+| `--in-dir` | subagent 输出目录（含 `*_out.json`）；默认 `data/output/_retry_subagent` |
+| `--target-dir` | 目标 run 目录（含 `queries.jsonl`）；默认查找 v7 批次目录 |
+| `--usage-state` | 显式指定 usage state 路径；不传则从 `summary.json` 自动识别 `platform` |
+| `--no-usage-track` | 跳过 Layer-A usage state 更新 |
 
 ## 自由生成 plan：`build-free200-plan.js`
 

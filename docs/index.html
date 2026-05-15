@@ -885,9 +885,11 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
       <div style="font-size:16px;font-weight:600;margin-bottom:10px;" data-i18n="div.f3.t">Layer-A · Least-used topic sampling</div>
       <div style="font-size:13px;color:var(--muted);line-height:1.6;" data-i18n="div.f3.d">
         Naive <code>topics[i % length]</code> rotation makes consecutive batches pick identical
-        corpus topics. We persist <code>data/state/corpus_usage.json</code> — usage counts per
-        (l2_key, topic) — and prefer least-used topics for each new run. 100% → 0% topic
-        overlap with previous batch.
+        corpus topics. We persist per-platform state — <code>corpus_usage_mobile.json</code> /
+        <code>corpus_usage_web.json</code> — usage counts per (l2_key, topic) — and prefer
+        least-used topics for each new run. 100% → 0% topic overlap with previous batch.
+        When a pool is fully exhausted, <code>[Layer-A WARN]</code> fires and
+        <code>grow-corpus.js</code> can expand it.
       </div>
       <div class="formula" style="margin-top:14px;">
 <span class="var">pickLeastUsedTopics</span>(<span class="var">topics</span>, <span class="var">n</span>, <span class="var">usageMap</span>)<br>
@@ -947,7 +949,9 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     <strong style="color:var(--text);" data-i18n="div.bs.t">Bootstrap from existing run</strong> ·
     <span data-i18n="div.bs.d">first time enabling Layer-A, seed the state file from a historical
     <code>queries.jsonl</code> + <code>plan.jsonl</code> pair. Subsequent runs auto-update on success;
-    failed rows are not counted toward usage. Inspect <code>data/state/corpus_usage.json</code> any time.</span>
+    failed rows are not counted toward usage. State is per-platform:
+    <code>data/state/corpus_usage_mobile.json</code> / <code>corpus_usage_web.json</code>.
+    When a pool is exhausted, run <code>node scripts/grow-corpus.js --platform &lt;p&gt;</code> to expand it.</span>
   </div>
 </section>
 
@@ -1135,7 +1139,7 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
         </div>
         <div class="tl-row tl-fix">
           <div class="tl-key">FIX</div>
-          <div class="tl-val" data-i18n="ev2.s2.f">Layer-A least-used topic dedup across batches via <code>corpus_usage.json</code> state · 5-bucket opener hash (<code>Build a / Need a / Create a / Make a / no opener</code>) keyed by <code>query_id</code> · persona-tone semantic mapping from L2 → 5 ordinary-user archetypes.</div>
+          <div class="tl-val" data-i18n="ev2.s2.f">Layer-A least-used topic dedup across batches via per-platform <code>corpus_usage_{platform}.json</code> state · 5-bucket opener hash (<code>Build a / Need a / Create a / Make a / no opener</code>) keyed by <code>query_id</code> · persona-tone semantic mapping from L2 → 5 ordinary-user archetypes.</div>
         </div>
         <div class="tl-row tl-metric">
           <div class="tl-key">RESULT</div>
@@ -1361,7 +1365,7 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "ev2.s1.p":"No persona, no opener distribution, no scope discipline. Same first-N corpus topics get reused across batches; <strong>\"Build a mobile X\" pattern dominates</strong>; query framed as a single page or screen, not a 0-to-1 app.",
     "ev2.s1.sumr":"Sample query (illustrative)",
     "ev2.s2.t":"Three-layer diversification",
-    "ev2.s2.f":"Layer-A least-used topic dedup across batches via <code>corpus_usage.json</code> state · 5-bucket opener hash (<code>Build a / Need a / Create a / Make a / no opener</code>) keyed by <code>query_id</code> · persona-tone semantic mapping from L2 → 5 ordinary-user archetypes.",
+    "ev2.s2.f":"Layer-A least-used topic dedup across batches via per-platform <code>corpus_usage_{platform}.json</code> state · 5-bucket opener hash (<code>Build a / Need a / Create a / Make a / no opener</code>) keyed by <code>query_id</code> · persona-tone semantic mapping from L2 → 5 ordinary-user archetypes.",
     "ev2.s2.r":"Cross-batch corpus-topic overlap: <strong>100% → 0%</strong>. \"Build a\" share: <strong>54% → 21%</strong>. 5 distinct persona voices visible in batch.",
     "ev2.s2.p":"Audit found <strong>49.5% of queries</strong> still framed as \"Build a XX page where…\" — the opener is now diverse but the scope noun is still page-level, causing downstream LLMs to generate single-page mocks instead of complete apps.",
     "ev2.s3.t":"App-scope rewrite",
@@ -1415,7 +1419,7 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "div.f2.d":"Each query is compared against its same-scene peers via trigram-set Jaccard similarity. The diversity score rewards low max-peer-similarity.",
     "div.f2.r1":"distinct enough","div.f2.r2":"strongly distinct",
     "div.f3.t":"Layer-A · Least-used topic sampling",
-    "div.f3.d":"Naive <code>topics[i % length]</code> rotation makes consecutive batches pick identical corpus topics. We persist <code>data/state/corpus_usage.json</code> — usage counts per (l2_key, topic) — and prefer least-used topics for each new run. 100% → 0% topic overlap with previous batch.",
+    "div.f3.d":"Naive <code>topics[i % length]</code> rotation makes consecutive batches pick identical corpus topics. We persist per-platform state — <code>corpus_usage_mobile.json</code> / <code>corpus_usage_web.json</code> — usage counts per (l2_key, topic) — and prefer least-used topics for each new run. 100% → 0% topic overlap with previous batch. When a pool is fully exhausted, <code>[Layer-A WARN]</code> fires and <code>grow-corpus.js</code> can expand it.",
     "div.f3.r1":"topic overlap with prior batch",
     "div.f4.t":"Opener hash distribution",
     "div.f4.d":"With \"mobile H5\" in the system prompt, 54% of v3 outputs converged on <code>Build a mobile ...</code>. We deterministically hash <code>query_id</code> into one of 5 opener buckets (<code>Build a / Need a / Create a / Make a / no formal opener</code>), forcing uniform distribution. Idempotent across reruns.",
@@ -1428,7 +1432,7 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "div.f5.r4":"个人专业 · 海报 / 简历模板",
     "div.f5.r5":"长尾微工具 · 经典小游戏 · Adding & Creating",
     "div.bs.t":"Bootstrap from existing run",
-    "div.bs.d":"first time enabling Layer-A, seed the state file from a historical <code>queries.jsonl</code> + <code>plan.jsonl</code> pair. Subsequent runs auto-update on success; failed rows are not counted toward usage. Inspect <code>data/state/corpus_usage.json</code> any time.",
+    "div.bs.d":"first time enabling Layer-A, seed the state file from a historical <code>queries.jsonl</code> + <code>plan.jsonl</code> pair. Subsequent runs auto-update on success; failed rows are not counted toward usage. State is per-platform: <code>data/state/corpus_usage_mobile.json</code> / <code>corpus_usage_web.json</code>. When a pool is exhausted, run <code>node scripts/grow-corpus.js --platform &lt;p&gt;</code> to expand it.",
     "div.tab.bars":"// L1 distribution",
     "div.tab.network":"// Corpus network",
     "div.cv.note":"Each <strong style=\"color:var(--text)\">⬤ inner node</strong> is an L1 category; <strong style=\"color:var(--text)\">· outer dot</strong> is an L2 sub-scene. Hover to highlight a branch · click any node to drill in.",
@@ -1483,7 +1487,7 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "ev2.s1.p":"无 persona、无 opener 分布、无 scope 纪律。批次之间反复使用前 N 个相同的 corpus topic；<strong>「Build a mobile X」模板占绝对主导</strong>；query 框定为单个 page/screen，而非 0-to-1 的完整 app。",
     "ev2.s1.sumr":"样例 query（示意）",
     "ev2.s2.t":"三层差异化",
-    "ev2.s2.f":"Layer-A 跨批次最少使用 topic 优先（持久化到 <code>corpus_usage.json</code>）· 5 桶 opener 哈希（<code>Build a / Need a / Create a / Make a / 无 opener</code>）按 <code>query_id</code> 决定性分配 · persona-tone 按 L2 语义最佳匹配映射到 5 个普通用户 archetype。",
+    "ev2.s2.f":"Layer-A 跨批次最少使用 topic 优先（按平台持久化到 <code>corpus_usage_{platform}.json</code>）· 5 桶 opener 哈希（<code>Build a / Need a / Create a / Make a / 无 opener</code>）按 <code>query_id</code> 决定性分配 · persona-tone 按 L2 语义最佳匹配映射到 5 个普通用户 archetype。",
     "ev2.s2.r":"跨批次 corpus_topic 重叠率：<strong>100% → 0%</strong>。「Build a」开头占比：<strong>54% → 21%</strong>。批次内 5 种 persona 口吻清晰可辨。",
     "ev2.s2.p":"审计发现 <strong>49.5% 的 query</strong> 仍然以「Build a XX page where…」框定 —— opener 已分散，但 scope 名词仍在 page 级，导致下游 LLM 生成单页 mock 而非完整 app。",
     "ev2.s3.t":"App-scope 改写",
@@ -1537,7 +1541,7 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "div.f2.d":"每条 query 与同场景内的同辈做 trigram 集合的 Jaccard 相似度比较；多样性分鼓励低的 max-peer-similarity。",
     "div.f2.r1":"足够独特","div.f2.r2":"明显独特",
     "div.f3.t":"Layer-A · 最少使用 topic 优先采样",
-    "div.f3.d":"朴素的 <code>topics[i % length]</code> 轮换会让相邻批次反复挑到同样的 corpus topic。我们把每个 (l2_key, topic) 的累计使用次数持久化到 <code>data/state/corpus_usage.json</code>，新批次优先选最少使用过的 topic。100% → 0% 跨批次 topic 重叠。",
+    "div.f3.d":"朴素的 <code>topics[i % length]</code> 轮换会让相邻批次反复挑到同样的 corpus topic。我们按平台分别持久化 usage state（<code>corpus_usage_mobile.json</code> / <code>corpus_usage_web.json</code>），记录每个 (l2_key, topic) 的累计使用次数，新批次优先选最少使用过的 topic。100% → 0% 跨批次 topic 重叠。topic 池耗尽时触发 <code>[Layer-A WARN]</code>，可用 <code>grow-corpus.js</code> 扩池。",
     "div.f3.r1":"与上一批 topic 重叠率",
     "div.f4.t":"开头哈希均匀分配",
     "div.f4.d":"system prompt 里有 \"mobile H5\"，v3 输出 54% 都收敛到 <code>Build a mobile ...</code>。我们用 <code>query_id</code> 决定性哈希到 5 个开头桶之一（<code>Build a / Need a / Create a / Make a / 无 formal opener</code>），强制均匀分布；同 query_id 跑多次拿到同一开头。",
@@ -1550,7 +1554,7 @@ J(<span class="var">A</span>,<span class="var">B</span>) <span class="op">=</spa
     "div.f5.r4":"个人专业 · 海报 / 简历模板",
     "div.f5.r5":"长尾微工具 · 经典小游戏 · Adding & Creating",
     "div.bs.t":"从历史 run 引导 state",
-    "div.bs.d":"首次启用 Layer-A 时，可从已有 <code>queries.jsonl</code> + <code>plan.jsonl</code> 一次性导入历史 usage。后续 run 跑成功的条目自动累加；失败的不计入。任何时候打开 <code>data/state/corpus_usage.json</code> 即可查看当前状态。",
+    "div.bs.d":"首次启用 Layer-A 时，可从已有 <code>queries.jsonl</code> + <code>plan.jsonl</code> 一次性导入历史 usage。后续 run 跑成功的条目自动累加；失败的不计入。State 按平台隔离：<code>data/state/corpus_usage_mobile.json</code> / <code>corpus_usage_web.json</code>。topic 池耗尽后，运行 <code>node scripts/grow-corpus.js --platform &lt;p&gt;</code> 扩池。",
     "div.tab.bars":"// L1 分布",
     "div.tab.network":"// 语料网络",
     "div.cv.note":"<strong style=\"color:var(--text)\">⬤ 内圈节点</strong> 是 L1 类目；<strong style=\"color:var(--text)\">· 外圈点</strong> 是 L2 子场景。悬停高亮分支 · 点击任意节点下钻查看。",

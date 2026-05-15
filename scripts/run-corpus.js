@@ -26,7 +26,7 @@
  *   node scripts/run-corpus.js --total 200 --no-usage-track             # 关 usage 跟踪（一次性试跑）
  *
  * 三层多样性机制（默认全部启用）：
- *   Layer-A 跨批次去重：data/state/corpus_usage.json 记录 (l2_key, topic) 累计使用次数；新批次优先选 least-used
+ *   Layer-A 跨批次去重：data/state/corpus_usage_{platform}.json 记录 (l2_key, topic) 累计使用次数；新批次优先选 least-used
  *   Layer-B Opener hash：query_id 哈希到 5 桶之一（Build a / Need a / Create a / Make a / no formal opener）
  *   Layer-C Persona 语义匹配：scripts/corpus_persona_map.json 按 L2 语义最佳匹配 5 种普通用户 persona，注入 voice 描述 + dev jargon 黑名单
  */
@@ -95,16 +95,17 @@ async function main() {
     args["exclude-l1"] && args["exclude-l1"] !== true
       ? String(args["exclude-l1"]).split(",").map((s) => s.trim()).filter(Boolean)
       : [];
-  const usageStatePath = path.resolve(
-    process.cwd(),
-    args["usage-state"] || "data/state/corpus_usage.json",
-  );
   const noUsageTrack = args["no-usage-track"] === true; // default: track + persist usage
   const platformArg = (args.platform && args.platform !== true) ? String(args.platform) : DEFAULT_CORPUS_PLATFORM;
   if (!CORPUS_PLATFORMS[platformArg]) {
     throw new Error(`未知的 --platform 值：${platformArg}。可选：${Object.keys(CORPUS_PLATFORMS).join(", ")}`);
   }
   const platform = CORPUS_PLATFORMS[platformArg];
+  // Per-platform state path: corpus_usage_{platform}.json so mobile and web never collide.
+  const usageStatePath = path.resolve(
+    process.cwd(),
+    args["usage-state"] || `data/state/corpus_usage_${platformArg}.json`,
+  );
 
   // Per-platform default file paths. CLI flags override.
   const isWeb = platformArg === "web";

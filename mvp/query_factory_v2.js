@@ -2611,7 +2611,7 @@ function allocateCorpusCountsByScenePlan(spec, total, options = {}) {
  * @param {object}   usageMap - { topic: usageCount }; missing key counts as 0
  * @returns {string[]}        - picked topics, length === count
  */
-function pickLeastUsedTopics(topics, count, usageMap = {}) {
+function pickLeastUsedTopics(topics, count, usageMap = {}, label = "") {
   if (!topics.length) return [];
   // Annotate with original index for stable tie-break
   const annotated = topics.map((topic, idx) => ({
@@ -2621,6 +2621,15 @@ function pickLeastUsedTopics(topics, count, usageMap = {}) {
   }));
   // Sort: least-used first, then original index
   annotated.sort((a, b) => (a.use - b.use) || (a.idx - b.idx));
+  // Warn when pool is exhausted and cycling will start
+  if (count > topics.length) {
+    const minUse = annotated[0].use;
+    const tag = label ? ` [${label}]` : "";
+    console.warn(
+      `[Layer-A WARN]${tag} topic pool exhausted: requested ${count} but pool has only ${topics.length}` +
+      ` (min usage=${minUse}). Topics will cycle — consider running grow-corpus to expand the pool.`
+    );
+  }
   // Cycle if count > topics.length
   const picked = [];
   for (let i = 0; i < count; i += 1) {
@@ -2723,7 +2732,14 @@ function buildCorpusPlan(spec, corpusData, options = {}) {
     // Layer-A: pick topics by least-used-first across batches.
     // Tracks intra-batch increments locally so duplicate picks within this run are also avoided.
     const localUsage = { ...(corpusUsage[l2Key] || {}) };
-    const pickedTopics = pickLeastUsedTopics(topics, count, localUsage);
+    const usedCount = Object.keys(localUsage).length;
+    if (topics.length > 0 && usedCount >= topics.length) {
+      console.warn(
+        `[Layer-A WARN] [${l2Key}] all ${topics.length} topics already used at least once` +
+        ` (used=${usedCount}, need=${count}). Next batch will reuse topics.`
+      );
+    }
+    const pickedTopics = pickLeastUsedTopics(topics, count, localUsage, l2Key);
 
     for (let i = 0; i < count; i += 1) {
       const groupIndex = Math.floor(i / Math.max(MN, 1));
