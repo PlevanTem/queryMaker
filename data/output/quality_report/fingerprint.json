@@ -1,0 +1,71 @@
+{
+  "computed_at": "2026-05-16T09:57:04.640Z",
+  "n_per_dataset": 100,
+  "axis_definitions": {
+    "jargon_per_q": "mean occurrences per query of dev jargon (dashboard/modal/swipeable/CTA/...) — same blacklist as the prompt · lower = ordinary-user voice",
+    "median_words_per_q": "median word count per query · context-only · too short = info-thin, too long = spec",
+    "mean_sentence_words": "mean words per sentence · context-only · longer = run-on natural speech, shorter = staccato spec"
+  },
+  "datasets": {
+    "ui-queryMaker": {
+      "slug": "ui-queryMaker",
+      "label": "ui-queryMaker (ours)",
+      "source_path": "data/output/corpus_run_v9_mobile_300/queries.jsonl",
+      "n_samples": 100,
+      "axes": {
+        "jargon_per_q": 0.02,
+        "median_words_per_q": 100,
+        "mean_words_per_q": 94.73,
+        "mean_sentence_words": 53.2235
+      }
+    },
+    "websight": {
+      "slug": "websight",
+      "label": "WebSight v0.2",
+      "source_path": "data/external/websight/samples.jsonl",
+      "n_samples": 100,
+      "axes": {
+        "jargon_per_q": 0.28,
+        "median_words_per_q": 43,
+        "mean_words_per_q": 43.49,
+        "mean_sentence_words": 21.89166666666667
+      }
+    },
+    "web2code": {
+      "slug": "web2code",
+      "label": "Web2Code",
+      "source_path": "data/external/web2code/samples.jsonl",
+      "n_samples": 100,
+      "axes": {
+        "jargon_per_q": 0,
+        "median_words_per_q": 23,
+        "mean_words_per_q": 23.38,
+        "mean_sentence_words": 11.653333333333332
+      }
+    },
+    "webgen-bench": {
+      "slug": "webgen-bench",
+      "label": "WebGen-Bench",
+      "source_path": "data/external/webgen-bench/samples.jsonl",
+      "n_samples": 100,
+      "axes": {
+        "jargon_per_q": 0.08,
+        "median_words_per_q": 70,
+        "mean_words_per_q": 73.12,
+        "mean_sentence_words": 16.346916666666665
+      }
+    },
+    "mm-webgen-bench": {
+      "slug": "mm-webgen-bench",
+      "label": "MM-WebGen-Bench",
+      "source_path": "data/external/mm-webgen-bench/samples.jsonl",
+      "n_samples": 100,
+      "axes": {
+        "jargon_per_q": 3.29,
+        "median_words_per_q": 2607,
+        "mean_words_per_q": 2650.75,
+        "mean_sentence_words": 27.790014098632756
+      }
+    }
+  }
+}
