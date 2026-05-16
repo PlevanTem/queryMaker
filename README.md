@@ -7,10 +7,13 @@
 一条生产级流水线，用于生成大规模、多样化、persona 真实可信的
 自然语言 UI 需求 query —— **语料锚定 · 相似度验证 · 风格感知**。
 
+> **corpus 控制 *what* · persona 控制 *who / how* —— 两个正交控制信号 + 横向 ablation 验证**
+
 [**在线 Demo**](https://plevantem.github.io/queryMaker/) ·
 [快速开始](#快速开始) ·
-[两条流水线](#两条流水线) ·
+[与 Persona Hub 的差异](#与-persona-hub--self-instruct--magpie-的差异) ·
 [四方法对比](#四方法对比) ·
+[局限](#局限与已知边界) ·
 [架构](#架构)
 
 **简体中文** · [English](./README.en.md)
@@ -18,6 +21,7 @@
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](#license)
 [![Node](https://img.shields.io/badge/node-%E2%89%A518-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Model](https://img.shields.io/badge/model-claude--sonnet--4--6-d97757.svg)](https://www.anthropic.com/)
+[![4-way ablation](https://img.shields.io/badge/4--way%20ablation-✓-3fb950.svg)](#四方法对比)
 [![Stars](https://img.shields.io/github/stars/PlevanTem/queryMaker?style=social)](https://github.com/PlevanTem/queryMaker/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/PlevanTem/queryMaker)](https://github.com/PlevanTem/queryMaker/commits)
 
@@ -32,20 +36,68 @@
 | 语料覆盖 | **2,440 个 topic** | 61 个 L2 场景 · 12 个 L1 类目 |
 | 跑通成功率 | **200 / 200** | `claude-sonnet-4-6`，0 失败 |
 | 平均 query 长度 | **~84 词** | medium 复杂度，英文 |
-| 单条 query 耗时 | **~3.3 秒** | 200 条约 11 分钟 |
+| 单条 query 耗时 | **~3.3 秒** | 200 条约 11 分钟（≈ 1080 条 / 小时） |
+| 外部 API 成本 | **$0**（no-API 模式） | 走 Claude Code subagent；packy 路径按 token 另计 |
+| 跨批次 topic 重叠 | **0%**（Stage 2 起） | Layer-A `corpus_usage.json` 持久化最少使用优先 |
 
-> 在控制变量条件下对比了四种生成策略。人工评审认定
-> **`corpus-direct` 为最高质量方案** —— topic 命中率 100%、模板痕迹最低、多样性最强。
+> 在 4 档控制变量 ablation（`llm-direct` / `corpus-direct` / `persona-direct` / `corpus+persona`）下，
+> **`corpus-direct` 取得帕累托最优**：topic 命中率 **100%**（vs `persona-only` ≈70%）·
+> 5 类 ordinary-user archetype × 11 注册设计风格 = **55 种风格组合** · 「Build a」开头占比
+> 自然分散到 21%（vs 朴素基线 54%）。完整对比与控制变量明细 → [§四方法对比](#四方法对比)。
+
+## 与 Persona Hub / Self-Instruct / Magpie 的差异
+
+合成数据领域目前有四条主路线 —— **instance-driven**（Self-Instruct / Evol-Instruct）、
+**key-point-driven**（GLAN）、**persona-driven**（Persona Hub）、**self-play**（Magpie）。
+本仓库站在 **persona-driven** 路线上，做了原论文未及的三处工程性补强：
+
+| 维度 | Persona Hub (Tencent AI Lab, 2024) | 本仓库 |
+| --- | --- | --- |
+| **persona 来源** | 通用 10 亿 persona 池子（web text 反推） | 基于产品场景 + 线上用户画像反推的 **5 类定向 archetype** |
+| **分布控制** | 黑盒：依赖大 persona 池子自然分散 | **白盒**：corpus 通道统计 2,440 topic 分布，Layer-A 最少使用主动补充 |
+| **横向 ablation** | 未做有/无 persona 对照，未与 Self-Instruct / Magpie 对比 | 做了 4 档对照：`llm-direct` / `corpus-direct` / `persona-direct` / `corpus+persona` |
+| **典型场景** | 通用领域 distillation，规模化 SFT 数据 | UI vibe-coding 这种**产品垂直域**，能白盒拿到 corpus |
+
+> Persona Hub 的核心证据是「用 1M persona 合成数据训 7B 模型在 MATH 上逼近 GPT-4-turbo」
+> —— 这是端到端结果证据，但并未直接证明 *persona 机制本身*相对其他合成方法的边际贡献。
+> 本仓库通过 [§四方法对比](#四方法对比) 把这个 ablation 补上，并加入了原论文没有的 **corpus 通道**做白盒分布锚定。
+
+→ 方法论谱系与全部引用：[§核心参考与致谢](#核心参考与致谢)。
+
+## 四方法对比
+
+> 这是 Persona Hub 原论文未做的关键 ablation —— 在**同 base model**（`claude-sonnet-4-6`）/
+> **同 query 总量** / **同评测协议**下对照 4 档生成策略。控制变量与原始数据见
+> `scripts/test-corpus-methods.js` 与 `data/output/corpus_method_comparison.html`。
+
+| 方法 | Topic 命中 | 平均长度 | 模板痕迹 | 贡献定位 |
+| --- | --- | --- | --- | --- |
+| `llm-direct` (= `scene-direct`) | ~75% | 71 词 | 中 | baseline 下界：仅给 L2 名称让 LLM 自由发挥 |
+| **`corpus-direct`** ★ | **100%** | 84 词 | 极低 | 验证 ***what* 通道**（corpus）的边际贡献 |
+| `persona-only` | ~70% | 92 词 | 低 | 验证 ***who / how* 通道**（persona）的边际贡献 |
+| `persona+corpus` | ~95% | 96 词 | 低 | 双通道叠加；成本最高，相比 `corpus-direct` 边际收益小 |
+
+**怎么读这张表**：
+- `corpus-direct` vs `llm-direct` 的差距 = corpus 锚定（*what* 通道）的净贡献：topic 命中率 75% → 100%。
+- `persona-only` vs `llm-direct` 的差距 = persona 注入（*who/how* 通道）的净贡献：语气和模板痕迹改善，但 topic 纪律倒退。
+- `persona+corpus` vs `corpus-direct` 的差距 = 第二个 LLM call 的边际产出（小）—— 因此生产推荐 `corpus-direct`，把 persona 信号合到单次 prompt 里。
+
+完整对比写作和数据见 [在线 Demo](https://plevantem.github.io/queryMaker/) ，
+或在本地跑完 `scripts/test-corpus-methods.js` 后打开 `data/output/corpus_method_comparison.html`。
 
 ## 为什么做这件事
 
 绝大多数「随便 prompt 一下让 LLM 生成 query」的做法，最终都会塌缩成
-窄分布、模板化、无法泛化的数据。本仓库从三个维度上解决这个问题：
+窄分布、模板化、无法泛化的数据。
+
+合成 query 有两个**不能用同一个信号干净覆盖**的目标 ——
+*what to ask about*（场景骨架 / 主题分布）和 *who is asking and how*（提问视角 / 表达风格）。
+前者由 **corpus 通道**控制，后者由 **persona 通道**控制；两者笛卡尔积式正交组合，最大化覆盖空间。
 
 | 没有它的样子 | 我们的做法 |
 | --- | --- |
-| **分布太窄** —— 100 条 query 都是 "build me a dashboard" 的变体，覆盖不到真实产品空间的 5% | **真实语料锚定** —— 每条生成都锁定到一个精选 2,440 entry 语料中的具体 topic |
-| **机器味太重** —— LLM 默认输出礼貌、结构化、一致的语气，跟真实用户提需求的方式不一样 | **persona 驱动语气** —— 5 类 archetype × 3 档复杂度，产出以用户目标为锚的第一人称变化 |
+| **分布太窄** —— 100 条 query 都是 "build me a dashboard" 的变体，覆盖不到真实产品空间的 5% | **真实语料锚定**（*what* 通道）—— 每条生成都锁定到精选 2,440 entry 语料中的具体 topic |
+| **机器味太重** —— LLM 默认输出礼貌、结构化、一致的语气，跟真实用户提需求的方式不一样 | **persona 驱动语气**（*who / how* 通道）—— 5 类 archetype × 3 档复杂度，产出以用户目标为锚的第一人称变化 |
 | **视觉风格扁平** —— query 很少描述视觉风格，下游 UI 生成只能默认一种审美 | **设计风格感知** —— 11 个注册风格 × 3 种调用方式（默认 / 指定列表 / 启发式自动） |
 
 ## 谁会用到这个仓库
@@ -62,13 +114,11 @@
 
 ## 项目亮点
 
-- **端到端流水线** —— Excel 场景规格 → plan → 生成 → 评分 → SQLite → dashboard
-- **两条生产链路并存** —— `corpus-direct`（单次调用、topic 锚定、生产推荐）和 `persona-driven`（两步调用、persona 锚定、研究/兼容）
-- **离线 fallback 模式** —— 不接任何 LLM 也能跑通，`persona-fallback` 提供确定性输出，适合冒烟和 CI
-- **多 transport 接入** —— `claude-cli`（子进程）/ `openai` 兼容 / `anthropic` `/v1/messages`，单参数切换
-- **相似度去重** —— trigram 相似度算法保证 corpus 分布广度
-- **可复跑、可断点续跑** —— 所有中间产物落盘；plan 是确定性的
-- **内置基准测试** —— `test-corpus-methods.js` 控制变量跑四种策略，输出并排对比 HTML
+- **双通道正交控制** —— corpus 控制 *what*（场景骨架 / 主题分布）· persona 控制 *who / how*（提问视角 / 表达风格）
+- **4 档横向 ablation** —— `llm-direct` / `corpus-direct` / `persona-direct` / `corpus+persona`，Persona Hub 原论文未及的工程性补强
+- **No-API 模式** —— 走 Claude Code subagent，零外部 API 配额跑通 mobile/web 各 500 条数据集
+- **跨批次 dedup state** —— Layer-A `corpus_usage.json`，保证多次跑跨批次 topic 重叠 0%
+- **离线 fallback** —— `persona-fallback` 提供确定性输出，无 LLM 也能跑通，适合冒烟 / CI
 
 ## 快速开始
 
@@ -204,20 +254,6 @@ flowchart TD
     H --> I["SQLite / JSONL 产物"]
     I --> J["Dashboard + summary"]
 ```
-
-## 四方法对比
-
-`scripts/test-corpus-methods.js` 在控制变量下跑四种策略，并产出并排对比报告。主要结论：
-
-| 方法 | Topic 命中 | 平均长度 | 模板痕迹 | 备注 |
-| --- | --- | --- | --- | --- |
-| **`corpus-direct`** ★ | **100%** | 84 词 | 极低 | 生产首选。锁 topic、显式控制 complexity |
-| `scene-direct` | ~75% | 71 词 | 中 | 在 L2 类目里漂移，省一跳 |
-| `persona-only` | ~70% | 92 词 | 低 | 语气最强，topic 纪律最弱 |
-| `persona+corpus` | ~95% | 96 词 | 低 | 成本最高，相比 `corpus-direct` 边际收益小 |
-
-完整对比写作和数据见 [在线 Demo](https://plevantem.github.io/queryMaker/)，
-或在本地跑完 `scripts/test-corpus-methods.js` 后打开 `data/output/corpus_method_comparison.html`。
 
 ## 演进路线：4 个阶段，4 次修复
 
@@ -523,6 +559,25 @@ node scripts/generate-analysis-report.js \
 - **加权公式** —— `Authenticity × 0.4 + Specificity × 0.4 + Diversity × 0.2`，通过阈值 ≥ 2.8
 - **`design_style` 影响** —— 字段有值时 Diversity 维度 +1；`null` 时 Diversity 最高 4 分
 
+## 局限与已知边界
+
+合成数据这件事有边界 —— 把可信度建在多维证据网上，需要先把边界讲清楚：
+
+- **persona 池子目前是 5 类 archetype 的小集合** —— 在 UI 产品场景内是按 L2 语义最佳匹配
+  定向选出的，覆盖头部典型用户；对长尾用户类型的代表性还需要真实日志反向验证。
+- **多样性目前主要测到 lexical（trigram-Jaccard）层和 corpus 分布层** ——
+  semantic / 任务分布 / 判别器层的更深证据本仓库范围内未覆盖。
+- **端到端下游验证未做** —— 即「合成数据加入训练后下游模型能力的变化」这一终极证据，
+  受限于下游训练资源，本仓库未覆盖。接入方建议在自己的训练场景下做一次受控对比。
+- **某些 L2 场景的 corpus 偏窄时，persona 通道补不上** —— mode collapse 在此条件下仍可能发生。
+  现状：在 `data/intermediate/scenario_specs/` 标记了已识别的窄场景，实际使用时建议
+  增量补 corpus 而不是堆 persona。
+- **真实性评估目前主要靠设计专家盲评 + 启发式评分**（authenticity / specificity / diversity 三轴），
+  缺冷指标（判别器 AUC、分布距离）的对照。
+
+> 主动列出这些不是「自爆」 —— 是把可信度建在多维证据网上，
+> 也让接入方知道在自己的场景里需要补哪一段。
+
 ## Roadmap
 
 - [ ] LLM-based 质量评分（用 `p5` 设计替换启发式）
@@ -557,12 +612,26 @@ node scripts/generate-analysis-report.js \
 
 ## 核心参考与致谢
 
-本项目的几个关键设计决策直接受益于下面这几条研究线。每条都附上具体的「借鉴点」，便于复用本项目的人定位思想源头，也便于做相关方向研究的同行交叉引用。
+本项目站在以下几条研究线的肩膀上。**方法论谱系**大致是：
+Self-Instruct (2022) → Evol-Instruct (2023) → Magpie (2024) → Persona Hub (2024) → 本仓库（双通道 + 白盒分布锚定 + 4 档 ablation）。
 
-### Persona-driven synthetic data
+每条引用都附上具体的「借鉴点」与「本仓库的差异」，便于复用本项目的人定位思想源头，
+也便于做相关方向研究的同行交叉引用。
 
-- **Scaling Synthetic Data Creation with 1,000,000,000 Personas** (PersonaHub) — Tao Ge, Xin Chan, Xiaoyang Wang, Dian Yu, Haitao Mi, Dong Yu. Tencent AI Lab, 2024. [arXiv:2406.20094](https://arxiv.org/abs/2406.20094)
-  - 直接启发了本项目"persona 不是装饰、是合成数据多视角的核心驱动"这个判断。差异：PersonaHub 走十亿级别广度，本项目在 UI vibe-coding query 这个垂直场景里走 5 个手工打磨的 ordinary-user archetype（`maker / planner / curator / operator / founder_like`），并把"哪个 persona 适合这个 corpus topic"做成 L2 语义最佳匹配（而非随机）。
+### 合成数据路线谱系（baseline 全景）
+
+- **Self-Instruct: Aligning Language Models with Self-Generated Instructions** — Wang et al., 2022. [arXiv:2212.10560](https://arxiv.org/abs/2212.10560) —— *instance-driven* 合成的起点：基于种子样本扩散。
+- **Evol-Instruct / WizardLM** — Xu et al., 2023. [arXiv:2304.12244](https://arxiv.org/abs/2304.12244) —— 在 instance-driven 路线上加入复杂度演化。
+- **Magpie: Alignment Data Synthesis from Scratch by Prompting Aligned LLMs with Nothing** — Xu et al., 2024. [arXiv:2406.08464](https://arxiv.org/abs/2406.08464) —— *self-play* 路线：直接采样 LLM 内部分布，无 prompt 控制信号。
+
+### Persona-driven synthetic data（本项目方法论锚点）
+
+- **Scaling Synthetic Data Creation with 1,000,000,000 Personas** (PersonaHub) — Tao Ge, Xin Chan, Xiaoyang Wang, Dian Yu, Haitao Mi, Dong Yu. Tencent AI Lab, 2024. [arXiv:2406.20094](https://arxiv.org/abs/2406.20094) · [代码](https://github.com/tencent-ailab/persona-hub)
+  - **借鉴点**：「persona 是 LLM 内在多视角索引、是合成数据多样性的中间抽象」这个判断 —— 本项目把它作为 *who / how* 通道的方法论锚点。
+  - **本仓库的差异（同时也是 §「与 Persona Hub 的差异」详细展开）**：
+    (1) 不依赖通用 10 亿 persona 池子，而是基于产品场景反推 **5 类定向 archetype**（`maker / planner / curator / operator / founder_like`），按 L2 语义最佳匹配分配；
+    (2) 加入原论文没有的 **corpus 通道**做白盒分布锚定（Layer-A `corpus_usage.json` 跨批次最少使用优先）；
+    (3) 补齐原论文未做的 **4 档横向 ablation**（`llm-direct` / `corpus-direct` / `persona-direct` / `corpus+persona`），定量验证两个通道的边际贡献。
 
 ### Instruction-tuning data synthesis
 

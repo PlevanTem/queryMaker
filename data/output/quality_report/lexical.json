@@ -1,0 +1,453 @@
+{
+  "computed_at": "2026-05-16T09:57:05.208Z",
+  "n_per_dataset": 100,
+  "metric_definitions": {
+    "distinct-N": "unique n-grams across the dataset / total n-grams · higher = more lexically diverse · Li et al. 2016",
+    "ttr": "type-token ratio · unique tokens / total tokens",
+    "opener": "first 3 tokens (lowercased, stripped) bucketed · entropy in bits over the full distribution",
+    "length": "word count per query · p10/p50/p90/max/mean",
+    "similarity": "pairwise trigram Jaccard within the dataset · per-query max-peer + mean-peer aggregated"
+  },
+  "datasets": {
+    "ui-queryMaker": {
+      "slug": "ui-queryMaker",
+      "label": "ui-queryMaker (ours)",
+      "source_path": "data/output/corpus_run_v9_mobile_300/queries.jsonl",
+      "n_samples": 100,
+      "distinct_1": {
+        "distinct": 1844,
+        "total": 9473,
+        "ratio": 0.19465850311411378
+      },
+      "distinct_2": {
+        "distinct": 5809,
+        "total": 9373,
+        "ratio": 0.6197588818948042
+      },
+      "distinct_3": {
+        "distinct": 7619,
+        "total": 9273,
+        "ratio": 0.8216326970775369
+      },
+      "ttr": 0.19465850311411378,
+      "opener": {
+        "top10": [
+          {
+            "opener": "create a mobile",
+            "count": 6,
+            "share": 0.06
+          },
+          {
+            "opener": "build a mobile",
+            "count": 6,
+            "share": 0.06
+          },
+          {
+            "opener": "make a mobile",
+            "count": 5,
+            "share": 0.05
+          },
+          {
+            "opener": "need a mobile",
+            "count": 3,
+            "share": 0.03
+          },
+          {
+            "opener": "a diy home",
+            "count": 1,
+            "share": 0.01
+          },
+          {
+            "opener": "build a language",
+            "count": 1,
+            "share": 0.01
+          },
+          {
+            "opener": "create a cultural",
+            "count": 1,
+            "share": 0.01
+          },
+          {
+            "opener": "build a family",
+            "count": 1,
+            "share": 0.01
+          },
+          {
+            "opener": "an astrophotography log",
+            "count": 1,
+            "share": 0.01
+          },
+          {
+            "opener": "build an expat",
+            "count": 1,
+            "share": 0.01
+          }
+        ],
+        "unique_openers": 84,
+        "entropy_bits": 6.170015409922195
+      },
+      "length": {
+        "p10": 64,
+        "p50": 100,
+        "p90": 125,
+        "max": 132,
+        "mean": 94.73
+      },
+      "similarity": {
+        "n_pairs": 4950,
+        "max_peer_mean": 0.059948933166282824,
+        "max_peer_p50": 0.05442176870748299,
+        "max_peer_p90": 0.10096153846153846,
+        "max_peer_max": 0.13366336633663367,
+        "mean_peer_mean": 0.01470567075985879,
+        "mean_peer_p50": 0.015582816334055267
+      }
+    },
+    "websight": {
+      "slug": "websight",
+      "label": "WebSight v0.2",
+      "source_path": "data/external/websight/samples.jsonl",
+      "n_samples": 100,
+      "distinct_1": {
+        "distinct": 700,
+        "total": 4349,
+        "ratio": 0.1609565417337319
+      },
+      "distinct_2": {
+        "distinct": 2012,
+        "total": 4249,
+        "ratio": 0.47352318192515885
+      },
+      "distinct_3": {
+        "distinct": 2917,
+        "total": 4149,
+        "ratio": 0.7030609785490479
+      },
+      "ttr": 0.1609565417337319,
+      "opener": {
+        "top10": [
+          {
+            "opener": "travel agency a",
+            "count": 6,
+            "share": 0.06
+          },
+          {
+            "opener": "food delivery service",
+            "count": 6,
+            "share": 0.06
+          },
+          {
+            "opener": "tech company a",
+            "count": 5,
+            "share": 0.05
+          },
+          {
+            "opener": "real estate agency",
+            "count": 4,
+            "share": 0.04
+          },
+          {
+            "opener": "nonprofit organization a",
+            "count": 4,
+            "share": 0.04
+          },
+          {
+            "opener": "construction company a",
+            "count": 4,
+            "share": 0.04
+          },
+          {
+            "opener": "architecture firm a",
+            "count": 4,
+            "share": 0.04
+          },
+          {
+            "opener": "law firm a",
+            "count": 4,
+            "share": 0.04
+          },
+          {
+            "opener": "art gallery a",
+            "count": 4,
+            "share": 0.04
+          },
+          {
+            "opener": "education platform a",
+            "count": 3,
+            "share": 0.03
+          }
+        ],
+        "unique_openers": 57,
+        "entropy_bits": 5.487368784857287
+      },
+      "length": {
+        "p10": 31,
+        "p50": 43,
+        "p90": 60,
+        "max": 71,
+        "mean": 43.49
+      },
+      "similarity": {
+        "n_pairs": 4950,
+        "max_peer_mean": 0.09732055976003902,
+        "max_peer_p50": 0.08860759493670886,
+        "max_peer_p90": 0.15384615384615385,
+        "max_peer_max": 0.23404255319148937,
+        "mean_peer_mean": 0.014256559346674922,
+        "mean_peer_p50": 0.0143916087575179
+      }
+    },
+    "web2code": {
+      "slug": "web2code",
+      "label": "Web2Code",
+      "source_path": "data/external/web2code/samples.jsonl",
+      "n_samples": 100,
+      "distinct_1": {
+        "distinct": 295,
+        "total": 2338,
+        "ratio": 0.12617621899059026
+      },
+      "distinct_2": {
+        "distinct": 745,
+        "total": 2238,
+        "ratio": 0.33288650580875784
+      },
+      "distinct_3": {
+        "distinct": 1083,
+        "total": 2138,
+        "ratio": 0.5065481758652947
+      },
+      "ttr": 0.12617621899059026,
+      "opener": {
+        "top10": [
+          {
+            "opener": "observe the webpage",
+            "count": 4,
+            "share": 0.04
+          },
+          {
+            "opener": "observing the layout",
+            "count": 3,
+            "share": 0.03
+          },
+          {
+            "opener": "look at the",
+            "count": 3,
+            "share": 0.03
+          },
+          {
+            "opener": "write html code",
+            "count": 3,
+            "share": 0.03
+          },
+          {
+            "opener": "appraise the webpage",
+            "count": 3,
+            "share": 0.03
+          },
+          {
+            "opener": "design html and",
+            "count": 3,
+            "share": 0.03
+          },
+          {
+            "opener": "reading from the",
+            "count": 2,
+            "share": 0.02
+          },
+          {
+            "opener": "please design a",
+            "count": 2,
+            "share": 0.02
+          },
+          {
+            "opener": "create an html",
+            "count": 2,
+            "share": 0.02
+          },
+          {
+            "opener": "using the provided",
+            "count": 2,
+            "share": 0.02
+          }
+        ],
+        "unique_openers": 76,
+        "entropy_bits": 6.106111814666562
+      },
+      "length": {
+        "p10": 20,
+        "p50": 23,
+        "p90": 29,
+        "max": 33,
+        "mean": 23.38
+      },
+      "similarity": {
+        "n_pairs": 4950,
+        "max_peer_mean": 0.32744467201833066,
+        "max_peer_p50": 0.2631578947368421,
+        "max_peer_p90": 0.5,
+        "max_peer_max": 1,
+        "mean_peer_mean": 0.024831159193526898,
+        "mean_peer_p50": 0.02623714860511257
+      }
+    },
+    "webgen-bench": {
+      "slug": "webgen-bench",
+      "label": "WebGen-Bench",
+      "source_path": "data/external/webgen-bench/samples.jsonl",
+      "n_samples": 100,
+      "distinct_1": {
+        "distinct": 1255,
+        "total": 7312,
+        "ratio": 0.17163566739606126
+      },
+      "distinct_2": {
+        "distinct": 3960,
+        "total": 7212,
+        "ratio": 0.5490848585690515
+      },
+      "distinct_3": {
+        "distinct": 5342,
+        "total": 7112,
+        "ratio": 0.7511248593925759
+      },
+      "ttr": 0.17163566739606126,
+      "opener": {
+        "top10": [
+          {
+            "opener": "please implement a",
+            "count": 76,
+            "share": 0.76
+          },
+          {
+            "opener": "please implement an",
+            "count": 15,
+            "share": 0.15
+          },
+          {
+            "opener": "please develop a",
+            "count": 5,
+            "share": 0.05
+          },
+          {
+            "opener": "please create a",
+            "count": 4,
+            "share": 0.04
+          }
+        ],
+        "unique_openers": 4,
+        "entropy_bits": 1.1133012854719537
+      },
+      "length": {
+        "p10": 58,
+        "p50": 70,
+        "p90": 89,
+        "max": 121,
+        "mean": 73.12
+      },
+      "similarity": {
+        "n_pairs": 4950,
+        "max_peer_mean": 0.08671010174015169,
+        "max_peer_p50": 0.08496732026143791,
+        "max_peer_p90": 0.11650485436893204,
+        "max_peer_max": 0.12857142857142856,
+        "mean_peer_mean": 0.03771346649900629,
+        "mean_peer_p50": 0.038852199424823264
+      }
+    },
+    "mm-webgen-bench": {
+      "slug": "mm-webgen-bench",
+      "label": "MM-WebGen-Bench",
+      "source_path": "data/external/mm-webgen-bench/samples.jsonl",
+      "n_samples": 100,
+      "distinct_1": {
+        "distinct": 9776,
+        "total": 265075,
+        "ratio": 0.03688012826558521
+      },
+      "distinct_2": {
+        "distinct": 96868,
+        "total": 264975,
+        "ratio": 0.36557411076516655
+      },
+      "distinct_3": {
+        "distinct": 181992,
+        "total": 264875,
+        "ratio": 0.6870863614912694
+      },
+      "ttr": 0.03688012826558521,
+      "opener": {
+        "top10": [
+          {
+            "opener": "design a singlepage",
+            "count": 24,
+            "share": 0.24
+          },
+          {
+            "opener": "design a minimal",
+            "count": 11,
+            "share": 0.11
+          },
+          {
+            "opener": "design a vertically",
+            "count": 8,
+            "share": 0.08
+          },
+          {
+            "opener": "design a highcontrast",
+            "count": 6,
+            "share": 0.06
+          },
+          {
+            "opener": "design a playful",
+            "count": 5,
+            "share": 0.05
+          },
+          {
+            "opener": "design a stark",
+            "count": 5,
+            "share": 0.05
+          },
+          {
+            "opener": "design a single",
+            "count": 5,
+            "share": 0.05
+          },
+          {
+            "opener": "design a tall",
+            "count": 4,
+            "share": 0.04
+          },
+          {
+            "opener": "design a static",
+            "count": 4,
+            "share": 0.04
+          },
+          {
+            "opener": "design a bold",
+            "count": 3,
+            "share": 0.03
+          }
+        ],
+        "unique_openers": 30,
+        "entropy_bits": 4.111991872253536
+      },
+      "length": {
+        "p10": 2202,
+        "p50": 2607,
+        "p90": 3176,
+        "max": 3580,
+        "mean": 2650.75
+      },
+      "similarity": {
+        "n_pairs": 4950,
+        "max_peer_mean": 0.031797941668237156,
+        "max_peer_p50": 0.03084223013048636,
+        "max_peer_p90": 0.036593629997741135,
+        "max_peer_max": 0.04349870679520339,
+        "mean_peer_mean": 0.0201985935969197,
+        "mean_peer_p50": 0.02043587396021558
+      }
+    }
+  }
+}

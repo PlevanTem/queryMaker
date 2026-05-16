@@ -7,3 +7,11 @@ node_modules/
 
 # Local agent / IDE state
 .claude/
+
+# Quality-report pipeline: locally-downloaded embedding model (~90 MB).
+# Regenerate via the curl commands in scripts/quality/embed-and-tsne-ours.py header.
+models/
+
+# Python bytecode caches
+__pycache__/
+*.pyc

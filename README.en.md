@@ -8,10 +8,13 @@ A production pipeline for generating large, diverse, persona-grounded
 natural-language queries that describe UI to be built — **corpus-anchored**,
 **similarity-validated**, **design-style aware**.
 
+> **corpus controls *what* · persona controls *who / how* — two orthogonal control signals + horizontal ablation**
+
 [**Live Demo**](https://plevantem.github.io/queryMaker/) ·
 [Quick Start](#quick-start) ·
-[Pipelines](#two-pipelines) ·
+[vs Persona Hub](#how-this-compares-to-persona-hub--self-instruct--magpie) ·
 [Method Comparison](#method-comparison) ·
+[Limitations](#limitations-were-honest-about) ·
 [Architecture](#architecture)
 
 [简体中文](./README.md) · **English**
@@ -19,6 +22,7 @@ natural-language queries that describe UI to be built — **corpus-anchored**,
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](#license)
 [![Node](https://img.shields.io/badge/node-%E2%89%A518-339933.svg?logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Model](https://img.shields.io/badge/model-claude--sonnet--4--6-d97757.svg)](https://www.anthropic.com/)
+[![4-way ablation](https://img.shields.io/badge/4--way%20ablation-✓-3fb950.svg)](#method-comparison)
 [![Stars](https://img.shields.io/github/stars/PlevanTem/queryMaker?style=social)](https://github.com/PlevanTem/queryMaker/stargazers)
 [![Last commit](https://img.shields.io/github/last-commit/PlevanTem/queryMaker)](https://github.com/PlevanTem/queryMaker/commits)
 
@@ -33,21 +37,74 @@ natural-language queries that describe UI to be built — **corpus-anchored**,
 | Corpus coverage | **2,440 topics** | 61 L2 scenes · 12 L1 categories |
 | Run success rate | **200 / 200** | 0 failures on `claude-sonnet-4-6` |
 | Avg query length | **~84 words** | medium complexity, English |
-| Per-query latency | **~3.3s** | 200 queries in ~11 minutes |
+| Per-query latency | **~3.3s** | 200 queries in ~11 minutes (≈ 1080/hour) |
+| External API cost | **$0** (no-API mode) | via Claude Code subagents; packy path billed per token |
+| Cross-batch topic overlap | **0%** (since Stage 2) | Layer-A `corpus_usage.json` least-used-first state |
 
-> Four generation strategies were benchmarked under controlled conditions.
-> Human review picked **`corpus-direct` as the highest-quality method** —
-> 100% topic-hit rate, lowest template-residue, strongest diversity.
+> Under a 4-way controlled-variable ablation (`llm-direct` / `corpus-direct` / `persona-direct` / `corpus+persona`),
+> **`corpus-direct` reaches the Pareto optimum**: 100% topic-hit (vs `persona-only` ≈70%) ·
+> 5 ordinary-user archetypes × 11 registered design styles = **55 style combinations** ·
+> "Build a" opener share naturally diffused to 21% (vs 54% on the naive baseline).
+> Full comparison + control-variable details → [§Method Comparison](#method-comparison).
+
+## How this compares to Persona Hub / Self-Instruct / Magpie
+
+Synthetic-data research has roughly four lines: **instance-driven** (Self-Instruct / Evol-Instruct),
+**key-point-driven** (GLAN), **persona-driven** (Persona Hub), **self-play** (Magpie).
+This repo sits on the **persona-driven** line and adds three engineering reinforcements the original
+paper did not include:
+
+| Dimension | Persona Hub (Tencent AI Lab, 2024) | This repo |
+| --- | --- | --- |
+| **Persona source** | Generic 1B persona pool reverse-derived from web text | **5 targeted archetypes** reverse-derived from product scenarios + real user profiles |
+| **Distribution control** | Black-box: relies on a large persona pool's natural spread | **White-box**: corpus channel tracks 2,440 topic distribution, Layer-A least-used pickup |
+| **Horizontal ablation** | No with/without-persona ablation; no head-to-head vs Self-Instruct / Magpie | **4-way ablation**: `llm-direct` / `corpus-direct` / `persona-direct` / `corpus+persona` |
+| **Typical setting** | General-domain distillation at scale | **Vertical product domain** (UI vibe-coding) — where you can actually obtain a clean corpus |
+
+> Persona Hub's headline evidence is "1M-persona synthesis trains a 7B model to approach GPT-4-turbo on MATH"
+> — that is end-to-end *result* evidence, but it does not directly isolate the marginal contribution of
+> the *persona mechanism itself* relative to other synthesis routes.
+> This repo fills that ablation gap via [§Method Comparison](#method-comparison) and adds a **corpus channel**
+> for white-box distribution anchoring that the original paper lacks.
+
+→ Methodology lineage and full references: [§Key References](#key-references--acknowledgements).
+
+## Method Comparison
+
+> This is the ablation Persona Hub did not run — under **same base model** (`claude-sonnet-4-6`) /
+> **same query total** / **same eval protocol**, four generation strategies head-to-head.
+> Controls + raw data: `scripts/test-corpus-methods.js` and `data/output/corpus_method_comparison.html`.
+
+| Method | Topic-hit | Avg length | Template residue | Contribution |
+| --- | --- | --- | --- | --- |
+| `llm-direct` (= `scene-direct`) | ~75% | 71 words | medium | Baseline lower bound: L2 scene name only, free LLM generation |
+| **`corpus-direct`** ★ | **100%** | 84 words | very low | Isolates the ***what*** channel (corpus) contribution |
+| `persona-only` | ~70% | 92 words | low | Isolates the ***who / how*** channel (persona) contribution |
+| `persona+corpus` | ~95% | 96 words | low | Both channels stacked; highest cost, marginal vs `corpus-direct` |
+
+**How to read this table**:
+- `corpus-direct` vs `llm-direct` = corpus-anchoring net contribution (*what* channel): topic-hit 75% → 100%.
+- `persona-only` vs `llm-direct` = persona-injection net contribution (*who / how* channel): voice and template-residue improve, but topic discipline regresses.
+- `persona+corpus` vs `corpus-direct` = marginal output of the second LLM call (small) — production recommends `corpus-direct`, folding the persona signal into a single prompt.
+
+See the [Live Demo](https://plevantem.github.io/queryMaker/) for the full benchmark write-up, or open
+`data/output/corpus_method_comparison.html` after running `scripts/test-corpus-methods.js`.
 
 ## Why this exists
 
 Most "let's just prompt an LLM for some queries" pipelines collapse into narrow,
-templated distributions that don't generalize. ui-queryMaker attacks that on three axes:
+templated distributions that don't generalize.
+
+Synthetic queries have two goals **a single signal cannot cleanly cover at the same time** —
+*what to ask about* (scene skeleton / topic distribution) and
+*who is asking and how* (asker viewpoint / phrasing style).
+The first is controlled by the **corpus channel**; the second by the **persona channel**.
+Their Cartesian-product composition maximizes coverage.
 
 | What goes wrong without it | What this repo does instead |
 | --- | --- |
-| **Narrow distribution** — 100 variations of "build me a dashboard" covering &lt;5% of real product space | **Real-world corpus anchoring** — each generation locks to a specific topic from a curated 2,440-entry corpus |
-| **Robotic phrasing** — a single polite, structured voice that doesn't match how humans request UI | **Persona-driven voice** — five archetypes × three complexity tiers produce first-person variation grounded in user goals |
+| **Narrow distribution** — 100 variations of "build me a dashboard" covering &lt;5% of real product space | **Real-world corpus anchoring** (*what* channel) — each generation locks to a specific topic from a curated 2,440-entry corpus |
+| **Robotic phrasing** — a single polite, structured voice that doesn't match how humans request UI | **Persona-driven voice** (*who / how* channel) — five archetypes × three complexity tiers produce first-person variation grounded in user goals |
 | **Visually flat output** — queries rarely specify visual style, leaving downstream UI generation to one aesthetic | **Design-style aware** — 11 registered design styles × three invocation modes (default / fixed / heuristic-auto) |
 
 ## Who this is for
@@ -64,13 +121,11 @@ Out of scope: general LLM benchmarks, UI design-mock evaluation, vision-model tr
 
 ## Highlights
 
-- **End-to-end pipeline** — Excel scenario spec → plan → generation → scoring → SQLite → dashboard
-- **Two production paths coexist** — `corpus-direct` (single-call, topic-anchored, recommended for production) and `persona-driven` (two-step, persona-grounded, legacy/research)
-- **Deterministic offline mode** — pipeline runs without any LLM by falling back to `persona-fallback`; useful for smoke tests and CI
-- **Multiple LLM transports** — `claude-cli` (subprocess), `openai`-compatible, `anthropic` `/v1/messages` — switch with a single flag
-- **Similarity-validated diversity** — trigram-based dedup keeps the corpus broad
-- **Reproducible & resumable** — every intermediate artifact lands on disk; runs are resumable; plans are deterministic
-- **Built-in benchmarking** — `test-corpus-methods.js` runs four strategies under controlled conditions and emits side-by-side HTML reports
+- **Two orthogonal control signals** — corpus controls *what* (scene skeleton / topic distribution) · persona controls *who / how* (asker viewpoint / phrasing style)
+- **4-way horizontal ablation** — `llm-direct` / `corpus-direct` / `persona-direct` / `corpus+persona` — the engineering reinforcement Persona Hub's original paper did not include
+- **No-API mode** — uses Claude Code subagents; mobile/web 500-each datasets shipped at $0 external API spend
+- **Cross-batch dedup state** — Layer-A `corpus_usage.json` keeps cross-batch topic overlap at **0%**
+- **Deterministic offline fallback** — `persona-fallback` runs the pipeline without any LLM; useful for smoke tests and CI
 
 ## Quick Start
 
@@ -207,22 +262,6 @@ flowchart TD
     H --> I["SQLite / JSONL artifacts"]
     I --> J["Dashboard + summary"]
 ```
-
-## Method Comparison
-
-`scripts/test-corpus-methods.js` runs four strategies under matched conditions
-and emits a side-by-side report. Headline findings:
-
-| Method | Topic-hit | Avg length | Template residue | Notes |
-| --- | --- | --- | --- | --- |
-| **`corpus-direct`** ★ | **100%** | 84 words | very low | Production winner. Locks LLM to a corpus topic; explicit complexity control |
-| `scene-direct` | ~75% | 71 words | medium | Drifts within L2 category; saves a hop |
-| `persona-only` | ~70% | 92 words | low | Strongest voice, weakest topic discipline |
-| `persona+corpus` | ~95% | 96 words | low | Highest cost; marginal gain over `corpus-direct` |
-
-See the [Live Demo](https://plevantem.github.io/queryMaker/) for the full
-benchmark write-up, or open `data/output/corpus_method_comparison.html` after running
-`scripts/test-corpus-methods.js`.
 
 ## Iteration Story: 4 stages, 4 fixes
 
@@ -417,6 +456,28 @@ node scripts/generate-analysis-report.js \
 - **Formula** — `Authenticity × 0.4 + Specificity × 0.4 + Diversity × 0.2`, passing threshold ≥ 2.8
 - **`design_style` impact** — bumps Diversity by +1 when present; max Diversity = 4 when `null`
 
+## Limitations We're Honest About
+
+Synthetic data has edges — credibility lives on a multi-indicator evidence net, so the edges go up front:
+
+- **Persona pool is currently 5 archetypes** — chosen via L2 semantic best-fit within the UI product
+  domain. Good coverage on the head; long-tail user representativeness still needs reverse validation
+  against real user logs.
+- **Diversity is currently measured at the lexical (trigram-Jaccard) and corpus-distribution layers only**.
+  Deeper evidence at the semantic / task-distribution / discriminator layer is out of scope for this repo.
+- **No end-to-end downstream validation** — the ultimate evidence ("model capability gain when this data
+  is added to training") is not in scope here due to downstream training resource limits. Adopters
+  should run a controlled comparison in their own training setting.
+- **Where the L2 corpus is narrow, the persona channel cannot compensate** — mode collapse can still
+  happen under that condition. Known narrow scenes are flagged in `data/intermediate/scenario_specs/`;
+  the recommendation is to grow the corpus rather than stack more personas.
+- **Authenticity evaluation currently relies on design-expert blind review + heuristic scoring**
+  (authenticity / specificity / diversity, 3-axis). Cold-metric counterparts (discriminator AUC,
+  distribution distance) are not yet in place.
+
+> Listing these is not self-sabotage — it's putting credibility on a multi-indicator evidence net, and
+> it tells adopters which piece they should reinforce in their own setting.
+
 ## Roadmap
 
 - [ ] LLM-based quality scoring (replace heuristic with `p5` design)
@@ -451,12 +512,27 @@ node scripts/generate-analysis-report.js \
 
 ## Key References & Acknowledgements
 
-A few of this project's core design decisions are directly indebted to the following research lines. Each entry includes a concrete "what we borrowed" note so readers can locate the idea source and so adjacent researchers can cross-reference.
+This project stands on a few research lines. The **methodology lineage** roughly is:
+Self-Instruct (2022) → Evol-Instruct (2023) → Magpie (2024) → Persona Hub (2024) → this repo
+(two channels + white-box distribution anchoring + 4-way ablation).
 
-### Persona-driven synthetic data
+Each entry below includes a concrete "what we borrowed" note plus "how this repo differs", so adopters
+can locate the idea source and adjacent researchers can cross-reference.
 
-- **Scaling Synthetic Data Creation with 1,000,000,000 Personas** (PersonaHub) — Tao Ge, Xin Chan, Xiaoyang Wang, Dian Yu, Haitao Mi, Dong Yu. Tencent AI Lab, 2024. [arXiv:2406.20094](https://arxiv.org/abs/2406.20094)
-  - Reframed our view of personas: not decoration, but the central driver of multi-perspective synthesis. Where PersonaHub goes for billion-scale breadth, this project takes a vertical bet — 5 hand-tuned ordinary-user archetypes (`maker / planner / curator / operator / founder_like`) for the UI vibe-coding query niche, with persona-to-task assignment by L2 semantic best-fit (not random).
+### Synthetic-data route lineage (baseline panorama)
+
+- **Self-Instruct: Aligning Language Models with Self-Generated Instructions** — Wang et al., 2022. [arXiv:2212.10560](https://arxiv.org/abs/2212.10560) — origin of *instance-driven* synthesis: diffuse from seed samples.
+- **Evol-Instruct / WizardLM** — Xu et al., 2023. [arXiv:2304.12244](https://arxiv.org/abs/2304.12244) — adds complexity evolution on top of instance-driven.
+- **Magpie: Alignment Data Synthesis from Scratch by Prompting Aligned LLMs with Nothing** — Xu et al., 2024. [arXiv:2406.08464](https://arxiv.org/abs/2406.08464) — *self-play* route: directly samples the LLM's internal distribution without a prompt-side control signal.
+
+### Persona-driven synthetic data (this project's methodology anchor)
+
+- **Scaling Synthetic Data Creation with 1,000,000,000 Personas** (PersonaHub) — Tao Ge, Xin Chan, Xiaoyang Wang, Dian Yu, Haitao Mi, Dong Yu. Tencent AI Lab, 2024. [arXiv:2406.20094](https://arxiv.org/abs/2406.20094) · [code](https://github.com/tencent-ailab/persona-hub)
+  - **What we borrowed**: the framing that "persona is the LLM's internal multi-perspective index, and the right intermediate abstraction for synthesis diversity". We adopt this as the *who / how* channel anchor.
+  - **How this repo differs** (expanded in §[How this compares to Persona Hub](#how-this-compares-to-persona-hub--self-instruct--magpie)):
+    (1) Not a generic 1B persona pool — instead **5 targeted archetypes** (`maker / planner / curator / operator / founder_like`) reverse-derived from real user profiles, assigned to tasks by L2 semantic best-fit;
+    (2) Adds a **corpus channel** the original paper does not have, for white-box distribution anchoring (Layer-A `corpus_usage.json` least-used-first state);
+    (3) Fills in the **4-way horizontal ablation** the original paper does not run (`llm-direct` / `corpus-direct` / `persona-direct` / `corpus+persona`), quantifying the marginal contribution of each channel.
 
 ### Instruction-tuning data synthesis
 
