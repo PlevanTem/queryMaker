@@ -2340,9 +2340,10 @@ function buildCorpusDirectQueryPrompt(task) {
     "7. Frame the request as building a complete 0-to-1 mini-app. The top-level noun is \"app\" or a specific app type (\"tracker\", \"tool\", \"reminder\", \"planner\", \"calculator\", \"logger\", \"manager\", \"timer\", etc.). Words like \"page\", \"screen\", \"view\", \"section\", \"module\", \"feature\", \"widget\" stay below the top level (e.g. \"the home screen of the app\" mid-query is fine).",
     `8. The query MUST explicitly mention the target platform somewhere in the text — naturally woven in, not as a rigid prefix. Use a phrasing your persona would actually say, e.g. ${platformMentionExamples}. The reader should be able to tell at a glance whether this request is for ${platform.title_en} vs the other.`,
     "9. Express what you WANT, not what you don't want. Real users describing a 0-to-1 app speak in positive terms — they're building something they want, not refining something they hate. Limit negation words (\"don't / not / unlike / instead of / without / 不要 / 不用 / 不像\") to at most 1 per query, and only when negation is the most natural way to state a real preference.",
-    `10. Complexity: ${task.target_complexity} — ${complexityInstruction} (Phrased as the persona would.)`,
+    "10. Punctuation: keyboard-only. Allowed: period, comma, exclamation mark, question mark, hyphen, slash, parentheses, straight apostrophe. Forbidden: em dash (\\u2014), en dash (\\u2013), ellipsis (\\u2026), curly/smart quotes (\\u201C \\u201D \\u2018 \\u2019), or any typographic symbol that requires a non-standard key. If you need a pause or parenthetical, use a comma or rewrite the sentence.",
+    `11. Complexity: ${task.target_complexity} — ${complexityInstruction} (Phrased as the persona would.)`,
     hasStyle
-      ? `11. Add natural visual style description following real user habit: ${styleInstruction} — integrate the style requirement into the query naturally instead of rigid listing.`
+      ? `12. Add natural visual style description following real user habit: ${styleInstruction} — integrate the style requirement into the query naturally instead of rigid listing.`
       : null,
     "",
     "Output in natural English only, pure user request sentence.",
@@ -2374,8 +2375,9 @@ function buildSceneDirectQueryPrompt(task) {
     "1. Pick a specific app idea within this scene and write a request focused on that.",
     "2. Write as a real person typing to an AI coding assistant.",
     "3. Natural language; mid-sentence pivots and casual grammar are fine.",
-    `4. Complexity: ${task.target_complexity} — ${complexityInstruction}`,
-    hasStyle ? `5. Visual style hint: ${styleInstruction}` : null,
+    "4. Punctuation: keyboard-only. Allowed: period, comma, exclamation mark, question mark, hyphen, slash, parentheses, straight apostrophe. Forbidden: em dash (\\u2014), en dash (\\u2013), ellipsis (\\u2026), curly/smart quotes (\\u201C \\u201D \\u2018 \\u2019). Use a comma or rewrite instead.",
+    `5. Complexity: ${task.target_complexity} — ${complexityInstruction}`,
+    hasStyle ? `6. Visual style hint: ${styleInstruction}` : null,
     "",
     "Output in English only.",
   ].filter(Boolean).join("\n");
