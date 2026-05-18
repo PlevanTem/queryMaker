@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_scene_012_007",
+    "query_text": "Need a mobile app for performing arts groups where members can fill in their ensemble role, list their audition history, and show off the pieces they've performed — it should feel like a beautiful artistic portfolio, warm and stage-lit in vibe, with each person's profile reading like a theater program credit rather than a dry resume."
+  },
+  {
+    "id": "q_scene_012_008",
+    "query_text": "Scientific researcher profile app for your phone that pulls in your ORCID publication list and displays it in a clean, elegant way — something that feels like a well-designed academic journal cover rather than a plain list, with your papers grouped by year and each entry showing the journal name and co-authors in a way that looks genuinely refined and worth sharing."
+  },
+  {
+    "id": "q_scene_013_001",
+    "query_text": "Need a mobile survey tool that lets respondents take a photo right from their phone camera and attach it as an answer to a specific question, so I stop getting blank text responses when I really need people to just snap and submit a picture of what I'm asking about."
+  },
+  {
+    "id": "q_scene_013_002",
+    "query_text": "Need a mobile app that lets students upload their thesis as multiple separate files all at once — main document, appendices, signed declaration form — so they can submit everything in one go on their phone and stop emailing attachments back and forth to the office."
+  },
+  {
+    "id": "q_scene_013_003",
+    "query_text": "Create a mobile field inspection tool where workers can take photos on-site and the app automatically stamps each photo with the GPS location it was taken, then bundles everything into a report they can send straight from their phone without having to manually write down where each picture was taken."
+  },
+  {
+    "id": "q_scene_013_004",
+    "query_text": "Build a mobile app for smart meter users that shows their usage data and lets them download it as a spreadsheet file with one tap, so they can stop trying to copy numbers off a screen and actually have the data in a file they can open on their computer."
+  },
+  {
+    "id": "q_scene_013_005",
+    "query_text": "Build a mobile app for factory QA workers that lets them fill in an inspection checklist on their phone and then export the whole report as a PDF or spreadsheet they can send to the supervisor, so nobody has to retype handwritten notes at the end of the shift."
+  },
+  {
+    "id": "q_scene_013_006",
+    "query_text": "A visa application tracker for your phone that tells you exactly which documents you still need to upload, shows a checklist of everything required, and lets you tap each item to upload the file right there — so you never miss a document or have to re-read confusing government instructions to figure out what's still missing."
+  },
+  {
+    "id": "q_scene_013_007",
+    "query_text": "A social media content planner for your phone where you can select a bunch of photos and videos at once, pick a future date and time to post them, and queue everything up so it goes out automatically — so you can prepare a whole week of posts in one sitting instead of remembering to post every single day."
+  },
+  {
+    "id": "q_scene_013_008",
+    "query_text": "Make a mobile backup manager that lets you securely download an encrypted copy of your data straight to your phone, with a password-protected download process and a clear confirmation once the file is safely saved — so you always have a proper offline backup you can trust is protected."
+  },
+  {
+    "id": "q_scene_014_001",
+    "query_text": "Build a mobile app for agile teams where you can save a sprint retrospective board as a reusable template and then clone it fresh at the start of every new sprint, so nobody has to rebuild the same what-went-well and what-needs-improving structure from scratch every single time."
+  },
+  {
+    "id": "q_scene_014_002",
+    "query_text": "Make a mobile customer journey planner where you can duplicate any stage of the journey with a single tap and tweak just the parts that are different, so you stop rebuilding the same stages over and over every time you need a variation for a new customer segment."
+  },
+  {
+    "id": "q_scene_014_003",
+    "query_text": "Create a mobile loyalty program manager where you can copy an existing membership tier's benefits and points structure, adjust just the thresholds and perks for the new tier, and save it — so setting up a new Gold or Platinum level takes minutes instead of starting over from scratch every time."
+  },
+  {
+    "id": "q_scene_014_004",
+    "query_text": "Need a mobile app that lets me copy all the settings from our live production environment over to the staging environment with a few taps on my phone, so I can stop manually re-entering config values every time I need staging to match what's running in production."
+  },
+  {
+    "id": "q_scene_014_005",
+    "query_text": "A mobile product manager tool where you can take an existing bundle, duplicate it, and update just the pricing and included items for the new version — so launching a new seasonal offer means tweaking a copy instead of building the whole bundle listing from scratch every time."
+  },
+  {
+    "id": "q_scene_014_006",
+    "query_text": "Build a mobile invoicing app where you can copy all the line items from a previous invoice straight into a new one with a single tap, so you stop manually re-entering the same services and prices every time you bill a recurring client on your phone."
+  },
+  {
+    "id": "q_scene_014_007",
+    "query_text": "Need a mobile shift scheduling app that lets me duplicate the whole weekly rotation pattern and apply it to the next week, so I stop manually re-entering every single person's shift assignments every time a new week starts."
+  },
+  {
+    "id": "q_scene_014_008",
+    "query_text": "Build a mobile grading tool for teachers where you can save a rubric template once and then copy it for each new assignment, adjusting the criteria as needed, so you stop rebuilding the same grading structure from scratch on your phone every time you create a new project."
+  },
+  {
+    "id": "q_scene_015_001",
+    "query_text": "Need a mobile app that lets me customize a home screen layout by adding little info tiles — like a weather spot, a quick notes box, a countdown timer — and resize each one to fit however much space I want to give it, so my phone's home feels actually useful and personal to how I work."
+  },
+  {
+    "id": "q_scene_015_002",
+    "query_text": "Create a mobile setup guide app that walks new users through turning on helpful accessibility options step by step — things like bigger text, voice control, or high contrast mode — with a friendly walkthrough that explains what each setting actually does so someone who's never touched these options can figure it out without feeling lost."
+  },
+  {
+    "id": "q_scene_015_003",
+    "query_text": "Create a mobile privacy manager app that shows you a clear list of all the other apps on your phone and what permissions each one has — like camera, location, contacts — so you can see at a glance which apps have access to things they probably shouldn't, and turn off the ones you want to revoke right from the same place."
+  },
+  {
+    "id": "q_scene_015_004",
+    "query_text": "Make a mobile Bluetooth manager tool that scans for nearby devices, walks you through pairing them step by step, and lets you give each paired device a nickname so you always know which device is which — especially handy when you have several speakers or earbuds and they all show up with confusing model numbers."
+  },
+  {
+    "id": "q_scene_015_005",
+    "query_text": "Need a mobile calendar sync tool that lets me connect my Google, Outlook, or iCloud calendars in one place on my phone and see all my events together in a single view, with a simple setup flow that shows exactly which accounts are linked and lets me turn each one on or off whenever I want."
+  },
+  {
+    "id": "q_scene_015_006",
+    "query_text": "Build a mobile data importer tool that lets you bring in a file from another app or service, then walks you through matching up the columns or fields to where they should go in the new place, so you can move your stuff between apps on your phone without everything ending up in the wrong spot."
+  },
+  {
+    "id": "q_scene_015_007",
+    "query_text": "Need a mobile link chooser tool that pops up when you tap a shared link and shows you all the apps that could open it, letting you pick where you actually want to go each time rather than always getting sent to the wrong place automatically — especially useful when links could go to a web browser, a native app, or a mini-program."
+  },
+  {
+    "id": "q_scene_015_008",
+    "query_text": "Live chat support button that pops up on my mobile app so users can tap it and instantly talk to someone — want it to feel like a little floating helper that's always there in the corner, and when they tap it opens up a chat window where they can type their problem and get a reply right away."
+  },
+  {
+    "id": "q_scene_016_001",
+    "query_text": "Need a lumber board feet calculator app for my phone where I can punch in the thickness, width, and length of a board and it instantly tells me the volume in board feet, so I stop having to do the math myself every time I'm at the lumber yard."
+  },
+  {
+    "id": "q_scene_016_002",
+    "query_text": "Build a road trip fuel cost estimator app for mobile where I type in the trip distance, my car's miles per gallon, and the current gas price, and it tells me roughly what I'll spend on fuel so I can plan my budget before I hit the road."
+  },
+  {
+    "id": "q_scene_016_003",
+    "query_text": "Build a cooking measurement converter app for my phone that lets me quickly flip between US cups, tablespoons, and teaspoons to grams and milliliters, because I keep running into recipes that use metric and I always have to Google it mid-cook."
+  },
+  {
+    "id": "q_scene_016_004",
+    "query_text": "Make a retirement safe withdrawal rate calculator app on mobile where I put in my total savings and expected years in retirement, and it shows me how much I can safely pull out each year so I don't run out of money before I die."
+  },
+  {
+    "id": "q_scene_016_005",
+    "query_text": "Need a time zone meeting scheduler app for my phone where I can pick a few cities and a time, and it shows me what time it is in each place so I can find a slot that works for everyone on my team without having to do the mental math myself."
+  },
+  {
+    "id": "q_scene_016_006",
+    "query_text": "Need a photo print resolution calculator app for my phone where I enter my image pixel dimensions and the print size I want, and it tells me the resulting DPI so I know if the photo will actually look sharp when I print it out."
+  },
+  {
+    "id": "q_scene_016_007",
+    "query_text": "Create a knitting yarn yardage estimator app for my phone where I can enter the project type, yarn weight, and needle size, and it calculates roughly how many yards I'll need so I buy the right amount and stop running out halfway through a project."
+  },
+  {
+    "id": "q_scene_016_008",
+    "query_text": "Build a music BPM and time signature helper app for my phone where I can tap to find the tempo of a song or type in a BPM and see what the note values work out to, so I can figure out timing when I'm practicing and don't have my metronome handy."
+  },
+  {
+    "id": "q_scene_016_009",
+    "query_text": "Create a currency converter app for my phone that shows up-to-date exchange rates so I can quickly see what my money is worth in another currency when I'm traveling or shopping online from a foreign store."
+  },
+  {
+    "id": "q_scene_016_010",
+    "query_text": "Build a bill splitter and tip calculator app for my phone where I enter the total, choose the tip percentage, and then set a custom amount or percentage for each person at the table, so everyone pays exactly what they owe and I stop being the one doing mental math at dinner."
+  },
+  {
+    "id": "q_scene_017_001",
+    "query_text": "Need a baby feeding and diaper change logger app for my phone where I can tap one button to log a feeding with the time and amount, and another button for diaper changes, so I can actually remember what happened overnight and tell the doctor when they ask."
+  },
+  {
+    "id": "q_scene_017_002",
+    "query_text": "Create a social interaction diary app for my phone where I can jot down who I talked to each day, how the conversation went, and how I felt afterward, so I can look back over the week and see which kinds of interactions gave me energy and which ones drained me."
+  },
+  {
+    "id": "q_scene_017_003",
+    "query_text": "Create a daily weather and outfit log app for my phone where I record what the weather was like and what I actually wore that day, so over time I can look back and figure out what to wear on similar days instead of standing in front of my closet guessing."
+  },
+  {
+    "id": "q_scene_017_004",
+    "query_text": "Need a focus session logger app for my phone where I can start a timer when I sit down to do deep work, add a note about what I worked on, and then look back at my weekly log to see how many solid hours I actually put in each day."
+  },
+  {
+    "id": "q_scene_017_005",
+    "query_text": "Build a daily new words logger app for my phone where I can quickly add a word I just learned along with its meaning and a short example sentence, so I can review my list later and actually remember the words I picked up while studying a new language."
+  },
+  {
+    "id": "q_scene_017_006",
+    "query_text": "A little chore tracker app for my phone where I can check off which household tasks I did each day — like vacuuming, dishes, laundry — and see a simple history of the past week so I can tell which chores I've been skipping and build a better cleaning routine."
+  },
+  {
+    "id": "q_scene_017_007",
+    "query_text": "A sleep quality log app for my phone where every morning I can tap a quick rating from terrible to great, add an optional note about how I feel, and then see a simple chart of my ratings over the past couple of weeks to spot patterns in what's affecting my rest."
+  },
+  {
+    "id": "q_scene_017_008",
+    "query_text": "Need a daily steps and active minutes recorder app for my phone where I can manually enter my step count and how many minutes I was actually moving around, then see a simple weekly summary so I can tell whether I'm hitting my activity goals or slacking off."
+  },
+  {
+    "id": "q_scene_017_009",
+    "query_text": "Create a daily mood tracker app for my phone where I pick an emoji that matches how I'm feeling and optionally type a quick note about why, then see a little calendar view of my past moods so I can notice if there's a pattern to when I feel good or low."
+  },
+  {
+    "id": "q_scene_017_010",
+    "query_text": "Create a food photo diary app for my phone where I can snap a photo of what I ate, give it a rough calorie estimate, and add a short note, so I have a visual log of my eating habits over time and can see if I'm roughly on track without obsessing over exact numbers."
+  },
+  {
+    "id": "q_scene_018_001",
+    "query_text": "A gift idea recommender app for my phone where I answer a few quick questions about the person's personality and interests, and it gives me a list of gift suggestions that actually fit who they are, so I stop defaulting to gift cards every birthday."
+  },
+  {
+    "id": "q_scene_018_002",
+    "query_text": "Create a party guest introduction card generator app for my phone where I type in each guest's name and a fun fact or two, and it spits out a little card for each person so guests can learn something about each other and actually start conversations at my next gathering."
+  },
+  {
+    "id": "q_scene_018_003",
+    "query_text": "Make a long-distance friendship activity planner app for my phone where my friend and I can browse a list of things we can do together remotely — like watching a movie at the same time or playing an online game — and pick one to schedule so we actually follow through instead of just saying we'll hang out soon."
+  },
+  {
+    "id": "q_scene_018_004",
+    "query_text": "Make a social media caption and emoji generator app for my phone where I describe a photo or moment in a few words and it comes up with a few catchy captions with matching emojis, so I stop staring at my phone trying to think of something clever to write before posting."
+  }
+]

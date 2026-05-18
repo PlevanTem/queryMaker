@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_web_022_004",
+    "query_text": "A web app for a home cleaning service where first-time customers can see a big discount offer and book their first cleaning right away — the whole thing lives in the browser, shows the deal clearly, and has a simple form to pick a date and time so I don't have to call or chase anyone."
+  },
+  {
+    "id": "q_web_022_005",
+    "query_text": "Make a web app for a dental clinic that shows new patients a special intro offer — like a discounted first checkup or cleaning — with a short list of what's included, the price, and a quick sign-up form so they can claim the deal without having to call the front desk."
+  },
+  {
+    "id": "q_web_022_006",
+    "query_text": "A website for a local gym's anniversary sale where people can see the discounted membership deals, pick a plan that fits them, and buy right there in the browser without having to come in and talk to someone — just a clean layout showing the offer, the price, and a way to sign up."
+  },
+  {
+    "id": "q_web_022_007",
+    "query_text": "Need a web app for a beauty salon that lets customers buy gift cards for friends or themselves right in the browser — it should show the available gift card amounts, let you pick one, and complete the purchase without needing to call the salon or go in person."
+  },
+  {
+    "id": "q_web_023_001",
+    "query_text": "Build a web app where a small business owner can pull in all their customer reviews from different places into one spot, see them side by side, and type a reply to each one right there in the browser without having to log into five different accounts every single time."
+  },
+  {
+    "id": "q_web_023_002",
+    "query_text": "A web app for desktop browsers where I can dump all my business receipts and spending for the year into one place, have it sorted by category automatically, and then spit out a summary I can hand to my accountant come tax time — saves me the nightmare of digging through folders every spring."
+  },
+  {
+    "id": "q_web_023_003",
+    "query_text": "Need a web app where customers can sign up for a recurring home cleaning subscription, pick how often they want it, see their upcoming cleans, and pause or cancel whenever they want — all in the browser so neither side has to deal with back-and-forth texts to manage the schedule."
+  },
+  {
+    "id": "q_web_023_004",
+    "query_text": "A web-based calculator tool where I can enter details for a few different commercial spaces I'm considering — like rent, square footage, extra fees — and see them laid out side by side so I can figure out which one actually makes sense for my shop before I sign anything."
+  },
+  {
+    "id": "q_web_023_005",
+    "query_text": "Create a web app for a local farmer's market where vendors can register for a stall, pick their dates, and see which spots are still available — and the market organizer can manage the whole list from the same site without having to do it all over email."
+  },
+  {
+    "id": "q_web_023_006",
+    "query_text": "A web app for a small print shop where customers can submit their print order, upload the artwork file, and then see a preview before giving the go-ahead — all done in the browser so the shop doesn't have to chase people down for approvals over text."
+  },
+  {
+    "id": "q_web_023_007",
+    "query_text": "Build a web app for renting out party and event equipment where customers can browse what's available, pick the stuff they need, choose their rental dates, and book it all in one go from a desktop browser — so I'm not answering the same availability questions over and over by phone."
+  },
+  {
+    "id": "q_web_024_001",
+    "query_text": "Need a web app for a private tutor where students or parents can see what subjects are available, pick a time slot that works for them, and book a session right in the browser — and the tutor can see their upcoming schedule in one place without managing it all through texts."
+  },
+  {
+    "id": "q_web_024_002",
+    "query_text": "Make a web app for a local locksmith where homeowners can pick a date and time for a home visit, describe what they need help with, and confirm the booking right in the browser — so the locksmith has all the info upfront and doesn't have to play phone tag with every customer."
+  },
+  {
+    "id": "q_web_024_003",
+    "query_text": "Need a web app for renting out a small event space by the hour where people can see what times are open, pick how many hours they need, and reserve it right there in the browser — so I'm not manually tracking who booked what on a spreadsheet anymore."
+  },
+  {
+    "id": "q_web_024_004",
+    "query_text": "Need a web app where people can book a tax consultation appointment with an independent preparer — they pick a time from an open calendar, fill in a bit of info about what they need help with, and confirm it right in the browser so neither side has to go back and forth over email."
+  },
+  {
+    "id": "q_web_024_005",
+    "query_text": "Need a web app for a local florist where customers can book a consultation to talk through a custom flower arrangement — they pick a time, describe the occasion and their budget, and submit the request right in the browser so the florist has everything they need before the meeting."
+  },
+  {
+    "id": "q_web_024_006",
+    "query_text": "Need a web app for a small print shop where customers can book an appointment to review their design and schedule a pickup time — they upload their file, pick a slot on a calendar, and the shop gets a heads-up in one place without everything getting buried in a text thread."
+  },
+  {
+    "id": "q_web_024_007",
+    "query_text": "Need a web app for an independent notary where clients can see available appointment times, pick one that works, and book it right in the browser along with a note about what documents they're bringing — so the notary isn't juggling calls and texts just to fill their calendar."
+  },
+  {
+    "id": "q_web_025_001",
+    "query_text": "Build a web app for desktop browsers that acts as a step-by-step guide for local shop owners setting up a customer loyalty program — it should walk through the main things to decide, like how points are earned and what rewards to offer, with a checklist to track what's been done."
+  },
+  {
+    "id": "q_web_025_002",
+    "query_text": "A learning tool for small merchants — a web app that explains all the last-mile delivery options in plain terms, lists the main ones side by side with their costs and speed, and lets me check off which ones I've looked into so I can actually make a decision without drowning in tabs."
+  },
+  {
+    "id": "q_web_025_003",
+    "query_text": "Build a web app for small buyers who want to learn how to negotiate better deals with suppliers — it should cover the main tactics in plain steps, include a checklist of things to prepare before a negotiation, and work well in a desktop browser so I can go through it properly at my desk."
+  },
+  {
+    "id": "q_web_025_004",
+    "query_text": "Build a web app that teaches local service business owners how to respond to online reviews — it should walk through what to say in different situations, have some example replies I can learn from, and let me track which types of responses I've practiced so I don't blank when the time comes."
+  },
+  {
+    "id": "q_web_025_005",
+    "query_text": "Build a web app for small shop owners to learn about workplace safety rules they need to follow — it should break everything down into simple topics, include a checklist of the basics to have in place, and work in a desktop browser so I can go through it at my own pace at the shop."
+  },
+  {
+    "id": "q_web_025_006",
+    "query_text": "A step-by-step tutorial app for a desktop browser that walks small business owners through what they need to prepare when applying for a business loan — covering the documents to gather, the numbers to know, and a checklist to track progress so nothing gets missed before submitting."
+  },
+  {
+    "id": "q_web_025_007",
+    "query_text": "Need a web app calculator tool that helps restaurant or food shop owners figure out the right price for each menu item — enter the ingredient costs and portion size, and it shows the food cost percentage and a suggested selling price, all laid out clearly in the browser so I actually understand the numbers."
+  },
+  {
+    "id": "q_web_026_001",
+    "query_text": "A little website where local vendors can sign up for a pop-up market, pick an available date and booth spot from a calendar, and submit their registration with what they're selling — and the organizer can see who's coming and confirm spots, all in a web app that works on a normal computer browser."
+  },
+  {
+    "id": "q_web_026_002",
+    "query_text": "A neighborhood pet services finder web app where people can browse a list of local dog walkers, groomers, and pet sitters with their contact info and what they offer, and there's also a little community area where neighbors can post questions, share recommendations, or chat about their pets — desktop browser-friendly with a sidebar for navigation."
+  },
+  {
+    "id": "q_web_026_003",
+    "query_text": "Create a web app for neighbors to post skills they can teach or swap — like someone offering guitar lessons in exchange for cooking classes — with a simple listing board where people can browse what's available, post their own offer or request, and message someone they want to connect with, all usable in a desktop browser."
+  },
+  {
+    "id": "q_web_026_004",
+    "query_text": "Make a web app for a small city farm that lets customers sign up for a weekly veggie box subscription, choose a delivery day, and see what's in their box each week, with a simple way for the farmer to update the contents and manage who gets what — the whole thing should work nicely in a desktop browser."
+  },
+  {
+    "id": "q_web_026_005",
+    "query_text": "A booking site for a local neighborhood cleaning co-op where residents can pick a cleaning crew, choose a date and time that works, and leave a review afterward — the web app should live in a desktop browser and show available slots clearly so booking takes almost no effort."
+  },
+  {
+    "id": "q_web_026_006",
+    "query_text": "Make a web app where small local shops can post what they're good at and find other nearby merchants to team up with for joint promos — like a café partnering with a bookstore for a bundle deal — with profiles for each business, a browsable board of partnership ideas, and a way to reach out, all for desktop browsers."
+  },
+  {
+    "id": "q_web_026_007",
+    "query_text": "Create a web app for a community fundraiser where local businesses can co-host the campaign, each with their own section showing what cause they support and how much they've helped raise, with a shared progress tracker showing the total donations and a way for community members to contribute — designed for desktop browsers."
+  },
+  {
+    "id": "q_web_027_001",
+    "query_text": "Create a flyer-maker web app that saves me the hassle of designing promos from scratch every time — I just want to pick a ready-made template, drop in my discount amount and store name, tweak the colors to match my branding, and get a printable flyer I can post online, all doable in a browser without needing any design skills."
+  },
+  {
+    "id": "q_web_027_002",
+    "query_text": "Create a web app that lets a restaurant owner build a digital menu and generate a QR code customers can scan at the table — so staff don't have to reprint paper menus every time something changes — just update the menu online in a desktop browser and the QR code always shows the latest version."
+  },
+  {
+    "id": "q_web_027_003",
+    "query_text": "Create a tiny survey builder web app so that after a customer visit I can quickly put together a two or three question feedback form, share a link with them, and see all the answers collected in one place — no more copying responses from emails, just a clean browser-based tool that handles the whole thing."
+  },
+  {
+    "id": "q_web_027_004",
+    "query_text": "Create a web app that helps a small shop owner track monthly spending by category — things like rent, supplies, and utilities — so at the end of the month I can actually see where the money went and which areas are eating up the budget, all in a browser-based tracker that's easy to update without spreadsheet drama."
+  },
+  {
+    "id": "q_web_027_005",
+    "query_text": "A calculator tool for comparing a few different commercial rental options side by side — you punch in the monthly rent, estimated sales, and other costs for each space, and it tells you which one breaks even sooner — a web app that runs in a desktop browser so I can walk through the numbers with my business partner on screen together."
+  },
+  {
+    "id": "q_web_027_006",
+    "query_text": "Make a tracker web app that lists all the permits and licenses a new local business needs to apply for, lets me check off each one as I submit it, and shows the current status so I always know what's still pending — I just want something in a browser that stops me from losing track of which applications are done and which are still waiting."
+  },
+  {
+    "id": "q_web_027_007",
+    "query_text": "Create a payroll calculator web app for a small business with just a handful of employees, where I type in each person's hours and hourly rate and it figures out the gross pay, then breaks down all the tax and social contribution deductions clearly so I can see the final take-home amount — browser-based so I can use it at my desk without installing anything."
+  },
+  {
+    "id": "q_web_028_001",
+    "query_text": "A virtual campus tour website that feels like a proper experience — not just a photo gallery, but something that actually has character, where visitors can walk through different areas of the office, click on spaces to learn about the culture and what teams work there, and get a real sense of who we are, built for desktop browsers so it feels immersive and deliberate."
+  },
+  {
+    "id": "q_web_028_002",
+    "query_text": "Need a website-style app that shows off a company's manufacturing quality in a way that actually has some pride and craftsmanship to it — the kind of place that highlights the process, the precision, the people behind it — with a desktop browser layout that lets visitors flip through different production stages and see what makes the standards worth talking about."
+  },
+  {
+    "id": "q_web_028_003",
+    "query_text": "A supply chain transparency site that feels honest and well-made — something a company can point to and say 'this is how we source and ship things, end to end' — with a visual journey showing each step from origin to delivery, built as a desktop web app that has a clean, trustworthy feel rather than a generic corporate look."
+  },
+  {
+    "id": "q_web_028_004",
+    "query_text": "Create a web app for a company's senior leaders to publish their takes on industry trends and big-picture ideas — something that feels like a real editorial space with a distinct voice, where each executive has their own byline and the content is organized by theme, designed for desktop browsers so it reads like something worth bookmarking."
+  },
+  {
+    "id": "q_web_028_005",
+    "query_text": "Need a website for a corporate foundation that actually feels warm and genuine — the kind that shows real stories about the communities and causes being supported, with photos and impact highlights that feel personal rather than corporate, built as a desktop web app that gives the programs the kind of care and attention they deserve."
+  },
+  {
+    "id": "q_web_028_006",
+    "query_text": "Create a brand anniversary website that actually feels like a celebration — something with personality that tells the story of how the company has grown over the years, with milestones visitors can click through, maybe a bit of nostalgia baked in, and an overall feel that says 'this matters' rather than just a static timeline, built for desktop browsers."
+  },
+  {
+    "id": "q_web_028_007",
+    "query_text": "Build a website that tells a company's diversity and inclusion story with real substance — employee voices, representation numbers shown in a way that feels meaningful rather than cold, and a sense that this is a genuine commitment rather than a checkbox, all in a web app for desktop browsers that carries the right kind of weight and warmth."
+  },
+  {
+    "id": "q_web_029_001",
+    "query_text": "Need a learning portal web app for a company where employees can browse courses and development resources organized by topic or career path, track what they've completed, and find content that actually feels curated rather than dumped into a generic list — something desktop-first that has the kind of thoughtful structure that makes people want to use it."
+  },
+  {
+    "id": "q_web_029_002",
+    "query_text": "Build a customer success story web app that actually feels like a proper editorial space — where each story has room to breathe, shows the real transformation a client went through, and is organized so visitors can find stories relevant to their own situation, built for desktop browsers with the kind of polish that makes the stories feel worth reading."
+  },
+  {
+    "id": "q_web_029_003",
+    "query_text": "Build a web app for a corporate innovation lab that has a genuinely curious, forward-looking identity — where visitors can explore research projects, see what the team is experimenting with, and get a feel for the ideas in progress, laid out for desktop browsers in a way that feels alive and specific rather than a generic 'innovation' brochure."
+  },
+  {
+    "id": "q_web_029_004",
+    "query_text": "A compliance documentation hub for a large company that actually has a clear sense of order — where policies, regulations, and audit documents are organized by category and easy to find, with a clean browsing experience for desktop, so anyone who needs to look up a compliance requirement isn't stuck digging through folders or emailing around asking for links."
+  }
+]

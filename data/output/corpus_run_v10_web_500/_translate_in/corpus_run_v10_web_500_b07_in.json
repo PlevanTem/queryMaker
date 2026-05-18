@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_web_043_007",
+    "query_text": "Make a hiring pipeline manager for our early-stage startup — a web app where I can track every applicant from first contact to offer letter, with a simple list of candidates on one side and their stage and notes on the other, so I stop losing people in my inbox."
+  },
+  {
+    "id": "q_web_044_001",
+    "query_text": "Build a web app directory of all our international partner universities and exchange programs, where I can filter by country or region, see each school's requirements and program length in a clean list, and click through to a detail page with the important deadlines and contact info."
+  },
+  {
+    "id": "q_web_044_002",
+    "query_text": "Create a web app for showing student testimonials and enrollment reviews, with each review listed clearly including the student's name, program, and what they said, plus a way to filter by program type so prospective students can find reviews most relevant to them."
+  },
+  {
+    "id": "q_web_044_003",
+    "query_text": "An admissions process guide app for a website that walks prospective students through each step in order — from submitting documents to receiving a decision — with a numbered checklist on the left side and the details for each step shown on the right when you click it."
+  },
+  {
+    "id": "q_web_044_004",
+    "query_text": "Make a photo gallery web app for showing off campus facilities and amenities, organized by category like library, gym, dining, and dorms, where each category has a set of photos you can browse through and a short description of that facility for desktop browsers."
+  },
+  {
+    "id": "q_web_044_005",
+    "query_text": "A graduation ceremony highlights app for a website that lists each year's commencement event with key moments, a photo section, and a short summary of notable speakers — organized by year so visitors can browse past ceremonies easily on desktop."
+  },
+  {
+    "id": "q_web_044_006",
+    "query_text": "Need a web app that showcases our notable alumni hall of fame, where each person gets a profile card with their name, graduation year, field, and what they're known for, and visitors can filter by industry or decade on desktop browsers."
+  },
+  {
+    "id": "q_web_044_007",
+    "query_text": "Make a web app that gives an overview of all academic departments and majors, where each department is listed with the majors it offers and a short description, and you can click any major to see more details like course highlights and career paths — all usable in a desktop browser."
+  },
+  {
+    "id": "q_web_045_001",
+    "query_text": "Need a web app for our student-run online newspaper and opinion site, where students can publish articles under different sections like news, opinion, and culture, and readers on desktop browsers can browse by section or search for a topic they care about."
+  },
+  {
+    "id": "q_web_045_002",
+    "query_text": "Make a web app portal for our annual institutional statistics and transparency report, where each year's data is organized into clearly labeled sections like enrollment numbers, faculty stats, and budget info, and users on desktop browsers can flip between years to compare figures."
+  },
+  {
+    "id": "q_web_045_003",
+    "query_text": "A continuing education and professional certification course catalog web app where all the courses are listed with their name, duration, price, and the certification you earn, grouped by topic area so working adults browsing on a desktop can quickly find the right program for them."
+  },
+  {
+    "id": "q_web_045_004",
+    "query_text": "An academic conference archive tool for a website where each conference is listed by year and topic, with the papers and presentation titles underneath so researchers browsing on desktop can find what was presented, filter by subject area, and see the full list of contributors."
+  },
+  {
+    "id": "q_web_045_005",
+    "query_text": "Build a web app blog network for faculty to share their research commentary and opinions, where posts are grouped by department or research area, each post shows the author's name and date, and readers can browse by topic or search by keyword in a desktop browser."
+  },
+  {
+    "id": "q_web_045_006",
+    "query_text": "Make a web app comparison guide for graduate program admissions, where I can see different programs listed side by side with their requirements, deadlines, and acceptance info, and prospective students browsing on desktop can filter by field of study to narrow down their options."
+  },
+  {
+    "id": "q_web_045_007",
+    "query_text": "Build a web app library portal for rare books and digital special collections, where items are organized by collection, each entry shows the title, date, and a description, and researchers on desktop browsers can search by keyword or browse by category to find what they're looking for."
+  },
+  {
+    "id": "q_web_046_001",
+    "query_text": "An enrollment app for a website that shows our early-bird tuition discount with a live countdown to when the deal expires, a clear list of what's included in the discounted price, and a signup form so students can lock in the rate before the deadline right from their desktop browser."
+  },
+  {
+    "id": "q_web_046_002",
+    "query_text": "Build a web app landing page where visitors can download a free study guide in exchange for their name and email, with a short description of what's in the guide, a preview of the topics covered, and a simple form so we can capture their info before they get the download link."
+  },
+  {
+    "id": "q_web_046_003",
+    "query_text": "Need a web app that puts our instructors in the spotlight, with each faculty member listed with their photo, credentials, subject area, and a short bio, so prospective students browsing on desktop can see who's teaching and feel confident about signing up."
+  },
+  {
+    "id": "q_web_046_004",
+    "query_text": "Build a web app gallery of student testimonial videos for our course page, where each video is shown with the student's name, program, and a one-line summary of what they said, organized in a clean grid so visitors on desktop can browse through the stories and feel reassured before enrolling."
+  },
+  {
+    "id": "q_web_046_005",
+    "query_text": "Need a web app signup page for our limited-cohort bootcamp waitlist, where visitors can see how many spots are left, read a short description of what the bootcamp covers, and fill out a simple form with their name and email to reserve their place before the cohort fills up."
+  },
+  {
+    "id": "q_web_046_006",
+    "query_text": "Make a web app showcase page for our graduate employment rates and career placement results, where the numbers are displayed clearly by program, with a list of companies our graduates have joined and a breakdown by industry so prospective students on desktop can see what outcomes to expect."
+  },
+  {
+    "id": "q_web_046_007",
+    "query_text": "Create a web app placement quiz tool where a student answers a few questions about their goals and current level, and at the end gets a personalized list of course recommendations that fit their answers, so they can find the right starting point without guessing."
+  },
+  {
+    "id": "q_web_047_001",
+    "query_text": "Need a web app to handle training content licensing and royalty tracking all in one place, where I can see which courses are licensed to which partners, what the royalty rates are, and when the next payment is due, so I stop hunting through spreadsheets and emails every time someone asks."
+  },
+  {
+    "id": "q_web_047_002",
+    "query_text": "Need a web app portal where users can see their current subscription plan, check when it renews, and upgrade to a higher tier in just a few clicks, so I stop getting emails from people who can't figure out how to renew their annual plan on their own."
+  },
+  {
+    "id": "q_web_047_003",
+    "query_text": "Create a web app for corporate account self-service onboarding, where a new company can set up their account, add team members, and go through a short guided setup checklist without needing to wait for someone from our side to walk them through it step by step."
+  },
+  {
+    "id": "q_web_047_004",
+    "query_text": "Custom training program builder and pricing estimator tool for a web app where I can pick the number of sessions, add topics, and the price just calculates itself automatically so I don't have to do the math every single time a client asks for a quote."
+  },
+  {
+    "id": "q_web_047_005",
+    "query_text": "Need a web-based tool that takes a list of skills an enterprise client's team should have, compares it against what they actually have, and spits out a clean report showing all the gaps — the kind of thing I can just hand to a manager and not have to manually put together in a spreadsheet every time."
+  },
+  {
+    "id": "q_web_047_006",
+    "query_text": "An instructor contractor hiring portal for a web app where our team can post open teaching roles, collect applications from freelance instructors, and send out contracts digitally so the whole back-and-forth of hiring someone doesn't involve endless email chains."
+  },
+  {
+    "id": "q_web_047_007",
+    "query_text": "Need a web-based tracker that lets franchise staff sign up for required training programs, see which ones they've finished and which are still pending, and shows their overall progress so nobody has to chase people down asking if they've completed their onboarding modules yet."
+  },
+  {
+    "id": "q_web_048_001",
+    "query_text": "Need a web app where enrolled students can log in and book a time slot with their academic advisor — showing which advisors are available, on what days, and letting students pick the slot that works for them, so I'm not managing all of this over email anymore."
+  },
+  {
+    "id": "q_web_048_002",
+    "query_text": "Make a booking tool for a web app where students interested in studying abroad can browse available consultation slots, pick a time with a counselor, and confirm the appointment — so everything is in one place and students stop messaging us directly to schedule."
+  },
+  {
+    "id": "q_web_048_003",
+    "query_text": "Make a web-based appointment scheduler for special educational needs assessments, where parents can see available assessment slots, choose a time that works, and fill in basic info about their child ahead of the meeting — so we stop doing all of this over phone calls."
+  },
+  {
+    "id": "q_web_048_004",
+    "query_text": "A booking app for art and design trial classes that lives in the browser, where people can see what classes are available that week, pick a time slot, and reserve their spot — so interested students can sign up on their own and we don't have to handle every registration manually."
+  },
+  {
+    "id": "q_web_048_005",
+    "query_text": "Build a web app for a swimming school where students can see the weekly lesson schedule, pick an open lane and time slot, and reserve it themselves — so I'm not fielding messages all day from parents asking when the next available lesson is."
+  },
+  {
+    "id": "q_web_048_006",
+    "query_text": "Need a web app for a driving school where students can see which instructors have open slots, pick a day and time for their behind-the-wheel lesson, and lock it in — so the whole scheduling process stops being a phone tag nightmare."
+  },
+  {
+    "id": "q_web_048_007",
+    "query_text": "Build a web-based scheduler for people studying for professional certifications who want to book prep coaching sessions — they should be able to see available coaches, pick a time, and have reminders sent automatically, so they can stop trying to coordinate everything over text."
+  },
+  {
+    "id": "q_web_049_001",
+    "query_text": "Need a web app for corporate onboarding and compliance training that gives new employees a list of required courses to complete, tracks which ones they've finished, and lets HR see everyone's progress at a glance — basically something that keeps the whole onboarding process organized and on track."
+  },
+  {
+    "id": "q_web_049_002",
+    "query_text": "An interactive STEM virtual lab app that runs in the browser, where students can run experiments like mixing chemicals or building circuits, see what happens in real time, and get a summary of what they observed — I want it to include at least physics and chemistry labs with clear step-by-step instructions."
+  },
+  {
+    "id": "q_web_049_003",
+    "query_text": "A peer skill-exchange community app that works in the browser, where people can post what skills they can teach, browse what others are offering to teach, and arrange to swap lessons with each other — I want there to be a way to message someone and track which swaps are happening."
+  },
+  {
+    "id": "q_web_049_004",
+    "query_text": "Make a web-based essay grading tool where teachers can paste in a student's essay, score it against a rubric with categories like argument, evidence, and writing quality, and the app shows a total score plus written feedback for each category — so grading feels consistent and I have something to share back with the student."
+  },
+  {
+    "id": "q_web_049_005",
+    "query_text": "Need a web app that works like a library of lesson plans where teachers can upload their own plans, browse what other teachers have shared, and copy or adapt someone else's plan for their own class — I want to be able to search by subject and grade level so finding the right one is fast."
+  },
+  {
+    "id": "q_web_049_006",
+    "query_text": "Make a web app that works like an open digital textbook library, where students can open a book and highlight text, add their own notes right next to the paragraph, and save everything so the notes are still there next time they come back — I want it to cover at least a few subjects like math, history, and science."
+  },
+  {
+    "id": "q_web_049_007",
+    "query_text": "Need a web app for parents to check in on their kid's school performance, where they can see recent grades, assignment scores, and overall progress per subject — I want it to show a simple overview on the main page and let me click into any subject to see the details."
+  },
+  {
+    "id": "q_web_050_001",
+    "query_text": "Need a web app where students can post their finished projects — like a gallery of work — and classmates can leave comments and feedback on each one, so it's easier to share what everyone made and actually get some reactions beyond just the teacher seeing it."
+  },
+  {
+    "id": "q_web_050_002",
+    "query_text": "Create a web app for homeschool co-ops where families can coordinate who's teaching what this week, share lesson plans and resources, and sign up kids for the sessions being offered — basically a shared planner that keeps everyone on the same page without all the group chat chaos."
+  },
+  {
+    "id": "q_web_050_003",
+    "query_text": "Create a web app that helps grad students find each other for research collaborations — they can put up what they're working on, look for people with overlapping interests, and reach out to co-write papers or share data, so finding a research partner is less random than just asking around."
+  },
+  {
+    "id": "q_web_050_004",
+    "query_text": "Build a web app for a college campus where students can browse all the active clubs, see what each one is about, and check an event calendar that shows upcoming student-run activities — I want clubs to be able to post their own events and students to mark which ones they're going to."
+  },
+  {
+    "id": "q_web_050_005",
+    "query_text": "Build a web app for an online debate club where members can practice arguing different sides of a topic, post their arguments, reply to others, and get feedback on how strong their reasoning was — I want it to feel like a structured forum where each debate topic has its own thread."
+  },
+  {
+    "id": "q_web_050_006",
+    "query_text": "Create a web app for a student council where members can post discussion topics for the whole group to weigh in on, and then run a vote to decide on things like events or policy changes — I want the voting to be clear so everyone can see what was decided and why."
+  },
+  {
+    "id": "q_web_050_007",
+    "query_text": "Need a web app for writing and essay courses where students submit their drafts, get assigned a classmate's paper to review, and leave comments and a score using a simple rubric — so the whole peer review process is organized and nobody loses track of who reviewed whose work."
+  }
+]

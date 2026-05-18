@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_scene_029_006",
+    "query_text": "Create a mobile app that helps me capture every random to-do that pops into my head during the day and then walks me through processing each one — like, is it actionable, what's the next step, does it belong to a project — so nothing gets lost and my head stays clear, with a quick-add button on the main screen and a step-by-step review flow for going through everything I've collected."
+  },
+  {
+    "id": "q_scene_029_007",
+    "query_text": "A legal case action steps manager app for my phone where I can list all the things I need to do for each case — like call the client, file a document, send a letter — and check them off as I go, with each case on its own screen and a running list of what's overdue so nothing slips through the cracks."
+  },
+  {
+    "id": "q_scene_029_008",
+    "query_text": "Create a mobile app that gives me a checklist for every stage of writing a research paper — like a step-by-step list covering outlining, drafting, citations, and revision — so I can check things off as I go and always know where I left off, with the current stage shown clearly at the top."
+  },
+  {
+    "id": "q_scene_030_001",
+    "query_text": "A 90-minute focus timer app for my phone that counts down a full deep work block without interruptions, shows a big clear countdown on screen, and lets me jot a quick note about what I'm working on before I start so I stay on track and actually finish things instead of getting distracted."
+  },
+  {
+    "id": "q_scene_030_002",
+    "query_text": "Build a study rotation timer app for my phone that lets me set up a list of subjects — like math, history, English — and then cycles through them one by one with a countdown for each slot, alerting me when it's time to switch so I spread my study time evenly across everything I need to cover."
+  },
+  {
+    "id": "q_scene_030_003",
+    "query_text": "Build a pair programming rotation timer app for my phone that lets two people enter their names, set a time interval like 10 or 15 minutes, then counts down and clearly shows whose turn it is to drive the keyboard, with a big alert when it's time to swap so neither person hogs the controls the whole session."
+  },
+  {
+    "id": "q_scene_030_004",
+    "query_text": "A meeting time keeper app for my phone that lets me set a total meeting duration and then tracks how long each agenda item is actually taking, so I can see at a glance if we're running over and nudge the team to move on — with a simple list of agenda items I can tap through one by one."
+  },
+  {
+    "id": "q_scene_030_005",
+    "query_text": "Make a 10-minute language drill timer app for my phone that counts down exactly 10 minutes, shows a big bold timer so I can glance at it while practicing, and lets me log which language or drill type I just finished so I can look back and see how many sessions I've done this week."
+  },
+  {
+    "id": "q_scene_030_006",
+    "query_text": "Build a work break scheduler app for my phone that reminds me to take short breaks throughout my workday — like every hour or so — and when a break starts, shows a simple suggestion for what to do, like stretch or breathe, with a gentle countdown so I actually take the full break before jumping back in."
+  },
+  {
+    "id": "q_scene_030_007",
+    "query_text": "Make a classroom activity timer app for my phone that lets a teacher set up different activity slots — like group discussion, individual work, Q&A — each with its own duration, then counts down each one and shows a clear signal when it's time to move to the next activity, so the class stays on schedule without constant watch-checking."
+  },
+  {
+    "id": "q_scene_030_008",
+    "query_text": "Create a mock interview practice timer app for my phone that counts down a set answer time — say 2 minutes per question — shows a big countdown while I'm answering, then lets me mark whether I felt good or struggled, and keeps a simple log of all my practice rounds so I can see how I'm improving over time."
+  },
+  {
+    "id": "q_scene_031_001",
+    "query_text": "Need a conference schedule planner app for my phone that lets me list all the sessions and talks for the event day with their start times, so I can see the full day at a glance, mark the ones I want to attend, and get a reminder before each session so I never miss the ones I actually care about."
+  },
+  {
+    "id": "q_scene_031_002",
+    "query_text": "Build a semester calendar planner app for my phone that shows the whole academic semester at a glance — all the weeks laid out — where I can add exams, assignment deadlines, and holidays, and tap any date to see what's due, so I always know what's coming up and can plan my study time properly."
+  },
+  {
+    "id": "q_scene_031_003",
+    "query_text": "Make a sprint and release timeline tracker app for my phone that shows each sprint as a clear block with start and end dates, lets me add release milestones in between, and shows how many days are left in the current sprint, so the team can always see exactly where we are in the cycle and what's coming up next."
+  },
+  {
+    "id": "q_scene_031_004",
+    "query_text": "Need a healthcare appointment organizer app for my phone that lets me save upcoming doctor visits with the date, time, doctor name, and what it's for, shows them in order so I can see what's next, and gives me a reminder the day before each appointment so I never forget to show up or prepare."
+  },
+  {
+    "id": "q_scene_031_005",
+    "query_text": "Need a world clock app for my phone that shows the current time in multiple cities at once — like New York, London, Tokyo, and a couple more I add myself — so when I'm scheduling a call with people in different countries I can instantly see what time it is for everyone without doing mental math every single time."
+  },
+  {
+    "id": "q_scene_031_006",
+    "query_text": "A legal deadline tracker app for my phone where I can log upcoming court dates and filing deadlines with the case name and date, sorted by how soon they are, so I can see at a glance which one is coming up first and get a heads-up reminder a few days before each one so nothing gets missed."
+  },
+  {
+    "id": "q_scene_031_007",
+    "query_text": "A content publishing calendar app for my phone where I can add upcoming posts and articles with their planned publish date and platform — like a blog, Instagram, or newsletter — so I can see everything I have scheduled this month in one list, tap to edit details, and keep my content releases on a steady, organized schedule."
+  },
+  {
+    "id": "q_scene_031_008",
+    "query_text": "Make a wedding vendor appointment organizer app for my phone that lets me save all my vendor meetings — like the florist, caterer, and photographer — with the date, time, and location for each, so I can see all my upcoming appointments in one place and get a reminder before each one so I never accidentally double-book or miss a meeting."
+  },
+  {
+    "id": "q_scene_032_001",
+    "query_text": "Build a marketing campaign tracker app for my phone that lets me log each campaign with how much I spent and how much revenue it brought in, calculates a simple return on investment automatically, and shows all my campaigns in a list sorted by performance so I can quickly see which ones are worth running again and which ones weren't worth the money."
+  },
+  {
+    "id": "q_scene_032_002",
+    "query_text": "A personal spending breakdown app for my phone where I can log my daily expenses, see them grouped by category — like food, transport, and entertainment — and view a simple chart showing where my money went this month, so I can finally figure out what I'm actually wasting money on without having to dig through my bank statements."
+  },
+  {
+    "id": "q_scene_032_003",
+    "query_text": "Need a team sprint progress tracker app for my phone that shows how many tasks we've finished versus how many are left in the current sprint, plots a simple line showing our pace over time, and makes it clear whether we're on track to finish before the deadline so I can flag problems early in our next standup."
+  },
+  {
+    "id": "q_scene_032_004",
+    "query_text": "Need a social media stats tracker app for my phone that lets me log follower counts, likes, and comments for each platform each week, and shows a simple chart of how engagement is trending over time, so I can see at a glance which platform is growing and whether my posting effort is actually paying off."
+  },
+  {
+    "id": "q_scene_032_005",
+    "query_text": "Make a sales funnel tracker app for my phone that shows how many visitors, leads, and actual buyers I have at each stage of the funnel, calculates the conversion rate between each step, and updates the numbers when I tap in new data, so I can spot exactly where customers are dropping off and know where to focus."
+  },
+  {
+    "id": "q_scene_032_006",
+    "query_text": "Build an HR headcount tracker app for my phone that shows how many people are in each department, lets me log new hires and departures with dates, and displays a simple monthly trend so I can see at a glance how total headcount is changing and quickly answer whenever someone asks how many people we've lost or hired this quarter."
+  },
+  {
+    "id": "q_scene_032_007",
+    "query_text": "Need a customer support SLA tracker app for my phone where I can see all open tickets at a glance, which ones are about to breach their deadline, and quickly check how many hours are left on each case so I'm not scrambling to catch up at the last minute."
+  },
+  {
+    "id": "q_scene_032_008",
+    "query_text": "Build a logistics delivery status board mobile app that shows all shipments in one list, lets me see which ones are in transit, out for delivery, or delayed, and lets me tap any order to check the latest update without having to dig through emails or call anyone."
+  },
+  {
+    "id": "q_scene_033_001",
+    "query_text": "Need a technical documentation writing tool that feels clean and focused on my phone — the kind where the layout is calm, almost like a beautifully typeset book, with clear sections for code snippets and explanations that look polished rather than cluttered, so writing and reading docs actually feels pleasant."
+  },
+  {
+    "id": "q_scene_033_002",
+    "query_text": "Build a meeting minutes and action items planner that has a warm, editorial feel — think clean typography and subtle color accents — where I can jot down what was decided, assign who does what by when, and flip through past meetings in a mobile app that actually looks like something people would want to open."
+  },
+  {
+    "id": "q_scene_033_003",
+    "query_text": "Create a research literature review note organizer for my phone with a calm, academic aesthetic — soft backgrounds, clean text hierarchy — where I can add papers, write summaries next to each one, tag them by theme, and browse my notes in a way that feels curated and easy to revisit."
+  },
+  {
+    "id": "q_scene_033_004",
+    "query_text": "Need a personal knowledge wiki builder for my phone that looks like a beautiful digital journal — clean layout, warm tones, nice readable fonts — where I can write short topic pages, link related ideas together, and browse my growing knowledge in a way that feels like flipping through a well-designed notebook."
+  },
+  {
+    "id": "q_scene_033_005",
+    "query_text": "Create a recipe collection digital notebook for my phone that looks gorgeous — rich food photography vibes, warm earthy tones, elegant card layouts — where I can save recipes with a photo, list the ingredients and steps clearly, and flip through my collection like browsing a beautiful cookbook."
+  },
+  {
+    "id": "q_scene_033_006",
+    "query_text": "Need a field inspection report editor for my phone that has a professional but clean look — structured layout, clear sections for findings and photos — where I can fill in inspection details on-site, add notes for each area I check, and have it all look presentable without me doing any extra formatting work."
+  },
+  {
+    "id": "q_scene_033_007",
+    "query_text": "Make a legal case summary note organizer for my phone that feels sharp and well-organized — think clean lines, clear typography, maybe a subtle dark color scheme — where I can save case names, jot down key facts and rulings, and quickly pull up any case summary when I need it."
+  },
+  {
+    "id": "q_scene_033_008",
+    "query_text": "Need a student study notes flashcard app for my phone that looks visually appealing and easy on the eyes — clean cards, good contrast, pleasant colors — where I can write a question on one side and the answer on the other, flip through my study set, and track which cards I already know well."
+  },
+  {
+    "id": "q_scene_034_001",
+    "query_text": "Build a prescription pill reminder and refill log mobile app where I can add each medication with its dose and schedule, get a reminder at the right time each day, check off when I've taken it, and also log when I refill so I know how many days of pills I have left."
+  },
+  {
+    "id": "q_scene_034_002",
+    "query_text": "Need a vitamin and supplement daily reminder app for my phone where I can list out all my supplements, set a reminder time for each one, check them off as I take them, and see a simple log of whether I've been consistent over the past week or so."
+  },
+  {
+    "id": "q_scene_034_003",
+    "query_text": "Create a post-surgery recovery protocol reminder app for my phone that keeps track of all the things I need to do each day — take meds, do specific exercises, change dressings — with reminders at the right times and a simple checklist I can check off so nothing slips through."
+  },
+  {
+    "id": "q_scene_034_004",
+    "query_text": "Build a mental health self-care routine checker for my phone where I can list out the daily habits I want to keep — like journaling, going for a walk, breathing exercises — get a gentle reminder each day, check them off as I do them, and see a simple streak to keep me motivated."
+  },
+  {
+    "id": "q_scene_034_005",
+    "query_text": "Need a daily skincare step routine reminder app for my phone where I can set up my morning and evening routines step by step, get a nudge at the right time, and check off each product as I use it so I'm not forgetting the sunscreen or toner again."
+  },
+  {
+    "id": "q_scene_034_006",
+    "query_text": "An insulin injection schedule tracker for my phone that lets me log each injection with the time, dose, and which body site I used, shows my schedule for the day so I know what's coming next, and keeps a history I can show my doctor — the home screen of the app should make it clear at a glance what I've done and what's still due today."
+  },
+  {
+    "id": "q_scene_034_007",
+    "query_text": "Need a stretching break desk alert app for my phone where I can set how often I want a reminder to get up and stretch — like every 45 minutes — have it buzz my phone with a short checklist of stretches to do, and then mark it done so I stay on track throughout my workday."
+  },
+  {
+    "id": "q_scene_034_008",
+    "query_text": "Make a sun protection reapplication timer for my phone that counts down from whenever I last applied sunscreen, sends me a reminder when it's time to reapply, lets me tap a button to reset the timer, and keeps a simple log of how many times I've reapplied throughout the day."
+  },
+  {
+    "id": "q_scene_035_001",
+    "query_text": "Build a strength training rep and set logger mobile app where I can quickly add an exercise, tap in how many sets and reps I did with the weight used, and look back at previous sessions to see if I'm actually getting stronger over time — I just want something fast and easy to use between sets at the gym."
+  },
+  {
+    "id": "q_scene_035_002",
+    "query_text": "A marathon weekly training plan tracker for my phone that shows the whole week at a glance — each day's planned run with distance and pace goal — lets me check off each run when I finish it, and shows how far I am from the total weekly mileage I'm aiming for so I can stay on schedule."
+  },
+  {
+    "id": "q_scene_035_003",
+    "query_text": "Create a CrossFit WOD score and record tracker for my phone where I can log today's workout name, my score or finish time, and any notes on how it went, then browse back through past WODs to see my scores and spot when I'm hitting new personal bests."
+  },
+  {
+    "id": "q_scene_035_004",
+    "query_text": "Build a cycling route distance and speed tracker mobile app where I can log each ride with the route name, distance, time, and average speed, see a list of all my past rides, and check a simple summary of my total distance and average pace for the week."
+  },
+  {
+    "id": "q_scene_035_005",
+    "query_text": "Create a swimming pool lap counter app for my phone where I can tap to count each lap as I finish it, set a target number of laps for the session, and see my total distance and time when I'm done — something big and easy to tap while I'm at the edge of the pool."
+  },
+  {
+    "id": "q_scene_035_006",
+    "query_text": "Create a yoga flow session sequence logger for my phone where I can record the poses I did in each session in order, add a note on how the flow felt, and look back at past sessions to see which sequences I've practiced most and plan what to do next time."
+  },
+  {
+    "id": "q_scene_035_007",
+    "query_text": "Make a rock climbing route grade tracker for my phone where I can log each route I attempted with the grade, whether I topped it or not, and a short note on the crux, so I can look back and see how my grades are progressing and which styles of routes I'm working on."
+  }
+]
