@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_066_005",
+    "query_text": "Create a web app where our neighborhood watchdog group can keep tabs on how the local government is spending money — I want a place where people can post budget documents they've dug up, flag suspicious line items, and leave comments so everyone can weigh in together, all accessible from a desktop browser."
+  },
+  {
+    "id": "q_web_066_006",
+    "query_text": "Make a web app for a community land trust where members can log in, vote on governance decisions, and have threaded discussions about how the land should be managed — something you'd use from a desktop browser where you can see ongoing proposals on one side and the conversation thread on the other."
+  },
+  {
+    "id": "q_web_067_001",
+    "query_text": "Make a web app where volunteers can upload scanned images of old handwritten documents and the app tries to read the text automatically, then lets anyone in the community correct the mistakes and fill in the gaps — I just want a browser-based tool where contributors can see the original image next to a text box and save their fixes."
+  },
+  {
+    "id": "q_web_067_002",
+    "query_text": "Build a web app that lists community arts grants and funding opportunities in one place, and lets artists answer a few quick questions so the app can tell them which ones they actually qualify for — I'm tired of reading through every grant's fine print myself, so a browser-based checker that filters down to the relevant ones would save so much time."
+  },
+  {
+    "id": "q_web_067_003",
+    "query_text": "Need a tracker app I can use in my browser where I fill out a public records request form, send it off, and then keep track of what I submitted, what agency it went to, and whether they've replied or missed the deadline — it's so annoying losing track of which requests are still pending."
+  },
+  {
+    "id": "q_web_067_004",
+    "query_text": "A web app for managing a museum's collection — I want to be able to look up any object in the inventory, see where it is, and handle requests to loan it to another institution, all from a desktop browser where the list of items is on the left and the details and loan status show up on the right."
+  },
+  {
+    "id": "q_web_067_005",
+    "query_text": "A browser-based tool where you paste in a chunk of government or civic text in English and it shows you translated versions in several languages side by side — I want it to save a history of past translations so I can find them again, and let me pick which languages to show."
+  },
+  {
+    "id": "q_web_067_006",
+    "query_text": "Build a web app that works as an archive for endangered languages where people can upload recordings of elders speaking, attach transcriptions and translations, and browse by language or region — I want it to be usable from a desktop browser so researchers can sit down and go through the material properly."
+  },
+  {
+    "id": "q_web_068_001",
+    "query_text": "Need a web app where an engineering team can map out all the tools and technologies they use — like you pick a tool, link it to the other things it connects with, and get a visual diagram you can share with the rest of the team in a desktop browser, so everyone can see how the whole setup fits together."
+  },
+  {
+    "id": "q_web_068_002",
+    "query_text": "A website where hackathon organizers can show off all the projects that were submitted — each project gets its own card with a description, team name, and the scores from each judge, and visitors can browse the gallery from a desktop browser and sort by score or category."
+  },
+  {
+    "id": "q_web_068_003",
+    "query_text": "Make a web app that's basically a gallery for generative and creative coding projects — people can submit their sketches or animations, they show up as little live previews you can click into, and there's a way to browse by style or technique, all in a desktop browser so you can really appreciate the visuals."
+  },
+  {
+    "id": "q_web_068_004",
+    "query_text": "Need a website for a developer tool I'm working on — I want a landing site where visitors can read about what the tool does, see a couple of interactive little demos right on the page, and find a download or sign-up link, all designed for desktop browsers where there's room to show things off properly."
+  },
+  {
+    "id": "q_web_068_005",
+    "query_text": "Need a web app where I can show off all the little side projects I've built — each one gets a card with a short description plus a live preview you can actually poke around in right there on the page, and the whole thing should work nicely in a desktop browser so people can explore without jumping between tabs."
+  },
+  {
+    "id": "q_web_068_006",
+    "query_text": "Make a website that works like a portfolio for technical writing and documentation samples — I want to list my projects with a short description and a link to read the full doc, organized by topic, and it should look clean and be easy to navigate in a desktop browser when someone's reviewing my work."
+  },
+  {
+    "id": "q_web_069_001",
+    "query_text": "Make a web app that's a reader for programming language specs — you can pick a language, browse the official spec text, and add your own notes or highlights to specific sections so you remember what things mean, all in a desktop browser with the spec on one side and your annotations on the other."
+  },
+  {
+    "id": "q_web_069_002",
+    "query_text": "Need a web app that collects security advisories and CVE notices and presents them in plain readable summaries — I want to be able to filter by the libraries I actually use and bookmark the ones I need to deal with, accessible from a desktop browser so I can go through them properly without having to dig through raw feeds."
+  },
+  {
+    "id": "q_web_069_003",
+    "query_text": "Build a web app that works like an online magazine of engineering scaling stories from real startups — each story covers how a team handled growth, you can filter by company size or the kind of scaling challenge, and the whole thing reads nicely in a desktop browser, great for referencing when your own team hits the same problems."
+  },
+  {
+    "id": "q_web_069_004",
+    "query_text": "Build a web app that's a searchable library of developer podcast episodes — each entry has the show name, episode title, a written transcript, and key takeaway notes, and you can search for a topic and jump to the part of the transcript where it was discussed, all working in a desktop browser."
+  },
+  {
+    "id": "q_web_069_005",
+    "query_text": "Need a web app that's like an encyclopedia of software design patterns — you look up a pattern, get a plain-language explanation of what it is and when to use it, see a simple diagram, and browse related patterns, all in a well-organized browser-based tool you can keep open in a tab while you're working."
+  },
+  {
+    "id": "q_web_069_006",
+    "query_text": "Create a web app that works like a little online magazine dedicated to open-source maintainers — you browse interviews with people who run popular projects, read stories about how contributors got started, and can filter by the kind of project or programming language, all laid out nicely for reading in a desktop browser."
+  },
+  {
+    "id": "q_web_070_001",
+    "query_text": "A website for recruiting developer advocates and community ambassadors — it explains the program, shows what current ambassadors do, lists the perks, and has a simple sign-up form people can fill out from a desktop browser to express their interest in joining."
+  },
+  {
+    "id": "q_web_070_002",
+    "query_text": "Build a website for a technical certification course and exam — it should explain what the certification covers, show the study path, list exam dates, and let people sign up or buy the course, all designed for desktop browsers so prospective students can read through everything comfortably before deciding."
+  },
+  {
+    "id": "q_web_070_003",
+    "query_text": "Build a web app that's an engineering blog where the team can post technical articles, and each post has a little banner or section at the bottom nudging readers to check out the actual product — something that works in a desktop browser and makes it easy to go from reading a post to finding out more about the tool."
+  },
+  {
+    "id": "q_web_070_004",
+    "query_text": "A web app for an open-source grant program — visitors can learn about the funding on the home page, browse past grant recipients to get a sense of what kinds of projects get picked, and fill out an application form right in the browser, so maintainers can apply for support without a bunch of back-and-forth email."
+  },
+  {
+    "id": "q_web_070_005",
+    "query_text": "Create a website that shows off developer productivity benchmark results — like a comparison of how much faster or more efficient a tool makes things, with some simple charts and real numbers, maybe a few quotes from people who ran the tests, all laid out for desktop browsers so companies can share it with their teams as a reference."
+  }
+]

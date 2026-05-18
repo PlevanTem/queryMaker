@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_018_005",
+    "query_text": "Need a mobile app that helps me figure out what to say in tough conversations — like asking for a raise, setting a boundary with a friend, or telling someone something they don't want to hear — where I pick the situation and it walks me through a script I can actually use, with a spot to jot notes before I go in."
+  },
+  {
+    "id": "q_scene_018_006",
+    "query_text": "Make a mobile app that helps me get ready before walking into a networking event, where I can quickly jot down who I'm hoping to meet, what I want to say to each person, and a few conversation starters so I'm not just standing there awkwardly with my drink."
+  },
+  {
+    "id": "q_scene_018_007",
+    "query_text": "Create a holiday card message maker app for my phone where I can pick the occasion — Christmas, New Year's, birthdays — type in the person's name, and get a warm personal message I can copy and send, with a way to save my favorites for later."
+  },
+  {
+    "id": "q_scene_018_008",
+    "query_text": "Need a mobile app that throws out fun team building activity ideas when my team is feeling stuck — I tap a button, it suggests something based on team size and whether it's in-person or remote, and I can save or share the ones that sound good."
+  },
+  {
+    "id": "q_scene_018_009",
+    "query_text": "Build a compliment and encouragement generator app for my phone where I tap a button and it gives me a genuine, uplifting message I can send to a friend or coworker, with options to pick the mood — like motivational, funny, or heartfelt — so it fits the moment."
+  },
+  {
+    "id": "q_scene_019_001",
+    "query_text": "A bar exam prep countdown timer app for my phone that feels serious and focused — like a clean dark background with big bold days-remaining numbers front and center, plus a small study checklist underneath so I can see at a glance how much time is left and what I still need to tackle."
+  },
+  {
+    "id": "q_scene_019_002",
+    "query_text": "Build a visa and immigration deadline tracker app for my phone that has a calm, organized feel — where I can add each important date like renewal deadlines, interview appointments, and document submission cutoffs, and see them laid out in a clear timeline so nothing sneaks up on me."
+  },
+  {
+    "id": "q_scene_019_003",
+    "query_text": "Create a sobriety milestone counter app for my phone that feels warm and encouraging — where I set my clean date and it shows me the days, weeks, and months I've made it through, with little celebration moments when I hit meaningful milestones like 30 days or a full year."
+  },
+  {
+    "id": "q_scene_019_004",
+    "query_text": "A military deployment return countdown app for my phone that feels hopeful and tender — showing the days ticking down until my loved one comes home, with a spot to write little notes or messages for each day that I could share when they're back, and a soft warm color palette that feels like waiting with love."
+  },
+  {
+    "id": "q_scene_019_005",
+    "query_text": "Make a lease renewal tracker app for my phone that looks clean and easy to read — where I can enter my lease end date and it shows how many days I have left, with gentle reminders as the deadline gets closer, and a place to note important things like notice period and landlord contact."
+  },
+  {
+    "id": "q_scene_019_006",
+    "query_text": "Build a product launch countdown app for my phone that has that exciting, anticipation-building vibe — a big striking clock ticking down to launch day, somewhere to list the launch milestones I'm working toward, and a look that feels like hype and momentum so I stay pumped about the whole thing."
+  },
+  {
+    "id": "q_scene_019_007",
+    "query_text": "Build a music album or book release countdown app for my phone that captures that electric anticipation feeling — a beautiful cover image front and center, a big countdown showing days and hours until drop day, and a vibe that feels like the aesthetic of the release itself, moody or colorful depending on what I set."
+  },
+  {
+    "id": "q_scene_019_008",
+    "query_text": "A space mission launch countdown app for my phone that feels cinematic and thrilling — deep space dark background with a glowing countdown clock ticking toward liftoff, a short blurb about the mission, and that sense of awe and scale like you're actually watching history happen from your couch."
+  },
+  {
+    "id": "q_scene_019_009",
+    "query_text": "A festival and holiday season countdown app for my phone that feels festive and joyful — showing all the upcoming holidays and festivals across the year with colorful cards for each one, a countdown for the nearest celebration, and a warm seasonal aesthetic that shifts as the year changes, like spring pastels fading into cozy winter tones."
+  },
+  {
+    "id": "q_scene_020_001",
+    "query_text": "A text comparison tool for my phone where I can paste two versions of a document side by side and instantly see what changed — added lines, removed lines, edited words — so I can stop squinting at two windows trying to spot the difference myself, with the changes highlighted in a way that's actually easy to read on a small screen."
+  },
+  {
+    "id": "q_scene_020_002",
+    "query_text": "Make a mobile app that lets me enter two or three different email subject lines and quickly compare them side by side so I can figure out which one sounds more clickable before I hit send, with a spot to add notes about why I prefer one over the other."
+  },
+  {
+    "id": "q_scene_020_003",
+    "query_text": "Build a mobile tool that lets me paste in messy JSON, CSV, or YAML and instantly cleans it up into something readable, tells me if there are any errors, and shows me exactly where the problem is so I can fix it on the spot without having to hunt through the whole thing manually."
+  },
+  {
+    "id": "q_scene_020_004",
+    "query_text": "A regex builder and tester tool on my phone where I can type in a pattern, paste in some sample text, and instantly see which parts match highlighted in the text — so I can tweak the pattern and watch the matches update in real time without having to copy stuff into a different tool every single time."
+  },
+  {
+    "id": "q_scene_020_005",
+    "query_text": "Create a mobile spell check and grammar corrector tool where I can paste in whatever I wrote — an email draft, a message, a report — and it highlights my mistakes and suggests fixes right there so I can clean it up fast without having to open a separate editor or copy-paste back and forth."
+  },
+  {
+    "id": "q_scene_020_006",
+    "query_text": "Make a mobile text summarizer tool that I can paste any long article or document into and it spits out a short summary plus a bullet list of the key points, so I can get the gist of something in thirty seconds instead of reading five pages when I'm on the go."
+  },
+  {
+    "id": "q_scene_020_007",
+    "query_text": "Create a password generator tool for my phone where I can pick the length and whether I want symbols or numbers mixed in, and it generates a strong password I can copy with one tap, plus shows a little strength meter so I know it's actually secure before I use it."
+  },
+  {
+    "id": "q_scene_020_008",
+    "query_text": "Need a mobile markdown to HTML converter tool where I type or paste my markdown and it instantly shows me the rendered HTML output below, with a copy button to grab the HTML code so I can drop it wherever I need it without having to mess around on a computer."
+  },
+  {
+    "id": "q_scene_020_009",
+    "query_text": "Make a mobile readability checker tool where I paste in my writing and it tells me how easy it is to read — like a Flesch score and a plain-English grade level — so I can see if my emails or articles are too dense and tweak them until regular people can actually follow along."
+  },
+  {
+    "id": "q_scene_021_001",
+    "query_text": "Need a baby name generator app for my phone where I can tap and get a random name suggestion, filter by style like classic or unique or by origin like Japanese or Irish, and save the ones I like so my partner and I can compare our lists and figure out what we both actually love."
+  },
+  {
+    "id": "q_scene_021_002",
+    "query_text": "Make a random color palette generator app for my phone where I tap a button and it gives me a set of colors that look good together, shows me the hex codes so I can actually use them, and lets me lock a color I like while it shuffles the rest to find the perfect combo for a little brand or project I'm working on."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_039_001",
+    "query_text": "Travel health advisory tracker for my phone where I can pick a destination and see a checklist of things like vaccines needed, water safety, and any disease alerts, plus a section to save notes for each country I'm planning to visit."
+  },
+  {
+    "id": "q_scene_039_002",
+    "query_text": "Make a safety score app for mobile where you can look up any destination and see a clear rating for things like crime level, health risk, and natural disaster risk, with a short list of current travel advisories shown right on the home screen."
+  },
+  {
+    "id": "q_scene_039_003",
+    "query_text": "Make a trip highlight reel app for my phone that pulls together the best photos from a trip and lines them up into a tidy little slideshow, organized by day, with a spot to add a short caption for each photo so I remember what was happening."
+  },
+  {
+    "id": "q_scene_039_004",
+    "query_text": "A multi-destination trip planner app for mobile where I can add several cities in a row, set how many days I'm spending in each one, and see all my stops listed in order so I can check off each city as I go through my trip."
+  },
+  {
+    "id": "q_scene_039_005",
+    "query_text": "Make a budget backpacker route builder app for my phone where I can enter a starting city and a daily spending limit, then get a list of affordable stops in order with an estimated cost for each leg, so I can plan the whole trip without going over budget."
+  },
+  {
+    "id": "q_scene_039_006",
+    "query_text": "Create a family road trip day-by-day planner app for mobile where each day has its own list of stops, drive times, and things to do, so everyone in the family knows exactly what's happening each day and we can check things off as we go."
+  },
+  {
+    "id": "q_scene_039_007",
+    "query_text": "Build a luxury hotel and spa itinerary planner app for my phone where I can add each hotel stay with check-in and check-out dates, note down any spa appointments or special dining reservations, and see the whole trip laid out neatly day by day."
+  },
+  {
+    "id": "q_scene_040_001",
+    "query_text": "Create a mobile emergency kit reminder app that shows a checklist of safety items to pack before any trip, like a first aid kit, emergency contacts card, and backup power bank, and lets me check things off one by one so I never leave home without the essentials."
+  },
+  {
+    "id": "q_scene_040_002",
+    "query_text": "Need a eco-travel packing guide app for my phone that lists all the reusable items I should bring on a trip, like a refillable water bottle, tote bag, and bamboo utensils, organized by category so I can go through it like a checklist before I leave."
+  },
+  {
+    "id": "q_scene_040_003",
+    "query_text": "Build a cruise packing guide app for mobile that lists all the things you actually need for a cruise trip, like formal dinner outfits, seasickness meds, and prohibited items to leave at home, organized into categories so I can work through it step by step before boarding."
+  },
+  {
+    "id": "q_scene_040_004",
+    "query_text": "Build a beach vacation packing checklist app for my phone that has all the must-haves listed out by category, like sunscreen, swimwear, and beach gear, so I can tap each item to check it off as I pack and make sure I haven't forgotten anything before I head out."
+  },
+  {
+    "id": "q_scene_040_005",
+    "query_text": "Need a winter ski trip gear list app for my phone that organizes everything I need to pack into clear categories like clothing layers, ski equipment, and lodge essentials, so I can go through each section and check things off without having to think about what I might be missing."
+  },
+  {
+    "id": "q_scene_040_006",
+    "query_text": "A business trip essentials checklist app for mobile where the home screen shows all the key things I need to bring organized by category, like work documents, tech gear, and personal items, so I can tap each one to mark it packed and never scramble the morning of a flight again."
+  },
+  {
+    "id": "q_scene_040_007",
+    "query_text": "Need a ultralight backpacking gear list app for my phone that helps me plan exactly what to bring, with each item's weight listed so I can see the running total, and categories for shelter, clothing, food, and safety so I can work through it systematically before any hiking trip."
+  },
+  {
+    "id": "q_scene_041_001",
+    "query_text": "Create a crowd level checker app for my phone that shows how busy popular tourist sites are right now, with a simple rating like quiet, moderate, or packed for each spot, so I can decide the best time to visit and stop wasting half my trip standing in lines."
+  },
+  {
+    "id": "q_scene_041_002",
+    "query_text": "Create a railway platform and gate finder app for my phone that lets me enter my train number and departure station, then tells me exactly which platform and gate to go to, plus walking time from the main entrance so I stop running around confused at the station every time."
+  },
+  {
+    "id": "q_scene_041_003",
+    "query_text": "Build a neighbourhood food and shop discovery app for my phone that shows nearby restaurants, cafes, and little stores on a simple map, lets me filter by what I'm in the mood for, and gives me a short walking route so I can just wander without having to figure everything out myself."
+  },
+  {
+    "id": "q_scene_041_004",
+    "query_text": "A self-guided walking tour app for mobile that shows a city map with numbered stops, gives me a short description of each landmark when I tap it, and tracks where I am as I walk so I know which stop is next without having to constantly check a separate guide."
+  },
+  {
+    "id": "q_scene_041_005",
+    "query_text": "A cycling path and trail navigator app for my phone that shows local bike routes on a map, lets me pick a trail by difficulty or distance, and gives turn-by-turn directions so I can just ride without getting lost or having to figure out the route myself."
+  },
+  {
+    "id": "q_scene_041_006",
+    "query_text": "Make a scenic road trip route planner app for mobile where I can enter a start and end city and get a suggested drive that passes through interesting viewpoints and rest stops along the way, with the whole route shown as a simple list I can follow stop by stop."
+  },
+  {
+    "id": "q_scene_041_007",
+    "query_text": "Make a public transit route planner app for my phone that figures out how to get somewhere using a mix of bus, subway, and walking, shows each leg of the trip in order with estimated times, so I can just follow the steps and stop wasting time figuring out connections myself."
+  },
+  {
+    "id": "q_scene_042_001",
+    "query_text": "Need a fog and visibility alert app for my phone that shows current visibility conditions on my usual driving routes and sends me a heads-up when fog is bad enough that I should leave earlier or take a different road, so I stop getting caught off guard on the way to work."
+  },
+  {
+    "id": "q_scene_042_002",
+    "query_text": "Need a historical weather lookup app for my phone where I can pick any city and a specific past date and see what the weather was actually like that day, including temperature and whether it rained, so I can plan future trips based on what weather I can realistically expect."
+  },
+  {
+    "id": "q_scene_042_003",
+    "query_text": "A seasonal climate guide app for mobile that lets me look up any destination by month and see what the weather is typically like, with average temps and rain levels shown in a simple chart, so I can stop guessing what to pack and actually know what to expect before I book."
+  },
+  {
+    "id": "q_scene_042_004",
+    "query_text": "Make a 7-day hyperlocal weather forecast app for my phone that shows the forecast for my exact area, broken down hour by hour with temperature, rain chance, and wind, so I can plan my week at a glance and stop being caught off guard by the weather every single day."
+  }
+]

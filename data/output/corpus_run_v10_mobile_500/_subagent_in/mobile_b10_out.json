@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_021_003",
+    "query_text": "Create a story prompt generator app for my phone that throws out random writing ideas when I tap a button — I want it to suggest a genre, a main character type, and a quirky situation all at once so I can just pick one and start writing without staring at a blank page."
+  },
+  {
+    "id": "q_scene_021_004",
+    "query_text": "Create a tournament bracket builder app for mobile where I can type in a bunch of team names and it randomly sorts them into a bracket for me, then I can tap through each round to mark winners and it updates the bracket live as the tournament goes on."
+  },
+  {
+    "id": "q_scene_021_005",
+    "query_text": "A trivia category picker app for my phone where you see a bunch of topic tiles like history, science, pop culture, and sports, and you tap one to get a random trivia question from that category, with a reveal button to show the answer after you've thought about it."
+  },
+  {
+    "id": "q_scene_021_006",
+    "query_text": "Build a vacation destination roulette app for my phone where I can add a list of places I've been wanting to visit, spin a big wheel, and it lands on one destination and shows me a little summary card with what that place is known for so I can finally stop being indecisive about where to go next."
+  },
+  {
+    "id": "q_scene_021_007",
+    "query_text": "Build a daily kindness suggester app for my phone that gives me one random small act of kindness idea every morning, like something easy I can actually do that day, and I can tap a refresh button to get a different suggestion if the first one doesn't fit my situation."
+  },
+  {
+    "id": "q_scene_021_008",
+    "query_text": "A board game event generator app for mobile where you tap a button and it spits out a random in-game scenario or surprise event card — great for when you're playing a homemade game and need something unexpected to shake things up mid-round, with a few categories to choose from like weather events, plot twists, or bonus challenges."
+  },
+  {
+    "id": "q_scene_021_009",
+    "query_text": "Create a dice and coin flip simulator app for my phone that lets me roll different kinds of dice — like a six-sided, eight-sided, or twenty-sided one — and also flip a coin, with a little animation each time and a history list showing my last few results at the bottom of the screen."
+  },
+  {
+    "id": "q_scene_022_001",
+    "query_text": "Build a one-hand mode toggle app for mobile that lets me swipe from the bottom of the screen to shift all the buttons and content down into the lower half so I can reach everything with just my thumb when I'm on the go, with a quick swipe-up to go back to the normal full-screen layout."
+  },
+  {
+    "id": "q_scene_022_002",
+    "query_text": "Create a color mode settings app for my phone where I can switch between a high contrast theme and a colorblind-friendly palette — the main screen shows previews of how the app looks in each mode so I can actually see the difference before picking, and it remembers my choice next time I open it."
+  },
+  {
+    "id": "q_scene_022_003",
+    "query_text": "A reading settings tool for mobile where you can bump up the text size really big and switch to a font that's easier on the eyes for people who struggle with reading, so everything on the screen is clear and spaced out enough that you're not squinting or losing your place mid-sentence."
+  },
+  {
+    "id": "q_scene_022_004",
+    "query_text": "Make a voice navigation app for my phone where I can just say things like \"go to settings\" or \"open my notes\" and it figures out what I mean and takes me there, with a small list on the home screen showing all the voice commands I can use so I know what it understands."
+  },
+  {
+    "id": "q_scene_022_005",
+    "query_text": "Need a mobile app that lets me navigate by looking at different areas of the screen — when I look at a button or link for a couple seconds it automatically activates it, so I can use my phone hands-free, and there's a settings page where I can adjust how long I need to look before something triggers."
+  },
+  {
+    "id": "q_scene_022_006",
+    "query_text": "Build a touch stabilizer app for my phone that smooths out accidental shaky taps so when my hands aren't steady every press still registers as the right spot, with a simple sensitivity slider on the settings screen so I can tune how much it compensates for my tremors."
+  },
+  {
+    "id": "q_scene_022_007",
+    "query_text": "Build a sign language interpreter app for my phone that uses the front camera to watch my hands and shows me on screen what sign I'm making, so I can practice and check if I'm doing the gestures right, with a live text readout of the recognized signs appearing below the camera view."
+  },
+  {
+    "id": "q_scene_022_008",
+    "query_text": "Create a reading helper app for my phone that takes any text I paste in and rewrites it using simpler, everyday words so it's easier to understand, with a side-by-side view showing the original and the simplified version so I can compare them and actually follow along without getting lost."
+  },
+  {
+    "id": "q_scene_022_009",
+    "query_text": "A communication board app for my phone with big symbol tiles arranged in a grid — when I tap a tile it speaks the word out loud and adds it to a sentence bar at the top, and it suggests the next likely symbols based on what I've already picked so I can string together phrases faster."
+  },
+  {
+    "id": "q_scene_023_001",
+    "query_text": "Make a geocache logger app for my phone where I can save each cache I find by tapping a log button that grabs my current location and lets me jot a quick note, then shows all my logged finds on a simple list with the date, coordinates, and my note so I can look back at my geocaching history."
+  },
+  {
+    "id": "q_scene_023_002",
+    "query_text": "Create a plant disease checker app for my phone where I can snap or upload a photo of a sick-looking leaf, and the app tells me what disease or pest problem it looks like and gives me a couple of simple treatment suggestions I can actually try at home."
+  },
+  {
+    "id": "q_scene_023_003",
+    "query_text": "Build a home Wi-Fi speed tester app for my phone that runs a quick download and upload test and shows me the results in big clear numbers right on the main screen, plus a little history log so I can see if my connection has been getting worse over the past few days."
+  },
+  {
+    "id": "q_scene_023_004",
+    "query_text": "Make a noise level meter app for my phone that uses the microphone to measure how loud the room is in decibels and shows it on a live gauge on the main screen, so I can tell at a glance whether it's too noisy for a meeting or a nap, and it highlights when the level crosses a loud threshold."
+  },
+  {
+    "id": "q_scene_023_005",
+    "query_text": "Build a constellation finder app for my phone where I point my camera at the night sky and it overlays the constellation lines and names on what I'm seeing, and I can tap on any constellation to get a quick card with its name, mythology, and best time of year to spot it."
+  },
+  {
+    "id": "q_scene_023_006",
+    "query_text": "Build a QR code business card maker app for my phone where I type in my name, job, phone number, and links, and it instantly generates a QR code I can show people to scan and save my contact info, with an option to download the QR code image so I can print it or share it easily."
+  },
+  {
+    "id": "q_scene_023_007",
+    "query_text": "Need a USB identifier app for my phone that helps me figure out what type of cable or port I'm looking at — I can browse through pictures of different connector shapes and the app tells me the name, what it's used for, and which devices typically use it, so I stop guessing every time I'm digging through my cable drawer."
+  },
+  {
+    "id": "q_scene_023_008",
+    "query_text": "A car VIN lookup tool for my phone where I type or scan in the VIN number and it decodes it to show me the make, model, year, engine type, and where it was made, plus any recall info I should know about, all displayed in a clean easy-to-read breakdown on one screen."
+  },
+  {
+    "id": "q_scene_023_009",
+    "query_text": "Make a sunrise and sunset clock app for my phone that uses my location to show today's exact sunrise and sunset times, along with a simple visual timeline of the day so I can see how many daylight hours are left, and I can flip forward to check times for the next few days too."
+  }
+]

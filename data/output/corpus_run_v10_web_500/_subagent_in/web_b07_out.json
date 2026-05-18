@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_022_004",
+    "query_text": "A web app for a home cleaning service where first-time customers can see a big discount offer and book their first cleaning right away — the whole thing lives in the browser, shows the deal clearly, and has a simple form to pick a date and time so I don't have to call or chase anyone."
+  },
+  {
+    "id": "q_web_022_005",
+    "query_text": "Make a web app for a dental clinic that shows new patients a special intro offer — like a discounted first checkup or cleaning — with a short list of what's included, the price, and a quick sign-up form so they can claim the deal without having to call the front desk."
+  },
+  {
+    "id": "q_web_022_006",
+    "query_text": "A website for a local gym's anniversary sale where people can see the discounted membership deals, pick a plan that fits them, and buy right there in the browser without having to come in and talk to someone — just a clean layout showing the offer, the price, and a way to sign up."
+  },
+  {
+    "id": "q_web_022_007",
+    "query_text": "Need a web app for a beauty salon that lets customers buy gift cards for friends or themselves right in the browser — it should show the available gift card amounts, let you pick one, and complete the purchase without needing to call the salon or go in person."
+  },
+  {
+    "id": "q_web_023_001",
+    "query_text": "Build a web app where a small business owner can pull in all their customer reviews from different places into one spot, see them side by side, and type a reply to each one right there in the browser without having to log into five different accounts every single time."
+  },
+  {
+    "id": "q_web_023_002",
+    "query_text": "A web app for desktop browsers where I can dump all my business receipts and spending for the year into one place, have it sorted by category automatically, and then spit out a summary I can hand to my accountant come tax time — saves me the nightmare of digging through folders every spring."
+  },
+  {
+    "id": "q_web_023_003",
+    "query_text": "Need a web app where customers can sign up for a recurring home cleaning subscription, pick how often they want it, see their upcoming cleans, and pause or cancel whenever they want — all in the browser so neither side has to deal with back-and-forth texts to manage the schedule."
+  },
+  {
+    "id": "q_web_023_004",
+    "query_text": "A web-based calculator tool where I can enter details for a few different commercial spaces I'm considering — like rent, square footage, extra fees — and see them laid out side by side so I can figure out which one actually makes sense for my shop before I sign anything."
+  },
+  {
+    "id": "q_web_023_005",
+    "query_text": "Create a web app for a local farmer's market where vendors can register for a stall, pick their dates, and see which spots are still available — and the market organizer can manage the whole list from the same site without having to do it all over email."
+  },
+  {
+    "id": "q_web_023_006",
+    "query_text": "A web app for a small print shop where customers can submit their print order, upload the artwork file, and then see a preview before giving the go-ahead — all done in the browser so the shop doesn't have to chase people down for approvals over text."
+  },
+  {
+    "id": "q_web_023_007",
+    "query_text": "Build a web app for renting out party and event equipment where customers can browse what's available, pick the stuff they need, choose their rental dates, and book it all in one go from a desktop browser — so I'm not answering the same availability questions over and over by phone."
+  },
+  {
+    "id": "q_web_024_001",
+    "query_text": "Need a web app for a private tutor where students or parents can see what subjects are available, pick a time slot that works for them, and book a session right in the browser — and the tutor can see their upcoming schedule in one place without managing it all through texts."
+  },
+  {
+    "id": "q_web_024_002",
+    "query_text": "Make a web app for a local locksmith where homeowners can pick a date and time for a home visit, describe what they need help with, and confirm the booking right in the browser — so the locksmith has all the info upfront and doesn't have to play phone tag with every customer."
+  },
+  {
+    "id": "q_web_024_003",
+    "query_text": "Need a web app for renting out a small event space by the hour where people can see what times are open, pick how many hours they need, and reserve it right there in the browser — so I'm not manually tracking who booked what on a spreadsheet anymore."
+  },
+  {
+    "id": "q_web_024_004",
+    "query_text": "Need a web app where people can book a tax consultation appointment with an independent preparer — they pick a time from an open calendar, fill in a bit of info about what they need help with, and confirm it right in the browser so neither side has to go back and forth over email."
+  },
+  {
+    "id": "q_web_024_005",
+    "query_text": "Need a web app for a local florist where customers can book a consultation to talk through a custom flower arrangement — they pick a time, describe the occasion and their budget, and submit the request right in the browser so the florist has everything they need before the meeting."
+  },
+  {
+    "id": "q_web_024_006",
+    "query_text": "Need a web app for a small print shop where customers can book an appointment to review their design and schedule a pickup time — they upload their file, pick a slot on a calendar, and the shop gets a heads-up in one place without everything getting buried in a text thread."
+  },
+  {
+    "id": "q_web_024_007",
+    "query_text": "Need a web app for an independent notary where clients can see available appointment times, pick one that works, and book it right in the browser along with a note about what documents they're bringing — so the notary isn't juggling calls and texts just to fill their calendar."
+  },
+  {
+    "id": "q_web_025_001",
+    "query_text": "Build a web app for desktop browsers that acts as a step-by-step guide for local shop owners setting up a customer loyalty program — it should walk through the main things to decide, like how points are earned and what rewards to offer, with a checklist to track what's been done."
+  },
+  {
+    "id": "q_web_025_002",
+    "query_text": "A learning tool for small merchants — a web app that explains all the last-mile delivery options in plain terms, lists the main ones side by side with their costs and speed, and lets me check off which ones I've looked into so I can actually make a decision without drowning in tabs."
+  },
+  {
+    "id": "q_web_025_003",
+    "query_text": "Build a web app for small buyers who want to learn how to negotiate better deals with suppliers — it should cover the main tactics in plain steps, include a checklist of things to prepare before a negotiation, and work well in a desktop browser so I can go through it properly at my desk."
+  },
+  {
+    "id": "q_web_025_004",
+    "query_text": "Build a web app that teaches local service business owners how to respond to online reviews — it should walk through what to say in different situations, have some example replies I can learn from, and let me track which types of responses I've practiced so I don't blank when the time comes."
+  },
+  {
+    "id": "q_web_025_005",
+    "query_text": "Build a web app for small shop owners to learn about workplace safety rules they need to follow — it should break everything down into simple topics, include a checklist of the basics to have in place, and work in a desktop browser so I can go through it at my own pace at the shop."
+  },
+  {
+    "id": "q_web_025_006",
+    "query_text": "A step-by-step tutorial app for a desktop browser that walks small business owners through what they need to prepare when applying for a business loan — covering the documents to gather, the numbers to know, and a checklist to track progress so nothing gets missed before submitting."
+  },
+  {
+    "id": "q_web_025_007",
+    "query_text": "Need a web app calculator tool that helps restaurant or food shop owners figure out the right price for each menu item — enter the ingredient costs and portion size, and it shows the food cost percentage and a suggested selling price, all laid out clearly in the browser so I actually understand the numbers."
+  }
+]

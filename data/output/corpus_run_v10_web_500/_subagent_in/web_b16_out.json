@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_054_005",
+    "query_text": "Create a web app for a magazine archive unlimited access offer — the kind of page that feels like stepping into a beautifully lit reading room, with a rich editorial layout showing past covers arranged like a gallery wall, a sense of scarcity baked into the design with a countdown element, and a clear way to claim the deal that feels premium and curated rather than pushy."
+  },
+  {
+    "id": "q_web_054_006",
+    "query_text": "A sponsorship rate card and booking tool for newsletter creators that lives in the browser and feels like a high-end media kit — the kind of clean, editorial aesthetic you'd see in a print publication, with tiered packages laid out in a way that makes the value feel obvious at a glance, plus a booking flow that feels smooth and intentional rather than like a generic form."
+  },
+  {
+    "id": "q_web_054_007",
+    "query_text": "A promotional site for a streaming video journalism series that feels cinematic and story-driven, the kind of web experience you'd expect from a prestige documentary launch — full-bleed visuals, a mood that pulls you in from the first scroll, a place to watch a teaser, and a way to follow the series, all designed for desktop browsers with that editorial boldness of great long-form journalism."
+  },
+  {
+    "id": "q_web_055_001",
+    "query_text": "Make a web app that handles the whole academic journal institutional license purchasing process in one place — right now buying journal access for an institution involves so many back-and-forth emails and confusing quote forms, so I want a browser-based tool where you can search for journals, see pricing tiers for different institution sizes, and actually complete the purchase without needing to call anyone."
+  },
+  {
+    "id": "q_web_055_002",
+    "query_text": "Build a web app storefront for print-on-demand book publishing where authors can list their books for sale and buyers can order printed copies without the author having to manage any inventory — it's such a hassle to handle all that manually, so I want a website where each book has its own listing page with a description and cover preview, and buyers can just place an order directly."
+  },
+  {
+    "id": "q_web_055_003",
+    "query_text": "Make a web app that handles corporate content reprint and licensing permissions so I stop drowning in email threads every time someone wants to republish an article — a browser-based tool where companies can browse content, see what's available for licensing, pick a usage type, and submit a request that actually tracks the whole approval process."
+  },
+  {
+    "id": "q_web_055_004",
+    "query_text": "Make a web app for a white-label newsletter platform that agencies can resell to their clients — it's exhausting trying to cobble this together across multiple tools, so I want a browser-based manager where agencies can set up client newsletter brands, manage subscriber lists for each client, and see everything from one place without switching between accounts."
+  },
+  {
+    "id": "q_web_055_005",
+    "query_text": "Build a web app tracker for publisher affiliate and referral commissions because keeping tabs on who referred who and how much each person is owed is a total nightmare in a spreadsheet — a browser-based tool where I can see all my affiliates in one list, track their referral links, see how much commission each one has earned, and know when payouts are due."
+  },
+  {
+    "id": "q_web_055_006",
+    "query_text": "Make a web app for newsrooms to track subscription revenue and understand who's canceling and why — it's really hard to see the full picture when the numbers are scattered across different reports, so I want a browser-based tool that shows current subscriber counts, monthly revenue, and which plans are losing the most subscribers, all in one place I can check every morning."
+  },
+  {
+    "id": "q_web_055_007",
+    "query_text": "An online journalism masterclass platform built for desktop browsers where working journalists and aspiring reporters can browse and buy writing and reporting courses, with individual workshop listings showing the instructor, what topics are covered, and how to sign up — the kind of straightforward sales tool that makes it easy to find what you need and pay for it without a dozen clicks."
+  },
+  {
+    "id": "q_web_056_001",
+    "query_text": "Make a web app for reserving tickets to documentary preview screenings so people can stop emailing event organizers just to get a seat — a browser-based tool where upcoming screenings are listed with dates, locations, and a brief description, and you can just pick one, choose how many tickets you want, and confirm your spot without any back and forth."
+  },
+  {
+    "id": "q_web_056_002",
+    "query_text": "Make a web app for magazine cover photoshoot scheduling so the talent coordinator doesn't have to chase down availability over email — a browser-based tool where featured talent can log in, see open time slots for upcoming shoots, pick a time that works for them, and confirm the booking, while the coordinator can see the full calendar of who's scheduled for what."
+  },
+  {
+    "id": "q_web_056_003",
+    "query_text": "Create a web app for aspiring authors to book manuscript review appointments with editors, because right now there's no easy way to find who's available and just get a time on the calendar — a browser-based booking tool where authors can browse reviewer profiles, see their available slots, and reserve a one-on-one session to get feedback on their work."
+  },
+  {
+    "id": "q_web_056_004",
+    "query_text": "Need a web app scheduler for literary agent one-on-one meetings at book fairs, because coordinating all those pitch sessions is chaos when everyone is just trading emails and texts — a browser-based tool where agents post their available slots and writers can browse and book a time, with the confirmation going straight to both people so nothing gets lost."
+  },
+  {
+    "id": "q_web_056_005",
+    "query_text": "Create a web app for book clubs to schedule author speaker visits and keep track of who's coming when — right now coordinating all this over email takes forever, so I want a browser-based booking tool where clubs can browse available authors, see their open dates, request a session, and have everyone's calendar stay updated automatically."
+  },
+  {
+    "id": "q_web_056_006",
+    "query_text": "Make a web app for press junket interview scheduling so entertainment journalists and publicists can stop coordinating everything over email — a browser-based scheduler where journalists can see available talent and open time slots for a press day, claim a slot, and get a confirmation, while publicists can see the full interview runsheet from one place."
+  },
+  {
+    "id": "q_web_056_007",
+    "query_text": "Create a web app for TV studio live audience ticket reservations because the current process of filling out forms and waiting to hear back is just too slow — a browser-based tool where people can browse upcoming show tapings, see how many seats are left, reserve their tickets, and get a confirmation right away, all without needing to call anyone."
+  },
+  {
+    "id": "q_web_057_001",
+    "query_text": "Make a web app learning library for photojournalism ethics and techniques, something I can actually sit down with at my desk and work through — a browser-based tool with topics organized into clear categories like composition, consent, and editing ethics, where each topic has an explainer, maybe some example images, and a short quiz so I can check what I've learned."
+  },
+  {
+    "id": "q_web_057_002",
+    "query_text": "Build a web app for learning economics concepts through an explainer series with curated reading lists, organized so I can work through topics one by one — a browser-based tool where each concept has a plain-language explanation, a short list of recommended articles or books to go deeper, and a way to mark which topics I've already read through so I can keep track of my progress."
+  },
+  {
+    "id": "q_web_057_003",
+    "query_text": "Need a web app for exploring climate reporting topics in depth, with explainers that actually make sense to regular people and links to solid resources — a browser-based tool organized by theme like sea level rise or extreme weather, where each topic has a clear summary, a list of recommended reports or articles to read, and a way to save the ones I want to come back to."
+  },
+  {
+    "id": "q_web_057_004",
+    "query_text": "Make a web app for browsing podcast transcripts alongside structured study guides, so I can actually learn from the episodes I listen to — a browser-based library where each podcast has its full transcript, a set of key takeaways, and a few discussion questions or follow-up topics organized neatly so I can work through it like a real learning resource."
+  },
+  {
+    "id": "q_web_057_005",
+    "query_text": "Make a web app learning companion for documentary films, where each documentary gets its own entry with background reading, key questions to think about while watching, and a place to read what other people are discussing after they've seen it — a browser-based tool organized by topic so I can find a documentary on something I care about and have everything I need to actually learn from it."
+  },
+  {
+    "id": "q_web_057_006",
+    "query_text": "A web app that takes dense academic research papers and makes them readable for regular people — a browser-based discovery tool organized by topic where each paper gets a plain-language summary, a list of the main findings, and some suggested related papers to read next, so I can actually keep up with research in areas I care about without needing a PhD to understand what's going on."
+  },
+  {
+    "id": "q_web_058_001",
+    "query_text": "Build a web app for open peer review discussions around academic journal articles, where researchers can post a paper, leave public comments and feedback on specific sections, and reply to each other's reviews — a browser-based forum tool that makes the whole review conversation visible so anyone interested in the topic can follow along and join the discussion."
+  },
+  {
+    "id": "q_web_058_002",
+    "query_text": "Create a web app for onboarding citizen reporters to a local news outlet, where people who want to contribute can sign up, read the guidelines, go through a quick verification step, and get their contributor badge — a browser-based tool that walks a new volunteer through everything they need to do to start reporting, so the editors aren't manually processing every application by hand."
+  }
+]

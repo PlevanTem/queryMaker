@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_043_007",
+    "query_text": "Make a hiring pipeline manager for our early-stage startup — a web app where I can track every applicant from first contact to offer letter, with a simple list of candidates on one side and their stage and notes on the other, so I stop losing people in my inbox."
+  },
+  {
+    "id": "q_web_044_001",
+    "query_text": "Build a web app directory of all our international partner universities and exchange programs, where I can filter by country or region, see each school's requirements and program length in a clean list, and click through to a detail page with the important deadlines and contact info."
+  },
+  {
+    "id": "q_web_044_002",
+    "query_text": "Create a web app for showing student testimonials and enrollment reviews, with each review listed clearly including the student's name, program, and what they said, plus a way to filter by program type so prospective students can find reviews most relevant to them."
+  },
+  {
+    "id": "q_web_044_003",
+    "query_text": "An admissions process guide app for a website that walks prospective students through each step in order — from submitting documents to receiving a decision — with a numbered checklist on the left side and the details for each step shown on the right when you click it."
+  },
+  {
+    "id": "q_web_044_004",
+    "query_text": "Make a photo gallery web app for showing off campus facilities and amenities, organized by category like library, gym, dining, and dorms, where each category has a set of photos you can browse through and a short description of that facility for desktop browsers."
+  },
+  {
+    "id": "q_web_044_005",
+    "query_text": "A graduation ceremony highlights app for a website that lists each year's commencement event with key moments, a photo section, and a short summary of notable speakers — organized by year so visitors can browse past ceremonies easily on desktop."
+  },
+  {
+    "id": "q_web_044_006",
+    "query_text": "Need a web app that showcases our notable alumni hall of fame, where each person gets a profile card with their name, graduation year, field, and what they're known for, and visitors can filter by industry or decade on desktop browsers."
+  },
+  {
+    "id": "q_web_044_007",
+    "query_text": "Make a web app that gives an overview of all academic departments and majors, where each department is listed with the majors it offers and a short description, and you can click any major to see more details like course highlights and career paths — all usable in a desktop browser."
+  },
+  {
+    "id": "q_web_045_001",
+    "query_text": "Need a web app for our student-run online newspaper and opinion site, where students can publish articles under different sections like news, opinion, and culture, and readers on desktop browsers can browse by section or search for a topic they care about."
+  },
+  {
+    "id": "q_web_045_002",
+    "query_text": "Make a web app portal for our annual institutional statistics and transparency report, where each year's data is organized into clearly labeled sections like enrollment numbers, faculty stats, and budget info, and users on desktop browsers can flip between years to compare figures."
+  },
+  {
+    "id": "q_web_045_003",
+    "query_text": "A continuing education and professional certification course catalog web app where all the courses are listed with their name, duration, price, and the certification you earn, grouped by topic area so working adults browsing on a desktop can quickly find the right program for them."
+  },
+  {
+    "id": "q_web_045_004",
+    "query_text": "An academic conference archive tool for a website where each conference is listed by year and topic, with the papers and presentation titles underneath so researchers browsing on desktop can find what was presented, filter by subject area, and see the full list of contributors."
+  },
+  {
+    "id": "q_web_045_005",
+    "query_text": "Build a web app blog network for faculty to share their research commentary and opinions, where posts are grouped by department or research area, each post shows the author's name and date, and readers can browse by topic or search by keyword in a desktop browser."
+  },
+  {
+    "id": "q_web_045_006",
+    "query_text": "Make a web app comparison guide for graduate program admissions, where I can see different programs listed side by side with their requirements, deadlines, and acceptance info, and prospective students browsing on desktop can filter by field of study to narrow down their options."
+  },
+  {
+    "id": "q_web_045_007",
+    "query_text": "Build a web app library portal for rare books and digital special collections, where items are organized by collection, each entry shows the title, date, and a description, and researchers on desktop browsers can search by keyword or browse by category to find what they're looking for."
+  },
+  {
+    "id": "q_web_046_001",
+    "query_text": "An enrollment app for a website that shows our early-bird tuition discount with a live countdown to when the deal expires, a clear list of what's included in the discounted price, and a signup form so students can lock in the rate before the deadline right from their desktop browser."
+  },
+  {
+    "id": "q_web_046_002",
+    "query_text": "Build a web app landing page where visitors can download a free study guide in exchange for their name and email, with a short description of what's in the guide, a preview of the topics covered, and a simple form so we can capture their info before they get the download link."
+  },
+  {
+    "id": "q_web_046_003",
+    "query_text": "Need a web app that puts our instructors in the spotlight, with each faculty member listed with their photo, credentials, subject area, and a short bio, so prospective students browsing on desktop can see who's teaching and feel confident about signing up."
+  },
+  {
+    "id": "q_web_046_004",
+    "query_text": "Build a web app gallery of student testimonial videos for our course page, where each video is shown with the student's name, program, and a one-line summary of what they said, organized in a clean grid so visitors on desktop can browse through the stories and feel reassured before enrolling."
+  },
+  {
+    "id": "q_web_046_005",
+    "query_text": "Need a web app signup page for our limited-cohort bootcamp waitlist, where visitors can see how many spots are left, read a short description of what the bootcamp covers, and fill out a simple form with their name and email to reserve their place before the cohort fills up."
+  },
+  {
+    "id": "q_web_046_006",
+    "query_text": "Make a web app showcase page for our graduate employment rates and career placement results, where the numbers are displayed clearly by program, with a list of companies our graduates have joined and a breakdown by industry so prospective students on desktop can see what outcomes to expect."
+  },
+  {
+    "id": "q_web_046_007",
+    "query_text": "Create a web app placement quiz tool where a student answers a few questions about their goals and current level, and at the end gets a personalized list of course recommendations that fit their answers, so they can find the right starting point without guessing."
+  },
+  {
+    "id": "q_web_047_001",
+    "query_text": "Need a web app to handle training content licensing and royalty tracking all in one place, where I can see which courses are licensed to which partners, what the royalty rates are, and when the next payment is due, so I stop hunting through spreadsheets and emails every time someone asks."
+  },
+  {
+    "id": "q_web_047_002",
+    "query_text": "Need a web app portal where users can see their current subscription plan, check when it renews, and upgrade to a higher tier in just a few clicks, so I stop getting emails from people who can't figure out how to renew their annual plan on their own."
+  },
+  {
+    "id": "q_web_047_003",
+    "query_text": "Create a web app for corporate account self-service onboarding, where a new company can set up their account, add team members, and go through a short guided setup checklist without needing to wait for someone from our side to walk them through it step by step."
+  }
+]

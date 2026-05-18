@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-15T09:01:35.204Z",
+  "last_updated": "2026-05-18T03:26:07.300Z",
   "usage": {
     "个人用户 · 展示型": {
       "个人主页": 1,
@@ -21,7 +21,14 @@
       "Personal vinyl record collection visual catalog site": 2,
       "Baby milestone photo journal for extended family": 2,
       "Home renovation before-and-after photo documentation site": 2,
-      "Personal certifications and professional learning timeline": 2
+      "Personal certifications and professional learning timeline": 2,
+      "Amateur astronomer photo gallery and observation log": 2,
+      "DIY woodworking build log with step-by-step photos": 2,
+      "Pet memorial and tribute photo gallery site": 2,
+      "Solo travel scrapbook with mapped itinerary display": 2,
+      "Personal 3D art and model portfolio viewer": 2,
+      "Musician self-released discography and lyric showcase": 2,
+      "Personal essay and published writing links archive": 2
     },
     "个人用户 · 内容型": {
       "个人博客": 1,
@@ -42,7 +49,14 @@
       "Video essay channel companion site with transcripts": 2,
       "Photography portfolio with per-image story and EXIF annotations": 2,
       "Handwriting and calligraphy practice showcase website": 2,
-      "DIY woodworking build log and finished project gallery": 2
+      "DIY woodworking build log and finished project gallery": 2,
+      "Personal vintage record collection catalog and display site": 2,
+      "Hiking trail personal log with route maps and photos": 2,
+      "Amateur astronomy observation journal with astrophotography gallery": 2,
+      "Personal wine tasting notes and bottle collection log": 2,
+      "Developer personal changelog and side-project narrative journal": 2,
+      "Digital illustration commission showcase with step-by-step process log": 2,
+      "Personal genealogy narrative site with annotated family stories": 2
     },
     "个人用户 · 学习型": {
       "学习打卡站": 1,
@@ -63,7 +77,14 @@
       "certification exam study roadmap and countdown planner": 2,
       "memory technique trainer with recall test scoring": 2,
       "daily writing prompt journal with word count tracker": 2,
-      "YouTube tutorial watchlist with personal progress tracking": 2
+      "YouTube tutorial watchlist with personal progress tracking": 2,
+      "personal quiz generator from uploaded study notes": 2,
+      "micro-lesson habit scheduler with daily completion log": 2,
+      "mind map library for personal concept organization": 2,
+      "music theory self-study log with exercise tracker": 2,
+      "programming language cheat sheet and snippet wiki": 2,
+      "lifelong learning bucket list and milestone tracker": 2,
+      "deep-dive research topic notebook with source citations": 2
     },
     "个人用户 · 工具型": {
       "个人记账/追踪器 Web 版": 1,
@@ -84,7 +105,14 @@
       "Travel itinerary planner with per-day budget breakdown": 2,
       "Personal time-audit log and weekly productivity report": 2,
       "Job application pipeline tracker with status board": 2,
-      "Code snippet library with syntax highlighting and tagging": 2
+      "Code snippet library with syntax highlighting and tagging": 2,
+      "Personal net worth dashboard with asset class breakdown": 2,
+      "Gift wishlist manager with price-drop monitoring": 2,
+      "Research citation organizer with export to BibTeX": 2,
+      "Solo project Kanban board for independent creators": 2,
+      "Recipe box with pantry tracker and serving-size scaler": 2,
+      "Podcast episode tracker with timestamped listening notes": 2,
+      "Personal color swatch palette library for designers": 2
     },
     "创作者 · 展示型": {
       "作品集 Portfolio": 1,
@@ -104,7 +132,14 @@
       "Indie game developer showcase with embedded playable demos": 2,
       "Product designer case study portfolio with process documentation": 2,
       "UX designer portfolio with interactive prototype embeds": 2,
-      "Ceramics studio showcase with glazing process photography": 2
+      "Ceramics studio showcase with glazing process photography": 2,
+      "Jewelry designer collection site with 360-degree product views": 2,
+      "Comic artist webcomic archive and original art portfolio": 2,
+      "Concept artist showcase for film and game productions": 2,
+      "Brand identity designer case study and logo portfolio": 2,
+      "Book cover designer portfolio with editorial credits listing": 2,
+      "Tattoo artist flash art and custom portfolio site": 2,
+      "Printmaking artist limited edition catalog and gallery site": 2
     },
     "创作者 · 内容型": {
       "创作博客": 1,
@@ -124,7 +159,14 @@
       "Video essay script and research notes publishing site": 2,
       "Photography portfolio with behind-the-scenes writing blog": 2,
       "Build-in-public project documentation and update site": 2,
-      "Fan fiction archive with tagging and rating system": 2
+      "Fan fiction archive with tagging and rating system": 2,
+      "Poetry collection and chapbook publishing platform": 2,
+      "Independent digital zine and micro-magazine platform": 2,
+      "Creator personal changelog and release notes site": 2,
+      "Micro-essay and flash fiction daily publishing site": 2,
+      "Interview series and oral history web archive": 2,
+      "Annotated reading notes and book review site": 2,
+      "Creative process moodboard and work-in-progress showcase": 2
     },
     "创作者 · 营销型": {
       "粉丝订阅落地页": 1,
@@ -144,7 +186,14 @@
       "free webinar registration and replay access page": 2,
       "creator social proof and testimonials wall": 2,
       "book launch pre-order campaign site": 2,
-      "creator referral program sign-up page": 2
+      "creator referral program sign-up page": 2,
+      "flash sale countdown with bundle deals page": 2,
+      "community Discord invite landing page": 2,
+      "digital product bundle marketplace for creators": 2,
+      "creator brand ambassador recruitment page": 2,
+      "email list growth challenge sign-up page": 2,
+      "influencer rate card and partnership inquiry form": 2,
+      "fan art contest entry and public voting site": 2
     },
     "创作者 · 商务型": {
       "印刷品/数字商品店": 1,
@@ -164,7 +213,14 @@
       "Textile and surface pattern design licensing portal": 2,
       "3D model and scene asset store for independent designers": 2,
       "Creator collab bundle deal and product launch page": 2,
-      "Brand partnership and affiliate program dashboard for creators": 2
+      "Brand partnership and affiliate program dashboard for creators": 2,
+      "Digital zine and independent magazine subscription site": 2,
+      "Craft pattern PDF shop for knitting and sewing creators": 2,
+      "Photography workshop ticket booking and sales site": 2,
+      "Motion graphics and video template storefront": 2,
+      "Sound effects and ambient audio pack store": 2,
+      "Digital stamp and clipart bundle shop for crafters": 2,
+      "Creator merch pre-order campaign and fulfillment tracker": 2
     },
     "创作者 · 预约型": {
       "约拍/约稿系统": 1,
@@ -184,7 +240,14 @@
       "Music mixing engineer remote session booking and stem upload site": 2,
       "Screenwriting consultant story feedback and rewrite appointment site": 2,
       "Brand identity designer discovery call and project kickoff scheduler": 2,
-      "Indie game pixel artist asset commission intake and timeline site": 2
+      "Indie game pixel artist asset commission intake and timeline site": 2,
+      "Food photographer recipe shoot day booking and shot list builder": 2,
+      "Drone videographer aerial coverage booking and location approval site": 2,
+      "Personal stylist virtual closet audit and styling session booking": 2,
+      "Online dance instructor private lesson booking and video review site": 2,
+      "Language tutor conversation practice slot booking and progress site": 2,
+      "Book cover designer commission queue and client brief submission site": 2,
+      "Live event caricature and sketch artist booking portal": 2
     },
     "创作者 · 学习型": {
       "创作教程站": 1,
@@ -204,7 +267,14 @@
       "podcast production skills course site for audio creators": 2,
       "concept art and game illustration learning platform": 2,
       "brand identity design fundamentals course site": 2,
-      "creative mentorship pairing platform for indie artists": 2
+      "creative mentorship pairing platform for indie artists": 2,
+      "fashion illustration technique learning and critique platform": 2,
+      "video editing masterclass site for content creators": 2,
+      "stop-motion animation beginner workshop and community": 2,
+      "street photography mentored learning and portfolio review site": 2,
+      "hand lettering and calligraphy skill-building challenge platform": 2,
+      "children's book illustration course and feedback community": 2,
+      "documentary filmmaking craft workshop subscription site": 2
     },
     "创作者 · 社区型": {
       "粉丝社群": 1,
@@ -224,7 +294,14 @@
       "creator mentorship matchmaking platform for emerging artists": 2,
       "collaborative worldbuilding wiki for fiction writer communities": 2,
       "video essay community with annotated viewing and debate threads": 2,
-      "independent journalist reader community with article commentary layers": 2
+      "independent journalist reader community with article commentary layers": 2,
+      "digital art zine collective with publication archive and credits": 2,
+      "creator-run online residency program with cohort discussion forums": 2,
+      "fan fiction archive with community genre tags and ratings": 2,
+      "live-stream clip curation community voted by viewers": 2,
+      "indie game devlog community with milestone celebration feeds": 2,
+      "community-curated creator resource and tool recommendation library": 2,
+      "creator collab board for finding co-creators by skill set": 2
     },
     "创作者 · 工具型": {
       "创作辅助工具": 1,
@@ -244,7 +321,14 @@
       "Subtitle and closed caption editor for video content": 2,
       "AI image prompt library with version history and tags": 2,
       "Character and world-building wiki for fiction authors": 2,
-      "Chord progression generator and notation tool for songwriters": 2
+      "Chord progression generator and notation tool for songwriters": 2,
+      "Batch watermark processor for digital photographers": 2,
+      "Creative project milestone and deadline planner": 2,
+      "Stock asset license tracker for content production teams": 2,
+      "SEO content brief generator for blogging creators": 2,
+      "Voice-over script pacing and timing calculator": 2,
+      "Surface pattern library builder and repeat tile exporter": 2,
+      "Social media content calendar with draft management": 2
     },
     "自由职业 · 展示型": {
       "专业主页": 1,
@@ -264,7 +348,14 @@
       "Independent data analyst projects and insights showcase": 2,
       "Freelance content strategist published work archive": 2,
       "Independent interior designer before-and-after project gallery": 2,
-      "Freelance developer open-source contributions showcase": 2
+      "Freelance developer open-source contributions showcase": 2,
+      "Independent marketing consultant campaign outcomes site": 2,
+      "Freelance translator samples and language specialization page": 2,
+      "Independent therapist professional credentials and approach site": 2,
+      "Freelance audio engineer mixing portfolio and client roster": 2,
+      "Independent journalist byline archive and beat expertise": 2,
+      "Freelance 3D artist renders and personal project gallery": 2,
+      "Independent business coach client success stories showcase": 2
     },
     "自由职业 · 内容型": {
       "专业博客": 1,
@@ -284,7 +375,14 @@
       "Freelance content strategist process documentation site": 2,
       "Niche industry expert commentary and opinion archive": 2,
       "Independent educator lecture notes and study material hub": 2,
-      "Professional speaker talk transcript and slide deck archive": 2
+      "Professional speaker talk transcript and slide deck archive": 2,
+      "Independent legal writer regulatory commentary and brief archive": 2,
+      "Content creator press kit and media profile builder": 2,
+      "Professional ghostwriter portfolio and subject expertise showcase": 2,
+      "Independent podcast episode show notes and resource archive": 2,
+      "Freelance technical writer API documentation samples site": 2,
+      "Expert witness credential and publication listing portal": 2,
+      "Independent financial commentator market insights archive": 2
     },
     "自由职业 · 营销型": {
       "服务介绍落地页": 1,
@@ -304,7 +402,14 @@
       "Freelance video producer showreel and project inquiry site": 2,
       "Professional translator specializations and client roster page": 2,
       "Freelance UX researcher methodology showcase and contact funnel": 2,
-      "Independent architect project gallery and client onboarding page": 2
+      "Independent architect project gallery and client onboarding page": 2,
+      "Freelance social media strategist ROI case study showcase": 2,
+      "Professional resume writer before-and-after samples conversion page": 2,
+      "Freelance illustrator commission tiers and waitlist capture page": 2,
+      "Independent SEO consultant free audit offer lead capture page": 2,
+      "Freelance data scientist portfolio with interactive demo embeds": 2,
+      "Professional voiceover artist demo reel and rate card page": 2,
+      "Freelance content creator brand partnership and media inquiry page": 2
     },
     "自由职业 · 预约型": {
       "咨询预约系统": 1,
@@ -324,7 +429,14 @@
       "Independent real estate agent showing appointment site": 2,
       "Personal stylist wardrobe consultation booking platform": 2,
       "Life coach goal-setting session scheduler": 2,
-      "Freelance web developer project scoping call booking": 2
+      "Freelance web developer project scoping call booking": 2,
+      "Independent architect initial consultation booking site": 2,
+      "Online yoga instructor private class scheduler": 2,
+      "Notary public appointment booking platform": 2,
+      "Immigration consultant case review scheduling site": 2,
+      "Freelance data analyst consultation booking": 2,
+      "Private chef dinner experience appointment platform": 2,
+      "Independent interior designer room consultation scheduler": 2
     },
     "自由职业 · 学习型": {
       "Workshop/培训": 1,
@@ -344,7 +456,14 @@
       "Conference talk archive and timestamped annotation platform": 2,
       "Case study library with discussion boards for freelance strategists": 2,
       "Client negotiation and communication skills training site": 2,
-      "Technical book club with weekly async discussion threads": 2
+      "Technical book club with weekly async discussion threads": 2,
+      "Deep work and productivity methodology course site for professionals": 2,
+      "Public speaking and presentation coaching platform for independents": 2,
+      "Personal brand building and thought leadership course hub": 2,
+      "Research paper digest and highlight tool for practitioners": 2,
+      "Freelance pricing strategy and rate-benchmarking learning resource": 2,
+      "Cross-discipline skill-swap and peer teaching community site": 2,
+      "UX pattern library with video walkthroughs for freelance designers": 2
     },
     "自由职业 · 社区型": {
       "客户社群": 1,
@@ -364,7 +483,14 @@
       "Niche industry expert Q&A and knowledge exchange platform": 2,
       "Freelance accountant and finance professional peer network": 2,
       "Creative professional burnout and mental health support community": 2,
-      "Specialist consultant referral and recommendation network": 2
+      "Specialist consultant referral and recommendation network": 2,
+      "Freelance educator and online course creator collaboration forum": 2,
+      "Independent researcher data sharing and peer review community": 2,
+      "Solopreneur legal template and contract clause sharing hub": 2,
+      "Freelance video editor showreel critique and feedback community": 2,
+      "Independent brand strategist case study sharing network": 2,
+      "Remote freelancer local coworking space finder and community": 2,
+      "Freelance illustrator commission and creative collaboration board": 2
     },
     "自由职业 · 工具型": {
       "专业计算器": 1,
@@ -384,7 +510,14 @@
       "freelance income and expense profit margin tracker": 2,
       "service package pricing configurator and instant quote sender": 2,
       "freelance workload capacity planner and availability calendar": 2,
-      "professional bio and tagline generator for consultants": 2
+      "professional bio and tagline generator for consultants": 2,
+      "cold outreach email sequence builder for freelancers": 2,
+      "retainer scope and deliverable management tool": 2,
+      "freelance project profitability and margin analyzer": 2,
+      "skills inventory and professional gap assessment tool": 2,
+      "client testimonial and reference request automation tool": 2,
+      "professional certification and license renewal tracker": 2,
+      "freelance niche market demand and competition analyzer": 2
     },
     "小微商户 · 展示型": {
       "门店官网": 1,
@@ -404,7 +537,14 @@
       "portrait photography studio sample gallery and session package display": 2,
       "bespoke tailor shop fabric swatches and custom fit showcase": 2,
       "independent bookshop curated collection and in-store events display": 2,
-      "escape room venue theme preview and room atmosphere gallery": 2
+      "escape room venue theme preview and room atmosphere gallery": 2,
+      "local dental clinic team introductions and facility tour site": 2,
+      "artisan cheese and charcuterie shop product range display": 2,
+      "residential interior design studio completed project portfolio site": 2,
+      "neighborhood gym equipment and training floor showcase": 2,
+      "local catering company signature dish and past event gallery": 2,
+      "pottery studio class gallery and handmade ceramics showcase": 2,
+      "therapeutic massage center service menu and therapist profile site": 2
     },
     "小微商户 · 内容型": {
       "公告/新品上新": 1,
@@ -424,7 +564,14 @@
       "Local tutoring center student success story newsletter site": 2,
       "Small catering company seasonal menu reveal and event recap": 2,
       "Neighborhood gym member transformation story spotlight": 2,
-      "Local cleaning service eco-friendly tips and product guide blog": 2
+      "Local cleaning service eco-friendly tips and product guide blog": 2,
+      "Independent spa treatment ingredient and wellness education page": 2,
+      "Small plumbing business home maintenance how-to article hub": 2,
+      "Local plant nursery seasonal care guide and planting blog": 2,
+      "Independent watch repair shop craftsmanship and restoration diary": 2,
+      "Neighborhood laundry shop fabric care and stain removal tips blog": 2,
+      "Local music school student recital recap and practice tips blog": 2,
+      "Small event rental company styled shoot inspiration lookbook": 2
     },
     "小微商户 · 营销型": {
       "优惠活动页": 1,
@@ -444,7 +591,14 @@
       "Massage parlor membership upgrade offer page": 2,
       "Photography studio portrait package promotional web page": 2,
       "Coffee shop buy-ten-get-one digital loyalty page": 2,
-      "Yoga studio new member welcome discount page": 2
+      "Yoga studio new member welcome discount page": 2,
+      "Local grocery store weekend flash deal page": 2,
+      "Language school free trial lesson sign-up site": 2,
+      "Car wash monthly subscription promo landing page": 2,
+      "Home cleaning service first-booking discount web page": 2,
+      "Dental clinic new patient special offer page": 2,
+      "Local gym anniversary membership sale landing page": 2,
+      "Beauty salon gift card promotional web page": 2
     },
     "小微商户 · 商务型": {
       "在线菜单": 1,
@@ -464,7 +618,14 @@
       "B2B quote and inquiry management site for small artisan makers": 2,
       "restaurant tip pooling and payroll split calculator site": 2,
       "photography session package configurator and online booking site": 2,
-      "multi-outlet revenue comparison report site for micro-franchise owners": 2
+      "multi-outlet revenue comparison report site for micro-franchise owners": 2,
+      "customer review aggregator and owner response management portal": 2,
+      "annual business expense categorization and tax-prep assistant site": 2,
+      "recurring home cleaning service subscription management portal": 2,
+      "commercial lease cost comparison tool for prospective shop owners": 2,
+      "local farmer's market vendor stall registration and management site": 2,
+      "print job order and online artwork proofing portal": 2,
+      "party and event equipment rental booking platform": 2
     },
     "小微商户 · 预约型": {
       "订座/预约服务": 1,
@@ -484,7 +645,14 @@
       "local tailor shop garment fitting appointment site": 2,
       "personal trainer one-on-one session booking platform": 2,
       "neighborhood car wash bay time-slot reservation site": 2,
-      "small veterinary clinic pet visit appointment site": 2
+      "small veterinary clinic pet visit appointment site": 2,
+      "private tutor subject session scheduling and booking site": 2,
+      "local locksmith scheduled home visit booking portal": 2,
+      "small event space hourly rental reservation site": 2,
+      "independent tax preparer consultation appointment portal": 2,
+      "local florist custom arrangement consultation booking site": 2,
+      "small print shop design review and pickup appointment site": 2,
+      "independent notary public appointment booking site": 2
     },
     "小微商户 · 学习型": {
       "使用教程": 1,
@@ -504,7 +672,14 @@
       "business registration and permit walkthrough site": 2,
       "food handler certification study and prep platform": 2,
       "visual merchandising and window display tutorial site": 2,
-      "bookkeeping basics self-study portal for shop owners": 2
+      "bookkeeping basics self-study portal for shop owners": 2,
+      "customer loyalty program design guide for local retailers": 2,
+      "last-mile delivery options explainer for small merchants": 2,
+      "supplier negotiation tactics course for small buyers": 2,
+      "online review response guide for local service businesses": 2,
+      "workplace safety compliance training for small shops": 2,
+      "small business loan application preparation tutorial": 2,
+      "menu costing and pricing calculator learning tool": 2
     },
     "小微商户 · 社区型": {
       "会员/粉丝圈": 1,
@@ -524,7 +699,14 @@
       "community gift card exchange marketplace for local shops": 2,
       "neighborhood handyman and home-repair job listing board": 2,
       "local merchant joint discount campaign coordination site": 2,
-      "community feedback and suggestion portal for block shops": 2
+      "community feedback and suggestion portal for block shops": 2,
+      "small vendor pop-up market scheduling and registration site": 2,
+      "neighborhood pet service provider directory and community forum": 2,
+      "local skills-swap and tutoring classifieds board": 2,
+      "urban micro-farm CSA subscription and delivery portal": 2,
+      "neighborhood home-cleaning cooperative booking and review site": 2,
+      "local merchant cross-promotion partnership matching board": 2,
+      "community charity fundraiser hub co-hosted by local businesses": 2
     },
     "小微商户 · 工具型": {
       "选房/选座工具": 1,
@@ -544,7 +726,14 @@
       "daily cash-flow ledger tool for market stall vendors": 2,
       "supplier unit-price comparison table for small buyers": 2,
       "employee work-hour timesheet with one-click PDF export": 2,
-      "delivery coverage zone drawing tool overlaid on street map": 2
+      "delivery coverage zone drawing tool overlaid on street map": 2,
+      "promotional discount flyer generator with brandable templates": 2,
+      "QR-code digital menu builder for dine-in restaurants": 2,
+      "post-visit customer satisfaction micro-survey builder": 2,
+      "monthly expense categorization dashboard for independent shop owners": 2,
+      "commercial lease cost comparison and break-even calculator": 2,
+      "local business permit checklist and application status tracker": 2,
+      "small-team payroll calculator with statutory deduction breakdown": 2
     },
     "中大型企业 · 展示型": {
       "企业官网": 1,
@@ -564,7 +753,14 @@
       "Enterprise customer success and case study showcase": 2,
       "Corporate art collection and cultural sponsorship site": 2,
       "New flagship product launch event microsite": 2,
-      "Brand identity guidelines and design system site": 2
+      "Brand identity guidelines and design system site": 2,
+      "Corporate headquarters campus virtual tour site": 2,
+      "Manufacturing excellence and quality process showcase": 2,
+      "Supply chain transparency and traceability showcase site": 2,
+      "Executive thought leadership and industry insights hub": 2,
+      "Corporate foundation and philanthropy program showcase": 2,
+      "Brand milestone anniversary interactive celebration site": 2,
+      "Workforce diversity equity and inclusion showcase site": 2
     },
     "中大型企业 · 内容型": {
       "新闻中心": 1,
@@ -584,7 +780,14 @@
       "Corporate social responsibility and community impact portal": 2,
       "Product launch editorial microsite": 2,
       "Corporate event recap and conference highlights hub": 2,
-      "Brand heritage and company history timeline site": 2
+      "Brand heritage and company history timeline site": 2,
+      "Corporate learning and professional development content portal": 2,
+      "Customer transformation and success story portal": 2,
+      "Corporate innovation lab and R&D showcase site": 2,
+      "Governance and regulatory compliance documentation hub": 2,
+      "Corporate awards and industry recognition showcase": 2,
+      "Supply chain transparency and sustainability reporting microsite": 2,
+      "Press resources and media kit download portal": 2
     },
     "中大型企业 · 营销型": {
       "产品发布页": 1,
@@ -604,7 +807,14 @@
       "product demo request and free trial portal": 2,
       "co-branding partnership campaign announcement site": 2,
       "sweepstakes and user-generated content contest site": 2,
-      "new market launch immersive campaign landing page": 2
+      "new market launch immersive campaign landing page": 2,
+      "customer referral reward program enrollment site": 2,
+      "corporate awards nomination and public voting platform": 2,
+      "product ecosystem and partner integration showcase": 2,
+      "virtual brand showroom and immersive experience tour": 2,
+      "cause marketing pledge and charity campaign site": 2,
+      "multi-brand corporate portfolio showcase site": 2,
+      "influencer seeding program application portal": 2
     },
     "中大型企业 · 商务型": {
       "官方旗舰店": 1,
@@ -624,7 +834,14 @@
       "Business intelligence and KPI reporting dashboard": 2,
       "Corporate conference and event registration platform": 2,
       "Enterprise RFQ and vendor bid management portal": 2,
-      "Corporate brand style guide and asset portal": 2
+      "Corporate brand style guide and asset portal": 2,
+      "Wholesale pricing and bulk order management platform": 2,
+      "Enterprise employee directory and org chart portal": 2,
+      "Corporate compliance training and policy management site": 2,
+      "Commercial credit application and financing portal": 2,
+      "Enterprise product catalog and CPQ configurator": 2,
+      "Corporate annual report and shareholder communication site": 2,
+      "B2B sales pipeline and CRM integration dashboard": 2
     },
     "中大型企业 · 预约型": {
       "销售线索表单": 1,
@@ -644,7 +861,14 @@
       "Enterprise cloud migration strategy session booking": 2,
       "Corporate employee wellness program onboarding scheduler": 2,
       "B2B vendor product presentation booking portal": 2,
-      "Corporate headquarters guided tour reservation site": 2
+      "Corporate headquarters guided tour reservation site": 2,
+      "Talent acquisition executive interview scheduling platform": 2,
+      "Corporate ESG compliance audit appointment booking": 2,
+      "Strategic key account quarterly review meeting scheduler": 2,
+      "Enterprise ERP demo and evaluation session booking": 2,
+      "Press and analyst briefing appointment scheduling portal": 2,
+      "Commercial insurance underwriting consultation booking site": 2,
+      "Enterprise data proof-of-concept engagement booking platform": 2
     },
     "中大型企业 · 学习型": {
       "企业大学": 1,
@@ -664,7 +888,14 @@
       "Internal video lecture library with chapter navigation": 2,
       "Skills gap assessment and development planning tool": 2,
       "Drag-and-drop course authoring studio for L&D teams": 2,
-      "Soft skills workshop catalog with enrollment portal": 2
+      "Soft skills workshop catalog with enrollment portal": 2,
+      "Regulatory compliance refresher and recertification site": 2,
+      "Enterprise-wide language learning and proficiency tracker": 2,
+      "Corporate innovation learning lab and resource hub": 2,
+      "Internal executive education and leadership MBA-style portal": 2,
+      "High-potential talent succession and learning path tracker": 2,
+      "Workplace safety training and certification management site": 2,
+      "Customer-facing product academy for enterprise clients": 2
     },
     "中大型企业 · 社区型": {
       "客户社区": 1,
@@ -684,7 +915,14 @@
       "Enterprise user group chapter event directory site": 2,
       "Brand superfan exclusive early-access content hub": 2,
       "Structured beta tester feedback and bug-report community": 2,
-      "CSR campaign participation community with milestone dashboard": 2
+      "CSR campaign participation community with milestone dashboard": 2,
+      "Customer peer support forum with expert escalation paths": 2,
+      "Professional certification study group community platform": 2,
+      "Corporate knowledge base wiki with social annotations": 2,
+      "Customer referral program portal with attribution tracking": 2,
+      "Industry benchmarking data sharing and peer comparison community": 2,
+      "Hackathon participant project showcase and networking site": 2,
+      "Local brand chapter organizer and meetup listing platform": 2
     },
     "中大型企业 · 工具型": {
       "客户自助服务": 1,
@@ -704,7 +942,14 @@
       "employee onboarding task checklist and progress tracker": 2,
       "software license audit and renewal deadline tracker": 2,
       "multi-location inventory allocation and transfer request portal": 2,
-      "internal budget planning and departmental cost allocation tool": 2
+      "internal budget planning and departmental cost allocation tool": 2,
+      "brand guideline compliance checker for marketing materials": 2,
+      "enterprise API usage monitoring and quota management console": 2,
+      "workforce scheduling and shift swap management tool": 2,
+      "corporate NPS survey builder and response analytics dashboard": 2,
+      "vendor invoice reconciliation and payment dispute portal": 2,
+      "data access request and governance approval workflow": 2,
+      "internal product roadmap prioritization and voting tool": 2
     },
     "初创公司 · 展示型": {
       "融资/团队介绍": 1,
@@ -724,7 +969,14 @@
       "Security and compliance trust center landing page": 2,
       "Startup careers page with open roles and perks": 2,
       "Developer API portal and documentation landing page": 2,
-      "Affiliate and referral program promotional landing page": 2
+      "Affiliate and referral program promotional landing page": 2,
+      "Awards and industry recognition showcase wall": 2,
+      "Product screenshot gallery and demo video showcase": 2,
+      "Startup accelerator cohort portfolio and alumni site": 2,
+      "Thought leadership blog and resource library hub": 2,
+      "Industry vertical use case library for SaaS product": 2,
+      "Competitor comparison and differentiation landing page": 2,
+      "Startup community and ecosystem partner showcase site": 2
     },
     "初创公司 · 内容型": {
       "技术博客": 1,
@@ -744,7 +996,14 @@
       "product launch retrospective and reflection collection": 2,
       "company-building playbook and operations wiki": 2,
       "SaaS onboarding best-practices content library": 2,
-      "startup ecosystem funding digest newsletter archive": 2
+      "startup ecosystem funding digest newsletter archive": 2,
+      "technical deep-dive engineering content hub": 2,
+      "product design decision log and rationale site": 2,
+      "startup fundraising journey story collection": 2,
+      "remote team async culture and norms handbook": 2,
+      "SaaS growth experiment results and learnings blog": 2,
+      "open-startup transparency page with live metrics": 2,
+      "curated startup reading list and resource directory": 2
     },
     "初创公司 · 营销型": {
       "SaaS 产品落地页": 1,
@@ -764,7 +1023,14 @@
       "Year-in-review annual milestones microsite": 2,
       "Founder story and team bios about page": 2,
       "Head-to-head competitor alternatives comparison page": 2,
-      "Security trust and compliance certifications page": 2
+      "Security trust and compliance certifications page": 2,
+      "Careers and open engineering roles recruitment page": 2,
+      "Virtual summit and live event registration page": 2,
+      "Free marketing tools and template downloads hub": 2,
+      "New feature launch announcement countdown microsite": 2,
+      "Industry awards and customer recognition showcase wall": 2,
+      "Developer API platform marketing overview page": 2,
+      "Customer onboarding success stories resource center": 2
     },
     "初创公司 · 商务型": {
       "订阅购买": 1,
@@ -784,7 +1050,14 @@
       "Business contract e-signature and renewal management tool": 2,
       "Revenue operations reporting and GTM analytics platform": 2,
       "Enterprise customer onboarding milestone and progress tracker": 2,
-      "B2B customer reference request and case study portal": 2
+      "B2B customer reference request and case study portal": 2,
+      "Startup cap table and equity management platform": 2,
+      "SaaS product demo scheduling and prospect qualification site": 2,
+      "Sales territory planning and quota assignment dashboard": 2,
+      "Corporate budget approval and purchase order workflow site": 2,
+      "SaaS integration marketplace and technology partner directory": 2,
+      "Customer cohort and lifetime value analysis dashboard": 2,
+      "Enterprise security and compliance documentation self-service portal": 2
     },
     "初创公司 · 预约型": {
       "Demo 预约": 1,
@@ -804,7 +1077,14 @@
       "Growth marketing audit call booking for early-stage startups": 2,
       "B2B partnership intro call scheduling site": 2,
       "Product roadmap stakeholder review session booking portal": 2,
-      "Customer discovery call scheduler for pre-product founders": 2
+      "Customer discovery call scheduler for pre-product founders": 2,
+      "Press and analyst briefing request booking page": 2,
+      "Remote engineering interview scheduling tool for SaaS hiring": 2,
+      "Software vendor procurement evaluation call booking site": 2,
+      "Startup pitch competition presentation slot reservation site": 2,
+      "API integration consulting call booking platform": 2,
+      "Data migration assessment call scheduling system": 2,
+      "Churn rescue intervention call booking portal": 2
     },
     "初创公司 · 学习型": {
       "产品文档": 1,
@@ -824,7 +1104,14 @@
       "Third-party integration setup guide library": 2,
       "Community Q&A forum for SaaS power users": 2,
       "Role-based learning path builder for product users": 2,
-      "Guided sandbox demo environment for prospect onboarding": 2
+      "Guided sandbox demo environment for prospect onboarding": 2,
+      "Annotated template library with real-world usage examples": 2,
+      "Product knowledge quiz and skill assessment platform": 2,
+      "Webinar and live workshop hub for SaaS customers": 2,
+      "Error resolution knowledge base with step-by-step guides": 2,
+      "Cohort-based startup founder learning program site": 2,
+      "Use-case scenario explorer with decision-tree navigation": 2,
+      "SaaS compliance training portal with audit-ready certification": 2
     },
     "初创公司 · 社区型": {
       "用户论坛": 1,
@@ -843,7 +1130,14 @@
       "community newsletter archive and subscription site": 2,
       "launch announcement board for new SaaS features": 2,
       "community event and office hours calendar": 2,
-      "contributor spotlight and profile directory": 2
+      "contributor spotlight and profile directory": 2,
+      "user case study submission and review portal": 2,
+      "peer-to-peer integration recipe marketplace": 2,
+      "community job board for SaaS ecosystem roles": 2,
+      "curated resource and tool library by community": 2,
+      "workflow template gallery submitted by users": 2,
+      "sprint priority voting dashboard for next release": 2,
+      "closed beta feedback collection and tagging portal": 2
     },
     "初创公司 · 工具型": {
       "SaaS 应用本体": 1,
@@ -861,7 +1155,14 @@
       "Competitor monitoring and sales battlecard builder": 2,
       "API usage quota and billing management portal": 2,
       "Multi-tenant workspace administration console": 2,
-      "SaaS churn prediction and cohort retention tool": 2
+      "SaaS churn prediction and cohort retention tool": 2,
+      "OKR tracking and goal alignment web app": 2,
+      "Webhook event log and payload debugging console": 2,
+      "Customer health score monitoring and alerting tool": 2,
+      "Startup pitch deck version control and sharing platform": 2,
+      "SaaS integration connector and webhook builder": 2,
+      "Product changelog and release notes publishing tool": 2,
+      "Early-stage startup hiring pipeline and ATS": 2
     },
     "教育 · 展示型": {
       "学校/机构官网": 1,
@@ -874,7 +1175,14 @@
       "Campus virtual tour and 360-degree walkthrough site": 2,
       "Academic research highlights and publications page": 2,
       "Open day and campus visit event landing page": 2,
-      "Scholarship programs and financial aid showcase": 2
+      "Scholarship programs and financial aid showcase": 2,
+      "International partner universities and exchange programs directory": 2,
+      "Student testimonials and enrollment reviews display page": 2,
+      "Step-by-step admissions process overview site": 2,
+      "Campus facilities and amenities photo gallery": 2,
+      "Graduation ceremony and commencement highlights page": 2,
+      "Notable alumni hall of fame showcase site": 2,
+      "Academic departments and majors overview page": 2
     },
     "教育 · 内容型": {
       "校园新闻": 1,
@@ -887,7 +1195,14 @@
       "graduate thesis and dissertation digital repository": 2,
       "department seminar recordings and schedule archive": 2,
       "university press digital book and monograph hub": 2,
-      "faculty-hosted educational podcast series platform": 2
+      "faculty-hosted educational podcast series platform": 2,
+      "student-run online newspaper and opinion site": 2,
+      "annual institutional statistics and transparency report portal": 2,
+      "continuing education and professional certification course catalog": 2,
+      "academic conference proceedings and presentation archive": 2,
+      "faculty research commentary and blog network": 2,
+      "graduate program admissions guide and comparison site": 2,
+      "rare book and digital special collections library portal": 2
     },
     "教育 · 营销型": {
       "招生页": 1,
@@ -900,7 +1215,14 @@
       "summer intensive program enrollment promotional site": 2,
       "student referral rewards and discount portal": 2,
       "certification program comparison and enrollment landing page": 2,
-      "live webinar series registration and replay hub": 2
+      "live webinar series registration and replay hub": 2,
+      "early-bird tuition discount countdown enrollment page": 2,
+      "free study guide download lead capture page": 2,
+      "instructor credentials and faculty spotlight showcase": 2,
+      "student testimonial video gallery and social proof site": 2,
+      "limited-cohort bootcamp waitlist signup page": 2,
+      "graduate employment rate and career placement showcase": 2,
+      "online placement quiz with personalized course recommendations": 2
     },
     "教育 · 商务型": {
       "课程购买": 1,
@@ -913,7 +1235,14 @@
       "group enrollment management portal for company admins": 2,
       "training invoice and payment portal for business clients": 2,
       "reseller partner onboarding and commission tracking dashboard": 2,
-      "white-label course catalog configurator for B2B clients": 2
+      "white-label course catalog configurator for B2B clients": 2,
+      "training content licensing and royalty management site": 2,
+      "annual subscription plan upgrade and renewal portal": 2,
+      "corporate account self-service onboarding and setup site": 2,
+      "custom training program builder and pricing estimator": 2,
+      "skills gap analysis report generator for enterprise clients": 2,
+      "instructor contractor hiring and agreement portal": 2,
+      "franchise training program enrollment and progress site": 2
     },
     "教育 · 预约型": {
       "开放日预约": 1,
@@ -926,7 +1255,14 @@
       "Coding bootcamp discovery call and eligibility screening scheduler": 2,
       "SAT/ACT test prep tutoring session calendar": 2,
       "Corporate soft-skills training workshop seat reservation platform": 2,
-      "Online course instructor office hours booking tool": 2
+      "Online course instructor office hours booking tool": 2,
+      "Academic advisor appointment scheduling portal for enrolled students": 2,
+      "Study abroad program consultation booking site": 2,
+      "Special educational needs assessment appointment system": 2,
+      "Art and design class trial session booking platform": 2,
+      "Swimming school lesson slot and lane reservation site": 2,
+      "Driving school behind-the-wheel lesson appointment portal": 2,
+      "Professional certification exam prep coaching session scheduler": 2
     },
     "教育 · 学习型": {
       "在线课程平台": 1,
@@ -939,7 +1275,14 @@
       "Coding bootcamp curriculum and project submission portal": 2,
       "K-12 homework help and live tutoring marketplace": 2,
       "Professional certification exam prep and practice site": 2,
-      "University course catalog and four-year degree planner": 2
+      "University course catalog and four-year degree planner": 2,
+      "Corporate employee onboarding and compliance training portal": 2,
+      "STEM interactive virtual lab simulation platform": 2,
+      "Peer skill-exchange and learning community site": 2,
+      "Academic essay writing feedback and rubric grading tool": 2,
+      "Teacher lesson plan sharing and remix repository": 2,
+      "Open digital textbook library with inline annotation tools": 2,
+      "Parent-facing student progress and grade monitoring dashboard": 2
     },
     "教育 · 社区型": {
       "校友网络": 1,
@@ -952,7 +1295,14 @@
       "coding bootcamp cohort community and job board": 2,
       "language exchange partner matching for language school enrollees": 2,
       "teacher professional learning community and resource forum": 2,
-      "school volunteer coordination hub for parents and staff": 2
+      "school volunteer coordination hub for parents and staff": 2,
+      "student project showcase gallery with peer feedback": 2,
+      "homeschool co-op coordination and curriculum sharing site": 2,
+      "graduate research collaboration and co-author network": 2,
+      "campus club directory and student-run event calendar": 2,
+      "online debate club and argumentation practice forum": 2,
+      "student council governance discussion and voting board": 2,
+      "peer review platform for writing and essay courses": 2
     },
     "教育 · 工具型": {
       "学生门户": 1,
@@ -965,7 +1315,14 @@
       "student academic progress analytics dashboard": 2,
       "classroom seating chart editor for teachers": 2,
       "plagiarism detection results viewer for instructors": 2,
-      "parent-teacher conference scheduler and messaging hub": 2
+      "parent-teacher conference scheduler and messaging hub": 2,
+      "school event and room booking calendar": 2,
+      "peer tutor matching and session booking platform": 2,
+      "spaced repetition flashcard study manager": 2,
+      "collaborative online whiteboard for live classroom use": 2,
+      "academic citation formatter and bibliography generator": 2,
+      "reading level and text complexity analyzer tool": 2,
+      "accreditation evidence and documentation management portal": 2
     },
     "媒体 · 展示型": {
       "作者/编辑主页": 1,
@@ -978,7 +1335,14 @@
       "Podcast network show and episode visual directory": 2,
       "Documentary film series synopsis and stills showcase": 2,
       "News brand design and typography heritage site": 2,
-      "Bestseller list visual retrospective timeline site": 2
+      "Bestseller list visual retrospective timeline site": 2,
+      "Wire service archive photography showcase": 2,
+      "Newsroom staff and correspondent profile directory": 2,
+      "Annual report interactive infographic display site": 2,
+      "Data journalism visual explainer archive": 2,
+      "Magazine brand public style guide showcase": 2,
+      "Press freedom global index visualization site": 2,
+      "Media group subsidiary brands overview page": 2
     },
     "媒体 · 内容型": {
       "新闻门户": 1,
@@ -991,7 +1355,14 @@
       "science explainer and research translation newsroom": 2,
       "literary excerpt and book review editorial site": 2,
       "documentary film companion text and transcript archive": 2,
-      "data-driven journalism and interactive chart newsroom": 2
+      "data-driven journalism and interactive chart newsroom": 2,
+      "opinion and editorial commentary magazine site": 2,
+      "academic preprint reading and annotation digest": 2,
+      "travel narrative and destination writing publication": 2,
+      "environmental and climate crisis reporting magazine": 2,
+      "financial markets briefing and analysis publication": 2,
+      "sports deep-dive feature and analytics magazine": 2,
+      "tech industry insider newsletter web publication": 2
     },
     "媒体 · 营销型": {
       "订阅墙": 1,
@@ -1004,7 +1375,14 @@
       "documentary series exclusive early-access preview landing page": 2,
       "news outlet gift subscription holiday campaign page": 2,
       "author book launch preorder countdown microsite": 2,
-      "publisher affiliate and referral rewards enrollment portal": 2
+      "publisher affiliate and referral rewards enrollment portal": 2,
+      "editorial awards ceremony sponsorship microsite": 2,
+      "branded content studio portfolio and pitch landing page": 2,
+      "student journalist press pass application site": 2,
+      "investigative journalism crowdfunding campaign page": 2,
+      "magazine archive unlimited access limited-time offer page": 2,
+      "newsletter sponsorship rate card and booking page": 2,
+      "streaming video journalism series launch promotional site": 2
     },
     "媒体 · 商务型": {
       "付费订阅": 1,
@@ -1017,7 +1395,14 @@
       "author royalties and advance tracking dashboard": 2,
       "B2B media kit and advertising rate card site": 2,
       "podcast network ad inventory self-serve marketplace": 2,
-      "newsletter sponsorship matching platform for publishers": 2
+      "newsletter sponsorship matching platform for publishers": 2,
+      "academic journal institutional license purchasing portal": 2,
+      "print-on-demand book publishing storefront": 2,
+      "corporate content reprint and permissions licensing portal": 2,
+      "white-label newsletter reseller platform for agencies": 2,
+      "publisher affiliate and referral commission tracking site": 2,
+      "subscription revenue and churn analytics dashboard for newsrooms": 2,
+      "online journalism masterclass and workshop sales platform": 2
     },
     "媒体 · 预约型": {
       "采访预约": 1,
@@ -1030,7 +1415,14 @@
       "editorial consultation appointment site for freelance writers": 2,
       "book launch RSVP and seat selection platform": 2,
       "advance press screening reservation site for film critics": 2,
-      "radio talk show guest booking and briefing platform": 2
+      "radio talk show guest booking and briefing platform": 2,
+      "documentary preview screening ticket reservation site": 2,
+      "magazine cover photoshoot scheduling portal for featured talent": 2,
+      "manuscript review appointment booking site for aspiring authors": 2,
+      "literary agent one-on-one meeting scheduler at book fairs": 2,
+      "book club author speaker booking and calendar site": 2,
+      "press junket interview slot scheduler for entertainment media": 2,
+      "TV studio live audience ticket reservation platform": 2
     },
     "媒体 · 学习型": {
       "知识专题站": 1,
@@ -1042,7 +1434,13 @@
       "editorial writing craft masterclass and feedback site": 2,
       "fact-checking workflow guide and newsroom practice tool": 2,
       "long-form narrative reading room with author annotations": 2,
-      "media literacy curriculum portal for classroom educators": 2
+      "media literacy curriculum portal for classroom educators": 2,
+      "photojournalism ethics and technique learning library": 2,
+      "economics concepts explainer series with curated reading lists": 2,
+      "climate reporting deep-dive explainer and resource portal": 2,
+      "podcast transcript library with structured study guides": 2,
+      "documentary companion learning and discussion resource site": 2,
+      "academic research plain-language translation and discovery hub": 2
     },
     "媒体 · 社区型": {
       "读者评论区": 1,
@@ -1054,7 +1452,13 @@
       "Licensed novel series fan fiction archive and rating site": 2,
       "Literary magazine subscriber article annotation and discussion platform": 2,
       "Podcast episode community transcript crowdsourcing site": 2,
-      "Newsletter writer cross-promotion and audience sharing hub": 2
+      "Newsletter writer cross-promotion and audience sharing hub": 2,
+      "Academic journal open peer review discussion board": 2,
+      "Local news citizen reporter onboarding and credential portal": 2,
+      "Serialized fiction reader voting and story direction platform": 2,
+      "Magazine photo archive community caption and tagging site": 2,
+      "Science journalism study recommendation and source community": 2,
+      "Film criticism collaborative long-form review aggregator": 2
     },
     "媒体 · 工具型": {
       "RSS 聚合": 1,
@@ -1066,7 +1470,13 @@
       "Media kit builder for digital news brands": 2,
       "Fact-checking workflow and verification tool for editors": 2,
       "News wire feed monitoring and alert dashboard": 2,
-      "Freelance byline portfolio tracker for journalists": 2
+      "Freelance byline portfolio tracker for journalists": 2,
+      "Podcast transcript editing and publishing tool": 2,
+      "Newsletter audience analytics dashboard for media brands": 2,
+      "Story pitch submission tracker for editorial teams": 2,
+      "Paywall metering and subscriber conversion dashboard": 2,
+      "Breaking news push notification composer for publishers": 2,
+      "Press credential application and verification portal": 2
     },
     "文化 · 展示型": {
       "博物馆官网": 1,
@@ -1078,7 +1488,13 @@
       "performing arts center season and history showcase": 2,
       "city symphony orchestra official website": 2,
       "national park visitor information and heritage site": 2,
-      "indigenous peoples cultural heritage documentation site": 2
+      "indigenous peoples cultural heritage documentation site": 2,
+      "UNESCO world heritage site official portal": 2,
+      "literary foundation and writers house website": 2,
+      "national film archive and cinematheque showcase": 2,
+      "natural history museum specimen and diorama gallery": 2,
+      "botanic garden plant collections and ecology site": 2,
+      "public art installation and sculpture trail guide": 2
     },
     "文化 · 内容型": {
       "历史档案": 1,
@@ -1090,7 +1506,13 @@
       "nonprofit annual impact report storytelling platform": 2,
       "cultural heritage site virtual documentation portal": 2,
       "environmental NGO field research findings digest": 2,
-      "indigenous language preservation and learning resource site": 2
+      "indigenous language preservation and learning resource site": 2,
+      "museum permanent collection online catalogue browser": 2,
+      "human rights case documentation and reporting portal": 2,
+      "government audit and transparency report library": 2,
+      "literary foundation author essay and spotlight hub": 2,
+      "archaeological excavation findings publication site": 2,
+      "public health awareness educational content center": 2
     },
     "文化 · 营销型": {
       "筹款活动页": 1,
@@ -1102,7 +1524,13 @@
       "National park centennial anniversary celebration campaign site": 2,
       "City tourism official destination promotional campaign site": 2,
       "Theater company production spotlight and ticket promo site": 2,
-      "Cultural festival audience engagement and ticketing promotion": 2
+      "Cultural festival audience engagement and ticketing promotion": 2,
+      "Film festival audience award voting and sponsor showcase": 2,
+      "Heritage preservation monument sponsorship promotional site": 2,
+      "Public library capital campaign fundraising and impact site": 2,
+      "Environmental pledge campaign site for nonprofit coalition": 2,
+      "Food bank hunger awareness month donation drive page": 2,
+      "Animal shelter adoption drive campaign and success stories site": 2
     },
     "文化 · 商务型": {
       "纪念品商店": 1,
@@ -1114,7 +1542,13 @@
       "Cultural center venue rental reservation portal": 2,
       "Performing arts season ticket purchase site": 2,
       "Nonprofit charity auction bidding platform": 2,
-      "Government permit fee payment and processing portal": 2
+      "Government permit fee payment and processing portal": 2,
+      "Cultural festival vendor booth reservation site": 2,
+      "Art workshop and masterclass registration portal": 2,
+      "Museum corporate event and private hire booking site": 2,
+      "Public library fine payment and account top-up portal": 2,
+      "Charity gift card and e-voucher purchase platform": 2,
+      "Cultural heritage IP merchandise licensing marketplace": 2
     },
     "文化 · 预约型": {
       "参观预约": 1,
@@ -1126,7 +1560,13 @@
       "theater backstage tour booking platform": 2,
       "cultural center pottery workshop registration site": 2,
       "film archive screening room reservation portal": 2,
-      "historic site photography permit booking platform": 2
+      "historic site photography permit booking platform": 2,
+      "heritage building conservation tour booking system": 2,
+      "science museum school group visit booking platform": 2,
+      "food bank volunteer shift sign-up portal": 2,
+      "community legal aid consultation booking site": 2,
+      "animal shelter pet adoption meet-and-greet scheduler": 2,
+      "nonprofit grief counseling session booking portal": 2
     },
     "文化 · 学习型": {
       "科普教育资源": 1,
@@ -1138,7 +1578,13 @@
       "Nonprofit volunteer capacity building training portal": 2,
       "Community public health education resource center": 2,
       "Indigenous cultural knowledge open learning repository": 2,
-      "Government budget and fiscal policy explainer site": 2
+      "Government budget and fiscal policy explainer site": 2,
+      "Environmental stewardship education platform for nonprofits": 2,
+      "Primary source document study and annotation platform": 2,
+      "Community oral history collection and study site": 2,
+      "Legal rights and civic literacy portal": 2,
+      "Museum virtual exhibition guided learning experience": 2,
+      "Neighborhood history and local heritage learning site": 2
     },
     "文化 · 社区型": {
       "志愿者社区": 1,
@@ -1150,7 +1596,13 @@
       "indigenous cultural preservation knowledge-sharing network": 2,
       "mutual aid goods and service exchange board": 2,
       "community food pantry volunteer and donor portal": 2,
-      "nonprofit coalition cross-organization project collaboration workspace": 2
+      "nonprofit coalition cross-organization project collaboration workspace": 2,
+      "grassroots civic campaign supporter organizing platform": 2,
+      "participatory budgeting proposal submission and voting site": 2,
+      "neighborhood council agenda minutes and resident feedback hub": 2,
+      "public comment collection and civic dialogue portal": 2,
+      "local government spending transparency watchdog community": 2,
+      "community land trust member governance and discussion portal": 2
     },
     "文化 · 工具型": {
       "公共服务门户": 1,
@@ -1162,7 +1614,13 @@
       "Civic feedback collection and public comment submission portal": 2,
       "Public library digital catalog and interlibrary loan request tool": 2,
       "Volunteer opportunity matching platform for nonprofit organizations": 2,
-      "Open government spending transparency and budget visualization dashboard": 2
+      "Open government spending transparency and budget visualization dashboard": 2,
+      "Historical document OCR and public transcription crowdsourcing site": 2,
+      "Community arts funding directory and eligibility checker": 2,
+      "Public records request submission and fulfillment tracking tool": 2,
+      "Museum collection inventory and online loans management system": 2,
+      "Multilingual civic information translation and localization tool": 2,
+      "Endangered language documentation and oral history archive platform": 2
     },
     "开发者 · 展示型": {
       "GitHub Profile": 1,
@@ -1174,7 +1632,13 @@
       "Open-source contributor stats and leaderboard site": 2,
       "Personal engineering blog with deep-dive case studies": 2,
       "API showcase with live interactive endpoint explorer": 2,
-      "Developer conference talk archive and video portfolio": 2
+      "Developer conference talk archive and video portfolio": 2,
+      "Tech stack visualization site for engineering teams": 2,
+      "Hackathon project gallery with judges scores display": 2,
+      "Generative code art gallery and creative coding showcase": 2,
+      "Developer tool product landing page with feature demos": 2,
+      "Side-project showcase site with live previews": 2,
+      "Technical writing and documentation portfolio site": 2
     },
     "开发者 · 内容型": {
       "技术博客": 1,
@@ -1186,7 +1650,13 @@
       "production incident post-mortem archive and reading site": 2,
       "step-by-step developer tutorial and walkthrough article hub": 2,
       "API reference documentation reading portal for developers": 2,
-      "tech conference talk notes and speaker summary archive": 2
+      "tech conference talk notes and speaker summary archive": 2,
+      "programming language specification annotated browser and reader": 2,
+      "security advisory and CVE digest site for developers": 2,
+      "engineering scaling case study publication for startups": 2,
+      "developer podcast episode transcript and show notes library": 2,
+      "software system design pattern encyclopedia for engineers": 2,
+      "open-source maintainer interview and contributor story magazine": 2
     },
     "开发者 · 营销型": {
       "开源项目 Landing": 1,
@@ -1198,7 +1668,13 @@
       "Tech startup engineering culture and hiring site": 2,
       "Cloud infrastructure tool pricing comparison landing": 2,
       "Developer beta waitlist and early-access signup site": 2,
-      "Programming language framework community adoption showcase": 2
+      "Programming language framework community adoption showcase": 2,
+      "DevRel ambassador program recruitment landing page": 2,
+      "Technical certification course and exam marketing site": 2,
+      "Engineering blog with integrated product call-to-action": 2,
+      "Open-source maintainer grant program application site": 2,
+      "Developer productivity benchmark results showcase page": 2,
+      "Infrastructure-as-code tool go-to-market homepage": 2
     },
     "开发者 · 商务型": {
       "Donation/Sponsor": 1,
@@ -1210,7 +1686,13 @@
       "software vendor partner program enrollment site": 2,
       "developer conference ticket purchase and registration platform": 2,
       "technical certification exam purchase and scheduling portal": 2,
-      "code review service subscription and project tracker": 2
+      "code review service subscription and project tracker": 2,
+      "freelance developer marketplace with milestone-based escrow": 2,
+      "engineering team capacity billing and invoice generator": 2,
+      "technical due diligence report ordering platform": 2,
+      "software license key management and renewal dashboard": 2,
+      "developer-focused contract and invoice generation site": 2,
+      "API monetization and revenue analytics dashboard": 2
     },
     "开发者 · 学习型": {
       "技术文档/Wiki": 1,
@@ -1222,7 +1704,13 @@
       "Open-source onboarding hub for first-time contributors": 2,
       "Tech conference talk archive with full transcript search": 2,
       "Developer learning roadmap builder and progress tracker": 2,
-      "Algorithm step-through visualizer for CS fundamentals": 2
+      "Algorithm step-through visualizer for CS fundamentals": 2,
+      "SQL practice sandbox with curated real-world datasets": 2,
+      "Git branching and merge conflict interactive simulator": 2,
+      "Regex pattern builder with live test and plain-English explanation": 2,
+      "Cloud certification study guide and practice exam site": 2,
+      "Software design patterns catalog with runnable code examples": 2,
+      "Web performance optimization techniques lab and reference": 2
     },
     "开发者 · 社区型": {
       "论坛/BBS": 1,
@@ -1234,7 +1722,13 @@
       "hackathon team formation and project tracking platform": 2,
       "technical RFC proposal discussion and voting board": 2,
       "open-source bounty and micro-grant listing board": 2,
-      "developer tools directory with community star ratings": 2
+      "developer tools directory with community star ratings": 2,
+      "annotated code review examples learning community": 2,
+      "developer mentorship pairing and progress tracking site": 2,
+      "tech conference talk archive with community annotations": 2,
+      "competitive programming leaderboard and contest hub": 2,
+      "developer side-project launch and feedback board": 2,
+      "open-source contributor stats and recognition site": 2
     },
     "开发者 · 工具型": {
       "实验性/交互站": 1,
@@ -1246,7 +1740,13 @@
       "JSON schema validator and pretty-printer tool": 2,
       "Cron expression generator with plain-English explainer": 2,
       "Git commit message linter and formatter": 2,
-      "SQL query formatter and step-by-step explainer": 2
+      "SQL query formatter and step-by-step explainer": 2,
+      "Open-source license chooser and side-by-side comparator": 2,
+      "HTTP status code reference and live tester": 2,
+      "Environment variable manager and dotenv file generator": 2,
+      "Webhook inspector and inbound request logger": 2,
+      "Base64 and encoding converter for developers": 2,
+      "Unix timestamp and timezone converter tool": 2
     }
   }
 }

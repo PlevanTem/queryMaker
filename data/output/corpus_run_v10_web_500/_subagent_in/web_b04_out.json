@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_011_006",
+    "query_text": "A community resource library app where creators can browse and upvote tools and guides recommended by other makers, with a side panel for filtering by category and a main area showing each resource as a little card with a short description and a link, all running in a web app you can use in your desktop browser."
+  },
+  {
+    "id": "q_web_011_007",
+    "query_text": "A collab board app for creators who want to find other makers to team up with, where you can browse people by what they're good at — like writing, illustration, video, music — and reach out to someone whose skills fit what your project is missing, all in a web app that works nicely on desktop with a browsable list on one side and a profile detail on the other."
+  },
+  {
+    "id": "q_web_012_001",
+    "query_text": "Make a batch watermark tool for photographers that runs in the browser, where you can drag in a bunch of photos at once and pick a text or image watermark to stamp on all of them, with a preview so you can check the position and size before saving everything out."
+  },
+  {
+    "id": "q_web_012_002",
+    "query_text": "Create a creative project planner app for desktop browsers that lets me lay out all the milestones for a project on a timeline, set due dates for each one, and see at a glance which deadlines are coming up soon so nothing sneaks up on me."
+  },
+  {
+    "id": "q_web_012_003",
+    "query_text": "Need a stock asset license tracker for a web app where a small content team can log every photo, music clip, or footage piece they've licensed, see the usage rights and expiry dates for each one, and get a heads-up when something is about to expire so they don't accidentally use it out of scope."
+  },
+  {
+    "id": "q_web_012_004",
+    "query_text": "Make a browser-based tool for bloggers that helps you put together a content brief for a post — you type in your main topic and the tool spits out a suggested outline with keyword angles and notes on what to cover, so you have a clear plan before you start writing."
+  },
+  {
+    "id": "q_web_012_005",
+    "query_text": "A timing calculator app for voice-over scripts that lives in the browser, where you paste in your script text and it tells you roughly how long it'll take to read at different speaking speeds, so you can figure out if your narration will fit the video length before you go into the recording booth."
+  },
+  {
+    "id": "q_web_012_006",
+    "query_text": "Need a web app for building a personal library of repeating surface patterns where I can save and organize the tile designs I make, preview how they look when tiled across a surface, and then export the repeat tile as an image file I can actually use in other projects."
+  },
+  {
+    "id": "q_web_012_007",
+    "query_text": "Create a social media content planner app for desktop browsers where I can map out posts across different platforms on a monthly calendar, keep draft ideas in a separate list on the side, and move them onto specific dates when I'm ready to schedule them."
+  },
+  {
+    "id": "q_web_013_001",
+    "query_text": "Create a portfolio website for an independent marketing consultant that feels confident and direct — showing off campaign outcomes with real numbers, a clear sense of what this person specializes in, and a tone that says they know what they're doing, all in a web app built for desktop browsers."
+  },
+  {
+    "id": "q_web_013_002",
+    "query_text": "Need a personal showcase website for a freelance translator that feels warm and precise at the same time — a place that highlights the language pairs they work in, shows sample translations, and gives the whole site a voice that feels like it belongs to someone who actually cares about words, built as a web app for desktop browsers."
+  },
+  {
+    "id": "q_web_013_003",
+    "query_text": "Make a personal website for an independent therapist that feels calm and trustworthy — something that shows their credentials and approach without feeling cold or clinical, the kind of site that makes someone feel safe before they even reach out, built as a web app that looks great in a desktop browser."
+  },
+  {
+    "id": "q_web_013_004",
+    "query_text": "Create a portfolio website for a freelance audio engineer that has real personality — something that shows off their mixing work with audio samples you can actually play, lists the artists and projects they've worked with, and feels like it belongs to someone who takes sound seriously, all in a web app built for desktop browsers."
+  },
+  {
+    "id": "q_web_013_005",
+    "query_text": "Make a personal site for an independent journalist that feels like a proper home for their work — a place to archive bylines organized by beat, show off their coverage areas, and carry a voice that feels like theirs and not just a generic resume, built as a web app for desktop browsers."
+  },
+  {
+    "id": "q_web_013_006",
+    "query_text": "Build a personal gallery website for a freelance 3D artist that shows their renders in a clean, image-forward layout with a bit of personality, lets visitors browse by project type, and feels like the kind of site that says this person has taste — built as a web app for desktop browsers."
+  },
+  {
+    "id": "q_web_013_007",
+    "query_text": "Make a website for an independent business coach that leads with real client transformation stories — the kind of site where people can read about actual results, feel the coach's voice coming through, and walk away convinced this person is worth talking to, all in a web app built for desktop browsers."
+  },
+  {
+    "id": "q_web_014_001",
+    "query_text": "A clean archive site for an independent legal writer where their regulatory commentaries and briefs live in one place, organized by topic or date so readers can browse without getting lost, with a tone that feels sharp and credible rather than stuffy — built as a web app you open in a desktop browser."
+  },
+  {
+    "id": "q_web_014_002",
+    "query_text": "A personal press kit builder app for content creators that lives in the browser and helps put together a neat one-page media profile — covering who you are, your numbers, your past collabs, and a downloadable kit — the kind of thing you'd actually send to a brand and feel proud of rather than embarrassed by."
+  },
+  {
+    "id": "q_web_014_003",
+    "query_text": "A personal website for a professional ghostwriter that quietly shows what they're good at — the subjects they write about, the kinds of clients they work with, and a few sample pieces — without making a big fuss, just the right amount of confidence baked into the design, built as a web app for desktop browsers."
+  },
+  {
+    "id": "q_web_014_004",
+    "query_text": "Need a podcast archive app for a web browser where I can store show notes for every episode, link out to resources mentioned in each one, and have it all organized so listeners can find old episodes and the stuff that goes with them without digging around."
+  },
+  {
+    "id": "q_web_014_005",
+    "query_text": "Build a personal portfolio website for a freelance technical writer that shows off API documentation samples in a way that feels clean and readable — with real examples front and center, organized by the kind of work and the industry, the kind of site that proves the person knows their craft just from looking at it, built as a web app for desktop browsers."
+  },
+  {
+    "id": "q_web_014_006",
+    "query_text": "Need a personal credentials site for an expert witness that lists their qualifications, publications, and past case experience in a way that feels authoritative and easy to scan — the kind of web app you'd open in a desktop browser and immediately know this person is serious about their field."
+  },
+  {
+    "id": "q_web_014_007",
+    "query_text": "Build a personal archive website for an independent financial commentator where all their market takes and analysis pieces live in one tidy place, organized by date and topic, with a voice that feels like someone who actually has a point of view rather than just covering the news — built as a web app for desktop browsers."
+  },
+  {
+    "id": "q_web_015_001",
+    "query_text": "Build a case study showcase website for a freelance social media strategist that leads with real ROI results — the numbers, the before-and-after growth, the platforms involved — and feels like it belongs to someone who knows exactly what they're selling, all in a web app built for desktop browsers."
+  },
+  {
+    "id": "q_web_015_002",
+    "query_text": "Make a personal marketing website for a professional resume writer that shows before-and-after sample resumes side by side so visitors can actually see the difference, with a confident tone that makes it obvious this person gets results — built as a web app that works well in a desktop browser."
+  }
+]

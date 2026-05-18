@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_026_008",
+    "query_text": "Need a research paper literature review logger for my phone where I can add each paper with the title, author, and a short note on what it says, then see all my entries in a clean list so I can check off the ones I've already summarized."
+  },
+  {
+    "id": "q_scene_026_009",
+    "query_text": "Photography monthly challenge tracker app for mobile where each month shows a list of daily shooting prompts I can tick off one by one, and a small progress count at the top so I can see how many days I've completed that month."
+  },
+  {
+    "id": "q_scene_027_001",
+    "query_text": "Build a professional certification learning path planner for my phone that shows all the required courses in order, lets me mark each one done, and displays how far along I am toward the full certification."
+  },
+  {
+    "id": "q_scene_027_002",
+    "query_text": "Build a language school level ladder overview app for mobile that lays out every level from beginner to advanced in a clear step-by-step list, shows what skills each level covers, and lets me tap a level to see the courses inside it."
+  },
+  {
+    "id": "q_scene_027_003",
+    "query_text": "Create a music academy lesson weekly schedule planner for my phone that lists all the lessons for each day of the week, shows the time slot and instrument for each class, and lets me tap a lesson to see the teacher's name and room."
+  },
+  {
+    "id": "q_scene_027_004",
+    "query_text": "Create a fitness class studio timetable app for mobile that shows all the classes for each day in a simple list, with the class name, time, and instructor, so I can quickly find a class I want and tap to save it to my personal schedule."
+  },
+  {
+    "id": "q_scene_027_005",
+    "query_text": "A corporate training catalog browser app for my phone that organizes all available training courses into clear categories, lets me tap into each category to see a list of courses with a short description, and has a saved list so I can bookmark the ones I plan to take."
+  },
+  {
+    "id": "q_scene_027_006",
+    "query_text": "Create a vocational trade skills directory app for mobile that lists all the trades and skills I can learn, grouped by category like electrical, plumbing, and carpentry, with a short description for each skill and a way to mark the ones I want to pursue."
+  },
+  {
+    "id": "q_scene_027_007",
+    "query_text": "Make a STEM enrichment module explorer app for my phone that shows all available science, tech, math, and engineering activity modules in a browsable list, lets me filter by subject, and shows a short description with what age group each module is for when I tap it."
+  },
+  {
+    "id": "q_scene_027_008",
+    "query_text": "Build a cooking school class schedule app for mobile that lists every upcoming class by date with the dish being taught and the chef's name, so I can scroll through the week, tap any class for details like duration and skill level, and add it to my personal list."
+  },
+  {
+    "id": "q_scene_027_009",
+    "query_text": "Need a art workshop and studio timetable app for my phone that shows all the upcoming workshops in a weekly list with the date, time, and type of art like watercolor or ceramics, so I can quickly find what's on and tap to sign up for the session I want."
+  },
+  {
+    "id": "q_scene_028_001",
+    "query_text": "Need a cooking temperature and time reference tool for my phone so I don't have to hunt through multiple sites every time I cook — just a quick-lookup app where I can tap a food type like chicken or fish and instantly see the right oven temp and how long to cook it."
+  },
+  {
+    "id": "q_scene_028_002",
+    "query_text": "Build a medical drug interaction reference app for my phone that lets me type in two medications and instantly see whether they interact, so I stop having to scroll through long medical pages just to find a simple yes or no answer with a short explanation."
+  },
+  {
+    "id": "q_scene_028_003",
+    "query_text": "Create a tax bracket and rate calculator for my phone that lets me type in my income and filing status, then shows me exactly which brackets I fall into and how much tax I owe at each rate, so I stop guessing every year."
+  },
+  {
+    "id": "q_scene_028_004",
+    "query_text": "Build a musical key signature reference app for my phone that shows all the major and minor keys in one clean list, with the number of sharps or flats for each key clearly labeled, so I can look it up in two seconds instead of digging through a theory book every rehearsal."
+  },
+  {
+    "id": "q_scene_028_005",
+    "query_text": "A legal Latin terms and phrases lookup app for my phone that lists all the common Latin legal expressions alphabetically, shows the plain-English meaning right below each term, and lets me search by keyword so I can stop getting lost in dense legal documents."
+  },
+  {
+    "id": "q_scene_028_006",
+    "query_text": "A sports rules and penalty reference app for my phone that covers the most common sports like soccer, basketball, and volleyball, listing each rule violation alongside its penalty in plain language, so I can check a call in seconds without reading a full rulebook."
+  },
+  {
+    "id": "q_scene_028_007",
+    "query_text": "Build a stock market technical indicator reference app for my phone that lists all the common indicators like RSI, MACD, and Bollinger Bands, shows a plain-English explanation of what each one means and when traders use it, so I stop mixing them up when I'm reading charts."
+  },
+  {
+    "id": "q_scene_028_008",
+    "query_text": "Make a photography exposure triangle reference app for my phone that shows how aperture, shutter speed, and ISO all connect, so I can tap any one setting and see what happens to the other two — I keep forgetting this stuff mid-shoot and need something quick to check."
+  },
+  {
+    "id": "q_scene_028_009",
+    "query_text": "Need a nutrition macro and calorie reference app for my phone that lets me tap on common foods and immediately see the protein, carbs, fat, and calorie count, so I stop opening five different websites every time I'm trying to figure out what to eat."
+  },
+  {
+    "id": "q_scene_029_001",
+    "query_text": "Build a team sprint task board app for my phone where I can add tasks to a To Do, In Progress, and Done column, assign each task to a team member, and see at a glance what everyone is working on this sprint."
+  },
+  {
+    "id": "q_scene_029_002",
+    "query_text": "Make a personal goal tracker for my phone where I can write down my big goal for the quarter, break it into smaller steps with deadlines, and check off each step as I finish it so I can see my overall progress in one place."
+  },
+  {
+    "id": "q_scene_029_003",
+    "query_text": "A household chore manager app for my phone where I can list all the regular chores, assign each one to a family member, and set how often it repeats — weekly, daily, or monthly — so nobody has to ask who's supposed to do what this week."
+  },
+  {
+    "id": "q_scene_029_004",
+    "query_text": "Make a client deliverable milestone checklist app for my phone that lets me create a checklist for each client project with the key deliverables and their due dates, so I can check them off as I finish and always know at a glance what's still pending."
+  },
+  {
+    "id": "q_scene_029_005",
+    "query_text": "Need a weekly review and planning app for my phone that gives me a simple two-part layout — one section to jot down what I got done this week and any blockers, and another section to list my top priorities for next week — so I can wrap up and plan ahead in one quick sit-down."
+  }
+]

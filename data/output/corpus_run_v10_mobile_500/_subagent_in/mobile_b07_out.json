@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_012_007",
+    "query_text": "Need a mobile app for performing arts groups where members can fill in their ensemble role, list their audition history, and show off the pieces they've performed — it should feel like a beautiful artistic portfolio, warm and stage-lit in vibe, with each person's profile reading like a theater program credit rather than a dry resume."
+  },
+  {
+    "id": "q_scene_012_008",
+    "query_text": "Scientific researcher profile app for your phone that pulls in your ORCID publication list and displays it in a clean, elegant way — something that feels like a well-designed academic journal cover rather than a plain list, with your papers grouped by year and each entry showing the journal name and co-authors in a way that looks genuinely refined and worth sharing."
+  },
+  {
+    "id": "q_scene_013_001",
+    "query_text": "Need a mobile survey tool that lets respondents take a photo right from their phone camera and attach it as an answer to a specific question, so I stop getting blank text responses when I really need people to just snap and submit a picture of what I'm asking about."
+  },
+  {
+    "id": "q_scene_013_002",
+    "query_text": "Need a mobile app that lets students upload their thesis as multiple separate files all at once — main document, appendices, signed declaration form — so they can submit everything in one go on their phone and stop emailing attachments back and forth to the office."
+  },
+  {
+    "id": "q_scene_013_003",
+    "query_text": "Create a mobile field inspection tool where workers can take photos on-site and the app automatically stamps each photo with the GPS location it was taken, then bundles everything into a report they can send straight from their phone without having to manually write down where each picture was taken."
+  },
+  {
+    "id": "q_scene_013_004",
+    "query_text": "Build a mobile app for smart meter users that shows their usage data and lets them download it as a spreadsheet file with one tap, so they can stop trying to copy numbers off a screen and actually have the data in a file they can open on their computer."
+  },
+  {
+    "id": "q_scene_013_005",
+    "query_text": "Build a mobile app for factory QA workers that lets them fill in an inspection checklist on their phone and then export the whole report as a PDF or spreadsheet they can send to the supervisor, so nobody has to retype handwritten notes at the end of the shift."
+  },
+  {
+    "id": "q_scene_013_006",
+    "query_text": "A visa application tracker for your phone that tells you exactly which documents you still need to upload, shows a checklist of everything required, and lets you tap each item to upload the file right there — so you never miss a document or have to re-read confusing government instructions to figure out what's still missing."
+  },
+  {
+    "id": "q_scene_013_007",
+    "query_text": "A social media content planner for your phone where you can select a bunch of photos and videos at once, pick a future date and time to post them, and queue everything up so it goes out automatically — so you can prepare a whole week of posts in one sitting instead of remembering to post every single day."
+  },
+  {
+    "id": "q_scene_013_008",
+    "query_text": "Make a mobile backup manager that lets you securely download an encrypted copy of your data straight to your phone, with a password-protected download process and a clear confirmation once the file is safely saved — so you always have a proper offline backup you can trust is protected."
+  },
+  {
+    "id": "q_scene_014_001",
+    "query_text": "Build a mobile app for agile teams where you can save a sprint retrospective board as a reusable template and then clone it fresh at the start of every new sprint, so nobody has to rebuild the same what-went-well and what-needs-improving structure from scratch every single time."
+  },
+  {
+    "id": "q_scene_014_002",
+    "query_text": "Make a mobile customer journey planner where you can duplicate any stage of the journey with a single tap and tweak just the parts that are different, so you stop rebuilding the same stages over and over every time you need a variation for a new customer segment."
+  },
+  {
+    "id": "q_scene_014_003",
+    "query_text": "Create a mobile loyalty program manager where you can copy an existing membership tier's benefits and points structure, adjust just the thresholds and perks for the new tier, and save it — so setting up a new Gold or Platinum level takes minutes instead of starting over from scratch every time."
+  },
+  {
+    "id": "q_scene_014_004",
+    "query_text": "Need a mobile app that lets me copy all the settings from our live production environment over to the staging environment with a few taps on my phone, so I can stop manually re-entering config values every time I need staging to match what's running in production."
+  },
+  {
+    "id": "q_scene_014_005",
+    "query_text": "A mobile product manager tool where you can take an existing bundle, duplicate it, and update just the pricing and included items for the new version — so launching a new seasonal offer means tweaking a copy instead of building the whole bundle listing from scratch every time."
+  },
+  {
+    "id": "q_scene_014_006",
+    "query_text": "Build a mobile invoicing app where you can copy all the line items from a previous invoice straight into a new one with a single tap, so you stop manually re-entering the same services and prices every time you bill a recurring client on your phone."
+  },
+  {
+    "id": "q_scene_014_007",
+    "query_text": "Need a mobile shift scheduling app that lets me duplicate the whole weekly rotation pattern and apply it to the next week, so I stop manually re-entering every single person's shift assignments every time a new week starts."
+  },
+  {
+    "id": "q_scene_014_008",
+    "query_text": "Build a mobile grading tool for teachers where you can save a rubric template once and then copy it for each new assignment, adjusting the criteria as needed, so you stop rebuilding the same grading structure from scratch on your phone every time you create a new project."
+  },
+  {
+    "id": "q_scene_015_001",
+    "query_text": "Need a mobile app that lets me customize a home screen layout by adding little info tiles — like a weather spot, a quick notes box, a countdown timer — and resize each one to fit however much space I want to give it, so my phone's home feels actually useful and personal to how I work."
+  },
+  {
+    "id": "q_scene_015_002",
+    "query_text": "Create a mobile setup guide app that walks new users through turning on helpful accessibility options step by step — things like bigger text, voice control, or high contrast mode — with a friendly walkthrough that explains what each setting actually does so someone who's never touched these options can figure it out without feeling lost."
+  },
+  {
+    "id": "q_scene_015_003",
+    "query_text": "Create a mobile privacy manager app that shows you a clear list of all the other apps on your phone and what permissions each one has — like camera, location, contacts — so you can see at a glance which apps have access to things they probably shouldn't, and turn off the ones you want to revoke right from the same place."
+  },
+  {
+    "id": "q_scene_015_004",
+    "query_text": "Make a mobile Bluetooth manager tool that scans for nearby devices, walks you through pairing them step by step, and lets you give each paired device a nickname so you always know which device is which — especially handy when you have several speakers or earbuds and they all show up with confusing model numbers."
+  },
+  {
+    "id": "q_scene_015_005",
+    "query_text": "Need a mobile calendar sync tool that lets me connect my Google, Outlook, or iCloud calendars in one place on my phone and see all my events together in a single view, with a simple setup flow that shows exactly which accounts are linked and lets me turn each one on or off whenever I want."
+  },
+  {
+    "id": "q_scene_015_006",
+    "query_text": "Build a mobile data importer tool that lets you bring in a file from another app or service, then walks you through matching up the columns or fields to where they should go in the new place, so you can move your stuff between apps on your phone without everything ending up in the wrong spot."
+  },
+  {
+    "id": "q_scene_015_007",
+    "query_text": "Need a mobile link chooser tool that pops up when you tap a shared link and shows you all the apps that could open it, letting you pick where you actually want to go each time rather than always getting sent to the wrong place automatically — especially useful when links could go to a web browser, a native app, or a mini-program."
+  }
+]

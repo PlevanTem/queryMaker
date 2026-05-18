@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_024_001",
+    "query_text": "Create a mobile app for studying chemistry periodic element symbol cards where each card shows the element name, symbol, and atomic number, and I can flip through them one at a time and mark the ones I keep getting wrong so I can review those separately."
+  },
+  {
+    "id": "q_scene_024_002",
+    "query_text": "Build a history date and event matching app for my phone where I get shown a list of dates on one side and events on the other, and I have to drag them together to match them up, with a score at the end showing how many I got right."
+  },
+  {
+    "id": "q_scene_024_003",
+    "query_text": "Create a GRE vocabulary drill app for my phone that shows one word at a time on a card, lets me flip it to see the definition and example sentence, and keeps track of which words I've marked as learned versus still working on."
+  },
+  {
+    "id": "q_scene_024_004",
+    "query_text": "World capitals and country flags study app for mobile where each card shows a flag on one side and the country name and capital on the other, organized by region so I can practice one area at a time and tick off the ones I know."
+  },
+  {
+    "id": "q_scene_024_005",
+    "query_text": "Create a sign language gesture study app for my phone with visual cards showing each hand shape and the letter or word it represents, organized in a clear list so I can go through them one by one and check off the ones I have memorized."
+  },
+  {
+    "id": "q_scene_024_006",
+    "query_text": "Create a music theory flashcard app for my phone that covers notes, scales, and chord names, where I can tap a card to flip it and see the full name or diagram, and mark the ones I still need to practice so I can come back to them."
+  },
+  {
+    "id": "q_scene_024_007",
+    "query_text": "A programming syntax and API flashcard app for my phone where each card has a function or method name on the front and the correct syntax and a short example on the back, organized by language so I can focus on Python or JavaScript separately."
+  },
+  {
+    "id": "q_scene_024_008",
+    "query_text": "Make a math formula and theorem reference app for my phone that lets me flip through cards one at a time, with the formula name on the front and the full formula plus a quick example on the back, sorted by topic like algebra, geometry, and calculus."
+  },
+  {
+    "id": "q_scene_024_009",
+    "query_text": "Need an art history study app for my phone that covers different periods and styles, where each card shows the period name and key details like dates, famous artists, and defining features, so I can go through them in order and mark which ones I know well."
+  },
+  {
+    "id": "q_scene_025_001",
+    "query_text": "Make a state bar exam law practice app for my phone with multiple-choice questions organized by topic like contracts, torts, and constitutional law, where I can pick a topic and run through questions one at a time and see my score at the end of each set."
+  },
+  {
+    "id": "q_scene_025_002",
+    "query_text": "Create a CFA Level 1 exam drill app for my phone that gives me practice questions on topics like ethics, fixed income, and equities one at a time, shows whether I got it right after I answer, and keeps a running count of my correct answers per topic."
+  },
+  {
+    "id": "q_scene_025_003",
+    "query_text": "Build a data science interview practice app for my phone where I can go through coding and concept questions one at a time, see the answer after I make a guess, and keep track of which question types I keep getting wrong so I know what to study more."
+  },
+  {
+    "id": "q_scene_025_004",
+    "query_text": "A driving theory test simulator app for my phone with practice questions that look just like the real test, one question per screen with answer choices, and a result summary at the end showing which questions I missed and the correct answers."
+  },
+  {
+    "id": "q_scene_025_005",
+    "query_text": "Create a civil service exam practice app for my phone that covers the main test sections like verbal reasoning and logical judgment, lets me pick one section at a time, go through questions one by one, and shows my score and any wrong answers when I finish."
+  },
+  {
+    "id": "q_scene_025_006",
+    "query_text": "Make a real estate license exam practice app for my phone with questions organized by state and topic, where I can choose a topic like property law or financing and do a practice round, then see which ones I missed and review the explanations."
+  },
+  {
+    "id": "q_scene_025_007",
+    "query_text": "Build a nursing NCLEX practice app for my phone where I can do sets of questions organized by body system or topic, get immediate feedback on whether my answer is right, and see a running record of my weakest areas so I know what to focus on next."
+  },
+  {
+    "id": "q_scene_025_008",
+    "query_text": "Build a PMP exam prep app for my phone where I can practice questions organized by process group like initiating, planning, and executing, go through them one at a time, pick my answer, and see a summary at the end with my score and the correct answers I missed."
+  },
+  {
+    "id": "q_scene_025_009",
+    "query_text": "Make a CompTIA Security Plus IT certification practice app for my phone with drill questions organized by exam domain, where I can run through a set of questions one at a time, submit my answer, and get a score summary with explanations for any I got wrong."
+  },
+  {
+    "id": "q_scene_026_001",
+    "query_text": "A fitness instructor certification progress tracker app for my phone where I can list all the modules and requirements I need to complete, check them off as I finish each one, and see an overall progress bar so I always know exactly how far along I am."
+  },
+  {
+    "id": "q_scene_026_002",
+    "query_text": "Make an online course progress tracker app for my phone where I can add each course I'm taking, list all the modules inside it, check off the ones I've finished, and see the completion percentage for each course at a glance on the home screen."
+  },
+  {
+    "id": "q_scene_026_003",
+    "query_text": "Need a guitar practice logger app for my phone where I can log each practice session with the date, how long I practiced, and what I worked on, and see a history of all my sessions so I can spot when I'm being consistent and when I'm slacking off."
+  },
+  {
+    "id": "q_scene_026_004",
+    "query_text": "A chess rating tracker app for my phone where I can log my rating after each game session and see a simple chart showing how my rating has gone up or down over time, plus a list of my recent entries with the date and rating number for each one."
+  },
+  {
+    "id": "q_scene_026_005",
+    "query_text": "A daily drawing practice log app for my phone where I get a prompt each day, can check it off when I've done my sketch for the day, and can scroll back through past entries to see a record of all the days I completed and what each prompt was."
+  },
+  {
+    "id": "q_scene_026_006",
+    "query_text": "Build a 30-day habit streak tracker app for my phone where I can add up to five habits I want to build, tap to check each one off every day, and see a calendar grid showing my streak so I can see exactly which days I kept up and which ones I missed."
+  },
+  {
+    "id": "q_scene_026_007",
+    "query_text": "Build a creative writing daily word count tracker app for my phone where I can set a daily word goal, log how many words I wrote each day, and see a simple chart of my word counts over the past two weeks so I can tell if I'm keeping up my pace."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_006_005",
+    "query_text": "Need a mobile app for filing insurance claims where I can take photos of the damage right from my phone and attach them to the claim, with a step-by-step form that walks me through the incident details, injury info, and lets me review everything before submitting."
+  },
+  {
+    "id": "q_scene_006_006",
+    "query_text": "Build a property inspection checker app for my phone that goes room by room through a checklist of things to look at, and for each issue I find I can mark how bad it is — like minor, serious, or critical — so at the end I get a clear summary of what needs fixing most urgently."
+  },
+  {
+    "id": "q_scene_006_007",
+    "query_text": "A grant application tool for mobile that walks you through each part of the submission one step at a time — project description, budget, team info — and lets you attach supporting files like PDFs or spreadsheets along the way before you hit submit."
+  },
+  {
+    "id": "q_scene_006_008",
+    "query_text": "Build a podcast episode planner app for my phone that takes me through setting up a new episode step by step — title, description, guest info — and lets me add chapter marks with timestamps so listeners can jump to different parts of the episode."
+  },
+  {
+    "id": "q_scene_007_001",
+    "query_text": "Create a blog editor tool for mobile where I can quickly go in and update the SEO title, description, and the URL slug for any post without having to dig through a bunch of settings, so my articles actually show up properly in search results."
+  },
+  {
+    "id": "q_scene_007_002",
+    "query_text": "Build a shared document editor app for my phone where multiple people can type at the same time and when two people edit the same part, the app shows both versions and lets you pick which one to keep instead of just overwriting everything."
+  },
+  {
+    "id": "q_scene_007_003",
+    "query_text": "Create a stock manager app for mobile where I can select a bunch of products at once and update their size, color, weight, or price all in one go, so I don't have to open each item one by one and make the same change over and over."
+  },
+  {
+    "id": "q_scene_007_004",
+    "query_text": "Make a performance review manager app for my phone where managers can update each employee's review scores and leave comments, and the employee can reply in the same thread so all the feedback stays in one place and nothing gets lost in email chains."
+  },
+  {
+    "id": "q_scene_007_005",
+    "query_text": "A car maintenance logger for my phone where I can log every service visit with the current mileage, what was done, and how much it cost, so I always know when the next oil change or tire rotation is due based on how many miles have passed since the last one."
+  },
+  {
+    "id": "q_scene_007_006",
+    "query_text": "Create a lease editor app for mobile that shows me the current contract terms side by side with what I want to change — like rent amount, lease length, or pet policy — so I can mark up the edits and keep a clear record of what I proposed during the negotiation."
+  },
+  {
+    "id": "q_scene_007_007",
+    "query_text": "Need a sprint planner app for my phone that shows all the tasks in the current sprint and lets me tap each one to quickly change the point estimate, so the whole team can update the numbers on the go during our planning meeting instead of everyone crowding around one laptop."
+  },
+  {
+    "id": "q_scene_007_008",
+    "query_text": "A social post scheduler for my phone where I can see all the posts lined up by date, tap into any one that hasn't gone out yet, edit the text or swap the image, and save it back without losing the scheduled time — so I can fix last-minute mistakes before they go live."
+  },
+  {
+    "id": "q_scene_008_001",
+    "query_text": "A file finder app for my phone that lets me search through deeply nested folders and when I find something, it shows me the full path of folders I went through to get there, so I actually know where the file lives and can find it again later."
+  },
+  {
+    "id": "q_scene_008_002",
+    "query_text": "Need a code search tool for my phone that lets me type in a function name or variable and quickly find every place it shows up in my project, with the file name and line number shown next to each result, so I can navigate my code without having my laptop open."
+  },
+  {
+    "id": "q_scene_008_003",
+    "query_text": "Create a people finder app for mobile where I can search by username or real name to pull up someone's profile, see their bio and recent posts in a clean list, and tap through to their full profile — useful when I'm trying to reconnect with someone but only remember part of their handle."
+  },
+  {
+    "id": "q_scene_008_004",
+    "query_text": "A spending lookup tool for my phone where I can filter transactions by the type of store — like groceries, restaurants, or subscriptions — and set an amount range to find exactly what I'm looking for, so I can track down that one weird charge without scrolling through months of history."
+  },
+  {
+    "id": "q_scene_008_005",
+    "query_text": "Build a knowledge explorer app for my phone that lets me search for a concept and then see all the related ideas connected to it, so I can tap through the connections and actually understand how topics link together instead of just reading a flat list of search results."
+  },
+  {
+    "id": "q_scene_008_006",
+    "query_text": "Need a podcast search app for my phone that lets me type in any keyword and search through the full text of episode transcripts, so I can jump straight to the exact moment in an episode where something was said instead of having to listen through the whole thing to find it."
+  },
+  {
+    "id": "q_scene_008_007",
+    "query_text": "Create a property records lookup tool for mobile where I can type in an address and pull up the deed history, ownership changes, and any public records on file for that property, so I have all the basic info I need in one place when I'm checking out a place to buy or rent."
+  },
+  {
+    "id": "q_scene_008_008",
+    "query_text": "Build an alumni finder app for my phone where I can filter people by graduation year and the major they studied, so I can reconnect with classmates from a specific time or find people who were in the same program as me for a reunion or networking event."
+  },
+  {
+    "id": "q_scene_009_001",
+    "query_text": "Build an insurance picker app for mobile where I can compare different plan tiers side by side, see what each deductible covers, and tap to select the one that fits my budget — with a summary at the end showing exactly what I chose before I confirm."
+  },
+  {
+    "id": "q_scene_009_002",
+    "query_text": "Build a stats organizer app for my phone where I can pick which numbers and charts I want to see on my home screen, drag them around to put the most important ones at the top, and save the layout so it looks exactly the way I want every time I open it."
+  },
+  {
+    "id": "q_scene_009_003",
+    "query_text": "A report builder tool for my phone where I can tap through a list of chart types — bar, line, pie, table — see a small preview of what my data would look like in each one, and select the format that makes the most sense before the report gets generated."
+  },
+  {
+    "id": "q_scene_009_004",
+    "query_text": "Build a video background music picker app for my phone where I can browse music tracks grouped by mood — like happy, calm, dramatic, or upbeat — preview each one, and tap to select the one that fits the video I'm working on, with the selected track shown clearly before I confirm."
+  },
+  {
+    "id": "q_scene_009_005",
+    "query_text": "Create a reading settings tool for my phone where I can pick the text size that feels comfortable, choose between a few contrast options like light, dark, or high contrast, and see a live preview of how the text will look as I adjust things, so it's easy to set up for my eyes."
+  }
+]

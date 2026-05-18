@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_046_004",
+    "query_text": "Create a mobile app that shows an ingredient flavor profile pairing chart, where I can tap on any ingredient and see a clear list of what it pairs well with, what it clashes with, and a short note on why — I want it organized by flavor category like savory, sweet, and sour so I can actually use it while cooking."
+  },
+  {
+    "id": "q_scene_046_005",
+    "query_text": "Create a cold and warm food advisory guide app for my phone where I can look up any ingredient or dish and get a quick yes-or-no on whether it's considered warming or cooling, plus a short tip on who should eat more or less of it — I want a simple list I can browse by food type and a search bar at the top."
+  },
+  {
+    "id": "q_scene_046_006",
+    "query_text": "A 30-minute weeknight dinner generator tool for mobile where I enter a few ingredients I have on hand and it gives me a short list of quick dinner ideas that fit in half an hour, each one showing estimated time and the key steps I need — I want it simple enough to use while standing in the kitchen."
+  },
+  {
+    "id": "q_scene_047_001",
+    "query_text": "A food discovery app for mobile where the home screen has a clean, airy toggle to switch between takeout and delivery options — the two modes should feel visually distinct, maybe a warm tone for delivery and a lighter one for takeout, with the restaurant list below refreshing smoothly when you switch so the whole experience feels effortless and intentional."
+  },
+  {
+    "id": "q_scene_047_002",
+    "query_text": "A beautifully designed food allergy communication card generator that lives on your phone as a mini-app — you pick your allergies from a clean visual list and it produces a card that looks polished and trustworthy enough to show a waiter, with the allergens displayed in a clear, easy-to-read style and a soft color palette that feels calm rather than alarming."
+  },
+  {
+    "id": "q_scene_047_003",
+    "query_text": "A restaurant storytelling app for mobile where each venue gets a beautifully laid-out anniversary and history story — think rich editorial photos paired with a timeline of milestones, written in a warm narrative tone that makes you feel connected to the place before you even walk in, with a soft scroll rhythm that feels like flipping through a curated magazine."
+  },
+  {
+    "id": "q_scene_047_004",
+    "query_text": "Need a menu price trend alert app that feels sleek and editorial on mobile — something where I can follow my favorite restaurants and the home screen shows a tasteful feed of recent price changes with a subtle visual indicator for whether a dish went up or down, so I can stay informed without it feeling like a spreadsheet."
+  },
+  {
+    "id": "q_scene_047_005",
+    "query_text": "Need a community dining event planner app for mobile that has a warm, social feel — I want to browse upcoming dining events at local venues with beautiful cover photos and a short vibe description for each one, see who else is going, and tap to join with just one tap, all in a flow that feels more like a curated social feed than a ticketing site."
+  },
+  {
+    "id": "q_scene_047_006",
+    "query_text": "Make a Michelin star restaurant city guide app for mobile that feels like a luxury travel editorial — the home screen should show a curated list of starred restaurants with moody, atmospheric photos and a star-rating badge that looks elegant, let me filter by city and cuisine, and each restaurant detail page should read like a mini feature story with the key highlights of why it earned its stars."
+  },
+  {
+    "id": "q_scene_048_001",
+    "query_text": "Need a logo and brand recognition quiz app for my phone where each round shows a cropped or partially hidden logo and I have to guess the brand name, with a score tracker at the top and a short fun fact about the brand revealed after each answer — would be great to have difficulty levels so it starts easy and gets trickier as you go."
+  },
+  {
+    "id": "q_scene_048_002",
+    "query_text": "Need a sports stats and records trivia app for my phone where I get hit with a quick question like a record score or an athlete's career stat, tap my answer from a few choices, and see if I got it right with a little explainer — I want it to cover a mix of sports like basketball, soccer, and athletics so there's always something different."
+  },
+  {
+    "id": "q_scene_048_003",
+    "query_text": "Need a music lyric fill-in-the-blank game app for my phone where a line from a song plays or appears with a word blanked out and I have to type or pick the missing word, with points for getting it right and a streak counter to keep things exciting — I want it to pull from popular songs across a few different genres so it feels fresh every time."
+  },
+  {
+    "id": "q_scene_048_004",
+    "query_text": "Build a literature character identification quiz app for mobile where I get a short description or a famous quote from a character and have to guess who they are and what book they're from, with a running score and a little character summary shown after each answer — I want it to cover classic and modern books so it works for all kinds of readers."
+  },
+  {
+    "id": "q_scene_048_005",
+    "query_text": "Create a mythology and legend character quiz app for my phone where each question gives me a hint or a short story snippet and I have to figure out which god, hero, or creature it's describing, with multiple choice answers and a fun fact revealed after each round — I want it to mix Greek, Norse, and other world mythologies so it covers a good range."
+  },
+  {
+    "id": "q_scene_049_001",
+    "query_text": "A debate topic randomizer tool for mobile where you hit a big spin button and it lands on a fun or thought-provoking debate topic, with a short one-line description of each side so you can jump straight into arguing — I want a mix of lighthearted and serious topics and the option to tap again if the first one is too easy."
+  },
+  {
+    "id": "q_scene_049_002",
+    "query_text": "Make a random compliment generator wheel app for my phone where you spin a colorful wheel and it lands on a sweet or funny compliment to share with someone, with the option to copy it or send it directly — I want the wheel to look cheerful and fun, and maybe let me add my own compliments to the mix so it stays personal."
+  },
+  {
+    "id": "q_scene_049_003",
+    "query_text": "Build an ice cream flavour randomizer app for mobile where you tap a big scoop button and it randomly picks a flavour for you from a curated list, with a short tasting note for each one — I want to be able to add or remove flavours from my personal list and have it remember my past picks so I can track what I've tried."
+  },
+  {
+    "id": "q_scene_049_004",
+    "query_text": "Make a weekend activity adventure randomizer app for my phone where I set a few quick preferences like indoor or outdoor and solo or group, then hit spin and it gives me a fun activity idea to try, with a short description and a rough cost estimate — I want a good variety of ideas from low-key to adventurous so there's always something worth trying."
+  },
+  {
+    "id": "q_scene_049_005",
+    "query_text": "An artist and musician discovery randomizer app for mobile that works like a lucky dip — tap a button and it surfaces a random artist or musician you might have never heard of, with a short bio, their genre, and a couple of their best-known works listed out, so every tap feels like a genuine little discovery."
+  },
+  {
+    "id": "q_scene_050_001",
+    "query_text": "Need a casual game app for my phone that lets me play both tic-tac-toe and four-in-a-row against a friend or a simple computer opponent, where I can switch between the two games from the main screen with one tap — I want it to show a win counter so we can keep track across rounds and maybe a little animation when someone wins."
+  },
+  {
+    "id": "q_scene_050_002",
+    "query_text": "Create an Othello flip-disc strategy game app for mobile where two players take turns on the same phone, the board shows clearly which discs are yours and which are your opponent's, and the discs flip with a satisfying animation when you capture them — I want a move hint option that highlights valid spots so beginners can learn the rules as they play."
+  },
+  {
+    "id": "q_scene_050_003",
+    "query_text": "Create a dots and boxes territory game app for mobile where two players take turns drawing lines on a grid and the app automatically claims a box for whoever closes it, with a live score showing how many boxes each player owns — I want a few grid size options so we can play quick rounds or longer ones depending on how much time we have."
+  },
+  {
+    "id": "q_scene_050_004",
+    "query_text": "Need a word search hidden letter grid app for my phone where a new puzzle is generated each time with a theme like animals or food, the words are listed below the grid, and I tap and drag to highlight them when I spot them — I want a timer option for when I want a challenge and a relaxed mode with no timer for when I just want to chill."
+  },
+  {
+    "id": "q_scene_050_005",
+    "query_text": "Make a pipe connect flow puzzle app for my phone where I rotate pipe pieces on a grid to link them all together into one connected flow, with a clean satisfying click when pieces lock in — I want it to have a bunch of levels that get progressively trickier, and a hint button for when I get genuinely stuck."
+  },
+  {
+    "id": "q_scene_051_001",
+    "query_text": "A meteor shower meditative viewer app for my phone where the whole screen becomes a deep dark sky with slow glowing streaks of light drifting across it, the kind of thing you just stare at to decompress — I want the pace to feel unhurried and dreamy, maybe with a soft ambient sound option, and a gentle color shift between deep navy and warm violet as the meteors pass."
+  }
+]

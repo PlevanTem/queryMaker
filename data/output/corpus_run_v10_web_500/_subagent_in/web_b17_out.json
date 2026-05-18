@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_058_003",
+    "query_text": "Create a serialized fiction reader voting app where fans of ongoing stories can vote on which direction the next chapter should go, with a reading area on one side and a voting panel on the other, all running in a desktop web browser so it feels like a proper community gathering place."
+  },
+  {
+    "id": "q_web_058_004",
+    "query_text": "Build a magazine photo archive community site where people can browse old magazine spreads, add captions to photos, and tag who or what is in each image, with a clean browsable library on one side and a tagging area on the other, all for desktop browsers so it's easy to work through a lot of images at once."
+  },
+  {
+    "id": "q_web_058_005",
+    "query_text": "A community recommendation app for people who want to study science journalism, where members can share articles, recommend sources, and leave notes on what made a piece good or where the research came from, running as a web app so you can explore it properly on a desktop with everything laid out side by side."
+  },
+  {
+    "id": "q_web_058_006",
+    "query_text": "Make a film criticism aggregator app for desktop browsers where movie fans can write long reviews together, link to each other's takes, and see all the reviews for a single film collected in one place, with a sidebar listing films and the main area showing the full conversation of reviews."
+  },
+  {
+    "id": "q_web_059_001",
+    "query_text": "Make a podcast transcript editor tool that runs in the browser so I can paste in a rough auto-generated transcript, clean it up paragraph by paragraph, and then publish it as a readable web page — I just want to stop copying and pasting between five different apps every time a new episode drops."
+  },
+  {
+    "id": "q_web_059_002",
+    "query_text": "Make a newsletter analytics tracker for desktop browsers where I can see how many people opened each issue, which links got clicked, and how the subscriber count is changing over time, all in one place so I stop digging through three different tools just to figure out if anyone actually read what I sent."
+  },
+  {
+    "id": "q_web_059_003",
+    "query_text": "Need a story pitch tracker web app where our editorial team can log every pitch that comes in, mark it as under review, accepted, or passed, and leave notes on why so we stop losing track of good ideas buried in a shared inbox."
+  },
+  {
+    "id": "q_web_059_004",
+    "query_text": "Need a paywall and subscriber conversion tracker for our web app where I can see how many free readers hit the paywall each day, how many of them actually signed up, and which articles are converting the most — I just want one place to watch whether the paywall is actually doing anything instead of guessing."
+  },
+  {
+    "id": "q_web_059_005",
+    "query_text": "A browser-based push notification composer tool for news publishers where you can write a short breaking news alert, preview exactly how it will look on different devices, and send it out with one click — because right now writing and sending these takes way too many steps across too many tabs."
+  },
+  {
+    "id": "q_web_059_006",
+    "query_text": "Build a press credential application portal as a web app where journalists can fill out their info, upload their ID and past work samples, and track the status of their application, and where the organizer side can review and approve or reject each one without having to chase people over email."
+  },
+  {
+    "id": "q_web_060_001",
+    "query_text": "Create a UNESCO world heritage site portal website that feels grand and reverent, like flipping through a beautifully printed atlas — rich full-width photos for each site, a warm earthy color palette, and a browsable map so you can wander through heritage sites by region the way you'd explore a well-made coffee table book."
+  },
+  {
+    "id": "q_web_060_002",
+    "query_text": "Create a literary foundation and writers house website that has the quiet, unhurried feeling of a well-loved independent bookshop — warm cream tones, generous white space, author portraits that feel intimate rather than promotional, and a clean calendar of readings and residencies for desktop browsers where you can actually linger."
+  },
+  {
+    "id": "q_web_060_003",
+    "query_text": "A national film archive and cinematheque showcase app for the web that feels like stepping into a beautiful old cinema lobby — moody dark tones, vintage film poster aesthetics, a browsable catalogue of classic films organized by era, and a screening schedule section that makes you actually want to show up, all designed for desktop browsers."
+  },
+  {
+    "id": "q_web_060_004",
+    "query_text": "A natural history museum specimen and diorama gallery app for desktop browsers that feels like wandering through the hushed, wonder-filled halls of a great museum — deep forest greens and aged wood tones, large specimen photos you can zoom into, and collections organized by taxonomy so curious visitors can follow their own trail of discovery."
+  },
+  {
+    "id": "q_web_060_005",
+    "query_text": "Create a botanic garden plant collections website that feels alive and a little wild — lush photography, soft sage and moss greens, an ecology section that tells the stories of ecosystems rather than just listing species names, all laid out beautifully for desktop browsers so it feels like a slow Sunday morning in the garden."
+  },
+  {
+    "id": "q_web_060_006",
+    "query_text": "Build a public art installation and sculpture trail guide app for desktop browsers where the whole thing feels like a curated gallery walk — each artwork gets its own atmospheric photo and story, there's a map you can follow to plan a trail, and the overall vibe is editorial and considered rather than touristy."
+  },
+  {
+    "id": "q_web_061_001",
+    "query_text": "An online museum collection browser app for desktop browsers where the home screen feels like a beautifully lit gallery — artworks displayed generously with room to breathe, filterable by period or medium, and each piece opens into a full story about its history and the artist, with that same quiet reverence you feel standing in front of a real painting."
+  },
+  {
+    "id": "q_web_061_002",
+    "query_text": "Create a human rights case documentation portal website that feels serious and trustworthy — clean stark typography, a structured way to browse cases by country or theme, and a reporting area where each case gets its own carefully laid-out record so the gravity of the content is matched by the care of the design, built for desktop browsers."
+  },
+  {
+    "id": "q_web_061_003",
+    "query_text": "A government audit and transparency report library app for desktop browsers where the whole thing feels like a well-organized reading room — reports grouped by year and department, a search that actually works, and each report presented cleanly so a curious citizen can sit down and actually read through the thing without fighting the interface."
+  },
+  {
+    "id": "q_web_061_004",
+    "query_text": "Need a literary foundation author essay and spotlight hub that works as a beautiful web app for desktop browsers — the kind of place where an author's photo, biography, and a curated set of their essays all live together in one thoughtfully designed space, with the reading area feeling calm and literary, like an independent magazine you actually want to read slowly."
+  },
+  {
+    "id": "q_web_061_005",
+    "query_text": "Create an archaeological excavation findings publication website that feels like a cross between a field journal and a museum exhibit — earthy tones, maps of dig sites alongside photos of what was uncovered, and each finding written up with the kind of careful storytelling that makes you feel like you were there, all designed for desktop browsers."
+  },
+  {
+    "id": "q_web_061_006",
+    "query_text": "A public health awareness educational content center app for desktop browsers that feels warm and approachable rather than clinical — soft, friendly colors, illustrated guides organized by health topic, and a reading experience that makes complicated health information feel genuinely accessible to anyone who lands on the page."
+  },
+  {
+    "id": "q_web_062_001",
+    "query_text": "Build a film festival audience award voting app for desktop browsers that has real personality — the kind of site that feels like it belongs to a festival with taste and history, where visitors can browse the competing films, cast their vote for their favorite, and see sponsor spotlights woven in naturally rather than slapped on as afterthoughts."
+  },
+  {
+    "id": "q_web_062_002",
+    "query_text": "A heritage preservation sponsorship site for the web where donors and sponsors feel like they're genuinely part of something worth caring about — each monument gets its own story and photography, the sponsorship tiers are presented with dignity rather than desperation, and the whole thing has the kind of quiet gravitas that makes you want to reach for your wallet."
+  },
+  {
+    "id": "q_web_062_003",
+    "query_text": "Need a public library capital campaign fundraising site that actually has soul — the kind of website that makes you feel the community love behind it, with a live fundraising goal tracker, donor wall, and impact stories that show what the money actually builds, all for desktop browsers and with a warmth that feels like the library itself."
+  }
+]

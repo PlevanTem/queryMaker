@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_036_006",
+    "query_text": "Competitor comparison and differentiation table at the heart of this web app — something that actually has personality, a tool that shows exactly where we're different without looking like every generic comparison chart out there, with a side-by-side layout that feels curated and honest, the kind of thing you'd actually be proud to send to a prospect."
+  },
+  {
+    "id": "q_web_036_007",
+    "query_text": "Create a web app that shows off our startup community and ecosystem partners in a way that actually carries soul — the kind of site where every partner logo and description feels handpicked, with a clean grid that lets visitors explore by category, and a tone that says this community was built with intention, not just filled up for appearances."
+  },
+  {
+    "id": "q_web_037_001",
+    "query_text": "Need a web app that works as a proper home for technical deep-dive engineering content — something that feels like it was built by people who actually care about craft, where each article has room to breathe, you can filter by topic area, and the whole thing has an identity strong enough that engineers would bookmark it rather than just skim and forget."
+  },
+  {
+    "id": "q_web_037_002",
+    "query_text": "Make a web app that logs every meaningful product design decision and the reason behind it — a tool where each entry captures the context of why a choice was made, lets you browse by date or by product area, and feels like a living record that the team actually trusts and comes back to, not just a graveyard of notes."
+  },
+  {
+    "id": "q_web_037_003",
+    "query_text": "Make a web app that collects real startup fundraising journey stories — a site where founders can share the full arc of their raise, from the early struggles to the close, organized so visitors can filter by stage or industry, and the whole thing carries enough warmth and honesty that it feels like a genuine community record rather than a PR showcase."
+  },
+  {
+    "id": "q_web_037_004",
+    "query_text": "Create a web app that serves as our remote team's culture and norms handbook — the kind of site that has real character and feels like us, where people can browse async communication expectations, working hours norms, and team values with a left-side navigation, and actually feel like they're being welcomed into something with a distinct identity."
+  },
+  {
+    "id": "q_web_037_005",
+    "query_text": "Create a web app that's a home for all our SaaS growth experiments — the kind of blog-style tool where each post honestly documents what we tried, what the results were, and what we learned, browsable by theme or outcome, and written in a voice that shows we actually take this stuff seriously and share it with integrity."
+  },
+  {
+    "id": "q_web_037_006",
+    "query_text": "An open-startup transparency tracker site for desktop browsers that shows our live company metrics — revenue, user numbers, churn — displayed openly and updated in real time, with the kind of calm, honest presentation that says we have nothing to hide, and a layout that feels like a deliberate statement about who we are rather than just a numbers dump."
+  },
+  {
+    "id": "q_web_037_007",
+    "query_text": "Build a web app that's a curated reading list and resource directory for startup founders — the kind of site that has real taste, where every book, essay, and link was chosen because it's actually worth your time, organized by topic, filterable by format, and presented in a way that reflects genuine judgment rather than just scraping whatever's trending."
+  },
+  {
+    "id": "q_web_038_001",
+    "query_text": "Need a web app for our careers and open engineering roles that actually makes people want to apply — something where each job listing shows the team it belongs to and what real work looks like day to day, so candidates can get a feel for whether they'd actually belong here, accessible from a desktop browser with a clean listing layout."
+  },
+  {
+    "id": "q_web_038_002",
+    "query_text": "Build a web app for registering for our virtual summit and live events — something where visitors can see the full lineup of sessions at a glance, pick what they want to attend, and fill out their info without jumping through hoops, with a clear schedule layout that works well on a desktop browser so nothing feels rushed or confusing."
+  },
+  {
+    "id": "q_web_038_003",
+    "query_text": "Create a web app that's a hub for free marketing tools and template downloads — a site where marketers can quickly find what they need by category, preview what a template looks like before grabbing it, and actually leave feeling like their time was well spent, the kind of tool with enough taste that it makes our brand look good by association."
+  },
+  {
+    "id": "q_web_038_004",
+    "query_text": "Need a web app for our new feature launch announcement with a live countdown timer front and center — something that builds real anticipation, lets people sign up for early access right there on the site, and feels like an event worth waiting for rather than just another product update notification."
+  },
+  {
+    "id": "q_web_038_005",
+    "query_text": "Build a web app that's a proper showcase wall for industry awards and customer recognition — a site for desktop browsers where every award has its year and what it was for, customer shoutouts have real names and context, and the whole thing carries enough gravity that it actually means something rather than just looking like a brag board."
+  },
+  {
+    "id": "q_web_038_006",
+    "query_text": "Build a web app that's the marketing overview for our developer API platform — a site that speaks to developers in a language they respect, with clear explanations of what the API actually does, a few real use cases laid out simply, and a tone that says we built something worth integrating, designed for desktop browsers where devs actually do their research."
+  },
+  {
+    "id": "q_web_038_007",
+    "query_text": "Create a web app that's a resource center for customer onboarding success stories — a site where each story has enough real detail to be actually useful, organized by industry or use case so visitors can find the one that matches their situation, and presented with enough care that it reads like proof rather than marketing copy."
+  },
+  {
+    "id": "q_web_039_001",
+    "query_text": "Make a web app that handles our startup cap table and equity tracking so I can stop maintaining a spreadsheet that nobody trusts — a browser-based tool where you can see who owns what, how much each round diluted things, and where options stand, all in one place on a desktop layout without having to dig through tabs."
+  },
+  {
+    "id": "q_web_039_002",
+    "query_text": "A web app where sales prospects can schedule a product demo themselves and answer a few qualification questions before booking — so we're not going back and forth over email trying to find a time and figure out if they're even a fit, just a simple self-serve scheduler with a short form that lives in a desktop browser layout."
+  },
+  {
+    "id": "q_web_039_003",
+    "query_text": "Make a web app for planning sales territories and setting quotas for each rep — a browser-based tool where I can assign regions, see how the numbers break down by territory, and update quota targets without having to reconstruct a messy spreadsheet every quarter and wonder if the formulas are still right."
+  },
+  {
+    "id": "q_web_039_004",
+    "query_text": "A web app where team members can submit purchase requests and managers can approve or reject them without everything getting lost in Slack threads — a browser-based approval tool with a list of pending requests, a budget field, a reason field, and a status that updates so people can actually see where their request stands."
+  },
+  {
+    "id": "q_web_039_005",
+    "query_text": "Make a web app that's a directory of all the integrations and tech partners we support — a browser-based tool where customers can search by the software they already use, see what connecting it to us actually unlocks, and find the right setup guide fast, so I stop getting the same \"does it integrate with X\" question five times a week."
+  },
+  {
+    "id": "q_web_039_006",
+    "query_text": "Need a web app that shows customer cohort data and lifetime value so I can stop exporting CSVs and rebuilding the same analysis every month — a browser-based tool where I can pick a cohort by signup date, see how revenue and churn play out over time, and actually understand which customers are worth doubling down on."
+  },
+  {
+    "id": "q_web_039_007",
+    "query_text": "Build a web app that lets enterprise customers download our security and compliance docs on their own without emailing us every time — a browser-based self-service portal where they can find SOC 2 reports, data processing agreements, and security questionnaire answers organized by type, so our team stops spending half the week on procurement email chains."
+  },
+  {
+    "id": "q_web_040_001",
+    "query_text": "Build a web app where journalists and analysts can submit a briefing request and pick a time slot without anyone having to coordinate it manually — a browser-based booking tool that shows available slots, lets them describe what they want to cover, and sends a confirmation automatically, so we stop losing press opportunities because the back-and-forth took too long."
+  },
+  {
+    "id": "q_web_040_002",
+    "query_text": "Need a web app that handles scheduling remote engineering interviews from start to finish — a browser-based tool where candidates can pick from available slots, the right interviewers get notified, and everyone can see the interview lineup for the week without having to chase down confirmations or manually send calendar invites for every single hire."
+  }
+]

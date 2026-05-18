@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_070_006",
+    "query_text": "Make a web app that acts like a homepage for a tool that helps teams set up servers and cloud stuff automatically — I want it to show what the tool does, have a spot that walks through the main steps of getting started, and a little section at the bottom where people can sign up or try it out."
+  },
+  {
+    "id": "q_web_071_001",
+    "query_text": "A web app for hiring freelance developers where clients can post jobs and developers can apply, with the money held safely in the middle until each agreed milestone is done — the home screen should show open jobs and a list of top-rated developers so both sides can easily find what they need."
+  },
+  {
+    "id": "q_web_071_002",
+    "query_text": "Make a web app billing tool that lets an engineering team log how many hours or people they put into each project, then automatically spits out an invoice you can send to the client, so I stop having to do all that math and formatting by hand every month."
+  },
+  {
+    "id": "q_web_071_003",
+    "query_text": "Build a web app where companies can order a technical review of a startup or software product they're thinking about investing in — they fill out a form describing the company and what they want checked, pick from a few report types, and can track the status of their order until the finished report is ready to download."
+  },
+  {
+    "id": "q_web_071_004",
+    "query_text": "Build a web app that keeps track of all the software licenses and activation keys our team uses, shows when each one is coming up for renewal, and sends a reminder before it expires so we stop getting caught off guard by lapsed subscriptions."
+  },
+  {
+    "id": "q_web_071_005",
+    "query_text": "Create a web app tool for freelance developers to fill in their client info and project details, then get a ready-to-send contract and an invoice generated right away — something that stops me from having to rewrite the same boilerplate every single time I start a new project."
+  },
+  {
+    "id": "q_web_071_006",
+    "query_text": "A browser-based tracker app for developers selling access to their API — shows how much money is coming in each day and which pricing plans are most popular, so I can actually tell at a glance whether the thing is making money or not."
+  },
+  {
+    "id": "q_web_072_001",
+    "query_text": "Make a web app SQL practice tool that comes loaded with real datasets like sales records or employee tables, lets me write and run queries right there in the browser, and shows me whether my query got the right answer — I want a list of practice challenges on one side and the results on the other so I can work through them one by one."
+  },
+  {
+    "id": "q_web_072_002",
+    "query_text": "Create a web app simulator for learning how Git branches and merges work, where I can create branches, make pretend commits, and see what happens when two branches conflict — I want it to show the branch history visually and walk me through resolving a conflict step by step."
+  },
+  {
+    "id": "q_web_072_003",
+    "query_text": "Build a web app regex builder tool where I type in a pattern, paste in some sample text, and it highlights the matches in real time — the key thing I want is a plain-English breakdown that explains what each part of the pattern actually does, so I can actually learn instead of just guessing."
+  },
+  {
+    "id": "q_web_072_004",
+    "query_text": "Make a web app study tool for cloud certification exams — I want a list of topics I can work through one by one, practice questions with explanations after I answer, and a progress tracker so I can see which areas I still need to review before test day."
+  },
+  {
+    "id": "q_web_072_005",
+    "query_text": "Need a browser-based reference app that lists all the common software design patterns like Singleton, Observer, and Factory, with a short plain-English description of when to use each one and a small working code example I can actually run to see how it behaves."
+  },
+  {
+    "id": "q_web_072_006",
+    "query_text": "Make a web app learning tool focused on making websites load faster — it should have a list of techniques like image compression and caching with a short explanation of each, plus a little playground where I can toggle things on and off and see how they affect load time so I can actually understand what each trick does."
+  },
+  {
+    "id": "q_web_073_001",
+    "query_text": "A web app community site where developers share real code snippets from pull requests with notes explaining what was wrong or could be better — people can browse by topic, add their own comments, and upvote the examples that taught them something useful."
+  },
+  {
+    "id": "q_web_073_002",
+    "query_text": "Create a web app for matching junior developers with more experienced mentors — someone fills out what they want to learn, gets paired with a mentor, and then both people can log their sessions and see how the mentee is progressing over time."
+  },
+  {
+    "id": "q_web_073_003",
+    "query_text": "A browser-based archive app for tech conference talks where you can search or filter by topic or year, watch or read through a talk, and leave notes or highlights that other people can also see — so the community's insights stick around instead of getting lost."
+  },
+  {
+    "id": "q_web_073_004",
+    "query_text": "Make a web app hub for competitive programming where people can join coding contests, see a live leaderboard that updates as solutions are submitted, and browse past contest problems with the highest-ranked solutions shown alongside them."
+  },
+  {
+    "id": "q_web_073_005",
+    "query_text": "Need a web app where developers can post their little side projects to get early feedback from other builders — each project has a short description and a link to try it, and visitors can leave quick reactions or comments so the maker knows what's working and what's confusing."
+  },
+  {
+    "id": "q_web_073_006",
+    "query_text": "Need a web app that pulls in stats for open-source contributors — things like how many pull requests they've merged, which projects they've helped with, and a little public profile page that highlights their best contributions so their work actually gets some recognition."
+  },
+  {
+    "id": "q_web_074_001",
+    "query_text": "Build a web app tool that helps me figure out which open-source license to use for my project — I answer a few questions about what I want people to be able to do with my code, and it recommends a couple options and shows them side by side so I can actually understand the difference before I pick one."
+  },
+  {
+    "id": "q_web_074_002",
+    "query_text": "A browser-based reference tool for all the HTTP status codes — I want to look up what any code means, see a plain-English explanation of when a server would send it, and have a little spot where I can fire off a test request to a URL and see what code comes back."
+  },
+  {
+    "id": "q_web_074_003",
+    "query_text": "Create a web app tool for managing environment variables across different projects — I can add key-value pairs for each project, organize them by environment like dev or production, and then download a ready-to-use .env file so I stop copying stuff around by hand."
+  },
+  {
+    "id": "q_web_074_004",
+    "query_text": "Build a web app tool that gives me a unique URL I can point a webhook at, then shows every request that hits it in real time — I want to see the headers, the body, and the timestamp for each incoming request so I can figure out what my service is actually sending."
+  },
+  {
+    "id": "q_web_074_005",
+    "query_text": "Make a web app converter tool for developers that handles Base64 encoding and decoding, URL encoding, and a couple other common text formats — I paste something in on one side, pick the conversion I want, and the result shows up instantly on the other side in the browser."
+  },
+  {
+    "id": "q_web_074_006",
+    "query_text": "A browser-based converter tool for dealing with Unix timestamps — I can paste in a number and it tells me the exact date and time it represents, and I can also pick a date and get the timestamp back, with a timezone picker so I can check what the time looks like in different parts of the world."
+  }
+]

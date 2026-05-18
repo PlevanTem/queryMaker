@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_051_001",
+    "query_text": "Make a school event and room booking calendar web app where students and staff can see all upcoming events on a monthly view, pick an available room to reserve, and get a quick confirmation so nobody has to chase down the admin office just to book a meeting room."
+  },
+  {
+    "id": "q_web_051_002",
+    "query_text": "Make a peer tutor matching and session booking web app where students can search for tutors by subject, see their available time slots, and book a session in one go — so you're not wasting time sending emails back and forth just to set up a one-hour study meet."
+  },
+  {
+    "id": "q_web_051_003",
+    "query_text": "Create a spaced repetition flashcard study manager as a web app where I can add cards in a two-panel layout — one side for the question, one for the answer — and have the app automatically schedule which cards to review each day based on how well I remembered them last time."
+  },
+  {
+    "id": "q_web_051_004",
+    "query_text": "Create a collaborative online whiteboard tool for live classroom use that runs in the browser, where a teacher can open a shared board and multiple students can draw, type, and add sticky notes at the same time during a lesson, with a simple toolbar that anyone can figure out in seconds."
+  },
+  {
+    "id": "q_web_051_005",
+    "query_text": "Need a citation formatter and bibliography generator as a browser-based tool where I can paste in a book title or article URL and it spits out the correctly formatted reference in APA, MLA, or Chicago style, plus lets me collect all my citations into one list I can copy straight into my paper."
+  },
+  {
+    "id": "q_web_051_006",
+    "query_text": "Create a reading level and text complexity analyzer tool as a web app where I can paste in any chunk of text and get an instant readability score — like grade level and average sentence length — so I can figure out whether an article is too hard for my students before I assign it."
+  },
+  {
+    "id": "q_web_051_007",
+    "query_text": "Need an accreditation evidence and documentation management web app where our department can upload supporting files, tag each document to the right accreditation standard, and track which requirements are still missing — so we're not scrambling through shared drives looking for proof files two weeks before the review."
+  },
+  {
+    "id": "q_web_052_001",
+    "query_text": "Create a wire service archive photography showcase website with a timeless, editorial feel — think classic black-and-white news photography displayed in a clean, full-width layout where each image has room to breathe, organized by decade and theme so the whole collection feels like flipping through a beautifully curated photo book for desktop browsers."
+  },
+  {
+    "id": "q_web_052_002",
+    "query_text": "Need a newsroom staff and correspondent profile directory as a website that feels warm and credible — the kind of place where each journalist has a portrait, a short bio, and their beat listed cleanly, with a layout that looks polished enough to trust when you're trying to figure out who covers what for a major publication, designed for browsing comfortably in a desktop browser."
+  },
+  {
+    "id": "q_web_052_003",
+    "query_text": "Create an annual report interactive infographic display site that feels sophisticated and editorial — the kind of website where the numbers come alive through beautiful charts and timelines you can hover over, with a clean typographic hierarchy and a color palette that feels intentional and premium, built for desktop browsers so all the details have space to shine."
+  },
+  {
+    "id": "q_web_052_004",
+    "query_text": "Create a data journalism visual explainer archive website that feels like a top-tier editorial publication — the kind where each piece has a striking full-width graphic and a short atmospheric summary, organized so you can browse by topic or year, with a visual style that feels serious and beautifully typeset for desktop browsers."
+  },
+  {
+    "id": "q_web_052_005",
+    "query_text": "Build a magazine brand public style guide showcase website that captures the publication's full visual identity in one gorgeous place — think fonts displayed at every scale, color swatches with their names, and real sample layouts showing how it all comes together, with a refined editorial look that feels like the magazine itself, made for desktop browsers."
+  },
+  {
+    "id": "q_web_052_006",
+    "query_text": "Need a press freedom global index visualization website that feels serious and visually striking — the kind of site where you see an interactive world map with countries shaded by their press freedom score, and clicking a country gives you a concise profile with the key numbers and context, designed to work beautifully in a desktop browser."
+  },
+  {
+    "id": "q_web_052_007",
+    "query_text": "Make a media group subsidiary brands overview website that feels like a high-end holding company showcase — each brand gets its own card with its logo, a one-line description, and a signature color, laid out in a clean grid that lets the whole portfolio breathe, the kind of thing that looks instantly polished when you pull it up in a desktop browser."
+  },
+  {
+    "id": "q_web_053_001",
+    "query_text": "Make an opinion and editorial commentary magazine website that has the kind of slow, considered feel of a great long-read publication — rich serif typography, full-width author photos, and a layout that gives each piece of writing real presence on a desktop browser, with a clearly organized front page that makes it easy to find the latest commentary by topic."
+  },
+  {
+    "id": "q_web_053_002",
+    "query_text": "Make an academic preprint reading and annotation digest website that feels calm and scholarly — the kind of place where papers are laid out with a clean reading column, highlights and margin notes feel tasteful rather than cluttered, and the overall vibe is like a beautifully designed academic journal you actually enjoy opening in a desktop browser."
+  },
+  {
+    "id": "q_web_053_003",
+    "query_text": "Build a travel narrative and destination writing publication website that feels like a gorgeous literary travel magazine — rich, atmospheric hero images for each story, unhurried editorial typography that makes the writing feel cinematic, and a layout for desktop browsers where every destination piece feels like an invitation to get lost in someone's vivid first-person account."
+  },
+  {
+    "id": "q_web_053_004",
+    "query_text": "Create an environmental and climate crisis reporting magazine website with a visual identity that feels urgent but thoughtful — deep, moody photography paired with clear, impactful headlines, a layout designed for long reads in a desktop browser, and the kind of editorial weight that makes you feel the seriousness of each story the moment you land on the home screen."
+  },
+  {
+    "id": "q_web_053_005",
+    "query_text": "Make a financial markets briefing and analysis publication website that has the crisp, authoritative look of a top-tier business journal — clean data-forward layouts, confident typography, and a front page organized so the most important market stories and charts are immediately visible when you open it in a desktop browser for your morning read."
+  },
+  {
+    "id": "q_web_053_006",
+    "query_text": "Build a sports deep-dive feature and analytics magazine website that captures the feeling of a premium sports publication — bold editorial photography, immersive long-form articles, and data breakdowns that feel visual and engaging rather than spreadsheet-dry, all laid out in a way that looks genuinely exciting when you browse it on a desktop browser."
+  },
+  {
+    "id": "q_web_053_007",
+    "query_text": "Create a tech industry insider newsletter web publication that has the tight, confident aesthetic of a publication that really knows its audience — a clean monospaced-meets-modern typographic style, organized by category on the front page so regular readers can find their beat fast, with a tone that feels smart and insider-y when you read it in a desktop browser."
+  },
+  {
+    "id": "q_web_054_001",
+    "query_text": "Create an editorial awards ceremony sponsorship website that looks genuinely prestigious — the kind of microsite that opens with a full-bleed atmospheric image, lists sponsors in a beautifully typeset tiered layout with their logos looking elegant and intentional, and gives the whole ceremony this refined gala energy that makes sponsors proud to be featured, designed for desktop browsers."
+  },
+  {
+    "id": "q_web_054_002",
+    "query_text": "Build a branded content studio portfolio and pitch website that looks like the kind of creative shop you'd actually want to hire — a homepage with a bold, confident visual presence, case study entries that show off the work with full-width imagery and concise storytelling, and an overall feel that's polished enough to send to a potential client opening it in their desktop browser."
+  },
+  {
+    "id": "q_web_054_003",
+    "query_text": "Make a student journalist press pass application website that feels official yet approachable — a clean, trustworthy design where applicants can fill out their details and upload credentials in a streamlined form, with the overall look having enough editorial credibility that a venue PR team would take it seriously when they pull it up in a desktop browser."
+  },
+  {
+    "id": "q_web_054_004",
+    "query_text": "Create an investigative journalism crowdfunding campaign website that has the kind of earnest, editorial gravitas that makes you want to chip in — a compelling hero section with the story front and center, a funding progress display that feels honest and transparent, and a visual style that looks credible and purposeful when a potential supporter opens it in their desktop browser."
+  }
+]

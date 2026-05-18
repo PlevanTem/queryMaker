@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_042_005",
+    "query_text": "Need a storm alert and lightning tracker app for my phone that shows live lightning strike locations on a map and sends me a push notification when a thunderstorm is heading my way, so I know whether to run for cover or stay put without constantly checking the sky."
+  },
+  {
+    "id": "q_scene_042_006",
+    "query_text": "Create a live AQI air quality monitor app for mobile that shows the current air quality index for my location, color-codes it so I can tell at a glance whether it's safe to go outside, and includes a simple hourly trend so I know if things are getting better or worse."
+  },
+  {
+    "id": "q_scene_042_007",
+    "query_text": "A UV index tracker app for my phone that shows today's sun exposure risk level by the hour, tells me when UV is dangerously high, and gives me a quick reminder on how long I can stay outside safely before I need sunscreen or shade."
+  },
+  {
+    "id": "q_scene_043_001",
+    "query_text": "Create a mobile transport filter app that helps people with accessibility needs quickly find buses, trains, or metro lines that have step-free access and elevators, with a simple checklist to filter by wheelchair ramp, priority seating, or audio announcements so they can plan a trip without the hassle."
+  },
+  {
+    "id": "q_scene_043_002",
+    "query_text": "Build a luggage storage and locker finder app for my phone that shows nearby storage spots — train stations, malls, hotels — on a map with hours, price per bag, and available space, so I can drop my stuff off quickly and explore without lugging everything around."
+  },
+  {
+    "id": "q_scene_043_003",
+    "query_text": "A sleeper train berth booking app for my phone where I can look up overnight train routes, compare upper and lower berth prices side by side, and pick my preferred bunk class so I can book the right spot without digging through multiple ticket sites."
+  },
+  {
+    "id": "q_scene_043_004",
+    "query_text": "Build a high-speed train timetable lookup app for my phone where I can enter a departure city and destination, see all available train times for the day, filter by direct or with stops, and tap a train to see the fare so I can plan my trip without the hassle of slow booking sites."
+  },
+  {
+    "id": "q_scene_043_005",
+    "query_text": "A budget airline fare comparison app for my phone where I can enter a route and travel dates, see the cheapest available flights from low-cost carriers all on one list sorted by price, and tap through to check what's included in the base fare so I stop getting surprised by hidden fees."
+  },
+  {
+    "id": "q_scene_043_006",
+    "query_text": "Need a ferry and boat schedule finder app on mobile that lets me enter a departure port and destination island or crossing, then shows all the daily departures with times, durations, and ticket prices so I don't miss the last boat or overpay for a spontaneous day trip."
+  },
+  {
+    "id": "q_scene_043_007",
+    "query_text": "Make a bus station live departure board app for my phone that shows real-time bus departures for a selected station, including route number, destination, platform, and countdown to departure, so I can check it quickly on my phone and know exactly when to start walking."
+  },
+  {
+    "id": "q_scene_044_001",
+    "query_text": "Make a \"what should I eat today\" random food picker app for mobile where I can add my favorite nearby restaurants or cuisine types, hit a button to spin and get a random pick, and re-roll if I don't feel like it — just something fun I can use when me and my friends are stuck deciding where to eat."
+  },
+  {
+    "id": "q_scene_044_002",
+    "query_text": "Make a daily meal decider app for my phone that lets me save a list of restaurants or food types I like, then randomly picks one for lunch or dinner when I can't make up my mind, with a little card showing the chosen place and a re-spin button in case I want another option."
+  },
+  {
+    "id": "q_scene_044_003",
+    "query_text": "A random food picker app for my phone where I save all my go-to restaurants and cuisines, tap a big spin button, and get one random suggestion for what to eat today — handy for those days when I'm completely stuck and just want something to decide for me."
+  },
+  {
+    "id": "q_scene_044_004",
+    "query_text": "Build a \"today's meal\" random selector app for my phone where I can save different food categories and nearby spots, tap once to get a random suggestion, and share the result with friends when we're all trying to figure out where to eat together."
+  },
+  {
+    "id": "q_scene_044_005",
+    "query_text": "Make a what-to-eat-today picker app for mobile where I can add my saved restaurants and food preferences, tap a button to spin and land on a random meal choice, and filter by things like delivery-only or dine-in when I'm feeling lazy and just want to stop overthinking lunch."
+  },
+  {
+    "id": "q_scene_044_006",
+    "query_text": "Need a random meal picker app on mobile that solves the daily \"what do I eat\" problem — I can add my regular food spots or cuisine types, hit spin to get a random choice, and it shows me a result card I can act on right away, whether that's ordering delivery or heading out."
+  },
+  {
+    "id": "q_scene_045_001",
+    "query_text": "Need a plant-based iron and protein source finder app for my phone that lets me search common foods and see how much iron and plant protein they have per serving, so I can figure out what to eat every day without having to Google the same stuff over and over."
+  },
+  {
+    "id": "q_scene_045_002",
+    "query_text": "Make a calcium and bone health food tracker app for my phone where I can log what I eat each day and see if I'm hitting my calcium needs, with a simple list of high-calcium foods I can refer to when planning meals so I stop worrying about whether my bones are getting enough."
+  },
+  {
+    "id": "q_scene_045_003",
+    "query_text": "Need a hydrating foods reference app on mobile that shows me the water content of common fruits, vegetables, and snacks, so when I forget to drink enough water I can at least pick foods that help me stay hydrated without thinking too hard about it."
+  },
+  {
+    "id": "q_scene_045_004",
+    "query_text": "Build a pre and post workout snack guide app for my phone that tells me what to eat before and after exercising based on the type of workout — running, lifting, yoga — with simple food suggestions and rough timing, so I stop guessing and actually fuel my workouts right."
+  },
+  {
+    "id": "q_scene_045_005",
+    "query_text": "Build a seasonal superfood nutrition app for my phone that shows which fruits, vegetables, and whole foods are in season each month and highlights their key nutrients and health benefits, so I can easily swap in better food choices throughout the year without having to research it myself."
+  },
+  {
+    "id": "q_scene_045_006",
+    "query_text": "Create a per-serving calorie lookup app for my phone where I can search any food, enter the serving size I'm actually eating, and instantly see the calorie count so I can keep rough track of what I'm consuming during the day without obsessing over it."
+  },
+  {
+    "id": "q_scene_046_001",
+    "query_text": "Need a restaurant copycat recipe creator app on mobile that lets me type in a dish I love from a specific restaurant and get a step-by-step recipe to recreate it at home, with an ingredient list I can check off as I shop and cook, and a place to save my favorite copycat recipes in one tidy list."
+  },
+  {
+    "id": "q_scene_046_002",
+    "query_text": "A cocktail and mocktail ingredient pairing app for my phone where I can pick base spirits or juice flavors I have on hand and get a list of mixers and garnishes that go well together, with a few simple recipe suggestions I can try at home — good for when I want to host something but have no idea what to make."
+  },
+  {
+    "id": "q_scene_046_003",
+    "query_text": "Need a sourdough and bread baking guide app on mobile that walks me through the whole process step by step, with a built-in timer for fermentation and proofing stages, a starter feeding schedule I can follow, and a list of beginner recipes with exact ingredient amounts so I can actually get it right on my first few tries."
+  }
+]

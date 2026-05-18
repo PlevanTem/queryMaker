@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_033_002",
+    "query_text": "Need a web app that tracks language learning progress for every employee across the whole company, where managers can see which staff have completed which courses and what their current proficiency level is, and there's a sidebar listing all departments so you can drill into a team and see everyone's status at a glance."
+  },
+  {
+    "id": "q_web_033_003",
+    "query_text": "A corporate innovation learning hub for desktop browsers where employees can browse a library of curated resources — articles, videos, case studies — organised by theme, bookmark the ones they want to revisit, and see a list of upcoming internal workshops they can sign up for."
+  },
+  {
+    "id": "q_web_033_004",
+    "query_text": "Build a web app for our company's internal executive education portal where senior staff can enroll in leadership courses, track which modules they've finished, and see a clear list of what's still left to complete, with a separate area showing upcoming live sessions they can register for."
+  },
+  {
+    "id": "q_web_033_005",
+    "query_text": "A high-potential talent tracker for desktop browsers where HR can log each person's current role, their target future role, and the specific learning steps they need to hit along the way, with a checklist on each person's profile showing which development milestones are done and which are still pending."
+  },
+  {
+    "id": "q_web_033_006",
+    "query_text": "Create a workplace safety training manager as a web app where staff can see a list of all required safety certifications, mark which ones they've completed, and get a reminder when a certificate is about to expire, with a separate view for team leads to check their whole team's compliance status at once."
+  },
+  {
+    "id": "q_web_033_007",
+    "query_text": "Need a product academy web app for our enterprise clients where they can browse a structured list of courses about our products, track their progress through each one, and get a certificate when they finish, with a sidebar that organises everything by product line so they can quickly find what's relevant to them."
+  },
+  {
+    "id": "q_web_034_001",
+    "query_text": "Create a customer support forum web app where users can post questions and browse answers from other customers, and if nobody in the community can help, there's an easy way to flag the thread so a real expert gets notified and steps in — the whole thing lives in a browser and the left side shows topic categories to navigate around."
+  },
+  {
+    "id": "q_web_034_002",
+    "query_text": "A study group platform for professional certification candidates that runs in a browser, where people preparing for the same exam can join a shared space, post study notes and practice questions, and see a list of active group sessions they can jump into — with each group organised by the specific certification it focuses on."
+  },
+  {
+    "id": "q_web_034_003",
+    "query_text": "Make a company knowledge base wiki as a web app where employees can write and edit articles together, and anyone reading a page can leave a comment or highlight a specific paragraph and stick a note on it so others can see what their colleagues thought about that part."
+  },
+  {
+    "id": "q_web_034_004",
+    "query_text": "Make a customer referral tracker as a web app where we can give each existing customer a unique referral link, see a list of who they've referred and whether those referrals actually signed up, and the tracker automatically keeps a running total of how many successful referrals each person has made so we know who to reward."
+  },
+  {
+    "id": "q_web_034_005",
+    "query_text": "Create a web app where companies in the same industry can share their performance numbers and see how they stack up against everyone else — you pick which metrics you want to contribute, submit your data, and then get a comparison showing where you sit relative to the group average, with filters to narrow it down by company size or region."
+  },
+  {
+    "id": "q_web_034_006",
+    "query_text": "Need a hackathon project showcase website where participants can post their project with a short description and a link to their demo, other attendees can browse all the submissions in a big grid, and there's a way to connect with teammates or people working on similar ideas right from the project listing."
+  },
+  {
+    "id": "q_web_034_007",
+    "query_text": "Need a web app for managing local brand chapters and meetups, where chapter organizers can list upcoming events in their city, members can sign up for events they want to attend, and there's a directory showing all the active chapters around the country so people can find the one closest to them."
+  },
+  {
+    "id": "q_web_035_001",
+    "query_text": "A brand compliance checker tool for desktop browsers where you upload a marketing file and it goes through and flags anything that uses the wrong colours, wrong fonts, or wrong logo version, then gives you a clear list of every issue it found so you can fix them one by one instead of hunting through the file yourself."
+  },
+  {
+    "id": "q_web_035_002",
+    "query_text": "Make a web app that shows me all our API usage in one place — which teams are using which APIs, how much of their quota they've burned through, and whether anyone is getting close to the limit so we can deal with it before something breaks."
+  },
+  {
+    "id": "q_web_035_003",
+    "query_text": "Build a workforce scheduling tool as a web app where managers can set up the weekly shift rota for their team, staff can request to swap a shift with a colleague, and the manager gets a simple approval queue to sign off on swap requests so nothing slips through without anyone noticing."
+  },
+  {
+    "id": "q_web_035_004",
+    "query_text": "A browser-based NPS survey tool where you can write a short customer satisfaction survey, send it out, and then see all the responses collected in one place with a simple score summary and a list of the open-ended comments people left, so you can actually read what they said without digging through a spreadsheet."
+  },
+  {
+    "id": "q_web_035_005",
+    "query_text": "A vendor invoice portal for desktop browsers where our finance team can upload invoices, match them against what we expected to pay, and if something doesn't line up there's a simple way to flag it as a dispute and add a note explaining the issue so the vendor knows exactly what's wrong."
+  },
+  {
+    "id": "q_web_035_006",
+    "query_text": "Make a data access request tracker as a web app where employees can submit a request to get access to a specific dataset, the request goes to the right approver automatically, and everyone involved can see the current status of each request in a simple list — pending, approved, or rejected — so nothing just disappears into someone's inbox."
+  },
+  {
+    "id": "q_web_035_007",
+    "query_text": "Create a product roadmap voting tool as a web app where team members can submit feature ideas, everyone gets a set number of votes to put toward the ideas they care most about, and the list automatically sorts by most votes so leadership can see at a glance which things the team actually wants built next."
+  },
+  {
+    "id": "q_web_036_001",
+    "query_text": "Make a startup awards showcase wall as a web app that actually feels like something worth sharing — not just a bland list, but a proper display where each award has its own moment, with the year it was won and what it was for, and the whole thing has the kind of quiet confidence that makes visitors take the company seriously."
+  },
+  {
+    "id": "q_web_036_002",
+    "query_text": "Build a product media gallery for desktop browsers where we can show off screenshots and demo videos in a way that feels polished and intentional — grouped by feature area, with a clean layout that lets the product speak for itself rather than getting buried under clutter."
+  },
+  {
+    "id": "q_web_036_003",
+    "query_text": "Make a startup accelerator portfolio site as a web app that feels like it has real personality — a place where each cohort has its own section, you can browse all the companies that came through the program, and alumni can be found by batch year or industry, the kind of site that makes you proud to say you were part of this."
+  },
+  {
+    "id": "q_web_036_004",
+    "query_text": "A thought leadership blog and resource library for desktop browsers that actually has a point of view — articles are front and centre with a strong editorial feel, downloadable guides are organised so people can find what they need fast, and the whole thing reads like it was built by people who have something real to say."
+  },
+  {
+    "id": "q_web_036_005",
+    "query_text": "Create a use case library web app for our SaaS product where each industry vertical gets its own dedicated section with real stories about how companies in that space use the product, and visitors can filter by their industry and see the examples most relevant to them, so it feels like the product was made specifically for whoever is reading it."
+  }
+]
