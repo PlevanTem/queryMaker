@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_055_001",
+    "query_text": "Make a paid subscription manager web app for desktop browsers where I can see all my active subscriptions in one place, track when each one renews, and quickly cancel or pause the ones I forget about until I get the charge on my credit card, with a simple list showing the service name, cost, and next billing date."
+  },
+  {
+    "id": "q_web_055_002",
+    "query_text": "Build a book and culture merchandise shop web app where I can browse titles and creative goods, add things to a cart, and check out without having to jump between five different sites, with a clean product listing that shows price and a short description so I can decide fast."
+  },
+  {
+    "id": "q_web_056_001",
+    "query_text": "Make an interview booking tool as a web app where journalists and PR contacts can see my available time slots, pick one that works, and fill in their name and the topic they want to cover, so I stop going back and forth on email just to lock down a 30-minute call."
+  },
+  {
+    "id": "q_web_056_002",
+    "query_text": "Make a press conference seat reservation app for desktop browsers where credentialed journalists can log in with their press ID, browse upcoming events, and claim a seat without having to call anyone, with each event showing the date, location, and how many seats are still open."
+  },
+  {
+    "id": "q_web_057_001",
+    "query_text": "Make a knowledge topic hub web app where I can browse articles and resources organized by subject area, see a table of contents on the side so I know what topics are covered, and save the ones I want to read later to a personal list, all in one tidy browser-based tool I can keep open on my desktop."
+  },
+  {
+    "id": "q_web_057_002",
+    "query_text": "Build a long-form journalism collection app for desktop browsers where I can store and browse in-depth investigative articles, organize them by theme or publication, and mark the ones I have read so I can keep track of what I still want to get through, with each entry showing the title, author, and a short summary."
+  },
+  {
+    "id": "q_web_058_001",
+    "query_text": "Build a reader comment section app as a web app where people can leave comments on articles, reply to each other in threads, and vote comments up so the best ones float to the top, the kind of thing I want to add to a small publication site running in a desktop browser."
+  },
+  {
+    "id": "q_web_058_002",
+    "query_text": "Create a user-submitted content tool as a web app where anyone can write and submit a short article or story, include a title and a few tags to describe what it is about, and see their submission show up in a browsable feed once it goes live, all accessible from a desktop browser."
+  },
+  {
+    "id": "q_web_059_001",
+    "query_text": "Make an RSS feed aggregator app that runs in a browser so I can paste in a bunch of feed URLs from the news sites and blogs I follow, have all the latest posts show up in one scrollable list sorted by time, and never have to open ten separate tabs just to catch up on things in the morning."
+  },
+  {
+    "id": "q_web_059_002",
+    "query_text": "Make a news search tool as a web app for desktop browsers where I can type in a keyword and get back a list of matching articles from multiple sources, each showing the headline, the outlet, and how recent it is, so I can quickly find what happened on a specific topic without hunting through individual sites."
+  },
+  {
+    "id": "q_web_060_001",
+    "query_text": "Create a museum website app with a calm, editorial look, something that feels like a well-designed printed catalogue rather than a generic corporate site, where visitors browsing on a desktop can explore current and upcoming exhibitions, see beautiful full-width images for each show, and find practical details like hours and location in a clean sidebar."
+  },
+  {
+    "id": "q_web_060_002",
+    "query_text": "Create an art festival website app that feels bold and immersive, with rich visuals and a strong visual identity that sets the mood before anyone reads a single word, where desktop visitors can browse the lineup of events, click into each one for details, and get a sense of the whole festival as one cohesive experience."
+  },
+  {
+    "id": "q_web_061_001",
+    "query_text": "Historical archive browser app for desktop, the kind of thing that feels like opening a well-preserved collection rather than a generic file list, where you can explore documents and photos organized along a timeline and browse by era or topic, with each entry displaying a thumbnail and a short contextual note so the material feels alive rather than just catalogued."
+  },
+  {
+    "id": "q_web_061_002",
+    "query_text": "Create a research publication web app for desktop browsers that feels considered and quiet, like a serious academic journal but with a layout that is actually pleasant to read, where each published piece has a clean reading view with the author, date, and an abstract up top, and visitors can browse all work sorted by topic or date."
+  },
+  {
+    "id": "q_web_062_001",
+    "query_text": "Build a fundraising campaign web app for desktop browsers that carries real warmth and purpose, the kind of site that makes a donor feel their contribution matters and not just like a transaction, with a clear story section at the top, a live progress bar showing how close the campaign is to its goal, and a simple giving form below."
+  },
+  {
+    "id": "q_web_062_002",
+    "query_text": "An advocacy campaign tracker for desktop browsers, the kind of app that feels like it belongs to a cause and not a corporation, where supporters can read the core message, sign onto the campaign, and see a running count of people who have already joined, with the whole thing having a focused identity that makes the cause feel real and worth joining."
+  },
+  {
+    "id": "q_web_063_001",
+    "query_text": "Make a museum gift shop web app for desktop browsers where visitors can browse souvenirs and print reproductions by category, see a clear photo and price for each item, and add things to a cart so they can buy something even after they have left the building and no longer have to remember the shop's website separately."
+  },
+  {
+    "id": "q_web_063_002",
+    "query_text": "Need a ticket sales app for a web browser where people can see a list of upcoming events with dates, prices, and available seats, pick the ones they want, enter their details, and get a confirmation, so the whole purchase takes under two minutes and nobody has to call a box office."
+  },
+  {
+    "id": "q_web_064_001",
+    "query_text": "Make a museum visit booking web app where people can pick a date, choose a time slot, say how many tickets they need, and get a confirmation right away, all from a desktop browser, so I stop dealing with phone calls and manual reservation sheets for a venue that gets a steady stream of group visits."
+  },
+  {
+    "id": "q_web_064_002",
+    "query_text": "Create an event sign-up web app for desktop browsers where people can see a list of upcoming cultural events, click on one they want to join, fill in their name and contact info, and get a confirmation, so organizers always know exactly who is coming and attendees have a record of what they registered for."
+  },
+  {
+    "id": "q_web_065_001",
+    "query_text": "Need a science education resource app for desktop browsers where I can find articles, videos, and guides organized by topic, see a clear list of what is available under each subject, and save the ones I want to use with students so I have a reliable place to pull lesson materials without digging through random search results every time."
+  },
+  {
+    "id": "q_web_065_002",
+    "query_text": "Create a digital archive web app for desktop browsers where I can upload and organize historical documents and photos, browse them by year or category, and search by keyword to find a specific item fast, with each entry showing a title, date, and short description so the collection stays easy to navigate as it grows."
+  },
+  {
+    "id": "q_web_066_001",
+    "query_text": "Make a volunteer community web app where people interested in cultural events can browse open volunteer opportunities, sign up for the ones they want to help with, and see a feed of updates from the group, the kind of browser-based tool that makes it easy for a small organization to coordinate help from regulars and new faces alike."
+  },
+  {
+    "id": "q_web_066_002",
+    "query_text": "Build a topic discussion forum app for desktop browsers where people can post about cultural and civic issues, reply to each other in threads, and browse discussions sorted by subject area, the kind of web app a small community group could use to keep ongoing conversations in one place rather than scattered across group chats."
+  },
+  {
+    "id": "q_web_067_001",
+    "query_text": "Make a public services portal web app for desktop browsers where residents can find information about local government services in one place, search by topic to get to the right form or contact quickly, and see a list of the most-used services on the home screen so nobody has to click through five levels of menus just to figure out how to renew a permit."
+  }
+]

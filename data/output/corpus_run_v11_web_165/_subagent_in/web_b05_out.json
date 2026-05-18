@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_042_002",
+    "query_text": "Build a web app for a startup community that gives members a really easy way to jump into the team Discord and Slack from one spot, so nobody has to hunt around for invite links, the home screen shows both community chat buttons clearly with a short description of what each space is for, and there's also a little note about what kind of conversations happen in each one."
+  },
+  {
+    "id": "q_web_043_001",
+    "query_text": "Need a web app that is the main tool itself for a small startup, where I can log in and actually do the core work without bouncing between five different services, it should have a clean left-side list of the main tasks or projects I'm working on, a workspace area in the middle where I actually get things done, and everything saves automatically so I never lose progress mid-session."
+  },
+  {
+    "id": "q_web_043_002",
+    "query_text": "A tool-style web app for a startup where the main overview screen shows all the key numbers and active tasks in one place, so I can open the browser in the morning and immediately know what needs attention without clicking through five different spots, with a sidebar listing my ongoing projects and a main area that shows status updates and recent activity for each one."
+  },
+  {
+    "id": "q_web_044_001",
+    "query_text": "Build a website for a school or educational institution that covers the main things visitors need, like a clear intro to what the school is about, a list of programs offered with short descriptions, contact info, and a map showing where the campus is, all laid out in a way that's easy to navigate for parents and students browsing on a desktop browser."
+  },
+  {
+    "id": "q_web_044_002",
+    "query_text": "Create a web app that shows off what campus life actually looks like, with a photo and video gallery organized by category (like clubs, sports, events, and everyday campus scenes), each item in the gallery has a short caption, and visitors can browse through it all easily from a desktop browser to get a real feel for the school environment."
+  },
+  {
+    "id": "q_web_045_001",
+    "query_text": "Need a web app that serves as a campus news reader for a school, where all the latest announcements and stories are listed with titles, dates, and a short summary, the left side has category filters like sports, academics, and events so I can jump to what I care about, and clicking a story opens the full article in the same browser without leaving the app."
+  },
+  {
+    "id": "q_web_045_002",
+    "query_text": "Make a web app that lists academic publications from a university or research group, where each entry shows the paper title, authors, year, and a link to read or download it, there's a filter by year or topic area so it's easy to find specific research, and the whole thing works cleanly in a desktop browser for anyone browsing the institution's scholarly output."
+  },
+  {
+    "id": "q_web_046_001",
+    "query_text": "A school admissions website where prospective students and parents can see all the enrollment info they need, like application deadlines, requirements, tuition details, and a short step-by-step overview of how to apply, plus a section showing key facts about the school such as class sizes and available programs, all in one place for desktop browser browsing."
+  },
+  {
+    "id": "q_web_046_002",
+    "query_text": "Build a web app to promote a specific course or program at an educational institution, where the main area explains what the course covers, who it's for, and what students will walk away knowing, there's a clear list of topics covered week by week, and a spot to sign up or get more info, all designed to work nicely on a desktop browser."
+  },
+  {
+    "id": "q_web_047_001",
+    "query_text": "Need a web app that lets students browse and buy courses without the hassle of jumping between pages, the course listing on the left shows categories and prices, clicking a course opens a details area with what's included and a buy button, and after purchasing the course appears right away in a simple list of things I've enrolled in, all in a desktop browser."
+  },
+  {
+    "id": "q_web_047_002",
+    "query_text": "Need a web app that works like a small online shop for school supplies and branded merchandise, where items are organized by type (textbooks, stationery, and school gear), each item has a photo, price, and a button to add it to a cart, and checkout is straightforward so students can order what they need from a desktop browser without any confusion."
+  },
+  {
+    "id": "q_web_048_001",
+    "query_text": "Need a web app where prospective students or parents can book a slot to visit the school on an open day, it shows a calendar with the available dates and time slots, lets the user fill in their name and contact info, and sends a confirmation right there on screen after booking, all working smoothly in a desktop browser so the process doesn't feel annoying."
+  },
+  {
+    "id": "q_web_048_002",
+    "query_text": "Make a web app that lets people book a free trial class or quick consultation with a teacher or advisor, where the main screen shows available time slots on a simple calendar, the user picks a slot and fills in their name and what they want to discuss, and then gets a confirmation shown right on the screen, easy to use in a desktop browser without any friction."
+  },
+  {
+    "id": "q_web_049_001",
+    "query_text": "Need a web app that works as an online course platform where I can see all the courses I'm enrolled in from a sidebar, click into any course to watch video lessons in the main area, and track which lessons I've already finished with a simple checkmark so I always know where I left off, and the whole thing runs in a desktop browser without needing any extra software."
+  },
+  {
+    "id": "q_web_049_002",
+    "query_text": "A learning management system for a school, browser-based and running on desktop, where students have a home screen listing all their enrolled courses with progress shown for each one, clicking a course opens the lessons in order with readings and assignments listed underneath, and there's a simple way to mark things as done so everyone can stay on top of what's left."
+  },
+  {
+    "id": "q_web_050_001",
+    "query_text": "Need a web app where graduates and alumni from a school can find each other and connect, it's a browser-based tool that lets users create a simple profile with their graduation year, major, and what they're up to now, there's a directory where you can search by city or field of work, and a way to send a message or leave a note on someone's profile."
+  },
+  {
+    "id": "q_web_050_002",
+    "query_text": "Create a web app that works as a student community hub for a school, where students can post questions, share resources, and chat about campus stuff in topic-based areas like study tips, events, and housing, there's a left-side list of topics to jump between, and each post shows the student's name and the date so it's easy to follow along in a desktop browser."
+  },
+  {
+    "id": "q_web_051_001",
+    "query_text": "Make a web app that works as a student portal where everything a student needs is in one place on a desktop browser, like upcoming class schedule, recent grades, announcements from teachers, and links to key resources, with a sidebar to switch between each area quickly so I stop having to log into three separate school systems just to check my timetable."
+  },
+  {
+    "id": "q_web_051_002",
+    "query_text": "Make a web app that handles course scheduling for a school, where students can see all available classes listed with times and teachers, pick the ones they want to add to their schedule, and view a weekly timetable that shows everything they've chosen side by side, all running in a desktop browser so nobody has to deal with paper forms or clunky old school systems."
+  },
+  {
+    "id": "q_web_052_001",
+    "query_text": "Create a website that serves as an author or editor's personal homepage, with a warm editorial feel like a well-designed literary magazine, showing a short bio, a curated list of published articles or books grouped by topic, and a way to get in touch, laid out in a clean and slightly understated style that lets the writing take center stage when viewed in a desktop browser."
+  },
+  {
+    "id": "q_web_052_002",
+    "query_text": "Need a web app that displays an awards and recognition archive for a media outlet or publication, with a tasteful gallery-style layout where each award entry has the year, the prize name, and what it was given for, grouped by category and presented with enough visual breathing room that it feels prestigious rather than cluttered, all for viewing comfortably in a desktop browser."
+  },
+  {
+    "id": "q_web_053_001",
+    "query_text": "Make a web app that works as a news portal with an editorial feel that actually makes reading feel worthwhile, where the home screen has a featured story at the top with a strong image and headline, a row of secondary stories below it organized by topic, and a left sidebar with category links so readers can jump to what interests them, all designed for a desktop browser experience with good visual rhythm."
+  },
+  {
+    "id": "q_web_053_002",
+    "query_text": "Make a web app that feels like a real online magazine, with a rich visual layout for desktop browsers where the cover story gets a big full-width image and bold headline, the rest of the issue is organized into sections with editorial photos and pull quotes, and readers can flip through pieces in a way that feels curated and intentional rather than just a plain list of links."
+  },
+  {
+    "id": "q_web_054_001",
+    "query_text": "Create a web app that acts as a subscription wall for a media or content site, with a design that feels editorial and classy rather than aggressive, showing a teaser of the article or content behind it, a short explanation of what subscribers get access to, and a clean sign-up area with a couple of tier options, all presented in a way that makes becoming a subscriber feel like a natural next step on a desktop browser."
+  },
+  {
+    "id": "q_web_054_002",
+    "query_text": "Build a web app that works as a membership page for a media brand, with a look that feels warm and inviting like a quality publication you actually want to support, showing the different membership tiers with what each one includes, a few quotes from existing members, and a straightforward way to join, all designed for desktop browsers with a visual style that feels considered and not generic."
+  }
+]

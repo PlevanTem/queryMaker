@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_web_001_001",
+    "query_text": "Need a personal homepage app for desktop browsers that feels like a carefully curated editorial spread, somewhere between a magazine cover and a mood board, with a warm, unhurried atmosphere, a full-width hero area that sets the tone right away, and a side panel that lets visitors browse my different interests or projects without the whole thing feeling cluttered or corporate."
+  },
+  {
+    "id": "q_web_001_002",
+    "query_text": "Create a web app for an interactive resume that has the kind of quiet confidence you feel flipping through a well-designed print portfolio, where the layout breathes and each section reveals itself with a gentle fade as you scroll, the color palette stays muted and refined, and a sticky left column keeps the visitor oriented while the main area tells the story in a natural, unhurried way."
+  },
+  {
+    "id": "q_web_001_003",
+    "query_text": "Make a year-in-review anniversary site app that lives in the browser and feels like opening a beautifully printed memory book, with a soft, nostalgic color tone throughout, a timeline running down the center of the page where each milestone gets its own little visual moment, and a gentle animated countdown or elapsed-time display that makes the whole thing feel alive and sentimental."
+  },
+  {
+    "id": "q_web_002_001",
+    "query_text": "Make a personal blog app for desktop browsers that has the visual warmth of a slow Sunday morning read, with a generous serif headline font that commands attention, a clean two-column layout where long-form posts sit on the left and a curated sidebar of recent favorites or categories sits on the right, and a cover image for each post that feels handpicked rather than stock."
+  },
+  {
+    "id": "q_web_002_002",
+    "query_text": "A personal diary and life-logging app for desktop browsers where each entry feels like a page torn from a beautifully bound journal, with a soft linen-textured background, a date printed in small elegant type at the top of each entry, and a gentle photo strip running alongside the text so memories and words sit together the way they do in a real scrapbook."
+  },
+  {
+    "id": "q_web_002_003",
+    "query_text": "Need a family memory album app that runs in the browser on desktop and has the warmth of a vintage photo album someone actually loved and used, with a rich cream or aged-paper backdrop, photos arranged in a natural overlapping collage style rather than a rigid grid, and a soft hand-lettered feel to the captions so the whole thing reads like something precious and personal."
+  },
+  {
+    "id": "q_web_003_001",
+    "query_text": "Build a study check-in tracker web app where I can log each subject or skill I practiced each day, see a simple calendar that fills in with a check mark when I complete a session, and get a running count of my current streak so I can see at a glance how many days in a row I have kept up, with a sidebar list of all my active topics so I can quickly pick which one to log."
+  },
+  {
+    "id": "q_web_003_002",
+    "query_text": "Create a goal tracker app for desktop browsers where I can add each goal with a target date and a description, break it down into a checklist of smaller steps, mark steps complete one by one, and see a simple progress bar for each goal so I always know how close I am, with a clean sidebar showing all my active goals grouped by category."
+  },
+  {
+    "id": "q_web_003_003",
+    "query_text": "A flashcard review app for desktop browsers where I can add cards with a question on one side and the answer on the other, the app shows me the cards I need to review today based on how well I did last time, I can rate each answer as easy, okay, or hard, and a simple list on the side shows all my card decks organized by subject so I can jump straight to the one I need."
+  },
+  {
+    "id": "q_web_004_001",
+    "query_text": "Need a personal expense tracker web app where I can quickly type in what I spent, pick a category like food or transport, and see a running total for the month so I am not constantly doing mental math, with a simple table of all my recent entries on the main part of the screen and a summary on the side that breaks down my spending by category."
+  },
+  {
+    "id": "q_web_004_002",
+    "query_text": "Build a household utility web app that keeps everything the family needs in one place, like a shared shopping list we can all add to, a space to note upcoming bills or maintenance tasks with due dates, and a simple chore rotation list, so nobody has to chase anyone else down or dig through chat messages just to figure out who is buying milk or when the rent is due."
+  },
+  {
+    "id": "q_web_004_003",
+    "query_text": "Create a habit streak tracker web app where I can add the habits I want to build, check them off each day, and see a full-year calendar that lights up in different shades depending on how many habits I completed that day, so I can tell at a glance which weeks were strong and which ones fell apart, with a simple list of all my habits on the side so I can tick them off one by one."
+  },
+  {
+    "id": "q_web_005_001",
+    "query_text": "A creative portfolio app for desktop browsers where work feels presented rather than listed, each project getting a generous full-width image that sets the mood right away, the overall palette staying monochrome or muted so the work itself is always the loudest thing on screen, and a slim fixed navigation on the left that lets visitors move between projects without breaking the atmosphere."
+  },
+  {
+    "id": "q_web_005_002",
+    "query_text": "Make a virtual gallery app for desktop browsers that feels like stepping into a quiet, well-lit white-cube space, with artwork displayed large and unhurried, generous negative space between each piece, a soft ambient color shift in the background that responds to whichever work is in focus, and a minimal lower shelf of thumbnails that lets visitors glide from one piece to the next without anything feeling rushed."
+  },
+  {
+    "id": "q_web_005_003",
+    "query_text": "Create an artist homepage app for desktop browsers that carries the same visual identity as a signed limited-edition print, with a strong typographic personality, a full-bleed featured work at the top that immediately communicates the artist's aesthetic, a neatly organized grid of other pieces below, and a short artist statement section that feels personal and curated rather than bio-copy-pasted."
+  },
+  {
+    "id": "q_web_006_001",
+    "query_text": "Need a creative writing blog app for desktop browsers that has the intimate feel of a literary magazine you actually want to read cover to cover, with a wide centered column for the writing itself, a beautiful drop-cap to open each post, a consistent warm typographic treatment throughout, and a gentle cover image at the top of each entry that sets the mood before a single word is read."
+  },
+  {
+    "id": "q_web_006_002",
+    "query_text": "A newsletter publishing app that lives in the browser and carries the unhurried, considered feel of a beautifully laid-out print letter, with a clean centered reading column, the most recent issue displayed in full on the main area, a tasteful archive list along the sidebar so past issues are easy to find, and a subscribe prompt at the end of each issue that feels like a genuine invitation rather than a pop-up."
+  },
+  {
+    "id": "q_web_006_003",
+    "query_text": "Make a creative process journal app for desktop browsers that captures the behind-the-scenes mood of a working artist, with a clean two-column layout where each log entry sits on the left with the date and a mood or medium note, a right panel that shows any attached sketches or reference images in a soft light-box style, and a warm paper-toned background that makes reading feel slow and intentional."
+  },
+  {
+    "id": "q_web_007_001",
+    "query_text": "Create a fan subscription landing app for desktop browsers that carries real personality, the kind that makes a visitor feel like they have landed somewhere with a point of view rather than a generic sign-up form, with a bold headline that says exactly who this is for, a short sample of what subscribers get, and a subscription form that feels like a handshake rather than a transaction."
+  },
+  {
+    "id": "q_web_007_002",
+    "query_text": "Make a new release announcement app for desktop browsers that has the energy of a proper launch moment, something that feels deliberate and specific to this work rather than interchangeable with any other creator, with a full-screen hero that lets the piece speak for itself, a short story below about what went into making it, and a clear place for people to grab it or pre-order without having to hunt around."
+  },
+  {
+    "id": "q_web_007_003",
+    "query_text": "Build a crowdfunding pre-order web app that has the conviction of someone who genuinely believes in what they are making, with a strong opening statement that explains the project and why it matters, a funding progress display that feels live and real rather than clinical, and a small set of reward tiers laid out clearly so backers can see exactly what they are getting for their support."
+  },
+  {
+    "id": "q_web_008_001",
+    "query_text": "Create a web app shop for selling printed goods and digital downloads where I can list each item with a photo, a price, and a short description, buyers can see everything in a clean browsable grid, and when they click a product they get a simple detail page with a buy button, so I have one link to share instead of having to manually answer every order request by message."
+  },
+  {
+    "id": "q_web_008_002",
+    "query_text": "Need a web app for selling paid creative work where I can post each piece with a price and a preview image, buyers can browse and purchase without me having to handle each transaction manually, and I get a simple list of what has sold so I am not guessing whether a payment came through, all accessible from a desktop browser without needing a complicated storefront setup."
+  },
+  {
+    "id": "q_web_008_003",
+    "query_text": "Create a merchandise shop web app for a creator brand where I can add each item with a photo, price, and a few size or variant options, everything shows up in a clean browsable grid, and each product has its own detail page with a straightforward way to add to cart and check out, so fans have somewhere reliable to buy official stuff and I stop fielding the same where-can-I-buy-this question every week."
+  },
+  {
+    "id": "q_web_009_001",
+    "query_text": "Need a booking request web app for photography and illustration commissions where clients can see my available slots on a simple calendar, fill in a short form describing what they need, and I get everything in one place so I am not piecing together project details from scattered messages, with a clear list of open and confirmed bookings on my side so I always know what is coming up."
+  },
+  {
+    "id": "q_web_009_002",
+    "query_text": "Build a 1-on-1 tutoring booking app for desktop browsers where students can see available time slots, pick one, and confirm without having to send a dozen messages back and forth just to lock in an hour."
+  },
+  {
+    "id": "q_web_009_003",
+    "query_text": "Create a freelance illustrator commission intake manager, a web app where clients fill out a short form with project details and budget, then automatically see open slots on your calendar and book one, so you stop wasting time on the same back-and-forth emails every single time."
+  },
+  {
+    "id": "q_web_010_001",
+    "query_text": "Need a creative tutorial site app, a browser-based tool where tutorials are organized by skill level and category, I can mark which ones I've finished, and there's a simple search so I can find a specific technique without scrolling through everything."
+  },
+  {
+    "id": "q_web_010_002",
+    "query_text": "Need a paid online course manager, a web app where I can browse available courses by topic, see what's included in each one, pay and get instant access, and track my progress through each lesson on a simple checklist."
+  },
+  {
+    "id": "q_web_010_003",
+    "query_text": "Build a technique-sharing app for desktop browsers where creators can post step-by-step skill guides grouped by type (drawing, writing, editing, etc.), readers can save the ones they want to try, and there's a simple list of what each guide covers so nothing feels buried."
+  },
+  {
+    "id": "q_web_011_001",
+    "query_text": "Create a fan community app for desktop browsers where a creator can post updates, fans can reply and react, and there's a spot where the creator can pin important announcements so regulars always know what's going on."
+  },
+  {
+    "id": "q_web_011_002",
+    "query_text": "A comment section app for creative works, the kind you'd open in a browser where fans can leave feedback on individual pieces, replies are threaded so conversations stay readable, and the creator can highlight a favorite comment at the top of each work."
+  },
+  {
+    "id": "q_web_011_003",
+    "query_text": "Create a members-only website for a creator where paying fans log in to access exclusive posts, behind-the-scenes stuff, and early previews, with a simple list of what's new since their last visit so they always know where to look first."
+  },
+  {
+    "id": "q_web_012_001",
+    "query_text": "Make a writing helper tool, a web app for desktop browsers where I can type in a topic or rough idea and get a list of angles to explore, a basic word count tracker, and a place to jot quick notes while I work so I stop losing my thoughts in random documents."
+  },
+  {
+    "id": "q_web_012_002",
+    "query_text": "Create a resource manager app, a browser-based tool where I can upload and organize reference images, text snippets, and links into folders by project, add a short note to each item, and quickly search by keyword so I can find what I need without digging through folders everywhere."
+  },
+  {
+    "id": "q_web_012_003",
+    "query_text": "Need a blog outline generator tool, a web app where I type in my topic and it gives me a suggested structure with section headings I can rearrange, plus a small notes area beside each heading so I can jot what I want to say before I start actually writing."
+  },
+  {
+    "id": "q_web_013_001",
+    "query_text": "Create a professional homepage site that feels like it actually belongs to a real person, a web app with a clean intro that shows who I am and what I do, a short list of selected work with enough context to tell a story, and a contact section that feels inviting rather than corporate."
+  },
+  {
+    "id": "q_web_013_002",
+    "query_text": "Need a case study portfolio app, a website that presents each project with its own personality, shows the real story of what was done and why it mattered, and lets visitors browse by the kind of work without it feeling like a generic template with swapped-out content."
+  },
+  {
+    "id": "q_web_013_003",
+    "query_text": "Make a credentials showcase app, a web app where my certifications, awards, and experience come across as something I'm genuinely proud of rather than a dry list, with each item carrying a short note about why it matters, and the overall feel matching the taste of someone who cares about how things look."
+  },
+  {
+    "id": "q_web_014_001",
+    "query_text": "A professional blog app that actually has a voice, the kind of website where each post feels like it was written by a specific person with a specific perspective, with a clean reading layout for desktop browsers, a way to browse by theme, and a short about section that sets the tone so readers immediately know whose corner of the internet this is."
+  },
+  {
+    "id": "q_web_014_002",
+    "query_text": "A white paper and insights publisher app with real editorial taste, a website where each piece has a proper cover, a clean long-form reading layout for desktop browsers, and an archive organized by theme so the work feels curated rather than just uploaded and forgotten."
+  },
+  {
+    "id": "q_web_014_003",
+    "query_text": "An industry report hub app, a website where reports are presented with some care for how they look, each one with a sharp summary up front, a clean reading layout for desktop browsers, and a way to browse by year or topic so the collection feels like it has a point of view and a history."
+  },
+  {
+    "id": "q_web_015_001",
+    "query_text": "Build a service introduction website that actually earns trust, a web app with a focused landing page that explains exactly what I do and who it's for, a section that shows real results or examples, and a clear way for interested people to get in touch, all with a tone that feels confident but not pushy."
+  },
+  {
+    "id": "q_web_015_002",
+    "query_text": "Make a personal brand website that feels like it means something, a web app where the home page introduces my story and what I stand for, there's a place to show the work and thinking behind it, and every part of the site carries a consistent personality so it's clear this is a place someone actually cares about maintaining."
+  },
+  {
+    "id": "q_web_015_003",
+    "query_text": "Need a freelance designer portfolio app, a website where each case study tells a real story about the problem and the outcome, the work speaks for itself with enough context to be convincing, and there's a contact section that feels like an invitation to a conversation rather than a generic form, all with a design sensibility that matches the taste of the person behind it."
+  },
+  {
+    "id": "q_web_016_001",
+    "query_text": "Need a consultation booking app, a web app where clients can see my available times, pick a slot, leave a short note about what they want to talk about, and get a confirmation, so I stop having to manually coordinate every single appointment through chat."
+  },
+  {
+    "id": "q_web_016_002",
+    "query_text": "Need a medical consultation booking app, a web app where patients can describe their symptoms briefly, pick a time that works for them, and get an appointment confirmed without having to call in and wait on hold just to schedule something."
+  },
+  {
+    "id": "q_web_016_003",
+    "query_text": "Build a legal consultation booking app for desktop browsers where someone needing legal advice can pick a lawyer from a short list, choose an available time, type a brief description of their issue, and submit the booking in one go instead of playing phone tag for days."
+  },
+  {
+    "id": "q_web_017_001",
+    "query_text": "Need a workshop and training manager app, a web app where I can list upcoming sessions with dates, topics, and how many spots are left, let people sign up directly, and keep a simple record of who registered for which session so I'm not tracking everything in a spreadsheet."
+  },
+  {
+    "id": "q_web_017_002",
+    "query_text": "A paid resource download app for desktop browsers where each item has a clear name, a short description of what you get, and a price, buyers pay and immediately get access to their file, and there's a simple list of everything they've purchased so they can come back and download again without hassle."
+  }
+]

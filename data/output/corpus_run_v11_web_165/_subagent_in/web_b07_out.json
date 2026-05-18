@@ -1,0 +1,62 @@
+[
+  {
+    "id": "q_web_067_002",
+    "query_text": "Build a web app for handling all those annoying government service center tasks, where I can fill in common forms like address changes or permit applications, save my personal info so I don't retype it every time, and track the status of things I already submitted, all in one place on a desktop browser so I can copy-paste stuff easily."
+  },
+  {
+    "id": "q_web_068_001",
+    "query_text": "Need a web app that works as a GitHub Profile showcase tool, where I can plug in my GitHub username and it pulls together all my repos and contribution activity into a clean profile page, with a sidebar showing my top languages and a section highlighting the repos I want to feature, so visitors can get a quick feel for what I work on."
+  },
+  {
+    "id": "q_web_068_002",
+    "query_text": "A little website for an open source project homepage where people can see what the project does, browse the latest releases with short notes about what changed, and find a quick start guide to get going, all running in a desktop browser with a simple left-side nav so you can jump between the different parts of the site easily."
+  },
+  {
+    "id": "q_web_069_001",
+    "query_text": "Make a tech blog website where I can write and publish articles about coding topics, each post has a tag for the tech it covers like Python or React, and the home screen of the app shows posts sorted by date with a sidebar listing all my tags so readers can filter by what they care about, all viewable comfortably on a desktop browser."
+  },
+  {
+    "id": "q_web_069_002",
+    "query_text": "Need a web app for writing and organizing RFC and design documents, where each doc has a title, status (like draft or accepted), and a structured body with sections for background, proposal, and open questions, and I can browse all my docs in a list on the left side while reading or editing the full doc on the right, all from a desktop browser."
+  },
+  {
+    "id": "q_web_070_001",
+    "query_text": "A landing website for my open source project that shows off what the project does in plain language, has a section with a quick install command people can copy, and lists out the main features with little icons or short descriptions, so someone landing on it from a desktop browser can immediately understand what it is and how to try it."
+  },
+  {
+    "id": "q_web_070_002",
+    "query_text": "Build a hackathon site as a web app where teams can submit their project with a name, description, and demo link, and visitors browsing from a desktop browser can see all the submitted projects in a list with basic info, plus there is a simple voting or liking thing so people can show which projects they think are cool."
+  },
+  {
+    "id": "q_web_071_001",
+    "query_text": "A donation and sponsor tracker app for my open source project that lives in a desktop browser, where I can log each donation or sponsor with the amount, date, and a name or alias, see a running total on the main screen, and have a simple public-facing page that shows my supporters so I can thank them without maintaining a separate spreadsheet."
+  },
+  {
+    "id": "q_web_071_002",
+    "query_text": "Make a web app for managing Pro version subscriptions, where I can set up a few plan tiers with their prices and features listed side by side so users can compare them at a glance on a desktop browser, and when someone picks a plan it shows a simple checkout summary page with the plan name and total before they confirm."
+  },
+  {
+    "id": "q_web_072_001",
+    "query_text": "Make a technical documentation and wiki app for desktop browsers where I can organize articles into categories, each article has a title and a body with headings, and there is a table of contents on the side that updates as I scroll through a long page, plus a search bar at the top so I can find any article by keyword quickly."
+  },
+  {
+    "id": "q_web_072_002",
+    "query_text": "Create a web app that works as an API reference browser, where each endpoint is listed in a left sidebar grouped by resource type, clicking one shows the full details on the right including the method, path, request parameters, and a sample response, so I can look things up on a desktop browser without hunting through a long document every time."
+  },
+  {
+    "id": "q_web_073_001",
+    "query_text": "A developer forum and BBS website built for desktop browsers, where anyone can post a thread under a topic category, others can reply in a threaded way, and the home screen of the app shows the latest active threads with the category label, poster name, and reply count so you can scan what is going on without clicking into everything."
+  },
+  {
+    "id": "q_web_073_002",
+    "query_text": "Create a Q and A site as a web app for developers, where anyone can post a question with a title and description, others can post answers, and the person who asked can mark one answer as the accepted one, all in a clean layout on desktop browsers with questions listed by most recent or most votes on the home screen of the app."
+  },
+  {
+    "id": "q_web_074_001",
+    "query_text": "Build a web app that is an experimental interactive playground where visitors can try out a few little demos or effects I built, each one lives in its own spot on the page, clicking it lets you mess around with some inputs and see the result change live, and the whole thing runs in a desktop browser so I can share the link with people to show what I am tinkering with."
+  },
+  {
+    "id": "q_web_074_002",
+    "query_text": "A browser-based tool site that brings together a handful of small utility calculators I use all the time, like a color converter, a time zone difference checker, and a text character counter, all on one website where I can pick the tool from a left-hand list and use it in the main area on a desktop browser without jumping between random sites."
+  }
+]

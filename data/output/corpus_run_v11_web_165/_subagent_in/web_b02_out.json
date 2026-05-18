@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_009_002",
+    "query_text": "Build a 1-on-1 tutoring booking app for desktop browsers where students can see available time slots, pick one, and confirm without having to send a dozen messages back and forth just to lock in an hour."
+  },
+  {
+    "id": "q_web_009_003",
+    "query_text": "Create a freelance illustrator commission intake manager, a web app where clients fill out a short form with project details and budget, then automatically see open slots on your calendar and book one, so you stop wasting time on the same back-and-forth emails every single time."
+  },
+  {
+    "id": "q_web_010_001",
+    "query_text": "Need a creative tutorial site app, a browser-based tool where tutorials are organized by skill level and category, I can mark which ones I've finished, and there's a simple search so I can find a specific technique without scrolling through everything."
+  },
+  {
+    "id": "q_web_010_002",
+    "query_text": "Need a paid online course manager, a web app where I can browse available courses by topic, see what's included in each one, pay and get instant access, and track my progress through each lesson on a simple checklist."
+  },
+  {
+    "id": "q_web_010_003",
+    "query_text": "Build a technique-sharing app for desktop browsers where creators can post step-by-step skill guides grouped by type (drawing, writing, editing, etc.), readers can save the ones they want to try, and there's a simple list of what each guide covers so nothing feels buried."
+  },
+  {
+    "id": "q_web_011_001",
+    "query_text": "Create a fan community app for desktop browsers where a creator can post updates, fans can reply and react, and there's a spot where the creator can pin important announcements so regulars always know what's going on."
+  },
+  {
+    "id": "q_web_011_002",
+    "query_text": "A comment section app for creative works, the kind you'd open in a browser where fans can leave feedback on individual pieces, replies are threaded so conversations stay readable, and the creator can highlight a favorite comment at the top of each work."
+  },
+  {
+    "id": "q_web_011_003",
+    "query_text": "Create a members-only website for a creator where paying fans log in to access exclusive posts, behind-the-scenes stuff, and early previews, with a simple list of what's new since their last visit so they always know where to look first."
+  },
+  {
+    "id": "q_web_012_001",
+    "query_text": "Make a writing helper tool, a web app for desktop browsers where I can type in a topic or rough idea and get a list of angles to explore, a basic word count tracker, and a place to jot quick notes while I work so I stop losing my thoughts in random documents."
+  },
+  {
+    "id": "q_web_012_002",
+    "query_text": "Create a resource manager app, a browser-based tool where I can upload and organize reference images, text snippets, and links into folders by project, add a short note to each item, and quickly search by keyword so I can find what I need without digging through folders everywhere."
+  },
+  {
+    "id": "q_web_012_003",
+    "query_text": "Need a blog outline generator tool, a web app where I type in my topic and it gives me a suggested structure with section headings I can rearrange, plus a small notes area beside each heading so I can jot what I want to say before I start actually writing."
+  },
+  {
+    "id": "q_web_013_001",
+    "query_text": "Create a professional homepage site that feels like it actually belongs to a real person, a web app with a clean intro that shows who I am and what I do, a short list of selected work with enough context to tell a story, and a contact section that feels inviting rather than corporate."
+  },
+  {
+    "id": "q_web_013_002",
+    "query_text": "Need a case study portfolio app, a website that presents each project with its own personality, shows the real story of what was done and why it mattered, and lets visitors browse by the kind of work without it feeling like a generic template with swapped-out content."
+  },
+  {
+    "id": "q_web_013_003",
+    "query_text": "Make a credentials showcase app, a web app where my certifications, awards, and experience come across as something I'm genuinely proud of rather than a dry list, with each item carrying a short note about why it matters, and the overall feel matching the taste of someone who cares about how things look."
+  },
+  {
+    "id": "q_web_014_001",
+    "query_text": "A professional blog app that actually has a voice, the kind of website where each post feels like it was written by a specific person with a specific perspective, with a clean reading layout for desktop browsers, a way to browse by theme, and a short about section that sets the tone so readers immediately know whose corner of the internet this is."
+  },
+  {
+    "id": "q_web_014_002",
+    "query_text": "A white paper and insights publisher app with real editorial taste, a website where each piece has a proper cover, a clean long-form reading layout for desktop browsers, and an archive organized by theme so the work feels curated rather than just uploaded and forgotten."
+  },
+  {
+    "id": "q_web_014_003",
+    "query_text": "An industry report hub app, a website where reports are presented with some care for how they look, each one with a sharp summary up front, a clean reading layout for desktop browsers, and a way to browse by year or topic so the collection feels like it has a point of view and a history."
+  },
+  {
+    "id": "q_web_015_001",
+    "query_text": "Build a service introduction website that actually earns trust, a web app with a focused landing page that explains exactly what I do and who it's for, a section that shows real results or examples, and a clear way for interested people to get in touch, all with a tone that feels confident but not pushy."
+  },
+  {
+    "id": "q_web_015_002",
+    "query_text": "Make a personal brand website that feels like it means something, a web app where the home page introduces my story and what I stand for, there's a place to show the work and thinking behind it, and every part of the site carries a consistent personality so it's clear this is a place someone actually cares about maintaining."
+  },
+  {
+    "id": "q_web_015_003",
+    "query_text": "Need a freelance designer portfolio app, a website where each case study tells a real story about the problem and the outcome, the work speaks for itself with enough context to be convincing, and there's a contact section that feels like an invitation to a conversation rather than a generic form, all with a design sensibility that matches the taste of the person behind it."
+  },
+  {
+    "id": "q_web_016_001",
+    "query_text": "Need a consultation booking app, a web app where clients can see my available times, pick a slot, leave a short note about what they want to talk about, and get a confirmation, so I stop having to manually coordinate every single appointment through chat."
+  },
+  {
+    "id": "q_web_016_002",
+    "query_text": "Need a medical consultation booking app, a web app where patients can describe their symptoms briefly, pick a time that works for them, and get an appointment confirmed without having to call in and wait on hold just to schedule something."
+  },
+  {
+    "id": "q_web_016_003",
+    "query_text": "Build a legal consultation booking app for desktop browsers where someone needing legal advice can pick a lawyer from a short list, choose an available time, type a brief description of their issue, and submit the booking in one go instead of playing phone tag for days."
+  },
+  {
+    "id": "q_web_017_001",
+    "query_text": "Need a workshop and training manager app, a web app where I can list upcoming sessions with dates, topics, and how many spots are left, let people sign up directly, and keep a simple record of who registered for which session so I'm not tracking everything in a spreadsheet."
+  },
+  {
+    "id": "q_web_017_002",
+    "query_text": "A paid resource download app for desktop browsers where each item has a clear name, a short description of what you get, and a price, buyers pay and immediately get access to their file, and there's a simple list of everything they've purchased so they can come back and download again without hassle."
+  }
+]
