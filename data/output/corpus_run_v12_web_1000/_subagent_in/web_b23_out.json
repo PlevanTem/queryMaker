@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_040_006",
+    "query_text": "Make a web app that handles scheduling video calls with beta users who want to give feedback on the product, because right now I'm doing this all manually and it's a total pain. The app should let beta users pick a time from my available slots, collect a quick note about what they want to talk about, and send a confirmation with the call link, so I stop chasing people over email just to set up a 30-minute call."
+  },
+  {
+    "id": "q_web_040_007",
+    "query_text": "Build a browser-based tool for SaaS teams to book interview slots with UX research participants, so we can stop juggling spreadsheets and calendar invite chains every time we need to talk to users. The tool should show available time slots on one side and let participants pick a slot and fill in a short form with their background, and the team should see all booked interviews in a simple list they can manage from desktop."
+  },
+  {
+    "id": "q_web_040_008",
+    "query_text": "Make a web app that new enterprise clients can use to book their onboarding kickoff call after they sign up for the SaaS product, so our team doesn't have to manually coordinate this every single time. The app should show our team's available times, let the client choose a slot and enter their company name and main contact, and fire off a confirmation so everyone knows when the kickoff call is happening."
+  },
+  {
+    "id": "q_web_040_009",
+    "query_text": "Build a web app that lets our customer success team schedule quarterly business review meetings with clients without the usual back-and-forth email chaos. The tool should show a calendar of open slots, let clients pick a time that works for them, and keep a list of all upcoming and past review appointments organized by account name so the team can actually stay on top of who needs a review and when."
+  },
+  {
+    "id": "q_web_040_010",
+    "query_text": "A simple booking tool for desktop browsers where free trial users can schedule a quick call with someone on the team to talk about upgrading, so we stop missing people who are interested but never hear back from us. The app should have a list of available times, a short form where the user says what they want to know before the call, and a confirmation page with the meeting details all in one spot."
+  },
+  {
+    "id": "q_web_040_011",
+    "query_text": "Make a web app that helps our team schedule implementation kickoff calls with new clients right after they buy our SaaS product, because right now we're just sending emails back and forth and things fall through the cracks constantly. The app should show which project managers are available and when, let clients pick a time slot, and keep everything organized in a running list the team can check from a desktop browser."
+  },
+  {
+    "id": "q_web_040_012",
+    "query_text": "Build a web-based booking tool where founders can schedule one-on-one meetings with their advisory board members without all the painful back-and-forth scheduling. The app should list each advisor with their available times, let you pick a slot and write a short agenda for the meeting, and then show all your upcoming advisor meetings in one place so you actually remember who you've talked to recently and who you've been neglecting."
+  },
+  {
+    "id": "q_web_040_013",
+    "query_text": "Build a web app that early-stage startups can use to book a growth marketing audit call with a consultant, because digging through contact forms and waiting days for a reply just to get a call on the calendar is ridiculous. The app should show open call slots, ask the startup a couple of quick questions about their current situation when they book, and give both sides a confirmation with the meeting time and a summary of what was submitted."
+  },
+  {
+    "id": "q_web_041_001",
+    "query_text": "Make a web app that works as a best practices library for the team, where everyone can save, browse, and look up proven approaches we've figured out over time. I want each entry to have a clear title, a category so things stay organized, and a short description of when and why to use it. It should be easy to search from a desktop browser, and I'd like to see everything sorted by category in a sidebar so I can quickly jump to what I need."
+  },
+  {
+    "id": "q_web_041_002",
+    "query_text": "Need a browser-based tool that works like a live coding sandbox so I can try out API calls and immediately see what comes back, with a text area on the left for writing the request and a results area on the right that shows the response right away. I also want a saved examples list so I can reload common requests quickly, and the whole thing should work well on a desktop browser with side-by-side panes so I can see both the input and output at the same time."
+  },
+  {
+    "id": "q_web_041_003",
+    "query_text": "Make a web app that new team members can open on their desktop browser to see all their onboarding steps in one place, with each task listed clearly and a checkbox to mark it done so nothing gets missed. I want tasks grouped by topic, like account setup, tool access, and first-week goals, and each task should have a short note explaining what it is and why it matters, so new people know exactly what they need to do and in what order."
+  },
+  {
+    "id": "q_web_041_004",
+    "query_text": "Need a web app for product teams to track how many users are actually picking up each new feature after it ships, with a simple list of features on one side and usage numbers next to each one. I want to be able to see which features are getting traction and which ones people are ignoring, with the option to filter by time period, and the whole thing should be accessible on a desktop browser so the team can pull it up during planning meetings."
+  },
+  {
+    "id": "q_web_041_005",
+    "query_text": "Make a web app that customers can use to work through different levels of product training and earn certificates when they finish each level, kind of like a course path that starts with the basics and goes up to advanced topics. I want each level to have its own set of lessons, a progress bar so users can see how far along they are, and a certificate they can download when they complete a level, all accessible from a desktop browser."
+  },
+  {
+    "id": "q_web_041_006",
+    "query_text": "An interactive walkthrough builder app for desktop browsers where the team can put together step-by-step product demos by recording the main steps of a feature and adding a short explanation to each step. The app should let you string steps together into a complete walkthrough, preview how it looks before sharing, and organize all saved walkthroughs by product area so the demo library stays tidy and easy to hand off to sales or support."
+  },
+  {
+    "id": "q_web_041_007",
+    "query_text": "Create a wiki app for our startup team that lives in the browser and lets everyone search for any topic using plain everyday language instead of having to know the exact title of a page. I want a clean sidebar with organized sections on the left and the article content on the right, and the search bar should be smart enough to surface the right page even if I type something slightly different from what the page is actually called, so we stop losing knowledge in a pile of old documents."
+  },
+  {
+    "id": "q_web_041_008",
+    "query_text": "Build a training platform web app for our startup team where we can put together short courses for employees and track who has finished what, because right now onboarding training is just a pile of shared docs with no way to know if anyone actually read them. The app should let admins create courses with a few lessons each, let employees check off lessons as they finish, and show a simple progress view per person on the desktop browser so managers can see where everyone is."
+  },
+  {
+    "id": "q_web_041_009",
+    "query_text": "Create a web app that lets our SaaS product team issue certificates to users who pass a product knowledge test, with a list of available certifications on the main screen and a simple way for users to take a short quiz and get a downloadable certificate if they pass. I want admins to be able to add new certification tracks from a desktop browser, and users should have a profile that shows all the certificates they've earned so they can share it."
+  },
+  {
+    "id": "q_web_041_010",
+    "query_text": "Need a web app that works like a library of customer case studies I can filter by industry and by what problem the customer solved, so I can quickly find the right story for a pitch or a conversation. The app should show each case study as a card with the company name, industry, and a one-line summary, and clicking one should open the full write-up in a reading view on the right side, all working nicely on a desktop browser."
+  },
+  {
+    "id": "q_web_041_011",
+    "query_text": "Create a website that works as a product changelog where every update entry has a short how-to video or walkthrough built right into it, so users can read about a new feature and immediately see how to use it in the same place. I want the updates listed in order from newest to oldest, each one labeled with the date and a short title, and each entry should have space for a quick tutorial clip or a few annotated steps right below the description."
+  },
+  {
+    "id": "q_web_041_012",
+    "query_text": "Need a web app that works like a shared glossary for our SaaS product team, where everyone can look up what a term means and see a plain-language explanation right away. I want terms listed alphabetically with a search bar at the top so I can find things fast on a desktop browser, and each entry should show the term, a clear definition, and optionally a note about where it came from or how it's used in our product specifically."
+  },
+  {
+    "id": "q_web_041_013",
+    "query_text": "Create a web app that collects all our third-party integration setup guides in one place, organized so the team can find the right guide quickly by browsing a list of integrations in a sidebar on the left and reading the step-by-step instructions on the right side of the screen. I want each guide to have the name of the tool, the setup steps in plain language, and a spot for notes or common gotchas, all accessible from a desktop browser."
+  },
+  {
+    "id": "q_web_042_001",
+    "query_text": "Create a web app where users can submit feature requests for a product, vote on ones other people have already suggested, and leave a short comment explaining why they want something. I like the idea of having a simple list of all submitted requests that anyone can browse from a desktop browser, with the most-voted ones rising to the top, and a quick form for adding a new request that just asks for a title and a short description of what problem it solves."
+  },
+  {
+    "id": "q_web_042_002",
+    "query_text": "Build a web app where SaaS users can see what the team is planning to build next, vote on the things they care about most, and add their own ideas to the list. I want it to feel open and honest, like users are genuinely part of deciding what comes next, with a simple voting button on each item and a way to see roughly when planned things might ship, all accessible from a desktop browser so people can check in whenever they want."
+  },
+  {
+    "id": "q_web_042_003",
+    "query_text": "Make a web app where customers can write up their story about using the product and submit it, and then approved stories show up in a public gallery that anyone can browse. I want there to be a simple submission form where customers fill in their name, company, and their story, plus a spot for a photo if they have one, and the gallery side should let visitors browse stories by topic so it's easy to find ones that are relevant to what they're looking for, all on a website that works well on desktop."
+  },
+  {
+    "id": "q_web_042_004",
+    "query_text": "Make a website where people who want to try out our product before it fully launches can sign up to become beta testers, with a short form asking about their background and what they're hoping to test. I also want a public-facing page that explains what being a beta tester involves so people know what they're signing up for, and an admin view in the web app where we can see who applied and mark people as accepted so we can manage the whole recruitment process without using separate spreadsheets."
+  }
+]

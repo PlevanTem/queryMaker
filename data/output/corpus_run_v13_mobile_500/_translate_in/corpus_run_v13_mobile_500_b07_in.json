@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_scene_034_006",
+    "query_text": "An alcohol-free day tracker screen on my phone where I can see my current no-drink streak right at the top, plus a simple row of circles for each day this month that fills in when I mark a good day. I want to see my longest streak so far and my total dry days this year, and there should be a quick tap button to log today as alcohol-free without having to dig through anything."
+  },
+  {
+    "id": "q_scene_034_007",
+    "query_text": "Need a cold shower habit streak tracker for my phone that shows how many days in a row I have completed a cold shower, with a big clear number at the top so I can see my streak right away. I want to be able to tap once to mark today as done, see a row of past days in a simple checklist style, and get a small reminder if I forget to log before bedtime."
+  },
+  {
+    "id": "q_scene_034_008",
+    "query_text": "Make a 10,000 steps daily walking nudge screen for my phone that lists today's step count clearly at the top, shows how many steps I still need to hit the goal, and gives me a gentle push notification reminder in the afternoon if I am running behind. I also want a simple week view that shows which days I hit the target and which I missed, all on one screen without having to tap around."
+  },
+  {
+    "id": "q_scene_034_009",
+    "query_text": "Create a social connection habit reminder for my phone that helps me remember to call or check in with a friend or family member every few days. I want a simple checklist of the people I care about staying in touch with, a way to mark when I last reached out to each one, and a daily nudge so the habit stays on track. The streak counter should show how many days in a row I kept up the calling habit."
+  },
+  {
+    "id": "q_scene_034_010",
+    "query_text": "Create a journaling habit streak tracker for my phone where I can see how many days in a row I have written something, with an option to protect my streak once in a while if I miss a day unexpectedly. I want a clean list view showing this week and last week, a one-tap button to mark today as journaled, and a count of my total entries this month so I can see my consistency at a glance."
+  },
+  {
+    "id": "q_scene_035_001",
+    "query_text": "Build a 5K to marathon running plan builder for my phone that lays out each week of training in a simple list, showing what type of run I should do each day, how far, and at what effort level in plain words like easy or hard. I want to tap on any day to see the details for that session and mark it as done when I finish. The plan should adjust the upcoming weeks if I fall behind or skip a run."
+  },
+  {
+    "id": "q_scene_035_002",
+    "query_text": "Personal best milestone screen on my phone where all my running and workout records are listed in one place, sorted by type of activity, so I can quickly find my fastest 5K time or my heaviest lift. Each record should show the date I set it and how much I improved from the one before. When I beat a record it should feel like a small celebration on screen, not just a silent number update."
+  },
+  {
+    "id": "q_scene_035_003",
+    "query_text": "Create a workout buddy challenge leaderboard for my phone where I can see how my weekly activity compares to a few friends I have added. The list should show each person's name, their total workouts or active minutes this week, and a simple rank order. I want to be able to challenge a specific friend to match my step count or workout days for the week with a quick send button right on that same screen."
+  },
+  {
+    "id": "q_scene_035_004",
+    "query_text": "Build a heart rate zone workout intensity guide for my phone that explains each zone in plain everyday language, like easy pace, moderate effort, or really pushing hard, and shows which zone I should be in for different types of workouts. I want to enter my age to get my personal zone ranges and then see a list of suggested exercises for each level so I know exactly what kind of effort to aim for during my session."
+  },
+  {
+    "id": "q_scene_035_005",
+    "query_text": "Create a post-workout nutrition prompt for my phone that pops up after I log a workout and gives me a short checklist of things to eat or drink in the next hour. I want it to list a few simple options like protein, carbs, and water with checkboxes I can tap off as I go. The screen should also show how long ago I finished my workout so I know if I am still in the good window for refueling."
+  },
+  {
+    "id": "q_scene_035_006",
+    "query_text": "Create a mobility and stretching routine guide for my phone that lists each stretch or movement in order with a brief plain-language description of what body part it helps and how long to hold it. I want to be able to tap through the routine one step at a time with a simple timer for each move, and at the end see a summary of how many minutes I spent and which areas I covered that day."
+  },
+  {
+    "id": "q_scene_035_007",
+    "query_text": "Make a group fitness class schedule and booking screen for my phone that lists upcoming classes in a clear day-by-day layout with the class name, time, location, and how many spots are still open. I want to tap any class to see a short description and then tap again to book my spot or add it to my personal list of upcoming sessions. A simple reminder option for each booked class would be helpful too."
+  },
+  {
+    "id": "q_scene_035_008",
+    "query_text": "Wearable device sync and data import screen on my phone that shows a simple connection status for my fitness band or watch, a list of the last few synced sessions with date and activity type, and a one-tap button to pull in the latest data. I want to see clearly which information came from the wearable and when it was last updated so I know my records are current without having to guess."
+  },
+  {
+    "id": "q_scene_035_009",
+    "query_text": "Need a training block periodization planner for my phone that breaks my overall fitness plan into phases like building, pushing hard, and taking it easy to recover, shown as a simple list of weeks I can scroll through. Each phase should have a short note about the main goal and the general effort level for that period. I also want to mark which week I am currently in and see what comes next at a glance."
+  },
+  {
+    "id": "q_scene_035_010",
+    "query_text": "Make an injury rehabilitation exercise tracker for my phone that lists each recovery exercise in order with a plain note about which area it targets and how many times to do it. I want to check off each exercise as I finish it, log any pain level or notes for that day, and see a simple history of which days I completed the full routine versus the days I had to cut it short."
+  },
+  {
+    "id": "q_scene_036_001",
+    "query_text": "Build a basal body temperature chart for fertility tracking on my phone where I can quickly enter my temperature each morning and see a line graph of readings over the current cycle. I want the chart to highlight the shift that usually happens around ovulation with a clear marker, and also show a simple list of my logged temperatures below with the date and time I took each reading so everything is in one place."
+  },
+  {
+    "id": "q_scene_036_002",
+    "query_text": "Make a perimenopause symptom diary for my phone where I can log how I feel each day using a simple list of common symptoms like hot flashes, trouble sleeping, mood changes, and tiredness, with a quick tap to mark which ones happened. I also want a notes field for anything extra and a way to look back at past weeks in a tidy list so I can spot which symptoms are happening most often and share that with my doctor."
+  },
+  {
+    "id": "q_scene_036_003",
+    "query_text": "Build a dream journal with sleep phase notation for my phone where I can quickly jot down what I remember from a dream right after waking up, along with a simple note about what sleep phase I was likely in, like light sleep or deep sleep or just before waking. I want each entry to be dated automatically and listed in order so I can scroll back through past entries, and a simple tag for whether the dream felt calm, strange, or vivid."
+  },
+  {
+    "id": "q_scene_036_004",
+    "query_text": "Make a snoring and sleep apnea event marker for my phone where I can log each morning whether I or my partner noticed snoring or any breathing interruptions during the night. I want a simple list of dates with checkboxes for snoring yes or no, a notes field for anything unusual, and a way to see a weekly summary of how many nights had issues so I can track whether things are getting better or worse over time."
+  },
+  {
+    "id": "q_scene_036_005",
+    "query_text": "Jet lag recovery sleep schedule adjuster screen on my phone that helps me figure out the best times to sleep, wake up, and get light exposure after crossing time zones. I want to enter my home time zone, my destination, and my travel dates, and then see a simple day-by-day checklist for the first few days with suggested sleep windows and tips written in plain language rather than medical terms."
+  },
+  {
+    "id": "q_scene_036_006",
+    "query_text": "Need a sleep environment log for my phone where I can record the temperature, light level, and noise level in my bedroom each night before I go to sleep. I want a quick entry screen with simple sliders or choices for each factor and a notes field, then a list view of past nights so I can see whether nights with a cooler room or less noise actually led to better sleep quality the next morning."
+  },
+  {
+    "id": "q_scene_036_007",
+    "query_text": "Cycle symptom prediction and prep card screen on my phone that uses my past logged data to give me a heads-up a few days before my period starts, showing a simple card with what symptoms I typically get during this phase and a short checklist of things to have ready like pain relief or a heating pad. The card should update each day and feel like a friendly reminder rather than a medical chart."
+  },
+  {
+    "id": "q_scene_036_008",
+    "query_text": "Need a heavy day and flow intensity log for my phone where I can track how heavy my flow is each day of my period with a simple tap selection from light to very heavy, plus a quick note about any other things like clotting or cramping. I want to see a clear day-by-day breakdown for the current cycle and a comparison to last month so I can notice if anything is changing from one cycle to the next."
+  },
+  {
+    "id": "q_scene_036_009",
+    "query_text": "Need a period pain level and intervention tracker for my phone where I can log my cramp or pain level each day on a simple scale, note what I did to help like pain medicine, heat, or rest, and then see whether those things actually seemed to reduce the pain. I want a clean list of past cycle pain logs with dates so I can bring a real record to my doctor and show exactly what has been happening over the last few months."
+  },
+  {
+    "id": "q_scene_036_010",
+    "query_text": "Build a mood across cycle phase correlation chart for my phone that plots my daily mood ratings alongside where I am in my cycle so I can see if my emotions follow a pattern. I want to log my mood each day with a simple choice from a short list of options like happy, tired, anxious, or irritable, and then see a visual summary that groups those moods by cycle phase so the connection is easy to spot on one screen."
+  },
+  {
+    "id": "q_scene_037_001",
+    "query_text": "Create a weight and BMI tracker for my phone that shows my history as a line chart and also draws a horizontal target line so I can see at a glance how close I am to my goal. I want to log today's weight quickly, see both my weight trend and BMI trend on the same chart, and have the target line clearly labeled. Keep it clean and easy to read on a small screen."
+  },
+  {
+    "id": "q_scene_037_002",
+    "query_text": "Make a menstrual cycle tracker for my phone that shows a regularity pattern chart over the past several months so I can spot whether my cycles are getting longer or shorter. I want to see each cycle length laid out in order, with some kind of visual marker for what a regular cycle looks like, and I need to be able to log the start date of a new cycle easily. Keeping things tidy and easy to compare month by month matters most to me."
+  },
+  {
+    "id": "q_scene_037_003",
+    "query_text": "A mental wellness check-in tracker for my phone where I can rate how I am feeling each day and then see my mood trend over time as a simple line or bar chart. I want to log a quick score every day, add a short note if I want, and be able to see whether my overall wellbeing has been going up or down over the past few weeks. Straightforward layout, nothing complicated."
+  },
+  {
+    "id": "q_scene_037_004",
+    "query_text": "Make a symptom tracker for my phone that uses a heat calendar to show how often different symptoms appear each day of the month, so I can quickly see which days had the most issues and whether certain symptoms cluster together. I want to be able to pick a symptom from a list, mark it on today's date, and flip between months to compare patterns. Clear labels and an easy tap-to-log flow are important."
+  },
+  {
+    "id": "q_scene_037_005",
+    "query_text": "Need a calorie balance tracker for my phone that shows a chart of calories eaten versus calories burned each day, so I can see whether I am in a deficit or surplus at a glance. I want to enter my food calories and exercise calories separately, then see both bars side by side for each day of the week. I also want a running total for the week so I know where I stand overall."
+  },
+  {
+    "id": "q_scene_037_006",
+    "query_text": "Build a fitness tracker for my phone that shows my VO2 max estimate and a fitness age indicator so I can see how my cardiovascular fitness compares to my actual age. I want to log new readings after a workout, see how the numbers have changed over time on a simple chart, and have the fitness age displayed clearly with a note about whether it is better or worse than my real age. Simple layout, no clutter."
+  },
+  {
+    "id": "q_scene_037_007",
+    "query_text": "Create a UV exposure tracker for my phone that adds up how much UV I have accumulated throughout the day and shows me whether I am approaching a risky level. I want to enter time spent outdoors and the UV index for that period, see a running daily total on a clear progress bar, and get a simple warning color when I am getting close to the daily limit. Easy to update a few times a day while I am out."
+  },
+  {
+    "id": "q_scene_037_008",
+    "query_text": "Make a weekly health goal tracker for my phone that shows a report of which goals I completed and which I missed each week. I want to set a few goals like steps, water intake, and sleep hours, check them off as I go, and then see a clear summary at the end of the week showing how many I hit. Being able to compare this week to last week would also be helpful so I can see if I am improving."
+  },
+  {
+    "id": "q_scene_037_009",
+    "query_text": "Create a health timeline app for my phone that lets me log doctor visits, test results, vaccinations, and other health events so I can see them all laid out in order from oldest to newest. I want to add a new event with a date, a type, and a short note, then scroll through my whole history in one view. Being able to filter by event type, like only showing doctor visits, would also be really useful."
+  },
+  {
+    "id": "q_scene_037_010",
+    "query_text": "Make an allergy log for my phone that tracks how often different triggers cause a reaction, so I can see over time which ones are the biggest problem. I want to record each reaction with the date, the suspected trigger, and how bad it was, then see a frequency count for each trigger so the worst ones stand out. Being able to add new triggers to the list and filter by month would help me spot seasonal patterns."
+  },
+  {
+    "id": "q_scene_038_001",
+    "query_text": "Create a breath count meditation timer for my phone that feels calm and unhurried, with a soft visual that gently pulses as I count each breath and plays a quiet bell at the end of the session. The whole thing should feel like a still, peaceful moment rather than a clinical app, with muted colors and a gentle animation that does not distract me from focusing inward. One tap to start, one tap to stop, nothing fussy."
+  },
+  {
+    "id": "q_scene_038_002",
+    "query_text": "Need a Zen walking meditation audio guide for my phone that feels slow and meditative rather than workout-like, with soft ambient sound and gentle spoken cues that remind me to stay present with each step. The visual should feel simple and serene, maybe just a soft background with minimal text, so nothing pulls my attention away from the practice. I want it to feel like a quiet, intentional ritual every time I open it."
+  },
+  {
+    "id": "q_scene_038_003",
+    "query_text": "Need an alternate nostril breathing guide for my phone that walks me through each step with a soft, unhurried visual so I always know which nostril and which phase I am on without having to think about it. The whole feel should be calm and a little earthy, like something you would find in a quiet yoga studio, with warm tones and gentle transitions rather than anything that feels clinical or rushed. Simple enough to follow with my eyes half closed."
+  },
+  {
+    "id": "q_scene_038_004",
+    "query_text": "Make a mindfulness of emotions session for my phone that guides me through noticing and naming what I am feeling, with a soft and unhurried pace that feels kind rather than clinical. I want the visuals to feel warm and grounding, maybe with gentle color shifts that reflect different emotional tones, and I want the prompts to feel like a calm inner conversation rather than a checklist. The whole experience should leave me feeling more settled than when I started."
+  },
+  {
+    "id": "q_scene_038_005",
+    "query_text": "Need a mantra meditation timer for my phone that lets me set how many repetitions or how many minutes I want, then creates a gentle, focused atmosphere while I repeat my mantra silently. I want it to feel sacred and unhurried, with a soft visual that marks each cycle and a quiet, pleasing sound at the end so I know the session is over without being startled. The overall mood should feel reverent and still, not like a generic countdown timer."
+  },
+  {
+    "id": "q_scene_038_006",
+    "query_text": "Make a grounding exercise for my phone based on the 5-4-3-2-1 technique that feels safe and gentle, guiding me through noticing things I can see, hear, touch, smell, and taste one step at a time. The visual should feel soft and reassuring, like a warm hand on the shoulder rather than a bright clinical interface, with calming colors and unhurried transitions between each sense. I want it to feel like a safe little refuge I can open any time I feel overwhelmed."
+  },
+  {
+    "id": "q_scene_038_007",
+    "query_text": "Build an open awareness meditation app for my phone that gently guides me into a spacious, present state of mind without locking me into a rigid structure, so I can just sit and notice what arises. The feel should be airy and minimal, like looking out at a wide open sky, with very soft background sound and a visual that suggests openness rather than enclosure. I want it to feel like an invitation to rest in stillness rather than another thing to achieve."
+  },
+  {
+    "id": "q_scene_038_008",
+    "query_text": "Need a work stress decompression break routine for my phone that I can do in five to ten minutes at my desk, with guided steps that feel genuinely relaxing rather than performative. I want the visual to feel calm and slightly warm, like stepping away from a screen into softer light, and the prompts to lead me through breathing, releasing tension, and resetting mentally before I go back to work. It should feel like a real break, not just a productivity trick."
+  },
+  {
+    "id": "q_scene_038_009",
+    "query_text": "Build a calm-down breathing game for kids on a phone that makes deep breathing feel playful and satisfying, with friendly animations that respond to the rhythm of the exercise so a child naturally wants to breathe slowly to see what happens. The look should be bright and inviting but not overstimulating, with soft cheerful characters or shapes that grow and shrink with each breath. I want it to feel like a fun little world a child can visit whenever they feel wound up."
+  },
+  {
+    "id": "q_scene_038_010",
+    "query_text": "Make a couples synchronized breathing exercise for two people to do together on a phone, where both people can follow the same gentle rhythm and feel like they are sharing a calm, connected moment. The visual should feel warm and intimate, maybe with two soft shapes that pulse together in sync, and the overall mood should be tender rather than sporty. I want it to feel like a quiet ritual a couple can build into their day to feel more in tune with each other."
+  },
+  {
+    "id": "q_scene_039_001",
+    "query_text": "A visa requirement checker for my phone where I pick my passport nationality and the country I want to visit, and it immediately shows me whether I need a visa, can get one on arrival, or can enter visa-free, along with how long I am allowed to stay. I want the information to be laid out clearly with the most important details front and center, and I want to be able to check several destinations quickly one after another. Clean and easy to scan while planning a trip."
+  },
+  {
+    "id": "q_scene_039_002",
+    "query_text": "Make a travel insurance comparison tool for my phone that lets me look at several plans side by side so I can see the key differences clearly without reading walls of fine print. I want to see things like medical coverage limit, trip cancellation coverage, whether adventure activities are included, and the price, all lined up in a way that makes it easy to choose. Being able to filter by coverage type or price range would help me narrow down the options quickly."
+  },
+  {
+    "id": "q_scene_039_003",
+    "query_text": "Make a currency exchange rate card for my phone that shows the current exchange rate between my home currency and the currency of wherever I am traveling, along with a quick converter so I can type in an amount and instantly see what it equals in the other currency. I want the layout to be clean and easy to read at a glance, with the rate and the converter both visible without any extra tapping. Useful to have open while shopping or paying for things abroad."
+  },
+  {
+    "id": "q_scene_039_004",
+    "query_text": "A packing list maker for my phone where I enter my destination, the weather I expect, and how many days I am going, and it gives me a sensible list of things to pack based on that information. I want the list organized into categories like clothing, toiletries, documents, and gadgets so it is easy to work through, and I want to be able to check things off as I pack them. Being able to add my own items to any category would make it even more useful."
+  },
+  {
+    "id": "q_scene_039_005",
+    "query_text": "Make an emergency info card for my phone that I can fill in before a trip with the local emergency number, the nearest embassy or consulate address and phone number, my travel insurance hotline, and one or two personal emergency contacts. I want everything on one screen that is easy to read quickly in a stressful moment, with the most critical numbers at the top. Being able to save it for offline access so I can open it without a signal would be really important."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_013_006",
+    "query_text": "A bulk export tool for my phone where I can pick a date range and choose what format to save everything in, like CSV or PDF, then grab all the records at once instead of going one by one every single time. I always have to export stuff for monthly reports and doing it file by file is such a pain. The app just needs a date picker, a format selector, and a button that bundles everything up and saves it to my phone."
+  },
+  {
+    "id": "q_scene_013_007",
+    "query_text": "A download history tracker for my phone that keeps a list of everything I have downloaded before, with the file name, date, and a button right next to each item so I can grab it again in one tap if I need it. I always end up hunting through my folders trying to find something I already downloaded once, and it wastes so much time. The app should just show the list in order and let me re-download anything instantly."
+  },
+  {
+    "id": "q_scene_013_008",
+    "query_text": "Make a file manager tool for my phone where I can check off a bunch of files from a list and then hit one button to pack them all into a single ZIP file and download it, so I stop having to save files one at a time. It takes forever to grab each file separately when I need a whole batch. The app just needs a list with checkboxes, a select-all option, and a download-as-ZIP button at the bottom."
+  },
+  {
+    "id": "q_scene_013_009",
+    "query_text": "Create a media downloader app for my phone that lets me pick between 4K, HD, and SD before the file actually starts downloading, so I can choose a smaller size when my storage is running low and save the good quality one when I have space. Right now I just get whatever the default is and then I have to delete and re-download if it turns out to be the wrong size. The app should show the quality options clearly with a file size estimate before I confirm."
+  },
+  {
+    "id": "q_scene_013_010",
+    "query_text": "Make an invoice and receipt manager for my phone that lets me select a bunch of invoices or receipts at once and export them all as PDFs in one go, so I can stop manually saving each one when I need to submit expenses. Dealing with dozens of receipts one at a time every month is just exhausting. The app should let me filter by date or by type, tick the ones I want, and then batch-export everything into a single PDF or separate files."
+  },
+  {
+    "id": "q_scene_014_001",
+    "query_text": "Build a workout planner app for my phone where I can take any existing training plan and copy it over to a different person's profile with one tap, so I stop re-entering the same exercises from scratch every time I set up a new trainee. I manage a few people at the gym and building each plan by hand is just repetitive and annoying. The app should let me pick a plan, choose which trainee profile to copy it to, and then let me tweak it from there."
+  },
+  {
+    "id": "q_scene_014_002",
+    "query_text": "Make a delivery address manager for my phone where I can look at any past order and save the shipping address from it straight into my address book with one tap, so I stop typing the same addresses over and over every time I order something new. Half my orders go to the same few places and I always have to retype everything. The app should show my order list, let me tap an address to copy it, and save it with a name I can reuse next time."
+  },
+  {
+    "id": "q_scene_014_003",
+    "query_text": "Create a report builder app for my phone where I can take any report layout I have already set up and make a full copy of it that stays connected to the same data as the original, so I can use it as a starting point for a tweaked version without rebuilding all the charts and sections from scratch. Every time I need a slightly different report I end up redoing everything by hand. The copy should open ready to edit with the same data already hooked up."
+  },
+  {
+    "id": "q_scene_014_004",
+    "query_text": "Need a sharing tool for my phone that turns any info card in the app into a clean image I can save to my photo roll and then send to friends or post anywhere, all in just a couple of taps. Right now I just do a regular screenshot but it always catches stuff I don't want in the frame. The app should let me tap a card, show me a tidy preview image of just that card, and then save or share it from there."
+  },
+  {
+    "id": "q_scene_014_005",
+    "query_text": "A chatbot builder tool for my phone where I can take any conversation topic I already set up, duplicate it, and then edit the example phrases in the copy so I can quickly spin up a slightly different version for a related topic without starting over from zero. Setting up each topic fresh takes so long when they are mostly the same. The copy should open with all the original example phrases already there and ready to be changed."
+  },
+  {
+    "id": "q_scene_014_006",
+    "query_text": "Build an invoice manager app for my phone where I can open any old invoice, copy it, and then swap in a different client name and a new date so I have a fresh invoice ready to send without typing out all the line items again. I bill multiple clients for the same kind of work every month and rebuilding each invoice from scratch is such a waste of time. The app should let me pick the invoice to copy, edit the client and date fields right away, and save or send it."
+  },
+  {
+    "id": "q_scene_014_007",
+    "query_text": "Need a filter manager tool for my phone that lets me take any saved search filter I use a lot and copy it as a new one so I can change just one or two conditions in the copy without messing up the original. I keep setting up the same filters with tiny differences and there is no easy way to reuse them. The app should list all my saved filters, let me tap one to copy it, and open the copy ready for me to adjust whatever I want."
+  },
+  {
+    "id": "q_scene_014_008",
+    "query_text": "Build a schedule manager app for my phone where I can take everything on my main calendar and mirror it to a second calendar, with each copied event showing in a different color so I can tell the two calendars apart at a glance. I want to keep a backup version of my schedule that I can share with someone else, and right now I just have to manually re-enter everything. The app should handle the copying automatically and let me pick a color for the mirrored events."
+  },
+  {
+    "id": "q_scene_014_009",
+    "query_text": "Need a reorder tool for my phone that shows my past orders in a list and lets me tap one to copy all the items from it straight into a new order, so I stop picking everything out again from scratch when I just want the same thing I got last time. I order the same stuff pretty regularly and re-selecting item by item every single time is pointless. The app should pull up the old order details, let me confirm or make small tweaks, and then place the new order."
+  },
+  {
+    "id": "q_scene_014_010",
+    "query_text": "Create a flashcard study app for my phone where I can take any deck I have already made and duplicate it so I can practice the same words but with different grammar forms in the copy, like changing all the present-tense examples to past tense, without having to retype every card. I study language with lots of variations and rebuilding a whole deck from scratch each time is way too slow. The copy should have all the original cards already there and ready for me to edit."
+  },
+  {
+    "id": "q_scene_015_001",
+    "query_text": "Need a notification manager app for my phone that handles push notifications properly, so when I tap one it takes me directly to the exact thing it was talking about inside the app instead of just dropping me on the home screen and making me hunt around. I want to try building a small tool that sends a few different kinds of notifications and each one should open the right spot in the app when tapped, so it actually feels useful and saves people from clicking around aimlessly."
+  },
+  {
+    "id": "q_scene_015_002",
+    "query_text": "Create a task manager app for my phone that shows a small pop-up message at the bottom of the screen whenever I delete something, with a live countdown of a few seconds and an undo button I can tap to bring the item back before the message goes away. I want to try this out because it feels way more forgiving than just deleting stuff with no safety net. The countdown should be visible so I know how long I have, and if I do nothing the item is just gone."
+  },
+  {
+    "id": "q_scene_015_003",
+    "query_text": "Create a shortcut reference app for my phone where I can open a panel from anywhere in the app that slides up from the bottom and shows all the keyboard shortcuts organized into groups, so I can quickly look up what I forget without leaving what I am doing. I always end up googling shortcuts because there is nowhere to check them inside the app itself. The panel should have the shortcuts listed clearly with a short label for each one and be easy to close and get back to work."
+  },
+  {
+    "id": "q_scene_015_004",
+    "query_text": "Make a note-taking app for my phone that has a switch somewhere accessible letting me flip between a dark background and a light background, and the whole app should change over instantly so I can see exactly what it looks like right away. I want to tinker with both looks and pick whichever one feels easier to read at different times of day. The switch should be easy to reach from any screen so I can toggle back and forth without digging through settings."
+  },
+  {
+    "id": "q_scene_015_005",
+    "query_text": "Need a settings tool for my phone where users can sign up to try out a new experimental feature that is still being tested, and right after they turn it on they get a link to a short feedback form so they can share what they think while it is fresh. I want to build something like this for a small side project where I am testing new stuff with real people. The opt-in should be simple, just a toggle with a short description of what the feature does, and the form link should appear right after they enable it."
+  },
+  {
+    "id": "q_scene_015_006",
+    "query_text": "Build a help center app for my phone that includes a step-by-step walkthrough showing users how to use the main parts of the app, and lets them relaunch that walkthrough at any time from the help or settings area in case they forgot something or skipped it the first time. I want to make a little app for my mom and she always forgets how things work, so being able to replay the whole tour on demand would be really handy. Each step should highlight the relevant part of the screen and have a short explanation."
+  },
+  {
+    "id": "q_scene_015_007",
+    "query_text": "Need a mobile app that shows users a prompt when there is a new required update available, and inside that prompt they can expand a section to read through what changed in the new version before they go update it. I want to build this into a small project I am working on so users know why they have to update instead of just getting a blank pop-up. The expandable list of changes should be easy to read on a phone screen, and the update button should be clearly there to tap when they are ready."
+  },
+  {
+    "id": "q_scene_015_008",
+    "query_text": "A login session manager for my phone that pops up a warning notice when the session is about to expire, showing how much time is left and giving the user a button to stay logged in so they can keep going without losing their work. I want to make a little app where people can edit something over a longer period and this kind of heads-up would save a lot of frustration. The warning should appear with enough time left to actually use the extend button, and tapping it should reset the timer right away."
+  },
+  {
+    "id": "q_scene_015_009",
+    "query_text": "Build a feedback tool for my phone that lets users fill out a quick form right inside the app to report something that went wrong, and they can attach a photo or screenshot from their phone to help explain the issue. I want to add this to a small project I am working on so people can send me useful reports when something breaks, instead of just texting me a vague description. The form should have a short text field for describing the problem and a simple way to pick a photo to attach before sending."
+  },
+  {
+    "id": "q_scene_015_010",
+    "query_text": "Create a sync manager app for my phone that handles the situation where the same piece of info was changed in two places and shows the user a simple way to pick which version to keep, with both versions displayed side by side so they can compare before deciding. I want to try building something like this for a personal project where I edit notes on multiple devices and conflicts happen sometimes. The picker should make it obvious which version came from where and let me resolve each one with a single tap."
+  }
+]

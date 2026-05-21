@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_073_002",
+    "query_text": "Create a web app for browsing and joining open-source communities where you can search for projects by topic, see how active each one is, and find beginner-friendly ones to contribute to, with a sidebar that keeps your bookmarked communities handy so you can jump back to them whenever you open the browser and want to pick up where you left off."
+  },
+  {
+    "id": "q_web_073_003",
+    "query_text": "A site where developers can share little code snippets they're proud of and other people can upvote or comment on them, so the best ones rise to the top, and you can browse by language or topic in a browser tab and save favorites to revisit later, kind of like a low-key community hall for sharing those small tricks you figured out that took you way too long."
+  },
+  {
+    "id": "q_web_073_004",
+    "query_text": "Make a web app that works like a gallery where people can post their open-source side projects and others can browse, discover, and give a shoutout to the ones they like, with filters for category and popularity so it's easy to find something interesting to explore or fork when you're sitting at your desk looking for inspiration."
+  },
+  {
+    "id": "q_web_073_005",
+    "query_text": "Need a web app for hackathon participants where you can post that you're looking for teammates, describe what you're building and what kind of help you need, and then once your team is set you can track who's doing what and how the project is progressing, all in one place so everyone stays on the same page through the crunch time."
+  },
+  {
+    "id": "q_web_073_006",
+    "query_text": "Need a web app where a team can post technical proposal write-ups, have everyone read through them and leave comments, and then vote on whether to move forward, kind of like a lightweight way to make group decisions about how to do things without digging through long email threads, and you can see the full history of past proposals and how they turned out."
+  },
+  {
+    "id": "q_web_073_007",
+    "query_text": "Build a web app that lists open-source tasks with small rewards or grants attached, so contributors can browse what needs doing, see how much each task is worth, and claim the ones they want to work on, and project maintainers can post new bounties and mark them complete when someone delivers, keeping everything organized on one page in the browser."
+  },
+  {
+    "id": "q_web_073_008",
+    "query_text": "Build a web app that works like a directory of useful tools for developers where the community can submit new ones and rate the ones they've tried, so when you're looking for something to help with a specific task you can browse by category and sort by how many stars something has to quickly find what other people actually recommend."
+  },
+  {
+    "id": "q_web_073_009",
+    "query_text": "Make a web app where people can share real code examples with detailed notes explaining what's good or bad about each part, so others can learn from seeing actual code and the reasoning behind feedback, and you can browse examples by language or skill level when you have time at your desk to work through something and actually understand why certain patterns are better."
+  },
+  {
+    "id": "q_web_073_010",
+    "query_text": "A browser-based app where someone who wants to learn can get matched with a more experienced person willing to mentor them, and once paired they both have a shared space to log goals, check off milestones, and leave notes after each session, so the whole mentorship has a clear thread you can look back on instead of scattered messages."
+  },
+  {
+    "id": "q_web_073_011",
+    "query_text": "Make a web app that collects recorded tech conference talks and lets the community leave timestamped notes and highlights on each one, so you can watch a talk and see what points other people flagged as important, or add your own thoughts, and browse by topic or year to find talks worth watching when you're sitting at your computer with an hour to learn something new."
+  },
+  {
+    "id": "q_web_073_012",
+    "query_text": "A web app built around competitive programming contests where you can see upcoming competitions, join them, and track how everyone is doing on a live standings board as problems get solved, and after each contest you can browse a breakdown of who solved what and how fast, so the whole community has a shared place to follow the action in the browser."
+  },
+  {
+    "id": "q_web_073_013",
+    "query_text": "A web app where you can post a little side project you just shipped and ask people to try it and leave honest feedback, and others can browse recent launches, upvote the ones they find clever, and drop comments with suggestions, kind of like a small friendly corner of the internet where tinkerers show each other what they've been making and actually get useful responses."
+  },
+  {
+    "id": "q_web_074_001",
+    "query_text": "Build a web app that pulls together links to useful resources on a topic so you always have one place to go instead of hunting through bookmarks, where anyone can submit a new link and the community can vote things up or down, with categories on the side so you can narrow down to exactly the kind of resource you need when you're sitting at your desk trying to learn something new."
+  },
+  {
+    "id": "q_web_074_002",
+    "query_text": "A web app that works like a big organized list of tools and resources, where each entry has a short description and a link, and you can search or filter by type to quickly find what you're looking for, and people can suggest new entries, so it stays current and useful as a go-to reference you can open in the browser whenever you need to find the right thing for a job."
+  },
+  {
+    "id": "q_web_074_003",
+    "query_text": "Create a web app where you can type in a web address and pick the kind of request you want to make, then hit send and see exactly what comes back, so you can figure out why something isn't working without having to set anything up, and also have a way to define a fake server that returns whatever you tell it to so you can test your front end even when the real back end isn't ready."
+  },
+  {
+    "id": "q_web_074_004",
+    "query_text": "Build a web app where you can type in a pattern for matching text and immediately see which parts of a sample string it catches, highlighted right there in the browser, and you can tweak the pattern and watch the matches update in real time so you can actually understand what you wrote and why it works or doesn't before you use it anywhere."
+  },
+  {
+    "id": "q_web_074_005",
+    "query_text": "Make a browser tool where you can paste in some data and it checks whether the structure matches a set of rules you define, then shows you exactly which parts pass and which fail with a clear message, and also has a button to clean up the formatting so the whole thing looks neat and easy to read when you copy it somewhere else."
+  },
+  {
+    "id": "q_web_074_006",
+    "query_text": "A web app where you type in one of those weird schedules with numbers and asterisks that computers use for timed tasks, and it immediately tells you in plain words what it means, like every Monday at 9am, and also shows the next few times it would run so you can make sure it's actually set up the way you meant without having to look up what each part means."
+  },
+  {
+    "id": "q_web_074_007",
+    "query_text": "A browser tool where you paste in your commit message and it checks whether it follows the format your team agreed on, and if something looks off it tells you what to fix and why, so you can clean it up before you actually commit, and there's also a helper that lets you fill in the type and description in separate fields and it writes the final message for you."
+  },
+  {
+    "id": "q_web_074_008",
+    "query_text": "A web tool where you paste in a messy database query and it reformats it to be readable with proper spacing and indentation, and then walks you through what each part is doing in plain language so you can actually follow the logic, which is great when you're handed someone else's query and need to figure out what it does before you change anything."
+  },
+  {
+    "id": "q_web_074_009",
+    "query_text": "Build a web app that helps you pick a license for an open-source project by asking a few plain questions about what you want to allow, then suggests the best match and shows you a side-by-side view comparing the top options so you can see the real differences in permissions and restrictions before deciding, all in the browser without having to read long legal documents."
+  },
+  {
+    "id": "q_web_074_010",
+    "query_text": "Make a browser reference tool for HTTP status codes where you can look up any code and get a plain-English explanation of what it means and when it shows up, and also lets you type in a web address to actually send a request and see what code the server sends back, so you can check the real behavior without having to set anything up."
+  },
+  {
+    "id": "q_web_074_011",
+    "query_text": "A web app where you can enter all the settings and secret values a project needs to run and it keeps them organized by environment like local or testing or live, and when you're ready you can download a properly formatted config file to drop into your project, so you always have the right values in the right place without hunting through old notes or copy-pasting from random files."
+  },
+  {
+    "id": "q_web_074_012",
+    "query_text": "Need a web app that gives you a web address you can point any service at, and whenever something sends a message to that address it shows up instantly in the browser with all the details so you can see exactly what was sent and in what format, which makes it so much easier to figure out if a connection is working right without having to dig through server logs."
+  },
+  {
+    "id": "q_web_074_013",
+    "query_text": "Create a browser tool for converting text and data between different encoded formats, where you paste something in on one side and pick the format you want on the other side and it shows the result immediately, so you can quickly turn a blob of encoded characters back into readable text or the other way around without needing to remember any commands or install anything."
+  }
+]

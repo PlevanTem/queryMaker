@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_web_067_005",
+    "query_text": "A web app where I can just type out my thoughts about a local issue and actually submit them somewhere official without having to hunt down the right government email address or figure out whose jurisdiction it falls under. It should let me pick the topic, write my comment, and confirm it went through, all in one place on a desktop browser so I can do it properly with a real keyboard."
+  },
+  {
+    "id": "q_web_067_006",
+    "query_text": "Build a web app that lets me search the public library catalog, see what books are available at my branch, and request items from other libraries without having to call anyone or fill out a paper form. I want to log in, find what I need, put in a loan request, and get a confirmation, all from my desktop browser without any back-and-forth phone calls."
+  },
+  {
+    "id": "q_web_067_007",
+    "query_text": "Need a web app that matches me with volunteer opportunities at local nonprofits based on what I actually have time for and what kind of work I want to do, so I can stop scrolling through unrelated listings and wasting time on organizations that are not a good fit. It should show me options, let me express interest, and let the organization know I am available, all in one place on a desktop browser."
+  },
+  {
+    "id": "q_web_067_008",
+    "query_text": "Make a web app that shows me how the government is actually spending public money in plain language and simple charts I can understand without needing to be an accountant. I want to look up a budget category, see where the money went, and compare it to other years, all in a browser on my desktop without downloading any spreadsheets or reading confusing PDFs."
+  },
+  {
+    "id": "q_web_067_009",
+    "query_text": "Build a browser-based tool where I can help transcribe old handwritten documents that have already been scanned, so volunteers like me can type out what we see and submit corrections for archivists to review. It should show me a document image on one side and a text box on the other so I can just work through it on my desktop without any complicated sign-up process or software to install."
+  },
+  {
+    "id": "q_web_067_010",
+    "query_text": "Build a web app that helps artists and community groups find funding opportunities they actually qualify for, because right now you have to know the right people or spend hours searching random websites to figure out if any grants even apply to your project. I want to enter some basic details about my project and immediately see a list of funding sources that match, all in a desktop browser."
+  },
+  {
+    "id": "q_web_067_011",
+    "query_text": "Need a web app that lets me submit a public records request online and then actually track where it is in the process so I am not just sending an email into the void and wondering if anyone received it. It should show me a timeline of where my request stands, send me updates, and let me respond if they need more info, all accessible from a desktop browser without any phone calls required."
+  },
+  {
+    "id": "q_web_067_012",
+    "query_text": "Create a web app for museums to keep track of their physical collection and manage loan requests when other institutions want to borrow items, because right now everything gets handled over email and nobody can tell at a glance what is out on loan versus what is in storage. The app should show the full inventory, let staff log loan agreements, and show current statuses for all items."
+  },
+  {
+    "id": "q_web_067_013",
+    "query_text": "Need a web app that takes official civic information like meeting notices or public health guidelines and produces clean translations in multiple languages so people in my community who do not read English well can actually understand what the government is telling them. I want to paste in a document, pick the target language, and get a readable translation right there in my desktop browser without any downloading."
+  },
+  {
+    "id": "q_web_068_001",
+    "query_text": "Need a web app that works as a personal portfolio site where I can show off the little tools and projects I have built, with a clean layout that looks good on a desktop browser, and lets visitors see screenshots, read a short description of each thing, and maybe click through to try it live. I want something I can point people to instead of just sending them a bunch of random links."
+  },
+  {
+    "id": "q_web_068_002",
+    "query_text": "A personal brand site for a tinkerer type who wants to show the world what they are into and what they have made, with a home page that feels like a creative workspace rather than a boring resume. It should run in a desktop browser and have a short intro, a section for current projects, and a way for people to get in touch, all feeling like one cohesive thing rather than separate pages bolted together."
+  },
+  {
+    "id": "q_web_068_003",
+    "query_text": "Make a web app that works as an interactive resume for someone who likes to tinker with code, where visitors can read about my background on one side and actually run little code examples right there in the same browser window without having to open anything else. I want it to feel alive and fun rather than just another flat list of job titles on a website."
+  },
+  {
+    "id": "q_web_068_004",
+    "query_text": "Need a web app that acts as a showcase for an engineering team, showing who is on the team, what everyone is good at, and what kinds of problems the group enjoys solving together, so that potential new teammates or collaborators can get a real feel for the culture before reaching out. It should look friendly and honest rather than like a corporate recruiting page, and work well in a desktop browser."
+  },
+  {
+    "id": "q_web_068_005",
+    "query_text": "Need a web app that shows stats and rankings for people who contribute to open-source projects, so the community can see who has been putting in the most effort and in which areas. It should have a scoreboard showing top contributors, let you click into someone to see their contribution history, and feel motivating to look at when you open it in a desktop browser."
+  },
+  {
+    "id": "q_web_068_006",
+    "query_text": "Make a personal blog site for someone who likes to go really deep on technical topics, where each post can include lots of detail and walkthrough sections so readers can actually follow along with what happened on a project from start to finish. It should look clean in a desktop browser, be easy to read for long articles, and let me organize posts so people can find related ones easily."
+  },
+  {
+    "id": "q_web_068_007",
+    "query_text": "Create a website where someone can browse all the endpoints of an API, read what each one does in plain terms, and actually try sending a request right there in the browser to see what comes back, without having to copy anything into a separate tool. It should be easy to explore even if you are just starting out and curious, and work well on a desktop browser with a clear layout."
+  },
+  {
+    "id": "q_web_068_008",
+    "query_text": "A website that archives recorded talks from tech conferences and acts as a video portfolio for speakers, so visitors can browse by topic, find a talk, read a summary, and watch it right there in the browser without being sent somewhere else. It should work well on desktop with a clean layout that makes it easy to discover talks you did not know you wanted to watch."
+  },
+  {
+    "id": "q_web_068_009",
+    "query_text": "Need a website that shows what technologies an engineering team uses in a visual way, so people can see at a glance what the team's setup looks like and how different tools connect to each other, rather than reading a boring list. It should be browsable on a desktop browser, let you click on a tool to learn more about how the team uses it, and feel like a living map rather than a static document."
+  },
+  {
+    "id": "q_web_068_010",
+    "query_text": "A web app for showcasing projects from a hackathon, where each project has its own entry with a description, the team behind it, and the scores or feedback it received from judges, so participants and visitors can browse everything in one place and see how projects were evaluated. It should look organized and work well on a desktop browser so people can easily explore all the entries."
+  },
+  {
+    "id": "q_web_068_011",
+    "query_text": "Need a web gallery where people can browse and enjoy little art pieces that were made by code, like animations or patterns that a program generates, since right now these things get buried in GitHub repos and nobody actually sees them. It should load up in a desktop browser, let you click on a piece to see it run live, and show some info about how it was made without being too technical."
+  },
+  {
+    "id": "q_web_068_012",
+    "query_text": "Make a product landing page for a small developer tool that actually shows the tool in action so visitors can see what it does before they decide to try it, rather than just reading bullet points of features. It should work great in a desktop browser, have a clear main message at the top, walk through a couple of key things the tool does with live or animated examples, and make it easy to get started."
+  },
+  {
+    "id": "q_web_068_013",
+    "query_text": "Create a personal website for showing off side projects, where each project has a live preview that visitors can actually interact with right there on the page in their desktop browser without clicking away to a separate site. I want to be able to add new projects easily and have them show up in a nice browsable layout so the whole thing feels like a working playground, not just a list of screenshots."
+  },
+  {
+    "id": "q_web_069_001",
+    "query_text": "Make a web app that acts as a public changelog for a project, where I can log what changed in each version, add a date and a short description for each update, and let visitors browse through the history in their desktop browser so they always know what is new. It should be simple to update and feel readable rather than like looking at a raw commit log."
+  },
+  {
+    "id": "q_web_069_002",
+    "query_text": "Need a web app for putting together a weekly tech newsletter, where I can collect links and short notes throughout the week, arrange them into sections, and then publish the whole thing as a clean readable page that subscribers can browse in their desktop browser. It should make it easy to build up an issue gradually rather than having to write everything at once right before sending."
+  },
+  {
+    "id": "q_web_069_003",
+    "query_text": "Build a web app that works as an internal handbook and onboarding guide for an engineering team, where new people can find answers to common questions, read about how the team works, and get up to speed without having to bother someone every five minutes. It should be easy to update when things change, organized so you can find things quickly, and work well in a desktop browser for everyone on the team."
+  },
+  {
+    "id": "q_web_069_004",
+    "query_text": "Build a web app for software teams to browse and keep track of all their architecture decision records, where you can search through past decisions by keyword or topic, see who made each call and when, and click into any record to read the full reasoning behind it, so nobody has to dig through old meeting notes or random docs to remember why the team went with a certain approach."
+  },
+  {
+    "id": "q_web_069_005",
+    "query_text": "Need a browser-based archive where the whole team can store and read through post-mortems from past production incidents, with each one showing what went wrong, what the timeline looked like, and what was done to fix it, plus a way to filter by date or affected area so you can actually learn from old incidents instead of repeating the same mistakes over again."
+  },
+  {
+    "id": "q_web_069_006",
+    "query_text": "Create a website that works as a hub for step-by-step developer tutorials and walkthrough articles, where each tutorial is broken into numbered steps you can follow along with, has a topic label so readers can filter by what they want to learn, and shows an estimated reading time upfront so people know what they are getting into before they start."
+  },
+  {
+    "id": "q_web_069_007",
+    "query_text": "Make a web app that works like a reading portal for API reference documentation, where the left side has a list of all the endpoints or topics you can click through, the right side shows the full details for whatever you selected, and there is a search bar at the top so you can jump straight to what you need without scrolling through everything."
+  },
+  {
+    "id": "q_web_069_008",
+    "query_text": "Build a web app for keeping notes and summaries from tech conference talks, where each talk gets its own entry with the speaker name, the event it came from, and the main takeaways written out, and you can browse everything by conference or speaker so it is easy to go back and find that one talk you half-remember from a few months ago."
+  },
+  {
+    "id": "q_web_069_009",
+    "query_text": "Build a browser-based reader for programming language specifications where you can load up the full spec text, add your own notes or highlights to specific sections, and jump between sections using a table of contents on the side, so when you are trying to understand a tricky language rule you can read it alongside your own annotations instead of losing your place every time."
+  },
+  {
+    "id": "q_web_069_010",
+    "query_text": "Need a website that collects and presents security advisories and known vulnerability notices in a readable format for developers, showing each one with a plain-language summary, the severity level, and which software versions are affected, plus a way to filter by category or date so you can keep up with what is relevant to the stuff you are actually working on."
+  },
+  {
+    "id": "q_web_069_011",
+    "query_text": "Create a web app that publishes engineering scaling case studies aimed at startups, where each case study walks through how a real company grew their system from small to large, the problems they ran into along the way, and how they solved them, with a sidebar that lets you filter by company size or the kind of scaling challenge so you can find stories that match what your team is dealing with."
+  },
+  {
+    "id": "q_web_069_012",
+    "query_text": "Create a website that acts as a library for developer podcast episodes, where each episode has the full transcript you can read through plus the show notes and any links mentioned, and you can search by guest name or topic to find specific conversations, so it is way easier to reference something a guest said without having to scrub through the actual audio again."
+  },
+  {
+    "id": "q_web_069_013",
+    "query_text": "Need a browser-based encyclopedia for software system design patterns aimed at engineers, where each pattern gets its own entry with a plain-language explanation of what problem it solves, a simple diagram showing how it works, and a list of related patterns you might also want to look at, so you can quickly look something up and actually understand it without wading through a textbook."
+  },
+  {
+    "id": "q_web_070_001",
+    "query_text": "A website for a dev conference where visitors can see the full schedule laid out by day and time, browse speaker bios, and sign up for the event, with a spot near the top that highlights the keynote speakers so first-time visitors immediately know who the big names are, all working nicely in a desktop browser for easy planning."
+  },
+  {
+    "id": "q_web_070_002",
+    "query_text": "Build a website to launch an API-first software product, where the main area explains what the product does and why developers would want it, there is a simple code snippet showing how easy it is to get started, and visitors can click a button to sign up or grab their API key, all designed to run in a desktop browser so teams can share the link and show it off properly."
+  },
+  {
+    "id": "q_web_070_003",
+    "query_text": "Build a web app that showcases a developer SDK and lets visitors actually try it out in the browser without setting anything up, where the left side explains what the SDK does and lists its main features, and the right side has a live code area where you can type in a quick example and see the result run right there on the spot."
+  },
+  {
+    "id": "q_web_070_004",
+    "query_text": "A web app that puts the spotlight on all the sponsors and financial backers of an open-source project, showing each one with their logo, a short note about why they support the project, and how long they have been backing it, along with a clear spot where new sponsors can find out how to get involved, all looking clean and easy to read in a desktop browser."
+  },
+  {
+    "id": "q_web_070_005",
+    "query_text": "Create a website for a tech startup that wants to show off its engineering team culture and attract people to apply for jobs, with a section that describes how the team works day to day, a grid of open positions people can browse, and short profiles of a few current engineers so candidates get a real sense of who they would be working with, all viewable in a desktop browser."
+  },
+  {
+    "id": "q_web_070_006",
+    "query_text": "Make a web app that compares pricing across different cloud infrastructure tools so teams can see the costs side by side without hunting through each provider's site separately, with a table showing what each tool includes at each price tier and a way to filter down to just the features your team actually cares about, all working in a desktop browser for easy sharing during planning meetings."
+  },
+  {
+    "id": "q_web_070_007",
+    "query_text": "Build a website where developers can sign up for early access to a new tool still in beta, with a short section explaining what the product does and what testers will get to try, a form to drop in your email and a quick note about your use case, and a counter showing how many people have already joined the waitlist, all running cleanly in a desktop browser."
+  },
+  {
+    "id": "q_web_070_008",
+    "query_text": "Create a website that shows off how many developers and teams have adopted a particular programming framework, featuring real usage numbers, short quotes from people using it in production, and a list of well-known projects built with it, so visitors browsing in a desktop browser can get a quick sense of how popular and trusted the framework actually is."
+  },
+  {
+    "id": "q_web_070_009",
+    "query_text": "A website where developers can learn about and apply for a community ambassador role, explaining what the program involves and what ambassadors actually do, featuring a few profiles of current ambassadors so applicants know what kind of person fits, and ending with a form to submit your interest, all designed to look great in a desktop browser for sharing in developer communities."
+  },
+  {
+    "id": "q_web_070_010",
+    "query_text": "A website for a technical certification program where people can browse the available courses and exams, see what each one covers and how long it takes to prepare, and register for the one they want, with a section that highlights success stories from people who have already passed so visitors feel confident it is worth their time, all laid out nicely for desktop browsers."
+  },
+  {
+    "id": "q_web_070_011",
+    "query_text": "Build a website that works as an engineering blog where the team publishes technical articles, and at the end of each post there is a natural prompt pointing readers toward the product being built, so people who just read something useful can easily take the next step and try it out, all running in a desktop browser so the team can share posts with the wider developer community."
+  },
+  {
+    "id": "q_web_070_012",
+    "query_text": "Need a web app that serves as a grant application site for open-source project maintainers, where they can read about what the program offers, check if their project qualifies, and fill out an application form with details about their work and how they would use the funding, all accessible in a desktop browser so maintainers can take their time filling it out properly."
+  },
+  {
+    "id": "q_web_070_013",
+    "query_text": "A website that shows off developer productivity benchmark results, with charts comparing how much faster teams get things done using a particular tool, some context explaining how the tests were run so the numbers actually mean something, and a section where real teams share their own results, all viewable in a desktop browser so sales and engineering folks can reference it during calls."
+  },
+  {
+    "id": "q_web_071_001",
+    "query_text": "An API marketplace web app where I can browse available APIs in one place and always see exactly how much I have spent and how many calls I have made this month, because right now I keep getting surprise charges and have no idea which API is eating my budget, so I want a clear breakdown by API with running totals and maybe an alert when I am getting close to a limit."
+  },
+  {
+    "id": "q_web_071_002",
+    "query_text": "Make a web app that handles selling and managing enterprise licenses for an open-source project, where companies can pick a plan, pay, and get their license key all in one place, and the admin side lets me see which organizations have active licenses and when they expire, so I stop having to track all of this in spreadsheets and chase people down when renewals are due."
+  }
+]

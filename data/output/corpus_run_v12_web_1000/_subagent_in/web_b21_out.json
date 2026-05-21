@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_036_011",
+    "query_text": "Build a web app that feels like a proper home for open-source work, where each project gets its own space showing contributor counts, commit activity, and who the real regulars are, with a sidebar listing all projects so you can jump between them quickly, and the whole thing should carry a serious, craft-proud identity, the kind that makes contributors feel their work is genuinely celebrated rather than just logged."
+  },
+  {
+    "id": "q_web_036_012",
+    "query_text": "A product changelog site for desktop browsers that doubles as a living record of everything a team has shipped, with updates arranged on a clean vertical timeline and each entry showing the version, a short summary, and the date, so visitors can follow the story of the product over time, the whole thing carrying a calm, considered tone that says this team cares about how their work is remembered."
+  },
+  {
+    "id": "q_web_036_013",
+    "query_text": "A trust center website that feels solid and unhurried, the kind of place a cautious enterprise buyer opens in their browser to quietly check certifications, compliance standards, and data handling practices before committing, with a clean left sidebar for navigating between topics and each section presenting its credentials in plain, confident language, the overall identity being one of quiet authority rather than corporate noise."
+  },
+  {
+    "id": "q_web_036_014",
+    "query_text": "A careers site for a startup that actually has a point of view, for desktop browsers, where open roles are listed with clear team names and what the day-to-day honestly looks like, and a dedicated section spells out the perks in plain terms without overselling them, the whole thing carrying a personality that reflects how the company actually thinks rather than sounding like every other hiring page on the internet."
+  },
+  {
+    "id": "q_web_037_001",
+    "query_text": "Need a web app for capturing and sharing growth stories, the kind where a small team or solo founder can write about the real turning points, the things that changed how they thought, with each story showing up as its own entry in a clean reading-focused layout for desktop, a left panel listing all stories by title so you can browse the archive, and a tone setting that makes the whole thing feel more like a personal journal than a press release."
+  },
+  {
+    "id": "q_web_037_002",
+    "query_text": "Make a web app that serves as a publication for founder interviews aimed at early-stage SaaS teams, where each interview lives on its own page with a clean long-form reading layout, a browsable index on the home screen sorted by topic or stage, and the overall identity of the site should feel like something a thoughtful editor put together, not a content farm, the kind of place you actually want to read rather than just skim."
+  },
+  {
+    "id": "q_web_037_003",
+    "query_text": "Make a web app for sharing a public product roadmap and announcing upcoming features, where items are grouped into clear stages like coming soon, in progress, and shipped, and each announcement can carry a short note explaining the thinking behind it, for desktop browsers with a layout that feels deliberate and well-considered, the kind of roadmap board that tells visitors this team knows where it is going and is proud to say so openly."
+  },
+  {
+    "id": "q_web_037_004",
+    "query_text": "Create a website that showcases customer success stories in a way that actually feels worth reading, where each case study gets its own full page with the customer context, the problem, and what changed afterward, plus a browsable home screen organized by industry or use case, for desktop browsers, and the whole site should carry an identity that says these results matter and we are proud of the people behind them, not just the numbers."
+  },
+  {
+    "id": "q_web_037_005",
+    "query_text": "Create a web app that serves as a proper hub for SaaS industry benchmarks and metrics reports, where each report has its own page with key numbers highlighted and a short interpretation for people who are not analysts, organized by topic in a left sidebar so you can navigate to growth, retention, or pricing benchmarks directly, for desktop browsers, the site carrying a voice that treats readers as smart adults who just want the real numbers without spin."
+  },
+  {
+    "id": "q_web_037_006",
+    "query_text": "A website for collecting startup post-mortems and honest failure write-ups, for desktop browsers, where each story is presented with its own clean reading page and the home screen lets you browse by category or year with a simple list layout, the site carrying a tone of real respect for the founders who were willing to share what went wrong, the kind of place that feels like a resource built with genuine care rather than just another content site."
+  },
+  {
+    "id": "q_web_037_007",
+    "query_text": "Build a web app that works as a library of developer tutorials and code samples, with a left sidebar for navigating by topic or skill level, and each tutorial page laid out in a clean readable format with the code sections clearly distinct from the explanation, for desktop browsers, the whole thing carrying the identity of a place that respects the reader's time and takes the craft of teaching seriously, the kind of library you actually bookmark."
+  },
+  {
+    "id": "q_web_037_008",
+    "query_text": "Create a web app that works as a proper reading destination for in-depth SaaS product teardowns and analysis pieces, where each post gets a clean long-form layout for desktop browsers with a table of contents on the side so readers can navigate without losing their place, and the home screen lists articles by product or theme in a way that reflects genuine editorial taste, the kind of blog that has a clear opinion and is proud of it."
+  },
+  {
+    "id": "q_web_037_009",
+    "query_text": "Create a web app that serves as a focused resource site for startup pricing strategy, where each piece breaks down a specific approach with real examples and the reasoning behind it, laid out in a clean reading format for desktop browsers with a sidebar listing topics so you can find what you are looking for without hunting, and the site should carry an identity that feels like it was written by someone with hard-won opinions, not just summarized from somewhere else."
+  },
+  {
+    "id": "q_web_037_010",
+    "query_text": "Make a web app that archives founder AMA transcripts and Q and A sessions in a way that actually respects the content, where each session gets its own page with questions clearly separated from answers and a short intro saying who the founder is and why this conversation mattered, browsable by topic from the home screen, for desktop browsers, the whole archive carrying the feeling of a place that values these conversations as a real record worth keeping."
+  },
+  {
+    "id": "q_web_037_011",
+    "query_text": "A company culture microsite that actually says something, for desktop browsers, where the values are written out as real beliefs the team holds rather than generic statements, a section introduces the people behind the company in a way that feels personal, and the hiring philosophy is stated plainly so candidates can tell whether this is a place for them before they even apply, the whole site carrying an identity that is specific and honest rather than trying to appeal to everyone."
+  },
+  {
+    "id": "q_web_037_012",
+    "query_text": "Need a web app that serves as a proper home for API documentation and a developer onboarding guide, where the left sidebar lists all topics so you can navigate directly to authentication, endpoints, or error handling, and each page has a clean two-column layout with the explanation on one side and example code on the other, for desktop browsers, the whole thing carrying a tone that is clear and direct because good documentation respects the reader's time and intelligence."
+  },
+  {
+    "id": "q_web_037_013",
+    "query_text": "Create a web app for collecting product launch retrospectives and honest reflections from teams, where each entry is its own readable page with the launch context, what went well, and what the team would do differently, organized on the home screen by product type or company size, for desktop browsers with a clean editorial layout, and the whole collection should carry the identity of a place that treats these write-ups as something worth reading carefully rather than skimming."
+  },
+  {
+    "id": "q_web_037_014",
+    "query_text": "A company-building wiki and playbook website that works well in a desktop browser, where each topic like hiring, culture, or operations has its own clearly written page with the actual thinking behind the practices explained, not just the rules themselves, organized through a persistent sidebar so you can move between topics without losing context, the whole thing carrying an identity that says this is how we actually run things and we are sharing it because we think it is worth sharing."
+  },
+  {
+    "id": "q_web_038_001",
+    "query_text": "Need a web app that works as a clean, no-nonsense feature comparison tool, for desktop browsers, where visitors can look across multiple plans or products side by side in a table that is easy to read without squinting, and each row names the feature in plain terms so anyone can understand what they are comparing, the whole thing carrying a confident, uncluttered identity that says we are proud of what we offer and want people to be able to make a real decision."
+  },
+  {
+    "id": "q_web_038_002",
+    "query_text": "Build a developer advocacy site for desktop browsers that actually earns the attention of the people it is trying to reach, with a home screen that leads with the real value the platform offers to builders, a section for guides and resources organized by use case, and a tone throughout that speaks to developers as peers rather than talking down or overselling, the kind of site that feels like it was made by someone who has actually written code and cared about the tools they used."
+  },
+  {
+    "id": "q_web_038_003",
+    "query_text": "Create a free trial signup website that feels worth trusting, for desktop browsers, with a simple clean form at the center and real-time signals showing how many people have recently signed up or what existing users are saying, so visitors feel like they are joining something that is already working and not taking a leap into the unknown, and the overall identity of the site should feel warm and sure of itself, not anxious or pushy."
+  },
+  {
+    "id": "q_web_038_004",
+    "query_text": "Need a product waitlist web app that treats early interest as something worth celebrating, where people can sign up and then see how many spots they have moved up by sharing a personal referral link with friends, the counter updating so they can track their progress, for desktop browsers with a layout that feels focused and a little exciting, carrying the identity of a product that is genuinely worth waiting for and wants the early community to feel like insiders."
+  },
+  {
+    "id": "q_web_038_005",
+    "query_text": "Build a web app that centers on a sliders-and-numbers calculator where visitors can plug in their current situation and see an honest estimate of what they could save or gain, for desktop browsers, with the calculator taking up most of the screen and a short results summary below that puts the numbers in plain context, the whole thing carrying a calm and straightforward identity that says we believe in the value we offer and we want you to see it for yourself."
+  },
+  {
+    "id": "q_web_038_006",
+    "query_text": "Build a web app that brings together customer stories and video testimonials in one place that actually feels worth visiting, for desktop browsers, where each story has its own page with the full case details and any video embedded naturally into the reading experience, and the home screen lets visitors browse by industry or problem type with a layout that feels curated rather than dumped, the whole site carrying the identity of a brand that is proud of the relationships it has built."
+  },
+  {
+    "id": "q_web_038_007",
+    "query_text": "Create a web app for managing webinar sign-ups and hosting on-demand replays, for desktop browsers, where upcoming sessions are listed with a clean registration form and past events are organized in a browsable library with short descriptions so visitors can decide if a recording is worth their time, the whole thing carrying an identity that says these sessions are worth showing up for and the archive is worth coming back to, not just a dumping ground for old recordings."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_020_005",
+    "query_text": "Create a phone tool that just strips out all the extra spaces and weird invisible characters from text I paste in, because I keep copying stuff from PDFs or group chats and it always has garbage spacing that messes up my documents when I paste it somewhere else and I have to manually clean it up every single time, which is such a waste of time, so I want something where I just dump the text in and hit a button and it comes out clean."
+  },
+  {
+    "id": "q_scene_020_006",
+    "query_text": "Make a phone tool for reformatting paragraphs where I can set my own line length so the text wraps exactly how I want it, because every time I copy text from somewhere it comes in with random line breaks in the wrong spots and I have to fix it by hand before I can use it anywhere, and it drives me crazy especially when I am dealing with long articles or reports that I need to paste into other places."
+  },
+  {
+    "id": "q_scene_020_007",
+    "query_text": "Create a phone tool that counts syllables in whatever words or lines I type in and then tells me if what I wrote actually works as a haiku, because I keep trying to write them for fun or for class but I always lose count halfway through and end up with the wrong number of syllables without realizing it until someone points it out, so I want something on my phone that just checks it for me instantly."
+  },
+  {
+    "id": "q_scene_020_008",
+    "query_text": "Need a rhyme finder tool on my phone for when I am trying to write song lyrics and I get totally stuck on a line because I cannot think of anything that rhymes with the word I want to use, it kills the whole flow and I end up sitting there for ages trying to think of something, so I just want to type in a word and get a list of words that rhyme with it so I can pick one that fits and keep going."
+  },
+  {
+    "id": "q_scene_020_009",
+    "query_text": "Make a quick converter tool on my phone that handles Roman numerals and regular numbers both ways, because I keep running into Roman numerals in books, movie titles, and old documents and I always have to stop and try to work it out in my head or search for a calculator, which is annoying when I just want to know what number it actually is without doing mental math every single time."
+  },
+  {
+    "id": "q_scene_020_010",
+    "query_text": "Create a phone tool where I can look up any emoji and find out what it actually means and what its code is, because half the time I get emojis from people and I genuinely do not know what they are trying to say and I also sometimes need the code to paste an emoji into a form that does not have a keyboard picker, so I want to be able to search by name or paste the emoji itself and get all that info right there."
+  },
+  {
+    "id": "q_scene_020_011",
+    "query_text": "Create a text case converter tool for my phone that can switch whatever I type or paste between all caps, all lowercase, and title case in one tap, because I constantly get text in the wrong case from copy-pasting things and retyping everything just to fix the capitalization is a huge hassle, especially when it is a long piece of text, so I just want to paste it in, tap which style I want, and have it done immediately."
+  },
+  {
+    "id": "q_scene_021_001",
+    "query_text": "Need a fun little generator on my phone that makes up sci-fi alien species names and planet names, like I am always working on little story ideas and world-building stuff and I spend way too long trying to come up with names that sound properly alien and not just like random gibberish, so I want something where I just tap a button and it spits out a species name and a planet name together so I can grab whatever sounds cool and use it."
+  },
+  {
+    "id": "q_scene_021_002",
+    "query_text": "Make a phone app that throws random hobby challenges at me for the weekend, because I always end up doing the same things or just scrolling my phone when I have free time and I want something to push me to try something different, so I want to open it up and have it suggest a fun little challenge to try like learn a new skill or make something or go somewhere, something I actually would not have thought of on my own."
+  },
+  {
+    "id": "q_scene_021_003",
+    "query_text": "Create a startup name idea generator for my phone that I can use when I am brainstorming business ideas, because coming up with a name that sounds catchy and original is honestly one of the hardest parts and I end up going in circles, so I want something where I can tap a button and get a bunch of name ideas I can play with and riff off of, even if they are a bit silly sometimes it helps get the creative side going."
+  },
+  {
+    "id": "q_scene_021_004",
+    "query_text": "Create a phone tool that randomly picks a neighbourhood or area of a city for me to explore and gives me a little prompt about what to go check out there, because I live somewhere with tons of interesting spots but I always default to the same familiar areas and never branch out, so I want something that will just tell me where to go this time and give me a reason to actually walk around somewhere new instead of staying in my comfort zone."
+  },
+  {
+    "id": "q_scene_021_005",
+    "query_text": "A random emoji art generator on your phone where you tap once and it mashes together a bunch of emojis into a little combination that kind of looks like a scene or a character, something silly and shareable that changes every time you tap, with a way to save or copy whichever one you like so you can send it to friends or use it somewhere."
+  },
+  {
+    "id": "q_scene_021_006",
+    "query_text": "Build a phone app that randomly pairs up two star signs and gives a little note about how compatible they are supposed to be, because my friends and I are always joking about astrology stuff and checking compatibility and it would be fun to have something on my phone where I just hit a button and it picks two random signs and tells us if they are a great match or a total disaster, just for laughs."
+  },
+  {
+    "id": "q_scene_021_007",
+    "query_text": "Build a little phone app that suggests random acts of kindness I can actually do, because sometimes I want to do something nice for someone but my brain goes completely blank and I just end up doing nothing, so I want to tap a button and get a real suggestion that I can actually pull off today without any big preparation, something small and doable that would genuinely make someone happy."
+  },
+  {
+    "id": "q_scene_021_008",
+    "query_text": "A random film and documentary picker you can use on your phone when you sit down to watch something and cannot decide what to put on, where it just gives you one suggestion at a time with a short description so you can say yes or skip it and get another one, covering all kinds of genres so you might actually end up watching something you would never have searched for yourself."
+  },
+  {
+    "id": "q_scene_021_009",
+    "query_text": "Create a weekend adventure randomizer on my phone that gives me a full little plan for what to do, because every Friday I ask myself what I want to do that weekend and I draw a total blank and then nothing happens and the weekend is wasted, so I want something that will just decide for me and give me an activity, an outing idea, or something creative to try so I actually have a plan to look forward to."
+  },
+  {
+    "id": "q_scene_021_010",
+    "query_text": "Need a phone app that picks a random word from a different language every day and shows me what it means and how to say it, because I am always curious about other languages but never know where to start and I thought it would be a fun low-effort way to pick up interesting words over time, so I want something that just gives me one interesting word a day from languages around the world and keeps it light and easy."
+  },
+  {
+    "id": "q_scene_021_011",
+    "query_text": "Create a phone app with a spin wheel that picks what to have for dinner tonight, because me and whoever I am eating with go back and forth forever about what to eat and nobody can ever just decide, so I want to put a bunch of meal options on the wheel and just spin it to settle it once and for all, and I want to be able to add or remove options from the wheel so it reflects what we actually feel like eating."
+  },
+  {
+    "id": "q_scene_022_001",
+    "query_text": "Build a phone tool that lets me add extra time to a running countdown when I am in the middle of a timed quiz or task and I need just a little more time to finish, because I always run out of time on timed things and it is so stressful when the clock hits zero before I have finished and I lose my progress, so I want a timer on my phone where I can tap a button to extend it by a few minutes without having to stop and reset everything."
+  },
+  {
+    "id": "q_scene_022_002",
+    "query_text": "Create a phone tool that always shows text labels next to icons so I never have to guess what a button does, because I get so frustrated when apps just show a little symbol and expect me to know what it means, half the time I have no idea if I am pressing the right thing and I end up tapping the wrong stuff, so I want something where every icon clearly says what it is right underneath it and that label never disappears."
+  },
+  {
+    "id": "q_scene_022_003",
+    "query_text": "A content filter tool on your phone that you can set up to automatically blur or hide anything that might be upsetting or overstimulating before you see it, like you type in the kinds of things that bother you and from then on anything matching those gets hidden behind a tap-to-reveal cover so you stay in control of what you see, useful for people who need to browse without getting blindsided by distressing content."
+  },
+  {
+    "id": "q_scene_022_004",
+    "query_text": "Make a phone tool with a toggle that rewrites complicated text into simpler everyday language when I turn it on, because I run into walls of confusing official or technical writing all the time and I just want to understand what it is actually saying without having to read it five times, so I want to paste something in, flip the toggle, and get a version that sounds like a normal person wrote it."
+  },
+  {
+    "id": "q_scene_022_005",
+    "query_text": "Need a phone tool that lets me set up a quick emergency shortcut so I can reach someone or send a message for help as fast as possible without having to unlock my phone and find a contact and type everything out, because in a real scary moment every second matters and I want something I can set up in advance and then trigger super fast when I actually need it."
+  },
+  {
+    "id": "q_scene_022_006",
+    "query_text": "Build a phone communication tool with a board of picture symbols that predicts what I might want to say next based on what I just picked, for people who have trouble speaking and need to express themselves quickly on their phone, so I want the symbols to be big and easy to tap and the board to get smarter about the kinds of things I say often so I do not have to hunt around for the right symbol every single time."
+  },
+  {
+    "id": "q_scene_022_007",
+    "query_text": "Build a phone tool that helps cut down on harsh or sudden sounds for people who are sensitive to loud noise, where I can set how much filtering I want and it gives me a calmer listening experience, because sudden loud noises are really overwhelming and I want something I can turn on when I need a quieter environment without having to completely block out all sound around me."
+  }
+]

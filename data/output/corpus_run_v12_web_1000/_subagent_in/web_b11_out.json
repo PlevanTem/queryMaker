@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_018_013",
+    "query_text": "Make a web app where people in really specific trades or niche fields can ask each other questions and swap what they know, like a place for obscure craftspeople or specialists to actually find someone who gets their weird corner of work, with a way to browse questions by topic area and mark the best answers so good stuff rises to the top and doesn't get buried, and experts can build up a little reputation over time so you know whose answers are worth trusting."
+  },
+  {
+    "id": "q_web_018_014",
+    "query_text": "Create a web app that works like a peer hangout spot for freelance accountants and finance folks where they can post questions only other finance people would understand, share tips on tricky client situations, and follow along with what others in the same field are dealing with, with a section to look up who in the community has handled similar problems before and maybe a way to save threads that are actually useful to come back to later."
+  },
+  {
+    "id": "q_web_019_001",
+    "query_text": "A browser-based tool where I type in my skills and how many years I've been doing this, pick my country or city, and it spits out what I should actually be charging per hour compared to what other freelancers in the same field are getting, so I stop undercharging and feel less like I'm guessing, with a breakdown showing low, middle, and high ranges so I can see where I land and decide where I want to price myself."
+  },
+  {
+    "id": "q_web_019_002",
+    "query_text": "A web app where I enter the type of consulting work I'm doing and it builds me a client onboarding checklist I can actually hand off or follow step by step, because I always forget something at the start of a new project and then scramble to catch up later, with space to tick things off as I go and maybe tweak the list for different kinds of clients without having to start over from scratch every time."
+  },
+  {
+    "id": "q_web_019_003",
+    "query_text": "Create a web-based tool where I describe a software project in plain terms and it figures out roughly how long it should take and what the scope actually involves, because I always either way overcommit or leave stuff out of my estimates and then regret it, with a breakdown by phase so I can see where the time goes and adjust things if the client wants to cut something or add something last minute."
+  },
+  {
+    "id": "q_web_019_004",
+    "query_text": "Need a web app that lets me fill in my work details and hours and it generates a proper invoice for me, but the part I actually need is for it to figure out the tax stuff automatically because every time I try to do it manually I either miss something or overthink it, with fields for different tax categories if needed and a way to save client info so I'm not retyping the same address every single time."
+  },
+  {
+    "id": "q_web_019_005",
+    "query_text": "A website where I can pick and build contract clauses for my freelance work without having to write legal-sounding stuff from scratch every time, because I keep reusing the same old doc and it has stuff that doesn't even apply anymore, with a way to choose sections like payment terms, revision limits, and what happens if the project gets cancelled, then put it all together into something I can actually send a client without feeling embarrassed."
+  },
+  {
+    "id": "q_web_019_006",
+    "query_text": "Need a web app where I can log the hours I work each day and tag them to specific clients, then see at a glance how much time I've spent per client over the week or month and what that comes out to in money, because I have no idea where my time actually goes and I keep feeling like I'm working a lot but somehow not making what I should, with a simple view per client so I can spot who's eating up my time."
+  },
+  {
+    "id": "q_web_019_007",
+    "query_text": "Need a browser-based tool where I put in what I've made so far this quarter and what I expect to make, and it tells me roughly what I owe in quarterly taxes so I'm not caught off guard when the deadline comes, with a spot to see what I should be setting aside each month and maybe a reminder of when payments are due so I stop panicking every three months when I realize I forgot to save enough."
+  },
+  {
+    "id": "q_web_019_008",
+    "query_text": "Build a web app where I can put together proper case study write-ups for my creative work by filling in what the project was, what the challenge was, what I did, and what the result was, because I never know how to present past projects in a way that sounds professional, with a way to add images and keep each case study organized so I can link someone to my work without sending them a messy folder of files."
+  },
+  {
+    "id": "q_web_019_009",
+    "query_text": "A web-based tool where I describe my freelance service and it helps me put together a proper project proposal with different pricing tiers, because I always write these from scratch and they end up looking inconsistent or I forget to include something important, with a way to label each tier clearly and show what's included at each level so the client actually understands what they're paying for and I don't have to explain it in five follow-up emails."
+  },
+  {
+    "id": "q_web_019_010",
+    "query_text": "Build a web app where I can send clients a link to review content I've made and they can leave comments or click approve right there in the browser, because right now feedback comes in through emails and texts and I can never find the final approved version when I need it, with a way to track which version was approved and by whom so I have something to point to if there's a dispute later."
+  },
+  {
+    "id": "q_web_019_011",
+    "query_text": "Create a web-based tool where I can keep track of everyone I've pitched or talked to about work, move them through stages like first contact, proposal sent, and waiting on response, because I have leads scattered across my email and a random notes app and I always forget to follow up at the right time, with a place to jot down what we talked about and set a reminder to check back in so things don't just fall through the cracks."
+  },
+  {
+    "id": "q_web_019_012",
+    "query_text": "Build a web app where I fill in the details of a consulting engagement and it puts together a statement of work document I can actually send to a client, because writing these from scratch every time takes forever and I always miss something or phrase things awkwardly, with sections for deliverables, timeline, and payment terms that I can adjust before I send it so it looks like I know what I'm doing."
+  },
+  {
+    "id": "q_web_019_013",
+    "query_text": "Need a web app where I log my freelance income and what I've spent on the business each month and it shows me what my actual profit margin looks like, because I feel like I'm making decent money but I never know if I'm actually ahead after expenses, with a simple view that separates what came in from what went out and tells me what's left so I can stop guessing and know whether things are actually working."
+  },
+  {
+    "id": "q_web_019_014",
+    "query_text": "Create a website where I set up my service packages with what's included and the price, and when a potential client picks one it puts together a quote they can see right away, because right now I explain my services differently every time and people always ask follow-up questions that I've already answered, with a way for the client to say yes to a package directly so I spend less time going back and forth before work even starts."
+  },
+  {
+    "id": "q_web_020_001",
+    "query_text": "A website for a small restaurant or cafe where people can browse photos of the actual space and see the full menu without having to call or dig through social media, because right now anyone trying to figure out if they want to visit has no easy way to check, with a section for the menu organized by food and drinks and a few pictures of the place itself so someone can get a feel for the vibe before they show up."
+  },
+  {
+    "id": "q_web_020_002",
+    "query_text": "Need a web app that works as a dedicated wedding theme site where couples can show off their event style, share details about the venue, and list what guests need to know all in one place, because managing all of that through group chats and random posts is a mess, with a clean layout for desktop browsers that feels special and personal and lets them update the guest info or add photos without it looking like a generic event form."
+  },
+  {
+    "id": "q_web_020_003",
+    "query_text": "Need a web app for a small neighborhood bakery where visitors can see what's currently on the menu with photos, and the seasonal stuff rotates so it always feels fresh and relevant, because right now the only way people know what's available is if they follow a social account that doesn't always get updated, with a simple gallery layout that works well in a desktop browser and makes the baked goods actually look as good as they taste."
+  },
+  {
+    "id": "q_web_020_004",
+    "query_text": "A website for an independent hair salon where each stylist has their own little profile page with photos of their work and the kinds of looks they specialize in, organized into a lookbook so clients can browse styles before booking, because people often don't know which stylist to pick when they're new and end up just guessing, with a desktop-friendly layout where you can flip through the work easily without it feeling like a mess."
+  },
+  {
+    "id": "q_web_020_005",
+    "query_text": "Need a web app for a small family florist where people can browse arrangement photos organized by occasion or season, because right now there's no easy way for customers to see what's available or get inspired before they reach out, with a seasonal section that highlights what's fresh right now and a desktop browser layout that lets the flower photos look big and beautiful without everything feeling cluttered or hard to navigate."
+  },
+  {
+    "id": "q_web_020_006",
+    "query_text": "Need a web app for a small artisan coffee roaster and cafe where people can see the vibe of the space through photos and learn about the different brewing methods they use, because a lot of customers want to know what they're walking into before they visit and right now there's nothing to point them to, with a section showing the current roast offerings and a desktop-friendly layout that feels as warm and considered as the coffee itself."
+  },
+  {
+    "id": "q_web_020_007",
+    "query_text": "Need a website for a small yoga studio where each instructor has a profile with their background and teaching style, and visitors can see all the class types offered with a short description of what each one involves, because new students have no idea which class to start with or who to expect at the front of the room, with a layout that looks good in a browser on a laptop and feels calming rather than overwhelming when you land on the page."
+  },
+  {
+    "id": "q_web_020_008",
+    "query_text": "A website for a pet grooming salon where you can browse before and after photos of dogs and cats that have come in, organized by pet type or groom style, because there's no better way to show people what the salon actually does than showing the results, with a clean gallery layout that works nicely in a desktop browser and lets customers see transformations side by side without it being hard to figure out which photo goes with which."
+  },
+  {
+    "id": "q_web_020_009",
+    "query_text": "A web app for a local tattoo studio where each artist has their own portfolio section showing their finished work grouped by style, like black and grey, traditional, or fine line, so people can find an artist whose work matches what they want, because right now people just scroll through a single Instagram feed and can't tell whose work is whose, with a desktop browser layout that makes the tattoo photos the main focus and lets you move between artists without losing your place."
+  }
+]

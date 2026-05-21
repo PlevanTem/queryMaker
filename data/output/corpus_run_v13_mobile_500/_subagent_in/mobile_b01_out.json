@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_006_001",
+    "query_text": "Make a gift idea tracker for my phone where I can jot down gift ideas for different people in my life, each with a budget range like under 50 dollars or 50 to 100 dollars, and a label for who it is for. I want to be able to add a new idea quickly and browse everything in one place so I stop forgetting good ideas I had months ago."
+  },
+  {
+    "id": "q_scene_006_002",
+    "query_text": "Create a trip planner app for mobile where I type in a destination and the app suggests interesting places to visit, then I can pick the ones I like and drag them into a day-by-day schedule. It should be easy to rearrange stops on my phone and see roughly how much time each day looks like so I can have a solid itinerary ready before I travel."
+  },
+  {
+    "id": "q_scene_006_003",
+    "query_text": "Make a reading list manager for my phone where I can save books or articles I want to get to, and for each one I can set how long I think it will take to read and mark it as something to get to soon or just whenever. I want to open the app and quickly add something new or see what I have queued up, sorted by how soon I should tackle it."
+  },
+  {
+    "id": "q_scene_006_004",
+    "query_text": "Need a pet profile app for my phone where I can set up a profile for my dog or cat by filling in their name, breed, age, and uploading a photo, and also log their health history like past vet visits, vaccines, and any conditions. The whole thing should feel like a little card for each pet so everything important is in one spot when the vet asks."
+  },
+  {
+    "id": "q_scene_006_005",
+    "query_text": "Need a social post drafting tool on my phone where I can write out a caption, attach a photo or video from my gallery, and add a few hashtags before I decide to post anywhere. I want a clean place to save drafts I am still thinking about, and each draft should show me a rough preview of how it might look so I can tweak the wording before sending."
+  },
+  {
+    "id": "q_scene_006_006",
+    "query_text": "Build a product listing creator for mobile where I can fill in a product name, description, price, and how many are in stock, and also add different options like sizes or colors so each variant has its own quantity. I want to tap through each step on my phone and have the listing ready to copy or publish once I fill everything in."
+  },
+  {
+    "id": "q_scene_006_007",
+    "query_text": "A project kickoff tool for my phone where I fill out the basic project details, invite teammates by typing in their names or emails, and then lay out the main phases with rough start and end dates so everyone can see the high-level timeline. Each phase should have a spot to describe what the goal is, and the whole thing feels like a simple form I can fill out while sitting in a meeting."
+  },
+  {
+    "id": "q_scene_006_008",
+    "query_text": "Build a medical appointment scheduler for my phone where I can search for a doctor or clinic by specialty or name, see who is available, and book a time slot with just a few taps. It should remember my basic info so I do not have to retype everything each time, and I can see my upcoming appointments all in one place so nothing slips through."
+  },
+  {
+    "id": "q_scene_006_009",
+    "query_text": "Build a subscription sign-up tool as a mobile app where I can look at two or three plan options side by side, see what features each one includes and what the price difference is, and then tap to enroll in the one I want. The comparison should be clear enough that I can decide on my phone without squinting at tiny text or missing anything important."
+  },
+  {
+    "id": "q_scene_006_010",
+    "query_text": "Create a report template builder for my phone where I can set up a reusable layout with named fields, then link each field to a data source so the numbers fill in automatically when I run the report. I want to be able to name the template, pick which data to pull into each spot, and save it so I can generate the same report again later without rebuilding it from scratch."
+  },
+  {
+    "id": "q_scene_007_001",
+    "query_text": "Create a report correction tool for my phone where I can open a report entry, fix the wrong value, and type in a short reason for the change so there is a clear record of why it was updated. Every correction should save a history of the old value, the new value, who changed it, and when, so anyone reviewing the report can follow the trail of edits."
+  },
+  {
+    "id": "q_scene_007_002",
+    "query_text": "Build a settings editor app for mobile where I can flip a toggle or adjust a value and immediately see a live preview of how the change looks, all on one screen on my phone. I want the settings on one side and the preview updating in real time on the other, so I can tweak things until they look right before I save."
+  },
+  {
+    "id": "q_scene_007_003",
+    "query_text": "Create a template editing tool for my phone where I can open an existing template, make changes to the content, and then see a side-by-side view comparing my new version to the old one so I know exactly what I changed. It should highlight the differences clearly and let me confirm or roll back before saving, kind of like track changes but simple enough to use on a phone."
+  },
+  {
+    "id": "q_scene_007_004",
+    "query_text": "Make a form builder app for my phone where I can grab a field and move it up or down in the list, then immediately see the form update in a small preview so I can check that the order makes sense. Once I am happy with how it looks I can tap a confirm button and save the new arrangement, and the preview should feel instant so there is no guessing."
+  },
+  {
+    "id": "q_scene_007_005",
+    "query_text": "A subscription upgrade tool for mobile where I tap the plan I want to switch to and the app shows me exactly what I owe for the rest of my current billing period, broken down in plain numbers so I can see the prorated amount before I commit. I want to understand the cost difference clearly on my phone and then confirm the upgrade in one final tap."
+  },
+  {
+    "id": "q_scene_007_006",
+    "query_text": "Create a sharing manager for my phone where I can open a file or folder, change who has view or edit access, and the app automatically sends an email to anyone whose permission level changed so they know right away. I want to see the current permission list, make adjustments, and have the notifications go out the moment I save the changes."
+  },
+  {
+    "id": "q_scene_007_007",
+    "query_text": "Need a tag manager for my phone where I can rename a tag and have that new name automatically update everywhere it is used across all my saved items, so I do not have to hunt down every place it appears. It should show me how many things are linked to that tag before I rename it, just so I know the scope of the change."
+  },
+  {
+    "id": "q_scene_007_008",
+    "query_text": "A schedule editing tool for my phone where I can move or resize an event and the app checks for conflicts with other things on my calendar, then shows me a couple of alternative times to pick from if there is a clash. I want it to feel fast on my phone, where I drag something, see any problems flagged right away, and tap a suggested fix to resolve it."
+  },
+  {
+    "id": "q_scene_007_009",
+    "query_text": "Make a health record correction app for my phone where I can flag an entry that needs fixing, describe what needs to change, and submit it for a doctor to review and approve before the record is actually updated. I want to see the status of each pending correction so I know whether it has been looked at yet, and get notified once the doctor approves or declines."
+  },
+  {
+    "id": "q_scene_007_010",
+    "query_text": "Make a content translation manager for my phone where I can edit the text in one language and see the translated versions lined up alongside it so I can tell at a glance which translations are in sync and which ones still need updating. When I save a change in the original, it should flag the other language versions that are now out of date so I remember to update them too."
+  },
+  {
+    "id": "q_scene_008_001",
+    "query_text": "A search tool for my phone that can look through all the different places my stuff is saved, like notes, documents, and files from connected services, all at once from a single search bar. I want results grouped by where they came from and I can tap into any result to see the full thing, so I stop jumping between different apps just to find one piece of information."
+  },
+  {
+    "id": "q_scene_008_002",
+    "query_text": "Need a search results filter for my mobile app where I can pick a start date and end date to narrow down results to a specific time window, and the results update right away on my phone so I only see things from that period. It should be easy to adjust the range with a couple of taps rather than typing out dates manually."
+  },
+  {
+    "id": "q_scene_008_003",
+    "query_text": "Create a smarter search tool for my phone that understands related words so if I search for car it also shows me results about vehicles or automobiles, and if it thinks I may have made a typo it gently suggests the word it thinks I meant before showing results. I want search to actually understand what I am looking for rather than being strict about exact wording."
+  },
+  {
+    "id": "q_scene_008_004",
+    "query_text": "A search history tracker for my phone where I can see a list of everything I have looked up recently, with the most recent ones at the top, and tap any past search to run it again instantly. I also want to be able to clear individual entries or wipe the whole history when I want a fresh start."
+  },
+  {
+    "id": "q_scene_008_005",
+    "query_text": "Build a smart search tool for my mobile app that learns the things I search for regularly and starts suggesting them as soon as I open the search bar, before I even type anything. I want it to pick up on patterns from my past searches so the suggestions feel relevant to me personally and I can find the things I look up often in just one tap."
+  }
+]

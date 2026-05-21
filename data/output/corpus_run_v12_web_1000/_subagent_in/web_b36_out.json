@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_065_006",
+    "query_text": "Build a community public health education resource center app for the browser where residents can find articles, guides, and local health program listings all in one place. I want a left-side list of health topics you can click through, a main reading area that shows the full content, and a way to save anything useful to a personal reading list so I can come back to it later without hunting around."
+  },
+  {
+    "id": "q_web_065_007",
+    "query_text": "An indigenous cultural knowledge open learning repository app that runs in the browser, organized by region and topic so users can browse through traditions, stories, and teaching materials without getting lost. The left side should list categories you can expand, the main area shows the content with images and text, and there should be a notes section where learners can write their own thoughts as they go through the material."
+  },
+  {
+    "id": "q_web_065_008",
+    "query_text": "Build a government budget and fiscal policy explainer site as a web app where regular people can actually understand where public money comes from and where it goes. I want a topic list on the side covering things like taxes, spending categories, and deficits, a reading pane that explains each one in plain language, and a glossary section so anyone can look up a term without leaving the page."
+  },
+  {
+    "id": "q_web_065_009",
+    "query_text": "Build a web app that works as an environmental stewardship education platform for nonprofits, where staff and volunteers can find training materials, action guides, and local project resources organized by topic. It should have a sidebar listing the main subject areas like water, soil, and wildlife, a main content area that displays articles and downloadable guides, and a checklist tool so users can track which materials they have finished reading."
+  },
+  {
+    "id": "q_web_065_010",
+    "query_text": "Need a primary source document study and annotation platform for the browser where students and researchers can read historical documents alongside their own notes. The app should let you open a document on one side of the screen and write your annotations on the other, keep a list of all the documents you have added so you can jump between them easily, and let you filter your saved notes by keyword so nothing gets buried."
+  },
+  {
+    "id": "q_web_065_011",
+    "query_text": "Need a community oral history collection and study site for the browser where users can listen to recorded interviews and read transcripts at the same time. I want a collection list on the left organized by contributor or topic, a main area that plays the audio and shows the text together, and a way to bookmark specific moments in a recording so I can return to the exact part I found interesting without scrubbing through the whole thing."
+  },
+  {
+    "id": "q_web_065_012",
+    "query_text": "Build a legal rights and civic literacy portal as a web app where ordinary people can look up their rights in plain language and understand how local government actually works. The app should have a topic list covering things like tenant rights, voting, and public meetings, a reading area that explains each topic step by step, and a progress tracker so users can see which topics they have already gone through and what is still left to cover."
+  },
+  {
+    "id": "q_web_065_013",
+    "query_text": "Create a museum virtual exhibition guided learning experience as a web app for desktop browsers where visitors can walk through a curated collection of artworks or artifacts at their own pace. I want a sidebar showing the exhibition map with numbered stops, a main viewing area that displays each piece with description text and related images, and a personal journal section where visitors can write down their reactions and save favorites before finishing the tour."
+  },
+  {
+    "id": "q_web_066_001",
+    "query_text": "Make a web app for a faith community or member circle where people can post updates, share upcoming events, and find each other based on shared interests or small group involvement. I am thinking of something you open in a browser where the home area shows recent posts from the group, there is a place to browse member profiles, and organizers can put together a simple event listing that members can respond to so everyone stays in the loop."
+  },
+  {
+    "id": "q_web_066_002",
+    "query_text": "Build a neighborhood arts collective showcase and discussion site as a web app where local artists can post their work and community members can comment and connect with each other. I want it to open in a browser with a gallery-style home area showing recent submissions, artist profile pages where people can see all of someone's work in one spot, and a comments section under each piece so visitors can leave thoughts and start conversations."
+  },
+  {
+    "id": "q_web_066_003",
+    "query_text": "Need a local heritage storytelling archive community platform as a web app for the browser where residents can submit their own stories and browse what others have shared about the neighborhood's history. I want a simple submission form so anyone can add a story with some photos, a browsable archive organized by decade or neighborhood, and a way for visitors to leave a short response on stories they find meaningful so contributors feel like people actually read what they shared."
+  },
+  {
+    "id": "q_web_066_004",
+    "query_text": "Community festival volunteer and vendor coordination hub as a browser-based web app where organizers can manage sign-ups, share schedules, and keep everyone on the same page before and during the event. There should be a volunteer sign-up area where people can pick their time slots, a vendor info section with assigned spots and setup instructions, and a shared announcements space so organizers can post last-minute updates that both groups will actually see."
+  },
+  {
+    "id": "q_web_066_005",
+    "query_text": "Create an indigenous cultural preservation knowledge-sharing network as a web app for the browser where community members can contribute language recordings, traditional craft instructions, and seasonal practices that younger generations can explore. I want a topic area for browsing by category like language, food, or ceremony, a contribution form so elders and community members can add content, and a favorites system so learners can save things they want to revisit."
+  },
+  {
+    "id": "q_web_066_006",
+    "query_text": "Make a mutual aid goods and service exchange board as a web app for the browser where neighbors can post what they are offering or what they need, and others in the community can respond and connect. I want a clean listing area showing recent posts organized by category like food, tools, and childcare, a simple form for adding your own offer or request, and a way to mark something as fulfilled once it is no longer available so the board stays current."
+  },
+  {
+    "id": "q_web_066_007",
+    "query_text": "Make a community food pantry volunteer and donor portal as a web app for the browser where the pantry can post what supplies they need and people can sign up to volunteer or donate specific items. I want a current needs list that shows what is running low, a volunteer schedule where people can pick open slots, and a simple donor form where someone can record what they are bringing so the pantry staff knows what to expect before pickup day."
+  },
+  {
+    "id": "q_web_066_008",
+    "query_text": "Nonprofit coalition cross-organization project collaboration workspace as a browser-based web app where partner organizations can share project updates, assign tasks across teams, and keep all their files in one place. There should be a project list on the left showing all active efforts, a main area where team members from different groups can post updates and attach documents, and a simple task list for each project so people know what is theirs to do next."
+  },
+  {
+    "id": "q_web_066_009",
+    "query_text": "Make a grassroots civic campaign supporter organizing platform as a web app for the browser where campaign volunteers can find upcoming events, sign up for shifts, and stay connected with what the campaign is working on. I want a home area showing the latest news and calls to action, an events calendar where supporters can register for canvassing or phone banking sessions, and a personal activity log so volunteers can see all the shifts they have taken on."
+  },
+  {
+    "id": "q_web_066_010",
+    "query_text": "Make a participatory budgeting proposal submission and voting site as a web app for the browser where community members can suggest how local funds should be spent and vote on proposals others have submitted. I want a submission form where anyone can write up their idea with a cost estimate, a browsable list of all current proposals with short summaries, and a voting area where registered residents can cast their support for the ideas they care most about."
+  },
+  {
+    "id": "q_web_066_011",
+    "query_text": "Build a neighborhood council agenda, minutes, and resident feedback hub as a web app for the browser where community members can read meeting summaries, review upcoming agenda items, and leave comments for the council to see. I want a list of past meetings with downloadable minutes, an upcoming agenda section that shows what will be discussed next, and a public comment form attached to each agenda item so residents can share thoughts before the meeting happens."
+  },
+  {
+    "id": "q_web_066_012",
+    "query_text": "Build a public comment collection and civic dialogue portal as a web app for the browser where residents can submit feedback on local government proposals and read what other community members have said. I want a list of open proposals with a brief description of each, a comment form where anyone can write a response and optionally share their neighborhood, and a view that shows all submitted comments in one place so people can see the range of opinions and feel like their voice is part of a real conversation."
+  },
+  {
+    "id": "q_web_066_013",
+    "query_text": "Create a local government spending transparency watchdog community as a web app for the browser where residents can browse spending records, flag questionable line items, and discuss findings with other community watchdogs. I want a spending browser organized by department and date, a flag or note feature so users can highlight entries they find surprising, and a community thread area where people can share what they found and discuss it with others who are also paying attention."
+  },
+  {
+    "id": "q_web_067_001",
+    "query_text": "Make a virtual exhibition web app you open in the browser where I can browse curated art or historical artifact collections without having to click through ten different websites to find anything. The whole hassle right now is that everything is scattered all over the place, so I want one tool where I can pick a collection, step through each piece with a photo and a short description, and save the ones I want to look at again later without losing my place."
+  },
+  {
+    "id": "q_web_067_002",
+    "query_text": "Build a government permit application and status tracking portal as a web app for the browser that takes the pain out of applying for permits and then wondering for weeks if anything actually happened. I want to fill out the application in one place online, get a reference number I can use to check back on progress, and see a simple timeline showing where things are in the review process so I am not calling the office every other day just to find out it is still pending."
+  },
+  {
+    "id": "q_web_067_003",
+    "query_text": "Need a nonprofit grant application and reporting management platform as a web app for the browser that stops the chaos of tracking deadlines, documents, and report submissions across a dozen different funders. I want a tracker that lists every grant we are working on with its deadline and status, a place to attach documents and notes to each one so nothing gets lost, and a reminder system that tells me when a report or follow-up is coming due so nothing slips through the cracks."
+  },
+  {
+    "id": "q_web_067_004",
+    "query_text": "Cultural heritage site digital archive and search tool as a browser-based web app where researchers and curious visitors can search through records, photos, and documents about historic sites without having to email anyone or dig through paper files. There should be a search bar at the top that actually works, filters for narrowing results by time period or location, and individual record pages that show all the photos and documents together in one place so you get the full picture without jumping around."
+  }
+]

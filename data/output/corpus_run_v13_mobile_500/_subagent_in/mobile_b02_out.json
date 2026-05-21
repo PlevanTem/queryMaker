@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_008_006",
+    "query_text": "Need a mobile app that lets me search through all my downloaded articles, notes, and documents even when my phone has no internet, because scrolling through everything manually to find one sentence is such a waste of time. I want a search bar that looks through the full text of everything I've saved, highlights the matching words when I tap on a result, and shows me which file or note they came from so I can jump right to it."
+  },
+  {
+    "id": "q_scene_008_007",
+    "query_text": "Create a chat history search tool for my phone that lets me type in a keyword and instantly pulls up every message from any conversation that contains that word, because digging back through hundreds of old chats to find something someone said weeks ago is genuinely painful. The results should show me the contact name, the date, and a short snippet of the message around the matched word so I can tell right away if it's the one I'm looking for."
+  },
+  {
+    "id": "q_scene_008_008",
+    "query_text": "Build a search app for my phone that automatically figures out which language I'm typing in, whether it's English, Chinese, or a mix of both, and finds the right results without me having to switch any settings manually. It's so annoying to search in one language and get nothing because the app doesn't understand what I typed, so I want it to just detect my input and return matching results across all stored content right away."
+  },
+  {
+    "id": "q_scene_008_009",
+    "query_text": "Build a contact finder app for my phone where I can type a name even if I only remember roughly how it sounds, and the app still surfaces the right person because it matches based on how names sound, not just exact spelling. I always forget if someone spells their name differently or I saved it wrong, so I want results that show close sound-alike matches and let me tap through to their contact details in one go."
+  },
+  {
+    "id": "q_scene_008_010",
+    "query_text": "Create a recipe finder app for my phone where I can type in a few ingredients I have sitting in my fridge and it immediately shows me all the recipes I can actually make with those things, because I always waste time googling and landing on stuff that needs ten more items I don't have. I want to be able to add two or three ingredients, see a list of matching recipes, and tap one to get the full steps right there on my phone."
+  },
+  {
+    "id": "q_scene_009_001",
+    "query_text": "Build a comparison tool for my phone that lets me pick two or more items, like products, options, or plans, and shows them side by side with their key details lined up in matching rows so I can actually see the differences at a glance. I want to be able to tap to add items to the comparison, scroll down through the matching rows together, and then choose the one I want from the same screen once I've decided."
+  },
+  {
+    "id": "q_scene_009_002",
+    "query_text": "Build a recommendation tool for my phone that gives me a short list of top picks based on what I'm looking for, and next to each suggestion shows a simple indicator of how confident the app is in that recommendation, like a percentage or a small bar so I know whether it's a strong match or just a guess. I like having two or three clear options with the confidence level right there, so I can make a quick choice without second-guessing myself."
+  },
+  {
+    "id": "q_scene_009_003",
+    "query_text": "An audio picker app for my phone where I can browse through all my sound files and see a small waveform picture and the track length listed right next to each one, so I can tell what kind of clip it is before I even tap play. I want to be able to tap a track to hear a quick preview and then confirm my selection, instead of guessing what each file sounds like from the filename alone."
+  },
+  {
+    "id": "q_scene_009_004",
+    "query_text": "Build a scheduling planner for my phone where I can look at a grid of time slots across a day or week and tap on the ones I want to book, with each slot showing whether it's open or taken at a glance. I want to be able to select a range of slots by tapping and dragging, see a quick summary of what I've chosen, and confirm the booking all on one screen without jumping back and forth."
+  },
+  {
+    "id": "q_scene_009_005",
+    "query_text": "Create a language settings tool for my phone where I can browse through all available languages and regions, grouped by area like Asia, Europe, or Americas, so I can find my choice quickly instead of scrolling through one huge unsorted list. I want a search bar at the top to type in a language name if I know it, and once I tap my choice it should apply right away and show me a confirmation on that same screen."
+  },
+  {
+    "id": "q_scene_009_006",
+    "query_text": "Create an icon picker for my phone where I can assign a small picture or symbol to each of my categories or labels, with a search bar at the top so I can type a word like 'food' or 'money' and see matching icons instantly instead of scrolling through hundreds of them. I want to be able to tap an icon to select it, see it preview next to the label name, and save it all on one screen without any extra steps."
+  },
+  {
+    "id": "q_scene_009_007",
+    "query_text": "Build a font picker tool for my phone where I can scroll through a list of available fonts and see my own sample text displayed in each one as I browse, so I know exactly what it will look like before I pick it. I want to type a short sentence into a text box at the top, and have that same sentence update live in every font row below so I can compare them side by side and tap to apply the one I like."
+  },
+  {
+    "id": "q_scene_009_008",
+    "query_text": "Need a template picker app for my phone that shows me all available templates in a browsable gallery, where I can tap any one to see a full preview of how it actually looks before applying it, because choosing a template blind and then having to undo it is so annoying. I want a clear confirm button on the preview screen so I can go from browsing to applying in just two taps, without any guesswork about what the result will be."
+  },
+  {
+    "id": "q_scene_009_009",
+    "query_text": "Build a subscription plan picker for my phone that lists all available plans in a clean side-by-side layout, with the features and prices lined up in matching rows so I can actually compare them without squinting. I want each plan to have a clearly visible choose button right under it, and tapping one should take me straight to the checkout or confirmation screen so I can finish signing up without hunting around."
+  },
+  {
+    "id": "q_scene_009_010",
+    "query_text": "Need a seat picker app for my phone that shows a map of the venue with all the seats laid out, where each seat is colored differently depending on whether it's available, taken, or reserved, so I can see what's open at a glance. I want to tap a seat to select it, see the seat number and price pop up, and be able to pick a couple of seats in a row before tapping confirm to move on."
+  },
+  {
+    "id": "q_scene_010_001",
+    "query_text": "Create a quiz practice app for my phone where I can filter the question list by difficulty level, like easy, medium, or hard, so I can focus on the questions that actually match where I am right now instead of wading through a pile of stuff that's way too simple or way over my head. I want the filter to be simple buttons at the top of the list, and the questions should update on the spot when I tap a level so I can get practicing right away."
+  },
+  {
+    "id": "q_scene_010_002",
+    "query_text": "Need a booking app for my phone where I can look at a calendar and filter the time slots to only show the ones that are actually open, because scrolling past a wall of grayed-out unavailable times to find a single open slot every week is a real hassle. I want to be able to tap a day, see only the available slots for that day, and then tap my preferred time to confirm the booking all on one screen."
+  },
+  {
+    "id": "q_scene_010_003",
+    "query_text": "Make a file manager app for my phone where I can filter my saved files by type, like PDFs, images, or videos, and also set a size range so I can hunt down the big files that are eating my storage. I want the filter options to be simple enough that I can set them in a few taps, and the file list should update right away so I can see what matches and decide what to keep or delete."
+  },
+  {
+    "id": "q_scene_010_004",
+    "query_text": "Create a data tracker app for my phone that shows information in a table and lets me both filter rows by a specific value and sort columns in one place, because switching back and forth between separate menus to do both things is a pain. I want a simple row of filter options above the table and tap-to-sort on each column header, so I can narrow down exactly what I need and have it ordered the way I want in just a few taps."
+  },
+  {
+    "id": "q_scene_010_005",
+    "query_text": "A filter manager app for my phone where every time I change a filter setting the app remembers the previous state, so I can step backwards through my filter history one tap at a time if I mess something up, and also step forward again if I change my mind. There should be a simple list somewhere on the screen showing my recent filter states so I can jump back to any earlier combination without having to redo everything from scratch."
+  },
+  {
+    "id": "q_scene_010_006",
+    "query_text": "Create a smart filter tool for my phone where picking one filter option automatically narrows down what shows up in the next filter, so I only see choices that actually make sense together instead of hitting empty results because I picked two incompatible things. I want the filter to update after each selection so every step only shows valid options, and I can see the results list refresh as I go without tapping a separate apply button."
+  },
+  {
+    "id": "q_scene_010_007",
+    "query_text": "Make a media browser app for my phone where I can tap a simple row of buttons at the top to show only photos, only videos, or only audio files, because right now everything is dumped together and I always have to scroll forever to find the type of file I actually want. I want the filter to switch instantly when I tap a type, and a count next to each button so I can see how many files of each kind I have before I even tap."
+  },
+  {
+    "id": "q_scene_010_008",
+    "query_text": "A content feed app for my phone where I can set my preferred language and choose one or more regions so the feed only shows me articles and posts from places I actually care about, because getting a wall of content in languages I can't read or from countries completely unrelated to me is just noise. I want the language and region choices to be easy to find on the main screen, and the feed should refresh the moment I change a setting."
+  },
+  {
+    "id": "q_scene_010_009",
+    "query_text": "Make a food discovery app for my phone where I can check off multiple dietary needs at once, like gluten-free, nut-free, and vegetarian together, and the results instantly show only dishes that fit all of my requirements at the same time. I want the filter options laid out as simple checkboxes I can tick in a few taps, and a results count that updates live as I select more, so I know how many options I still have left to browse."
+  },
+  {
+    "id": "q_scene_010_010",
+    "query_text": "Make a smart home monitor app for my phone that lists readings from all my connected sensors and lets me type in a specific number threshold so I can filter the list to only show sensors that are above or below the value I care about. I want a simple input field where I type the cutoff number, pick whether I want readings above or below it, and see the sensor list narrow down immediately so I can spot the ones that need attention fast."
+  }
+]

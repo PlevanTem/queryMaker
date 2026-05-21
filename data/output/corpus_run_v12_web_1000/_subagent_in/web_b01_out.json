@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_001_001",
+    "query_text": "Need a web app for my personal photography portfolio that shows each photo in a clean, immersive layout and also surfaces the camera settings right there on the page, things like shutter speed, aperture, ISO, and the lens I used, so people can appreciate both the image and the craft behind it, with a sidebar that lets you filter by camera body or shooting location."
+  },
+  {
+    "id": "q_web_001_002",
+    "query_text": "Create a visual showcase site for my open-source work that lives in the browser and feels like a beautifully curated gallery, where each project gets its own card with contribution counts and activity shown as something organic and artistic rather than dry numbers, and a summary section at the top that captures the overall story of my involvement across repos over time."
+  },
+  {
+    "id": "q_web_001_003",
+    "query_text": "Make a travel tracker web app with a world map at its heart where every country I have visited glows or changes color, and clicking any country opens a warm, moodboard-style photo log from that trip, with a few lines of memory attached to each image, so the whole thing feels like a living scrapbook you browse from a desktop browser."
+  },
+  {
+    "id": "q_web_001_004",
+    "query_text": "An illustration gallery web app with a beautifully editorial feel, where finished pieces are shown large and full-bleed across the desktop layout, and each one has a behind-the-scenes panel that walks through the process stages with rough sketches alongside the polished final, giving the whole thing the texture of a printed art book you flip through online."
+  },
+  {
+    "id": "q_web_001_005",
+    "query_text": "Need a personal bookshelf web app that looks like a real, curated collection rather than a list, where book covers are displayed in a warm, gallery-style arrangement and each title opens to show my reading notes, the date I finished it, and a little visual timeline of my reading history so I can see how my tastes have shifted across the years."
+  },
+  {
+    "id": "q_web_001_006",
+    "query_text": "Build a wedding announcement website that feels genuinely romantic and carefully composed, with a countdown timer that has a soft, elegant aesthetic, a section that tells our story in a flowing timeline of photos and little written moments, and the whole thing should feel like something you would actually want to save and revisit in a desktop browser before the big day."
+  },
+  {
+    "id": "q_web_001_007",
+    "query_text": "Build a web app that turns my personal music listening history into something that actually looks gorgeous, with my top tracks and artists shown through rich, moody visuals rather than plain tables, a color palette pulled from album art, and a timeline of my listening habits over the past year so the whole thing feels like an annual report for my taste in music."
+  },
+  {
+    "id": "q_web_001_008",
+    "query_text": "Need a freelancer portfolio website that feels warm and personal rather than corporate, where my services are laid out in a clear but beautifully styled way across the desktop layout, and client testimonials get their own dedicated space that reads like a curated wall of appreciation, each quote given room to breathe with the client name and a little context about the project."
+  },
+  {
+    "id": "q_web_001_009",
+    "query_text": "Make a personal academic showcase site for desktop browsers where my publications are presented with a refined, typographic elegance rather than a plain list, with each paper getting a well-styled entry that includes the abstract, the journal name, and a citation count displayed in a way that feels considered and tasteful, along with a visual summary of my research themes."
+  },
+  {
+    "id": "q_web_001_010",
+    "query_text": "Need a recipe archive web app that feels like a beautifully designed food magazine, where each recipe page is anchored by a large, carefully styled food photo and the ingredients and steps are laid out with generous spacing and a warm color palette, so browsing through my collection on a desktop feels as enjoyable as flipping through an actual cookbook."
+  },
+  {
+    "id": "q_web_001_011",
+    "query_text": "Need a marathon history web app that captures all my races in a timeline that feels cinematic rather than spreadsheet-like, where each event shows the course, my finishing time, and a photo from the day, and a dedicated personal records section highlights my bests with a sense of visual drama, so looking back at years of running actually feels inspiring in a browser."
+  },
+  {
+    "id": "q_web_001_012",
+    "query_text": "Create a film watching tracker for desktop browsers that groups my entire watch history by decade in a visually rich layout, with movie posters as the primary visual currency and my personal star ratings shown in a style that feels like a curated wall rather than a database, and a side area that surfaces my favorite genres and directors based on what I have actually watched."
+  },
+  {
+    "id": "q_web_001_013",
+    "query_text": "Build a vinyl record collection site that looks and feels like browsing through a well-loved record shop, where album covers are the star of the show in a warm desktop layout, each record opens to display its genre, year, and a short note I can write about why I love it, and the overall mood of the site should feel as tactile and curated as the collection itself."
+  },
+  {
+    "id": "q_web_001_014",
+    "query_text": "Build a baby milestone journal website that the whole extended family can visit in a browser, with a soft and elegant visual style where photos are arranged chronologically along a gentle timeline, each milestone moment labeled with an age and a little caption, so grandparents and relatives can follow along and the whole thing feels like a beautifully kept family keepsake."
+  },
+  {
+    "id": "q_web_002_001",
+    "query_text": "Make a recipe journal web app that feels like a personal food magazine I actually want to browse, where recipes are organized by season with a visual warmth that changes as you move through the year, each entry can hold a photo I took of the dish along with my notes on how it turned out, and the whole thing is something I can open in a desktop browser and actually feel good looking at."
+  },
+  {
+    "id": "q_web_002_002",
+    "query_text": "A travel memoir site where each destination gets its own richly illustrated journal entry, the kind of web app you would happily sit with at a desktop for an hour, where photo journals from each place are laid out with an editorial quality and the writing has room to breathe alongside the images, so the whole thing reads like a personal travel book you can revisit and add to over time."
+  },
+  {
+    "id": "q_web_002_003",
+    "query_text": "Need a personal book review web app where each entry looks genuinely considered, with the cover art displayed prominently, my review written out in a clean and readable style, and a reading progress log that gives a sense of the journey through the year in a visually pleasing way, the kind of thing that feels like a literary journal rather than a checklist when you open it in a browser."
+  },
+  {
+    "id": "q_web_002_004",
+    "query_text": "Build a movie diary web app for desktop browsers where I can log every film I watch and give it a personal rating alongside a few sentences of reflection, with the collection displayed in a cinematic, poster-led layout grouped by year, and a sense that browsing through old entries feels like wandering through a beautifully organized personal archive rather than scrolling a plain list."
+  },
+  {
+    "id": "q_web_002_005",
+    "query_text": "Need a music listening history site that lets me annotate albums with my own thoughts and memories, displayed in a warm, atmospheric layout in a desktop browser where album covers carry the visual weight and each annotation feels like a personal liner note, with a timeline view that shows how my listening has changed across months so the whole thing reads like a musical autobiography."
+  },
+  {
+    "id": "q_web_002_006",
+    "query_text": "A poetry and creative writing site for desktop browsers where each piece is given the visual respect it deserves, with thoughtful typography and generous white space so the words feel like they are on a printed page, a simple archive that groups work by theme or mood rather than just date, and a reading experience that feels unhurried and beautiful rather than like a generic blog."
+  },
+  {
+    "id": "q_web_002_007",
+    "query_text": "Need a personal art portfolio web app where each finished piece is shown at a scale that does it justice in a desktop browser, with a dedicated area for sketchbook process galleries that let viewers see the early rough stages alongside the final work, and the overall design should feel like a considered artist monograph rather than a generic portfolio grid."
+  },
+  {
+    "id": "q_web_002_008",
+    "query_text": "Need a garden journal web app that tracks how my plants grow across the seasons with a visual warmth that mirrors the feel of being outside, where I can attach photos at different stages of growth for each plant, the layout in a desktop browser should feel lush and organic rather than clinical, and looking back through the log should feel like leafing through a beautifully kept nature diary."
+  },
+  {
+    "id": "q_web_002_009",
+    "query_text": "A fitness transformation journal web app where the visual heart of it is a personal photo log that shows how my body has changed over months and years, laid out with tasteful before-and-after comparisons in a desktop browser, with milestone moments highlighted in a way that feels motivating and human rather than like a fitness app, alongside brief personal notes attached to the big turning points."
+  },
+  {
+    "id": "q_web_002_010",
+    "query_text": "Make a language learning diary web app that feels beautiful to use in a desktop browser, where I can log new vocabulary with example sentences written in my own hand so to speak, study notes organized by theme or grammar topic, and a visual sense of progress over time that feels warm and encouraging rather than like a drill, so opening it each day actually feels like a pleasure."
+  },
+  {
+    "id": "q_web_002_011",
+    "query_text": "Build a companion website for my podcast that has the aesthetic of a carefully designed independent publication in a desktop browser, where each episode gets its own page with show notes laid out in an inviting and readable style, a running archive of all episodes presented with a consistent visual identity, and a tone that feels personal and crafted rather than auto-generated."
+  }
+]

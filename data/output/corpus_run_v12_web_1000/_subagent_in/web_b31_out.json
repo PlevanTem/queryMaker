@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_055_011",
+    "query_text": "Create a web app for a print-on-demand book publishing storefront where I can upload a manuscript, pick a cover style, and set the price, then have it available for people to order copies online without me having to deal with any printing or shipping myself. The storefront should show each title with a preview of the cover and a quick summary, and buyers should be able to place an order and get a confirmation right in the browser."
+  },
+  {
+    "id": "q_web_055_012",
+    "query_text": "Create a web app that handles all the boring back-and-forth around corporate content reprint and permissions licensing, where a company can list the articles or assets they own, and someone who wants to reuse that content can fill out a quick request form, see the license terms and fee, and pay for approval all in one place without emailing anyone back and forth. The left side should show available content to license and the right side should show the request status so everything stays organized."
+  },
+  {
+    "id": "q_web_055_013",
+    "query_text": "Make a web app that lets agencies run a white-label newsletter reseller business without juggling a dozen spreadsheets and email threads. Agencies should be able to sign up, brand the newsletter with their own name and logo, add their own list of subscribers, and then send out issues under their own look. There should also be a simple area to see how many emails went out and whether subscribers are opening them, all from a desktop browser."
+  },
+  {
+    "id": "q_web_056_001",
+    "query_text": "Make a website where fans can register for a book signing event, pick a time slot that works for them, and get a confirmation so they know their spot is saved. It's annoying when you have to email or call just to sign up for something like this, so the whole thing should be self-service in a browser. Let fans see the author info, the event details, and available spots, and have them fill in their name and contact info to lock in their registration."
+  },
+  {
+    "id": "q_web_056_002",
+    "query_text": "Make a web app for booking author meet-and-greet slots at a literary festival, because right now it's a nightmare trying to figure out who's available and when. Attendees should be able to browse which authors are there, see open time slots on a simple calendar, and claim a spot with their name and email so there's no double-booking. The app should also send a quick reminder or at least show a confirmation so the attendee knows they're all set."
+  },
+  {
+    "id": "q_web_056_003",
+    "query_text": "Create a web app that takes all the hassle out of managing podcast guest pitches and scheduling appearances, because right now pitches come in from all over the place and it's hard to track who's been booked and who's still waiting. Podcasters should be able to review incoming guest pitches in a list on the left, click one to see the full pitch details on the right, and then confirm a recording date and time that gets added to the booking calendar, all from a desktop browser."
+  },
+  {
+    "id": "q_web_056_004",
+    "query_text": "Need a browser-based tool that handles the whole mess of applying for media press credentials and scheduling a pickup time, because chasing down forms and confirming by email eats up way too much time. Journalists should be able to fill in their outlet info and event they're covering, submit the application, then pick a time slot to collect their badge or credentials. The app should show the current application status and the scheduled pickup time clearly so nothing gets lost."
+  },
+  {
+    "id": "q_web_056_005",
+    "query_text": "Create a website for journalism students to book a guided tour of a real newsroom, because right now there's no easy way to know when tours are available or how to sign up. Students should be able to see open tour dates and times, pick a slot, enter their school and group size, and get a confirmation. The booking app should run in a desktop browser and also let the newsroom side see how many people are coming for each tour date."
+  },
+  {
+    "id": "q_web_056_006",
+    "query_text": "Make a web app that lets freelance writers book an editorial consultation appointment with an editor, because hunting down availability and going back and forth over email just to set up a 30-minute call is a total time drain. Writers should be able to see an editor's available times in a simple calendar view, pick a slot, and leave a short note about what they want feedback on. The confirmation should appear right in the browser so the writer knows the time is locked in."
+  },
+  {
+    "id": "q_web_056_007",
+    "query_text": "Create a web app where people can RSVP for a book launch event and choose their seat ahead of time, because having to show up early just to grab a good chair is really inconvenient. The app should show a simple floor plan of the venue with seats labeled as available or taken, let the attendee click a seat to claim it, then fill in their name and email to confirm. The whole thing should work smoothly in a desktop browser so attendees can sort it out from their computer."
+  },
+  {
+    "id": "q_web_056_008",
+    "query_text": "Need a website where film critics can reserve a seat at an advance press screening without having to wait for someone to manually confirm their spot by email. Critics should be able to log in, see a list of upcoming screenings with dates and venues, pick one, choose a seat if there's a seating chart, and submit their reservation. The app should run in a browser and show the confirmation clearly so the critic can plan their schedule without the usual back-and-forth."
+  },
+  {
+    "id": "q_web_056_009",
+    "query_text": "Build a web app for managing radio talk show guest bookings and sending each guest their briefing notes ahead of the recording, because right now the producer is doing all of it manually over email and things keep slipping through the cracks. The app should let the producer add a guest, set the recording date and topic, and attach briefing notes that the guest can read in the browser. Guests should also be able to confirm their slot so both sides know everything is locked in."
+  },
+  {
+    "id": "q_web_056_010",
+    "query_text": "Make a website where people can reserve a ticket to a documentary preview screening without the organizer having to manually track RSVPs in a spreadsheet. Visitors should be able to see a list of upcoming screenings, click one to see the description and available seats, enter their name and email to claim a spot, and get a confirmation number. The whole booking flow should work from a desktop browser and make it obvious how many seats are still open."
+  },
+  {
+    "id": "q_web_056_011",
+    "query_text": "Create a web app for scheduling magazine cover photoshoots between the editorial team and the featured talent, because right now confirming a shoot date takes forever with everyone emailing back and forth. The talent or their rep should be able to log in, see the open shoot dates and location details, pick a time slot that works, and confirm it so the editorial calendar gets updated right away. Everything should run in a desktop browser so the team can check the schedule from their office computers."
+  },
+  {
+    "id": "q_web_056_012",
+    "query_text": "A web app for aspiring authors to book a manuscript review appointment with a professional editor, where the author can browse available reviewers, see their specialties and open time slots, and claim a spot with a short description of their manuscript. The app should work in a desktop browser and give the author a clear confirmation once the appointment is set, so they know exactly when to expect feedback and who will be reading their work."
+  },
+  {
+    "id": "q_web_056_013",
+    "query_text": "Make a web app that lets writers schedule a one-on-one meeting with a literary agent at a book fair, because right now figuring out who's available and grabbing a slot involves way too much running around or emailing. Writers should be able to see a list of agents attending the fair, view each agent's open meeting slots, claim a time, and add a short pitch note. The app should work from a desktop browser so writers can plan it all out before they even arrive at the event."
+  },
+  {
+    "id": "q_web_057_001",
+    "query_text": "Make a web app that works as an interactive science explainer archive where each topic has a clear written explanation and a short concept quiz at the end so I can check whether I actually understood it. I want to be able to browse topics by subject area, mark the ones I've finished, and see my quiz scores saved so I know which areas I still need to review. The whole thing should run in a desktop browser and keep my progress organized across sessions."
+  },
+  {
+    "id": "q_web_057_002",
+    "query_text": "Build a web app that serves as a learning portal for investigative journalism methods, with lessons organized into clear topics like source verification, document research, and interview techniques. I want each lesson to have readable text and a short practice exercise, and I want to be able to track which lessons I've completed so I always know where I left off. The app should run in a browser for desktop so I can work through it properly on my computer with enough screen space to read and take notes."
+  },
+  {
+    "id": "q_web_057_003",
+    "query_text": "Need a web app that lets researchers browse a collection of digitized historical newspapers, read scanned pages with annotations that explain the context, and save notes on articles they find interesting. I want to be able to search by date range or keyword, see a list of results on the left and the full page with annotations on the right, and keep a personal reading list of articles I want to come back to. The app should be browser-based and comfortable to use on a desktop."
+  },
+  {
+    "id": "q_web_057_004",
+    "query_text": "Make a web app that serves as a learning hub for data journalism, with a library of tutorials organized by skill level, plus a section where completed student projects are displayed so readers can see real examples of the techniques in action. I want to be able to work through a tutorial, check off steps as I go, and then browse the project gallery to see what others have made. The site should run in a desktop browser with a clear left-side list of tutorials and a main reading area on the right."
+  },
+  {
+    "id": "q_web_057_005",
+    "query_text": "Make a web app that teaches editorial writing craft through a series of masterclass lessons, where I can read each lesson, submit a short writing sample at the end, and get feedback from an instructor or reviewer. I want the lessons to be grouped by topic, like structure, voice, and editing, and I want to see my submitted work alongside any comments so I can track what I've improved on. The app should work in a desktop browser so there's enough room to read and write comfortably."
+  },
+  {
+    "id": "q_web_057_006",
+    "query_text": "A browser-based fact-checking practice tool for newsroom training, where users can work through a step-by-step guide to verifying a story, with each step clearly labeled and a place to record what sources you checked and what you found. The tool should include a set of practice claims to fact-check, a checklist of verification steps to follow, and a summary at the end showing which steps were completed. It should be designed for desktop use so it fits comfortably alongside other browser tabs during a real research session."
+  },
+  {
+    "id": "q_web_057_007",
+    "query_text": "Build a web app that works as a long-form narrative reading room where each piece has the author's own annotations showing up in the margins or alongside the text, explaining choices they made or giving extra context. I want to be able to read an article or essay, click on an annotation to expand it, and bookmark pieces I want to finish later. The app should be designed for desktop browsers so there's enough width to show the main text and the author notes side by side without crowding."
+  },
+  {
+    "id": "q_web_057_008",
+    "query_text": "Build a web app that gives classroom educators a complete media literacy curriculum portal, with lessons grouped by grade level, downloadable activity guides, and a place to track which units have been taught. I want to be able to browse the full curriculum by topic or grade, open a lesson to read the learning goals and suggested activities, and mark it as done once I've used it in class. The app should work in a desktop browser since teachers are usually planning on a computer, and a sidebar for navigation would keep things easy to find."
+  },
+  {
+    "id": "q_web_057_009",
+    "query_text": "Make a web app that works as a learning library for photojournalism, covering both the technical side like camera settings and composition and the ethics side like consent and sensitive subjects. I want the topics organized into clear categories so I can go straight to what I need, read an article or watch an embedded video, and save the ones I want to review again. The app should run in a desktop browser with a topic list on one side and the content on the other so I can browse and read without losing my place."
+  }
+]

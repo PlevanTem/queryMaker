@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_038_008",
+    "query_text": "Make a press kit page that actually feels like it belongs to a real company with a soul, not just a folder dump. I want a clean, tasteful layout in the browser where journalists can grab our logo files, brand colors, product screenshots, and founder headshots without having to email anyone. The whole thing should feel intentional and have its own quiet identity, like you can tell someone cared about how it looks."
+  },
+  {
+    "id": "q_web_038_009",
+    "query_text": "A referral and affiliate program page for a SaaS startup that carries the same personal identity as the rest of the product, not some generic sign-up wall. It should feel like you are being welcomed into something real, with a sidebar showing your referral link and earnings in a way that feels thoughtful rather than transactional. The browser page should have enough warmth that someone actually wants to share it."
+  },
+  {
+    "id": "q_web_038_010",
+    "query_text": "Build a newsletter sign-up page that has its own personality and does not feel like every other generic opt-in form on the internet. I want it to have a specific look in the browser, something with taste, where the headline and the small details around the email field make someone feel like they are joining something worth caring about. The whole page should carry the identity of the thing it is promoting."
+  },
+  {
+    "id": "q_web_038_011",
+    "query_text": "Need a page in the browser where people can browse all the tools and services our app connects with, like a directory of everything it plays nice with. I want it to feel like a curated collection rather than just a big technical list, with a sidebar or categories that let you filter by type of tool. It should feel like someone with taste put it together, not like an auto-generated index page."
+  },
+  {
+    "id": "q_web_038_012",
+    "query_text": "Build a public changelog page that has the kind of identity a good indie product carries, not just a plain list of version numbers and bullet points. Every update entry should feel like a small piece of writing someone actually cared about, with a consistent visual tone across the whole browser page. People who follow the product should feel something when they open it, like they are watching something grow with intention."
+  },
+  {
+    "id": "q_web_038_013",
+    "query_text": "Create a year-in-review microsite that feels like a love letter to the year rather than a corporate report dressed up in colorful charts. I want it to open in the browser as something with its own mood, where the milestones, numbers, and little stories from the year all feel deliberately placed. The whole thing should carry a specific identity so people can immediately tell it belongs to us."
+  },
+  {
+    "id": "q_web_038_014",
+    "query_text": "Build an about page that tells the founder story and shows the team in a way that actually feels honest and specific, not like every other startup about page with the same stock-photo energy. I want it to open in the browser with its own visual character where each person's bio has the kind of detail that makes them feel real. The page should carry the identity of the product so it reads as one coherent thing."
+  },
+  {
+    "id": "q_web_039_001",
+    "query_text": "Make a pricing calculator page for enterprise plans where I can put in how many seats or users we have and it just figures out the annual cost without me needing to call a sales rep. I want it to work right in the browser, maybe with a slider or some simple number fields, and it should be honest about what each tier actually covers so I can compare annual vs monthly without going cross-eyed. Just something that saves me the back-and-forth."
+  },
+  {
+    "id": "q_web_039_002",
+    "query_text": "A simple web tool where my sales team can fill in a client name, the services we are pitching, and a few line items and it spits out a clean proposal or quote they can send right away without copying stuff between spreadsheets. It needs to work in the browser so anyone on the team can use it without installing anything, and the output should look professional enough that we are not embarrassed to send it to a real business client."
+  },
+  {
+    "id": "q_web_039_003",
+    "query_text": "Make a page where the whole team can look at our recurring revenue numbers and see a simple forecast for the next few months without anyone needing to dig through spreadsheets. I want it to open in the browser so everyone can check it during a meeting, with clear numbers showing current revenue, projected growth, and maybe a simple chart so you can spot trends at a glance. Nothing fancy, just something that saves us from emailing each other updated spreadsheets every week."
+  },
+  {
+    "id": "q_web_039_004",
+    "query_text": "A side-by-side plan comparison page in the browser where someone can look at all our subscription tiers at once and see clearly what each one includes, without having to click between separate pages to figure out what they are actually paying for. It should be easy to read so a normal person can pick the right plan without needing to email support, and maybe let them select the one they want right from the comparison view."
+  },
+  {
+    "id": "q_web_039_005",
+    "query_text": "Make a web page where the sales team can see which existing customers might be ready to upgrade or buy more, without having to dig through a bunch of separate reports. I want a simple list or view in the browser that shows which accounts have been growing their usage, which ones are close to hitting a limit, and maybe a place to note the next step for each one. Just something that makes it obvious where to focus instead of guessing."
+  },
+  {
+    "id": "q_web_039_006",
+    "query_text": "Need a billing page in the browser where I can see all our invoices, check what is paid or overdue, and send reminders without having to log into three different places. I want it to show a clean list of everything we have billed, let me download individual invoices, and make it obvious at a glance if anything needs attention. Right now tracking this stuff takes way too long and I always feel like I am missing something."
+  },
+  {
+    "id": "q_web_039_007",
+    "query_text": "Build a portal in the browser where reseller partners can sign up for our partner program, see how much commission they have earned, and track which of their referrals have converted into paying customers. I want everything in one place so partners are not emailing us every week asking for updates, with a clear view of their current status, payout history, and what they need to do to reach the next tier."
+  },
+  {
+    "id": "q_web_039_008",
+    "query_text": "A web tool that handles the whole process of turning a quote into a signed deal and then into a paid invoice without the team having to copy information between three different apps. It should live in the browser so everyone can access it, track where each deal is in the process, and make it obvious when something is stuck waiting on a signature or a payment. Right now we lose time every week just chasing things through email."
+  },
+  {
+    "id": "q_web_039_009",
+    "query_text": "Make a page where customers can upgrade or downgrade their own subscription plan without having to contact support and wait for someone to do it for them. I want it to work right in the browser, show clearly what each plan costs and what changes, and let them confirm the switch without anything confusing happening to their billing. It would save us so many support tickets if people could just handle this themselves."
+  },
+  {
+    "id": "q_web_039_010",
+    "query_text": "Need a page in the browser where incoming leads get scored and assigned to the right sales person automatically so nobody has to manually sort through a pile of form submissions every morning. I want to see a list of new leads with some kind of priority indicator, which rep they got sent to, and a way to quickly reassign if something looks wrong. It would cut out a lot of the daily manual work we do just to figure out who should follow up on what."
+  },
+  {
+    "id": "q_web_039_011",
+    "query_text": "Create a page in the browser where we can see how many free trial users are actually converting to paid, where most of them drop off, and what kinds of users tend to convert so we can figure out what to improve. I want it to show the numbers clearly without me having to pull reports from five different places, maybe a simple view of the conversion rate over time and which steps in the trial most people are reaching before they leave."
+  },
+  {
+    "id": "q_web_039_012",
+    "query_text": "Need a web page where our team can evaluate vendors we are considering and keep track of who made the shortlist and why, instead of having everyone's notes scattered across email and random shared documents. I want a browser-based place where we can add vendors, fill in some standard questions for each one, score them, and see a summary of how they stack up so the final decision is not just whoever sent the best email."
+  },
+  {
+    "id": "q_web_039_013",
+    "query_text": "Build a tool in the browser where we can send contracts out for e-signature and also track when each one is up for renewal so we are not suddenly blindsided by expired agreements. I want a list of all our active contracts, who signed them, what date they renew, and an easy way to send out a new version when it is time. Right now I have a spreadsheet for this but it never stays current and I always miss something."
+  },
+  {
+    "id": "q_web_040_001",
+    "query_text": "Build a waitlist sign-up page in the browser where people can put in their email and get added to a list before we officially launch, without me needing to set up anything complicated. I want it to confirm their spot once they sign up and maybe show how many people are already on the list so it feels like something worth waiting for. It should be simple to share the link and easy for me to see how many people have signed up."
+  },
+  {
+    "id": "q_web_040_002",
+    "query_text": "Need a page in the browser where investors can book a short call with me to hear about my startup, without the back-and-forth of trying to find a time over email. I want them to be able to see my available slots, pick one that works, and get a confirmation without me having to do anything manually. Something straightforward that makes me look organized and saves both of us the scheduling headache."
+  },
+  {
+    "id": "q_web_040_003",
+    "query_text": "A web page where early-stage founders who are looking for co-founders can book into speed-dating style sessions, pick a time slot that works for them, and see who else will be in the same session so they can come prepared. It should be easy to navigate in the browser and not require a bunch of setup from the person booking, just find a slot, fill in a bit about what they are working on, and confirm."
+  },
+  {
+    "id": "q_web_040_004",
+    "query_text": "Build a simple page in the browser where startup founders can see a mentor's available office hours and book a slot without having to send a cold email and wait to hear back. I want the mentor to be able to set their available times and the founder to just pick one, add a short note about what they want to discuss, and get a confirmation. It should save everyone from the back-and-forth that makes these kinds of sessions harder to set up than they need to be."
+  },
+  {
+    "id": "q_web_040_005",
+    "query_text": "Create a booking page in the browser where startup founders applying to an accelerator can pick a time slot for their interview from whatever times are still available, so the whole interview scheduling process does not have to be done manually by email. I want it to show open slots clearly, let someone pick and confirm in a couple of clicks, and automatically mark that slot as taken so two people cannot book the same time."
+  }
+]

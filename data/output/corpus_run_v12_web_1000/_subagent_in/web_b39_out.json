@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_071_003",
+    "query_text": "Build a web app that lays out all the pricing tiers for developer SaaS tools in one place so I can actually compare what each plan includes, because right now I have to open five tabs and scroll through each site individually just to figure out which plan has the feature I need. I want a side-by-side table that lists features per plan, shows the monthly and yearly price, and lets me check off which ones I care about so the irrelevant rows collapse."
+  },
+  {
+    "id": "q_web_071_004",
+    "query_text": "Build a web app where a technical consulting firm can give each client their own space to check in on their project, see what tasks are done or in progress, and upload files back and forth without having to email everything. I just want something straightforward for desktop browsers where clients log in, land on their project overview, see a list of milestones with statuses, and can leave comments on individual items without hunting through long email threads."
+  },
+  {
+    "id": "q_web_071_005",
+    "query_text": "Create a web app that handles the whole process of a software vendor signing up their company to join a partner program, because right now the enrollment is scattered across emails and PDFs and nobody knows what step they are on. I want a simple enrollment tool where a company can fill in their details, pick a partner tier, upload required documents, and then see a clear status of where their application stands in the review process."
+  },
+  {
+    "id": "q_web_071_006",
+    "query_text": "A ticket buying and registration app for developer conferences that works in the browser, where you can browse upcoming events, pick the ticket type you want (like early bird or full conference), fill in your info, and pay all in one flow without getting bounced between different sites. It should also show your registered events in a list with a simple confirmation you can print or save."
+  },
+  {
+    "id": "q_web_071_007",
+    "query_text": "Create a web app for buying and scheduling technical certification exams so I can stop digging through three different vendor websites every time I need to book a slot. I want a tool for desktop browsers where I can browse available exams, see open time slots on a calendar, pay for my chosen exam, and get a confirmation with all the details in one spot so I know exactly when and where to show up."
+  },
+  {
+    "id": "q_web_071_008",
+    "query_text": "Make a web app that keeps track of a code review service subscription and all the projects submitted under it, because right now I lose track of which projects have been reviewed and which are still waiting. I want a tracker where I can see my current subscription status, add new projects to a queue, check the review status of each one, and see notes left by the reviewer all in one browser-based place."
+  },
+  {
+    "id": "q_web_071_009",
+    "query_text": "Create a web app that works like a marketplace where companies can post projects and freelance developers can apply for them, with a built-in payment system that holds money until each agreed milestone is completed, so neither side has to chase the other for payment. I want a desktop browser tool where a client posts the job, breaks it into milestones with amounts attached, and the money for each milestone only gets released after both sides confirm the work is done."
+  },
+  {
+    "id": "q_web_071_010",
+    "query_text": "Create a web app that helps an engineering team figure out how much to bill clients based on how many people worked on a project and for how long, then spits out a clean invoice they can send right away. I want a browser-based tool where I enter team members, their hourly rates, and the hours logged per project, and the app adds it all up and generates an invoice I can download as a PDF."
+  },
+  {
+    "id": "q_web_071_011",
+    "query_text": "An order manager for technical due diligence reports that lives in the browser, where a buyer can describe the company or codebase they want reviewed, pick a report package, pay for it, and then track where their order is in the process. The app should show a clear timeline so the buyer knows when the review starts, when it is in progress, and when the finished report is ready to download, all in one place."
+  },
+  {
+    "id": "q_web_071_012",
+    "query_text": "Need a web app that keeps all my software license keys in one spot so I can finally stop hunting through old emails when something expires. I want a license manager for desktop browsers where I can add a product name, paste in the key, set the renewal date, and get a heads-up before it runs out, with a simple list view that shows everything at a glance including which ones are coming up for renewal soon."
+  },
+  {
+    "id": "q_web_071_013",
+    "query_text": "Build a web app that lets a freelance developer write up a contract and generate a matching invoice without having to maintain two separate documents. I want a browser-based tool where I fill in the client name, project description, payment terms, and hourly or fixed rate, and the app creates a contract summary I can send for sign-off as well as a numbered invoice tied to the same project, so everything stays connected and I can find past ones easily."
+  },
+  {
+    "id": "q_web_072_001",
+    "query_text": "Make a tutorial site web app where all the lessons are organized by topic and difficulty so I can find what I need quickly. I want a sidebar that lists all the topic categories, a main area that shows the lessons in order within each category, and a way to mark individual lessons as done so I can see my progress at a glance. It should also let me search by keyword in case I know what I am looking for but not which section it lives in."
+  },
+  {
+    "id": "q_web_072_002",
+    "query_text": "Create a web app for an interactive textbook where each chapter has reading sections plus small exercises or questions you can answer right on the page to check your understanding. I want the chapters listed in order on one side and the reading content on the other, with little check-your-knowledge questions scattered through the text that give you instant feedback when you submit an answer, and a progress bar showing how far through the book you have gotten."
+  },
+  {
+    "id": "q_web_072_003",
+    "query_text": "Build a browser-based coding challenge app where the challenges are grouped by difficulty level so a beginner can start easy and work their way up. I want a list of challenges on the left, a text area in the middle where I can write and run my answer, and a results area that tells me if I passed or what went wrong. Each challenge should show how many other people have completed it so I have a sense of whether it is supposed to be hard or easy."
+  },
+  {
+    "id": "q_web_072_004",
+    "query_text": "Make a web app for system design interview prep that includes written guides and labeled diagrams so I can study each topic properly. I want a list of design topics on the side, a reading area with a clear explanation, and diagrams that have labels I can click to get more detail on each part. There should also be a way to take notes on each topic right in the app so I can jot down things I want to remember for the actual interview."
+  },
+  {
+    "id": "q_web_072_005",
+    "query_text": "Need a web app that helps someone who has never contributed to open source before figure out where to start, with a list of beginner-friendly projects and a step-by-step guide for making a first contribution. I want to be able to filter projects by programming language, see a short description of each one, and follow a checklist of steps like forking the repo and submitting a pull request so I know exactly what to do next and nothing falls through the cracks."
+  },
+  {
+    "id": "q_web_072_006",
+    "query_text": "Make a web app that stores tech conference talks and lets me search through the full text of their transcripts so I can find the specific part of a talk that mentioned something I half-remember. I want a search bar at the top, a results list that shows the talk title and a snippet of the matching transcript text, and when I click a result it takes me to the full transcript with the matching words highlighted so I can read the context right away."
+  },
+  {
+    "id": "q_web_072_007",
+    "query_text": "Build a web app where I can lay out a learning roadmap for myself as a developer, add topics and resources in the order I plan to tackle them, and check things off as I go. I want to be able to create multiple roadmaps for different goals, add a note or link to a resource under each topic, and see a running count of how many items I have finished versus how many are left so I can tell how far along I am on each roadmap."
+  },
+  {
+    "id": "q_web_072_008",
+    "query_text": "Build a web app that walks through how common computer science algorithms work step by step, with a visual showing what is happening at each stage so I can actually follow the logic. I want to be able to pick an algorithm from a list, enter some sample data to run it on, then step forward and backward through the process one move at a time, with a panel alongside that explains in plain words what just happened at each step."
+  },
+  {
+    "id": "q_web_072_009",
+    "query_text": "Need a web app that gives me a place to practice writing SQL queries against real-looking data sets so I can build up my skills without setting up any software on my computer. I want a list of available data sets to choose from, a query box where I can type my SQL and run it right in the browser, a results table that shows what came back, and a set of practice questions for each data set that hint at what kind of query to try."
+  },
+  {
+    "id": "q_web_072_010",
+    "query_text": "Create a web app that lets me practice Git branching and working through merge conflicts by simulating the whole thing right in the browser, so I can make mistakes without messing up a real project. I want to create branches, make pretend commits on each one, try to merge them, and then see what a conflict looks like and practice resolving it step by step, with a visual tree showing how the branches relate to each other."
+  },
+  {
+    "id": "q_web_072_011",
+    "query_text": "Create a web app where I can type a pattern for matching text and immediately see which parts of my sample text it matches, plus get a plain-English breakdown of what each piece of the pattern actually means. I want a text box for the pattern on one side, a text box for my sample on the other, live highlighting of matches as I type, and a list below that explains each part of the pattern in everyday language so I can learn as I go."
+  },
+  {
+    "id": "q_web_072_012",
+    "query_text": "Build a web app that helps me study for a cloud certification by giving me reading material organized by exam topic and a set of practice questions I can run through to test myself. I want the topics listed in the order they usually appear on the exam, a reading section for each one, a practice quiz with multiple-choice questions at the end of each topic, and a summary at the end showing which topics I got right and which ones I should review again."
+  },
+  {
+    "id": "q_web_072_013",
+    "query_text": "Create a web app that is basically a reference guide for common software design patterns, where each entry shows a plain description of the pattern and a small code example I can actually run in the browser to see it in action. I want the patterns organized into groups like creational, structural, and behavioral, a search bar so I can find a specific one quickly, and a side-by-side layout with the explanation on one side and the runnable code on the other."
+  },
+  {
+    "id": "q_web_073_001",
+    "query_text": "A little landing hub app for a Discord community, the kind you would open in a browser on your desktop, where visitors can see a quick description of what the server is about, browse the main channels or topics it covers, and click a big friendly invite link to join. I want to add a short welcome message, list a few community highlights or rules, and maybe show how many members are currently online so it feels like a real active place worth joining."
+  }
+]

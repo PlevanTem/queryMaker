@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_017_002",
+    "query_text": "A peer mentorship matching tool for independent consultants, available in the browser on desktop, where you can fill in your specialty area, the kind of help you want, and what you can offer in return, then get matched with someone at a similar level. The main list should show each potential match with their focus area and a short note about what they bring, and you can reach out directly from there."
+  },
+  {
+    "id": "q_web_017_003",
+    "query_text": "Create a learning progress tracker for freelancers that lives in the browser and ties each course or skill you are working on directly to your portfolio pieces. I want to keep a running list of what I am learning, mark each thing as in progress or done, and have the finished ones link out to actual work samples that show off what I picked up. A sidebar listing all skills with their status would be really helpful."
+  },
+  {
+    "id": "q_web_017_004",
+    "query_text": "Need a web app that works as a business and money learning hub for people who are self-employed, with topics like invoicing, saving for taxes, setting rates, and basic budgeting all organized into short lessons you can go through at your own pace. I want to be able to tick off each lesson as I finish it and keep a simple checklist of which topics I still need to cover."
+  },
+  {
+    "id": "q_web_017_005",
+    "query_text": "Build a website for freelancers who want to understand contracts and legal basics, laid out as a series of short lessons you can work through on your desktop browser, covering things like payment terms, scope creep clauses, and what to watch out for when signing. I want each lesson to have a quick recap at the end and a checkbox I can tick when I feel like I actually understand it."
+  },
+  {
+    "id": "q_web_017_006",
+    "query_text": "Create a knowledge base web app full of expert-written articles organized by niche industry topics, where the left side has a list of all the topic categories and clicking one opens the articles in that group on the right. I want each article to show who wrote it, when it was last updated, and a short summary at the top so I can decide whether it is worth reading before I dive in."
+  },
+  {
+    "id": "q_web_017_007",
+    "query_text": "A browser-based coding challenge arena for freelance developers, where you can browse a list of timed practice problems sorted by topic and pick one to work on, then submit your solution and see how it compares to others. I want to track which challenges I have completed, mark the ones I want to revisit, and see a simple running score for each topic area I have practiced."
+  },
+  {
+    "id": "q_web_017_008",
+    "query_text": "Need a web app for designers to share their work and get structured feedback from other designers in the community, where you post a piece, answer a short set of questions about what you were going for, and then reviewers respond to those same questions one by one. I want to see all the feedback for my submission in one place and be able to reply to each comment as a follow-up."
+  },
+  {
+    "id": "q_web_017_009",
+    "query_text": "Make a web app for freelance writers who want to get better at their craft, with a place to submit a piece of writing and get it looked at by others in the community, as well as short exercises focused on things like sentence flow, cutting filler, and tightening up openings. The main area should show a list of open submissions waiting for feedback alongside a separate list of exercises I can work through on my own."
+  },
+  {
+    "id": "q_web_017_010",
+    "query_text": "Create a course portal web app for solopreneurs who need to learn about taxes and basic accounting, with lessons broken into small chunks covering things like quarterly estimates, writing off expenses, and reading a profit and loss summary. I want to see a clear list of all lessons with a progress indicator next to each one, and be able to bookmark lessons to come back to later."
+  },
+  {
+    "id": "q_web_017_011",
+    "query_text": "Need a web app where independent consultants can collect and display short certificates or credentials they have earned from different courses and platforms, stacking them together into a kind of running record of their expertise. I want to be able to add each credential with the name, the issuer, and the date, then arrange them by skill area so my profile shows a clear picture of what I have built up over time."
+  },
+  {
+    "id": "q_web_017_012",
+    "query_text": "Need a web app for desktop browsers where I can save conference talks I have watched, write notes tied to specific points in the recording, and keep everything organized by topic or event. The main view should show all my saved talks in a list with a note count next to each, and when I open one I want to see my notes lined up alongside the talk so I can find the right moment quickly."
+  },
+  {
+    "id": "q_web_017_013",
+    "query_text": "Create a case study library and discussion tool for freelance strategists, available as a web app in the browser, where each case study has its own page with a summary, the key decisions made, and a thread underneath for people to comment and share their own takes. I want to be able to browse all case studies by industry or topic from a sidebar list on the left and save the ones I find most useful to a personal reading list."
+  },
+  {
+    "id": "q_web_017_014",
+    "query_text": "A client negotiation and communication skills trainer for freelancers, running as a web app in the browser on desktop, organized as a series of short lessons covering topics like how to push back on scope changes, what to say when a client goes quiet, and how to handle a rate conversation. Each lesson should include a worked example and a short practice prompt, with a checklist on the side tracking which topics I have gone through."
+  },
+  {
+    "id": "q_web_018_001",
+    "query_text": "Make a web app for independent consultants who want to run a small mastermind group together, where a handful of people can join a shared space, post weekly updates about what they are working on, and leave comments for each other. It would be cool to have a simple way to schedule a group check-in call and a shared list of goals that everyone can see and tick off as the weeks go by."
+  },
+  {
+    "id": "q_web_018_002",
+    "query_text": "Build a website where remote designers can find an accountability partner to check in with regularly, so you fill out a short profile about your working style and what kind of projects you are doing, then get matched with someone who fits well. I want the app to give each matched pair a little shared space in the browser where they can post weekly goals and mark them done, so both people can see how the other is getting on."
+  },
+  {
+    "id": "q_web_018_003",
+    "query_text": "Make a web app where freelancers can anonymously share what they charge for their work and see what others in similar fields are getting paid, so everyone has a better sense of what rates are actually out there. I want people to be able to post their rate with some context like their specialty and years of experience, browse the shared entries filtered by type of work, and leave short comments with advice or reactions."
+  },
+  {
+    "id": "q_web_018_004",
+    "query_text": "A community site for open-source contributors where people can post about the projects they have been working on and get recognized by others in the group, with a feed in the browser showing recent contributions and a discussion thread under each one. I want contributors to be able to add a short note about what they built or fixed, and other people can give a thumbs up or leave a comment to show appreciation."
+  },
+  {
+    "id": "q_web_018_005",
+    "query_text": "Create a web app for solopreneurs who want a daily co-working group to stay on track, where everyone can log in to the browser in the morning, post what they are working on that day, and check back in at the end to say how it went. I want a live list showing who is working on what right now, and a simple way to cheer on someone or leave a quick encouraging note when they finish something."
+  },
+  {
+    "id": "q_web_018_006",
+    "query_text": "Make a web app for UX designers who want honest feedback on their portfolio from other designers in the community, where you can post your portfolio link and a couple of questions you want answered, and others leave structured replies covering things like clarity, storytelling, and overall impression. The home feed should show all the portfolios currently open for review, and I want to be able to track which ones I have already given feedback on."
+  },
+  {
+    "id": "q_web_018_007",
+    "query_text": "Need a web app where freelance developers can show off the side projects they are building and get real reactions from other developers in the community, with each project getting its own spot to post a description, a screenshot, and a link to try it out. I want visitors to be able to leave short pieces of feedback organized by what is working well and what could be better, and I want to see all the feedback for my projects collected in one place."
+  },
+  {
+    "id": "q_web_018_008",
+    "query_text": "A community site for independent photographers where people can share and discover shooting locations, posting photos they took along with notes about the spot like the best time of day and how to get there, all browsable on a desktop browser. I want to be able to search locations by city or type of shot, save my favorite spots to a personal list, and leave a short comment on any location entry to share my own experience."
+  },
+  {
+    "id": "q_web_018_009",
+    "query_text": "Create a web app for copywriters to share examples of writing they have saved for inspiration, organized into a browsable library where others can flip through the collection and leave their thoughts on what makes each piece work. I want members to be able to submit a saved example with a short note explaining why they liked it, and anyone browsing can add their own reaction or critique in a comment thread below each entry."
+  },
+  {
+    "id": "q_web_018_010",
+    "query_text": "A translator community tool for the browser where freelance translators can build up a shared glossary of tricky terms and specialized vocabulary across different subject areas, and anyone can suggest a new entry or flag an existing one that needs a better translation. I want entries to be searchable by language pair and topic, and each term should have a little comment thread where translators can debate the best option or share context from real projects."
+  },
+  {
+    "id": "q_web_018_011",
+    "query_text": "Make a web app for freelancers to share contract advice and real template examples with each other, so you can browse what other people use for things like late payment clauses, kill fees, or revision limits and download a template to adapt for yourself. I want the forum side to let people post questions about tricky contract situations and get replies from others who have dealt with the same thing, all in one place on desktop."
+  },
+  {
+    "id": "q_web_018_012",
+    "query_text": "Build a web app for indie hackers who want to share their progress in public and follow along with what others are building, where everyone posts regular updates about milestones, setbacks, and what they shipped that week. I want a feed showing the latest updates from everyone in the community, a way to leave a short reaction or comment on each post, and a personal tracker on my own profile that shows how my project has moved forward over time."
+  }
+]

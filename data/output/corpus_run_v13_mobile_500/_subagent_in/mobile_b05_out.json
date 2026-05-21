@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_016_001",
+    "query_text": "Need a fuel cost and efficiency calculator app on my phone that saves me from doing math every time I fill up, just let me type in the distance, how many liters I used, and the price per liter, and it instantly tells me my cost per kilometer and overall trip fuel spend, with a little history list so I can compare how different cars or driving styles are costing me over time."
+  },
+  {
+    "id": "q_scene_016_002",
+    "query_text": "Build a mobile app that estimates my electricity bill before it hits, I'm so tired of being surprised every month, so I want to type in each appliance I use at home, how many hours a day I run it, and my local rate per kilowatt-hour, and then the app totals it all up and shows me a clear monthly estimate, with the biggest power-draining items listed first so I know what to cut."
+  },
+  {
+    "id": "q_scene_016_003",
+    "query_text": "Build a body fat percentage calculator app for my phone where I enter basic stuff like my height, weight, age, and gender, and it gives me a clear result right away using a standard formula, plus a small reference chart showing what range I fall into like healthy, overfat, or athletic, so I finally stop Googling this every time I want a quick check."
+  },
+  {
+    "id": "q_scene_016_004",
+    "query_text": "Make a tile and flooring area estimator app for my phone that figures out exactly how many tiles I need to buy for a room, I just type in the room length and width, pick the tile size from a few common options, and set a waste percentage for cuts, and the app calculates total tiles needed plus total cost if I enter the price per tile, so I stop buying too many or running short at the store."
+  },
+  {
+    "id": "q_scene_016_005",
+    "query_text": "Need a wind chill and heat index calculator app for my phone that tells me what the temperature actually feels like outside before I decide what to wear, I type in the real air temperature and the wind speed or humidity depending on the season, and it shows me the feels-like number right away with a quick note like whether it is safe to go out or if I should layer up."
+  },
+  {
+    "id": "q_scene_016_006",
+    "query_text": "Need a cooking conversion calculator app for my phone that handles all the annoying unit swaps when I follow a recipe, so I can type in a number in cups, grams, ml, or oz and pick what I want to convert to, and it gives me the answer instantly, with a list of common ingredients like flour or sugar since their cup-to-gram ratios are all different and I always get confused mid-cook."
+  },
+  {
+    "id": "q_scene_016_007",
+    "query_text": "Create a GPA calculator app for my phone so I can finally stop manually averaging my grades at the end of every semester, I want to enter each course name, the credits it is worth, and the grade I got, and the app adds them all up and shows me my overall GPA and semester GPA side by side, with the option to add a new course row any time without losing what I already entered."
+  },
+  {
+    "id": "q_scene_016_008",
+    "query_text": "Build a bandwidth and data usage estimator app for my phone that helps me figure out whether my monthly data plan is enough before I upgrade or downgrade it, I type in how many hours a day I stream video, browse, or do video calls, pick the quality level for each activity, and the app totals up my estimated monthly usage in GB so I can actually compare it against my plan limit."
+  },
+  {
+    "id": "q_scene_016_009",
+    "query_text": "Create a blood alcohol content estimator app for my phone where I log what I drank, how many standard drinks, my body weight, and how many hours have passed, and the app gives me a rough BAC estimate right away, plus a simple guide showing what that level means for driving safety, so I have something concrete to look at before deciding whether to call a ride."
+  },
+  {
+    "id": "q_scene_016_010",
+    "query_text": "Build an Ohm's law electrical resistance calculator app for my phone that lets me pick which value I want to find, voltage, current, or resistance, then type in the other two numbers, and it instantly solves for the missing one, plus shows the power in watts as a bonus result, so I have a quick reference tool handy whenever I am tinkering with a small electronics project."
+  },
+  {
+    "id": "q_scene_016_011",
+    "query_text": "Need a molecular weight calculator app for my phone that lets me type in a chemical formula like H2O or C6H12O6 and immediately get the total molecular weight in grams per mole, with a breakdown showing each element and how much it contributes, so I can stop looking up atomic masses one by one in my chemistry notes every time I need to do a quick stoichiometry problem."
+  },
+  {
+    "id": "q_scene_016_012",
+    "query_text": "Create a real estate cap rate calculator app for my phone where I enter a property's purchase price, annual rental income, and estimated yearly expenses like maintenance and insurance, and it instantly calculates the cap rate and shows me whether the return looks reasonable, with a simple comparison showing how the cap rate changes if I adjust the price or income, so I can quickly size up a deal while I am out looking at places."
+  },
+  {
+    "id": "q_scene_017_001",
+    "query_text": "Need a learning session timer app for my phone that I can actually use to track my study time each day, I start a timer when I sit down to study, pick a subject from a short list I set up myself, and when I stop it logs the session with the subject and duration, then the home screen shows me a simple running total of hours studied today and this week so I can see my progress at a glance."
+  },
+  {
+    "id": "q_scene_017_002",
+    "query_text": "Create a medicine dose and symptom logger app for my phone that makes it easy to keep a daily record when I am taking a new medication, I want to quickly tap in the medicine name, dose I took, and time, then add a short note about how I am feeling like any side effects or symptom changes, and later I can scroll back through the log to show the doctor a clear timeline without having to remember everything from memory."
+  },
+  {
+    "id": "q_scene_017_003",
+    "query_text": "Create a travel daily journal app for my phone where I can jot down a quick note each day of a trip, like what I did, where I ate, and one thing that surprised me, and attach the date and location so each entry stays organized by trip, the idea is to have a simple personal record I can look back on later that captures the feeling of the day without needing to write a full essay."
+  },
+  {
+    "id": "q_scene_017_004",
+    "query_text": "Need a creative notes app for my phone where I can capture little sparks of inspiration throughout the day, whether it is a song idea, a sketch concept, or just a random thing I want to try making, I tap to add a new note with a title and a few lines of description, tag it loosely by type like music or visual or writing, and later browse the list to find the ones worth actually starting."
+  },
+  {
+    "id": "q_scene_017_005",
+    "query_text": "Build a symptom and pain level diary app for my phone where each entry lets me pick a pain level from 1 to 10, note where it hurts, jot down any possible triggers like what I ate or how I slept, and save it with the current time, so over a few weeks I can scroll through the log and spot patterns to share with my doctor instead of just saying it comes and goes randomly."
+  },
+  {
+    "id": "q_scene_017_006",
+    "query_text": "A sobriety and habit streak diary app for my phone that tracks how many days in a row I have kept a specific habit going, like skipping alcohol or cutting out late-night snacks, each day I just tap to check in and the app shows me my current streak, a small calendar of which days I checked in, and a personal note field if I want to write what helped me that day, simple and encouraging without being preachy."
+  },
+  {
+    "id": "q_scene_017_007",
+    "query_text": "A weight and body measurement log app for my phone where I punch in my weight, waist, and a couple of other measurements whenever I feel like checking in, each entry saves with the date, and the app draws a simple line chart so I can see the trend over the past month or two without any complicated setup, just a clean record I can glance at quickly during my morning routine."
+  },
+  {
+    "id": "q_scene_017_008",
+    "query_text": "Need a correspondence archive app for my phone where I can log every letter, card, or package I send or receive, with fields for who it is from or to, the date, and a short note about what it was, so I have a personal record I can search through when I need to remember if I already wrote back to someone or what year I sent that birthday card, all stored right on my phone without needing an email account."
+  },
+  {
+    "id": "q_scene_017_009",
+    "query_text": "Create a voice memory box app for my phone where I can record a short voice note any time I want to save a thought or a little story, each recording gets saved with the date and a title I type in, and the home screen shows a list of all my saved clips so I can tap one to play it back later, the idea is to capture things I want to remember but never feel like typing out fully."
+  },
+  {
+    "id": "q_scene_017_010",
+    "query_text": "Create a daily mood and energy journal app for my phone where each morning or evening I tap in how I am feeling emotionally on a simple scale, log my energy level the same way, and add a short optional note about what might have affected my day, then the app shows a weekly summary so I can look back and notice what days I tend to feel low and what might be causing it."
+  },
+  {
+    "id": "q_scene_017_011",
+    "query_text": "Build a gratitude log app for my phone where every day I write down three things I am thankful for, quick and low-pressure, just three short lines, and the app saves each day's entry with the date so I can scroll back through past entries when I need a lift, with a little running count of how many days in a row I have filled it in to keep me coming back."
+  },
+  {
+    "id": "q_scene_017_012",
+    "query_text": "Need a coffee and caffeine tracker app for my phone that lets me quickly log each cup I drink during the day, picking the type like espresso, drip, or energy drink, and it adds up my total caffeine intake so I can see when I am getting close to my daily limit, with a simple timeline showing what time I had each drink so I can figure out why I can not sleep at night."
+  },
+  {
+    "id": "q_scene_018_001",
+    "query_text": "A birthday card creator app for my phone where I pick a fun animated background like balloons or confetti, type in a personal message, and put the friend's name front and center, then the app generates a shareable link or image I can send over chat, the whole thing should take under a minute on my phone so it actually gets done instead of me forgetting to send anything at all."
+  }
+]

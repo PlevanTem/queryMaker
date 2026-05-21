@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_011_011",
+    "query_text": "Need a web app for a fan translation community focused on indie manga and webcomics, where members can post their translation work for a title, leave line-by-line notes explaining tricky word choices, and vote on which version reads best, with a sidebar listing all active projects so you can hop between them while sitting at your desktop."
+  },
+  {
+    "id": "q_web_011_012",
+    "query_text": "Create a browser-based matchmaking platform for emerging artists who want to find a mentor in their creative field, where artists can fill out a short profile about what they make and what kind of guidance they are looking for, and experienced creators can list the areas they are happy to teach, so the site can suggest good pairings and let both sides send a message to start the conversation."
+  },
+  {
+    "id": "q_web_011_013",
+    "query_text": "Make a web app that works like a shared wiki for fiction writer groups who are building a story world together, where anyone in the group can add pages for places, characters, and rules of the world, link those pages to each other, and leave comments when they spot something that conflicts with what someone else already wrote, all laid out so you can browse the whole wiki from a left-side list while editing in the main area."
+  },
+  {
+    "id": "q_web_011_014",
+    "query_text": "Need a website that brings together people who love watching and talking about video essays, where you can open a video and type time-stamped notes right alongside it as it plays, then others can reply to those notes and start a threaded debate about the argument the creator is making, so the whole discussion stays attached to the exact moment in the video it is about."
+  },
+  {
+    "id": "q_web_012_001",
+    "query_text": "Make a web-based storyboard creator for video producers where you can add a row of panels, drop a rough sketch or placeholder image into each one, type the shot description and dialogue underneath, then rearrange the panels by dragging them around until the sequence feels right, so the whole board is visible across the screen at once without scrolling sideways."
+  },
+  {
+    "id": "q_web_012_002",
+    "query_text": "Create a browser-based screenplay editor that automatically formats your script the way industry scripts look, with scene headings, action lines, and character names all snapping into the right style as you type, and a sidebar where a writing partner can leave notes on specific lines so you two can go back and forth on revisions without sending files back and forth."
+  },
+  {
+    "id": "q_web_012_003",
+    "query_text": "Need a web app that spits out a random creative writing prompt when you click a button, then lets you write directly in the same page and tracks how many minutes you spent on that session, so over time you can look back at a simple log showing which prompts you tackled, how long each session ran, and any short notes you left yourself about how it went."
+  },
+  {
+    "id": "q_web_012_004",
+    "query_text": "Make a browser tool where you can browse font combinations and see them previewed together in a sample heading and body text block, so you can quickly compare how different pairs look side by side, and when you find one you like you can grab the download link or copy the name right from the same spot without jumping to another site."
+  },
+  {
+    "id": "q_web_012_005",
+    "query_text": "A color palette tool for desktop browsers where you upload a photo or reference image and the app pulls out the main colors it finds, showing them as a row of swatches with the exact hex codes listed below each one, and you can click any swatch to swap it out or fine-tune the shade until the palette feels just right for whatever project you are working on."
+  },
+  {
+    "id": "q_web_012_006",
+    "query_text": "Need a web app that helps podcast hosts plan episodes and write their show notes in one place, where you can outline the talking points for an episode in a simple list on one side and type up the full show notes in a text area on the other side, then save each episode so you have a tidy archive you can go back to when you need to reference what you covered."
+  },
+  {
+    "id": "q_web_012_007",
+    "query_text": "Create a web app mood board builder where you can pull in images from your computer, move them around freely on a big open canvas in the browser, resize them, and stack them however you like, so you end up with a visual collage that captures the feeling or style you are going for before you start a design or creative project."
+  },
+  {
+    "id": "q_web_012_008",
+    "query_text": "Make a lyric writing app for desktop browsers where you type your lyrics in a big clean editor and a panel on the side suggests words that rhyme with whatever word you highlight, plus shows you the syllable count for each line so you can hear in your head whether the rhythm is landing right, and you can save multiple songs and switch between them from a list."
+  },
+  {
+    "id": "q_web_012_009",
+    "query_text": "Build a web app for YouTube creators who want to test different thumbnail ideas before publishing, where you can upload two or three thumbnail images side by side on the desktop screen and see them mocked up as they would look in a real search result row, then leave notes on each version about what you like or want to change before picking the one to go with."
+  },
+  {
+    "id": "q_web_012_010",
+    "query_text": "A brand kit generator for independent creators, running in the browser, where you answer a handful of questions about your style and vibe and the app assembles a simple starter kit with a suggested color set, a couple of font choices, and a preview showing how they all look together on a sample page, so you have something consistent to use across your work right away."
+  },
+  {
+    "id": "q_web_012_011",
+    "query_text": "Make a web app newsletter builder for indie writers and small journalists, where you pick from a handful of clean layouts and then fill in the sections with your own text and images, seeing a live preview of how the finished newsletter will look in an email client, and you can save multiple templates so each publication you run can have its own consistent look."
+  },
+  {
+    "id": "q_web_012_012",
+    "query_text": "Need a browser-based tool for editing subtitles and closed captions for videos, where you can load a video file and see the transcript lines listed alongside the playback with their start and end times, then click any line to fix the text or nudge the timing, and export the finished captions file when you are done, all without installing anything."
+  },
+  {
+    "id": "q_web_012_013",
+    "query_text": "Make a web app library for saving the text prompts you use with AI image tools, where each prompt has a version history so you can see how you changed it over time, and you can add your own labels to group prompts by project or style, then search across your whole collection from a bar at the top of the desktop layout to find the right one fast."
+  },
+  {
+    "id": "q_web_012_014",
+    "query_text": "Make a wiki-style web app for fiction authors to keep track of their characters and story world details, where each character or place gets its own page you can fill in with whatever notes matter for your story, pages can link to each other so you can jump from a character to the town they live in, and a left-side list shows all your entries so you never lose track of what you have already written."
+  },
+  {
+    "id": "q_web_013_001",
+    "query_text": "Create a portfolio website for a freelance photographer that feels personal and considered, not generic, where the work is displayed in a clean gallery with room for the photos to breathe, each project has a short story behind it, and a separate section holds client words in a way that reads like a genuine recommendation rather than a wall of star ratings, all designed for desktop browsers."
+  },
+  {
+    "id": "q_web_013_002",
+    "query_text": "Need a website for an independent web designer to show off their work with real taste and personality, not just a thumbnail grid, where each project gets its own page with the story of how it came together, the site has a strong point of view in how it looks and feels, and visitors on desktop can tell immediately that this person has a specific sensibility, not just a portfolio template anyone could fill in."
+  },
+  {
+    "id": "q_web_013_003",
+    "query_text": "Make a portfolio site for a freelance illustrator that gives the gallery some character and warmth so it feels like their work, with a section where each project unfolds into a case study showing the sketches and process alongside the finished pieces, and the whole thing should have a handcrafted feeling that a visitor browsing on a desktop browser would actually enjoy scrolling through."
+  },
+  {
+    "id": "q_web_013_004",
+    "query_text": "Create a website for an independent consultant where each past project gets a focused case study write-up explaining the challenge, the approach taken, and what came out of it, organized in a way that lets potential clients browse by industry or type of work, with a tone that feels confident and specific rather than vague and corporate, built for desktop browsers first."
+  },
+  {
+    "id": "q_web_013_005",
+    "query_text": "Make a website for a freelance copywriter that shows their writing samples and published clips in a way that actually reflects their voice and style, where each piece links out or previews inline, the site has a clear identity that matches the kind of writing they do best, and someone landing on it from a desktop browser gets a strong sense of who this writer is within the first scroll."
+  },
+  {
+    "id": "q_web_013_006",
+    "query_text": "Build a portfolio site for an independent architect that presents built projects with the weight and seriousness the work deserves, showing photos alongside drawings and a brief write-up for each project, with an awards section that reads like a quiet credential rather than a trophy shelf, all laid out for desktop browsers in a way that feels architectural in itself, considered and precise."
+  },
+  {
+    "id": "q_web_013_007",
+    "query_text": "Make a portfolio site for a freelance UX researcher that shows the actual process behind each project, with a place to walk through the research steps, share the key deliverables like maps or reports, and explain what decisions the work ended up informing, so someone browsing it on a desktop browser understands how this researcher thinks and not just what pretty outputs they produced."
+  }
+]

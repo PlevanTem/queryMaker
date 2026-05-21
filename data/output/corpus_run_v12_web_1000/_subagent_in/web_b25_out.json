@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_044_004",
+    "query_text": "Make a web app that shows all of a school's official accreditations and awards in one organized place, where each entry has the name of the certifying body, the year it was received, and a short description, and the whole list can be filtered by category so visitors can quickly find the kind of recognition they are looking for, like academic rankings or industry certifications."
+  },
+  {
+    "id": "q_web_044_005",
+    "query_text": "A browser-based gallery tool for showing off student capstone projects, where each project gets its own card with the student's name, project title, a short summary, and a link to the full write-up or demo, and visitors can browse by graduation year or subject area so they can find relevant work without scrolling through everything at once."
+  },
+  {
+    "id": "q_web_044_006",
+    "query_text": "Need a web app that lets prospective students walk through the campus virtually, with a clear list of locations like the library, dorms, and sports facilities that they can click through one by one, each showing a 360-degree photo and a brief description of what that space is used for, so they get a real sense of the campus before visiting in person."
+  },
+  {
+    "id": "q_web_044_007",
+    "query_text": "Make a website that highlights a university's academic research and published papers, organized so that each entry shows the title, the researchers involved, the year it was published, and the subject area it belongs to, and visitors can filter the list by department or year to find the specific kind of research they are interested in without having to dig through everything."
+  },
+  {
+    "id": "q_web_044_008",
+    "query_text": "Build a web app for promoting and organizing a school's open day and campus visit events, where each event has a date, a short description of what to expect, and a simple sign-up form, and the main screen shows upcoming events in order so families can quickly find the next available date and register their visit without any confusion."
+  },
+  {
+    "id": "q_web_044_009",
+    "query_text": "A browser-based tool that lays out all the scholarship programs and financial aid options a school offers, with each entry showing the scholarship name, the amount, who it is for, and how to apply, so prospective students can go through the whole list in a desktop browser and tick off the ones that match their situation before deciding where to apply."
+  },
+  {
+    "id": "q_web_044_010",
+    "query_text": "Build a web app that lists all of a university's international partner schools and exchange programs in one place, where each entry shows the partner university's name, the country it is in, the program duration, and any eligibility notes, and the whole directory can be filtered by region or program length so students can find the right exchange option for their schedule."
+  },
+  {
+    "id": "q_web_044_011",
+    "query_text": "Need a web app that collects and displays student testimonials and enrollment reviews in a clear format, where each review shows the student's name, their program, the year they enrolled, and what they said about their experience, and visitors can sort by program or rating so they can read the feedback most relevant to the course they are considering."
+  },
+  {
+    "id": "q_web_044_012",
+    "query_text": "Need a web app that walks prospective students through the admissions process step by step, where each step is listed clearly with a title, a plain-language explanation of what is required, and a checklist of documents or actions needed, so someone sitting at a desktop can follow the whole process from start to finish without missing anything important."
+  },
+  {
+    "id": "q_web_044_013",
+    "query_text": "Build a web app that shows off all the campus facilities and amenities through photos, where each facility has its own entry with a name, a short description, and a set of photos visitors can click through, and the app lets you filter by facility type like dining, sports, or study spaces so it is easy to find what you are looking for when browsing on a desktop."
+  },
+  {
+    "id": "q_web_045_001",
+    "query_text": "Need a web app that organizes and shows a research team's published work and key findings, where each research output has a title, the names of the people involved, the year it came out, and a brief plain-language summary, and users can filter the list by topic area or year so it is easy to find the right piece without scrolling through everything in a desktop browser."
+  },
+  {
+    "id": "q_web_045_002",
+    "query_text": "Make a web app that serves as a running feed of education news and updates, where each article or announcement shows the date, a clear headline, a short summary, and a link to read more, and the left side of the screen has a list of topic categories so readers on a desktop can quickly jump to the kind of education news they care about most."
+  },
+  {
+    "id": "q_web_045_003",
+    "query_text": "A faculty directory tool for a university website, where each professor's entry shows their photo, name, department, a short biography, and a list of their recent research topics, and the whole directory can be searched by name or filtered by department so anyone browsing in a desktop browser can quickly pull up the right person's profile and see what they work on."
+  },
+  {
+    "id": "q_web_045_004",
+    "query_text": "An online magazine-style app that features stories about alumni and their careers after graduation, where each story has the person's name, graduation year, current job, and a longer write-up about their journey, and readers can browse by industry or graduation decade so they can find the alumni whose paths are most similar to what they are hoping to do, all in a desktop browser."
+  },
+  {
+    "id": "q_web_045_005",
+    "query_text": "Build a web app that gathers open courseware and free lecture notes from a university in one easy-to-browse place, where each course entry shows the subject, the instructor's name, the level it is aimed at, and links to the available materials, and visitors can filter by subject area or format so they can find the right free learning resource without wading through a long unorganized list."
+  },
+  {
+    "id": "q_web_045_006",
+    "query_text": "Make a web app that works as a searchable library of graduate theses and dissertations, where each entry shows the title, the author, the year it was submitted, the department, and a short abstract, and users browsing in a desktop browser can filter by year, subject, or degree level so they can zero in on the research that is most relevant to what they are studying."
+  },
+  {
+    "id": "q_web_045_007",
+    "query_text": "Build a web app that keeps track of a department's seminar recordings and upcoming talks in one organized place, where each entry has the seminar title, the speaker, the date, and a link to the recording if one is available, and the list can be filtered by semester or topic so faculty and students on a desktop browser can find past talks or plan which upcoming ones to attend."
+  },
+  {
+    "id": "q_web_045_008",
+    "query_text": "A digital catalog tool for a university press, running in a desktop browser, where each book or academic title has its own entry showing the cover, the author's name, the publication year, a short description, and a link to order or download it, and visitors can browse by subject area or publication year to find the exact kind of scholarly work they are looking for."
+  },
+  {
+    "id": "q_web_045_009",
+    "query_text": "Need a web app that serves as a home for a series of educational podcasts hosted by university faculty, where each episode listing shows the host's name, the episode title, the subject it covers, and a player so you can listen right in the browser, and episodes can be filtered by topic or host so listeners can easily find the series they want to follow without hunting through a long unsorted list."
+  },
+  {
+    "id": "q_web_045_010",
+    "query_text": "Build a web app for a student-run online newspaper where articles are organized by section like news, opinion, and campus life, each post shows the headline, the author, the date, and a preview of the article, and readers on a desktop browser can browse by section or search by keyword so they can quickly find the stories they want to read without scrolling through everything at once."
+  },
+  {
+    "id": "q_web_045_011",
+    "query_text": "Need a browser-based tool that presents a university's yearly statistics and transparency figures in a clear and readable way, where key numbers like enrollment totals, graduation rates, and research funding are listed by category with a short explanation of what each figure means, and users can switch between years to compare how the numbers have changed over time."
+  },
+  {
+    "id": "q_web_045_012",
+    "query_text": "Need a web app that lists all the continuing education and professional certification courses a school offers, where each course entry shows the name, the subject area, the length, the cost, and who it is designed for, and visitors browsing on a desktop can filter by topic or schedule format so working adults can quickly find the right course to fit into their existing routine."
+  },
+  {
+    "id": "q_web_045_013",
+    "query_text": "Make a web app that archives academic conference papers and presentations in one organized place, where each entry shows the paper title, the author, the conference name, the year, and a link to the full text or slides, and users can filter by year or subject field so researchers browsing on a desktop browser can find the specific presentations they need without sorting through a huge unordered list."
+  },
+  {
+    "id": "q_web_046_001",
+    "query_text": "A promotional web app for a school's open courses, where each course has its own entry showing the course name, a short description of what you will learn, the schedule, and a clear sign-up button, and the home screen of the app groups courses by subject so visitors browsing in a desktop browser can quickly find the open course that fits what they want to learn and register right away."
+  },
+  {
+    "id": "q_web_046_002",
+    "query_text": "Build a web app for handling sign-ups to a school enrollment fair, where visitors can see a list of scheduled sessions with the date, time, location, and a brief description of what the fair covers, and they can fill in their name, contact details, and which session they want to attend so the school has a clear record of who is coming and the whole process works smoothly in a desktop browser."
+  }
+]

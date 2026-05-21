@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_029_006",
+    "query_text": "Create a task manager for my phone where steps unlock one by one, so you can only tap into step 2 after you finish step 1, step 3 after step 2, and so on down the list. I hate when I accidentally jump ahead and skip something important, so I want each next step to stay locked until the previous one is marked done, with a clear visual showing which step I'm currently on and how many are left."
+  },
+  {
+    "id": "q_scene_029_007",
+    "query_text": "A completed tasks archive for a mobile to-do manager where everything you finish gets saved and you can search through it all by typing any keyword, so when your boss asks what you did last month you can actually find it fast. The archive should list finished items with the date they were completed, and the search bar should filter results as you type so you're not scrolling through hundreds of old entries."
+  },
+  {
+    "id": "q_scene_029_008",
+    "query_text": "Create a to-do manager for my phone that looks at how long I usually take to finish similar tasks and suggests a realistic due date when I add something new, so I stop setting deadlines I obviously won't hit. When I type a task name the app should show a suggested date based on my past finishing times, and I can tap to accept it or change it if I want."
+  },
+  {
+    "id": "q_scene_029_009",
+    "query_text": "Make a planner app for my phone that takes the deadline I set on a task and automatically adds a time block to my calendar so I don't have to go do it manually every single time. When I set a due date and time on any task, it should show up as a calendar entry for that day, and I can see all my task deadlines laid out on the calendar on one screen so I know what days are already packed."
+  },
+  {
+    "id": "q_scene_029_010",
+    "query_text": "Build a habit tracker for my phone that shows a streak count for each habit I log every day, so I can see my longest run without breaking it, and also has a streak-protection option I can use once in a while when I genuinely miss a day by accident, so one missed day doesn't wipe out two months of effort. The main screen should show each habit with its current streak number and a row of the past week's check-ins at a glance."
+  },
+  {
+    "id": "q_scene_030_001",
+    "query_text": "A focus timer app for my phone that keeps running in the background even when I switch to another app, and sends a buzz or pulse to my phone when the session ends so I actually notice it, because right now I start a timer and then miss it completely when I'm deep in work. The timer should be simple to start, show the countdown when I flip back to it, and give a clear vibration alert when time is up."
+  },
+  {
+    "id": "q_scene_030_002",
+    "query_text": "Build a focus timer for my phone that also blocks the apps and sites I keep getting distracted by during a work session, so I can actually get through a solid chunk of time without falling into social media. I want to set a list of apps or websites to block at the start of each session, and the blocking turns off automatically when the timer runs out so I don't have to remember to unblock anything."
+  },
+  {
+    "id": "q_scene_030_003",
+    "query_text": "Build a daily logger for my phone where I can quickly note my energy level at different points in the day, like high, medium, or low, and it shows me a chart pairing those energy ratings alongside my focus session times so I can actually see if I tend to focus better in the morning or afternoon. I want to tap in my energy level in seconds and have the app draw the connection over a week or two of data."
+  },
+  {
+    "id": "q_scene_030_004",
+    "query_text": "A focus sound player for my phone that plays binaural beats or other concentration-boosting audio during work sessions, with a few preset options like deep focus, light focus, or relaxed concentration so I can just tap one and go. The player should run alongside a simple timer so when the focus session ends the audio stops too, and I can adjust the volume without leaving the app."
+  },
+  {
+    "id": "q_scene_030_005",
+    "query_text": "Make a reminder app for my phone that pings me every 20 minutes to look away from my screen and stare at something about 20 feet away for 20 seconds, because my eyes are killing me from staring at screens all day and I keep forgetting to take breaks. The app should let me start and stop the reminders with one tap, count down to the next break, and show a simple prompt on screen when it's time to look away."
+  },
+  {
+    "id": "q_scene_030_006",
+    "query_text": "Build a co-focus timer for my phone where I can link up with a friend or coworker and both of us run the same focus session at the same time, so we keep each other honest about actually sitting down to work. The app should let me share a session code with someone, show both our names and a shared countdown once they join, and let us see when the other person finishes their session."
+  },
+  {
+    "id": "q_scene_030_007",
+    "query_text": "Make a focus timer for my phone that shows a short journal prompt right when a session ends, so I can jot down one or two sentences about what I actually got done or what got in the way, before I forget. The prompts should change each time, and I want to be able to scroll back through past session notes so I can see how my focus sessions have been going over the past week or so."
+  },
+  {
+    "id": "q_scene_030_008",
+    "query_text": "Create a focus tracker for my phone that lets me set a daily goal for total focused minutes and shows a progress ring filling up as I complete sessions throughout the day, so I can tell at a glance whether I'm on track or falling behind. When I hit my daily goal the ring completes and I get a small celebration moment, and each new day the ring resets so I'm always working toward today's goal."
+  },
+  {
+    "id": "q_scene_030_009",
+    "query_text": "Need a focus stats tracker that works as a mobile app and shows me a simple comparison of how many minutes I focused on weekdays versus weekends, because I have a feeling I barely get anything done on weekends but I want to actually see the numbers. The chart should let me flip between the current week and past weeks, and show the total for each type of day side by side so the difference is obvious."
+  },
+  {
+    "id": "q_scene_030_010",
+    "query_text": "Create a productivity analyzer for my phone that tracks when during the day I log my focus sessions and figures out which hours I'm most consistently productive, then shows me a simple breakdown like a bar chart by hour so I can see my peak times at a glance. I want to be able to look back over a week or two of sessions to see the pattern, so I can start scheduling my hardest work during those hours."
+  },
+  {
+    "id": "q_scene_031_001",
+    "query_text": "Need a conference schedule app for my phone that lists all the sessions happening at an event by time slot, lets me tap any session to see the full title, speaker, and room location, and lets me mark the ones I want to attend so I have a personal lineup ready. I want the schedule laid out in time order for each day of the conference, so I can plan my day quickly each morning without hunting through a PDF."
+  },
+  {
+    "id": "q_scene_031_002",
+    "query_text": "Build a weekly review planner for my phone that reminds me once a week at a time I pick to sit down and do a quick reflection, then walks me through a set of short prompts asking things like what went well, what I want to carry into next week, and what I want to do differently. I want to be able to scroll back through past reviews so I can see how my thinking has shifted over the months."
+  },
+  {
+    "id": "q_scene_031_003",
+    "query_text": "Make a meeting planner for my phone where I can add team members in different cities, pick a meeting time, and immediately see what time that is for everyone on the list, so I stop accidentally scheduling calls at 2am for someone. The tool should show a simple list of each person's location and local time when I pick a slot, and flag times that fall outside normal working hours for anyone on the team."
+  },
+  {
+    "id": "q_scene_031_004",
+    "query_text": "Need a calendar planner for my phone that lets me copy an existing event with one tap and then just change the date on the copy, because I have a bunch of recurring-ish meetings that happen every few weeks at different times and retyping all the details every time is a pain. Once I duplicate an event I want to be able to edit the date, time, or title on the copy without touching the original."
+  },
+  {
+    "id": "q_scene_031_005",
+    "query_text": "Need a meeting notes app for my phone where I can pull up any calendar event and attach typed notes directly to it, so all my notes for a meeting live right alongside the event details instead of scattered across random documents. When I open a past event I should be able to read back everything I wrote for that meeting, and ideally search across all my meeting notes by keyword to find something specific from a past conversation."
+  },
+  {
+    "id": "q_scene_031_006",
+    "query_text": "A time tracker for my phone that splits my logged hours into work and personal categories and shows a pie chart of how my time is divided across a week, so I can actually see whether I'm working way more than I planned or leaving enough room for personal stuff. I want to tap to log time quickly by category, and the chart should update as I add entries so the balance is always visible on the main screen."
+  },
+  {
+    "id": "q_scene_031_007",
+    "query_text": "An out-of-office planner tool for my phone where I can write a custom away message, set the start and end dates for when I'll be away, and save multiple message templates for different situations like vacation, sick day, or conference travel. The app should show me which template is currently active and when it's set to turn off, so I can glance at it and know everything is in order before I go offline."
+  },
+  {
+    "id": "q_scene_031_008",
+    "query_text": "Make a class schedule app for my phone that shows my weekly timetable in a grid with each day across the top and time slots down the side, so I can see all my classes at a glance and tap any class block to check the room number, teacher name, and any notes I've added. I want to be able to set it up once at the start of the semester and have it just show me today's classes highlighted on the home screen every morning."
+  },
+  {
+    "id": "q_scene_031_009",
+    "query_text": "Build a sports calendar app for my phone that lets me add all the matches and games for my favorite team across a whole season, shows upcoming fixtures in a list with date and opponent, and lets me tap a game to mark whether I watched it and add a quick score or note. I want to be able to scroll through the full season at once and see which games I've already watched and which ones are still coming up."
+  },
+  {
+    "id": "q_scene_031_010",
+    "query_text": "Make a subscription tracker for my phone that keeps a list of all my paid subscriptions with the renewal date for each one, and sends me a reminder a few days before anything is about to renew so I have time to decide if I still want it. The main screen should show all my subscriptions sorted by which renewal is coming up soonest, with the name, price, and days until renewal visible at a glance."
+  }
+]

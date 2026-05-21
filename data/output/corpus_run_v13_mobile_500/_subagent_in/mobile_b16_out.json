@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_042_004",
+    "query_text": "Make a beach wave checker app for my phone that saves me the hassle of driving out only to find the surf is way too rough or too flat to bother. I want to look up a beach, see the current wave height, and get a simple suitability rating like good/okay/bad for swimming or surfing so I can decide in one glance whether it's worth the trip."
+  },
+  {
+    "id": "q_scene_042_005",
+    "query_text": "Need a weather advisory app for my phone that tells farmers and anyone growing crops what the weather means for their fields, like whether it's a good day to spray, harvest, or irrigate. The app should show a plain-language advisory for the current conditions and a heads-up for the next few days so I can plan without having to interpret raw weather data myself."
+  },
+  {
+    "id": "q_scene_042_006",
+    "query_text": "Create a weather suitability checker for outdoor events and festivals as a mobile app, because it's always a pain figuring out if an outdoor show or market day is going to be rained out or blisteringly hot. I want to type in an event date and location and get a clear verdict on whether conditions are suitable, with a breakdown of rain chance, temperature, and wind so I can decide whether to go or skip it."
+  },
+  {
+    "id": "q_scene_042_007",
+    "query_text": "A lightning and thunderstorm alert app for my phone that shows a live map of where lightning strikes are happening right now and sends a warning when a storm is getting close to my area. The home screen should show the map with strike markers updating in real time, plus a countdown-style alert telling me how many minutes away the storm is so I know when to get indoors."
+  },
+  {
+    "id": "q_scene_042_008",
+    "query_text": "Make a wildfire smoke and ash advisory app for my phone that tells me how bad the air is right now from nearby wildfires and whether it's safe to go outside. I want a quick health rating for my area, a note on what the ash and smoke levels mean for breathing, and a simple recommendation like stay in or okay to go out, so I stop guessing every time there's a fire season."
+  },
+  {
+    "id": "q_scene_042_009",
+    "query_text": "Create a destination weather comparison tool as a mobile app that lets me type in two or three places I'm considering for a trip and see their weather side by side for the dates I'm planning to go. I always waste time jumping between different apps trying to compare, so I want one screen that lines up temperature, rain chance, and overall conditions for each spot so I can just pick the best one."
+  },
+  {
+    "id": "q_scene_043_001",
+    "query_text": "Create a cycle hire station finder app for my phone that shows a map of all the nearby bike-share docking stations and tells me in real time how many bikes are available at each one. I hate walking to a station only to find it empty, so I want to tap a station on the map and see the current bike count and number of free docks before I leave the house."
+  },
+  {
+    "id": "q_scene_043_002",
+    "query_text": "Build a nearby electric scooter finder app for my phone that shows me all the rentable e-scooters within walking distance on a map, with battery level and estimated range shown for each one. I hate wandering around looking for a scooter with enough charge to get me where I'm going, so I want to open the app and immediately spot the closest one worth riding."
+  },
+  {
+    "id": "q_scene_043_003",
+    "query_text": "A night bus and last-service alert app for my phone that tells me exactly what time the last bus on my usual routes leaves tonight and sends a reminder before it goes so I stop missing it. The app should let me save my regular night routes and show a countdown to the last departure for each one, so I always know when I need to start heading to the stop."
+  },
+  {
+    "id": "q_scene_043_004",
+    "query_text": "Build a park-and-ride planner app for my phone that shows all the park-and-ride lots near my destination, their connecting bus or tram schedules, and the total parking cost for the day. I always end up paying for overpriced city parking because I never know if a park-and-ride is actually nearby or worth it, so I want to see schedule and price together in one place before I set off."
+  },
+  {
+    "id": "q_scene_043_005",
+    "query_text": "A mobile-first guide app for crossing borders by public transport, showing all the bus, train, and shuttle options between two countries, with departure times and how long each journey takes. I can never find clear info in one place when I need to cross a border without a car, so this app should show the full list of transport options and their schedules on a single screen so I can just pick one and go."
+  },
+  {
+    "id": "q_scene_043_006",
+    "query_text": "Need a timetable app for my phone that covers funicular railways and cable cars, because these are always the hardest to find schedules for when I'm out exploring hilly places. I want to search by location or line name, see the full day's departure times, and know the last ride up and last ride down so I never get stuck at the top of a hill after closing time."
+  },
+  {
+    "id": "q_scene_043_007",
+    "query_text": "Make a long-distance coach departure board app for my phone that shows upcoming coach departures from a bus station I choose, with the destination, departure time, and platform number listed clearly. I always have to stand squinting at physical boards at the station, so I want to check everything from my phone in advance and know which platform to head to before I even walk through the door."
+  },
+  {
+    "id": "q_scene_043_008",
+    "query_text": "Build a real-time arrival board app for my phone that shows predicted arrival times for buses and trains at any stop or station I search for, updating live like the screens at the stop itself. I spend too much time refreshing other apps that show wrong times, so I want one clean board that shows the next few arrivals with countdown minutes remaining so I know exactly when to leave the house."
+  },
+  {
+    "id": "q_scene_043_009",
+    "query_text": "Make a journey cost calculator app for my phone that lets me enter a multi-leg trip, like bus then metro then train, and shows the price for each leg plus a running total so I can see the full fare before I commit to the route. I always get surprised by how much a trip costs when you string different transport types together, and I want a quick breakdown I can check on the spot."
+  },
+  {
+    "id": "q_scene_044_001",
+    "query_text": "Make a food picker app for my phone that helps me and my friends stop arguing about what to eat for lunch or dinner. I want to spin a wheel or tap a button and have it randomly pick a type of food or a nearby restaurant category for us, with a short list of options I can customize, so we stop wasting fifteen minutes every day just deciding where to go."
+  },
+  {
+    "id": "q_scene_044_002",
+    "query_text": "Make a random meal picker app that I can open on my phone when I have absolutely no idea what to eat and just need something to decide for me. It should let me set a few preferences like spicy or mild, cheap or splurge, eat in or takeout, and then give me one clear pick with a short reason, so I stop standing in the kitchen staring into space every evening."
+  },
+  {
+    "id": "q_scene_044_003",
+    "query_text": "A little phone app that just tells me what to eat today when my brain is too tired to decide. You open it up, tap once, and it spins through a list of options based on your mood or hunger level and lands on something specific, like ramen or a sandwich place nearby, so you stop overthinking it and just go eat."
+  },
+  {
+    "id": "q_scene_044_004",
+    "query_text": "Build a what-should-I-eat-today app for my phone that randomly picks a meal idea for me each time I open it, pulling from a personal list of foods and restaurants I've added myself. I want to be able to save my favorites, mark ones I've tried recently so they cool down for a while, and get a fresh pick with one tap so I never have the same decision paralysis at mealtimes."
+  },
+  {
+    "id": "q_scene_044_005",
+    "query_text": "Make a daily food randomizer app for my phone that picks what I eat for each meal of the day so I stop making the same boring choices on autopilot. I want to give it a few categories I like and a rough budget, and it generates a meal suggestion for breakfast, lunch, and dinner that I can swap out with one tap if I feel like changing my mind."
+  },
+  {
+    "id": "q_scene_044_006",
+    "query_text": "Need a quick food decision app for my phone that ends the daily what-to-eat debate in our household. Everyone can add their own food preferences into the app, and when we can not agree, we hit a button and it fairly picks something that works for the group, maybe with a filter for whether we want to cook at home or order in."
+  },
+  {
+    "id": "q_scene_044_007",
+    "query_text": "Make a meal roulette app for my phone that spins through a set of restaurant types or dish ideas whenever I tap the spin button. I want to load it up with a personal list of cuisines and places I like, and every spin gives me one random pick so lunch decisions take five seconds instead of ruining my whole break trying to think of something."
+  },
+  {
+    "id": "q_scene_044_008",
+    "query_text": "Create a random food picker app for my phone that I can use when I genuinely cannot decide what to eat and just need the app to make the call for me. I want it to have a list of options I can edit and tag, like quick, hot, vegetarian, and so on, so the random pick is at least in the right ballpark for my mood that day."
+  },
+  {
+    "id": "q_scene_045_001",
+    "query_text": "Need a portion size reference app for my phone that shows me visually how much a proper serving of common foods actually looks like, because I have no idea what 100 grams of rice or a serving of pasta is supposed to look like on a plate. I want to look up a food, see a clear picture or comparison to a common object like a fist or a deck of cards, and get the calories and rough weight so I can stop guessing every meal."
+  },
+  {
+    "id": "q_scene_045_002",
+    "query_text": "Make a fasting and calorie tracker app for my phone that handles intermittent fasting windows alongside what I eat each day. I want to set my eating window, track when my fast starts and ends with a simple timer, and log meals with their calorie counts so I can see if I'm staying within my goal for the day, all in one app without needing to switch between a fasting timer and a food diary."
+  }
+]

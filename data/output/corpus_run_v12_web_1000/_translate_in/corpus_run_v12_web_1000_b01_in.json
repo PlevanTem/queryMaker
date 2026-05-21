@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_web_001_001",
+    "query_text": "Need a web app for my personal photography portfolio that shows each photo in a clean, immersive layout and also surfaces the camera settings right there on the page, things like shutter speed, aperture, ISO, and the lens I used, so people can appreciate both the image and the craft behind it, with a sidebar that lets you filter by camera body or shooting location."
+  },
+  {
+    "id": "q_web_001_002",
+    "query_text": "Create a visual showcase site for my open-source work that lives in the browser and feels like a beautifully curated gallery, where each project gets its own card with contribution counts and activity shown as something organic and artistic rather than dry numbers, and a summary section at the top that captures the overall story of my involvement across repos over time."
+  },
+  {
+    "id": "q_web_001_003",
+    "query_text": "Make a travel tracker web app with a world map at its heart where every country I have visited glows or changes color, and clicking any country opens a warm, moodboard-style photo log from that trip, with a few lines of memory attached to each image, so the whole thing feels like a living scrapbook you browse from a desktop browser."
+  },
+  {
+    "id": "q_web_001_004",
+    "query_text": "An illustration gallery web app with a beautifully editorial feel, where finished pieces are shown large and full-bleed across the desktop layout, and each one has a behind-the-scenes panel that walks through the process stages with rough sketches alongside the polished final, giving the whole thing the texture of a printed art book you flip through online."
+  },
+  {
+    "id": "q_web_001_005",
+    "query_text": "Need a personal bookshelf web app that looks like a real, curated collection rather than a list, where book covers are displayed in a warm, gallery-style arrangement and each title opens to show my reading notes, the date I finished it, and a little visual timeline of my reading history so I can see how my tastes have shifted across the years."
+  },
+  {
+    "id": "q_web_001_006",
+    "query_text": "Build a wedding announcement website that feels genuinely romantic and carefully composed, with a countdown timer that has a soft, elegant aesthetic, a section that tells our story in a flowing timeline of photos and little written moments, and the whole thing should feel like something you would actually want to save and revisit in a desktop browser before the big day."
+  },
+  {
+    "id": "q_web_001_007",
+    "query_text": "Build a web app that turns my personal music listening history into something that actually looks gorgeous, with my top tracks and artists shown through rich, moody visuals rather than plain tables, a color palette pulled from album art, and a timeline of my listening habits over the past year so the whole thing feels like an annual report for my taste in music."
+  },
+  {
+    "id": "q_web_001_008",
+    "query_text": "Need a freelancer portfolio website that feels warm and personal rather than corporate, where my services are laid out in a clear but beautifully styled way across the desktop layout, and client testimonials get their own dedicated space that reads like a curated wall of appreciation, each quote given room to breathe with the client name and a little context about the project."
+  },
+  {
+    "id": "q_web_001_009",
+    "query_text": "Make a personal academic showcase site for desktop browsers where my publications are presented with a refined, typographic elegance rather than a plain list, with each paper getting a well-styled entry that includes the abstract, the journal name, and a citation count displayed in a way that feels considered and tasteful, along with a visual summary of my research themes."
+  },
+  {
+    "id": "q_web_001_010",
+    "query_text": "Need a recipe archive web app that feels like a beautifully designed food magazine, where each recipe page is anchored by a large, carefully styled food photo and the ingredients and steps are laid out with generous spacing and a warm color palette, so browsing through my collection on a desktop feels as enjoyable as flipping through an actual cookbook."
+  },
+  {
+    "id": "q_web_001_011",
+    "query_text": "Need a marathon history web app that captures all my races in a timeline that feels cinematic rather than spreadsheet-like, where each event shows the course, my finishing time, and a photo from the day, and a dedicated personal records section highlights my bests with a sense of visual drama, so looking back at years of running actually feels inspiring in a browser."
+  },
+  {
+    "id": "q_web_001_012",
+    "query_text": "Create a film watching tracker for desktop browsers that groups my entire watch history by decade in a visually rich layout, with movie posters as the primary visual currency and my personal star ratings shown in a style that feels like a curated wall rather than a database, and a side area that surfaces my favorite genres and directors based on what I have actually watched."
+  },
+  {
+    "id": "q_web_001_013",
+    "query_text": "Build a vinyl record collection site that looks and feels like browsing through a well-loved record shop, where album covers are the star of the show in a warm desktop layout, each record opens to display its genre, year, and a short note I can write about why I love it, and the overall mood of the site should feel as tactile and curated as the collection itself."
+  },
+  {
+    "id": "q_web_001_014",
+    "query_text": "Build a baby milestone journal website that the whole extended family can visit in a browser, with a soft and elegant visual style where photos are arranged chronologically along a gentle timeline, each milestone moment labeled with an age and a little caption, so grandparents and relatives can follow along and the whole thing feels like a beautifully kept family keepsake."
+  },
+  {
+    "id": "q_web_002_001",
+    "query_text": "Make a recipe journal web app that feels like a personal food magazine I actually want to browse, where recipes are organized by season with a visual warmth that changes as you move through the year, each entry can hold a photo I took of the dish along with my notes on how it turned out, and the whole thing is something I can open in a desktop browser and actually feel good looking at."
+  },
+  {
+    "id": "q_web_002_002",
+    "query_text": "A travel memoir site where each destination gets its own richly illustrated journal entry, the kind of web app you would happily sit with at a desktop for an hour, where photo journals from each place are laid out with an editorial quality and the writing has room to breathe alongside the images, so the whole thing reads like a personal travel book you can revisit and add to over time."
+  },
+  {
+    "id": "q_web_002_003",
+    "query_text": "Need a personal book review web app where each entry looks genuinely considered, with the cover art displayed prominently, my review written out in a clean and readable style, and a reading progress log that gives a sense of the journey through the year in a visually pleasing way, the kind of thing that feels like a literary journal rather than a checklist when you open it in a browser."
+  },
+  {
+    "id": "q_web_002_004",
+    "query_text": "Build a movie diary web app for desktop browsers where I can log every film I watch and give it a personal rating alongside a few sentences of reflection, with the collection displayed in a cinematic, poster-led layout grouped by year, and a sense that browsing through old entries feels like wandering through a beautifully organized personal archive rather than scrolling a plain list."
+  },
+  {
+    "id": "q_web_002_005",
+    "query_text": "Need a music listening history site that lets me annotate albums with my own thoughts and memories, displayed in a warm, atmospheric layout in a desktop browser where album covers carry the visual weight and each annotation feels like a personal liner note, with a timeline view that shows how my listening has changed across months so the whole thing reads like a musical autobiography."
+  },
+  {
+    "id": "q_web_002_006",
+    "query_text": "A poetry and creative writing site for desktop browsers where each piece is given the visual respect it deserves, with thoughtful typography and generous white space so the words feel like they are on a printed page, a simple archive that groups work by theme or mood rather than just date, and a reading experience that feels unhurried and beautiful rather than like a generic blog."
+  },
+  {
+    "id": "q_web_002_007",
+    "query_text": "Need a personal art portfolio web app where each finished piece is shown at a scale that does it justice in a desktop browser, with a dedicated area for sketchbook process galleries that let viewers see the early rough stages alongside the final work, and the overall design should feel like a considered artist monograph rather than a generic portfolio grid."
+  },
+  {
+    "id": "q_web_002_008",
+    "query_text": "Need a garden journal web app that tracks how my plants grow across the seasons with a visual warmth that mirrors the feel of being outside, where I can attach photos at different stages of growth for each plant, the layout in a desktop browser should feel lush and organic rather than clinical, and looking back through the log should feel like leafing through a beautifully kept nature diary."
+  },
+  {
+    "id": "q_web_002_009",
+    "query_text": "A fitness transformation journal web app where the visual heart of it is a personal photo log that shows how my body has changed over months and years, laid out with tasteful before-and-after comparisons in a desktop browser, with milestone moments highlighted in a way that feels motivating and human rather than like a fitness app, alongside brief personal notes attached to the big turning points."
+  },
+  {
+    "id": "q_web_002_010",
+    "query_text": "Make a language learning diary web app that feels beautiful to use in a desktop browser, where I can log new vocabulary with example sentences written in my own hand so to speak, study notes organized by theme or grammar topic, and a visual sense of progress over time that feels warm and encouraging rather than like a drill, so opening it each day actually feels like a pleasure."
+  },
+  {
+    "id": "q_web_002_011",
+    "query_text": "Build a companion website for my podcast that has the aesthetic of a carefully designed independent publication in a desktop browser, where each episode gets its own page with show notes laid out in an inviting and readable style, a running archive of all episodes presented with a consistent visual identity, and a tone that feels personal and crafted rather than auto-generated."
+  },
+  {
+    "id": "q_web_002_012",
+    "query_text": "A personal newsletter archive that feels like a beautiful literary magazine online, where each issue has its own cover feel and the whole thing lives as a public website readers can browse and subscribe to, with a clean reading layout that makes the writing the star, maybe a soft serif font and generous white space, and a simple way for visitors to sign up so they never miss a new issue."
+  },
+  {
+    "id": "q_web_002_013",
+    "query_text": "A companion website for a video essay channel where each essay gets its own page with the full transcript laid out beautifully beside the embedded video, the kind of reading experience that feels considered and slow rather than rushed, with a warm typographic palette and a browsable archive of all past essays so visitors can explore by theme or mood, all working in the browser on a desktop screen."
+  },
+  {
+    "id": "q_web_002_014",
+    "query_text": "Create a photography portfolio web app that feels like a curated gallery book, where each photo opens into its own full story, the kind where the image breathes at the top and then the writing flows beneath it alongside the camera details like lens and settings shown in a quiet, understated way, and the overall site has a consistent dark or neutral tone that lets the colors in the photos do all the talking."
+  },
+  {
+    "id": "q_web_003_001",
+    "query_text": "Build a daily reading log tracker as a web app where I can add a book, mark how many pages I read each day, and write short notes or quotes I want to remember from that session, with a list on the side showing all my books sorted by the ones I'm currently reading first, and a way to see all my annotations for a given book in one place so I can find things later."
+  },
+  {
+    "id": "q_web_003_002",
+    "query_text": "Create a language learning progress tracker for self-studiers as a browser-based tool where I can log how many minutes I studied each day, track words I've learned and mark ones I'm still shaky on, and see a simple chart showing my study streaks over the past few weeks so I can tell if I'm keeping up a good pace or falling behind."
+  },
+  {
+    "id": "q_web_003_003",
+    "query_text": "A coding practice journal app for self-taught learners that runs in the browser, where I can log each practice session with the topic I worked on, the problems I tried, and a quick note about what clicked or what I'm still confused about, with a running list of all past sessions I can scroll through and filter by topic so I can see my progress over time."
+  },
+  {
+    "id": "q_web_003_004",
+    "query_text": "Create a personal wiki app for the browser where I can write notes on any topic and link them to each other by name so that clicking a linked word in one note takes me straight to that other note, with a simple sidebar listing all my notes alphabetically so I can jump around easily, and a way to search all my notes by keyword when I can't remember where I wrote something."
+  },
+  {
+    "id": "q_web_003_005",
+    "query_text": "Create a math practice tracker as a web app where I can log each problem I attempt, mark it as correct or wrong, and leave a note about which step tripped me up when I got it wrong, with a running count of my daily streak and a breakdown showing which types of problems I get wrong most often so I know what to focus on next."
+  },
+  {
+    "id": "q_web_003_006",
+    "query_text": "Create a course progress tracker as a browser-based app where I can add all the online courses I'm taking, break each one down into lessons or chapters, and check them off as I finish them, with a simple progress bar showing how far along I am in each course and a log showing which lessons I completed on which dates so I can look back and see how consistent I've been."
+  },
+  {
+    "id": "q_web_003_007",
+    "query_text": "Make a podcast notes collector as a web app where I can add an episode by title and show name, write down the key ideas I want to remember, and highlight the lines that stood out most, with all my episodes listed in a sidebar I can browse in the browser on my desktop, and a search bar so I can find a specific note or idea across all the episodes I've saved."
+  },
+  {
+    "id": "q_web_003_008",
+    "query_text": "Need a vocabulary logger for the browser where I can track all the foreign language movies, shows, and books I consume, add new words I picked up from each one with a quick meaning note, and see a running list of all my saved words that I can filter by the source I learned it from so I can review words from a specific show or book in one go."
+  },
+  {
+    "id": "q_web_003_009",
+    "query_text": "A typing trainer app that works in the browser on a desktop, where I can do timed typing exercises and see my words per minute and accuracy score at the end of each one, with a history log that saves every session so I can track whether my speed is improving over time, and a simple chart showing my average score by week so the progress is easy to see at a glance."
+  },
+  {
+    "id": "q_web_003_010",
+    "query_text": "Make a TED talk notebook app for desktop browsers where I can save any talk by title and link, write my own notes and reactions while or after watching, and mark the specific lines or ideas I want to come back to, with all my saved talks in a list I can sort by date saved or by topic, so I can actually find and use those takeaways instead of forgetting them the next day."
+  },
+  {
+    "id": "q_web_003_011",
+    "query_text": "Make a skill map tool for the browser where I can lay out all the things I want to learn in a branching chart, connect related skills to each other, and mark each one as not started, in progress, or done, with the ability to click any skill and add a few notes about what I've been doing to learn it, so I can see the whole picture of my learning plan at once on a desktop screen."
+  },
+  {
+    "id": "q_web_003_012",
+    "query_text": "A reading list manager for academic papers that works as a web app, where I can add a paper by title and author, paste in the key quotes or findings I want to save, and tag each paper with a topic so I can filter by subject later, with a clear list view in the browser showing all my papers, which ones I've finished reading, and which ones still have highlights waiting for me to review."
+  },
+  {
+    "id": "q_web_003_013",
+    "query_text": "Make a study planner for certification exams as a browser-based app where I can enter my exam date and see a countdown showing exactly how many days I have left, then break the whole syllabus into topics I need to cover and set a target date for each one, with a checklist I can tick off as I go so I always know at a glance whether I'm on track or need to speed up."
+  },
+  {
+    "id": "q_web_003_014",
+    "query_text": "Create a memory training app for the browser where I can practice different techniques like creating stories or visual associations to memorize lists, then test myself and get a score based on how much I recalled correctly, with a history log showing all my past test scores by technique and date so I can see which methods are actually working best for me over time."
+  },
+  {
+    "id": "q_web_004_001",
+    "query_text": "Need a resume builder tool that runs in the browser where I can fill in my work history, skills, and education and immediately see a clean formatted resume take shape on the right side of the screen, plus it should suggest keywords I might be missing based on the job type so my resume has a better chance of getting through automated screening, and I can download the final version when I'm done."
+  },
+  {
+    "id": "q_web_004_002",
+    "query_text": "Build a personal notes manager as a web app where I can write notes on anything and link one note to another just by typing the note title in brackets, so clicking that link jumps me straight to the connected note, with a sidebar listing all my notes so I can navigate quickly, and a simple search that finds notes by keyword so I stop losing track of things I already wrote down somewhere."
+  },
+  {
+    "id": "q_web_004_003",
+    "query_text": "Create a Pomodoro timer as a web app in the browser where I can set my focus and break lengths, start a session, and get a sound alert when each interval ends, with a log underneath that records every session I complete with the date, how many pomodoros I did, and what task I tagged the session to, so at the end of the week I can actually see where my time went."
+  },
+  {
+    "id": "q_web_004_004",
+    "query_text": "Create a subscription tracker as a browser-based tool where I can add all my recurring charges with the name, cost, billing cycle, and next renewal date, see the total I'm spending each month in one clear number at the top, and get a visual calendar showing when each one is coming up so I stop getting surprised by charges I forgot about."
+  },
+  {
+    "id": "q_web_004_005",
+    "query_text": "A book tracker app for the browser where I can keep a list of everything I want to read, everything I'm currently reading, and everything I've finished, with a simple way to mark my current page so I always know where I left off, and a spot to leave a short rating and a note when I finish a book so I can look back later and remember what I thought of it."
+  },
+  {
+    "id": "q_web_004_006",
+    "query_text": "A daily journal app that runs in the browser where I can write an entry each day and pick a mood from a small set of options like good, okay, rough, or great, with a chart somewhere on the app that shows how my mood has shifted over the past few weeks so I can notice if there are patterns, like always feeling low on certain days or after certain kinds of weeks."
+  },
+  {
+    "id": "q_web_004_007",
+    "query_text": "Create a meal planner as a web app where I can fill in what I want to eat for each day of the week across breakfast, lunch, and dinner, and then the app pulls together a combined grocery list from all those meals so I only have to go through it once at the store, with a way to save meals I make often so I can quickly add them to future weeks."
+  },
+  {
+    "id": "q_web_004_008",
+    "query_text": "Create a personal contacts manager as a web app in the browser where I can add the people in my life with their details, a note about how I know them, and the last time I reached out, so I can actually keep track of relationships that tend to drift, with a way to flag people I want to check in with soon and see them at the top of the list as a reminder."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_011_001",
+    "query_text": "Make a group manager tool for my phone where I can remove a member from any group by tapping their name, writing a short reason for kicking them, and then hitting a confirm button before it actually goes through, because right now there is no step between selecting someone and booting them and I keep doing it by accident with no record of why."
+  },
+  {
+    "id": "q_scene_011_002",
+    "query_text": "Create a writing tool for mobile where whenever I try to throw away a draft I get a quick prompt asking if I want to save a backup copy first, so I stop losing half-finished notes that I deleted by accident thinking I had already saved them somewhere."
+  },
+  {
+    "id": "q_scene_011_003",
+    "query_text": "Create a mobile tag manager app where I can select a bunch of items at once and strip a tag off all of them in one go rather than going into each item one by one, because right now removing a tag from thirty notes takes forever and I always give up halfway through."
+  },
+  {
+    "id": "q_scene_011_004",
+    "query_text": "Make a calendar tool for my phone where when I delete a repeating event it asks me whether I want to remove just this one occurrence, all of them, or everything from today forward, so I stop wiping out an entire series when I only meant to cancel one date."
+  },
+  {
+    "id": "q_scene_011_005",
+    "query_text": "Need a security tool on my phone that lets me see all the devices I have trusted and remove any of them, but requires me to re-enter my password or do a quick verification before the removal actually goes through so random people cannot just open my phone and quietly remove devices."
+  },
+  {
+    "id": "q_scene_011_006",
+    "query_text": "A key manager app for mobile where I can see all the API keys I have created, tap one to revoke it, and before it gets deleted the app shows me a quick summary of how many times it was used and when it was last active, so I know if I am revoking something still in use."
+  },
+  {
+    "id": "q_scene_011_007",
+    "query_text": "Need a project manager on my phone where when I go to delete a whole project it asks me whether I want to archive the sub-tasks under it or delete those too, so I do not lose a bunch of individual task notes just because I closed the parent project they were sitting in."
+  },
+  {
+    "id": "q_scene_011_008",
+    "query_text": "Need a shopping cart tool for my phone that lets me remove items but also gives me a quick one-tap option to save something to a wishlist instead of deleting it entirely, because I always end up removing things I actually want later but forget what they were called."
+  },
+  {
+    "id": "q_scene_011_009",
+    "query_text": "Build a messaging tool for my phone where I can recall a message I sent within a short time window, and before I confirm the recall it tells me whether the other person has already seen it, so I can decide if recalling it even makes sense or if I should just send a follow-up instead."
+  },
+  {
+    "id": "q_scene_011_010",
+    "query_text": "Build a document annotation tool on my phone where I can delete a comment I added to a shared file, but it keeps the reply thread visible so everyone else can still see the conversation that happened around my original note even after I remove it."
+  },
+  {
+    "id": "q_scene_012_001",
+    "query_text": "Build a personal profile editor for mobile that has a clean, minimal section just for links, where I can add my portfolio address plus a few custom links, each with its own little label, and the whole thing feels like a curated page rather than a cluttered list of raw URLs."
+  },
+  {
+    "id": "q_scene_012_002",
+    "query_text": "Create a profile settings app for my phone with a soft, airy birthday and personal details section where each field has its own little privacy toggle right next to it, so the whole thing looks intentional and tasteful rather than a blunt form demanding all my information at once."
+  },
+  {
+    "id": "q_scene_012_003",
+    "query_text": "Need a billing manager on my phone that feels polished and trustworthy when I update my payment details or mailing address, with a clean step-by-step flow that does not feel rushed, and some reassuring visual cue that my information is being handled securely before I hit save."
+  },
+  {
+    "id": "q_scene_012_004",
+    "query_text": "Create a subscription manager app for my phone with a beautiful side-by-side tier comparison that shows what I currently have versus what I could upgrade to, and a single prominent tap to upgrade that does not make me hunt through several screens to find where to actually do it."
+  },
+  {
+    "id": "q_scene_012_005",
+    "query_text": "A professional profile editor for mobile where the job title and company fields feel elegant and deliberate, maybe with a soft badge or checkmark that appears once the details are verified, so my profile feels credible and put-together rather than just a plain text box anyone could fill in with anything."
+  },
+  {
+    "id": "q_scene_012_006",
+    "query_text": "Make a mobile interests picker that feels more like browsing a curated mood board than filling out a checklist, where I can tap topic tiles to select the things I care about and the selected ones light up or shift in a way that feels satisfying and visually cohesive."
+  },
+  {
+    "id": "q_scene_012_007",
+    "query_text": "Need a profile personalization tool on my phone where I can pick a color accent for my profile and see it actually applied in a live preview right there on the same screen, so I can try out a few options and feel confident about the choice before saving it."
+  },
+  {
+    "id": "q_scene_012_008",
+    "query_text": "A personal data export tool for mobile that looks calm and reassuring rather than technical, where I can tap a button to request a download of all my data, and then see a gentle status indicator showing where the export is in the process so I am not left wondering if anything is happening."
+  },
+  {
+    "id": "q_scene_012_009",
+    "query_text": "Create a mobile account manager that handles deleting an account with a graceful, step-by-step confirmation process that feels considered rather than alarming, with a clear note at each step about what data will be removed so the whole experience feels respectful and intentional."
+  },
+  {
+    "id": "q_scene_012_010",
+    "query_text": "Create a mobile account settings tool for changing my email address that has a clean, two-step verification flow, and includes a reassuring note about a grace period where I can roll back to my old address in case something goes wrong, so the whole thing feels safe and polished."
+  },
+  {
+    "id": "q_scene_013_001",
+    "query_text": "Need a mobile downloader tool that lets me browse a collection and pick specific files to save to my phone rather than grabbing everything at once, and shows me the total estimated size of what I have selected before I start, so I know if I have enough storage before committing to the download."
+  },
+  {
+    "id": "q_scene_013_002",
+    "query_text": "Need a download manager app on my phone where I can see all my active and queued downloads in one place, pause any of them when I want to save data, resume them later without starting over, and move things up or down in the queue so the most important file always finishes first."
+  },
+  {
+    "id": "q_scene_013_003",
+    "query_text": "Create a travel prep tool for my phone that lets me download a full offline content package before a trip, so everything I need is already saved locally and works without any signal, because I am always stuck somewhere with no internet trying to find things I forgot to grab beforehand."
+  },
+  {
+    "id": "q_scene_013_004",
+    "query_text": "Build a contact import tool on my phone that can read a CSV file or vCard and walk me through matching the columns to the right fields like name, phone, and email, so I can bring in a whole list of contacts at once without manually retyping every single person."
+  },
+  {
+    "id": "q_scene_013_005",
+    "query_text": "Build a health tracker on my phone that can pull in my existing workout and fitness data from another app I already use, so I do not have to re-enter months of history by hand, and shows me a simple mapping step so I can confirm which data types are being brought over correctly."
+  }
+]

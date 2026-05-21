@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_032_001",
+    "query_text": "Build a mobile app that pulls all the reviews from an app store listing and tells me whether people are happy or frustrated, without me having to read through hundreds of comments myself. I want to see a summary of the overall mood, a breakdown of what people praise versus what they complain about, and a simple score so I can tell at a glance whether sentiment is getting better or worse over time."
+  },
+  {
+    "id": "q_scene_032_002",
+    "query_text": "A tracker for my phone that logs all my home energy and utility usage each month, like electricity, water, and gas, so I can see exactly where the money is going and which bill keeps creeping up. The main screen should show my totals for the current month compared to last month, and tapping any utility should show a simple chart of how it has changed over the past several months."
+  },
+  {
+    "id": "q_scene_032_003",
+    "query_text": "Need a mobile app that shows our team how fast we are finishing work each sprint and whether we are getting better or worse over time. I want a simple bar chart that compares how much we planned versus how much we actually completed each sprint, so when someone asks why we keep missing deadlines I can pull out my phone and show them a real picture of what is happening."
+  },
+  {
+    "id": "q_scene_032_004",
+    "query_text": "Need a mobile app that tracks our subscription revenue each month and shows whether it is growing, flat, or dropping. I want to log new subscribers, cancellations, and upgrades, then see the total monthly revenue as a number at the top and a line chart below it so I can spot if a bad month is a one-off or the start of a real trend."
+  },
+  {
+    "id": "q_scene_032_005",
+    "query_text": "Make a mobile app that shows me how much we are spending on each advertising channel and what we are getting back for every dollar we put in. I want to enter our weekly spend and revenue for things like search ads, social ads, and video ads, then see a simple comparison so I can stop guessing which channel is actually worth the money and which one is quietly draining the budget."
+  },
+  {
+    "id": "q_scene_032_006",
+    "query_text": "Build a mobile app that tracks whether our deliveries are hitting the promised time window or running late, because right now I have no fast way to check compliance and customers call us before I even know there is a problem. Each delivery should have a due time and an actual delivered time, and the app should show me a running percentage of on-time deliveries this week so I can see at a glance whether we are meeting our targets."
+  },
+  {
+    "id": "q_scene_032_007",
+    "query_text": "Need a mobile app that keeps a report of each student's scores alongside the class average, so when a parent asks how their child is doing I can pull up a clear picture in seconds instead of digging through spreadsheets. The app should let me enter scores per subject and per student, show each student's trend over the term, and highlight anyone who is falling significantly below the class average."
+  },
+  {
+    "id": "q_scene_032_008",
+    "query_text": "Build a mobile app that shows me how many people registered for an event versus how many actually showed up, so I can stop manually comparing two separate lists after every event. I want to track each event by name, see the total registrations, confirmed attendees, and actual check-ins in a simple funnel view, and compare attendance rates across multiple events so I know which ones get the best turnout."
+  },
+  {
+    "id": "q_scene_032_009",
+    "query_text": "Build a mobile app for tracking how often products fail quality checks each week, because right now I jot numbers on paper and never actually go back to see if the defect rate is going up or down. I want to log the number of items inspected and how many failed each day, then see a chart on my phone that shows whether the defect rate is trending in the right direction over the past few weeks."
+  },
+  {
+    "id": "q_scene_032_010",
+    "query_text": "A mobile app that shows me which content categories are performing well and which ones are quietly underperforming, so I can stop spending time on topics that nobody engages with. The home screen should list each category with its key numbers like views and shares, and tapping a category should show a simple chart of how it has performed week by week so I can spot patterns."
+  },
+  {
+    "id": "q_scene_033_001",
+    "query_text": "Need a note-taking app for my phone that feels clean and beautiful, where I can drop images or attach files directly into a note so everything stays in one place instead of scattered across my camera roll and email. The note editor should feel light and airy, with photos displaying as nice previews right inside the note and attached files showing as a tidy little row so the whole thing looks polished when I scroll back through it."
+  },
+  {
+    "id": "q_scene_033_002",
+    "query_text": "Build a writing app for my phone that has a warm, minimal feel, where I can take any note or document I have written and send it out as a PDF, a Word file, or a plain Markdown file depending on who I am sharing it with. The export options should be easy to reach after writing, and the resulting files should look clean and well-formatted so I am not embarrassed to send them to someone."
+  },
+  {
+    "id": "q_scene_033_003",
+    "query_text": "Create a note-taking app for mobile that has a satisfying, interconnected feel, where I can mention another note inside any note I am writing and the two notes remember they are linked to each other. I want to tap a link inside a note and jump straight to the connected note, and I also want each note to show a small section at the bottom listing every other note that links back to it, so I can see how my ideas are related."
+  },
+  {
+    "id": "q_scene_033_004",
+    "query_text": "Need a notes app for my phone that lets me label every note with one or more topics so I can find related notes just by tapping a label, and everything should stay in sync across my devices so my notes on my phone match what I see anywhere else. The labeling system should feel visual and satisfying, like little colored flags on each note, and the app should have a clean, uncluttered look that makes browsing feel pleasant."
+  },
+  {
+    "id": "q_scene_033_005",
+    "query_text": "Create a writing app for my phone that strips away every distraction and gives me a calm, full-screen space to write, with a word count goal I can set at the start of each session so I know how far I have to go. I want the goal to feel motivating rather than stressful, maybe a subtle progress indicator that fills up as I write, and the whole experience should feel serene and focused so getting words down actually feels enjoyable."
+  },
+  {
+    "id": "q_scene_033_006",
+    "query_text": "Need a notes app for mobile that saves a history of every edit I make to a note, so I can go back and look at an earlier version of something I was working on and bring back the wording I had before. I want to see a timeline of when changes were made, tap any point in the history to preview what the note looked like then, and restore it with one tap if that version was better than what I have now."
+  },
+  {
+    "id": "q_scene_033_007",
+    "query_text": "Make a notes app for mobile that lets me share any note by generating a link I can send to someone, and I want to choose whether that person can just read it or actually make edits to it. The shared note should look beautiful when someone opens it on their phone, like a nicely laid-out page rather than a raw text dump, and I should be able to turn the link off whenever I want to stop sharing."
+  },
+  {
+    "id": "q_scene_033_008",
+    "query_text": "Need a private notes app for my phone that lets me lock any note behind a password so certain things stay truly personal and I feel safe writing whatever I want. The locked notes should look indistinguishable from regular notes in the list, and when I tap one it should ask for my password before showing anything, so if someone picks up my phone they have no idea there is private content there."
+  },
+  {
+    "id": "q_scene_033_009",
+    "query_text": "Need a notes app for my phone where I can attach a reminder or a deadline to any note, so important things I have written down actually surface again at the right moment instead of getting buried. The reminder should feel like a gentle nudge tied to that specific note, and when it goes off I want to be taken straight to the note so I can act on it right away without hunting for it."
+  },
+  {
+    "id": "q_scene_033_010",
+    "query_text": "An app for my phone designed for writing step-by-step process guides, where each procedure is laid out as a numbered list I can build up one step at a time and edit whenever the process changes. The steps should be easy to reorder by dragging them around, and when someone follows the guide they should be able to tap through each step and mark it done so nothing gets skipped."
+  },
+  {
+    "id": "q_scene_034_001",
+    "query_text": "Build a mobile reading habit app that nudges me to read at least 10 pages every day, because I keep meaning to read more but the evening comes and I have forgotten entirely. I want to log how many pages I read each day with a quick tap, see a streak of how many days in a row I have hit my goal, and get a friendly reminder at a time I choose if I have not logged anything yet."
+  },
+  {
+    "id": "q_scene_034_002",
+    "query_text": "Need a journaling app for my phone that sends me a gratitude prompt every day at a set time so I actually sit down and write something, because I always say I want to journal but I never start. I want a new question each day to answer, a place to type a few sentences, and a way to scroll back through my past entries on good days when I need a reminder of what is going well."
+  },
+  {
+    "id": "q_scene_034_003",
+    "query_text": "Create a breathing exercise app for my phone that reminds me to pause and breathe whenever I am likely to feel stressed, like before a big meeting or late in the afternoon when my energy crashes. I want to be able to set a few specific times or triggers for reminders, tap into a guided breathing exercise with a simple visual that expands and contracts to pace my breathing, and log each completed session so I can see how consistent I am being."
+  },
+  {
+    "id": "q_scene_034_004",
+    "query_text": "Build a mobile reminder app that helps me wind down from screens in the evening by sending a gentle alert at a time I set, because I keep scrolling on my phone way longer than I intend to and then sleep badly. I want the reminder to show a calming message I can customize, a checklist of small offline activities I like to do before bed, and a log so I can see how many nights I actually followed through."
+  },
+  {
+    "id": "q_scene_034_005",
+    "query_text": "Need a mobile caffeine tracker that lets me log each coffee, tea, or energy drink throughout the day and warns me when I am getting close to my personal limit or when it is past the time I should stop drinking caffeine. I want to enter what I had and roughly when, see a running total for the day, and get an alert in the early afternoon reminding me that anything after this point will probably mess with my sleep."
+  }
+]

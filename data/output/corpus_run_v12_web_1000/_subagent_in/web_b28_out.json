@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_050_001",
+    "query_text": "Need a web app for managing a parent communication group where the class teacher can post announcements and parents can reply or ask questions in one shared space, with a left sidebar listing all announcements by date and the main area showing the full thread so everything stays organized and easy to scroll through on a desktop browser."
+  },
+  {
+    "id": "q_web_050_002",
+    "query_text": "Create a web app that works as a peer tutoring marketplace for university students, where students looking for help can browse tutors by subject and course, see each tutor's background and hourly rate, and send a booking request, while tutors can set up a simple profile listing what they can teach and when they're free, all usable in a desktop browser with a clean two-column layout."
+  },
+  {
+    "id": "q_web_050_003",
+    "query_text": "Create a study group finder app for online course students where you can post what class you're taking and what kind of study partner you're looking for, and browse others doing the same, with a simple browser-based interface that shows open groups on one side and a short profile or message thread on the other so people can actually connect and start studying together."
+  },
+  {
+    "id": "q_web_050_004",
+    "query_text": "Build a web app that helps graduate students find faculty mentors to work with, where students can browse professor profiles by research area and then send a short intro message to request a mentorship connection, and professors can list their interests and whether they're currently taking students, all laid out nicely for desktop browsers with a sidebar for filtering by department or topic."
+  },
+  {
+    "id": "q_web_050_005",
+    "query_text": "Build a collaborative note-sharing app for students in the same course where anyone in the cohort can add lecture notes to a shared wiki-style space, edit or expand what someone else wrote, and leave comments on specific sections, all running in a desktop browser so you can have the notes open on one side while working on the other, making it easy to build up a shared knowledge base over the semester."
+  },
+  {
+    "id": "q_web_050_006",
+    "query_text": "Create a web app for a coding bootcamp cohort that combines a community space with a job board, where students and alumni can post questions, share resources, and cheer each other on in a group feed, while a separate jobs section lets people post openings or share leads they've heard about, all accessible in a browser with a sidebar to switch between the community and jobs areas."
+  },
+  {
+    "id": "q_web_050_007",
+    "query_text": "Need a language exchange partner matching app for people enrolled in a language school, where you fill in what language you're learning and what you can offer in return, then the app shows you other enrolled students who are a good fit so you can reach out and set up practice sessions, built as a website that works well on a desktop with a browseable list of potential partners and a simple messaging thread."
+  },
+  {
+    "id": "q_web_050_008",
+    "query_text": "Make a web app for teachers to run their own professional learning community, where they can share lesson ideas, classroom strategies, and useful links in a shared resource forum, organized by subject or grade level so it's easy to find what you need, with a desktop-friendly layout that shows topic categories on the left and posts or resources on the right for comfortable reading and browsing."
+  },
+  {
+    "id": "q_web_050_009",
+    "query_text": "Build a school volunteer coordination app for parents and staff where upcoming volunteer opportunities are listed with time slots, and parents can sign up for the ones that work for them, while staff can post new needs and see at a glance how many people have signed up, built as a browser-based tool with a calendar-style overview and a detail panel on the right showing who's signed up for each slot."
+  },
+  {
+    "id": "q_web_050_010",
+    "query_text": "Create a web app that acts as a student project showcase gallery where each student can post their completed project with a title, description, and screenshots or links, and classmates and teachers can leave feedback comments on each one, with a desktop browser layout that shows all projects in a browseable gallery on the main area and opens the full project detail with comments alongside when you click one."
+  },
+  {
+    "id": "q_web_050_011",
+    "query_text": "Build a web app for homeschool co-op families to coordinate their group activities and share curriculum materials, where parents can post their available teaching slots, share lesson plans or book lists that worked well for them, and sign kids up for co-op classes, all running in a desktop browser with a weekly schedule view on one side and a shared resource library on the other for easy browsing."
+  },
+  {
+    "id": "q_web_050_012",
+    "query_text": "A browser-based researcher network app where graduate students and academics can post their research interests and ongoing projects, browse others working on related topics, and send a short message to propose co-authoring or collaboration, with a profile page for each person showing their publications and areas of focus and a simple search on the side for filtering by field or keyword."
+  },
+  {
+    "id": "q_web_050_013",
+    "query_text": "Create a web app for a university campus that combines a club directory with a student-run event calendar, where each club has a short profile with contact info and meeting details, and any club officer can add upcoming events to a shared calendar that all students can browse, built for desktop browsers with a sidebar listing all clubs and a main area showing the calendar or a selected club's page."
+  },
+  {
+    "id": "q_web_051_001",
+    "query_text": "Make a web app that handles the whole exam and homework submission hassle in one place, where students can find their assigned work, upload their answers or files before the deadline, and see their grades and feedback once the teacher has reviewed things, while teachers can post assignments, set due dates, and go through submissions without dealing with a mess of emails, all working in a regular desktop browser."
+  },
+  {
+    "id": "q_web_051_002",
+    "query_text": "Make a browser-based attendance tracking app for K-12 schools where teachers can quickly mark who showed up, who was late, and who was absent each day from a class list, and the school office can pull up a summary for any student or class over a chosen time range without digging through paper records or scattered spreadsheets, with a clean per-class view on the left and a records summary panel on the right."
+  },
+  {
+    "id": "q_web_051_003",
+    "query_text": "Create a web app where students can submit a transcript request and track whether it has been processed and sent, so they stop having to email the registrar's office and wait without knowing what is happening, with a simple form to fill out the request details and a status tracker that updates as the office reviews and completes it, all accessible from a desktop browser without any extra steps."
+  },
+  {
+    "id": "q_web_051_004",
+    "query_text": "Create a web app that lets teachers build and save their lesson plans in a shared library, where they can write out their plan with the topic, learning goals, activities, and materials, and also browse plans shared by other teachers at the school to reuse or adapt, so they stop reinventing the wheel every term, with a desktop browser layout that shows the plan editor on one side and the shared library on the other."
+  },
+  {
+    "id": "q_web_051_005",
+    "query_text": "Need a web-based rubric builder where teachers can set up grading criteria for an assignment by listing each category and the point values for different performance levels, save it as a reusable rubric, and then use it later to grade student work by clicking the appropriate level for each row, so grading is consistent and students can clearly see where their marks came from, all in a desktop browser."
+  },
+  {
+    "id": "q_web_051_006",
+    "query_text": "Create a web app that shows each student's academic progress in one place, pulling together their grades across subjects and how those scores have changed over time, so teachers and advisors can spot who is falling behind without manually comparing different gradebooks, with a per-student summary view and a side panel for filtering by class or time period, all running in a desktop browser."
+  },
+  {
+    "id": "q_web_051_007",
+    "query_text": "Need a classroom seating chart editor for teachers that works in the browser, where you can drag and drop student names onto a visual grid that represents the room layout, rearrange seats when needed, and save multiple arrangements for different activities, so you stop fiddling with hand-drawn charts or spreadsheets every time the seating changes, with a clean desktop-friendly editor and a saved charts list on the side."
+  },
+  {
+    "id": "q_web_051_008",
+    "query_text": "Create a web app for instructors to view plagiarism detection results for submitted student work without having to navigate clunky external tools, where each submission shows a similarity score and highlights the flagged passages so the instructor can quickly decide whether it needs a closer look, with a list of all submissions on the left and the detailed results for the selected one on the right, built for desktop browser use."
+  },
+  {
+    "id": "q_web_051_009",
+    "query_text": "Build a web app that handles parent-teacher conference scheduling and messaging so schools can stop coordinating everything through phone calls and paper slips, where parents can pick an available time slot with their child's teacher and send a short note about what they want to discuss, and teachers can see their full schedule for the day and reply to any messages, all working in a desktop browser with a calendar on one side and messages on the other."
+  },
+  {
+    "id": "q_web_051_010",
+    "query_text": "Make a school event and room booking calendar app for the browser where staff can see which rooms and time slots are already taken, submit a booking request for a room and event, and check if it was approved, so there's no more confusion about double-booking the gym or auditorium, with a weekly calendar view that shows all events color-coded by location and a booking form that pops up when you click an open slot."
+  },
+  {
+    "id": "q_web_051_011",
+    "query_text": "Create a web app that matches students who need help in a subject with peer tutors who know it well, where tutors can list what they teach and when they're free, and students can browse and book a session without going through a whole back-and-forth, so the whole process takes minutes instead of days of emailing, built for desktop browsers with a tutor directory on the main page and a simple booking flow."
+  },
+  {
+    "id": "q_web_051_012",
+    "query_text": "Build a web app for managing a spaced repetition flashcard study routine, where you can create decks of cards for different subjects, study them in the browser each day with the app deciding which cards to show based on how well you remembered them last time, and track your progress so you can see which topics still need work and which you've got down, with a clean desktop interface for both card creation and study sessions."
+  }
+]

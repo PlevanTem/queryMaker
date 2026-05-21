@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_web_022_007",
+    "query_text": "Need a web app for my pet grooming shop that I can send customers before the summer season so they can see what bundles are on sale, like a bath plus nail trim deal or a full groom package at a special price, because right now I just copy-paste prices into chat messages and it's a mess, so I want a clean site where bundles are listed clearly and customers can see what they get for each price."
+  },
+  {
+    "id": "q_web_022_008",
+    "query_text": "Make a website for my bakery where customers can pre-order a custom birthday cake and see the current deal prices, because I keep getting last-minute requests and end up scrambling, so I want a simple browser-based tool where they pick a size and flavor, see the birthday cake promotion price, and submit their order with a pickup date so I know what's coming ahead of time."
+  },
+  {
+    "id": "q_web_022_009",
+    "query_text": "Build a web app for my auto repair shop that lets new customers claim a first-visit coupon, because right now I hand out paper coupons and half of them get lost or misused, so I want a simple site where new customers enter their info to grab the discount code, see what the coupon covers like a free inspection or a discount on the first repair, and I can track who claimed it."
+  },
+  {
+    "id": "q_web_022_010",
+    "query_text": "Make a web app for my laundry pickup service that shows customers the bulk drop-off discount tiers, because I keep explaining the pricing over and over through text messages, so I want a website where they can see that dropping off more than five kilos gets them a certain discount and ten kilos gets them a better rate, and then they can fill out a simple form to schedule a drop-off with the discounted price already applied."
+  },
+  {
+    "id": "q_web_022_011",
+    "query_text": "Need a website for my flower shop that shows all the Valentine's Day bundle deals in one place, because every year I get a flood of questions asking what's included and how much things cost and I spend hours just answering the same things, so I want a browser-based site where each bundle shows what flowers are included, the special price, and a way for customers to reserve one before they sell out."
+  },
+  {
+    "id": "q_web_022_012",
+    "query_text": "Need a web app for my tutoring center that shows all the back-to-school enrollment deals so parents don't keep calling me to ask about prices and slots, because it's exhausting to repeat the same information every August, so I want a site where I can list the different subject packages at their promo prices, show how many spots are left, and let parents sign up for a spot directly without me having to follow up manually."
+  },
+  {
+    "id": "q_web_022_013",
+    "query_text": "Create a web app for my massage place where existing customers can see what they get if they upgrade their membership, because I currently explain the tiers verbally and people forget by the time they get home, so I want a simple site that shows the current member level, the next tier up with its perks and price difference, and a button to confirm the upgrade so I stop losing people who were interested but never followed through."
+  },
+  {
+    "id": "q_web_022_014",
+    "query_text": "Need a web page for my photography studio that lays out all the portrait packages and their current promo prices in a way I can just send people the link instead of typing out the same details every week, so I want a website where each package shows sample photos, what's included like number of edited shots and backdrop options, and the promotional price, with a form at the end where they can book a session."
+  },
+  {
+    "id": "q_web_023_001",
+    "query_text": "Build a web app for food delivery ordering that lets customers browse the menu, pick items, and submit their order without having to call in, because right now I take orders over the phone and I write things down wrong half the time, so I want a browser-based tool where customers see the menu with prices, add things to their order, put in their delivery address, and send it through so I get a clean order summary on my end."
+  },
+  {
+    "id": "q_web_023_002",
+    "query_text": "A member stored-value top-up tool for my shop, built as a website customers can open on their desktop browser, where they can see their current balance, pick from a few top-up amounts that come with bonus credits, and confirm the recharge, because right now I track this in a notebook and customers have no way to check their own balance without asking me, so the whole thing takes way too long at the counter."
+  },
+  {
+    "id": "q_web_023_003",
+    "query_text": "Need a calculator tool for my home repair contracting work that lets me fill in the job type, materials, hours, and any travel fee so it spits out a quote I can hand to the customer, because right now I do this math in my head or in a notes app and I always miss something, so I want a web app I can open in the browser, enter the details for each job, and get a clean total with a breakdown I can show the customer on the spot."
+  },
+  {
+    "id": "q_web_023_004",
+    "query_text": "A weekly staff schedule planner for my small restaurant team, the kind you open in a desktop browser and just fill in who works which shift each day, because right now I write it on paper and half the staff says they never saw it, so I want a web app where I can assign each person their shifts for the week, see any overlaps or gaps at a glance, and share the finished schedule so everyone can check it themselves."
+  },
+  {
+    "id": "q_web_023_005",
+    "query_text": "Create a web app that helps me generate invoices and receipts for my catering gigs, because right now I type everything into a text document and it looks unprofessional, so I want a browser-based tool where I enter the client name, event date, what food and services I provided, and the price, and it produces a clean invoice I can print or send as a PDF, with a separate receipt I can give once they pay."
+  },
+  {
+    "id": "q_web_023_006",
+    "query_text": "A loyalty punch-card tracker for my local shop, running as a web app customers can check on their computer, where each customer has a running stamp count and can see how many more purchases they need before earning a free item, because right now I do it on paper cards that people lose all the time, so I want something I can pull up at the counter to log a purchase and show the customer their updated progress."
+  },
+  {
+    "id": "q_web_023_007",
+    "query_text": "Build a web app for my independent restaurant that handles table reservations and collects a small deposit when someone books, because people make reservations and then just never show up and I lose that table for the whole night, so I want a website where customers pick a date, time, and party size, see the available slots, pay a small holding deposit through the site, and I get a confirmed booking I can actually rely on."
+  },
+  {
+    "id": "q_web_023_008",
+    "query_text": "Create a web app inventory tracker for my small neighborhood store that warns me when stock on any item is getting low so I know when to reorder, because right now I walk the shelves and guess what needs restocking and I always miss things until they run out, so I want a browser-based tool where I enter my products with their reorder thresholds and it flags anything that has fallen below that level so I can place orders before I run out."
+  },
+  {
+    "id": "q_web_023_009",
+    "query_text": "Need a web app that shows my wholesale price list to small restaurant and cafe buyers who order from me regularly, because right now I send updated price lists over chat and people always have the old version, so I want a browser-based site where I can update prices myself and buyers can log in to see the current rates per item, filter by category like beverages or dry goods, and submit a bulk order directly from the price list."
+  },
+  {
+    "id": "q_web_023_010",
+    "query_text": "Need a website that shows off my small agency's past projects and client results so I can send it to potential clients instead of attaching a bunch of files to an email, because right now my portfolio is just a folder on my desktop that I screenshot and paste together, so I want a web app where I can list each project with a brief description, the results we got for that client, and a way for interested businesses to reach out through the site."
+  },
+  {
+    "id": "q_web_023_011",
+    "query_text": "Create a web app that lets me send contracts to clients so they can sign them online and I get a confirmed copy, because right now I print everything and either mail it or have people come in just to sign a piece of paper, which wastes everyone's time, so I want a browser-based tool where I upload the contract, the client gets a link, they read it and add their signature on the site, and I get notified when it is done."
+  },
+  {
+    "id": "q_web_023_012",
+    "query_text": "Need a web app that helps me reconcile my daily sales across different product categories so I can close out the register at the end of each day without spending an hour hunting down discrepancies, because right now I add things up manually and I always find a mismatch I cannot explain, so I want a browser-based tool where I enter the cash, card, and transfer totals by category and it shows me whether everything matches or where the gap is."
+  },
+  {
+    "id": "q_web_023_013",
+    "query_text": "Build a web app for my handmade goods business where wholesale buyers can submit an inquiry with the items and quantities they want, and I can respond with a quote, because right now buyers email me with random details and I spend ages piecing together what they actually need, so I want a website where they fill out a proper inquiry form, I get a clean summary, and I can send back a quote they can accept or negotiate."
+  },
+  {
+    "id": "q_web_023_014",
+    "query_text": "Need a web app calculator for my restaurant that figures out how to split the tip pool and the payroll among the staff after each shift, because right now I do it by hand and someone always argues the math, so I want a browser-based tool where I enter the total tips collected, the hours each person worked, and their role, and it calculates each person's share automatically so I can just show everyone the breakdown and be done with it."
+  },
+  {
+    "id": "q_web_024_001",
+    "query_text": "Need a web app for my beauty studio that lets clients book a makeup trial or a consultation without having to message me back and forth, because I spend so much time just coordinating times and it always takes several messages to confirm one appointment, so I want a website where clients pick a service type, choose a date and time slot from my available calendar, and submit their booking so it just shows up in my schedule automatically."
+  },
+  {
+    "id": "q_web_024_002",
+    "query_text": "Make a booking site for my pet grooming salon that works in a desktop browser so clients can pick their dog or cat, choose a grooming service, and schedule an appointment without calling me, because I miss calls when I am in the middle of a groom and then I lose customers, so I want a web app where they see my open time slots, select one, enter their pet's details, and confirm the appointment so I see it right away."
+  },
+  {
+    "id": "q_web_024_003",
+    "query_text": "Need a web app for scheduling one-on-one music lessons with me as a local tutor, because right now my students and their parents text me at all hours asking if I have a slot open and I have to check my paper calendar every time, so I want a website where people can see which lesson times I have available, pick the instrument and lesson length they want, fill in their info, and confirm the booking so it goes straight onto my schedule."
+  },
+  {
+    "id": "q_web_024_004",
+    "query_text": "Need a web app for a photography studio where clients can book portrait sessions online without having to call and wait on hold, because that whole back-and-forth is such a waste of time. It should show which time slots are open, let people pick a session type (headshots, family portraits, etc.), fill in their name and contact info, and get a confirmation right away, so the studio owner and the client both know what's happening."
+  },
+  {
+    "id": "q_web_024_005",
+    "query_text": "Need a web app that lets a small auto repair shop take service appointments online, so customers can just go to the site and pick a time themselves instead of calling during busy hours. It should let people choose the type of service they need, like oil change or tire rotation, pick an open slot on the calendar, and submit their car info, and the shop side should be able to see all upcoming appointments lined up in one place."
+  },
+  {
+    "id": "q_web_024_006",
+    "query_text": "Need a web app for a small nail salon that lets customers book a specific time slot or sign up as a walk-in so the owner stops getting messaged on her phone all day. The booking side should show which nail techs have open slots, let customers pick a service and time, and the salon owner should be able to see the day's appointments and current walk-in queue in one browser window so nothing gets mixed up."
+  },
+  {
+    "id": "q_web_024_007",
+    "query_text": "Need a web app for a local tattoo artist that shows off their portfolio and lets people book a session right from the same site, because right now everything is scattered across Instagram and text messages and it's a mess. Clients should be able to browse the artist's past work by style, pick an available date, describe what they want, and submit a booking request, and the artist should see all requests in a simple list they can approve or decline."
+  },
+  {
+    "id": "q_web_024_008",
+    "query_text": "Create a web app for a home cleaning service that lets customers set up recurring bookings, like every week or every two weeks, so they can stop texting the cleaner every single time to confirm. The app should let them pick their preferred days and time slots, choose how often the cleaning repeats, and store their address and any special notes, and the cleaner can log in from a desktop browser to see the whole schedule laid out clearly."
+  },
+  {
+    "id": "q_web_024_009",
+    "query_text": "A booking site for a private chef who hosts home dinner experiences, where people can see what dinner events are coming up, pick a date that has spots left, and reserve their seats without having to hunt down the chef on social media. The whole thing should work well in a desktop browser, show a short description of each dinner menu, how many seats remain, and let guests enter their details and confirm their spot in just a few steps."
+  },
+  {
+    "id": "q_web_024_010",
+    "query_text": "A reservation app for a neighborhood yoga studio where people can see this week's drop-in classes, check how many spots are left in each one, and grab a spot without having to show up in person to sign the sheet. The app should work in a desktop browser, list classes by day with the teacher name and time, and let someone reserve their spot by entering their name and email, so the studio can keep track of who's coming without pen and paper."
+  },
+  {
+    "id": "q_web_024_011",
+    "query_text": "Create a booking site for an independent massage therapist that lets clients see available appointment times, pick a session length (like 60 or 90 minutes), and also choose from massage packages if they want to buy a bundle of sessions upfront, all from a desktop browser without needing to call or send a message. The therapist should be able to see their upcoming bookings in a simple calendar and mark which package sessions have been used so nothing gets lost track of."
+  },
+  {
+    "id": "q_web_024_012",
+    "query_text": "A scheduling app for a small dental clinic that makes it easy for new patients to book their first appointment from a desktop browser, because right now the front desk is stuck answering calls all day just to check the calendar. The app should let patients enter their name, contact info, and reason for the visit, pick an open time slot from a clearly laid-out weekly schedule, and get a confirmation email so they have the details saved."
+  },
+  {
+    "id": "q_web_024_013",
+    "query_text": "Need a web app for a local tailor shop where customers can book a garment fitting appointment online and pick the time that works for them, so the tailor stops getting bombarded with walk-ins at the worst moments. The site should show open fitting slots by day, let customers specify what they need fitted (like a suit or a dress), add any sizing notes, and confirm the appointment, with the tailor seeing all bookings in a tidy list on the desktop browser side."
+  },
+  {
+    "id": "q_web_024_014",
+    "query_text": "A session booking app for a personal trainer, built as a website that works on desktop, where clients can see the trainer's weekly availability and reserve a one-on-one slot for themselves without going back and forth over text. The app should show open time blocks across the week, let clients pick a slot and enter their contact info, and give the trainer a simple side panel showing all their upcoming sessions so they can plan their day."
+  },
+  {
+    "id": "q_web_025_001",
+    "query_text": "Build a web app that walks micro-business owners through filing their taxes step by step, because that whole process feels overwhelming when you have no idea where to start. I want it to have each step clearly numbered, with a brief plain-language explanation of what to do and what documents to gather, plus a checklist you can tick off as you go so you know exactly where you are in the process, all accessible from a desktop browser."
+  },
+  {
+    "id": "q_web_025_002",
+    "query_text": "A browser-based guide app for people applying for a local business license, where the whole process is broken down into clear steps so you know exactly what to prepare at each stage. The app should list every document you need, explain what each government form is actually asking for in plain language, and let you check off steps as you complete them so you can pick up where you left off without losing track."
+  },
+  {
+    "id": "q_web_025_003",
+    "query_text": "Build a web app that helps restaurant staff study for their food safety certification, with the material organized into short lessons they can go through one by one at a desktop computer during a break. I want it to cover the main topics on the actual exam, include a few practice questions at the end of each lesson so staff can check their understanding, and show a progress tracker so everyone can see how far along they are."
+  },
+  {
+    "id": "q_web_025_004",
+    "query_text": "Build a web app that teaches retail shop owners the basics of managing their inventory, broken down into short lessons they can read through in a desktop browser whenever they have a few minutes. The tutorial should cover things like how to track what you have in stock, when to reorder, and how to spot what's selling versus what's just sitting there, with a checklist at the end of each lesson so I can confirm I understood the main points."
+  },
+  {
+    "id": "q_web_025_005",
+    "query_text": "Build a web app that gives small shop staff a library of ready-to-use customer service scripts organized by situation, like handling a complaint, answering a question about a product, or dealing with a return, so new staff have something to refer to right away. It should work in a desktop browser, let you browse scripts by category, and let the shop owner add or edit scripts so the library stays up to date with how they actually want things handled."
+  },
+  {
+    "id": "q_web_025_006",
+    "query_text": "A learning app for neighborhood store owners who want to get started with social media marketing but have no idea where to begin, with the content laid out as a step-by-step guide in a desktop browser they can follow at their own pace. The app should cover the basics of setting up a business account, what kinds of posts actually get attention, and how often to post, with a simple progress tracker so you know which lessons you have finished and which ones are still ahead."
+  },
+  {
+    "id": "q_web_025_007",
+    "query_text": "Need a web app that helps small retail shop owners figure out which cash register or POS system to get, with a side-by-side comparison of the most common options and plain-language explanations of what each one actually does. It should also include a short onboarding guide for the most popular picks so once you buy one you have a checklist of setup steps to follow, all laid out clearly in a desktop browser so I can work through it without bouncing between different websites."
+  },
+  {
+    "id": "q_web_025_008",
+    "query_text": "Create a web app that helps small food business owners learn what health inspectors actually look for, organized as a checklist-style guide they can work through in a desktop browser before their next inspection. The app should break compliance topics into clear categories (like food storage, temperature control, and cleanliness), let you check off items as you review them, and include a short plain-language explanation for each rule so you understand the reasoning behind it."
+  },
+  {
+    "id": "q_web_025_009",
+    "query_text": "Make a web app that guides independent contractors through figuring out how to price their services, with the content organized as a structured guide they can read through in a desktop browser. I want it to cover things like how to calculate your costs, how to factor in your time, and how to compare against what others charge, plus a simple calculator where I can plug in my numbers and see what a reasonable rate might look like for different types of jobs."
+  },
+  {
+    "id": "q_web_025_010",
+    "query_text": "A self-study app for first-time small business owners who just hired their first employee and need to understand the basics of labor law, laid out as an easy-to-follow course in a desktop browser. The app should cover the key things you need to know, like minimum wage rules, required breaks, and what paperwork to keep, organized into short sections with a checklist so you can confirm you have handled each item before moving on to the next one."
+  },
+  {
+    "id": "q_web_025_011",
+    "query_text": "Create a web app that teaches physical store owners how to improve their local online presence, with the lessons broken down into a clear numbered list they can work through in a desktop browser at their own pace. The guide should cover things like how to set up and optimize a Google business listing, how to get more customer reviews, and how to make sure the store shows up when people search nearby, with a progress checklist so you can see exactly what you have done and what is still left."
+  },
+  {
+    "id": "q_web_025_012",
+    "query_text": "A cash flow tutorial app for small business owners who want to understand where their money is actually going each month, built as a browser-based tool for desktop that walks you through the concepts with real-world examples. The app should explain what cash flow means in plain terms, show how to map out money coming in versus going out over a rolling period, and include a simple worksheet where you can enter your own numbers and see a rough forecast laid out visually."
+  },
+  {
+    "id": "q_web_025_013",
+    "query_text": "Need a web app that walks someone through registering a new business and getting the right permits, step by step, in a way that actually makes sense without having to read government websites for hours. It should have the steps listed in order, explain what each permit or registration form is for in plain language, and include a checklist so I can tick things off as I complete them and come back to the app in my desktop browser without losing my place."
+  },
+  {
+    "id": "q_web_025_014",
+    "query_text": "Build a web app that helps food workers study for their food handler certification exam, with the material split into clear topics they can go through one at a time in a desktop browser. The app should include a lesson for each major subject on the test, a short quiz at the end of each lesson to check understanding, and a progress tracker on the side so you can see which topics you have covered and which ones still need review before the actual exam."
+  }
+]

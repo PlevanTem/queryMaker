@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_web_026_001",
+    "query_text": "A web page listing all the little shops and services in the neighborhood, where each place has a short description and a star rating that locals can leave, so you can quickly figure out which bakery or repair guy is actually worth visiting, and you can filter by category on the left side while the main area shows the listings with their community scores and a few recent comments right underneath."
+  },
+  {
+    "id": "q_web_026_002",
+    "query_text": "A website where local artisans can show off what they make and sell, and regular people who bought from them can leave reviews and start little discussion threads about the products, so there is a left column for browsing by craft type and the main part shows each seller with their average rating and a link to their forum section where buyers compare notes and ask questions."
+  },
+  {
+    "id": "q_web_026_003",
+    "query_text": "Create a web app that works like a community notice board where neighborhood shops and service people can post their promotions and special offers, so locals opening it in a browser can scroll through a feed of posts sorted by newest first, and each post has the business name, what they are offering, and a simple thumbs-up button so people can show which deals they think are worth sharing."
+  },
+  {
+    "id": "q_web_026_004",
+    "query_text": "Make a website where neighbors can team up to buy things together from local independent shops, so you pick a deal that a shop has posted, see how many people have already joined, and once enough folks sign up the group order goes through, with a sidebar showing active deals organized by shop type and a progress bar on each one counting down to the minimum needed."
+  },
+  {
+    "id": "q_web_026_005",
+    "query_text": "A browser-based app that collects all your loyalty stamp cards from different local stores into one place, so instead of carrying a stack of paper cards you just open this site, pick the shop, and tap to add a stamp when you buy something, and there is a section showing how close you are to a reward at each store all lined up so you can see your progress at a glance."
+  },
+  {
+    "id": "q_web_026_006",
+    "query_text": "Make a web app that is a shared events calendar where local shop owners can each add their own events like sales, workshops, or tasting nights, so that anyone in the neighborhood can open it in a browser and see everything happening this month on a proper calendar view, and clicking on an event shows which business is hosting it along with whatever details they filled in."
+  },
+  {
+    "id": "q_web_026_007",
+    "query_text": "Create a website that connects local service businesses so they can refer customers to each other, like a plumber pointing clients to a trusted electrician in the same network, with a directory page listing all the members by trade and each profile showing who they have referred and how many good reviews those referrals earned so you can trust the connections are real and not just random."
+  },
+  {
+    "id": "q_web_026_008",
+    "query_text": "Build a web app where people can pre-order food from local vendors and schedule a curbside pickup time, so you open the site, browse what a vendor has available today, pick your items, and then choose a pickup window from a little time slot calendar, and the vendor side of the site shows all the incoming orders grouped by time slot so they know what to prepare and when."
+  },
+  {
+    "id": "q_web_026_009",
+    "query_text": "Make a website where anyone in the neighborhood can post a small job they need help with, like moving a couch or fixing a leaky faucet, and people who want to help can respond with their availability and a rough price, with the board showing all open requests in the main area and a sidebar to filter by job type."
+  },
+  {
+    "id": "q_web_026_010",
+    "query_text": "Need a browser-based site where a small community of people can pool their buying power and order together from tiny local vendors who cannot afford to sell one item at a time, so you log in, see what is currently open for group orders, add yourself to one, and pay when the order closes, with a section that shows each vendor and all their past fulfilled orders so you know they are reliable."
+  },
+  {
+    "id": "q_web_026_011",
+    "query_text": "Need a web app where local shops can post flash sales that last only a few hours, with each deal showing a countdown timer ticking down to when it expires, so customers can open the site in a browser and see all active deals sorted by how soon they end, and shop owners use a simple form to post a new deal with the discount amount and end time."
+  },
+  {
+    "id": "q_web_026_012",
+    "query_text": "Make a web platform where several small businesses in a neighborhood can collaborate on a shared newsletter, so each shop owner can log in and add their own section like a new product announcement or a special hours notice, and then someone reviews the combined draft in a preview pane before sending it out as one newsletter to everyone who has signed up to receive it."
+  },
+  {
+    "id": "q_web_026_013",
+    "query_text": "Build a website where people can list gift cards from local shops that they are not going to use and swap or sell them to neighbors who actually want them, so the main page shows available cards grouped by store name with the remaining balance and asking price, and there is a simple way to message the person listing it to arrange the exchange without the whole thing getting overly complicated."
+  },
+  {
+    "id": "q_web_026_014",
+    "query_text": "A job board website for the neighborhood where homeowners can post repair or handyman tasks they need done around the house, with each listing showing the type of job, a rough idea of the budget, and the area of town, and tradespeople can browse all the open jobs in a main feed while filtering by work type in a left-hand panel, and clicking a job shows the full details and a button to express interest."
+  },
+  {
+    "id": "q_web_027_001",
+    "query_text": "Create a web app for small salons and barbershops that lets clients book appointments online without having to call or text back and forth, with a calendar showing which time slots are still open and which are taken, so the shop owner can block off days they are closed and clients just pick a date and time from a browser and receive a confirmation, saving everyone the hassle of missed calls and double bookings."
+  },
+  {
+    "id": "q_web_027_002",
+    "query_text": "Create a simple website tool for freelance tradespeople like painters or electricians to generate invoices without messing around with spreadsheets every single time, where you type in the client name, the work done, the hours and rate, and it spits out a clean invoice you can download as a file, with a history page showing all the ones you have already sent so you are not scrambling to remember what you charged last month."
+  },
+  {
+    "id": "q_web_027_003",
+    "query_text": "Create a web app where a small business owner can track what stock they have on hand without having to count everything by hand or dig through notebooks, so you enter your items and quantities, the app keeps track as you update them, and it automatically sends you an email when something drops below a number you set so you are not caught off guard when something runs out."
+  },
+  {
+    "id": "q_web_027_004",
+    "query_text": "Create a web-based scheduling board for small restaurant teams where the owner sets up the week's shifts by dragging staff names into time slots, each team member can open the page in a browser to see when they are working, and there is a simple way to flag if someone cannot make a shift so the owner finds out right away."
+  },
+  {
+    "id": "q_web_027_005",
+    "query_text": "A punch-card loyalty web app for neighborhood cafes that replaces those annoying little paper cards that always get lost, where a customer gives their phone number or email at the counter, the barista marks a visit on their account in the browser, and after ten visits the app automatically shows a free drink reward, so there is no printer needed and the cafe owner can see at a glance how many regulars they have."
+  },
+  {
+    "id": "q_web_027_006",
+    "query_text": "Make a web tool for home repair businesses to quickly put together a price estimate without writing everything out from scratch, where you pick the type of work from a list, enter the square footage or number of items, and the tool calculates a total based on rates you set ahead of time, so you can show a client a proper quote right there in the browser."
+  },
+  {
+    "id": "q_web_027_007",
+    "query_text": "Create a web app that tracks when business licenses are coming up for renewal and sends reminders before the deadline so you do not accidentally let one lapse, with a main page showing all your licenses listed by expiry date, the ones closest to expiring highlighted at the top, and a form for adding a new license by just typing in the name, the authority that issued it, and the renewal date."
+  },
+  {
+    "id": "q_web_027_008",
+    "query_text": "A browser-based tool for sole proprietors that estimates how much tax they probably owe for the month without needing an accountant every single time, where you enter your income and your deductible expenses for the month and it shows a rough tax figure based on a rate you can adjust, with a running yearly total at the side so you are not blindsided by a huge bill when the year ends."
+  },
+  {
+    "id": "q_web_027_009",
+    "query_text": "A menu builder web app for small food places where the owner can drag sections around and add items without any complicated setup, so instead of updating a blurry photo every time something changes you log into the site in a browser, build your menu by adding sections and items with prices, and get a shareable link customers can open to see what is available."
+  },
+  {
+    "id": "q_web_027_010",
+    "query_text": "Create a web app for small business owners to manage their regular opening hours and easily override them for public holidays or one-off closures, because keeping that info updated in five different places is a nightmare, so the main screen shows the week's hours in a simple grid you can edit, and there is a separate section for adding exceptions like being closed on a specific holiday or having shorter hours for a special event."
+  },
+  {
+    "id": "q_web_027_011",
+    "query_text": "A website for local retail shops that pulls in reviews from different review sites and shows them all together, so instead of jumping between tabs the shop owner just opens this web app and sees a feed of recent reviews sorted by date, with the source noted next to each one and a way to filter to just the negative ones so complaints do not get missed."
+  },
+  {
+    "id": "q_web_027_012",
+    "query_text": "Build a weekly social post scheduler for neighborhood storefronts as a web app where I can set up my whole week of posts on a desktop browser in one sitting instead of scrambling every morning, with a simple calendar-style layout showing each day's planned content and a spot to drop in the caption and image for each post, so I can actually stay on top of social without it eating my whole day."
+  },
+  {
+    "id": "q_web_027_013",
+    "query_text": "Make a daily cash-flow ledger tool for market stall vendors as a browser-based tool where I can quickly punch in what came in and what went out during the day, see a running total so I always know where I stand, and have the numbers organized by day so I can look back at the whole week without digging through scraps of paper or a messy notes app."
+  },
+  {
+    "id": "q_web_027_014",
+    "query_text": "A supplier unit-price comparison tool for small buyers that runs in the browser on desktop, where I can enter prices from a few different suppliers for the same item and immediately see which one is cheapest per unit, with a simple table that lets me update numbers and add new items as I shop around, so I stop second-guessing myself every time I restock."
+  },
+  {
+    "id": "q_web_028_001",
+    "query_text": "An annual report and ESG report site that actually feels like something the company chose to put its name on, presented as a web app for desktop browsers where each year's report gets its own clean reading space, key figures are highlighted in a way that feels considered, and the whole thing carries the weight and identity of a company that means what it says."
+  },
+  {
+    "id": "q_web_028_002",
+    "query_text": "Need a cultural showcase site that really says something about who the company is, built as a web app for desktop browsers, with a visual layout that has genuine character and a personality of its own, where the culture and values come through in how things are arranged and presented, not just in what the text says, so visitors leave with a real sense of the place."
+  },
+  {
+    "id": "q_web_028_003",
+    "query_text": "A leadership team profile showcase that actually feels like it was designed with intention, hosted as a website for desktop browsers, where each executive gets a well-composed space that communicates presence and credibility, with photos and a short bio that feel thoughtfully placed rather than just dropped onto a grid, so the whole thing reads as a team people would want to do business with."
+  },
+  {
+    "id": "q_web_028_004",
+    "query_text": "Create a global office locations interactive map microsite that feels like a company genuinely proud of its reach, built for desktop browsers, where clicking a location brings up the right details for that office in a way that feels purposeful and well-composed, so the map is a statement about who the company is, not just a directory someone threw together."
+  },
+  {
+    "id": "q_web_028_005",
+    "query_text": "Need a product portfolio showcase site for a large enterprise that has the kind of tasteful visual identity you actually want to show partners and clients, built as a web app for desktop browsers, with each product getting its own well-considered space, clear categories in a left sidebar so visitors can orient themselves quickly, and a look that feels curated rather than just comprehensive."
+  },
+  {
+    "id": "q_web_028_006",
+    "query_text": "Create a corporate innovation lab and R and D highlights site that carries a distinct personality, built as a website for desktop browsers, where ongoing projects and breakthroughs are presented with the kind of visual care that makes people actually stop and read, organized in a way that feels alive and forward-looking, so visitors get the sense that this company takes its ideas seriously."
+  },
+  {
+    "id": "q_web_028_007",
+    "query_text": "Build a dedicated investor relations and financial highlights microsite that has real character and authority, set up as a web app for desktop browsers, where key numbers and company milestones are presented in a clean and confident layout that communicates stability, with an organized side navigation so stakeholders can find what they need without hunting around."
+  },
+  {
+    "id": "q_web_028_008",
+    "query_text": "A company founding heritage and history timeline site that actually earns the gravity of the story it is telling, built as a website for desktop browsers, where each major milestone sits on a clean visual timeline with a short write-up and photo, the kind of thing that feels like someone cared about getting it right, so reading through it feels like learning about a company with something worth remembering."
+  },
+  {
+    "id": "q_web_028_009",
+    "query_text": "An industry awards and recognition showcase site that feels like it was earned and displayed with some taste, built for desktop browsers, where each award has its own well-framed entry with a note on what it was for and the year it was received, organized so the whole page reads as a coherent statement of reputation rather than a pile of logos and badges."
+  },
+  {
+    "id": "q_web_028_010",
+    "query_text": "Create a corporate social responsibility and community impact showcase site that actually feels like a company that means it, built as a web app for desktop browsers, with real stories and numbers about what the company has done, organized into clear areas like environment and education, so visitors come away thinking this is a company with values worth paying attention to."
+  },
+  {
+    "id": "q_web_028_011",
+    "query_text": "Create a technology patents and intellectual property showcase site that has the kind of identity you would expect from a company serious about its work, built for desktop browsers, where patents are listed in a clean and searchable format with a brief plain-language description of each one, and the overall look is confident and precise rather than generic."
+  },
+  {
+    "id": "q_web_028_012",
+    "query_text": "Create a strategic partner and supplier ecosystem directory that presents the company as someone worth knowing, built as a website for desktop browsers, where each partner entry includes a short description and what the relationship covers, organized by category in a sidebar so visitors can explore the network in a way that feels intentional and well-kept."
+  },
+  {
+    "id": "q_web_028_013",
+    "query_text": "Create a customer success and case study showcase site that feels like the company is genuinely proud of the work, built as a web app for desktop browsers, with each case study getting a clean focused layout that tells the story of the challenge and outcome, organized by industry in a sidebar so potential clients can find stories that are relevant to them."
+  },
+  {
+    "id": "q_web_028_014",
+    "query_text": "Make a corporate art collection and cultural sponsorship site that feels like it belongs in the same conversation as the art it is showing, built as a website for desktop browsers, where each artwork and sponsorship has room to breathe with a well-placed image and a short note on its significance, so the whole thing reads as a genuine expression of the company's taste and values."
+  },
+  {
+    "id": "q_web_029_001",
+    "query_text": "Need a dedicated investor relations site that has the kind of measured confidence that makes investors feel they are dealing with a serious company, built as a web app for desktop browsers, where financial reports and announcements are organized cleanly by year and topic, the company story is told with real presence, and the whole thing feels like it was put together with intention rather than assembled from a template."
+  },
+  {
+    "id": "q_web_029_002",
+    "query_text": "Build a corporate industry insights site that actually carries the weight of a company with something to say, presented as a web app for desktop browsers, where in-depth articles and trend pieces are organized by theme in a sidebar, the reading experience is clean and comfortable for long pieces, and the tone of the whole site says this is a company that thinks carefully about its field."
+  },
+  {
+    "id": "q_web_029_003",
+    "query_text": "Build a corporate ESG and sustainability reporting site that feels like the company genuinely cares about how this story is told, set up as a web app for desktop browsers, with clearly organized sections covering environmental work, social programs, and governance, real data presented in a way that is easy to follow, and an overall look that communicates seriousness and accountability."
+  },
+  {
+    "id": "q_web_029_004",
+    "query_text": "An interactive annual report site for stakeholders that feels like the company put real thought into the reading experience, built as a website for desktop browsers, where the numbers and highlights are laid out in a way that breathes rather than crowds, key figures stand out with a confident visual treatment, and navigating between sections feels smooth and considered."
+  },
+  {
+    "id": "q_web_029_005",
+    "query_text": "Make a content site for senior leaders to share their views on the industry, built as a web app for desktop browsers, where each piece has a strong byline and the reading layout has real character, articles are organized by topic in a sidebar so readers can explore by what interests them, and the overall feel says this is a place where people with genuine points of view come to write."
+  },
+  {
+    "id": "q_web_029_006",
+    "query_text": "Build a company knowledge base and documentation site that has the kind of clarity and discipline that makes people actually want to use it, set up as a web app for desktop browsers, with a well-organized left sidebar for navigation, a clean reading layout that handles long text comfortably, and a search bar that helps people find what they need without scrolling through everything."
+  },
+  {
+    "id": "q_web_029_007",
+    "query_text": "Need a brand editorial magazine site that feels like a publication someone chose to read rather than a content feed, built as a website for desktop browsers, with a layout that gives long-form articles the space and visual treatment they deserve, a distinct editorial identity in how stories are introduced and organized, and the kind of typographic care that makes reading actually enjoyable."
+  },
+  {
+    "id": "q_web_029_008",
+    "query_text": "A corporate case study and client story library that feels like a company taking genuine pride in its work rather than just filling a page, built for desktop browsers as a web app, where each story has a clean focused layout with the client context and outcome clearly told, organized by industry in a sidebar so anyone browsing can find stories that match what they care about."
+  }
+]

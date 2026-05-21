@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_web_048_002",
+    "query_text": "Make a web app for booking one-on-one tutoring sessions for K-12 kids, because right now I have to go back and forth with the tutor over messages just to find a time that works, which takes forever. I want to be able to see the tutor's open slots on a calendar, pick a time, and lock it in all in one place, with a confirmation showing up somewhere on the screen so I know it actually went through."
+  },
+  {
+    "id": "q_web_048_003",
+    "query_text": "Make a web app where students can reserve speaking practice slots at a language school without having to call the front desk or send emails every single time. I just want to open it in the browser, see which time slots are still open for the week, pick one, and be done with it, maybe with a small note field to say which language level I am so the teacher knows what to expect."
+  },
+  {
+    "id": "q_web_048_004",
+    "query_text": "A web-based tool for matching students with music lesson teachers and locking in a practice schedule, because hunting for a teacher who has open slots on the right days is such a headache. The main part of the site should show available teachers, what instruments they teach, and their open time slots, so a parent or student can just pick a match and book the first session without having to send a bunch of messages back and forth."
+  },
+  {
+    "id": "q_web_048_005",
+    "query_text": "Build a web app for booking university campus tour appointments, since right now you have to dig through multiple emails and forms just to sign up for a slot. I want a simple booking tool that shows available tour dates and times, lets you fill in your info and pick a spot, and then gives you a clear confirmation on screen so you actually know your spot is reserved and you don't have to wonder if it went through."
+  },
+  {
+    "id": "q_web_048_006",
+    "query_text": "Need a web app that handles scheduling discovery calls and quick eligibility checks for a coding bootcamp, so applicants aren't left hunting for a contact form or waiting days for someone to email back with available times. The tool should let someone pick a date and time for their call, answer a few short questions about their background right in the booking flow, and get a confirmation right away so everything is settled in one visit."
+  },
+  {
+    "id": "q_web_048_007",
+    "query_text": "Build a web app that acts as a calendar and booking tool for SAT/ACT tutoring sessions, because keeping track of scheduled prep sessions across multiple students and tutors in my head or in a spreadsheet is a mess. I want a simple site where a student or parent can see upcoming available times, book a session, and check which sessions are already on the books, with a sidebar showing the student's name and which test they're prepping for."
+  },
+  {
+    "id": "q_web_048_008",
+    "query_text": "Make a web app for reserving seats in corporate soft-skills training workshops, because every time HR announces a new session I have to reply to an email and then wait to find out if I actually got a spot. I want a browser-based reservation tool where I can see what workshops are coming up, how many seats are left, and just click to claim my spot with my name and team, then get a confirmation without any back-and-forth."
+  },
+  {
+    "id": "q_web_048_009",
+    "query_text": "A browser-based booking tool for reserving office hours with online course instructors, because right now there is no easy way to know when a slot is actually open and you end up messaging the instructor and waiting around. The app should show the instructor's available hours for the week in a clear layout, let a student click a time and enter a short question or topic they want to discuss, and then confirm the booking right away."
+  },
+  {
+    "id": "q_web_048_010",
+    "query_text": "Create a web app for enrolled students to schedule meetings with their academic advisor, since the current process is sending an email and hoping for a reply with open times, which wastes days. I want a simple scheduling tool that shows all of the advisor's open appointment slots, lets me pick one and put in a brief reason for the meeting, and then shows a confirmed appointment on a little upcoming-meetings list so I can keep track without digging through emails."
+  },
+  {
+    "id": "q_web_048_011",
+    "query_text": "Make a web app for booking consultations about study abroad programs, because right now finding out which programs you qualify for and actually talking to an advisor feels like it takes ten steps. I want a simple site that lists available consultation times, lets students pick a slot and mention which country or program they are interested in, and then sends a clear confirmation so they know the meeting is set without having to check their email three times."
+  },
+  {
+    "id": "q_web_048_012",
+    "query_text": "Make a web app for scheduling special educational needs assessments for children, because parents currently have to make phone calls and wait for callbacks just to get an appointment time. I want a browser-based booking tool where a parent can see available assessment dates, pick a suitable time, fill in some basic info about the child, and confirm the booking in one go, so nothing slips through the cracks and there is a clear record of what was booked."
+  },
+  {
+    "id": "q_web_048_013",
+    "query_text": "Build a web app for booking trial sessions at art and design classes, because right now signing up for a trial class means finding the studio's contact page, sending a message, and waiting to hear back about whether there is space. I want a booking tool that shows available trial slots for different classes like drawing, painting, or graphic design, lets someone pick a time, and confirms the reservation on screen so the whole thing is done in a couple of clicks from the desktop browser."
+  },
+  {
+    "id": "q_web_049_001",
+    "query_text": "Need a web app that works like a practice test bank, where I can take timed mock tests on a subject, see which questions I got wrong, and look up the correct answers right after. I want to be able to browse questions by topic, pick a set to work through, and then see a score at the end with a clear breakdown of which areas I need to study more, all in the browser so I can use it at my desk while studying."
+  },
+  {
+    "id": "q_web_049_002",
+    "query_text": "A website-based flashcard study tool where I can create decks organized by subject, add cards with a question on one side and the answer on the other, and have the app decide which cards to show me more often based on how well I know them. I want the study session to show one card at a time, let me flip it to check the answer, and then mark it as easy, okay, or hard so the tool knows when to bring it back."
+  },
+  {
+    "id": "q_web_049_003",
+    "query_text": "A web-based tracker for keeping notes on academic papers I am reading, where I can add a paper by title and author, jot down highlights or comments on specific parts, and mark it as in-progress or finished. I want to see a list of all the papers I have added with a reading status next to each one, and be able to open a paper entry to read back my annotations without losing my place, all from a desktop browser."
+  },
+  {
+    "id": "q_web_049_004",
+    "query_text": "Make a web app for organizing and scheduling study groups, where students can create a group for a specific course, list which days and times they are free, and get matched with other students who have overlapping availability. I want the app to show a side-by-side view of everyone's availability so picking a meeting time is obvious, and then let the group confirm a time slot and note what topics they plan to cover."
+  },
+  {
+    "id": "q_web_049_005",
+    "query_text": "Need a vocabulary-building web app for language learners that lets me add new words, attach a short meaning, and play a recorded audio clip of a native speaker saying the word. I want to keep my word list organized by language and topic, be able to click through words one at a time to hear the pronunciation, and mark the ones I feel confident about so I can focus review time on the ones I keep forgetting."
+  },
+  {
+    "id": "q_web_049_006",
+    "query_text": "Make a web app for coding bootcamp students to track their curriculum progress and submit finished projects, where each week's lessons show up as a checklist you can tick off as you complete them. I want a spot to upload or paste a link to each finished project, see which assignments are still pending, and have the whole thing accessible in a desktop browser so I can check it easily while I am working through the material."
+  },
+  {
+    "id": "q_web_049_007",
+    "query_text": "Need a web app that works as a marketplace for K-12 homework help and live tutoring, where parents can search for tutors by subject and grade level, see their ratings and available hours, and book a session. I want a simple list of tutors with their subjects and hourly rate, a way to pick a time slot, and a section where the student can describe what they need help with before the session starts."
+  },
+  {
+    "id": "q_web_049_008",
+    "query_text": "Build a web app for preparing for professional certification exams, where I can browse practice questions sorted by topic, take a timed practice test, and then review a results breakdown showing which topics I did well on and which ones I need to revisit. I want the questions to be multiple-choice with explanations for the correct answers, and I want to be able to save a set of weak-area questions for extra review, all in a desktop browser."
+  },
+  {
+    "id": "q_web_049_009",
+    "query_text": "A web-based degree planner for university students where I can browse the full course catalog, drag courses into a four-year schedule laid out by semester, and see at a glance which required courses I have covered and which ones are still missing. I want to be able to search the catalog by subject or course number, click a course to see its description and any prerequisites, and then place it into whichever semester makes sense for my plan."
+  },
+  {
+    "id": "q_web_049_010",
+    "query_text": "Need a web app for managing employee onboarding and compliance training, where new hires can see a checklist of required training modules, complete each one in order, and track which ones they have finished. I want the app to show each training topic as a step with a short description, mark it complete once the person has gone through it, and display an overall progress indicator so managers and employees can both see how far along the onboarding is."
+  },
+  {
+    "id": "q_web_049_011",
+    "query_text": "Need a web app that lets students run interactive virtual lab simulations for STEM subjects right in the browser, without needing any special software installed. I want a catalog of available experiments organized by subject like physics, chemistry, or biology, where I can click one, adjust variables like temperature or force using sliders, and then see the results update on the screen so it actually feels like doing an experiment, with a spot to log my observations."
+  },
+  {
+    "id": "q_web_049_012",
+    "query_text": "Make a web app for a peer skill-exchange community where people can list a skill they are willing to teach and another skill they want to learn, then browse other members to find a good swap match. I want a simple profile for each member showing what they offer and what they want, a way to send a connection request, and a section on the home screen that shows recently posted skill offers so it is easy to see what is available."
+  },
+  {
+    "id": "q_web_049_013",
+    "query_text": "Build a web app for getting feedback on academic essays, where a student can paste in their writing, see comments tied to specific parts of the text, and check how the essay scores against a rubric covering things like argument strength, structure, and evidence. I want the rubric scores to show up as a simple rating for each category and the feedback to appear alongside the essay text in the desktop browser so everything is visible at once."
+  },
+  {
+    "id": "q_web_050_001",
+    "query_text": "Need a web app for managing a parent communication group where the class teacher can post announcements and parents can reply or ask questions in one shared space, with a left sidebar listing all announcements by date and the main area showing the full thread so everything stays organized and easy to scroll through on a desktop browser."
+  },
+  {
+    "id": "q_web_050_002",
+    "query_text": "Create a web app that works as a peer tutoring marketplace for university students, where students looking for help can browse tutors by subject and course, see each tutor's background and hourly rate, and send a booking request, while tutors can set up a simple profile listing what they can teach and when they're free, all usable in a desktop browser with a clean two-column layout."
+  },
+  {
+    "id": "q_web_050_003",
+    "query_text": "Create a study group finder app for online course students where you can post what class you're taking and what kind of study partner you're looking for, and browse others doing the same, with a simple browser-based interface that shows open groups on one side and a short profile or message thread on the other so people can actually connect and start studying together."
+  },
+  {
+    "id": "q_web_050_004",
+    "query_text": "Build a web app that helps graduate students find faculty mentors to work with, where students can browse professor profiles by research area and then send a short intro message to request a mentorship connection, and professors can list their interests and whether they're currently taking students, all laid out nicely for desktop browsers with a sidebar for filtering by department or topic."
+  },
+  {
+    "id": "q_web_050_005",
+    "query_text": "Build a collaborative note-sharing app for students in the same course where anyone in the cohort can add lecture notes to a shared wiki-style space, edit or expand what someone else wrote, and leave comments on specific sections, all running in a desktop browser so you can have the notes open on one side while working on the other, making it easy to build up a shared knowledge base over the semester."
+  },
+  {
+    "id": "q_web_050_006",
+    "query_text": "Create a web app for a coding bootcamp cohort that combines a community space with a job board, where students and alumni can post questions, share resources, and cheer each other on in a group feed, while a separate jobs section lets people post openings or share leads they've heard about, all accessible in a browser with a sidebar to switch between the community and jobs areas."
+  },
+  {
+    "id": "q_web_050_007",
+    "query_text": "Need a language exchange partner matching app for people enrolled in a language school, where you fill in what language you're learning and what you can offer in return, then the app shows you other enrolled students who are a good fit so you can reach out and set up practice sessions, built as a website that works well on a desktop with a browseable list of potential partners and a simple messaging thread."
+  },
+  {
+    "id": "q_web_050_008",
+    "query_text": "Make a web app for teachers to run their own professional learning community, where they can share lesson ideas, classroom strategies, and useful links in a shared resource forum, organized by subject or grade level so it's easy to find what you need, with a desktop-friendly layout that shows topic categories on the left and posts or resources on the right for comfortable reading and browsing."
+  },
+  {
+    "id": "q_web_050_009",
+    "query_text": "Build a school volunteer coordination app for parents and staff where upcoming volunteer opportunities are listed with time slots, and parents can sign up for the ones that work for them, while staff can post new needs and see at a glance how many people have signed up, built as a browser-based tool with a calendar-style overview and a detail panel on the right showing who's signed up for each slot."
+  },
+  {
+    "id": "q_web_050_010",
+    "query_text": "Create a web app that acts as a student project showcase gallery where each student can post their completed project with a title, description, and screenshots or links, and classmates and teachers can leave feedback comments on each one, with a desktop browser layout that shows all projects in a browseable gallery on the main area and opens the full project detail with comments alongside when you click one."
+  },
+  {
+    "id": "q_web_050_011",
+    "query_text": "Build a web app for homeschool co-op families to coordinate their group activities and share curriculum materials, where parents can post their available teaching slots, share lesson plans or book lists that worked well for them, and sign kids up for co-op classes, all running in a desktop browser with a weekly schedule view on one side and a shared resource library on the other for easy browsing."
+  },
+  {
+    "id": "q_web_050_012",
+    "query_text": "A browser-based researcher network app where graduate students and academics can post their research interests and ongoing projects, browse others working on related topics, and send a short message to propose co-authoring or collaboration, with a profile page for each person showing their publications and areas of focus and a simple search on the side for filtering by field or keyword."
+  },
+  {
+    "id": "q_web_050_013",
+    "query_text": "Create a web app for a university campus that combines a club directory with a student-run event calendar, where each club has a short profile with contact info and meeting details, and any club officer can add upcoming events to a shared calendar that all students can browse, built for desktop browsers with a sidebar listing all clubs and a main area showing the calendar or a selected club's page."
+  },
+  {
+    "id": "q_web_051_001",
+    "query_text": "Make a web app that handles the whole exam and homework submission hassle in one place, where students can find their assigned work, upload their answers or files before the deadline, and see their grades and feedback once the teacher has reviewed things, while teachers can post assignments, set due dates, and go through submissions without dealing with a mess of emails, all working in a regular desktop browser."
+  },
+  {
+    "id": "q_web_051_002",
+    "query_text": "Make a browser-based attendance tracking app for K-12 schools where teachers can quickly mark who showed up, who was late, and who was absent each day from a class list, and the school office can pull up a summary for any student or class over a chosen time range without digging through paper records or scattered spreadsheets, with a clean per-class view on the left and a records summary panel on the right."
+  },
+  {
+    "id": "q_web_051_003",
+    "query_text": "Create a web app where students can submit a transcript request and track whether it has been processed and sent, so they stop having to email the registrar's office and wait without knowing what is happening, with a simple form to fill out the request details and a status tracker that updates as the office reviews and completes it, all accessible from a desktop browser without any extra steps."
+  },
+  {
+    "id": "q_web_051_004",
+    "query_text": "Create a web app that lets teachers build and save their lesson plans in a shared library, where they can write out their plan with the topic, learning goals, activities, and materials, and also browse plans shared by other teachers at the school to reuse or adapt, so they stop reinventing the wheel every term, with a desktop browser layout that shows the plan editor on one side and the shared library on the other."
+  },
+  {
+    "id": "q_web_051_005",
+    "query_text": "Need a web-based rubric builder where teachers can set up grading criteria for an assignment by listing each category and the point values for different performance levels, save it as a reusable rubric, and then use it later to grade student work by clicking the appropriate level for each row, so grading is consistent and students can clearly see where their marks came from, all in a desktop browser."
+  },
+  {
+    "id": "q_web_051_006",
+    "query_text": "Create a web app that shows each student's academic progress in one place, pulling together their grades across subjects and how those scores have changed over time, so teachers and advisors can spot who is falling behind without manually comparing different gradebooks, with a per-student summary view and a side panel for filtering by class or time period, all running in a desktop browser."
+  },
+  {
+    "id": "q_web_051_007",
+    "query_text": "Need a classroom seating chart editor for teachers that works in the browser, where you can drag and drop student names onto a visual grid that represents the room layout, rearrange seats when needed, and save multiple arrangements for different activities, so you stop fiddling with hand-drawn charts or spreadsheets every time the seating changes, with a clean desktop-friendly editor and a saved charts list on the side."
+  },
+  {
+    "id": "q_web_051_008",
+    "query_text": "Create a web app for instructors to view plagiarism detection results for submitted student work without having to navigate clunky external tools, where each submission shows a similarity score and highlights the flagged passages so the instructor can quickly decide whether it needs a closer look, with a list of all submissions on the left and the detailed results for the selected one on the right, built for desktop browser use."
+  },
+  {
+    "id": "q_web_051_009",
+    "query_text": "Build a web app that handles parent-teacher conference scheduling and messaging so schools can stop coordinating everything through phone calls and paper slips, where parents can pick an available time slot with their child's teacher and send a short note about what they want to discuss, and teachers can see their full schedule for the day and reply to any messages, all working in a desktop browser with a calendar on one side and messages on the other."
+  },
+  {
+    "id": "q_web_051_010",
+    "query_text": "Make a school event and room booking calendar app for the browser where staff can see which rooms and time slots are already taken, submit a booking request for a room and event, and check if it was approved, so there's no more confusion about double-booking the gym or auditorium, with a weekly calendar view that shows all events color-coded by location and a booking form that pops up when you click an open slot."
+  },
+  {
+    "id": "q_web_051_011",
+    "query_text": "Create a web app that matches students who need help in a subject with peer tutors who know it well, where tutors can list what they teach and when they're free, and students can browse and book a session without going through a whole back-and-forth, so the whole process takes minutes instead of days of emailing, built for desktop browsers with a tutor directory on the main page and a simple booking flow."
+  },
+  {
+    "id": "q_web_051_012",
+    "query_text": "Build a web app for managing a spaced repetition flashcard study routine, where you can create decks of cards for different subjects, study them in the browser each day with the app deciding which cards to show based on how well you remembered them last time, and track your progress so you can see which topics still need work and which you've got down, with a clean desktop interface for both card creation and study sessions."
+  }
+]

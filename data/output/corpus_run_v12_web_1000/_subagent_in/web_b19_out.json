@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_033_003",
+    "query_text": "A new hire onboarding learning journey app for desktop browsers where each person can see their own checklist of required steps, like watching intro videos, completing policy readings, and finishing small quizzes, all laid out in order so nothing gets missed, with a left-side list of topics and the current task filling the main area, and a simple progress bar showing how far along they are in the full onboarding program."
+  },
+  {
+    "id": "q_web_033_004",
+    "query_text": "Build a web app for the sales team to get certified on product knowledge, where each person can work through a list of product topics in order, take a short quiz at the end of each one, and see which certifications they have already earned versus which ones are still pending, with a sidebar showing all the available topics and the main area displaying the current lesson content and the quiz when they are ready to be tested."
+  },
+  {
+    "id": "q_web_033_005",
+    "query_text": "A leadership development tracker for desktop browsers where managers can see the full curriculum laid out as an ordered list of courses and workshops, check off what they have completed, and also view the cohort they belong to so they can see which colleagues are at the same stage, with each person having their own progress log and the ability to mark sessions as done as they finish them."
+  },
+  {
+    "id": "q_web_033_006",
+    "query_text": "Create a web app for engineering staff to browse and sign up for internal skills bootcamp sessions, where each bootcamp has a description, a list of topics covered, the dates and times, and a clear spots-remaining count so people know if seats are still open, and once someone registers they can see all their upcoming sessions collected in one place alongside a history of bootcamps they have already attended."
+  },
+  {
+    "id": "q_web_033_007",
+    "query_text": "Need a browser-based learning center for the customer success team where all training materials are organized into clear categories like product knowledge, communication skills, and process guides, each category showing a numbered list of lessons to work through in order, and team members can mark lessons complete so their personal progress is always visible and nothing important slips through the cracks."
+  },
+  {
+    "id": "q_web_033_008",
+    "query_text": "A channel partner training and accreditation app for desktop browsers where partners can log in, see a list of required training courses sorted by certification level, work through each one at their own pace, take an assessment at the end, and then see a clear record of which accreditations they have earned and which ones they still need to complete, with all their progress saved in one easy-to-follow list."
+  },
+  {
+    "id": "q_web_033_009",
+    "query_text": "Build a web app that works as an internal company knowledge base and wiki, where employees can search for any topic and find the right article right away, browse articles organized by department or subject area in a sidebar, and also edit or add new pages when they have something to contribute, so the whole team has one reliable place in the browser to look things up and keep company knowledge up to date."
+  },
+  {
+    "id": "q_web_033_010",
+    "query_text": "Make a web app for tracking how learners are progressing through training programs, where a manager can see a list of all enrolled employees, click into any person to see which courses they have finished, how far along they are in ongoing ones, and their overall completion rate, plus a summary at the top showing team-wide numbers like how many people have completed all required training this month and how many are still in progress."
+  },
+  {
+    "id": "q_web_033_011",
+    "query_text": "Need a web app that serves as a daily microlearning library for company employees, where each day a short lesson is highlighted at the top, and people can also browse through a full list of bite-sized content organized by topic, mark each one as read, and keep a personal log of everything they have gone through, so it is easy to stay consistent with learning a little bit every day right in the browser."
+  },
+  {
+    "id": "q_web_033_012",
+    "query_text": "Need a web app for matching employees with peer mentors inside the company, where someone can fill in a short profile listing their goals and skills, get suggested matches based on what they are looking for, send a connection request, and once matched both people can see a shared log of their check-in sessions and notes, so the mentorship stays organized and neither person loses track of what they talked about."
+  },
+  {
+    "id": "q_web_033_013",
+    "query_text": "Create a web app that works as an internal video lecture library, where all recorded talks and training sessions are listed with titles and topics, and when you open a video the right side of the screen shows a numbered chapter list so you can jump to any part without rewatching from the beginning, plus a way to mark videos as watched so you always know which ones you still need to get through."
+  },
+  {
+    "id": "q_web_033_014",
+    "query_text": "A skills assessment tool for desktop browsers where employees can rate themselves on a list of skills relevant to their role, the app then highlights which ones are below the expected level, and from there each person can build a simple development plan by picking two or three skills to focus on and adding notes about what steps they will take, so both the employee and their manager have a clear written record of what to work on next."
+  },
+  {
+    "id": "q_web_034_001",
+    "query_text": "Create a brand fan community web app where people who love the brand can join, post about their experiences with products, follow other fans, and see a feed of recent posts and photos from the whole community, with a way to browse popular topics or categories on the side so it is easy to find conversations about specific things, all running in the browser so people can use it comfortably from their computer."
+  },
+  {
+    "id": "q_web_034_002",
+    "query_text": "A community portal web app for enterprise developer advocates where people can post questions and answers grouped by topic, browse a list of current discussions, upvote the most helpful replies so good answers rise to the top, and also see a profile for each person showing their past contributions, all laid out nicely for desktop use so it feels like a proper place to hang out and help each other out."
+  },
+  {
+    "id": "q_web_034_003",
+    "query_text": "Make a web app for a brand ambassador program where ambassadors can log in, see where they rank on a tiered leaderboard based on their activity points, check what they need to do to move up to the next tier, and browse a list of current challenges or tasks they can complete to earn more points, so the whole thing feels fun and motivating and everyone knows exactly where they stand."
+  },
+  {
+    "id": "q_web_034_004",
+    "query_text": "Make a web app for corporate alumni to stay connected after leaving the company, where they can set up a profile with their current role and interests, browse a directory of other alumni and filter by industry or location, reach out to people they want to reconnect with, and also see a job board listing opportunities posted by fellow alumni or the company itself, all usable in a regular desktop browser."
+  },
+  {
+    "id": "q_web_034_005",
+    "query_text": "Create a web app for a customer advisory council where members can browse a list of open proposals, vote for the ones they think are most important, leave a comment explaining their reasoning, and submit new proposals of their own, with a running tally showing how many votes each proposal has gotten so the most supported ideas are easy to spot, all designed to work comfortably in a desktop browser."
+  },
+  {
+    "id": "q_web_034_006",
+    "query_text": "Need a web app that works as a directory for technology partners and integrations, where someone can search or browse a list of all the partner companies, click into any one to read about what they offer and how their product connects with ours, and also join a forum thread for that specific integration to ask questions or share tips, so both the directory and the community discussion all live together in one browser-based place."
+  },
+  {
+    "id": "q_web_034_007",
+    "query_text": "Need a web app where employees can submit ideas for an internal innovation challenge, browse ideas that others have already posted, vote for the ones they think are most promising, and leave short comments to encourage or build on each other, with the home screen showing the most popular and most recently submitted ideas side by side so it is easy to jump in and participate from a regular desktop browser."
+  },
+  {
+    "id": "q_web_034_008",
+    "query_text": "Make a web app for running customer co-creation workshops, where invited customers can log in, see the current challenge or topic being explored, drop their ideas into a shared board, react to other people's ideas with a simple like or a short note, and also vote on which ideas they find most useful, so the team gets real input from customers in an organized way right in the browser without needing any special tools."
+  },
+  {
+    "id": "q_web_034_009",
+    "query_text": "A loyalty community web app for desktop browsers where members can log in, see their current point total and reward tier, browse a list of available rewards they can claim, and also check a gallery of badges they have earned for things like hitting milestones or joining special events, with the home area showing a feed of community activity so people feel like they are part of something rather than just collecting points alone."
+  },
+  {
+    "id": "q_web_034_010",
+    "query_text": "Need a web app that hosts a brand-sponsored discussion forum focused on industry trends and ideas, where experts and professionals can post articles or start threads on specific topics, reply to each other, and follow conversations they care about, with a list of topic areas on the side so it is easy to browse by subject, all designed for desktop browser use so people can have proper in-depth discussions with a full keyboard and screen."
+  },
+  {
+    "id": "q_web_034_011",
+    "query_text": "Build a web app for coordinating corporate volunteer activities, where employees can browse upcoming volunteer opportunities, sign up for the ones that interest them, log the hours they contribute after each event, and see a running total of the impact their team has had so far, like total hours volunteered or number of events attended, all in a browser-based tool that makes it easy to stay organized and keep everyone motivated."
+  },
+  {
+    "id": "q_web_034_012",
+    "query_text": "Need a web app where customers can submit their success stories about using the product, go through a simple review step so only quality stories get published, and then see their story featured in a public gallery alongside others, with the gallery being browsable by industry or use case so visitors can find stories that are relevant to them, all working smoothly in a desktop browser for both submitters and readers."
+  },
+  {
+    "id": "q_web_034_013",
+    "query_text": "Need a web app that serves as a directory for enterprise user group chapters and their events, where someone can browse a list of regional chapters, click into any chapter to see upcoming meetups and past events, and register for events they want to attend, plus a simple way for chapter organizers to add new events and update details, all working in a desktop browser so it is easy to manage and find events from a regular computer."
+  }
+]

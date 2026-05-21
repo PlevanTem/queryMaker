@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_scene_024_011",
+    "query_text": "Create a CSS property quick-reference card tool for my phone where I can look up any CSS property and instantly see what it does, what values it accepts, and a simple example. I want the properties organized into groups like layout, text, color, and spacing so I can find things quickly without scrolling forever. It should be easy to tap through on mobile and load fast."
+  },
+  {
+    "id": "q_scene_025_001",
+    "query_text": "Make a JLPT N2 grammar practice question set tool for my phone that gives me one grammar question at a time, shows four answer choices I can tap, and tells me right away whether I got it right along with a short explanation of the grammar point. I want to be able to go through a set of questions in one sitting and see how many I got correct at the end."
+  },
+  {
+    "id": "q_scene_025_002",
+    "query_text": "Create a TOPIK Korean language mock test tool on my phone that lets me go through a full practice test one question at a time, with multiple choice answers I can tap to select. I want it to keep track of which questions I answered and show me my score and a breakdown of right and wrong answers once I finish the whole test."
+  },
+  {
+    "id": "q_scene_025_003",
+    "query_text": "Build a AWS certification practice questions tool for my phone that gives me one question at a time across different topics like storage, networking, and security, with multiple choice options I can tap. I want it to show me the correct answer and a brief explanation after each question, and keep a running count of how many I have answered correctly."
+  },
+  {
+    "id": "q_scene_025_004",
+    "query_text": "A Google Analytics certification quiz tool for my phone that walks me through practice questions one at a time, covering things like goals, audiences, and reports, with four answer choices to tap. After each answer I want to see whether I was right and a short reason why, and at the end I want a summary showing my total score and which areas I need to study more."
+  },
+  {
+    "id": "q_scene_025_005",
+    "query_text": "Create a CompTIA Security+ scenario questions tool for my phone that presents realistic workplace situations and asks me to pick the best security response from a list of options. I want it to explain why the right answer is correct after I choose, cover a range of topics like threats and network security, and track my score so I can see how I am improving over time."
+  },
+  {
+    "id": "q_scene_025_006",
+    "query_text": "Make a data science case study mini-challenge tool for my phone that presents me with a short real-world scenario and asks me to pick the right approach or answer from several choices. I want it to explain the reasoning behind the correct answer, cover different topics like data cleaning and model selection, and show my score at the end of each round."
+  },
+  {
+    "id": "q_scene_025_007",
+    "query_text": "Build a LSAT logical reasoning argument analysis tool for my phone that gives me one argument passage at a time and asks me to identify things like the conclusion or the flaw in the reasoning. I want multiple choice answer options I can tap, a clear explanation after each question showing why the right answer is correct, and a score summary at the end of each practice session."
+  },
+  {
+    "id": "q_scene_025_008",
+    "query_text": "Build a DELF B2 French essay writing prompt tool for my phone that shows me a writing topic with some context and guidance, lets me type out my response in a text area, and gives me a checklist of things to include like an introduction and supporting arguments. I want to be able to go through multiple prompts in a session and save notes on what I want to improve for next time."
+  },
+  {
+    "id": "q_scene_025_009",
+    "query_text": "Make a citizenship civics naturalization quiz tool for my phone that tests me on questions about government, history, and rights the way the real interview does. I want to tap through one question at a time, see if my answer is right immediately, get a short explanation for each answer, and see a final score after finishing so I know where I still need practice."
+  },
+  {
+    "id": "q_scene_025_010",
+    "query_text": "An EMT scenario and protocol drill tool for my phone that presents emergency situations one at a time and asks me to choose the correct response step from a list of options. I want it to tell me right away if I chose correctly, show the proper protocol step with a brief explanation, cover different types of emergencies, and give me a score at the end of each drill session."
+  },
+  {
+    "id": "q_scene_025_011",
+    "query_text": "Make a high school physics formula application test tool for my phone that shows me a word problem, gives me a list of formulas to pick from, and then walks me through applying the right one to get the answer. I want it to cover topics like motion, forces, and energy, show me where I went wrong if I get it wrong, and track my score across a full practice session."
+  },
+  {
+    "id": "q_scene_026_001",
+    "query_text": "A science chapter progress indicator tool for my phone that lets me mark each chapter in a textbook as not started, in progress, or finished. I want to see a simple overview of all the chapters at a glance with a visual bar showing how far through the whole book I am, and be able to add short notes to any chapter reminding myself what I still need to review."
+  },
+  {
+    "id": "q_scene_026_002",
+    "query_text": "Make a memory palace building progress log for my phone where I can record each memory palace I am building, list the rooms and items I have placed, and mark which ones I have actually memorized. I want to be able to see all my palaces in one place and tap into any of them to check off individual items as I review them, with a count showing how many items are solid versus still shaky."
+  },
+  {
+    "id": "q_scene_026_003",
+    "query_text": "Need a typing speed improvement graph tool for my phone that lets me log my words-per-minute score each time I practice and shows me a simple line chart of how my speed has changed over the past few weeks. I want to be able to add a quick note to each entry like what I was practicing, and see my personal best and my average clearly at the top of the screen."
+  },
+  {
+    "id": "q_scene_026_004",
+    "query_text": "A foreign script handwriting practice log for my phone where I can record each practice session by picking the script I worked on, like Arabic or Japanese, entering how long I practiced, and rating how it went. I want to see a history of all my sessions in a list organized by date, and a small summary showing my total practice time per script so I can see where I am putting in the most effort."
+  },
+  {
+    "id": "q_scene_026_005",
+    "query_text": "A chess rating progression chart tool for my phone that lets me log my rating after each game or tournament and shows me a clean line graph of how my rating has moved over time. I want to be able to add a note to any entry like what opening I used or what I think went wrong, and see my highest and lowest rating clearly so I can track whether I am actually improving."
+  },
+  {
+    "id": "q_scene_026_006",
+    "query_text": "Build a speed reading WPM improvement tracker for my phone where I can log my words-per-minute score and comprehension rating after each reading session and see a chart of how both numbers change over time. I want to add a note to each entry about what I was reading, see my best score highlighted, and get a simple average for the past week so I know if my practice is working."
+  },
+  {
+    "id": "q_scene_026_007",
+    "query_text": "Build a debate argument bank progress log for my phone where I can save arguments and evidence I have researched for different topics, mark each one as ready or still needs work, and see at a glance how many solid arguments I have for each side. I want to tap any argument to read the full notes I saved, and see a count showing how prepared I am overall for an upcoming debate."
+  },
+  {
+    "id": "q_scene_026_008",
+    "query_text": "Need a public speaking rehearsal session log for my phone where I can record each practice session by entering the speech topic, how long I practiced, and a self-rating from one to five. I want to add notes about what went well and what to fix, see all my past sessions in a list, and track whether my ratings are going up over time with a simple chart."
+  },
+  {
+    "id": "q_scene_026_009",
+    "query_text": "An academic research reading tracker tool for my phone that lets me add papers or articles I need to read, mark them as unread, reading, or done, and add notes about the key points once I finish. I want to see everything in a clean list organized by subject area, and a simple count at the top showing how many papers I have left so I can stay on top of my reading list."
+  },
+  {
+    "id": "q_scene_026_010",
+    "query_text": "Build a finance self-study topic coverage tool for my phone that shows all the main areas I need to learn like accounting, investing, and risk management as a map or checklist. I want to mark each topic as not started, studying, or confident, see a percentage showing overall how much I have covered, and tap any topic to jot down notes about resources or things I need to revisit."
+  },
+  {
+    "id": "q_scene_026_011",
+    "query_text": "Make a recipe skill-unlock system tool for my phone that lets me add cooking techniques and recipes I want to learn, mark them as locked until I am ready to try them, and check them off once I have actually made them successfully. I want to see all my recipes organized into skill levels from beginner to advanced, with a count of how many I have unlocked in each level so I can see my progress."
+  },
+  {
+    "id": "q_scene_027_001",
+    "query_text": "Build a course rating and review submission tool for my phone that lets me pick a course from a list, give it a star rating by tapping, and write a short review about what I liked and what could be better. I want the form to be simple and quick to fill in on my phone, and show a confirmation once I submit so I know it went through without any issues."
+  },
+  {
+    "id": "q_scene_027_002",
+    "query_text": "Build a cohort progress leaderboard and peer ranking tool for my phone that shows me where I stand among my classmates based on lessons completed or quiz scores. I want to see a ranked list with names and scores, my own position highlighted so I can spot it quickly, and be able to tap any person to see a bit more about their progress so I know what I need to do to catch up."
+  },
+  {
+    "id": "q_scene_027_003",
+    "query_text": "Create a mobile app for online classes that has a subtitle and transcript toggle built into the video player, so I can switch captions on or off with one tap and also pull up the full written transcript of the lesson when I want to read along or search for a specific part. I want the transcript to show the current line highlighted as the video plays, and the subtitles to stay readable at the bottom of the video without covering too much of the screen."
+  },
+  {
+    "id": "q_scene_027_004",
+    "query_text": "Create a note-taking app for phone that lets me write personal text notes while a lesson is playing, so I can jot things down without leaving the class. I want the notes area to stay on the same screen as the lesson player, and each note I save should automatically record which lesson it came from and roughly where in the lesson I wrote it, so I can go back and find the right spot later."
+  },
+  {
+    "id": "q_scene_027_005",
+    "query_text": "A resource manager app for my phone where each course has its own list of downloadable files and attachments, things like PDFs, slides, and worksheets. I want to see the file name, type, and size at a glance, tap to download, and have a separate section that collects everything I have already saved so I can find it quickly without digging through each course one by one."
+  },
+  {
+    "id": "q_scene_027_006",
+    "query_text": "Create a mobile app for live class sessions that lets the teacher run a quick poll and lets students answer with a tap, and also lets everyone send emoji reactions during the lesson to show they understand or have a question. I want the poll results to show up right away so the whole class can see how people voted, and the emoji reactions to float up the screen briefly so they feel lively but do not get in the way."
+  },
+  {
+    "id": "q_scene_027_007",
+    "query_text": "Make a mobile app for online classes that shows all the small group rooms available during a session, with each room listed by name or topic and how many people are already in it, so I can pick the right one and join with a single tap. I want to see my current group clearly at the top and have an easy way to switch rooms if the teacher reassigns me."
+  },
+  {
+    "id": "q_scene_027_008",
+    "query_text": "Build a mobile app that recommends courses based on what I have already finished, so when I complete something it immediately suggests a few related things I might want to take next. I want each recommendation to show the course name, a short description, and roughly how long it takes, and I want to be able to tap to save any one of them to a personal list so I can come back to it when I am ready."
+  },
+  {
+    "id": "q_scene_027_009",
+    "query_text": "Need a course tracker app for my phone that always remembers exactly where I left off in any lesson, so I can tap a big continue button right from the home screen and jump back in instantly. I want it to show the course name, the lesson I was on, and a progress bar so I know how far along I am, and the continue button should take me directly to the right spot in the video without any extra taps."
+  },
+  {
+    "id": "q_scene_027_010",
+    "query_text": "Need a learning app for my phone that includes a built-in glossary I can open from any lesson, where I can look up terms and get a clear plain-language definition right away. I want the glossary to stay accessible as a panel that slides in from the side so I never lose my place in the lesson, and I also want to be able to search for a term by typing part of the word when I am not sure of the exact spelling."
+  },
+  {
+    "id": "q_scene_027_011",
+    "query_text": "Make a mobile assignment app for courses where students can submit their work for peer review and also review a classmate's submission using a clear scoring guide that lists each thing being evaluated. I want the scoring guide to have a few simple criteria with a rating option for each one, and a text box at the bottom where I can leave a short comment, all on a single screen so the whole review process is quick and straightforward on my phone."
+  },
+  {
+    "id": "q_scene_028_001",
+    "query_text": "Need a survival phrase guide app for my phone when I travel or study a foreign language and just need the basics fast, without flipping through a textbook. I want the phrases grouped by situation, things like ordering food, asking for directions, or handling an emergency, so I can tap the right category and find the phrase I need in seconds, with a pronunciation hint next to each one."
+  },
+  {
+    "id": "q_scene_028_002",
+    "query_text": "Build a star and constellation reference app for my phone that I can check quickly when I am out at night or cramming for a test, because I always forget which stars belong to which constellation. I want to tap on a constellation name and see a simple diagram of its shape, the names of its main stars, and a few key facts about it, all on one screen so I am not hunting through multiple pages."
+  },
+  {
+    "id": "q_scene_028_003",
+    "query_text": "Create a formula reference app for my phone that covers electrical circuit laws like Ohm's law, Kirchhoff's rules, and power calculations, so I can pull up the right formula in class or during homework without digging through my notes. I want each formula displayed clearly with the variable names spelled out and a quick example of how to use it, and I want them organized by topic so I can find the one I need with one tap."
+  },
+  {
+    "id": "q_scene_028_004",
+    "query_text": "Build a statistics helper app for my phone that walks me through picking the right test for my data by asking me a few simple questions, like whether my data is comparing groups or looking at a relationship, and then showing me which test fits. I want it to explain in plain words why that test was chosen and what I need to check before using it, so I stop guessing every time I sit down to analyze something."
+  },
+  {
+    "id": "q_scene_028_005",
+    "query_text": "A reference tool for my phone that lays out the main project management frameworks, things like Agile, Waterfall, Scrum, and Kanban, side by side so I can actually see how they differ without reading a long article. I want each framework to have a short description, its best use cases, and the key pros and cons listed in a simple table format, so the whole comparison fits neatly on one screen."
+  },
+  {
+    "id": "q_scene_028_006",
+    "query_text": "A color theory reference app for my phone that I can check whenever I am stuck on a design decision and need a quick reminder of how colors work together. I want it to cover the basics like complementary, analogous, and triadic color combos, plus a short note on contrast and readability, and each concept should show a visual example right next to the explanation so I understand it at a glance without reading a wall of text."
+  },
+  {
+    "id": "q_scene_028_007",
+    "query_text": "Build a photography guide app for my phone that helps me get the exposure right in any situation, because I can never remember how aperture, shutter speed, and ISO all work together when the light changes. I want a simple chart showing what each setting does to the image, with a few common scenarios like sunny outdoors or dim indoor, and a quick suggestion for where to start so I stop wasting shots guessing."
+  },
+  {
+    "id": "q_scene_028_008",
+    "query_text": "Make a first aid guide app for my phone that shows the steps for common emergencies in a clear numbered order so I can actually follow along in a stressful moment without reading a paragraph. I want things like CPR, choking, burns, and cuts each on their own screen with the most important step first and a simple note on what to watch out for, because when something goes wrong I need to find the right card fast and just do what it says."
+  },
+  {
+    "id": "q_scene_028_009",
+    "query_text": "Need a tax reference app for my phone that shows the current income tax brackets in a simple table so I can quickly see which bracket my income falls into without searching through government websites. I want it to also list the most common deductions and credits people actually use, with a plain-language explanation of each one, so I can figure out roughly what applies to me before I talk to anyone or fill out any forms."
+  },
+  {
+    "id": "q_scene_028_010",
+    "query_text": "Build a sports rules reference app for my phone that lets me look up the scoring system for different sports, like how points are counted in tennis, volleyball, or basketball, so I stop having to explain that I have no idea what just happened. I want each sport to have a short summary of how scoring works and what counts as a foul or out, so I can pull it up quickly during a game and actually follow along."
+  },
+  {
+    "id": "q_scene_028_011",
+    "query_text": "Make a machine learning reference app for my phone that puts the common models side by side in a plain comparison, covering things like when to use each one, what kind of data it works with, and roughly how complex it is. I am always mixing up which algorithm to try first, so I want each row of the comparison to be short and scannable, and I want to be able to tap a model name to see a bit more detail without leaving the app."
+  },
+  {
+    "id": "q_scene_029_001",
+    "query_text": "Build a shared chore tracker app for my phone that lets everyone in the house see which chores are assigned to them this week and mark them done with a tap. I want the chores to rotate automatically on a set schedule, like weekly or every few days, so no one person is stuck doing the same thing every time, and I want a simple view that shows at a glance who still has something pending so we can actually keep each other accountable."
+  },
+  {
+    "id": "q_scene_029_002",
+    "query_text": "Make a reading and research queue app for my phone that lets me add articles, papers, or books I want to get through, so I stop saving links in random chat messages and then losing them. I want to be able to quickly add something with just a title and maybe a link, mark items as done when I finish them, and have the unread ones sorted by how long ago I added them so the oldest things do not get buried forever."
+  },
+  {
+    "id": "q_scene_029_003",
+    "query_text": "A task follow-up app for my phone where I can log things I have handed off to other people, like tasks I asked a teammate or family member to handle, and set a date to check back in on them. I want to see all my delegated items in one list sorted by the follow-up date, with the person's name and a short note on what they were supposed to do, so I have a clear picture of what is waiting on someone else and I actually remember to follow up."
+  },
+  {
+    "id": "q_scene_029_004",
+    "query_text": "Make a to-do manager app for my phone that lets me label each task with a color-coded category, like work, home, or errand, so I can see at a glance what kind of thing is on my list without reading every entry. I want to be able to filter by category with one tap so I can focus on just the work tasks during office hours and just the home stuff on weekends, and adding a label should be as quick as picking a color when I create the task."
+  },
+  {
+    "id": "q_scene_029_005",
+    "query_text": "Need a task manager app for my phone that lets me duplicate any existing task in one tap and also save tasks as templates I can apply again later, because I keep re-typing the same recurring tasks from scratch every time. I want the cloned task to come up ready to edit with all the original details filled in, and templates should be easy to find in a separate saved list so I am not hunting for the one I set up last month."
+  }
+]

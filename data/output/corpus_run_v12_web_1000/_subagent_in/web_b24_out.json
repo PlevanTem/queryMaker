@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_042_005",
+    "query_text": "A page in the browser where my startup posts updates and people can reply under each one with their thoughts, like a little conversation thread per change, so users feel like they actually have a say in where things are going. I want visitors to see a running list of what we shipped, click into any entry, leave a quick reaction or comment, and others can pile on with their own takes without it getting messy."
+  },
+  {
+    "id": "q_web_042_006",
+    "query_text": "Create a place on our site where developers can read all our how-to guides and look up how our tool works, and also jump into a community section to ask questions or share tips with other people building on it, so everything they need is in one spot in the browser instead of scattered across different links."
+  },
+  {
+    "id": "q_web_042_007",
+    "query_text": "Need a page on our website where power users who really love the product can sign up to become official ambassadors, with a short form telling us a bit about themselves and why they want to join, plus a spot showing the perks they will get and maybe a list of current ambassadors so new people feel like they are joining something real."
+  },
+  {
+    "id": "q_web_042_008",
+    "query_text": "Need a place on our site that works like a shared wiki where any community member can write up answers or tips, and other people can vote the best ones to the top so the most useful stuff is easy to find, kind of like a living help center that our users actually maintain together in the browser."
+  },
+  {
+    "id": "q_web_042_009",
+    "query_text": "Build a section of our site where users can post their own step-by-step guides or short walkthroughs showing others how to use the product for different things, with a way to browse by topic and maybe save the ones you want to come back to, so the whole library grows as more people chip in."
+  },
+  {
+    "id": "q_web_042_010",
+    "query_text": "A board in the browser where anyone can submit a bug they ran into, see what others have already reported, and vote up the issues that are bothering the most people, so our team can quickly tell which problems to tackle first and users feel heard rather than just shouting into the void."
+  },
+  {
+    "id": "q_web_042_011",
+    "query_text": "Make a special recognition wall on our website that celebrates the people who joined us really early, showing their name, maybe a small note about when they signed up, and some kind of badge or highlight so it feels like a real honor rather than just a list, something they would actually want to share with friends."
+  },
+  {
+    "id": "q_web_042_012",
+    "query_text": "Need a page on our site that keeps all the past newsletters in one browsable archive so people can read old issues they missed, and also has a clean sign-up spot at the top so new visitors can subscribe without having to hunt around for where to put their email."
+  },
+  {
+    "id": "q_web_042_013",
+    "query_text": "Make a page in the browser where we announce every new feature or update we ship, with each post getting its own little section so people can read the full story behind a change, and maybe a spot to leave a quick note or thumbs-up so we know if folks are excited about a particular thing we released."
+  },
+  {
+    "id": "q_web_043_001",
+    "query_text": "Need a page in the browser that pulls together all the numbers from our data into one view so I can actually see what is going on without opening five different spreadsheets, with some charts or summary rows that make it obvious at a glance whether things are going up or down, and filters to narrow down to a specific time period or team."
+  },
+  {
+    "id": "q_web_043_002",
+    "query_text": "A documentation site in the browser that shows all our API endpoints in a clean organized way, where people can read what each one does, see example requests and responses, and maybe try a quick call right from the page without having to set anything up themselves, so new developers can get going without emailing us every five minutes."
+  },
+  {
+    "id": "q_web_043_003",
+    "query_text": "Need a web page where my team can turn specific features on or off for different groups of users without touching any code, just toggling a switch and saving, so we can roll things out slowly and turn them off fast if something goes wrong, and anyone on the team can see which features are live for which customers."
+  },
+  {
+    "id": "q_web_043_004",
+    "query_text": "Create a tool in the browser that lets me put together a step-by-step checklist for new customers when they first sign up, so they know exactly what to do to get set up and can check things off as they go, and I can see which steps people tend to get stuck on so I know where to add more help."
+  },
+  {
+    "id": "q_web_043_005",
+    "query_text": "A page in the browser where our whole team can see what we are working on this week versus next month, with tasks laid out so it is obvious who owns what and when things are supposed to be done, and we can drag stuff around or add new items without having to explain the whole plan from scratch in a meeting every time."
+  },
+  {
+    "id": "q_web_043_006",
+    "query_text": "Build a tool in the browser where I can set up two versions of our pricing page and show each one to a different chunk of visitors, then see which version gets more people to actually sign up, so I can stop guessing which price layout works better and just look at the real numbers."
+  },
+  {
+    "id": "q_web_043_007",
+    "query_text": "Make a web page where I can keep track of who owns how much of the company, so when we bring on a new investor or give someone options I can update the numbers and immediately see the new breakdown, without having to rebuild the whole thing in a spreadsheet every single time something changes."
+  },
+  {
+    "id": "q_web_043_008",
+    "query_text": "Make a reporting page in the browser that shows how our subscription revenue is changing month by month, with a simple chart or table so I can see at a glance whether we are growing or losing customers, and maybe a way to filter by plan type so I know which tier is actually doing well."
+  },
+  {
+    "id": "q_web_043_009",
+    "query_text": "Make a spot in the browser where our small team can write up and organize all the stuff we keep having to explain to new people, like how we do certain things or who to contact for what, so instead of re-answering the same questions over and over we just point people to the right page and they can read it themselves."
+  },
+  {
+    "id": "q_web_043_010",
+    "query_text": "Create a page in the browser where I can book user interviews without back-and-forth emails, and then attach my notes from each session so everything is in one place, making it easy to look back across multiple conversations and spot patterns in what people are telling us about the product."
+  },
+  {
+    "id": "q_web_043_011",
+    "query_text": "Create a web page where I can track what our main competitors are up to and jot down quick notes about how we compare, so when someone on the sales team is in a tough conversation they can pull up a simple reference sheet and know what to say instead of making things up on the spot."
+  },
+  {
+    "id": "q_web_043_012",
+    "query_text": "A page in the browser where customers can see how much of their monthly usage they have left and what it is going to cost them, with a clear breakdown so there are no surprises on the bill, and maybe a way to upgrade their plan or ask for more capacity right from that same page without contacting support."
+  },
+  {
+    "id": "q_web_043_013",
+    "query_text": "Make a web page where I can see all the different company workspaces using our product in one list, switch into any of them to check on things, adjust their settings, or add and remove users, so I am not logging into each account separately every time something needs to be changed."
+  },
+  {
+    "id": "q_web_044_001",
+    "query_text": "Build a page on our school website that lists every teacher and staff member with their name, photo, what subject or role they handle, and maybe a short note about them, so parents and new students can easily figure out who to reach out to without having to ask around or dig through old emails."
+  },
+  {
+    "id": "q_web_044_002",
+    "query_text": "Create a place on the university website in the browser where prospective students can browse all the programs and courses we offer, filtered by subject area or degree type, with a clear description of each one so they can compare options and figure out what fits their goals without having to request a printed brochure."
+  },
+  {
+    "id": "q_web_044_003",
+    "query_text": "A section on the school website in the browser that highlights what graduates have gone on to do after finishing the program, with short write-ups and maybe a photo for each person, so prospective students can see real examples of where the degree can take them rather than just reading a list of generic job titles."
+  }
+]

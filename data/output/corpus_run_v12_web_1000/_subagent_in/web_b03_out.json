@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_004_009",
+    "query_text": "Make a web tool that checks all my saved passwords and tells me which ones are embarrassingly weak or already showing up in known hacks, because I keep reusing the same few passwords everywhere and I know that is a disaster waiting to happen. I just want to paste them in, see a clear list of which ones are dangerous, and know which accounts I need to fix first without having to understand any technical stuff."
+  },
+  {
+    "id": "q_web_004_010",
+    "query_text": "Need a web app where I can finally catalog everything I own at home by taking photos and typing a quick description, so when something breaks or I need to find that one thing I bought two years ago I am not hunting through boxes or trying to remember where I put it. It should let me search by name or room and show me the photo so I actually know what I am looking at."
+  },
+  {
+    "id": "q_web_004_011",
+    "query_text": "A simple web app where I set a few big goals for myself and then check in every week to say what I actually got done toward each one, because right now I write goals in January and never look at them again until December when I feel bad about myself. Something that keeps track of whether I am making progress week by week so I stop kidding myself about how productive I am."
+  },
+  {
+    "id": "q_web_004_012",
+    "query_text": "Create a web app where I can build sets of study cards for whatever I am trying to memorize, and it automatically decides which ones to show me again sooner because I keep getting them wrong, instead of me having to flip through everything equally when some stuff I already know cold. I want to add cards, practice on my laptop browser, and not have to relearn things I already nailed last week."
+  },
+  {
+    "id": "q_web_004_013",
+    "query_text": "Create a web app where I plan out a trip day by day and also track what everything costs so I actually know if I am going over budget before I am already on the plane, because every time I travel I just guess at prices and then panic when my card gets charged more than expected. I want to see each day laid out with activities and a running total so nothing surprises me."
+  },
+  {
+    "id": "q_web_004_014",
+    "query_text": "Need a web tool that lets me log what I spend my time on each day in my browser, then at the end of the week shows me a report of where all those hours actually went, because I always feel busy but have no idea if I am busy on things that matter or just wasting hours on stuff that does not move anything forward. Just simple logging and a weekly summary I can actually use."
+  },
+  {
+    "id": "q_web_005_001",
+    "query_text": "A photography portfolio website where the photos themselves do all the talking and nothing else gets in the way, with a clean full-width layout that feels like walking through a calm gallery rather than scrolling a busy feed. The whole thing should feel quiet and spacious in a browser, like the white space matters as much as the images, with a simple way to organize work into different series or projects."
+  },
+  {
+    "id": "q_web_005_002",
+    "query_text": "Make a website for an illustrator where the artwork kind of comes alive as you scroll through it in a browser, with each piece revealing itself in a way that feels intentional and a little magical rather than just appearing all at once. The overall mood should feel like flipping through a beautiful art book, with enough breathing room between pieces that each one gets its own moment to land."
+  },
+  {
+    "id": "q_web_005_003",
+    "query_text": "Create a personal site for a motion designer where short video clips loop quietly in the background of each project, giving visitors a feel for the work before they even click anything, and the whole site in a desktop browser feels kinetic and alive rather than static like a resume. The navigation should feel like it has its own subtle sense of motion, matching the energy of the work being shown."
+  },
+  {
+    "id": "q_web_005_004",
+    "query_text": "Build a portfolio site for a 3D character artist where visitors can actually spin and look at character models right in their browser without needing to download anything, because seeing a 3D figure from only one angle is like reviewing a sculpture from a photo. The rest of the site should feel dark and atmospheric, like a game title screen, giving the characters room to feel dramatic and alive."
+  },
+  {
+    "id": "q_web_005_005",
+    "query_text": "Build a site where a typeface designer can show off the fonts they have made by displaying them at big beautiful sizes in a browser so visitors actually feel what each typeface is like to read, with the ability to type something and watch it render live in each font. The site itself should feel typographically considered, like someone who genuinely cares about letters designed every detail."
+  },
+  {
+    "id": "q_web_005_006",
+    "query_text": "Need a website for an author where each book gets its own visual personality and visitors can read a few paragraphs of each one right there in the browser to get a taste of the writing before deciding to buy, rather than just seeing a cover and a blurb. The whole site should feel literary and warm, like a cozy independent bookshop, not like an online storefront."
+  },
+  {
+    "id": "q_web_005_007",
+    "query_text": "Create a site for an indie filmmaker where each project has its own page with the trailer playing right there in the browser and some notes about how it was made, because the story behind a film is often as interesting as the film itself. The archive of projects should feel like a collection worth exploring rather than a filmography list, with each title having its own visual mood."
+  },
+  {
+    "id": "q_web_005_008",
+    "query_text": "Create a site where a musician can lay out their whole catalog album by album in the browser with the cover artwork front and center, because album art is part of the music and deserves to be seen big rather than tiny. Each album should feel like its own world when you open it, with a way to hear a clip and see the track listing, and the overall site should feel like it was made by someone who takes music seriously."
+  },
+  {
+    "id": "q_web_005_009",
+    "query_text": "Create a portfolio site for an architecture studio where each project has a gallery of photos alongside a floor plan you can actually look at properly in the browser, because architecture lives in the relationship between how something looks and how it is laid out spatially. The site should feel precise and considered, with generous white space and a calm confidence that matches the kind of work being shown."
+  },
+  {
+    "id": "q_web_005_010",
+    "query_text": "Need a digital lookbook site for a fashion designer that lets the editorial photography really breathe in a browser, with big full-screen images that feel like they belong in a magazine rather than a shopping site, and a way to move through collections that feels as considered as the clothes themselves. The whole experience should feel like taste, not commerce, even though there might be some way to get in touch at the end."
+  },
+  {
+    "id": "q_web_005_011",
+    "query_text": "An interior design portfolio site where each project has a before-and-after comparison you can drag back and forth in a browser to see the transformation, because before-and-after photos side by side never quite capture how dramatic the change actually was. The site should feel warm and residential, like the designer has a strong point of view, not clinical like a home improvement catalog."
+  },
+  {
+    "id": "q_web_005_012",
+    "query_text": "A showcase site for an indie game developer where little playable demos are actually embedded right in the browser so visitors can try a few minutes of each game without downloading anything, because nothing sells a game like touching it. Each game should get its own section with a bit of story about how it was made, and the overall site should feel like it was built by someone who genuinely loves games rather than trying to look professional."
+  },
+  {
+    "id": "q_web_005_013",
+    "query_text": "Create a portfolio site for a product designer where each case study walks through the whole process from messy early sketches to the final thing, because showing only the polished result never explains what made the design actually hard or interesting. The site in a desktop browser should feel organized but not sterile, like someone laid out a really well-edited sketchbook rather than a slide deck."
+  },
+  {
+    "id": "q_web_005_014",
+    "query_text": "Make a portfolio site for a UX designer where each project has interactive prototypes actually embedded so visitors can click around and feel the thing rather than just look at screenshots in a browser, because the whole point of UX is how something behaves and static images cannot convey that. The site should feel clean and thoughtful with just enough personality to show there is a real designer behind it."
+  },
+  {
+    "id": "q_web_006_001",
+    "query_text": "Need a web app that works like a beautiful notebook for saving ideas, images, quotes, and half-formed thoughts in a browser, something that feels genuinely lovely to open rather than utilitarian, because the aesthetic of the place where I keep my ideas actually affects whether I want to add to it or avoid it. It should feel like a private creative space with a visual quality that makes browsing through old entries feel like a small pleasure."
+  },
+  {
+    "id": "q_web_006_002",
+    "query_text": "A personal publishing site where an independent writer can put their essays up in a browser reading experience that actually respects the writing, with generous line spacing and a typeface that makes you want to settle in rather than skim, because most free publishing platforms feel like they were designed for content quantity rather than reading quality. Each piece should feel considered and worth sitting with."
+  },
+  {
+    "id": "q_web_006_003",
+    "query_text": "Make a portfolio site for a freelance journalist where long articles are presented with a reading experience that feels like a good magazine in a browser, with a clean layout that honors the length and seriousness of the work rather than treating it like a blog post. There should be a way to filter by topic or publication so the breadth of the work is apparent without everything feeling jumbled together."
+  },
+  {
+    "id": "q_web_006_004",
+    "query_text": "Make a weekly digest site for a niche community where one person curates the most interesting links and thoughts from that week and presents them in a browser as something worth reading slowly rather than scanning, because the best curation has a voice and a point of view rather than just being a list of links. Each edition should feel like a letter to people who care about the same things."
+  },
+  {
+    "id": "q_web_006_005",
+    "query_text": "Make a site where an independent novelist can publish their story chapter by chapter in a browser reading experience that feels immersive and unhurried, with a way for readers to follow along as new chapters come out and easily pick up where they left off, because serialized fiction deserves a home that feels like reading rather than browsing. The design should get out of the way of the story and let the writing do its work."
+  }
+]

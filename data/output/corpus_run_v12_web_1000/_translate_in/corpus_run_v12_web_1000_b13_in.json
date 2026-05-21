@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_web_044_004",
+    "query_text": "Make a web app that shows all of a school's official accreditations and awards in one organized place, where each entry has the name of the certifying body, the year it was received, and a short description, and the whole list can be filtered by category so visitors can quickly find the kind of recognition they are looking for, like academic rankings or industry certifications."
+  },
+  {
+    "id": "q_web_044_005",
+    "query_text": "A browser-based gallery tool for showing off student capstone projects, where each project gets its own card with the student's name, project title, a short summary, and a link to the full write-up or demo, and visitors can browse by graduation year or subject area so they can find relevant work without scrolling through everything at once."
+  },
+  {
+    "id": "q_web_044_006",
+    "query_text": "Need a web app that lets prospective students walk through the campus virtually, with a clear list of locations like the library, dorms, and sports facilities that they can click through one by one, each showing a 360-degree photo and a brief description of what that space is used for, so they get a real sense of the campus before visiting in person."
+  },
+  {
+    "id": "q_web_044_007",
+    "query_text": "Make a website that highlights a university's academic research and published papers, organized so that each entry shows the title, the researchers involved, the year it was published, and the subject area it belongs to, and visitors can filter the list by department or year to find the specific kind of research they are interested in without having to dig through everything."
+  },
+  {
+    "id": "q_web_044_008",
+    "query_text": "Build a web app for promoting and organizing a school's open day and campus visit events, where each event has a date, a short description of what to expect, and a simple sign-up form, and the main screen shows upcoming events in order so families can quickly find the next available date and register their visit without any confusion."
+  },
+  {
+    "id": "q_web_044_009",
+    "query_text": "A browser-based tool that lays out all the scholarship programs and financial aid options a school offers, with each entry showing the scholarship name, the amount, who it is for, and how to apply, so prospective students can go through the whole list in a desktop browser and tick off the ones that match their situation before deciding where to apply."
+  },
+  {
+    "id": "q_web_044_010",
+    "query_text": "Build a web app that lists all of a university's international partner schools and exchange programs in one place, where each entry shows the partner university's name, the country it is in, the program duration, and any eligibility notes, and the whole directory can be filtered by region or program length so students can find the right exchange option for their schedule."
+  },
+  {
+    "id": "q_web_044_011",
+    "query_text": "Need a web app that collects and displays student testimonials and enrollment reviews in a clear format, where each review shows the student's name, their program, the year they enrolled, and what they said about their experience, and visitors can sort by program or rating so they can read the feedback most relevant to the course they are considering."
+  },
+  {
+    "id": "q_web_044_012",
+    "query_text": "Need a web app that walks prospective students through the admissions process step by step, where each step is listed clearly with a title, a plain-language explanation of what is required, and a checklist of documents or actions needed, so someone sitting at a desktop can follow the whole process from start to finish without missing anything important."
+  },
+  {
+    "id": "q_web_044_013",
+    "query_text": "Build a web app that shows off all the campus facilities and amenities through photos, where each facility has its own entry with a name, a short description, and a set of photos visitors can click through, and the app lets you filter by facility type like dining, sports, or study spaces so it is easy to find what you are looking for when browsing on a desktop."
+  },
+  {
+    "id": "q_web_045_001",
+    "query_text": "Need a web app that organizes and shows a research team's published work and key findings, where each research output has a title, the names of the people involved, the year it came out, and a brief plain-language summary, and users can filter the list by topic area or year so it is easy to find the right piece without scrolling through everything in a desktop browser."
+  },
+  {
+    "id": "q_web_045_002",
+    "query_text": "Make a web app that serves as a running feed of education news and updates, where each article or announcement shows the date, a clear headline, a short summary, and a link to read more, and the left side of the screen has a list of topic categories so readers on a desktop can quickly jump to the kind of education news they care about most."
+  },
+  {
+    "id": "q_web_045_003",
+    "query_text": "A faculty directory tool for a university website, where each professor's entry shows their photo, name, department, a short biography, and a list of their recent research topics, and the whole directory can be searched by name or filtered by department so anyone browsing in a desktop browser can quickly pull up the right person's profile and see what they work on."
+  },
+  {
+    "id": "q_web_045_004",
+    "query_text": "An online magazine-style app that features stories about alumni and their careers after graduation, where each story has the person's name, graduation year, current job, and a longer write-up about their journey, and readers can browse by industry or graduation decade so they can find the alumni whose paths are most similar to what they are hoping to do, all in a desktop browser."
+  },
+  {
+    "id": "q_web_045_005",
+    "query_text": "Build a web app that gathers open courseware and free lecture notes from a university in one easy-to-browse place, where each course entry shows the subject, the instructor's name, the level it is aimed at, and links to the available materials, and visitors can filter by subject area or format so they can find the right free learning resource without wading through a long unorganized list."
+  },
+  {
+    "id": "q_web_045_006",
+    "query_text": "Make a web app that works as a searchable library of graduate theses and dissertations, where each entry shows the title, the author, the year it was submitted, the department, and a short abstract, and users browsing in a desktop browser can filter by year, subject, or degree level so they can zero in on the research that is most relevant to what they are studying."
+  },
+  {
+    "id": "q_web_045_007",
+    "query_text": "Build a web app that keeps track of a department's seminar recordings and upcoming talks in one organized place, where each entry has the seminar title, the speaker, the date, and a link to the recording if one is available, and the list can be filtered by semester or topic so faculty and students on a desktop browser can find past talks or plan which upcoming ones to attend."
+  },
+  {
+    "id": "q_web_045_008",
+    "query_text": "A digital catalog tool for a university press, running in a desktop browser, where each book or academic title has its own entry showing the cover, the author's name, the publication year, a short description, and a link to order or download it, and visitors can browse by subject area or publication year to find the exact kind of scholarly work they are looking for."
+  },
+  {
+    "id": "q_web_045_009",
+    "query_text": "Need a web app that serves as a home for a series of educational podcasts hosted by university faculty, where each episode listing shows the host's name, the episode title, the subject it covers, and a player so you can listen right in the browser, and episodes can be filtered by topic or host so listeners can easily find the series they want to follow without hunting through a long unsorted list."
+  },
+  {
+    "id": "q_web_045_010",
+    "query_text": "Build a web app for a student-run online newspaper where articles are organized by section like news, opinion, and campus life, each post shows the headline, the author, the date, and a preview of the article, and readers on a desktop browser can browse by section or search by keyword so they can quickly find the stories they want to read without scrolling through everything at once."
+  },
+  {
+    "id": "q_web_045_011",
+    "query_text": "Need a browser-based tool that presents a university's yearly statistics and transparency figures in a clear and readable way, where key numbers like enrollment totals, graduation rates, and research funding are listed by category with a short explanation of what each figure means, and users can switch between years to compare how the numbers have changed over time."
+  },
+  {
+    "id": "q_web_045_012",
+    "query_text": "Need a web app that lists all the continuing education and professional certification courses a school offers, where each course entry shows the name, the subject area, the length, the cost, and who it is designed for, and visitors browsing on a desktop can filter by topic or schedule format so working adults can quickly find the right course to fit into their existing routine."
+  },
+  {
+    "id": "q_web_045_013",
+    "query_text": "Make a web app that archives academic conference papers and presentations in one organized place, where each entry shows the paper title, the author, the conference name, the year, and a link to the full text or slides, and users can filter by year or subject field so researchers browsing on a desktop browser can find the specific presentations they need without sorting through a huge unordered list."
+  },
+  {
+    "id": "q_web_046_001",
+    "query_text": "A promotional web app for a school's open courses, where each course has its own entry showing the course name, a short description of what you will learn, the schedule, and a clear sign-up button, and the home screen of the app groups courses by subject so visitors browsing in a desktop browser can quickly find the open course that fits what they want to learn and register right away."
+  },
+  {
+    "id": "q_web_046_002",
+    "query_text": "Build a web app for handling sign-ups to a school enrollment fair, where visitors can see a list of scheduled sessions with the date, time, location, and a brief description of what the fair covers, and they can fill in their name, contact details, and which session they want to attend so the school has a clear record of who is coming and the whole process works smoothly in a desktop browser."
+  },
+  {
+    "id": "q_web_046_003",
+    "query_text": "Need a free trial lesson sign-up page for a browser-based education site where people can register their name and email, pick a time slot, and confirm their spot right there on the page without needing to go somewhere else. I want the sign-up form to be easy to find, with clear spots for contact info and lesson choice, and a confirmation message after someone submits so they know it worked."
+  },
+  {
+    "id": "q_web_046_004",
+    "query_text": "Build a web app for an education site that shows alumni career outcomes and success stories, with a clean list of graduates and what they went on to do after finishing the program. I want each person to have their own little profile showing their field of work and a short quote, so prospective students browsing on desktop can easily read through and get a sense of where past students ended up."
+  },
+  {
+    "id": "q_web_046_005",
+    "query_text": "Need a web-based site for a training company where businesses can browse available corporate training packages, see what is included in each one, and fill out a short form to request a custom quote. The site should have a clear list of package options with pricing tiers shown side by side, and a simple inquiry form that captures the company name, team size, and preferred topics so someone can follow up with them."
+  },
+  {
+    "id": "q_web_046_006",
+    "query_text": "Make a browser-based promotional site for a summer intensive program where students can read about what is covered, see session dates and costs, and complete their enrollment right on the page. I want a clear breakdown of the program schedule, the key things students will learn, and a registration section with fields for name, contact details, and payment, so the whole process is handled in one place."
+  },
+  {
+    "id": "q_web_046_007",
+    "query_text": "Create a web app for a student referral rewards and discount system where current students can log in, see their unique referral link, track who they have brought in, and check what discounts or rewards they have earned so far. The site should have a clear summary of how many referrals each person has made, what the reward tiers are, and a simple way to copy or share the referral link directly from the browser."
+  },
+  {
+    "id": "q_web_046_008",
+    "query_text": "Need a certification program comparison and enrollment page for a desktop browser where I can see several different certification options listed side by side, with details on what each one covers, how long it takes, and what it costs. There should be a clear way to pick the one I want and then go straight into enrollment by filling out a form with my name, email, and payment info, all in the same spot."
+  },
+  {
+    "id": "q_web_046_009",
+    "query_text": "Need a web app for a live webinar series where people can register for upcoming sessions, see a schedule of all the coming webinars with topics and dates, and also go back and watch replays of past ones. I want each webinar listed with a short description, the date and time, and a sign-up button, plus a separate area where past sessions are available to watch again, all accessible right in the browser."
+  },
+  {
+    "id": "q_web_046_010",
+    "query_text": "Build a web-based enrollment page for a course that shows a clear countdown timer to when the early-bird tuition discount expires, along with the regular price and the discounted price so visitors can see exactly what they save by enrolling before the deadline. The page should have an enrollment form right there with fields for name, email, and payment details, and the timer should update in real time as someone browses on their desktop."
+  },
+  {
+    "id": "q_web_046_011",
+    "query_text": "Build a page for an education site where visitors can download a free study guide by entering their name and email address, with a clear description of what is in the guide so people know what they are getting before they sign up. I want a clean form at the top of the page, a short list of what topics the guide covers, and a confirmation message or download link that appears right away after someone submits their info in the browser."
+  },
+  {
+    "id": "q_web_046_012",
+    "query_text": "Create a web app for an education company where site visitors can browse instructor profiles and see each teacher's background, qualifications, and the subjects they specialize in, all laid out clearly in a desktop-friendly layout. I want each instructor to have their own spotlight entry with their photo, a list of their credentials, years of experience, and the courses they teach, so prospective students can quickly find someone whose background matches what they are looking for."
+  },
+  {
+    "id": "q_web_046_013",
+    "query_text": "Build a browser-based site for an online course provider where current and potential students can watch video testimonials from past students and read short written reviews, all organized in a way that is easy to scroll through on a desktop. I want the videos and quotes grouped so visitors can filter by course or outcome type, and each entry should show the student's name and what they studied so the whole thing feels trustworthy and easy to browse."
+  },
+  {
+    "id": "q_web_047_001",
+    "query_text": "Need a web app where I can browse available certification programs, pick the one I want, and actually buy it without being bounced around to different pages or having to email someone. Right now buying a certificate means digging through emails and waiting, so I want a site in the browser where I can see what certificates are available, select one, pay for it, and get a confirmation right away without any back and forth."
+  },
+  {
+    "id": "q_web_047_002",
+    "query_text": "Need a web-based portal where an HR person or manager can go and actually customize a corporate training package for their company instead of having to send emails back and forth for weeks waiting on a quote. I want to be able to pick the topics we need, say how many people will attend, choose the delivery format, and get a price estimate without having to talk to anyone first, all right there in the browser."
+  },
+  {
+    "id": "q_web_047_003",
+    "query_text": "Create a web platform where HR managers can buy course seats in bulk for their team without having to negotiate a separate deal every single time. The whole process of picking the courses, choosing how many seats we need, and actually checking out should happen in one place in the browser so I do not have to email a sales rep and wait days just to get people enrolled in something."
+  },
+  {
+    "id": "q_web_047_004",
+    "query_text": "A web-based tool for corporate buyers where you enter your team size, the training topics you are planning, and how long the program runs, and it works out the return on investment for you based on things like time saved and skill improvements. Right now trying to justify training budgets means building spreadsheets from scratch every time, so having something in the browser that runs the numbers and gives you a clear summary report would save a lot of effort."
+  },
+  {
+    "id": "q_web_047_005",
+    "query_text": "Need a web app that brings together different training vendors in one place so procurement teams can compare what each one offers, what it costs, and what other buyers have said about them, without having to chase down quotes from five different companies separately. The whole point is to cut out the part where you have to request information from every vendor one by one just to do a basic comparison, so everything should be browsable and filterable right in the browser."
+  },
+  {
+    "id": "q_web_047_006",
+    "query_text": "A web portal where a company admin can manage which employees are enrolled in which courses, add or remove people from groups, and see the status of everyone's enrollment in one place in the browser. Keeping track of who is signed up for what right now means juggling spreadsheets and emails, so having a central place where I can just look up a person and see all their active enrollments would actually make the job manageable."
+  },
+  {
+    "id": "q_web_047_007",
+    "query_text": "Need a web-based billing and payment site where a business client can see all their outstanding invoices for training services, download copies, and pay them online without having to call or email to ask for paperwork. Chasing down invoices and getting approvals takes forever when everything is done over email, so I want a place in the browser where the invoices are just there, ready to view and pay whenever someone has time to log in and handle it."
+  },
+  {
+    "id": "q_web_047_008",
+    "query_text": "Build a web app for reseller partners of a training company where they can get set up with all the info they need to start selling, track how many sales or referrals they have made, and see what commission they have earned so far. Right now there is no central place to check any of this, so having a browser-based hub where a partner can log in and actually see their numbers and access their resources would be a lot better than relying on emails and spreadsheets."
+  },
+  {
+    "id": "q_web_047_009",
+    "query_text": "Build a web-based tool where a business client can go in and set up their own branded version of a course catalog by choosing which courses to include, adding their company name and logo, and adjusting what their employees will see when they log in. The goal is to make it so a B2B client does not need to email someone every time they want to update their catalog, they can just handle it themselves in the browser without waiting on anyone."
+  },
+  {
+    "id": "q_web_047_010",
+    "query_text": "Make a web-based management site for training content creators and the companies licensing their material, where both sides can see the active license agreements, track how much content has been used, and check royalty earnings and payments in one place. Keeping all of this straight across email threads and invoices is a real mess, so having a browser app where everything is recorded and visible without digging through old messages would make the whole thing much less painful."
+  },
+  {
+    "id": "q_web_047_011",
+    "query_text": "Make a web portal where subscribers to a training platform can see what plan they are on, check when it renews, switch to a higher tier if they want more features, and complete the renewal payment all in the same place in the browser. Right now figuring out subscription status means hunting through old emails for confirmation messages, so having a single place where everything is laid out clearly and I can just click to renew or upgrade would be much easier."
+  },
+  {
+    "id": "q_web_047_012",
+    "query_text": "Need a web-based setup site where a new corporate account can get itself up and running without having to wait for someone from the training company to walk them through everything manually. I want to be able to enter our company details, add the admin users, set up our preferences, and get confirmation that we are ready to go, all by going through a clear step-by-step process right in the browser without needing a support call."
+  },
+  {
+    "id": "q_web_047_013",
+    "query_text": "Build a web tool where someone can describe what kind of training they need for their team, pick things like the number of sessions, the topics, and the delivery format, and immediately see a price estimate based on what they have selected. Right now getting any kind of cost figure requires waiting on a sales person to send something back, so having a tool in the browser where the estimate updates as you make choices would cut out a lot of unnecessary waiting."
+  },
+  {
+    "id": "q_web_048_001",
+    "query_text": "Need a web-based app where job candidates can book an interview time slot with a company directly in their browser, picking from a calendar of available times without having to go back and forth over email just to agree on a meeting. I want to be able to enter my name and contact info, choose a time that works, and get a confirmation right away so neither side has to chase the other down to figure out when the interview is happening."
+  }
+]

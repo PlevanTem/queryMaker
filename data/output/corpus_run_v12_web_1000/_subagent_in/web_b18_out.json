@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_web_031_006",
+    "query_text": "Create a web app for managing all our customer service tickets in one place, where the left side shows a list of open tickets sorted by priority and the right side shows the full conversation thread for whichever ticket I click on, so I can reply, reassign, or close it right there without jumping between different tools or losing track of who last responded."
+  },
+  {
+    "id": "q_web_031_007",
+    "query_text": "Create a web-based travel and expense manager for work trips where I can fill out a trip request form, pick flights and hotels from a simple list, and then submit my receipts afterward all in the same place, so I stop wasting time switching between three different systems just to book a flight and file the reimbursement."
+  },
+  {
+    "id": "q_web_031_008",
+    "query_text": "Need a browser-based HR self-service tool where I can check my remaining vacation days, request time off, enroll in or update my benefits, and download my pay stubs without having to call HR for every little thing, and it should show my request status clearly so I know if something is approved or still pending."
+  },
+  {
+    "id": "q_web_031_009",
+    "query_text": "Make a web app contract tracker that shows all our company contracts in a table with their start dates, expiration dates, and current status so I can see at a glance what is about to renew or expire, and let me click into any contract to read the details and add a note or update the status without hunting through shared drives."
+  },
+  {
+    "id": "q_web_031_010",
+    "query_text": "Build a web-based partner onboarding and certification manager where new resellers can submit their application, upload required documents, and then work through a checklist of certification steps, and our team can review their progress and approve or reject each step from a sidebar that shows all pending partners organized by how far along they are."
+  },
+  {
+    "id": "q_web_031_011",
+    "query_text": "Need a web-based press room manager for our company where we can upload news releases, logos, product photos, and executive headshots organized by category, so journalists and editors can browse to the right folder in a desktop browser and just grab whatever files they need right away instead of emailing us every time they need a logo."
+  },
+  {
+    "id": "q_web_031_012",
+    "query_text": "A documentation site for our enterprise products, browser-based so anyone on the team can access it from their work computer, with a left-side menu that lists all the product categories and a search bar at the top so people can find the right article fast, and each article page should have a simple table of contents so long docs are easy to navigate."
+  },
+  {
+    "id": "q_web_031_013",
+    "query_text": "Create a web-based KPI reporting tool for our business where each department has its own section showing the key numbers for that month like sales figures, response times, and completion rates, and managers can pull up a summary of all departments side by side so it is easy to compare performance without asking each team to email spreadsheets every week."
+  },
+  {
+    "id": "q_web_031_014",
+    "query_text": "An event registration manager for our company conferences, available as a website so employees can sign up from their desk browser, where the main screen lists all upcoming events with dates and seat counts, you click one to see the agenda and register in a short form, and there is a separate section where organizers can check who has signed up and confirm attendance."
+  },
+  {
+    "id": "q_web_032_001",
+    "query_text": "Make a web app channel application manager where distributors and resellers can fill out a straightforward application form with their company info and business scope, upload supporting files, and track the review progress after submission, while our internal team can view all incoming applications in a list on the left and open each one on the right to review and approve or follow up."
+  },
+  {
+    "id": "q_web_032_002",
+    "query_text": "Create a web-based demo booking tool for our enterprise software where a potential customer can pick a product from a list, choose a date and time from a calendar showing available slots, fill in their company and contact info, and get a confirmation right away, so our sales team stops having to coordinate demo times manually over email all day."
+  },
+  {
+    "id": "q_web_032_003",
+    "query_text": "A scheduling tool for corporate IT infrastructure audits, accessible from a desktop browser, where IT managers can pick a site or department from a list, choose an available time slot on a calendar, describe the scope of the audit in a short text field, and see all upcoming and past audits in a simple list so nothing falls through the cracks and everyone knows when they are scheduled."
+  },
+  {
+    "id": "q_web_032_004",
+    "query_text": "Need a web-based reservation system for our executive briefing center where guests can request a visit by picking a date, selecting the type of meeting they want, and providing their company details, and our team gets a clean list of all pending and confirmed visits in a desktop browser view so we can approve requests and manage the schedule without going back and forth on email."
+  },
+  {
+    "id": "q_web_032_005",
+    "query_text": "Make a web app for booking one-on-one meeting slots at our trade show where exhibitors and attendees can log in, browse a list of available companies, and request a 30-minute meeting by picking an open time slot from that company's calendar, and the home screen shows each user's confirmed meetings for the day sorted by time so everyone walks in knowing exactly where they need to be."
+  },
+  {
+    "id": "q_web_032_006",
+    "query_text": "Make a web-based scheduler for booking factory floor tours at our manufacturing plant where visitors can pick a tour date from a calendar that only shows days with open capacity, fill in their group size and company name, and receive a confirmation, while our plant coordinator sees all upcoming tours in a list and can adjust the maximum group size per day from a simple settings area."
+  },
+  {
+    "id": "q_web_032_007",
+    "query_text": "Create a web app where company employees can book time with our in-house legal team, pick the type of legal matter they need help with from a short list, choose an available lawyer and time slot, and briefly describe the issue, so the whole process takes a couple of minutes in a desktop browser and the legal team sees all their upcoming consultations organized by date and topic."
+  },
+  {
+    "id": "q_web_032_008",
+    "query_text": "A cybersecurity risk assessment booking tool for the whole company, browser-based so department heads can access it from their work computers, where you pick your department, choose from the available assessment types and dates, and submit the request, and the security team gets a running list of all scheduled assessments with contact info and scope so they can prepare ahead of time."
+  },
+  {
+    "id": "q_web_032_009",
+    "query_text": "Need a web-based booking tool for investor roadshow meetings where our investor relations team can set up available time slots for each city on the roadshow schedule, and investors or analysts can request a meeting by picking a slot and filling in their firm and contact details, so the whole schedule is visible in one desktop browser view and there is no confusion about who is meeting when."
+  },
+  {
+    "id": "q_web_032_010",
+    "query_text": "Make a web app commercial property viewing scheduler where clients can browse a list of available office or retail spaces, click one to see the property details and available viewing times, book a time slot by entering their name and contact info, and get a confirmation, while the property manager sees all booked viewings in a calendar so they can prepare and avoid double bookings."
+  },
+  {
+    "id": "q_web_032_011",
+    "query_text": "Create a web-based enrollment tool for our company leadership workshops where employees can see a list of upcoming programs with dates, topics, and remaining seats, sign up for the ones they want, and track which ones they have already completed, so HR can also pull up a summary of who is enrolled in what and follow up with people who have not registered for any sessions yet."
+  },
+  {
+    "id": "q_web_032_012",
+    "query_text": "Need a web app where event organizers can submit a speaking request for one of our executives by filling in the event name, date, topic, expected audience size, and a short description, and then track the status of their request, while our communications team reviews all incoming requests in one browser-based view and can approve, decline, or ask for more details without managing it through email."
+  },
+  {
+    "id": "q_web_032_013",
+    "query_text": "Need a web-based booking tool for cloud migration planning sessions where our internal teams can pick a department, describe their current setup in a short text field, and choose an available time slot with one of our cloud architects, so every session gets logged and the architecture team can see all upcoming consultations in a list with enough context to prepare before each call."
+  },
+  {
+    "id": "q_web_032_014",
+    "query_text": "Need a web app employee wellness onboarding scheduler where new hires or existing staff can browse available wellness programs like nutrition counseling, fitness orientation, or mental health check-ins, pick a convenient time slot, and register in a few clicks from their desktop browser, while the wellness coordinator sees a full schedule of who signed up for what and can send reminders to anyone who still needs to complete their first session."
+  },
+  {
+    "id": "q_web_033_001",
+    "query_text": "Build a web app product manual library where all our product handbooks are organized by product line and version, so I can find the right manual fast using a search bar or by browsing the category list on the left side, click on any manual to read it right in the browser, and the app keeps track of which version is current so our team always knows they are reading the latest one."
+  },
+  {
+    "id": "q_web_033_002",
+    "query_text": "Need a web-based compliance certification tracker that keeps a list of all the certifications our company needs, shows the current status of each one (in progress, passed, or expired), lets us upload supporting documents for each certification, and keeps a clear history of who completed each step and when, so we have everything in one place when an audit comes around and nobody is scrambling to find records."
+  }
+]

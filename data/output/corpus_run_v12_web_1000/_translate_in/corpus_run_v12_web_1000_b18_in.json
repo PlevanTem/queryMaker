@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_web_063_007",
+    "query_text": "Make a nonprofit charity auction bidding web app that actually works without confusion, because every time our organization tries to run an auction we end up with people not knowing what they bid on or whether they won. I need something in the browser where people can see all the items, place a bid with a simple number box, watch the current highest bid update, and get a clear notice when someone outbids them, all on one easy page without having to dig through anything."
+  },
+  {
+    "id": "q_web_063_008",
+    "query_text": "Build a web app for paying government permit fees and tracking where your application is in the process, because right now I have to call the office just to find out if they got my paperwork. I want to log in on the browser, see my open permit requests listed out, click one to pay the fee with a card, and then just check back to see the status without having to phone anyone or show up in person every time something changes."
+  },
+  {
+    "id": "q_web_063_009",
+    "query_text": "Make a website for reserving vendor booths at a cultural festival so people stop emailing back and forth forever trying to figure out what spots are still available. In the browser you should be able to see a list of booth locations with their sizes and prices, pick the one you want, fill in your name and business info, pay the deposit right there, and get a confirmation so everyone knows it is done without any back-and-forth."
+  },
+  {
+    "id": "q_web_063_010",
+    "query_text": "A page in the browser for signing up for art workshops and masterclasses where you can see all the upcoming sessions in one place, filter by type like painting or sculpture, pick a date that works for you, and just register and pay without being sent to three different sites. I always end up missing workshops because the registration process is buried somewhere or closes before I find it, so having everything in one browser-based spot would remove that whole hassle."
+  },
+  {
+    "id": "q_web_063_011",
+    "query_text": "Make a web app where companies can book a museum venue for their corporate events or private hire without having to wait days for a reply email, because the back-and-forth just kills the whole planning timeline. On the website you should be able to pick a space, check what dates are open, see the pricing, submit the booking details with a contact form, and get a confirmation right away so the person organizing the event can just move on to the next thing."
+  },
+  {
+    "id": "q_web_063_012",
+    "query_text": "A browser-based tool for paying library fines and adding money to your library account so I do not have to go stand in line at the desk just to clear a small overdue charge. Show my current balance and any fines I owe in one place, let me pay by card online, and update the account right away so I can borrow books again without needing to come in person. It should work cleanly on a desktop browser and not require downloading anything."
+  },
+  {
+    "id": "q_web_063_013",
+    "query_text": "Build a web platform for buying charity gift cards and digital vouchers so people can support a cause and send something meaningful to someone without dealing with confusing checkout flows. On the site you pick the charity you want to support, choose the amount, put in the recipient details, pay with a card, and the voucher gets emailed out. I want something that works in a regular desktop browser with no account signup required just to complete a purchase."
+  },
+  {
+    "id": "q_web_064_001",
+    "query_text": "Make a web app for booking guided tours at museums and attractions because hunting for the reservation link every time is genuinely annoying, and half the time the form does not work properly. I just want to open the site in a browser, pick the tour I want, see what time slots still have open spots, choose one, fill in how many people are coming, and confirm it in one go so I do not end up chasing a confirmation email for three days."
+  },
+  {
+    "id": "q_web_064_002",
+    "query_text": "Create a website for booking timed-entry tickets to a museum so visitors stop crowding the entrance all at once and the whole thing becomes less chaotic. When someone opens it in a desktop browser they should be able to see a calendar of available entry windows, pick a date and time, choose how many tickets they need, pay online, and download or print a simple confirmation they can show at the door, all without creating an account first."
+  },
+  {
+    "id": "q_web_064_003",
+    "query_text": "Build a web app for reserving a private study room at the library because showing up and finding every room taken after walking all the way there is a waste of time. I want to open a browser, see a grid of rooms with their capacities and which time slots are free today and this week, click the one I want, enter my library card number, and confirm the booking without needing to call the front desk or wait for someone to approve it manually."
+  },
+  {
+    "id": "q_web_064_004",
+    "query_text": "Create a web app for scheduling a private curator-led viewing at an art gallery, because right now there is no easy way to arrange one without making a phone call during business hours and then hoping they call back. In the browser you should be able to browse available time slots, pick the date and how many guests are coming, enter your contact info, and submit a request that gets confirmed the same day so the whole thing is sorted without any phone tag."
+  },
+  {
+    "id": "q_web_064_005",
+    "query_text": "Build a web platform for booking a theater backstage tour so people do not have to track down the right email address and wait a week for someone to respond with availability. On the site in a browser you can see upcoming tour dates, how many spots are left, pick one and pay to confirm your spot, then get a ticket emailed over. I want it to be straightforward enough that booking takes maybe two minutes and you know right away whether you are in."
+  },
+  {
+    "id": "q_web_064_006",
+    "query_text": "Make a web app for signing up for pottery workshops at a cultural center, because right now the only way to register is by calling during opening hours and it is nearly impossible if you work a normal schedule. In the browser I want to see all the upcoming pottery sessions listed with the instructor name and how many seats are left, pick the one I want, register and pay in the same step, and just get a confirmation so I know I am signed up."
+  },
+  {
+    "id": "q_web_064_007",
+    "query_text": "Create a web portal for reserving a private screening room at a film archive so researchers and film buffs do not have to send emails back and forth just to watch a specific print. On the site you pick a date, choose a time block, note which film or collection you want to view, submit the booking, and get a confirmation number. It should work in a normal desktop browser with no special software, and show clearly which slots are already taken."
+  },
+  {
+    "id": "q_web_064_008",
+    "query_text": "Make a web app for applying and paying for a photography permit at a historic site because the current process involves printing a form, mailing it in, and hoping it arrives before your shoot date, which is ridiculous. I want to open the site on my computer, fill in the shoot details, choose the permit type, pay online, and get a digital permit I can show on my phone. The whole thing should live in a browser and take maybe five minutes to complete."
+  },
+  {
+    "id": "q_web_064_009",
+    "query_text": "Make a web-based booking system for conservation tours of heritage buildings so history fans can sign up without having to dig through a slow government website with broken links. Open it in a browser, see the upcoming tour schedule with descriptions of each site, pick a date and time, enter how many people are joining, pay and confirm, and receive a summary by email. I just want to remove the friction of booking something that should be simple."
+  },
+  {
+    "id": "q_web_064_010",
+    "query_text": "Need a website for booking school group visits to a science museum because teachers currently have to fill out a paper form and fax it, which wastes everyone's time. The site should let a teacher log in on a desktop browser, pick a visit date, enter the number of students and which grade, choose any programs or exhibits they want to include, submit the booking, and get a confirmation they can forward to the school office without any extra steps."
+  },
+  {
+    "id": "q_web_064_011",
+    "query_text": "Create a web portal for food bank volunteers to sign up for shifts so coordinators stop spending their whole morning texting people to fill gaps in the schedule. On the site you see the upcoming week's shifts with how many spots are still open, click the ones you want, confirm with your name and contact info, and get a reminder before the shift. It should work in a regular browser on a desktop and not require any app download or complicated account setup."
+  },
+  {
+    "id": "q_web_064_012",
+    "query_text": "Make a website for booking a free legal aid consultation with a community organization so people who need help can actually get an appointment without playing phone tag for a week. In the browser you see what types of legal questions the service handles, pick an available time slot from a simple calendar, put in your name and a short note about your issue, submit, and get a confirmation. Nothing complicated, just a clean booking flow that works on a desktop computer."
+  },
+  {
+    "id": "q_web_064_013",
+    "query_text": "Build a web app for scheduling a meet-and-greet at an animal shelter so people interested in adopting can actually get a proper time with the pet they like instead of just showing up and finding it busy. On the site you browse available animals with a photo and short description, pick the one you want to meet, choose a date and time slot, enter your contact info, and confirm. The whole thing should work in a desktop browser and send you a reminder the day before."
+  },
+  {
+    "id": "q_web_065_001",
+    "query_text": "Need a web app that lists all the open courses available in one place so I can actually see what is offered and sign up without hunting across multiple pages. I want to browse by subject, see the schedule and duration for each course, check if seats are available, and register directly. It should also let me see which courses I have already signed up for in one view, and send a reminder before each session starts. A clean browser-based site that works well on a full desktop screen."
+  },
+  {
+    "id": "q_web_065_002",
+    "query_text": "Create a web portal for civic transparency where regular people can learn how local government decisions are made, what public budgets are spent on, and how to get involved. I want it organized so you can pick a topic like planning or spending, read a plain-language explanation, see related meeting notes or votes, and find out how to submit a comment or attend a session. It should be a proper website for desktop browsers with a clear sidebar and easy navigation between topics."
+  },
+  {
+    "id": "q_web_065_003",
+    "query_text": "Build a web hub for a public library where people can find digital reading materials, sign up for online skills classes, and track what they are currently working through, all in one browser-based place. I want a reading section with searchable titles, a skills section with courses on things like computer basics or job applications, a way to bookmark items, and a simple view showing what I am partway through. Should work well on a desktop browser with a proper layout rather than a tiny mobile view."
+  },
+  {
+    "id": "q_web_065_004",
+    "query_text": "A browser-based learning site where people can explore and study endangered languages, with lessons organized by language and difficulty so a beginner knows where to start. There should be a way to listen to recordings, read along with text, do simple practice exercises, and save your progress. I want to be able to pick a language, see the list of lessons from basic to advanced, and work through them in order. The site should work well on a desktop computer with plenty of room to see the text and audio player side by side."
+  },
+  {
+    "id": "q_web_065_005",
+    "query_text": "A web training portal for nonprofit volunteers where people can find skill-building courses, track which ones they have finished, and get a simple record of what they have completed. I want it organized by skill area like communication, fundraising, or leadership, with each course showing the length and a short description. There should be a personal view listing enrolled courses, completed ones, and any upcoming live sessions. The whole thing should run in a desktop browser with a clear layout so nothing gets lost."
+  },
+  {
+    "id": "q_web_065_006",
+    "query_text": "Build a community public health education resource center app for the browser where residents can find articles, guides, and local health program listings all in one place. I want a left-side list of health topics you can click through, a main reading area that shows the full content, and a way to save anything useful to a personal reading list so I can come back to it later without hunting around."
+  },
+  {
+    "id": "q_web_065_007",
+    "query_text": "An indigenous cultural knowledge open learning repository app that runs in the browser, organized by region and topic so users can browse through traditions, stories, and teaching materials without getting lost. The left side should list categories you can expand, the main area shows the content with images and text, and there should be a notes section where learners can write their own thoughts as they go through the material."
+  },
+  {
+    "id": "q_web_065_008",
+    "query_text": "Build a government budget and fiscal policy explainer site as a web app where regular people can actually understand where public money comes from and where it goes. I want a topic list on the side covering things like taxes, spending categories, and deficits, a reading pane that explains each one in plain language, and a glossary section so anyone can look up a term without leaving the page."
+  },
+  {
+    "id": "q_web_065_009",
+    "query_text": "Build a web app that works as an environmental stewardship education platform for nonprofits, where staff and volunteers can find training materials, action guides, and local project resources organized by topic. It should have a sidebar listing the main subject areas like water, soil, and wildlife, a main content area that displays articles and downloadable guides, and a checklist tool so users can track which materials they have finished reading."
+  },
+  {
+    "id": "q_web_065_010",
+    "query_text": "Need a primary source document study and annotation platform for the browser where students and researchers can read historical documents alongside their own notes. The app should let you open a document on one side of the screen and write your annotations on the other, keep a list of all the documents you have added so you can jump between them easily, and let you filter your saved notes by keyword so nothing gets buried."
+  },
+  {
+    "id": "q_web_065_011",
+    "query_text": "Need a community oral history collection and study site for the browser where users can listen to recorded interviews and read transcripts at the same time. I want a collection list on the left organized by contributor or topic, a main area that plays the audio and shows the text together, and a way to bookmark specific moments in a recording so I can return to the exact part I found interesting without scrubbing through the whole thing."
+  },
+  {
+    "id": "q_web_065_012",
+    "query_text": "Build a legal rights and civic literacy portal as a web app where ordinary people can look up their rights in plain language and understand how local government actually works. The app should have a topic list covering things like tenant rights, voting, and public meetings, a reading area that explains each topic step by step, and a progress tracker so users can see which topics they have already gone through and what is still left to cover."
+  },
+  {
+    "id": "q_web_065_013",
+    "query_text": "Create a museum virtual exhibition guided learning experience as a web app for desktop browsers where visitors can walk through a curated collection of artworks or artifacts at their own pace. I want a sidebar showing the exhibition map with numbered stops, a main viewing area that displays each piece with description text and related images, and a personal journal section where visitors can write down their reactions and save favorites before finishing the tour."
+  },
+  {
+    "id": "q_web_066_001",
+    "query_text": "Make a web app for a faith community or member circle where people can post updates, share upcoming events, and find each other based on shared interests or small group involvement. I am thinking of something you open in a browser where the home area shows recent posts from the group, there is a place to browse member profiles, and organizers can put together a simple event listing that members can respond to so everyone stays in the loop."
+  },
+  {
+    "id": "q_web_066_002",
+    "query_text": "Build a neighborhood arts collective showcase and discussion site as a web app where local artists can post their work and community members can comment and connect with each other. I want it to open in a browser with a gallery-style home area showing recent submissions, artist profile pages where people can see all of someone's work in one spot, and a comments section under each piece so visitors can leave thoughts and start conversations."
+  },
+  {
+    "id": "q_web_066_003",
+    "query_text": "Need a local heritage storytelling archive community platform as a web app for the browser where residents can submit their own stories and browse what others have shared about the neighborhood's history. I want a simple submission form so anyone can add a story with some photos, a browsable archive organized by decade or neighborhood, and a way for visitors to leave a short response on stories they find meaningful so contributors feel like people actually read what they shared."
+  },
+  {
+    "id": "q_web_066_004",
+    "query_text": "Community festival volunteer and vendor coordination hub as a browser-based web app where organizers can manage sign-ups, share schedules, and keep everyone on the same page before and during the event. There should be a volunteer sign-up area where people can pick their time slots, a vendor info section with assigned spots and setup instructions, and a shared announcements space so organizers can post last-minute updates that both groups will actually see."
+  },
+  {
+    "id": "q_web_066_005",
+    "query_text": "Create an indigenous cultural preservation knowledge-sharing network as a web app for the browser where community members can contribute language recordings, traditional craft instructions, and seasonal practices that younger generations can explore. I want a topic area for browsing by category like language, food, or ceremony, a contribution form so elders and community members can add content, and a favorites system so learners can save things they want to revisit."
+  },
+  {
+    "id": "q_web_066_006",
+    "query_text": "Make a mutual aid goods and service exchange board as a web app for the browser where neighbors can post what they are offering or what they need, and others in the community can respond and connect. I want a clean listing area showing recent posts organized by category like food, tools, and childcare, a simple form for adding your own offer or request, and a way to mark something as fulfilled once it is no longer available so the board stays current."
+  },
+  {
+    "id": "q_web_066_007",
+    "query_text": "Make a community food pantry volunteer and donor portal as a web app for the browser where the pantry can post what supplies they need and people can sign up to volunteer or donate specific items. I want a current needs list that shows what is running low, a volunteer schedule where people can pick open slots, and a simple donor form where someone can record what they are bringing so the pantry staff knows what to expect before pickup day."
+  },
+  {
+    "id": "q_web_066_008",
+    "query_text": "Nonprofit coalition cross-organization project collaboration workspace as a browser-based web app where partner organizations can share project updates, assign tasks across teams, and keep all their files in one place. There should be a project list on the left showing all active efforts, a main area where team members from different groups can post updates and attach documents, and a simple task list for each project so people know what is theirs to do next."
+  },
+  {
+    "id": "q_web_066_009",
+    "query_text": "Make a grassroots civic campaign supporter organizing platform as a web app for the browser where campaign volunteers can find upcoming events, sign up for shifts, and stay connected with what the campaign is working on. I want a home area showing the latest news and calls to action, an events calendar where supporters can register for canvassing or phone banking sessions, and a personal activity log so volunteers can see all the shifts they have taken on."
+  },
+  {
+    "id": "q_web_066_010",
+    "query_text": "Make a participatory budgeting proposal submission and voting site as a web app for the browser where community members can suggest how local funds should be spent and vote on proposals others have submitted. I want a submission form where anyone can write up their idea with a cost estimate, a browsable list of all current proposals with short summaries, and a voting area where registered residents can cast their support for the ideas they care most about."
+  },
+  {
+    "id": "q_web_066_011",
+    "query_text": "Build a neighborhood council agenda, minutes, and resident feedback hub as a web app for the browser where community members can read meeting summaries, review upcoming agenda items, and leave comments for the council to see. I want a list of past meetings with downloadable minutes, an upcoming agenda section that shows what will be discussed next, and a public comment form attached to each agenda item so residents can share thoughts before the meeting happens."
+  },
+  {
+    "id": "q_web_066_012",
+    "query_text": "Build a public comment collection and civic dialogue portal as a web app for the browser where residents can submit feedback on local government proposals and read what other community members have said. I want a list of open proposals with a brief description of each, a comment form where anyone can write a response and optionally share their neighborhood, and a view that shows all submitted comments in one place so people can see the range of opinions and feel like their voice is part of a real conversation."
+  },
+  {
+    "id": "q_web_066_013",
+    "query_text": "Create a local government spending transparency watchdog community as a web app for the browser where residents can browse spending records, flag questionable line items, and discuss findings with other community watchdogs. I want a spending browser organized by department and date, a flag or note feature so users can highlight entries they find surprising, and a community thread area where people can share what they found and discuss it with others who are also paying attention."
+  },
+  {
+    "id": "q_web_067_001",
+    "query_text": "Make a virtual exhibition web app you open in the browser where I can browse curated art or historical artifact collections without having to click through ten different websites to find anything. The whole hassle right now is that everything is scattered all over the place, so I want one tool where I can pick a collection, step through each piece with a photo and a short description, and save the ones I want to look at again later without losing my place."
+  },
+  {
+    "id": "q_web_067_002",
+    "query_text": "Build a government permit application and status tracking portal as a web app for the browser that takes the pain out of applying for permits and then wondering for weeks if anything actually happened. I want to fill out the application in one place online, get a reference number I can use to check back on progress, and see a simple timeline showing where things are in the review process so I am not calling the office every other day just to find out it is still pending."
+  },
+  {
+    "id": "q_web_067_003",
+    "query_text": "Need a nonprofit grant application and reporting management platform as a web app for the browser that stops the chaos of tracking deadlines, documents, and report submissions across a dozen different funders. I want a tracker that lists every grant we are working on with its deadline and status, a place to attach documents and notes to each one so nothing gets lost, and a reminder system that tells me when a report or follow-up is coming due so nothing slips through the cracks."
+  },
+  {
+    "id": "q_web_067_004",
+    "query_text": "Cultural heritage site digital archive and search tool as a browser-based web app where researchers and curious visitors can search through records, photos, and documents about historic sites without having to email anyone or dig through paper files. There should be a search bar at the top that actually works, filters for narrowing results by time period or location, and individual record pages that show all the photos and documents together in one place so you get the full picture without jumping around."
+  }
+]
