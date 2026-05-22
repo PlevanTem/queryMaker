@@ -1,0 +1,1961 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Corpus Usage &amp; Distribution Dashboard</title>
+<style>
+  :root{--bg:#0f172a;--surface:#1e293b;--surface2:#293548;--border:#334155;--text:#f1f5f9;--muted:#94a3b8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:14px;line-height:1.55}
+  h1{font-size:23px;font-weight:700;padding:26px 32px 2px}
+  .subtitle{color:var(--muted);padding:0 32px 22px;font-size:13px}
+  h2{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;
+     padding:26px 32px 14px;border-top:1px solid var(--border);margin-top:10px}
+  h3{font-size:15px;font-weight:600;padding:18px 0 12px;display:flex;align-items:center;gap:9px}
+  .pdot{width:11px;height:11px;border-radius:50%;display:inline-block}
+  .wrap{padding:0 32px 36px}
+  .cards{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:18px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 18px;min-width:140px;flex:1}
+  .card-v{font-size:24px;font-weight:700}
+  .card-l{font-size:12px;color:var(--muted);margin-top:3px}
+  .card-s{font-size:11px;color:var(--muted);opacity:.75;margin-top:2px}
+  .panel{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:14px}
+  .panel-t{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-bottom:12px}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:880px){.two-col{grid-template-columns:1fr}}
+  .row{display:flex;align-items:center;gap:10px;margin:5px 0}
+  .lbl{width:170px;font-size:12px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;flex-shrink:0}
+  .track{flex:1;height:14px;background:var(--surface2);border-radius:4px;overflow:hidden;display:flex}
+  .track.stacked{background:var(--surface2)}
+  .fill{height:100%;border-radius:0}
+  .val{width:62px;text-align:right;font-size:12px;font-variant-numeric:tabular-nums;color:var(--muted);flex-shrink:0}
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th{background:var(--surface2);padding:8px 10px;text-align:left;font-size:11px;color:var(--muted);
+     text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0}
+  td{padding:7px 10px;border-top:1px solid var(--border);vertical-align:middle}
+  td.num{text-align:right;font-variant-numeric:tabular-nums}
+  td.dim{color:var(--muted)}
+  td.l2{max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  td.topic{max-width:340px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  td.heat{text-align:center;font-variant-numeric:tabular-nums}
+  .scroll{max-height:340px;overflow:auto;border-radius:8px;border:1px solid var(--border)}
+  .scroll.tall{max-height:520px}
+  /* keep the first (label) column readable when a wide table scrolls sideways */
+  .scroll th:first-child,.scroll td:first-child{position:sticky;left:0}
+  .scroll thead th:first-child{z-index:2}
+  .scroll tbody td:first-child{background:var(--surface)}
+  table.tight td,table.tight th{padding:6px 9px}
+  .minibar{display:inline-block;width:74px;height:8px;background:var(--surface2);border-radius:3px;
+     overflow:hidden;vertical-align:middle;margin-right:7px}
+  .minibar-f{height:100%}
+  .minibar-t{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+  .legend{display:flex;gap:16px;padding:0 32px 14px;font-size:12px;color:var(--muted)}
+  .legend span{display:flex;align-items:center;gap:6px}
+  .sw{width:11px;height:11px;border-radius:3px;display:inline-block}
+  .footer{padding:18px 32px 30px;color:var(--muted);font-size:11px}
+</style>
+</head>
+<body>
+  <h1>Corpus Usage &amp; Distribution Dashboard</h1>
+  <div class="subtitle">Corpus-direct production line &mdash; runs v7 through v14 &middot; 5,765 successful queries &middot; generated 2026-05-22 03:07</div>
+  <div class="legend">
+    <span><i class="sw" style="background:#38bdf8"></i>web</span>
+    <span><i class="sw" style="background:#a78bfa"></i>mobile</span>
+  </div>
+
+  <div class="wrap">
+    <div class="cards">
+      <div class="card"><div class="card-v">5,765</div><div class="card-l">Total queries</div><div class="card-s">v7–v14, errors excluded</div></div>
+      <div class="card"><div class="card-v">2,965</div><div class="card-l">Web queries</div></div>
+      <div class="card"><div class="card-v">2,800</div><div class="card-l">Mobile queries</div></div>
+      <div class="card"><div class="card-v">12</div><div class="card-l">Runs covered</div><div class="card-s">smoke runs excluded</div></div>
+      <div class="card"><div class="card-v">36.0%</div><div class="card-l">Web pool coverage</div><div class="card-s">1596/4438 topics</div></div>
+      <div class="card"><div class="card-v">49.3%</div><div class="card-l">Mobile pool coverage</div><div class="card-s">1803/3659 topics</div></div>
+    </div>
+  </div>
+
+  <h2>1 · Corpus Topic Consumption</h2>
+  <div class="wrap">
+    
+    <div class="platform-block">
+      <h3><span class="pdot" style="background:#38bdf8"></span>WEB &mdash; 2,965 queries</h3>
+      <div class="cards">
+        <div class="card"><div class="card-v">4,438</div><div class="card-l">Pool topics</div><div class="card-s">74 L2 scenes</div></div>
+        <div class="card"><div class="card-v">1,596</div><div class="card-l">Distinct used</div><div class="card-s">in-pool</div></div>
+        <div class="card"><div class="card-v">36.0%</div><div class="card-l">Pool coverage</div><div class="card-s">1596/4438</div></div>
+        <div class="card"><div class="card-v">1.86×</div><div class="card-l">Avg reuse</div><div class="card-s">per used topic</div></div>
+        <div class="card"><div class="card-v">0</div><div class="card-l">Off-pool topics</div><div class="card-s">0 uses (legacy)</div></div>
+      </div>
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-t">Reuse pressure &mdash; in-pool topics by times used</div>
+          
+    <div class="row">
+      <span class="lbl" title="1×">1×</span>
+      <div class="track"><div class="fill" style="width:45.1%;background:#38bdf8"></div></div>
+      <span class="val">433</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="2×">2×</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#38bdf8"></div></div>
+      <span class="val">960</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="3×">3×</span>
+      <div class="track"><div class="fill" style="width:20.9%;background:#38bdf8"></div></div>
+      <span class="val">201</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="4×">4×</span>
+      <div class="track"><div class="fill" style="width:0.1%;background:#38bdf8"></div></div>
+      <span class="val">1</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="5+×">5+×</span>
+      <div class="track"><div class="fill" style="width:0.1%;background:#38bdf8"></div></div>
+      <span class="val">1</span>
+    </div>
+        </div>
+        <div class="panel">
+          <div class="panel-t">Top 20 most-reused topics</div>
+          <div class="scroll">
+          <table class="tight"><thead><tr><th>#</th><th>Topic</th><th>Uses</th></tr></thead><tbody>
+      <tr><td class="num dim">1</td><td class="topic">技术博客</td><td class="num">5</td></tr>
+      <tr><td class="num dim">2</td><td class="topic">Press kit and media assets download page</td><td class="num">4</td></tr>
+      <tr><td class="num dim">3</td><td class="topic">community-driven changelog with reaction threads</td><td class="num">3</td></tr>
+      <tr><td class="num dim">4</td><td class="topic">API documentation portal for developer-facing SaaS tools</td><td class="num">3</td></tr>
+      <tr><td class="num dim">5</td><td class="topic">Customer onboarding checklist builder for SaaS products</td><td class="num">3</td></tr>
+      <tr><td class="num dim">6</td><td class="topic">学校/机构官网</td><td class="num">3</td></tr>
+      <tr><td class="num dim">7</td><td class="topic">校园风采</td><td class="num">3</td></tr>
+      <tr><td class="num dim">8</td><td class="topic">教师团队页</td><td class="num">3</td></tr>
+      <tr><td class="num dim">9</td><td class="topic">University course catalog and program directory site</td><td class="num">3</td></tr>
+      <tr><td class="num dim">10</td><td class="topic">Alumni success stories and career outcomes showcase</td><td class="num">3</td></tr>
+      <tr><td class="num dim">11</td><td class="topic">Institutional accreditations and awards display page</td><td class="num">3</td></tr>
+      <tr><td class="num dim">12</td><td class="topic">Student capstone project portfolio gallery site</td><td class="num">3</td></tr>
+      <tr><td class="num dim">13</td><td class="topic">校园新闻</td><td class="num">3</td></tr>
+      <tr><td class="num dim">14</td><td class="topic">学术发表</td><td class="num">3</td></tr>
+      <tr><td class="num dim">15</td><td class="topic">研究成果</td><td class="num">3</td></tr>
+      <tr><td class="num dim">16</td><td class="topic">教育资讯</td><td class="num">3</td></tr>
+      <tr><td class="num dim">17</td><td class="topic">faculty research profile and biography directory site</td><td class="num">3</td></tr>
+      <tr><td class="num dim">18</td><td class="topic">alumni success story and career journey magazine</td><td class="num">3</td></tr>
+      <tr><td class="num dim">19</td><td class="topic">open courseware and free lecture notes portal</td><td class="num">3</td></tr>
+      <tr><td class="num dim">20</td><td class="topic">招生页</td><td class="num">3</td></tr></tbody></table>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-t">Per-L2 consumption &mdash; pool depletion by scene (sorted by uses)</div>
+        <div class="scroll tall">
+        <table><thead><tr><th>L2 scene</th><th>Pool</th><th>Used</th><th>Coverage</th><th>Total uses</th></tr></thead>
+        <tbody>
+      <tr>
+        <td class="l2">个人用户 · 展示型</td>
+        <td class="num">60</td>
+        <td class="num">26</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:43.3%;background:#38bdf8"></div></div>
+          <span class="minibar-t">43.3%</span>
+        </td>
+        <td class="num">43</td>
+      </tr>
+      <tr>
+        <td class="l2">个人用户 · 内容型</td>
+        <td class="num">60</td>
+        <td class="num">26</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:43.3%;background:#38bdf8"></div></div>
+          <span class="minibar-t">43.3%</span>
+        </td>
+        <td class="num">43</td>
+      </tr>
+      <tr>
+        <td class="l2">个人用户 · 学习型</td>
+        <td class="num">60</td>
+        <td class="num">26</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:43.3%;background:#38bdf8"></div></div>
+          <span class="minibar-t">43.3%</span>
+        </td>
+        <td class="num">43</td>
+      </tr>
+      <tr>
+        <td class="l2">个人用户 · 工具型</td>
+        <td class="num">60</td>
+        <td class="num">26</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:43.3%;background:#38bdf8"></div></div>
+          <span class="minibar-t">43.3%</span>
+        </td>
+        <td class="num">43</td>
+      </tr>
+      <tr>
+        <td class="l2">创作者 · 展示型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">创作者 · 内容型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">创作者 · 营销型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">创作者 · 商务型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">创作者 · 预约型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">创作者 · 学习型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">创作者 · 社区型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">创作者 · 工具型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">自由职业 · 展示型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">自由职业 · 内容型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">自由职业 · 营销型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">自由职业 · 预约型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">自由职业 · 学习型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">42</td>
+      </tr>
+      <tr>
+        <td class="l2">自由职业 · 社区型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">自由职业 · 工具型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">小微商户 · 展示型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">小微商户 · 内容型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">小微商户 · 营销型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">小微商户 · 商务型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">小微商户 · 预约型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">小微商户 · 学习型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">小微商户 · 社区型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">小微商户 · 工具型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">中大型企业 · 展示型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">中大型企业 · 内容型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">中大型企业 · 营销型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">中大型企业 · 商务型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">中大型企业 · 预约型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">中大型企业 · 学习型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">中大型企业 · 社区型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">中大型企业 · 工具型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">初创公司 · 展示型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">初创公司 · 内容型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">初创公司 · 营销型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">41</td>
+      </tr>
+      <tr>
+        <td class="l2">初创公司 · 商务型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">初创公司 · 预约型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">初创公司 · 学习型</td>
+        <td class="num">60</td>
+        <td class="num">25</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:41.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">41.7%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">初创公司 · 社区型</td>
+        <td class="num">60</td>
+        <td class="num">24</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:40.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">40.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">初创公司 · 工具型</td>
+        <td class="num">60</td>
+        <td class="num">23</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:38.3%;background:#38bdf8"></div></div>
+          <span class="minibar-t">38.3%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">教育 · 展示型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">教育 · 内容型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">教育 · 营销型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">教育 · 商务型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">教育 · 预约型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">教育 · 学习型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">教育 · 社区型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">教育 · 工具型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">媒体 · 展示型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">媒体 · 内容型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">媒体 · 营销型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">媒体 · 商务型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">媒体 · 预约型</td>
+        <td class="num">60</td>
+        <td class="num">18</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:30.0%;background:#38bdf8"></div></div>
+          <span class="minibar-t">30.0%</span>
+        </td>
+        <td class="num">40</td>
+      </tr>
+      <tr>
+        <td class="l2">媒体 · 学习型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">媒体 · 社区型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">媒体 · 工具型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">文化 · 展示型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">文化 · 内容型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">文化 · 营销型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">文化 · 商务型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">文化 · 预约型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">文化 · 学习型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">文化 · 社区型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">文化 · 工具型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">开发者 · 展示型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">开发者 · 内容型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">开发者 · 营销型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">开发者 · 商务型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">开发者 · 学习型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">开发者 · 社区型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr>
+      <tr>
+        <td class="l2">开发者 · 工具型</td>
+        <td class="num">60</td>
+        <td class="num">16</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:26.7%;background:#38bdf8"></div></div>
+          <span class="minibar-t">26.7%</span>
+        </td>
+        <td class="num">37</td>
+      </tr></tbody></table>
+        </div>
+      </div>
+    </div>
+    
+    <div class="platform-block">
+      <h3><span class="pdot" style="background:#a78bfa"></span>MOBILE &mdash; 2,800 queries</h3>
+      <div class="cards">
+        <div class="card"><div class="card-v">3,659</div><div class="card-l">Pool topics</div><div class="card-s">61 L2 scenes</div></div>
+        <div class="card"><div class="card-v">1,803</div><div class="card-l">Distinct used</div><div class="card-s">in-pool</div></div>
+        <div class="card"><div class="card-v">49.3%</div><div class="card-l">Pool coverage</div><div class="card-s">1803/3659</div></div>
+        <div class="card"><div class="card-v">1.52×</div><div class="card-l">Avg reuse</div><div class="card-s">per used topic</div></div>
+        <div class="card"><div class="card-v">1</div><div class="card-l">Off-pool topics</div><div class="card-s">68 uses (legacy)</div></div>
+      </div>
+      <div class="two-col">
+        <div class="panel">
+          <div class="panel-t">Reuse pressure &mdash; in-pool topics by times used</div>
+          
+    <div class="row">
+      <span class="lbl" title="1×">1×</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#a78bfa"></div></div>
+      <span class="val">906</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="2×">2×</span>
+      <div class="track"><div class="fill" style="width:95.5%;background:#a78bfa"></div></div>
+      <span class="val">865</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="3×">3×</span>
+      <div class="track"><div class="fill" style="width:3.5%;background:#a78bfa"></div></div>
+      <span class="val">32</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="4×">4×</span>
+      <div class="track"><div class="fill" style="width:0.0%;background:#a78bfa"></div></div>
+      <span class="val">0</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="5+×">5+×</span>
+      <div class="track"><div class="fill" style="width:0.0%;background:#a78bfa"></div></div>
+      <span class="val">0</span>
+    </div>
+        </div>
+        <div class="panel">
+          <div class="panel-t">Top 20 most-reused topics</div>
+          <div class="scroll">
+          <table class="tight"><thead><tr><th>#</th><th>Topic</th><th>Uses</th></tr></thead><tbody>
+      <tr><td class="num dim">1</td><td class="topic">Travel Memory Scrapbook</td><td class="num">3</td></tr>
+      <tr><td class="num dim">2</td><td class="topic">Annual Family Photo Album</td><td class="num">3</td></tr>
+      <tr><td class="num dim">3</td><td class="topic">Baby Growth Milestone Tracker</td><td class="num">3</td></tr>
+      <tr><td class="num dim">4</td><td class="topic">Painting &amp; Artwork Exhibition</td><td class="num">3</td></tr>
+      <tr><td class="num dim">5</td><td class="topic">Pet Life Chronicle</td><td class="num">3</td></tr>
+      <tr><td class="num dim">6</td><td class="topic">Pregnancy Journey Diary</td><td class="num">3</td></tr>
+      <tr><td class="num dim">7</td><td class="topic">Wedding Anniversary Gallery</td><td class="num">3</td></tr>
+      <tr><td class="num dim">8</td><td class="topic">Childhood Memory Archive</td><td class="num">3</td></tr>
+      <tr><td class="num dim">9</td><td class="topic">Photography Portfolio Showcase</td><td class="num">3</td></tr>
+      <tr><td class="num dim">10</td><td class="topic">UI/UX Designer Case Studies</td><td class="num">3</td></tr>
+      <tr><td class="num dim">11</td><td class="topic">Graphic Designer Brand Book</td><td class="num">3</td></tr>
+      <tr><td class="num dim">12</td><td class="topic">Resume &amp; CV Builder</td><td class="num">3</td></tr>
+      <tr><td class="num dim">13</td><td class="topic">Illustrator Artwork Gallery</td><td class="num">3</td></tr>
+      <tr><td class="num dim">14</td><td class="topic">Freelance Copywriter Samples</td><td class="num">3</td></tr>
+      <tr><td class="num dim">15</td><td class="topic">Architect Project Portfolio</td><td class="num">3</td></tr>
+      <tr><td class="num dim">16</td><td class="topic">Fashion Stylist Lookbook</td><td class="num">3</td></tr>
+      <tr><td class="num dim">17</td><td class="topic">SaaS Product Landing Page</td><td class="num">3</td></tr>
+      <tr><td class="num dim">18</td><td class="topic">Startup Pitch Deck Viewer</td><td class="num">3</td></tr>
+      <tr><td class="num dim">19</td><td class="topic">Annual Report Presentation</td><td class="num">3</td></tr>
+      <tr><td class="num dim">20</td><td class="topic">Client Proposal Showcase</td><td class="num">3</td></tr></tbody></table>
+          </div>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-t">Per-L2 consumption &mdash; pool depletion by scene (sorted by uses)</div>
+        <div class="scroll tall">
+        <table><thead><tr><th>L2 scene</th><th>Pool</th><th>Used</th><th>Coverage</th><th>Total uses</th></tr></thead>
+        <tbody>
+      <tr>
+        <td class="l2">① 个人生活类</td>
+        <td class="num">60</td>
+        <td class="num">40</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:66.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">66.7%</span>
+        </td>
+        <td class="num">86</td>
+      </tr>
+      <tr>
+        <td class="l2">② 个人专业类</td>
+        <td class="num">60</td>
+        <td class="num">40</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:66.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">66.7%</span>
+        </td>
+        <td class="num">86</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 办公/商务类</td>
+        <td class="num">60</td>
+        <td class="num">40</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:66.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">66.7%</span>
+        </td>
+        <td class="num">86</td>
+      </tr>
+      <tr>
+        <td class="l2">④ 文化/知识类</td>
+        <td class="num">60</td>
+        <td class="num">40</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:66.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">66.7%</span>
+        </td>
+        <td class="num">86</td>
+      </tr>
+      <tr>
+        <td class="l2">① 计算器/换算器</td>
+        <td class="num">60</td>
+        <td class="num">40</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:66.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">66.7%</span>
+        </td>
+        <td class="num">60</td>
+      </tr>
+      <tr>
+        <td class="l2">② 生活记录器</td>
+        <td class="num">60</td>
+        <td class="num">40</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:66.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">66.7%</span>
+        </td>
+        <td class="num">60</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 社交辅助</td>
+        <td class="num">60</td>
+        <td class="num">39</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:65.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">65.0%</span>
+        </td>
+        <td class="num">55</td>
+      </tr>
+      <tr>
+        <td class="l2">④ 倒计时/纪念日</td>
+        <td class="num">60</td>
+        <td class="num">39</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:65.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">65.0%</span>
+        </td>
+        <td class="num">55</td>
+      </tr>
+      <tr>
+        <td class="l2">⑤ 文本处理</td>
+        <td class="num">60</td>
+        <td class="num">37</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:61.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">61.7%</span>
+        </td>
+        <td class="num">54</td>
+      </tr>
+      <tr>
+        <td class="l2">⑥ 随机生成器</td>
+        <td class="num">60</td>
+        <td class="num">37</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:61.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">61.7%</span>
+        </td>
+        <td class="num">54</td>
+      </tr>
+      <tr>
+        <td class="l2">⑦ 无障碍辅助</td>
+        <td class="num">60</td>
+        <td class="num">37</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:61.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">61.7%</span>
+        </td>
+        <td class="num">54</td>
+      </tr>
+      <tr>
+        <td class="l2">⑧ 其他长尾微工具</td>
+        <td class="num">60</td>
+        <td class="num">37</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:61.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">61.7%</span>
+        </td>
+        <td class="num">54</td>
+      </tr>
+      <tr>
+        <td class="l2">① 闪卡/单词记忆</td>
+        <td class="num">60</td>
+        <td class="num">37</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:61.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">61.7%</span>
+        </td>
+        <td class="num">54</td>
+      </tr>
+      <tr>
+        <td class="l2">② 备考自测/刷题</td>
+        <td class="num">60</td>
+        <td class="num">37</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:61.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">61.7%</span>
+        </td>
+        <td class="num">54</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 学习打卡/进度追踪</td>
+        <td class="num">60</td>
+        <td class="num">37</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:61.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">61.7%</span>
+        </td>
+        <td class="num">54</td>
+      </tr>
+      <tr>
+        <td class="l2">④ 课程目录/课堂界面</td>
+        <td class="num">60</td>
+        <td class="num">37</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:61.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">61.7%</span>
+        </td>
+        <td class="num">54</td>
+      </tr>
+      <tr>
+        <td class="l2">⑤ 知识速查/公式表</td>
+        <td class="num">60</td>
+        <td class="num">37</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:61.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">61.7%</span>
+        </td>
+        <td class="num">54</td>
+      </tr>
+      <tr>
+        <td class="l2">① Adding &amp; Creating</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">② Editing &amp; Updating</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">③ Searching &amp; Finding</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">④ Selecting &amp; Choosing</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">⑤ Filtering &amp; Sorting</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">⑥ Deleting &amp; Removing</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">⑦ Editing Profile</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">⑧ Uploading &amp; Downloading</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">⑨ Copying &amp; Duplicating</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">⑩ Misc</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">① 待办清单/任务管理</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">② 番茄钟/专注计时</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 日程/倒计时</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">④ 数据仪表盘/报表</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">⑤ 笔记/文档编辑</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">① 饮水/服药/习惯提醒</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">② 运动记录/健身计划</td>
+        <td class="num">60</td>
+        <td class="num">33</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:55.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">55.0%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 体重/经期/睡眠追踪</td>
+        <td class="num">60</td>
+        <td class="num">32</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:53.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">53.3%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">④ 健康数据看板</td>
+        <td class="num">60</td>
+        <td class="num">31</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:51.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">51.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">⑤ 冥想/呼吸练习</td>
+        <td class="num">60</td>
+        <td class="num">34</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:56.7%;background:#a78bfa"></div></div>
+          <span class="minibar-t">56.7%</span>
+        </td>
+        <td class="num">49</td>
+      </tr>
+      <tr>
+        <td class="l2">① 行程规划器</td>
+        <td class="num">60</td>
+        <td class="num">29</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:48.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">48.3%</span>
+        </td>
+        <td class="num">43</td>
+      </tr>
+      <tr>
+        <td class="l2">② 打包清单/旅行准备</td>
+        <td class="num">60</td>
+        <td class="num">29</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:48.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">48.3%</span>
+        </td>
+        <td class="num">43</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 地图/路线导航</td>
+        <td class="num">60</td>
+        <td class="num">29</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:48.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">48.3%</span>
+        </td>
+        <td class="num">43</td>
+      </tr>
+      <tr>
+        <td class="l2">④ 天气/实时信息查询</td>
+        <td class="num">60</td>
+        <td class="num">29</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:48.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">48.3%</span>
+        </td>
+        <td class="num">43</td>
+      </tr>
+      <tr>
+        <td class="l2">⑤ 交通时刻/票价查询</td>
+        <td class="num">60</td>
+        <td class="num">29</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:48.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">48.3%</span>
+        </td>
+        <td class="num">43</td>
+      </tr>
+      <tr>
+        <td class="l2">② 食物热量/升糖查询</td>
+        <td class="num">60</td>
+        <td class="num">26</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:43.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">43.3%</span>
+        </td>
+        <td class="num">38</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 菜谱生成/食材搭配</td>
+        <td class="num">60</td>
+        <td class="num">26</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:43.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">43.3%</span>
+        </td>
+        <td class="num">38</td>
+      </tr>
+      <tr>
+        <td class="l2">④ 餐厅列表/点评浏览</td>
+        <td class="num">60</td>
+        <td class="num">26</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:43.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">43.3%</span>
+        </td>
+        <td class="num">38</td>
+      </tr>
+      <tr>
+        <td class="l2">① 文字猜谜/知识竞赛</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">② 抽签/转盘/随机决策</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 经典小游戏</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">④ 情绪减压/解压玩具</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">① 图片编辑/滤镜/裁剪</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">② 海报/简历/卡片模板</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 音视频播放界面</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">④ 内容创作工具</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">② 文章详情/阅读模式</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 订阅/频道管理</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">④ 搜索与筛选</td>
+        <td class="num">60</td>
+        <td class="num">21</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:35.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">35.0%</span>
+        </td>
+        <td class="num">30</td>
+      </tr>
+      <tr>
+        <td class="l2">① 商品详情/规格选择</td>
+        <td class="num">60</td>
+        <td class="num">8</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:13.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">13.3%</span>
+        </td>
+        <td class="num">11</td>
+      </tr>
+      <tr>
+        <td class="l2">② 购物车/结算</td>
+        <td class="num">60</td>
+        <td class="num">8</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:13.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">13.3%</span>
+        </td>
+        <td class="num">11</td>
+      </tr>
+      <tr>
+        <td class="l2">③ 订单/物流追踪</td>
+        <td class="num">60</td>
+        <td class="num">8</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:13.3%;background:#a78bfa"></div></div>
+          <span class="minibar-t">13.3%</span>
+        </td>
+        <td class="num">11</td>
+      </tr>
+      <tr>
+        <td class="l2">① 今天吃什么随机选择器</td>
+        <td class="num">60</td>
+        <td class="num">0</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:0.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">0.0%</span>
+        </td>
+        <td class="num">0</td>
+      </tr>
+      <tr>
+        <td class="l2">① 信息流/Feed浏览</td>
+        <td class="num">60</td>
+        <td class="num">0</td>
+        <td>
+          <div class="minibar"><div class="minibar-f" style="width:0.0%;background:#a78bfa"></div></div>
+          <span class="minibar-t">0.0%</span>
+        </td>
+        <td class="num">0</td>
+      </tr></tbody></table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2>2 · Query Distribution</h2>
+  <div class="wrap">
+    <div class="panel">
+      <div class="panel-t">Queries per run (web + mobile stacked)</div>
+      
+    <div class="row">
+      <span class="lbl">v7</span>
+      <div class="track stacked">
+        <div class="fill" style="width:50.0%;background:#38bdf8" title="web 500"></div>
+        <div class="fill" style="width:50.0%;background:#a78bfa" title="mobile 500"></div>
+      </div>
+      <span class="val">1,000</span>
+    </div>
+    <div class="row">
+      <span class="lbl">v8</span>
+      <div class="track stacked">
+        <div class="fill" style="width:50.0%;background:#38bdf8" title="web 500"></div>
+        <div class="fill" style="width:50.0%;background:#a78bfa" title="mobile 500"></div>
+      </div>
+      <span class="val">1,000</span>
+    </div>
+    <div class="row">
+      <span class="lbl">v9</span>
+      <div class="track stacked">
+        <div class="fill" style="width:30.0%;background:#38bdf8" title="web 300"></div>
+        <div class="fill" style="width:30.0%;background:#a78bfa" title="mobile 300"></div>
+      </div>
+      <span class="val">600</span>
+    </div>
+    <div class="row">
+      <span class="lbl">v10</span>
+      <div class="track stacked">
+        <div class="fill" style="width:50.0%;background:#38bdf8" title="web 500"></div>
+        <div class="fill" style="width:50.0%;background:#a78bfa" title="mobile 500"></div>
+      </div>
+      <span class="val">1,000</span>
+    </div>
+    <div class="row">
+      <span class="lbl">v11</span>
+      <div class="track stacked">
+        <div class="fill" style="width:16.5%;background:#38bdf8" title="web 165"></div>
+        <div class="fill" style="width:0.0%;background:#a78bfa" title="mobile 0"></div>
+      </div>
+      <span class="val">165</span>
+    </div>
+    <div class="row">
+      <span class="lbl">v12</span>
+      <div class="track stacked">
+        <div class="fill" style="width:100.0%;background:#38bdf8" title="web 1000"></div>
+        <div class="fill" style="width:0.0%;background:#a78bfa" title="mobile 0"></div>
+      </div>
+      <span class="val">1,000</span>
+    </div>
+    <div class="row">
+      <span class="lbl">v13</span>
+      <div class="track stacked">
+        <div class="fill" style="width:0.0%;background:#38bdf8" title="web 0"></div>
+        <div class="fill" style="width:50.0%;background:#a78bfa" title="mobile 500"></div>
+      </div>
+      <span class="val">500</span>
+    </div>
+    <div class="row">
+      <span class="lbl">v14</span>
+      <div class="track stacked">
+        <div class="fill" style="width:0.0%;background:#38bdf8" title="web 0"></div>
+        <div class="fill" style="width:50.0%;background:#a78bfa" title="mobile 500"></div>
+      </div>
+      <span class="val">500</span>
+    </div>
+    </div>
+    <div class="two-col">
+      <div class="panel"><div class="panel-t">WEB &mdash; queries by L1 scene</div>
+    <div class="row">
+      <span class="lbl" title="创作者">创作者</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#38bdf8"></div></div>
+      <span class="val">336</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="小微商户">小微商户</span>
+      <div class="track"><div class="fill" style="width:97.6%;background:#38bdf8"></div></div>
+      <span class="val">328</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="中大型企业">中大型企业</span>
+      <div class="track"><div class="fill" style="width:97.6%;background:#38bdf8"></div></div>
+      <span class="val">328</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="初创公司">初创公司</span>
+      <div class="track"><div class="fill" style="width:96.1%;background:#38bdf8"></div></div>
+      <span class="val">323</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="教育">教育</span>
+      <div class="track"><div class="fill" style="width:95.2%;background:#38bdf8"></div></div>
+      <span class="val">320</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="媒体">媒体</span>
+      <div class="track"><div class="fill" style="width:92.6%;background:#38bdf8"></div></div>
+      <span class="val">311</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="文化">文化</span>
+      <div class="track"><div class="fill" style="width:88.1%;background:#38bdf8"></div></div>
+      <span class="val">296</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="自由职业">自由职业</span>
+      <div class="track"><div class="fill" style="width:86.9%;background:#38bdf8"></div></div>
+      <span class="val">292</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="开发者">开发者</span>
+      <div class="track"><div class="fill" style="width:77.1%;background:#38bdf8"></div></div>
+      <span class="val">259</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="个人用户">个人用户</span>
+      <div class="track"><div class="fill" style="width:51.2%;background:#38bdf8"></div></div>
+      <span class="val">172</span>
+    </div></div>
+      <div class="panel"><div class="panel-t">MOBILE &mdash; queries by L1 scene</div>
+    <div class="row">
+      <span class="lbl" title="交互方式">交互方式</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#a78bfa"></div></div>
+      <span class="val">490</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="实用工具">实用工具</span>
+      <div class="track"><div class="fill" style="width:91.0%;background:#a78bfa"></div></div>
+      <span class="val">446</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="深度研究展示">深度研究展示</span>
+      <div class="track"><div class="fill" style="width:70.2%;background:#a78bfa"></div></div>
+      <span class="val">344</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="教育学习">教育学习</span>
+      <div class="track"><div class="fill" style="width:55.1%;background:#a78bfa"></div></div>
+      <span class="val">270</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="办公效率">办公效率</span>
+      <div class="track"><div class="fill" style="width:50.0%;background:#a78bfa"></div></div>
+      <span class="val">245</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="健康管理">健康管理</span>
+      <div class="track"><div class="fill" style="width:50.0%;background:#a78bfa"></div></div>
+      <span class="val">245</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="出行助手">出行助手</span>
+      <div class="track"><div class="fill" style="width:43.9%;background:#a78bfa"></div></div>
+      <span class="val">215</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="美食探店">美食探店</span>
+      <div class="track"><div class="fill" style="width:31.0%;background:#a78bfa"></div></div>
+      <span class="val">152</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="休闲游戏">休闲游戏</span>
+      <div class="track"><div class="fill" style="width:24.5%;background:#a78bfa"></div></div>
+      <span class="val">120</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="多媒体处理">多媒体处理</span>
+      <div class="track"><div class="fill" style="width:24.5%;background:#a78bfa"></div></div>
+      <span class="val">120</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="新闻资讯">新闻资讯</span>
+      <div class="track"><div class="fill" style="width:24.5%;background:#a78bfa"></div></div>
+      <span class="val">120</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="购物消费">购物消费</span>
+      <div class="track"><div class="fill" style="width:6.7%;background:#a78bfa"></div></div>
+      <span class="val">33</span>
+    </div></div>
+    </div>
+    <div class="two-col">
+      <div class="panel"><div class="panel-t">WEB &mdash; target complexity</div>
+    <div class="row">
+      <span class="lbl" title="medium">medium</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#38bdf8"></div></div>
+      <span class="val">2965</span>
+    </div></div>
+      <div class="panel"><div class="panel-t">MOBILE &mdash; target complexity</div>
+    <div class="row">
+      <span class="lbl" title="medium">medium</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#a78bfa"></div></div>
+      <span class="val">2800</span>
+    </div></div>
+    </div>
+    <div class="two-col">
+      <div class="panel"><div class="panel-t">WEB &mdash; word-count distribution (avg 74)</div>
+    <div class="row">
+      <span class="lbl" title="&lt;40">&lt;40</span>
+      <div class="track"><div class="fill" style="width:0.8%;background:#38bdf8"></div></div>
+      <span class="val">6</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="40-49">40-49</span>
+      <div class="track"><div class="fill" style="width:15.8%;background:#38bdf8"></div></div>
+      <span class="val">115</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="50-59">50-59</span>
+      <div class="track"><div class="fill" style="width:66.5%;background:#38bdf8"></div></div>
+      <span class="val">483</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="60-69">60-69</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#38bdf8"></div></div>
+      <span class="val">726</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="70-79">70-79</span>
+      <div class="track"><div class="fill" style="width:96.3%;background:#38bdf8"></div></div>
+      <span class="val">699</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="80-89">80-89</span>
+      <div class="track"><div class="fill" style="width:58.5%;background:#38bdf8"></div></div>
+      <span class="val">425</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="90-99">90-99</span>
+      <div class="track"><div class="fill" style="width:40.9%;background:#38bdf8"></div></div>
+      <span class="val">297</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="100+">100+</span>
+      <div class="track"><div class="fill" style="width:29.5%;background:#38bdf8"></div></div>
+      <span class="val">214</span>
+    </div></div>
+      <div class="panel"><div class="panel-t">MOBILE &mdash; word-count distribution (avg 77)</div>
+    <div class="row">
+      <span class="lbl" title="&lt;40">&lt;40</span>
+      <div class="track"><div class="fill" style="width:1.3%;background:#a78bfa"></div></div>
+      <span class="val">8</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="40-49">40-49</span>
+      <div class="track"><div class="fill" style="width:28.5%;background:#a78bfa"></div></div>
+      <span class="val">174</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="50-59">50-59</span>
+      <div class="track"><div class="fill" style="width:64.8%;background:#a78bfa"></div></div>
+      <span class="val">395</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="60-69">60-69</span>
+      <div class="track"><div class="fill" style="width:74.1%;background:#a78bfa"></div></div>
+      <span class="val">452</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="70-79">70-79</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#a78bfa"></div></div>
+      <span class="val">610</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="80-89">80-89</span>
+      <div class="track"><div class="fill" style="width:80.5%;background:#a78bfa"></div></div>
+      <span class="val">491</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="90-99">90-99</span>
+      <div class="track"><div class="fill" style="width:49.7%;background:#a78bfa"></div></div>
+      <span class="val">303</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="100+">100+</span>
+      <div class="track"><div class="fill" style="width:60.2%;background:#a78bfa"></div></div>
+      <span class="val">367</span>
+    </div></div>
+    </div>
+  </div>
+
+  <h2>3 · Persona Distribution</h2>
+  <div class="wrap">
+    <div class="two-col">
+      <div class="panel"><div class="panel-t">Persona totals (all platforms)</div><div class="row">
+      <span class="lbl">operator</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#38bdf8"></div></div>
+      <span class="val">1,925</span>
+    </div><div class="row">
+      <span class="lbl">planner</span>
+      <div class="track"><div class="fill" style="width:62.1%;background:#a78bfa"></div></div>
+      <span class="val">1,195</span>
+    </div><div class="row">
+      <span class="lbl">maker</span>
+      <div class="track"><div class="fill" style="width:53.2%;background:#34d399"></div></div>
+      <span class="val">1,025</span>
+    </div><div class="row">
+      <span class="lbl">founder_like</span>
+      <div class="track"><div class="fill" style="width:33.9%;background:#fbbf24"></div></div>
+      <span class="val">653</span>
+    </div><div class="row">
+      <span class="lbl">curator</span>
+      <div class="track"><div class="fill" style="width:50.2%;background:#f472b6"></div></div>
+      <span class="val">967</span>
+    </div></div>
+      <div class="panel">
+        <div class="panel-t">Persona split by platform</div>
+        <div class="panel"><div class="panel-t">WEB &mdash; persona mix</div>
+    <div class="row">
+      <span class="lbl" title="operator">operator</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#38bdf8"></div></div>
+      <span class="val">1043</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="planner">planner</span>
+      <div class="track"><div class="fill" style="width:49.9%;background:#38bdf8"></div></div>
+      <span class="val">520</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="maker">maker</span>
+      <div class="track"><div class="fill" style="width:52.3%;background:#38bdf8"></div></div>
+      <span class="val">546</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="founder_like">founder_like</span>
+      <div class="track"><div class="fill" style="width:43.2%;background:#38bdf8"></div></div>
+      <span class="val">451</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="curator">curator</span>
+      <div class="track"><div class="fill" style="width:38.8%;background:#38bdf8"></div></div>
+      <span class="val">405</span>
+    </div></div>
+        <div class="panel"><div class="panel-t">MOBILE &mdash; persona mix</div>
+    <div class="row">
+      <span class="lbl" title="operator">operator</span>
+      <div class="track"><div class="fill" style="width:100.0%;background:#a78bfa"></div></div>
+      <span class="val">882</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="planner">planner</span>
+      <div class="track"><div class="fill" style="width:76.5%;background:#a78bfa"></div></div>
+      <span class="val">675</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="maker">maker</span>
+      <div class="track"><div class="fill" style="width:54.3%;background:#a78bfa"></div></div>
+      <span class="val">479</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="founder_like">founder_like</span>
+      <div class="track"><div class="fill" style="width:22.9%;background:#a78bfa"></div></div>
+      <span class="val">202</span>
+    </div>
+    <div class="row">
+      <span class="lbl" title="curator">curator</span>
+      <div class="track"><div class="fill" style="width:63.7%;background:#a78bfa"></div></div>
+      <span class="val">562</span>
+    </div></div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-t">Persona &times; L1 scene &mdash; query counts (heat-shaded)</div>
+      <div class="scroll tall">
+      <table><thead><tr><th>L1 scene</th><th class="num">operator</th><th class="num">planner</th><th class="num">maker</th><th class="num">founder_like</th><th class="num">curator</th></tr></thead><tbody><tr><td class="l2">交互方式</td><td class="num heat" style="background:rgba(56,189,248,0.900)">294</td><td class="num heat" style="background:rgba(56,189,248,0.250)">49</td><td class="num heat" style="background:rgba(56,189,248,0.380)">98</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.250)">49</td></tr><tr><td class="l2">实用工具</td><td class="num heat" style="background:rgba(56,189,248,0.566)">168</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.712)">223</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.266)">55</td></tr><tr><td class="l2">深度研究展示</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.576)">172</td><td class="num heat" style="background:rgba(56,189,248,0.576)">172</td></tr><tr><td class="l2">创作者</td><td class="num heat" style="background:rgba(56,189,248,0.343)">84</td><td class="num heat" style="background:rgba(56,189,248,0.231)">42</td><td class="num heat" style="background:rgba(56,189,248,0.343)">84</td><td class="num heat" style="background:rgba(56,189,248,0.231)">42</td><td class="num heat" style="background:rgba(56,189,248,0.343)">84</td></tr><tr><td class="l2">小微商户</td><td class="num heat" style="background:rgba(56,189,248,0.664)">205</td><td class="num heat" style="background:rgba(56,189,248,0.229)">41</td><td class="num heat" style="background:rgba(56,189,248,0.229)">41</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.229)">41</td></tr><tr><td class="l2">中大型企业</td><td class="num heat" style="background:rgba(56,189,248,0.446)">123</td><td class="num heat" style="background:rgba(56,189,248,0.229)">41</td><td class="num heat" style="background:rgba(56,189,248,0.229)">41</td><td class="num heat" style="background:rgba(56,189,248,0.446)">123</td><td class="num heat" style="background:transparent"></td></tr><tr><td class="l2">初创公司</td><td class="num heat" style="background:rgba(56,189,248,0.438)">120</td><td class="num heat" style="background:rgba(56,189,248,0.226)">40</td><td class="num heat" style="background:rgba(56,189,248,0.226)">40</td><td class="num heat" style="background:rgba(56,189,248,0.446)">123</td><td class="num heat" style="background:transparent"></td></tr><tr><td class="l2">教育</td><td class="num heat" style="background:rgba(56,189,248,0.438)">120</td><td class="num heat" style="background:rgba(56,189,248,0.544)">160</td><td class="num heat" style="background:rgba(56,189,248,0.226)">40</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td></tr><tr><td class="l2">媒体</td><td class="num heat" style="background:rgba(56,189,248,0.430)">117</td><td class="num heat" style="background:rgba(56,189,248,0.218)">37</td><td class="num heat" style="background:rgba(56,189,248,0.218)">37</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.438)">120</td></tr><tr><td class="l2">文化</td><td class="num heat" style="background:rgba(56,189,248,0.414)">111</td><td class="num heat" style="background:rgba(56,189,248,0.218)">37</td><td class="num heat" style="background:rgba(56,189,248,0.218)">37</td><td class="num heat" style="background:rgba(56,189,248,0.218)">37</td><td class="num heat" style="background:rgba(56,189,248,0.316)">74</td></tr><tr><td class="l2">自由职业</td><td class="num heat" style="background:rgba(56,189,248,0.340)">83</td><td class="num heat" style="background:rgba(56,189,248,0.231)">42</td><td class="num heat" style="background:rgba(56,189,248,0.229)">41</td><td class="num heat" style="background:rgba(56,189,248,0.454)">126</td><td class="num heat" style="background:transparent"></td></tr><tr><td class="l2">教育学习</td><td class="num heat" style="background:rgba(56,189,248,0.263)">54</td><td class="num heat" style="background:rgba(56,189,248,0.693)">216</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td></tr><tr><td class="l2">开发者</td><td class="num heat" style="background:rgba(56,189,248,0.218)">37</td><td class="num heat" style="background:rgba(56,189,248,0.218)">37</td><td class="num heat" style="background:rgba(56,189,248,0.611)">185</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td></tr><tr><td class="l2">办公效率</td><td class="num heat" style="background:rgba(56,189,248,0.510)">147</td><td class="num heat" style="background:rgba(56,189,248,0.250)">49</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.250)">49</td></tr><tr><td class="l2">健康管理</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.640)">196</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.250)">49</td></tr><tr><td class="l2">出行助手</td><td class="num heat" style="background:rgba(56,189,248,0.462)">129</td><td class="num heat" style="background:rgba(56,189,248,0.348)">86</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td></tr><tr><td class="l2">个人用户</td><td class="num heat" style="background:rgba(56,189,248,0.234)">43</td><td class="num heat" style="background:rgba(56,189,248,0.234)">43</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.348)">86</td></tr><tr><td class="l2">美食探店</td><td class="num heat" style="background:rgba(56,189,248,0.221)">38</td><td class="num heat" style="background:rgba(56,189,248,0.221)">38</td><td class="num heat" style="background:rgba(56,189,248,0.221)">38</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.221)">38</td></tr><tr><td class="l2">休闲游戏</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.359)">90</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.200)">30</td></tr><tr><td class="l2">多媒体处理</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.200)">30</td><td class="num heat" style="background:rgba(56,189,248,0.359)">90</td></tr><tr><td class="l2">新闻资讯</td><td class="num heat" style="background:rgba(56,189,248,0.200)">30</td><td class="num heat" style="background:rgba(56,189,248,0.200)">30</td><td class="num heat" style="background:rgba(56,189,248,0.200)">30</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:rgba(56,189,248,0.200)">30</td></tr><tr><td class="l2">购物消费</td><td class="num heat" style="background:rgba(56,189,248,0.178)">22</td><td class="num heat" style="background:rgba(56,189,248,0.149)">11</td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td><td class="num heat" style="background:transparent"></td></tr></tbody></table>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Topic pool snapshot: web 4,438 topics / 74 L2 &middot;
+    mobile 3,659 topics / 61 L2.
+    Off-pool topics are legacy topics from earlier runs no longer present in the current corpus pool.
+    Coverage = distinct in-pool topics used &divide; pool size.
+  </div>
+</body>
+</html>

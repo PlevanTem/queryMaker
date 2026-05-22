@@ -1,0 +1,1239 @@
+{
+  "generated_at": "2026-05-22T01:57:07.435Z",
+  "target_per_l2": 60,
+  "platforms": {
+    "web": {
+      "pool_file": "scripts/corpus_data_web.json",
+      "l2_count": 74,
+      "current_topics": 4440,
+      "target_topics": 4440,
+      "total_gap": 0,
+      "l2": [
+        {
+          "l2key": "媒体 · 学习型",
+          "l2full": "媒体 / 出版机构 × ⑥ 学习型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "媒体 · 社区型",
+          "l2full": "媒体 / 出版机构 × ⑦ 社区型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "媒体 · 工具型",
+          "l2full": "媒体 / 出版机构 × ⑧ 工具型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "文化 · 展示型",
+          "l2full": "文化 / 公益 / 政务组织 × ① 展示型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "文化 · 内容型",
+          "l2full": "文化 / 公益 / 政务组织 × ② 内容型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "文化 · 营销型",
+          "l2full": "文化 / 公益 / 政务组织 × ③ 营销型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "文化 · 商务型",
+          "l2full": "文化 / 公益 / 政务组织 × ④ 商务型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "文化 · 预约型",
+          "l2full": "文化 / 公益 / 政务组织 × ⑤ 预约型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "文化 · 学习型",
+          "l2full": "文化 / 公益 / 政务组织 × ⑥ 学习型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "文化 · 社区型",
+          "l2full": "文化 / 公益 / 政务组织 × ⑦ 社区型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "文化 · 工具型",
+          "l2full": "文化 / 公益 / 政务组织 × ⑧ 工具型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "开发者 · 展示型",
+          "l2full": "开发者 / 技术团队 × ① 展示型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "开发者 · 内容型",
+          "l2full": "开发者 / 技术团队 × ② 内容型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "开发者 · 营销型",
+          "l2full": "开发者 / 技术团队 × ③ 营销型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "开发者 · 商务型",
+          "l2full": "开发者 / 技术团队 × ④ 商务型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "开发者 · 学习型",
+          "l2full": "开发者 / 技术团队 × ⑥ 学习型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "开发者 · 社区型",
+          "l2full": "开发者 / 技术团队 × ⑦ 社区型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "开发者 · 工具型",
+          "l2full": "开发者 / 技术团队 × ⑧ 工具型",
+          "poolSize": 60,
+          "cumQueries": 37,
+          "distinctUsed": 16,
+          "reuseAvg": 2.31,
+          "gap": 0
+        },
+        {
+          "l2key": "教育 · 展示型",
+          "l2full": "教育 / 培训机构 × ① 展示型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "教育 · 内容型",
+          "l2full": "教育 / 培训机构 × ② 内容型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "教育 · 营销型",
+          "l2full": "教育 / 培训机构 × ③ 营销型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "教育 · 商务型",
+          "l2full": "教育 / 培训机构 × ④ 商务型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "教育 · 预约型",
+          "l2full": "教育 / 培训机构 × ⑤ 预约型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "教育 · 学习型",
+          "l2full": "教育 / 培训机构 × ⑥ 学习型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "教育 · 社区型",
+          "l2full": "教育 / 培训机构 × ⑦ 社区型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "教育 · 工具型",
+          "l2full": "教育 / 培训机构 × ⑧ 工具型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "媒体 · 展示型",
+          "l2full": "媒体 / 出版机构 × ① 展示型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "媒体 · 内容型",
+          "l2full": "媒体 / 出版机构 × ② 内容型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "媒体 · 营销型",
+          "l2full": "媒体 / 出版机构 × ③ 营销型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "媒体 · 商务型",
+          "l2full": "媒体 / 出版机构 × ④ 商务型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "媒体 · 预约型",
+          "l2full": "媒体 / 出版机构 × ⑤ 预约型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 18,
+          "reuseAvg": 2.22,
+          "gap": 0
+        },
+        {
+          "l2key": "初创公司 · 工具型",
+          "l2full": "初创公司 / SaaS 团队 × ⑧ 工具型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 23,
+          "reuseAvg": 1.74,
+          "gap": 0
+        },
+        {
+          "l2key": "创作者 · 展示型",
+          "l2full": "创作者 × ① 展示型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "创作者 · 内容型",
+          "l2full": "创作者 × ② 内容型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "创作者 · 营销型",
+          "l2full": "创作者 × ③ 营销型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "创作者 · 商务型",
+          "l2full": "创作者 × ④ 商务型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "创作者 · 预约型",
+          "l2full": "创作者 × ⑤ 预约型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "创作者 · 学习型",
+          "l2full": "创作者 × ⑥ 学习型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "创作者 · 社区型",
+          "l2full": "创作者 × ⑦ 社区型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "创作者 · 工具型",
+          "l2full": "创作者 × ⑧ 工具型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "自由职业 · 展示型",
+          "l2full": "自由职业 / 专业人士 × ① 展示型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "自由职业 · 内容型",
+          "l2full": "自由职业 / 专业人士 × ② 内容型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "自由职业 · 营销型",
+          "l2full": "自由职业 / 专业人士 × ③ 营销型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "自由职业 · 预约型",
+          "l2full": "自由职业 / 专业人士 × ⑤ 预约型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "自由职业 · 学习型",
+          "l2full": "自由职业 / 专业人士 × ⑥ 学习型",
+          "poolSize": 60,
+          "cumQueries": 42,
+          "distinctUsed": 25,
+          "reuseAvg": 1.68,
+          "gap": 0
+        },
+        {
+          "l2key": "初创公司 · 社区型",
+          "l2full": "初创公司 / SaaS 团队 × ⑦ 社区型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 24,
+          "reuseAvg": 1.67,
+          "gap": 0
+        },
+        {
+          "l2key": "个人用户 · 展示型",
+          "l2full": "个人用户 × ① 展示型",
+          "poolSize": 60,
+          "cumQueries": 43,
+          "distinctUsed": 26,
+          "reuseAvg": 1.65,
+          "gap": 0
+        },
+        {
+          "l2key": "个人用户 · 内容型",
+          "l2full": "个人用户 × ② 内容型",
+          "poolSize": 60,
+          "cumQueries": 43,
+          "distinctUsed": 26,
+          "reuseAvg": 1.65,
+          "gap": 0
+        },
+        {
+          "l2key": "个人用户 · 学习型",
+          "l2full": "个人用户 × ⑥ 学习型",
+          "poolSize": 60,
+          "cumQueries": 43,
+          "distinctUsed": 26,
+          "reuseAvg": 1.65,
+          "gap": 0
+        },
+        {
+          "l2key": "个人用户 · 工具型",
+          "l2full": "个人用户 × ⑧ 工具型",
+          "poolSize": 60,
+          "cumQueries": 43,
+          "distinctUsed": 26,
+          "reuseAvg": 1.65,
+          "gap": 0
+        },
+        {
+          "l2key": "自由职业 · 社区型",
+          "l2full": "自由职业 / 专业人士 × ⑦ 社区型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "自由职业 · 工具型",
+          "l2full": "自由职业 / 专业人士 × ⑧ 工具型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "小微商户 · 展示型",
+          "l2full": "小微商户 / 本地服务业 × ① 展示型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "小微商户 · 内容型",
+          "l2full": "小微商户 / 本地服务业 × ② 内容型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "小微商户 · 营销型",
+          "l2full": "小微商户 / 本地服务业 × ③ 营销型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "小微商户 · 商务型",
+          "l2full": "小微商户 / 本地服务业 × ④ 商务型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "小微商户 · 预约型",
+          "l2full": "小微商户 / 本地服务业 × ⑤ 预约型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "小微商户 · 学习型",
+          "l2full": "小微商户 / 本地服务业 × ⑥ 学习型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "小微商户 · 社区型",
+          "l2full": "小微商户 / 本地服务业 × ⑦ 社区型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "小微商户 · 工具型",
+          "l2full": "小微商户 / 本地服务业 × ⑧ 工具型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "中大型企业 · 展示型",
+          "l2full": "中大型企业 / 品牌 × ① 展示型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "中大型企业 · 内容型",
+          "l2full": "中大型企业 / 品牌 × ② 内容型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "中大型企业 · 营销型",
+          "l2full": "中大型企业 / 品牌 × ③ 营销型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "中大型企业 · 商务型",
+          "l2full": "中大型企业 / 品牌 × ④ 商务型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "中大型企业 · 预约型",
+          "l2full": "中大型企业 / 品牌 × ⑤ 预约型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "中大型企业 · 学习型",
+          "l2full": "中大型企业 / 品牌 × ⑥ 学习型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "中大型企业 · 社区型",
+          "l2full": "中大型企业 / 品牌 × ⑦ 社区型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "中大型企业 · 工具型",
+          "l2full": "中大型企业 / 品牌 × ⑧ 工具型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "初创公司 · 展示型",
+          "l2full": "初创公司 / SaaS 团队 × ① 展示型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "初创公司 · 内容型",
+          "l2full": "初创公司 / SaaS 团队 × ② 内容型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "初创公司 · 营销型",
+          "l2full": "初创公司 / SaaS 团队 × ③ 营销型",
+          "poolSize": 60,
+          "cumQueries": 41,
+          "distinctUsed": 25,
+          "reuseAvg": 1.64,
+          "gap": 0
+        },
+        {
+          "l2key": "初创公司 · 商务型",
+          "l2full": "初创公司 / SaaS 团队 × ④ 商务型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 25,
+          "reuseAvg": 1.6,
+          "gap": 0
+        },
+        {
+          "l2key": "初创公司 · 预约型",
+          "l2full": "初创公司 / SaaS 团队 × ⑤ 预约型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 25,
+          "reuseAvg": 1.6,
+          "gap": 0
+        },
+        {
+          "l2key": "初创公司 · 学习型",
+          "l2full": "初创公司 / SaaS 团队 × ⑥ 学习型",
+          "poolSize": 60,
+          "cumQueries": 40,
+          "distinctUsed": 25,
+          "reuseAvg": 1.6,
+          "gap": 0
+        }
+      ]
+    },
+    "mobile": {
+      "pool_file": "scripts/corpus_data.json",
+      "l2_count": 61,
+      "current_topics": 3660,
+      "target_topics": 3660,
+      "total_gap": 0,
+      "l2": [
+        {
+          "l2key": "① 个人生活类",
+          "l2full": "① 个人生活类（旅行回忆、年度相册、画作展示、宝宝成长）",
+          "poolSize": 60,
+          "cumQueries": 86,
+          "distinctUsed": 40,
+          "reuseAvg": 2.15,
+          "gap": 0
+        },
+        {
+          "l2key": "② 个人专业类",
+          "l2full": "② 个人专业类（摄影作品集、设计师Portfolio、求职简历）",
+          "poolSize": 60,
+          "cumQueries": 86,
+          "distinctUsed": 40,
+          "reuseAvg": 2.15,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 办公/商务类",
+          "l2full": "③ 办公/商务类（产品介绍页、项目成果/年报、客户提案）",
+          "poolSize": 60,
+          "cumQueries": 86,
+          "distinctUsed": 40,
+          "reuseAvg": 2.15,
+          "gap": 0
+        },
+        {
+          "l2key": "④ 文化/知识类",
+          "l2full": "④ 文化/知识类（人物传记、品牌故事、历史事件、科普长文）",
+          "poolSize": 60,
+          "cumQueries": 86,
+          "distinctUsed": 40,
+          "reuseAvg": 2.15,
+          "gap": 0
+        },
+        {
+          "l2key": "④ 健康数据看板",
+          "l2full": "④ 健康数据看板",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 31,
+          "reuseAvg": 1.58,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 体重/经期/睡眠追踪",
+          "l2full": "③ 体重/经期/睡眠追踪 ★",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 32,
+          "reuseAvg": 1.53,
+          "gap": 0
+        },
+        {
+          "l2key": "① 计算器/换算器",
+          "l2full": "① 计算器/换算器 ★",
+          "poolSize": 60,
+          "cumQueries": 60,
+          "distinctUsed": 40,
+          "reuseAvg": 1.5,
+          "gap": 0
+        },
+        {
+          "l2key": "② 生活记录器",
+          "l2full": "② 生活记录器 ★",
+          "poolSize": 60,
+          "cumQueries": 60,
+          "distinctUsed": 40,
+          "reuseAvg": 1.5,
+          "gap": 0
+        },
+        {
+          "l2key": "② 运动记录/健身计划",
+          "l2full": "② 运动记录/健身计划 ★",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 33,
+          "reuseAvg": 1.48,
+          "gap": 0
+        },
+        {
+          "l2key": "① 行程规划器",
+          "l2full": "① 行程规划器 ★",
+          "poolSize": 60,
+          "cumQueries": 43,
+          "distinctUsed": 29,
+          "reuseAvg": 1.48,
+          "gap": 0
+        },
+        {
+          "l2key": "② 打包清单/旅行准备",
+          "l2full": "② 打包清单/旅行准备",
+          "poolSize": 60,
+          "cumQueries": 43,
+          "distinctUsed": 29,
+          "reuseAvg": 1.48,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 地图/路线导航",
+          "l2full": "③ 地图/路线导航",
+          "poolSize": 60,
+          "cumQueries": 43,
+          "distinctUsed": 29,
+          "reuseAvg": 1.48,
+          "gap": 0
+        },
+        {
+          "l2key": "④ 天气/实时信息查询",
+          "l2full": "④ 天气/实时信息查询",
+          "poolSize": 60,
+          "cumQueries": 43,
+          "distinctUsed": 29,
+          "reuseAvg": 1.48,
+          "gap": 0
+        },
+        {
+          "l2key": "⑤ 交通时刻/票价查询",
+          "l2full": "⑤ 交通时刻/票价查询",
+          "poolSize": 60,
+          "cumQueries": 43,
+          "distinctUsed": 29,
+          "reuseAvg": 1.48,
+          "gap": 0
+        },
+        {
+          "l2key": "⑤ 文本处理",
+          "l2full": "⑤ 文本处理",
+          "poolSize": 60,
+          "cumQueries": 54,
+          "distinctUsed": 37,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "⑥ 随机生成器",
+          "l2full": "⑥ 随机生成器",
+          "poolSize": 60,
+          "cumQueries": 54,
+          "distinctUsed": 37,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "⑦ 无障碍辅助",
+          "l2full": "⑦ 无障碍辅助",
+          "poolSize": 60,
+          "cumQueries": 54,
+          "distinctUsed": 37,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "⑧ 其他长尾微工具",
+          "l2full": "⑧ 其他长尾微工具",
+          "poolSize": 60,
+          "cumQueries": 54,
+          "distinctUsed": 37,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "① 闪卡/单词记忆",
+          "l2full": "① 闪卡/单词记忆 ★",
+          "poolSize": 60,
+          "cumQueries": 54,
+          "distinctUsed": 37,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "② 备考自测/刷题",
+          "l2full": "② 备考自测/刷题 ★",
+          "poolSize": 60,
+          "cumQueries": 54,
+          "distinctUsed": 37,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 学习打卡/进度追踪",
+          "l2full": "③ 学习打卡/进度追踪 ★",
+          "poolSize": 60,
+          "cumQueries": 54,
+          "distinctUsed": 37,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "④ 课程目录/课堂界面",
+          "l2full": "④ 课程目录/课堂界面",
+          "poolSize": 60,
+          "cumQueries": 54,
+          "distinctUsed": 37,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "⑤ 知识速查/公式表",
+          "l2full": "⑤ 知识速查/公式表",
+          "poolSize": 60,
+          "cumQueries": 54,
+          "distinctUsed": 37,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "② 食物热量/升糖查询",
+          "l2full": "② 食物热量/升糖查询 ★",
+          "poolSize": 60,
+          "cumQueries": 38,
+          "distinctUsed": 26,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 菜谱生成/食材搭配",
+          "l2full": "③ 菜谱生成/食材搭配",
+          "poolSize": 60,
+          "cumQueries": 38,
+          "distinctUsed": 26,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "④ 餐厅列表/点评浏览",
+          "l2full": "④ 餐厅列表/点评浏览",
+          "poolSize": 60,
+          "cumQueries": 38,
+          "distinctUsed": 26,
+          "reuseAvg": 1.46,
+          "gap": 0
+        },
+        {
+          "l2key": "① Adding & Creating",
+          "l2full": "① Adding & Creating 新建与创建",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "② Editing & Updating",
+          "l2full": "② Editing & Updating 编辑与更新",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "③ Searching & Finding",
+          "l2full": "③ Searching & Finding 搜索与查找",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "④ Selecting & Choosing",
+          "l2full": "④ Selecting & Choosing 选择与选取",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "⑤ Filtering & Sorting",
+          "l2full": "⑤ Filtering & Sorting 筛选与排序",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "⑥ Deleting & Removing",
+          "l2full": "⑥ Deleting & Removing 删除与移除",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "⑦ Editing Profile",
+          "l2full": "⑦ Editing Profile 编辑个人资料",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "⑧ Uploading & Downloading",
+          "l2full": "⑧ Uploading & Downloading 上传与下载",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "⑨ Copying & Duplicating",
+          "l2full": "⑨ Copying & Duplicating 复制与副本",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "⑩ Misc",
+          "l2full": "⑩ Misc 其他",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "① 待办清单/任务管理",
+          "l2full": "① 待办清单/任务管理 ★",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "② 番茄钟/专注计时",
+          "l2full": "② 番茄钟/专注计时 ★",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 日程/倒计时",
+          "l2full": "③ 日程/倒计时 ★",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "④ 数据仪表盘/报表",
+          "l2full": "④ 数据仪表盘/报表 ★",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "⑤ 笔记/文档编辑",
+          "l2full": "⑤ 笔记/文档编辑",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "① 饮水/服药/习惯提醒",
+          "l2full": "① 饮水/服药/习惯提醒 ★",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "⑤ 冥想/呼吸练习",
+          "l2full": "⑤ 冥想/呼吸练习",
+          "poolSize": 60,
+          "cumQueries": 49,
+          "distinctUsed": 34,
+          "reuseAvg": 1.44,
+          "gap": 0
+        },
+        {
+          "l2key": "① 文字猜谜/知识竞赛",
+          "l2full": "① 文字猜谜/知识竞赛 ★",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "② 抽签/转盘/随机决策",
+          "l2full": "② 抽签/转盘/随机决策 ★",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 经典小游戏",
+          "l2full": "③ 经典小游戏",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "④ 情绪减压/解压玩具",
+          "l2full": "④ 情绪减压/解压玩具",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "① 图片编辑/滤镜/裁剪",
+          "l2full": "① 图片编辑/滤镜/裁剪",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "② 海报/简历/卡片模板",
+          "l2full": "② 海报/简历/卡片模板 ★",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 音视频播放界面",
+          "l2full": "③ 音视频播放界面",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "④ 内容创作工具",
+          "l2full": "④ 内容创作工具",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "② 文章详情/阅读模式",
+          "l2full": "② 文章详情/阅读模式",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 订阅/频道管理",
+          "l2full": "③ 订阅/频道管理",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "④ 搜索与筛选",
+          "l2full": "④ 搜索与筛选",
+          "poolSize": 60,
+          "cumQueries": 30,
+          "distinctUsed": 21,
+          "reuseAvg": 1.43,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 社交辅助",
+          "l2full": "③ 社交辅助 ★",
+          "poolSize": 60,
+          "cumQueries": 55,
+          "distinctUsed": 39,
+          "reuseAvg": 1.41,
+          "gap": 0
+        },
+        {
+          "l2key": "④ 倒计时/纪念日",
+          "l2full": "④ 倒计时/纪念日",
+          "poolSize": 60,
+          "cumQueries": 55,
+          "distinctUsed": 39,
+          "reuseAvg": 1.41,
+          "gap": 0
+        },
+        {
+          "l2key": "① 商品详情/规格选择",
+          "l2full": "① 商品详情/规格选择",
+          "poolSize": 60,
+          "cumQueries": 11,
+          "distinctUsed": 8,
+          "reuseAvg": 1.38,
+          "gap": 0
+        },
+        {
+          "l2key": "② 购物车/结算",
+          "l2full": "② 购物车/结算",
+          "poolSize": 60,
+          "cumQueries": 11,
+          "distinctUsed": 8,
+          "reuseAvg": 1.38,
+          "gap": 0
+        },
+        {
+          "l2key": "③ 订单/物流追踪",
+          "l2full": "③ 订单/物流追踪",
+          "poolSize": 60,
+          "cumQueries": 11,
+          "distinctUsed": 8,
+          "reuseAvg": 1.38,
+          "gap": 0
+        },
+        {
+          "l2key": "① 今天吃什么随机选择器",
+          "l2full": "① '今天吃什么' 随机选择器 ★",
+          "poolSize": 60,
+          "cumQueries": 0,
+          "distinctUsed": 0,
+          "reuseAvg": 0,
+          "gap": 0
+        },
+        {
+          "l2key": "① 信息流/Feed浏览",
+          "l2full": "① 信息流/Feed 浏览",
+          "poolSize": 60,
+          "cumQueries": 0,
+          "distinctUsed": 0,
+          "reuseAvg": 0,
+          "gap": 0
+        }
+      ]
+    }
+  }
+}

@@ -491,7 +491,77 @@ flowchart TD
 
 ---
 
-## 13. 关键产出文件
+## 13. 语料池消耗分析与扩容闭环
+
+corpus-direct 链路依赖一个**按 L2 场景切分**的 topic 池。随着运行轮次累积（v7→v14），
+单个 L2 的累计 query 需求会超过它本地的 topic 数，迫使**场景内 topic 被复用**。
+本节描述把这一现象量化、并通过无 API subagent 回路自动补池的能力。
+
+### 13.1 多样性机制与消耗压力
+
+```mermaid
+flowchart TD
+    subgraph LAYER ["Layer-A 跨批次去重"]
+        L1["data/state/corpus_usage_*.json\n记录 (l2_key, topic) 累计使用次数"]
+        L2["新批次在每个 L2 内\n优先采样 least-used topic"]
+        L1 --> L2
+    end
+    subgraph PRESSURE ["消耗压力的结构性来源"]
+        P1["topic 池按 L2 场景切分\n复用只能发生在 L2 内部"]
+        P2["某 L2 累计需求 > 本地池容量\n→ 复用数学上不可避免"]
+        P1 --> P2
+    end
+    LAYER -.软去重，非硬唯一约束.-> PRESSURE
+    style LAYER fill:#e8f4fd,stroke:#1976D2
+    style PRESSURE fill:#ffebee,stroke:#C62828
+```
+
+关键认知：Layer-A 是「优先选最少用过的」**软去重**，不是硬唯一锁。一旦某 L2
+的累计需求超过它的本地 topic 数，软去重只能退而复用用得最少的那个 —— 复用率上升
+并非池子整体耗尽，而是 **per-L2 供给 < per-L2 需求**。
+
+### 13.2 容量分析 — `analyze-corpus-capacity.js`
+
+聚合全部 corpus-direct run（统一经 `scripts/lib/corpus-runs.js`，与看板共用同一份
+run 清单），对每个 L2 计算：池容量、累计 query、distinct topic、复用倍率、到扁平
+目标的缺口。产出机器可读的 `data/state/corpus_capacity_report.json`，直接驱动扩容。
+
+### 13.3 无 API 扩容闭环 — `expand-corpus.js`
+
+与 query 生成走**同一条 no-API subagent 路线**：拆 batch → Claude Code 窗口起
+subagent → 合并回盘，零外部 API。
+
+```mermaid
+flowchart LR
+    R["corpus-direct runs\nv7 .. vN"] --> A["analyze-corpus-capacity.js"]
+    A --> G["corpus_capacity_report.json\n每 L2 缺口"]
+    G --> P["expand-corpus.js --prep-only\n按 L2 构造扩容 prompt\n注入现有 topic 黑名单"]
+    P --> S["Claude Code\nsubagent swarm\n(每 batch 一个子代理)"]
+    S --> M["expand-corpus.js --merge\n去重写回 topic 池"]
+    M --> POOL[("corpus_data_web.json\ncorpus_data.json\n池子扩大")]
+    POOL -.下一轮采样.-> R
+
+    style P fill:#fff3e0,stroke:#FF9800
+    style S fill:#e8f5e9,stroke:#388E3C
+    style POOL fill:#e0f7fa,stroke:#00838F
+```
+
+- **`--prep-only`**：读容量报告，对每个有缺口的 L2 构造扩容 prompt，按 L2 分组写出
+  subagent 输入 batch。
+- **场景内差异性保证（关键设计）**：每个扩容 prompt 都把该 L2 **现有全部 topic**
+  作为去重黑名单注入，并明确要求新 topic 是不同子细分 / 用例 —— 概念重叠即丢弃，
+  杜绝近义改写、同义换名。差异性在生成时强制，merge 只做精确去重兜底。
+- **subagent swarm**：Claude Code 窗口为每个 batch 起一个子代理直出新 topic。
+- **`--merge`**：新 topic 归一化去重后写回 `corpus_data_*.json`，按扁平目标封顶。
+
+### 13.4 可视化 — `build-corpus-usage-dashboard.js`
+
+聚合同一批 run，产出自包含静态 HTML 看板 `data/output/corpus_usage_dashboard.html`：
+topic 消耗覆盖率、按 L2 的池耗尽程度、复用压力直方图、query 与 persona 分布。
+
+---
+
+## 14. 关键产出文件
 
 | 路径                                         | 内容                    | 格式      |
 | -------------------------------------------- | ---------------------- | --------- |
@@ -503,6 +573,8 @@ flowchart TD
 | `data/db/queries_v2.sqlite`                  | 最终分析数据库            | SQLite    |
 | `data/reports_v2/summary.json`               | 8 维分布统计摘要          | JSON      |
 | `data/reports_v2/dashboard.html`             | 静态可视化报表            | HTML      |
+| `data/state/corpus_capacity_report.json`     | 每 L2 容量与扩容缺口      | JSON      |
+| `data/output/corpus_usage_dashboard.html`    | 语料消耗与分布看板        | HTML      |
 
 ---
 

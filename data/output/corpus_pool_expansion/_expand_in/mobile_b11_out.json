@@ -1,0 +1,28 @@
+[
+  {
+    "platform": "mobile",
+    "l2key": "① 信息流/Feed浏览",
+    "topics": [
+      "Legal and court ruling news digest feed",
+      "Real estate market listings and property news feed",
+      "Nonprofit and social impact story feed",
+      "Obituary and memorial tribute feed",
+      "Cybersecurity threat and breach alert feed",
+      "Space exploration and astronomy update feed",
+      "Literary review and book release feed",
+      "Labor union and workers rights news stream",
+      "Immigration and border policy update feed",
+      "Investigative journalism deep-dive article feed",
+      "Religion and faith community news feed",
+      "Municipal transit and infrastructure update feed",
+      "Disability and accessibility advocacy news feed",
+      "Wildlife and conservation news story feed",
+      "Veteran and military community news feed",
+      "Rural and small-town local news feed",
+      "Human rights and civil liberties report feed",
+      "Cryptocurrency regulation and compliance news feed",
+      "Film festival and indie cinema news feed",
+      "Architecture and urban design trend feed"
+    ]
+  }
+]
