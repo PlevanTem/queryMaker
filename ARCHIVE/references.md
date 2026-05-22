@@ -1,6 +1,6 @@
 # 文献理论支撑索引
 
-> 本文件收录支撑 UI 前端代码生成 Real-World Query 数据流水线各阶段的关键学术论文和实践报告，共 11 项（[R1]–[R11]）。
+> 本文件收录支撑 UI 前端代码生成 Real-World Query 数据流水线各阶段的关键学术论文和实践报告，共 17 项（[R1]–[R17]）。
 
 ---
 
@@ -156,6 +156,80 @@
 
 ---
 
+## 自举式语料合成与多样性控制（corpus-direct 方法论的理论依据）
+
+> 本节是 corpus-direct 链路的理论依据。本仓库方法可一句话概括：**用 Self-Instruct 式自举（bootstrapping）
+> 构建并维护一个分层语料骨架，再以分层抽样 + 覆盖引导从中条件生成 query**。[R12]–[R13] 是该骨架最直接的
+> 近期权威对照，[R14] 支撑「覆盖优先」设计，[R15]–[R17] 支撑多样性的度量与下游价值。
+
+### [R12] Condor: Enhance LLM Alignment with Knowledge-Driven Data Synthesis and Refinement
+
+- **机构**: InternLM 团队（上海人工智能实验室）
+- **会议**: ACL 2025 (Long)
+- **arXiv**: [2501.12273](https://arxiv.org/abs/2501.12273)
+- **GitHub**: [InternLM/Condor](https://github.com/InternLM/Condor)
+- **核心贡献**:
+  - 两阶段框架：**World Knowledge Tree（世界知识树）**驱动数据合成 + **Self-Reflection Refinement**
+  - 在知识树每个 tag 下做 task / difficulty expansion，提升每个节点的多样性与难度梯度
+  - 仅用 20K 合成样本微调即超过同类，精炼阶段支持迭代自改进（至 72B）
+- **与本流水线的关联**: **本方法最直接的近期权威对照**——Condor 的「知识树 → 逐节点扩容 → 自反思精炼」与本仓库 corpus-direct 的「L1/L2 语料分类骨架 → `expand-corpus` 逐 L2 扩容 → 评分 / 差异性过滤」近乎同构。核心区别：Condor 一次性生成 SFT 数据即弃；本仓库把知识树作为**可复用、带 usage state、有容量缺口分析的持久可运维资产**。
+
+---
+
+### [R13] Synthetic Data (Almost) from Scratch: Generalized Instruction Tuning for Language Models (GLAN)
+
+- **作者**: Li et al.（Microsoft）
+- **arXiv**: [2402.13064](https://arxiv.org/abs/2402.13064)
+- **年份**: 2024
+- **核心贡献**:
+  - 构建人类知识分类法（学科 → 科目 → syllabus）作为生成骨架，自上而下派生 instruction
+  - 不依赖种子样本，由 taxonomy 给出全局覆盖空间
+- **与本流水线的关联**: 「先建结构骨架、再条件生成」范式的源头，是 [R12] Condor 的前身；对应本仓库「corpus 通道作为生成骨架」的设计。
+
+---
+
+### [R14] Personas with Attitudes: Controlling LLMs for Diverse Data Annotation
+
+- **arXiv**: [2410.11745](https://arxiv.org/abs/2410.11745)
+- **年份**: 2024
+- **核心贡献**:
+  - 用带「态度」的 persona 控制 LLM 标注的多样性，覆盖罕见但重要的取向配置
+  - 提出**「覆盖优先」原则**：先覆盖全 support，目标密度可后续采样调整
+- **与本流水线的关联**: 为本仓库「扁平目标扩容（每 L2 补到统一上限）、分布配比交给 plan 阶段」的解耦设计提供直接理论依据。
+
+---
+
+### [R15] DeepPersona: A Generative Engine for Scaling Deep Synthetic Personas
+
+- **arXiv**: [2511.07338](https://arxiv.org/abs/2511.07338)
+- **年份**: 2025
+- **核心贡献**:
+  - 结构化、迭代地生成深度合成 persona，并以 coverage / uniqueness / actionability 度量
+  - 在 persona 资源质量上系统超过 PersonaHub
+- **与本流水线的关联**: 为本仓库 persona 通道（5 类 archetype）提供可量化的覆盖 / 独特性评估方向。
+
+---
+
+### [R16] Measuring Diversity in Synthetic Datasets
+
+- **arXiv**: [2502.08512](https://arxiv.org/abs/2502.08512)
+- **年份**: 2025
+- **核心贡献**:
+  - 提出有原则的合成数据多样性度量，可指导生成、数据筛选与 mode collapse 评估
+- **与本流水线的关联**: 可替换本仓库现用的 trigram-Jaccard / 词集 Jaccard 启发式去重，作为更严谨的多样性指标。
+
+---
+
+### [R17] Synthetic Eggs in Many Baskets: The Impact of Synthetic Data Diversity on LLM Fine-Tuning
+
+- **arXiv**: [2511.01490](https://arxiv.org/abs/2511.01490)
+- **年份**: 2025
+- **核心贡献**:
+  - 实证合成数据多样性对下游微调效果的影响
+- **与本流水线的关联**: 为本仓库「多样性是核心质量目标」的动机提供下游证据，对应 README「局限」中坦承尚未做的端到端验证方向。
+
+---
+
 ## 参考文献快速索引表
 
 
@@ -172,5 +246,11 @@
 | R9  | LLM-ISIC        | 2024 | Stage 1      | [2409.18988](https://arxiv.org/abs/2409.18988)               |
 | R10 | IBB Taxonomy    | —    | Stage 1      | [industrykg.com](https://www.industrykg.com)                 |
 | R11 | Reddit Mining   | 2024 | Stage 2      | [reddit-harvest](https://github.com/anonrose/reddit-harvest) |
+| R12 | Condor          | 2025 | corpus-direct 骨架 | [2501.12273](https://arxiv.org/abs/2501.12273)         |
+| R13 | GLAN            | 2024 | corpus-direct 骨架 | [2402.13064](https://arxiv.org/abs/2402.13064)         |
+| R14 | Personas with Attitudes | 2024 | 覆盖优先设计 | [2410.11745](https://arxiv.org/abs/2410.11745)         |
+| R15 | DeepPersona     | 2025 | persona 通道  | [2511.07338](https://arxiv.org/abs/2511.07338)               |
+| R16 | Measuring Diversity | 2025 | 多样性度量 | [2502.08512](https://arxiv.org/abs/2502.08512)             |
+| R17 | Synthetic Eggs in Baskets | 2025 | 下游证据 | [2511.01490](https://arxiv.org/abs/2511.01490)         |
 
 

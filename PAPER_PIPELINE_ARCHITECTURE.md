@@ -559,6 +559,23 @@ flowchart LR
 聚合同一批 run，产出自包含静态 HTML 看板 `data/output/corpus_usage_dashboard.html`：
 topic 消耗覆盖率、按 L2 的池耗尽程度、复用压力直方图、query 与 persona 分布。
 
+### 13.5 方法定位与理论依据
+
+本仓库 corpus-direct 链路的算法骨架可一句话概括为：
+**用 Self-Instruct 式自举（bootstrapping）构建并维护一个分层语料骨架，再以分层抽样 + 覆盖引导从中条件生成 query。**
+
+最直接的近期权威对照（完整条目见 [`ARCHIVE/references.md`](./ARCHIVE/references.md)）：
+
+| 机制 | 理论依据 |
+| --- | --- |
+| 语料骨架 + 逐 L2 扩容 + 评分精炼（§13.2–13.3）| **[R12] Condor**（ACL 2025）「世界知识树 → 逐节点扩容 → 自反思精炼」与本回路近乎同构；**[R13] GLAN** 是「先建分类骨架、再条件生成」范式的源头 |
+| 扁平目标扩容、分布交给 plan 阶段 | **[R14] Personas with Attitudes**「覆盖优先，密度后调」原则 |
+| 多样性去重与度量 | **[R16] Measuring Diversity in Synthetic Datasets**；下游价值见 **[R17]** |
+
+> 与 [R12] Condor 的核心区别：Condor 一次性生成 SFT 数据即弃；本仓库把语料骨架作为**可复用、带
+> Layer-A usage state、有容量缺口分析的持久可运维资产**——「语料池作为可运维资产 + 消耗/扩容闭环」
+> 是本方法区别于上述工作的系统工程贡献。
+
 ---
 
 ## 14. 关键产出文件
