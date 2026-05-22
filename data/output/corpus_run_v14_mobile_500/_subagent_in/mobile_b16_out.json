@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_042_004",
+    "query_text": "Make a fog and visibility alert app for my phone that tells me before I drive whether fog is bad enough to slow down or avoid a certain road, with a simple reading showing current visibility distance and a warning level so I know at a glance how careful to be this morning."
+  },
+  {
+    "id": "q_scene_042_005",
+    "query_text": "Need a historical weather lookup tool for mobile that lets me pick any past date and city and shows me what the temperature, rain, and conditions were on that day, so I can stop digging through old messages to remember whether it rained on my trip last March."
+  },
+  {
+    "id": "q_scene_042_006",
+    "query_text": "Create a seasonal climate app for my phone that shows what weather to normally expect for each season in a given city, with average highs and lows and typical rainy or dry periods, so I can plan ahead for vacations or outdoor events without guessing."
+  },
+  {
+    "id": "q_scene_042_007",
+    "query_text": "A 7-day hyperlocal forecast app for my phone where each day is shown as a simple row with the high, low, and chance of rain for my exact neighborhood, so I can plan the whole week without scrolling through a bunch of fluff or tapping into separate screens."
+  },
+  {
+    "id": "q_scene_042_008",
+    "query_text": "Make a storm alert and lightning tracker app for my phone that warns me when a thunderstorm is close and shows roughly how many kilometers away lightning is striking, with a push alert so I know to head inside before the storm actually reaches me."
+  },
+  {
+    "id": "q_scene_042_009",
+    "query_text": "Create a live air quality monitor for my phone that shows the current AQI for my city with a clear color indicator so I know right away whether today is safe to go for a run or if I should wear a mask on my commute, and updates in real time throughout the day."
+  },
+  {
+    "id": "q_scene_043_001",
+    "query_text": "Create a student and senior discount fare lookup app for my phone where I can enter a route and passenger type and instantly see which bus, metro, or train fares are reduced, with the exact discount amount shown clearly so I stop missing out on prices I actually qualify for."
+  },
+  {
+    "id": "q_scene_043_002",
+    "query_text": "Build a group ticket booking tool for mobile where I can enter how many people are traveling and pick the transport type, then see bulk pricing options and confirm the whole group booking in one go, so I stop having to repeat the same steps for every single person in the trip."
+  },
+  {
+    "id": "q_scene_043_003",
+    "query_text": "A cancellation and refund policy checker app for mobile where I can pick a ticket type or travel provider and instantly see exactly how much I lose if I cancel today versus tomorrow, laid out plainly so I actually understand the rules before I commit to buying a non-refundable fare."
+  },
+  {
+    "id": "q_scene_043_004",
+    "query_text": "Build a transport finder for my phone that filters routes and stops by accessibility features, like whether the station has an elevator, ramp, or low-floor bus option, so someone using a wheelchair or traveling with a stroller can actually find a route that works for them in one quick search."
+  },
+  {
+    "id": "q_scene_043_005",
+    "query_text": "A luggage storage and locker finder app for mobile that shows nearby spots where I can drop off my bags for a few hours, with distance, price, and opening hours listed, so I can enjoy a city layover without dragging my suitcase everywhere while waiting for my next train."
+  },
+  {
+    "id": "q_scene_043_006",
+    "query_text": "Need a sleeper train booking app for my phone that shows the available berth classes on overnight routes, like hard berth versus soft berth, with prices and which spots are still open, so I can grab the right class quickly without hunting through three separate screens to figure out what is left."
+  },
+  {
+    "id": "q_scene_043_007",
+    "query_text": "Make a high-speed train timetable app for my phone where I type in two cities and see every train departure time listed for the day I am traveling, with duration and ticket class prices shown next to each one, so I can pick the best option without having to open a separate booking site."
+  },
+  {
+    "id": "q_scene_043_008",
+    "query_text": "Build a budget airline fare comparison app for mobile that lines up ticket prices from the low-cost carriers on a given route so I can see at a glance which airline is actually cheapest on my travel dates, including any fees for luggage, so I stop getting surprised after I already clicked buy."
+  },
+  {
+    "id": "q_scene_043_009",
+    "query_text": "Make a ferry and boat schedule finder for my phone that shows departure times, journey duration, and ticket prices for a route I pick, so when I need to cross to an island or take a river crossing I can see all the options in one place and know exactly when the next boat leaves."
+  },
+  {
+    "id": "q_scene_044_001",
+    "query_text": "Make a food idea picker app for my phone that helps me figure out what to eat when I am totally stuck, where I can tap a few filters like spicy or light or something warm, and it spins up a handful of meal suggestions I can actually order or cook tonight without standing in the kitchen forever."
+  },
+  {
+    "id": "q_scene_044_002",
+    "query_text": "Make a daily meal decider app for mobile that randomly picks a food idea from my own saved list when I tap a button, so my friends and I stop wasting 20 minutes going back and forth on where to eat, and I can also quickly add new spots or meals to the list whenever I think of one."
+  },
+  {
+    "id": "q_scene_044_003",
+    "query_text": "A what-to-eat app for my phone where I can set my mood and how much time I have, and it suggests a few concrete food options that match, whether that is a quick takeout spot nearby or a home recipe that fits the vibe, so the decision is made in seconds instead of dragging on forever."
+  },
+  {
+    "id": "q_scene_044_004",
+    "query_text": "Build a meal rotation planner for mobile where I can save the meals I actually like and the app cycles through them for the week, reminding me each day what is on the plan so I stop defaulting to the same two things because I ran out of ideas by Tuesday."
+  },
+  {
+    "id": "q_scene_044_005",
+    "query_text": "Make a group food vote app for my phone where everyone in the group can swipe on meal options and the app tallies the votes to show what the most people actually want, so we can finally settle the what-are-we-eating argument in under a minute instead of the usual chaos."
+  },
+  {
+    "id": "q_scene_044_006",
+    "query_text": "Need a food mood matcher app for my phone that asks me a couple of quick questions like whether I want something hot, cold, light, or hearty and then shows me a short list of matching meal ideas, so I stop staring at food delivery apps for ten minutes without deciding anything."
+  },
+  {
+    "id": "q_scene_044_007",
+    "query_text": "Make a cuisine explorer app for my phone that shows me food types I might not usually try, with a quick description and a few popular dishes for each one, so when I am bored of my usual choices I can browse something new and actually know enough to feel confident ordering it."
+  },
+  {
+    "id": "q_scene_044_008",
+    "query_text": "Create a weekly food planning app for my phone where I can tap through each day and assign a meal type for lunch and dinner, then view the whole week at a glance so I can prep groceries ahead of time and stop making last-minute decisions when I am already hungry."
+  },
+  {
+    "id": "q_scene_045_001",
+    "query_text": "Need a food finder app for my phone that helps me identify which everyday foods are high in omega-3 or healthy fats, with a simple search so I can type in a food name and see its fat profile right away, making it easier to swap in better choices without having to memorize a nutrition textbook."
+  },
+  {
+    "id": "q_scene_045_002",
+    "query_text": "Make a sodium alert tool for my phone that lets me search any food item and see how much sodium it has, with a clear warning if it is too high for someone watching their blood pressure, so I can quickly check packaged food or restaurant dishes before I eat something that messes up my diet."
+  }
+]

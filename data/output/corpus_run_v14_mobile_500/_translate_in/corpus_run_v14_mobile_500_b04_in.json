@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_scene_020_005",
+    "query_text": "Create a mobile tool for formatting and validating JSON, CSV, and YAML files on my phone, because I keep running into broken data files at work and I have to use my laptop just to figure out where the problem is. I want to paste in a chunk of text, tap a button to check if it's valid, and have the app highlight the exact line that's wrong so I can fix it quickly."
+  },
+  {
+    "id": "q_scene_020_006",
+    "query_text": "Make a regex builder and tester tool for my phone so I can stop copy-pasting patterns into random websites every time I need to check if something matches. The app should let me type a pattern and a test string, then show me right away which parts match, with a simple plain-English hint about what the pattern does so I don't have to memorize the syntax."
+  },
+  {
+    "id": "q_scene_020_007",
+    "query_text": "Create a spell check and grammar corrector tool for mobile that I can use whenever I need to quickly clean up an email or report before sending it from my phone. I want to paste in my text, tap check, and see the mistakes highlighted so I can tap each one and pick the right fix, all on a single screen without having to scroll back and forth."
+  },
+  {
+    "id": "q_scene_020_008",
+    "query_text": "Need a text summarizer and key points extractor app for my phone that saves me from reading through long articles and reports just to find the three things I actually need. I want to paste in a block of text, hit summarize, and get a short paragraph summary plus a bullet list of the main points, so I can get the gist in under a minute."
+  },
+  {
+    "id": "q_scene_020_009",
+    "query_text": "Make a secure password generator app for my phone that helps me stop reusing the same lazy passwords everywhere. I want to set the length and choose whether to include numbers, symbols, or uppercase letters, then tap a button to get a strong password I can copy instantly, with a little strength meter showing how safe it actually is."
+  },
+  {
+    "id": "q_scene_020_010",
+    "query_text": "Create a markdown to HTML converter tool for my phone so I don't have to hunt down a laptop every time I want to see what my markdown actually looks like as a proper page. I want to type or paste markdown on one half of the screen, and see the formatted HTML result on the other half update as I type, with a copy button to grab the final HTML output."
+  },
+  {
+    "id": "q_scene_020_011",
+    "query_text": "Create a readability checker app for my phone that tells me how easy my writing is to understand, using a Flesch score so I know if I'm writing too complicated for my audience. I paste in my text, tap check, and get a score with a plain label like easy, medium, or hard, plus a quick breakdown of average sentence length and word complexity so I know what to fix."
+  },
+  {
+    "id": "q_scene_021_001",
+    "query_text": "Need a workout exercise random picker app I can use on my phone when I show up at the gym and have no idea what to do that day. I want to pick a muscle group or workout type, tap a button, and get a randomly picked exercise with a short description of how to do it, so I always have something concrete to start with instead of standing around wasting time."
+  },
+  {
+    "id": "q_scene_021_002",
+    "query_text": "Make a movie picker app for my phone that randomly selects a film for me and my friends when we spend forever arguing about what to watch. I want to choose a genre first, like horror or comedy, and then tap a button that picks a specific movie from that category, showing the title and a one-line description so we can decide if we're in the mood for it."
+  },
+  {
+    "id": "q_scene_021_003",
+    "query_text": "Create a baby name generator app for my phone that randomly suggests names so my partner and I can browse through ideas without sitting at a computer for hours. I want to filter by style, like classic or modern, and maybe by origin, then tap shuffle to get a new name with a short meaning, and save the ones we like to a favorites list so we can compare later."
+  },
+  {
+    "id": "q_scene_021_004",
+    "query_text": "Create a random color palette creator for my phone that generates brand-ready color combinations when I'm starting a new little project and have no idea where to begin with colors. I want to tap a button to get a fresh palette of four or five colors, see their hex codes so I can copy them, and lock any color I like before shuffling the rest again."
+  },
+  {
+    "id": "q_scene_021_005",
+    "query_text": "A story prompt generator app for my phone where I can tap once and get a fresh writing idea whenever I feel stuck and have no idea what to write about next. The generator should give me a scenario with a character, a setting, and a conflict all in one short paragraph, and I can tap again to swap out just one part if the rest of the prompt is almost perfect."
+  },
+  {
+    "id": "q_scene_021_006",
+    "query_text": "Build a tournament bracket builder app for my phone that randomly sorts a list of team names into a bracket so my friends and I can run a proper competition without printing anything out. I want to type in all the team names, tap generate, and see a neat bracket drawn out on screen where I can tap to fill in winners as we go round by round."
+  },
+  {
+    "id": "q_scene_021_007",
+    "query_text": "Build a trivia category picker app for my phone so my group can quickly agree on what kind of questions to do without everyone arguing for ten minutes. I want a list of categories like history, sports, science, and pop culture, and when nobody can decide, we tap a random pick button and the app chooses one for us, then shows a few starter questions in that category to kick things off."
+  },
+  {
+    "id": "q_scene_021_008",
+    "query_text": "A vacation destination roulette app for my phone where I spin a wheel and it lands on a random travel spot to help me and my friends stop going in circles every time we want to plan a trip. The app should let me add destinations to the wheel ourselves, spin it with a tap, and show the winning destination with a short blurb about why it could be fun to visit."
+  },
+  {
+    "id": "q_scene_021_009",
+    "query_text": "Create a daily kindness suggester app for my phone that gives me one simple good deed idea every day so I remember to actually do something nice instead of just meaning to. I want to open the app and see a fresh suggestion each day, like leaving a kind note or helping a neighbor, and be able to tap a button for a new idea if today's suggestion doesn't fit my situation."
+  },
+  {
+    "id": "q_scene_021_010",
+    "query_text": "Need a board game event generator app for my phone that creates random scenarios and special events during our game nights so we can add some variety instead of always playing by the same basic rules. I want to pick a board game type, like strategy or party game, and tap generate to get a fun twist or event card idea, with enough detail that we can actually play it out."
+  },
+  {
+    "id": "q_scene_021_011",
+    "query_text": "Create a dice roll and coin flip simulator app for my phone so I always have a quick way to make random decisions and settle small arguments wherever I am, even when there are no physical dice around. I want to choose how many dice to roll and which type, like a six-sided or twenty-sided die, tap roll, and see the result clearly, with a separate coin flip button right on the same screen."
+  },
+  {
+    "id": "q_scene_022_001",
+    "query_text": "Build a mobile tool that looks at any image I upload and writes a clear text description of what is in it, so I can quickly generate alt text for images I use at work without having to think one up myself every single time. I want to pick a photo from my phone, tap describe, and get a short plain-language description I can copy and paste wherever I need it."
+  },
+  {
+    "id": "q_scene_022_002",
+    "query_text": "Create a live caption generator app for my phone that shows text captions in real time as audio or video plays, so I can follow along in noisy places or when I forget my earphones. I want to load a short audio clip or video file, tap play, and see the captions appear on screen as the sound plays, big enough to read easily on a phone without squinting."
+  },
+  {
+    "id": "q_scene_022_003",
+    "query_text": "A mobile reading tool that lets me flip on a one-hand mode so all the important buttons and taps move to the lower part of the screen, making the whole app reachable with just my thumb when I'm on a crowded bus holding a handrail with my other hand. I want a simple toggle I can tap once to switch the layout, and it should remember my preference the next time I open it."
+  },
+  {
+    "id": "q_scene_022_004",
+    "query_text": "Make a mobile accessibility tool with a high contrast mode and a colorblind-friendly palette option, so people who have trouble seeing certain colors can actually read the screen comfortably on their phone. I want clear toggle buttons to switch between normal, high contrast, and a few colorblind-friendly options, and the change should apply instantly across the whole app."
+  },
+  {
+    "id": "q_scene_022_005",
+    "query_text": "Need a reading helper app for my phone that lets me switch to large text and a dyslexia-friendly font so I can actually get through a wall of text without my eyes giving up halfway. I want a simple reader where I can paste any article or document, then adjust the font size and switch to an easy-to-read font with wider letter spacing, all in a couple of taps."
+  },
+  {
+    "id": "q_scene_022_006",
+    "query_text": "Build a voice-controlled navigation map app for my phone that lets me say a place name out loud and immediately shows me the route, so I can keep my eyes on the road and my hands free instead of poking at a tiny screen while trying to drive. I want it to listen for my voice, pull up the destination on a map, and read the turn-by-turn directions back to me as I go."
+  },
+  {
+    "id": "q_scene_022_007",
+    "query_text": "Build a mobile app that uses my phone camera to track where I am looking on the screen and moves the cursor accordingly, so someone who has trouble using their hands can still tap buttons and navigate just by looking at what they want to select. I want a setup screen to calibrate the eye-tracking for my face, then a clear on-screen cursor that follows my gaze and confirms a tap when I hold my stare on something for a second."
+  },
+  {
+    "id": "q_scene_022_008",
+    "query_text": "Create a tremor filter touch stabilizer setting tool for my phone that saves me from accidentally tapping the wrong thing every time my hands shake a little. I want to set how much wobble gets filtered out before a tap registers, and the app should let me test it on a small practice area so I can tune the sensitivity until it actually feels right for my hands."
+  },
+  {
+    "id": "q_scene_022_009",
+    "query_text": "A sign language webcam interpreter tool for mobile where I can point my phone camera at someone signing and get a text translation right on screen, so I stop having to ask people to repeat themselves or type things out. The app should show the recognized signs as words or short phrases in real time, and let me tap to copy the translated text if I need to paste it somewhere else."
+  },
+  {
+    "id": "q_scene_022_010",
+    "query_text": "Need a simplified vocabulary reading mode app for my phone that takes any article or text I paste in and swaps out the complicated words for simpler everyday ones so I can actually get through it without stopping every few sentences to look things up. The app should highlight which words it changed so I can still learn them, and let me adjust how aggressively it simplifies the language."
+  },
+  {
+    "id": "q_scene_022_011",
+    "query_text": "Build a predictive AAC symbol communication board app for mobile where someone who has trouble speaking can tap picture symbols to form sentences, and the app guesses the next symbol they probably want based on what they already tapped so they spend less time hunting through pages of options. The home screen should show the most-used symbols front and center, and each sentence can be read aloud with a tap."
+  },
+  {
+    "id": "q_scene_023_001",
+    "query_text": "Make a pill and capsule photo identifier app for my phone where I can take a quick photo of any tablet or capsule I find and get back basic info like what it probably is, the common name, and what color or shape it matches. I just want something lightweight I can use on the spot when I find a loose pill somewhere and have no idea what it is, with a clear result on one screen."
+  },
+  {
+    "id": "q_scene_023_002",
+    "query_text": "Create a dream journal and symbol glossary app for my phone where I can quickly jot down a dream right after waking up, and the app keeps a personal glossary of recurring symbols I notice across my entries so I can tap any symbol and see all the dreams where it showed up. I want each journal entry to have a date, a short title, and a free-text area, and the glossary should grow as I add notes about what each symbol seems to mean."
+  },
+  {
+    "id": "q_scene_023_003",
+    "query_text": "Build a geocache location field logger app for my phone where I can log each cache I find out in the field with the GPS coordinates, a quick note about where it was hidden, and whether I found it or not. The app should keep a running list of all my logged caches sorted by date, and let me tap any entry to review the details and add a follow-up note later when I get home."
+  },
+  {
+    "id": "q_scene_023_004",
+    "query_text": "Make a plant disease photo diagnoser app for my phone where I can snap a picture of a sick-looking leaf or stem and get back a short description of what disease or pest it might be, along with a simple suggestion for what to do about it. I just want a clean single-tap result screen with the disease name, a brief explanation, and maybe a confidence level so I know how reliable the guess is."
+  },
+  {
+    "id": "q_scene_023_005",
+    "query_text": "Build a home Wi-Fi speed tester tool as a mobile app I can open on my phone and tap once to run a quick speed test, showing me the download speed, upload speed, and ping all on one screen. I also want it to save a history of past tests with timestamps so I can compare results over a few days and figure out whether my internet is consistently slow or just occasionally drops."
+  },
+  {
+    "id": "q_scene_023_006",
+    "query_text": "Build an ambient noise level meter app for my phone that uses the microphone to show the current dB reading in real time on a big easy-to-read number, so I can check how loud a place is before deciding whether to stay or move somewhere quieter. I also want it to log the highest reading during each session and let me label and save sessions so I can compare different spots over time."
+  },
+  {
+    "id": "q_scene_023_007",
+    "query_text": "Need a star gazing constellation finder app for my phone that uses my location and the current time to show me which constellations are visible tonight, and lets me tap on any one to see its name and a simple connect-the-dots outline so I know what to look for in the sky. I want it to work offline once I load it so I can use it out in the dark away from Wi-Fi."
+  },
+  {
+    "id": "q_scene_023_008",
+    "query_text": "A QR code business card generator tool for mobile where I fill in my name, phone number, email, and maybe a short title, and the app instantly turns all that into a scannable QR code I can show people directly from my phone screen. The app should also let me save a few different versions, like a personal one and a work one, so I can switch between them quickly when needed."
+  },
+  {
+    "id": "q_scene_023_009",
+    "query_text": "Make a USB cable and port type identifier app for my phone where I can pick from a visual list of connector shapes and get a clear explanation of what each one is, what devices use it, and whether it supports charging or data transfer. I always mix up which end goes where and I want something I can glance at on my phone in seconds instead of searching the web every single time."
+  },
+  {
+    "id": "q_scene_023_010",
+    "query_text": "Need a car VIN decoder and history lookup tool as a mobile app where I can type in a 17-character VIN and get back the basic decoded info like the make, model, year, and country of manufacture all in one clean view on my phone. It would be great if the app also flags any common recall notices tied to that vehicle type so I know what to watch out for before I consider buying."
+  },
+  {
+    "id": "q_scene_023_011",
+    "query_text": "Make a local sunrise and sunset clock app for my phone that shows me today's exact sunrise and sunset times based on where I am, plus a simple visual timeline of the day so I can see at a glance how much daylight is left. I want it to update automatically when my location changes, and also show tomorrow's times so I can plan early-morning or evening outdoor activities without guessing."
+  },
+  {
+    "id": "q_scene_024_001",
+    "query_text": "Create a historical figure and contribution card study app for my phone that shows one person per card with their name, time period, and their main contribution, and I can flip the card to see more detail or quiz myself by guessing the person from just the contribution description. I want to be able to organize cards by era or subject area and mark the ones I keep getting wrong so I can review those more often."
+  },
+  {
+    "id": "q_scene_024_002",
+    "query_text": "Build a language verb conjugation flashcard app for my phone where I can go through cards that show a verb and a tense on the front, and I tap to flip it and see the full conjugation table on the back. I want to be able to pick which language and which tenses to practice, and the app should track which verbs I keep missing so it shows me those more often in my review sessions."
+  },
+  {
+    "id": "q_scene_024_003",
+    "query_text": "Create a medical terminology study app for my phone that uses spaced repetition to schedule when I see each term again, showing me the word on one side and the definition on the other, and moving hard ones back into rotation sooner. I want to be able to group terms by body system like cardiovascular or respiratory, and see a simple progress count so I know how many I have left to master."
+  },
+  {
+    "id": "q_scene_024_004",
+    "query_text": "A legal case principle memorization card app for my phone where each card has a case name on the front and the key legal principle it established on the back, and I can tap to flip and mark whether I remembered it correctly or not. The app should keep track of which cards I miss most often and let me filter the deck by topic like contract law or tort law so I can focus on one area at a time during my study sessions."
+  },
+  {
+    "id": "q_scene_024_005",
+    "query_text": "Create a chemistry periodic element symbol card study app for my phone where each card shows the element symbol on the front and the full name, atomic number, and a one-line description on the back. I want to be able to practice in both directions, either guess the name from the symbol or guess the symbol from the name, and the app should track my score per session so I can see whether I am actually improving."
+  },
+  {
+    "id": "q_scene_024_006",
+    "query_text": "Create a history date and event matching card app for my phone where I can flip through cards that show a year or date on one side and the matching historical event on the other, so I can quiz myself on which happened when. I want cards organized by time period so I can practice just one era at a time, and the app should show me a quick score at the end of each round so I know how well I did."
+  },
+  {
+    "id": "q_scene_024_007",
+    "query_text": "A GRE vocabulary drill app for my phone where each card shows a word on the front and I tap to reveal the definition and an example sentence on the back, and I rate myself as easy, okay, or hard so the app sends hard ones back around sooner. The app should let me focus my sessions on a specific word list category, and show a streak count so I have a small reason to keep coming back each day."
+  },
+  {
+    "id": "q_scene_024_008",
+    "query_text": "Make a world capital and country flag card study app for my phone where I can practice matching country flags to their capitals, with the flag shown on the front and the capital name revealed when I tap to flip. I want to be able to filter by continent so I can work through one region at a time, and the app should keep a list of the ones I get wrong most often so I can do a focused review round at the end."
+  },
+  {
+    "id": "q_scene_024_009",
+    "query_text": "Need a sign language gesture visual card set app for my phone that shows clear illustrations of each hand shape or gesture on one side of the card and the word or phrase it represents on the other, so I can practice recognizing and remembering them. I want to be able to browse all cards in a list to get familiar, then switch to a quiz mode where the app shows me random gestures and I try to recall the meaning before flipping."
+  },
+  {
+    "id": "q_scene_024_010",
+    "query_text": "Need a music theory note and chord card study app for my phone where I can flip through cards that show a chord name and I tap to see the notes that make it up, or the other way around where I see the notes and try to recall the chord name. I want to group cards by chord type like major, minor, or seventh, and the app should mark which ones I keep getting wrong so I can go back and drill those specifically."
+  }
+]

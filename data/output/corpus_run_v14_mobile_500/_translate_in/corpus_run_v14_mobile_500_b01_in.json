@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_scene_006_001",
+    "query_text": "Make a smart home setup app for my phone where I can pair new devices one by one and then assign each one to a specific room in my place, like bedroom or kitchen, so everything ends up organized and I can actually find which device is where without digging through a messy list."
+  },
+  {
+    "id": "q_scene_006_002",
+    "query_text": "Create a subscription manager app for mobile where I can add new content sources, like newsletters or blogs, and for each one pick how often I want updates, daily, weekly, or monthly, so I can keep track of what I follow and make sure I'm only getting things at the pace that works for me."
+  },
+  {
+    "id": "q_scene_006_003",
+    "query_text": "Make a forum app for my phone where I can start a new discussion thread, write out what I want to talk about, and pick one or more topic categories to attach to it so other people can find it easily, with the category list right there on the same screen when I'm writing."
+  },
+  {
+    "id": "q_scene_006_004",
+    "query_text": "Need a community event planner app for mobile where organizers can set up an event with a title, date, and a set number of spots available, then people can grab a ticket right there in the app, and once all the spots fill up the registration closes on its own so nobody oversigns."
+  },
+  {
+    "id": "q_scene_006_005",
+    "query_text": "Need a language flashcard app for my phone where I can build a new vocabulary deck by adding words and their meanings one at a time, and the app keeps a review schedule that spaces out when each card comes back so I'm practicing things right before I'd normally forget them."
+  },
+  {
+    "id": "q_scene_006_006",
+    "query_text": "Build a stock tracker app for mobile where I can add tickers to a personal watchlist and for each one set a price level I care about, so the app shows me a clear alert on that stock's entry whenever the price hits the number I picked, keeping everything in one easy place."
+  },
+  {
+    "id": "q_scene_006_007",
+    "query_text": "A leave request tool for the phone where an employee can fill in the dates, pick the leave type, attach any supporting paperwork like a doctor's note or approval letter, and also add the name of whoever is covering their work while they're out, all in one clean flow before submitting."
+  },
+  {
+    "id": "q_scene_006_008",
+    "query_text": "Build a mobile insurance claim app where I can start a new claim by filling in what happened, then snap and upload photos of the damage straight from my phone camera as evidence, with each photo showing a small thumbnail so I can confirm I attached the right ones before I hit submit."
+  },
+  {
+    "id": "q_scene_006_009",
+    "query_text": "Build a property inspection app for mobile where I can go through a checklist of things to check in a unit, and for each item I can mark how bad the issue is on a simple scale from minor to serious, so at the end I get a quick summary showing which problems need urgent attention."
+  },
+  {
+    "id": "q_scene_006_010",
+    "query_text": "Create a grant application tool for my phone where I can start a new submission by filling in the project name, description, and requested amount, then attach any supporting files like a budget sheet or proposal doc, so the whole thing is ready to send without needing to jump between different apps."
+  },
+  {
+    "id": "q_scene_007_001",
+    "query_text": "Create a class schedule manager app for my phone so I can go in and change a class time or swap the room it meets in, and if that change creates a clash, like the same instructor or same room booked twice, the app flags it right away so I can fix it before saving and avoid the headache later."
+  },
+  {
+    "id": "q_scene_007_002",
+    "query_text": "Build a routine manager app for mobile where I can edit the conditions of any automated routine I have set up, and before I actually save the changes the app shows me a plain summary of what else will be affected, so I know upfront if tweaking one thing breaks something else I depend on."
+  },
+  {
+    "id": "q_scene_007_003",
+    "query_text": "Create a checkout flow app for my phone where I can move through each step separately, updating my delivery address on one screen and then switching my payment method on the next, so I can fix whatever needs changing without having to redo the whole order from scratch every single time."
+  },
+  {
+    "id": "q_scene_007_004",
+    "query_text": "Make a blog manager app for mobile where I can pull up any post and quickly update the title it shows in search results, the short description that appears under it, and the URL link for that post, so search engines pick up the right info and I stop having default or broken values sitting there."
+  },
+  {
+    "id": "q_scene_007_005",
+    "query_text": "A shared writing tool for my phone where multiple people can edit the same document at the same time, and if two people change the same part the app surfaces both versions side by side so I can pick which one to keep or combine them, saving me from losing work or overwriting someone else's changes."
+  },
+  {
+    "id": "q_scene_007_006",
+    "query_text": "Create a product manager app for mobile where I can select a whole group of items at once and update shared details like price, category, or size options across all of them in one go, instead of opening each item one by one, because doing that for dozens of products is a total time sink."
+  },
+  {
+    "id": "q_scene_007_007",
+    "query_text": "Need a performance review app for my phone that lets managers open an employee's review, update the ratings and written feedback, and leave comments back and forth with the employee in a running thread right on the same screen, so everything stays in one place and nothing gets buried in separate emails."
+  },
+  {
+    "id": "q_scene_007_008",
+    "query_text": "A car maintenance logger for my phone where I can find a past service record and update it with the current mileage reading, add notes about what was done this time, and save it so I always have a clean history of what happened to my car and when, sorted by the mileage I entered."
+  },
+  {
+    "id": "q_scene_007_009",
+    "query_text": "Make a lease renewal app for my phone where I can review the current contract terms and propose changes to things like the monthly rent or lease length, and the landlord side can see my suggested edits and respond to each one, so we can go back and forth and settle on the final version before signing."
+  },
+  {
+    "id": "q_scene_007_010",
+    "query_text": "Make a sprint planning app for my phone where I can open any task in the backlog and quickly change the effort estimate to a number that better reflects the actual work involved, so the whole list stays accurate and the team can see the updated totals right away without waiting for the next meeting."
+  },
+  {
+    "id": "q_scene_008_001",
+    "query_text": "A social feed app for mobile where I can type in a topic or hashtag and get a list of all the posts tagged with it, with the matching label highlighted in each result so I can spot the relevant ones fast, and I can tap another label in any result to keep drilling into related topics without going back to the start."
+  },
+  {
+    "id": "q_scene_008_002",
+    "query_text": "Need a document search app for my phone that lets me type a question or idea in plain words, not just exact phrases, and then shows me the relevant passages from my files with the matching parts highlighted in the text so I can actually read the context and figure out which result is the one I was looking for."
+  },
+  {
+    "id": "q_scene_008_003",
+    "query_text": "Create a photo search tool for mobile where I can take a picture of something with text in it, like a sign, a receipt, or a page, and the app reads the text from the image and pulls up other stored photos that contain similar words, so I can find things by what's written on them instead of trying to remember filenames."
+  },
+  {
+    "id": "q_scene_008_004",
+    "query_text": "A file finder app for my phone where I can search across deeply nested folders and the results show me exactly where each file lives as a trail of folder names I can tap to jump to any level, so I know the full path to what I found and can get back to the right folder without hunting around manually."
+  },
+  {
+    "id": "q_scene_008_005",
+    "query_text": "Build a code reference app for mobile where I can type the name of a function or variable and get a list of all the places in the codebase where it's defined or used, with each result showing the file name and a snippet of the surrounding lines so I can jump straight to the right spot without scrolling through everything."
+  },
+  {
+    "id": "q_scene_008_006",
+    "query_text": "Need a mobile app that lets me search for people across social platforms by username or display name without jumping between five different apps on my phone, it's such a time-sink. I want to type a name once and see their profile info, follower count, and what platforms they're on, all pulled up on one screen so I can figure out if it's the right person fast."
+  },
+  {
+    "id": "q_scene_008_007",
+    "query_text": "Create a mobile spending tracker app where I can search my past transactions by merchant category, like restaurants or groceries, and also filter by a specific amount range, because right now I have to scroll through a giant list on my phone to find anything. The search results should show the merchant name, date, and amount clearly so I can spot patterns without any extra tapping."
+  },
+  {
+    "id": "q_scene_008_008",
+    "query_text": "Build a mobile app that works like a concept map explorer, where I can type in any topic and see how it connects to related ideas in a simple web layout on my phone. Tapping a connected concept should bring up its own set of links, so I can follow a chain of related terms without losing track of where I started. It saves me from having to Google everything separately when I'm trying to understand something new."
+  },
+  {
+    "id": "q_scene_008_009",
+    "query_text": "Build a podcast search tool for my phone that lets me search the full text of episode transcripts by keyword, because I always remember a specific thing someone said but can never find which episode it was in. I want the results to show the episode title, a short snippet of the matching text with the keyword highlighted, and a timestamp so I can jump straight to that part without listening through the whole thing."
+  },
+  {
+    "id": "q_scene_008_010",
+    "query_text": "Create a property record lookup app for my phone that lets me search for deeds and public records by address or owner name, because right now I have to go to multiple county websites on my phone and none of them work well on mobile. The app should show the key details like recorded date, ownership history, and any liens, all on one clean screen so I can get the info I need without jumping between tabs."
+  },
+  {
+    "id": "q_scene_009_001",
+    "query_text": "Build a mobile filter manager app where I can set up filter combinations, like category plus date range plus status, save them as named presets, and apply any saved preset with one tap on my phone. I want a list of my saved presets on the main screen and a clear apply button so I can switch between them quickly, plus the option to overwrite a preset after tweaking the filters."
+  },
+  {
+    "id": "q_scene_009_002",
+    "query_text": "Build a task manager app for my phone where each task has a priority level I can set, and each level has its own color so I can see at a glance what needs doing first. I want labels like urgent, high, normal, and low, with the color showing up on the task card and a way to sort the whole list by priority level so the most urgent ones are always at the top."
+  },
+  {
+    "id": "q_scene_009_003",
+    "query_text": "A notification settings app for my phone where I can pick which channels I want to use for different kinds of alerts, like email, text, and in-app, and check off as many as I want for each alert type. The main screen should list each alert category with all the channel options shown as checkboxes, and there should be a save button so my choices stick across sessions."
+  },
+  {
+    "id": "q_scene_009_004",
+    "query_text": "Build a mobile insurance planner app where I can pick my deductible amount and coverage tier from a clear list, and see a side-by-side comparison of what each combination costs and covers. I want the options laid out in a simple step-by-step way on my phone, with a running summary at the bottom showing my selected deductible, tier, and estimated monthly cost so I know exactly what I'm choosing."
+  },
+  {
+    "id": "q_scene_009_005",
+    "query_text": "Create a home screen organizer app for my phone where I can press and hold on any info card and drag it to a new position in the grid, so I can arrange my most important numbers, like steps, spending, and sleep, in the order I actually care about. The layout should save automatically after I rearrange things and each card should show a label and its current value clearly."
+  },
+  {
+    "id": "q_scene_009_006",
+    "query_text": "Create a reporting app for my phone where I can pick how I want my data displayed, like as a bar chart, line chart, or simple table, and the app updates the view right away based on my choice. I want a row of clearly labeled chart type options at the top of the report screen so I can switch between them with one tap and compare how the same data looks in different formats."
+  },
+  {
+    "id": "q_scene_009_007",
+    "query_text": "Build a video music picker app for my phone where I can choose background music for my clips by mood, like calm, upbeat, dramatic, or fun, and preview a short sample of each track before picking. I want the moods listed as clearly labeled groups on the main screen so I can tap one, hear a quick clip, and confirm my choice without having to hunt through a long list of song titles I've never heard of."
+  },
+  {
+    "id": "q_scene_009_008",
+    "query_text": "Need a mobile display settings app that lets me adjust text size and screen contrast all in one place on my phone, with a live preview showing how the changes look on real text before I save anything. I want a simple slider for text size and a few preset contrast options labeled something like normal, high, and extra high, with a confirm button so nothing changes until I'm happy with it."
+  },
+  {
+    "id": "q_scene_009_009",
+    "query_text": "Build a course selection planner app for my phone where I can browse available classes, add them to my schedule, and see a running total of credits I've picked so I know when I've hit my limit for the term. I want each course listed with its name, credit value, and time slot, and a counter at the top of the app that updates as I add or remove courses so I'm never guessing how many credits I have."
+  },
+  {
+    "id": "q_scene_009_010",
+    "query_text": "Need a mobile investment profile tool that walks me through a few plain-language questions about how much risk I'm comfortable with, like whether I'd rather protect my money or try to grow it faster, and then shows me which investor type I match. I want the result screen to show my profile label, a short description of what it means, and a breakdown of how a typical portfolio for that profile is split across different types of investments."
+  },
+  {
+    "id": "q_scene_010_001",
+    "query_text": "Create a mobile analytics viewer app where I can save audience filter combinations, like age range plus location plus device type, and reload any saved group with a single tap to see the report update right away on my phone. I just want a list of my saved filters with names I can set myself, and a clear apply button so I can switch between different audience views without setting up the same filters from scratch every single time."
+  },
+  {
+    "id": "q_scene_010_002",
+    "query_text": "Need a mobile list manager app that lets me filter my items and then pin the most important results to the top of the list so they stay visible while I scroll through the rest. The filter bar should stick at the top of the screen on my phone so I can always see what's active and change it without scrolling back up, which would save me so much back-and-forth when I'm working through a long list."
+  },
+  {
+    "id": "q_scene_010_003",
+    "query_text": "Make a customer tracking app for my phone where I can filter my customer list by how much total money they've spent with me over time, so I can separate the regulars who buy a lot from the ones who haven't come back much. I want to set a spending range or pick tiers like high value, mid range, and occasional, and the filtered list should show each customer's name and their total spend so I can follow up with the right people."
+  },
+  {
+    "id": "q_scene_010_004",
+    "query_text": "Create a research paper finder app for my phone where I can filter results by how highly cited or influential the journal is, because I always waste time opening papers only to find they're from low-quality sources. I want a slider or tier options to set a minimum quality level, and each result should show the journal name and a simple quality indicator so I can decide quickly whether it's worth reading."
+  },
+  {
+    "id": "q_scene_010_005",
+    "query_text": "A symptom checker app for my phone where I can narrow down a list of possible symptoms by how severe they feel, like mild, moderate, or serious, and also by whether they came on suddenly or slowly over time. The filtered results should show each symptom with a short plain-language description so I can check off what matches my situation and get a clearer picture of what might be going on before I decide if I need to see a doctor."
+  },
+  {
+    "id": "q_scene_010_006",
+    "query_text": "Create a compliance document manager app for my phone where I can filter my saved documents by the country or region whose rules they relate to, like EU, US, or specific states, so I can pull up only the ones relevant to a project I'm working on. I want the filter options as a simple list I can tap through on my phone, and the results should show the document name, jurisdiction, and last updated date so I know I'm looking at the right version."
+  },
+  {
+    "id": "q_scene_010_007",
+    "query_text": "Make a second-hand marketplace app for my phone where I can filter listings by the seller's rating so I only see stuff from people with good reviews. I want to set a minimum star rating with a simple slider or preset options like 4 stars and up, and each listing card should show the seller's rating alongside the item photo and price so I can trust what I'm buying before I even tap into the details."
+  },
+  {
+    "id": "q_scene_010_008",
+    "query_text": "An investment tracker app for my phone where I can filter my holdings by asset type, like stocks, bonds, or cash, and also by region, like domestic or international, so I can quickly see how my money is split up without doing the math myself. The filter should update the list on the spot when I tap an option, and each holding should show the asset name, type, region, and current value so I have everything I need in one view."
+  },
+  {
+    "id": "q_scene_010_009",
+    "query_text": "Make a leaderboard app for my phone where I can filter the rankings by region, like by country or city, and also by age group, so I can see how I stack up against people who are actually comparable to me. I want the filter options clearly laid out at the top of the app and the list to update right away when I change them, with each entry showing the rank, name, score, and the person's region and age group."
+  },
+  {
+    "id": "q_scene_010_010",
+    "query_text": "Make a support ticket manager app for my phone where I can filter the queue by how urgent each ticket is based on the deadline for resolving it, so I always know which ones need attention first. I want a simple set of urgency levels like overdue, due soon, and on track, and tapping one should instantly show only tickets in that group, with each ticket listing the customer name, issue summary, and the time remaining before the deadline."
+  }
+]

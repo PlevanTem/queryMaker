@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_011_001",
+    "query_text": "Make a mobile app that handles removing an OAuth token revocation confirmation so I can just disconnect a connected account in one tap without being asked the same thing twice, because going through multiple confirmation steps every time is such a waste. The app should list all linked connections on one screen, let me tap to remove one, and just do it cleanly with a simple final check before the token gets killed."
+  },
+  {
+    "id": "q_scene_011_002",
+    "query_text": "Create a mobile app for managing posts where I can detach photos or videos from a post while keeping all the text I already wrote completely intact, because sometimes I upload the wrong image and I just want to swap it out without losing my caption. The post editor screen should clearly show the attached media and let me remove it with one tap, leaving my written content right where it was."
+  },
+  {
+    "id": "q_scene_011_003",
+    "query_text": "Create a mobile app for managing scheduled posts where I can cancel a post that is set to go out later and have it saved back as a draft automatically, so I do not have to rewrite anything if I change my mind. On the scheduled posts screen I want to be able to tap a post, hit cancel, and have it move right into my drafts folder with everything still there."
+  },
+  {
+    "id": "q_scene_011_004",
+    "query_text": "Make a mobile app for handling incoming friend requests where I can decline a request and also choose to block that person at the same time in one smooth step, because having to do it separately is annoying when someone keeps sending requests. When I tap on a pending request on my phone it should give me the option to just decline, or to decline and block, so I can deal with it once and move on."
+  },
+  {
+    "id": "q_scene_011_005",
+    "query_text": "Need a mobile app that lets me pause a subscription and shows me a clear window of time where I can still ask for a refund before the pause locks in, because sometimes I forget to cancel in time and I need to know exactly how long I have. The app should show my active subscriptions, let me tap to pause one, and display a plain countdown of the refund grace period so I know where I stand."
+  },
+  {
+    "id": "q_scene_011_006",
+    "query_text": "A mobile data cleanup tool where I can pick which categories of saved data to wipe from the app, like only clearing my search history or only my saved addresses, instead of having to reset everything at once. The main screen for my phone should show a simple list of data categories I can check off, then confirm and clear just those selected ones, so I stop losing settings I actually want to keep."
+  },
+  {
+    "id": "q_scene_011_007",
+    "query_text": "Need a mobile app for managing shared documents where I can find a co-author and take away their ability to edit a specific document, switching them down to read-only, because sometimes a project is done and I just want to lock it down. The document manager should list everyone who has write access to each file so I can tap on a name and change their permission right from my phone."
+  },
+  {
+    "id": "q_scene_011_008",
+    "query_text": "Need a mobile app for managing alert rules where I can switch off a rule so it stops firing but the rule itself stays saved in an archive so I can turn it back on later if I need it, because deleting rules and recreating them from scratch is a huge hassle. On my phone the alert manager should have a clear active versus archived list and let me move a rule between the two with a single tap."
+  },
+  {
+    "id": "q_scene_011_009",
+    "query_text": "Build a mobile app for managing referral codes where I can set an expiry date on individual codes and also select multiple codes at once to deactivate them all in one go, because manually turning off codes one by one when a campaign ends takes way too long. The app for my phone should show all my active codes in a list, let me pick several at once, and kill them with a single confirm tap."
+  },
+  {
+    "id": "q_scene_011_010",
+    "query_text": "Build a mobile app for managing linked payment methods where I can remove a connected bank account and have the app show me the current balance and any pending charges before I confirm, so I know there is nothing left to process before I cut the connection. On my phone the account manager should pull up the balance summary clearly and then let me confirm the unlink in one final step."
+  },
+  {
+    "id": "q_scene_012_001",
+    "query_text": "Build a profile editor app where the pronouns and identity section feels thoughtful and personal, not like a government form, so people can pick from a few gentle preset options or just type in whatever feels right for them. The vibe on mobile should be soft and welcoming, with enough breathing room that filling in your identity feels like self-expression, and the free-text field should sit right alongside the presets so nothing feels hidden or secondary."
+  },
+  {
+    "id": "q_scene_012_002",
+    "query_text": "Create a mobile setup guide app that walks someone through filling in their emergency contacts and basic health details one calm step at a time, like a gentle checklist that actually feels reassuring rather than clinical. The flow on your phone should have a warm, caring aesthetic with clear sections for each type of information, so by the end you feel prepared rather than overwhelmed."
+  },
+  {
+    "id": "q_scene_012_003",
+    "query_text": "Need a mobile app for volunteer profiles that lets someone describe the causes they care about and the skills they can offer in a way that feels genuine and human, not like a resume. The profile on your phone should have a warm, community-driven look where you can write a little about why certain causes matter to you and list a handful of skills in a way that feels personal rather than just a checkbox list."
+  },
+  {
+    "id": "q_scene_012_004",
+    "query_text": "Create a mobile profile app for legal professionals where they can fill in their bar registration details in a way that still feels polished and dignified, because credentials deserve to be presented well. The app on your phone should give each piece of information room to breathe, with a clean, authoritative feel, so your bar number and practice area come across as credentials worth trusting rather than just data in a form."
+  },
+  {
+    "id": "q_scene_012_005",
+    "query_text": "A patient health baseline app for mobile where someone setting up telemedicine access can fill in their ongoing conditions, past procedures, and regular medications in a calm and organized way, almost like a quiet personal health journal. The profile on your phone should feel reassuring rather than sterile, with clearly separated sections for different parts of your health history so a doctor reading it can get a real picture of you as a person."
+  },
+  {
+    "id": "q_scene_012_006",
+    "query_text": "Make a mobile profile app for a religious community where members can fill in their role in the congregation and any groups they belong to, with a look and feel that is warm and reverent rather than generic. On your phone the profile should feel like it belongs to a real spiritual community, with a gentle color palette and clear sections for things like your role, your ministry involvements, and a short personal note."
+  },
+  {
+    "id": "q_scene_012_007",
+    "query_text": "Need a mobile app where I can set up a personal finance profile that captures how I actually think about money, like whether I am saving for something specific, how cautious or relaxed I am with spending, and what my rough monthly budget is, so the app can tailor things to my style. The profile setup on my phone should feel like a thoughtful quiz with a calm, organized aesthetic rather than a bunch of intimidating numbers."
+  },
+  {
+    "id": "q_scene_012_008",
+    "query_text": "A profile builder for an expat community app on mobile where members can set their home city, the languages they speak, and where they are currently living, all presented in a way that feels warm and global rather than like filling out a visa application. The profile screen on your phone should feel inviting, like a little window into where someone is from and where they are now, with a light and friendly design that makes people actually want to fill it in."
+  },
+  {
+    "id": "q_scene_012_009",
+    "query_text": "Create a buyer profile app for an online marketplace where people can see and build up their trust score over time, with a look that feels credible and clean rather than cluttered, because first impressions matter when you are buying from strangers. The profile on your phone should display the trust score prominently in a way that feels earned and honest, with a calm visual style that makes buyers look reliable to sellers."
+  },
+  {
+    "id": "q_scene_012_010",
+    "query_text": "Create a mobile profile app for performing arts groups where members can list the ensembles they belong to, their role in each one, and any upcoming auditions they are preparing for, with a look that feels artistic and expressive rather than like a spreadsheet. The profile on your phone should feel like it belongs to a real creative community, with a rich layout where your performance history and audition plans both get space to shine."
+  },
+  {
+    "id": "q_scene_013_001",
+    "query_text": "Need a mobile app where I can browse my message threads and download attachments that people sent me without having to open every single conversation to dig them out, because hunting through old chats for a file someone shared weeks ago is a real pain. On my phone the app should show me a combined list of all the files and photos from my threads so I can tap one and save it straight to my phone."
+  },
+  {
+    "id": "q_scene_013_002",
+    "query_text": "Need a mobile app with a setting that makes it only sync my data when I am connected to Wi-Fi, so I stop burning through my phone data without knowing it, but I also want a way to manually kick off a sync when I am on mobile data just for that one time. The settings screen on my phone should make the Wi-Fi-only toggle easy to find and the manual sync button should be right there so I do not have to go hunting for it."
+  },
+  {
+    "id": "q_scene_013_003",
+    "query_text": "Create a mobile app for uploading signed legal contracts where I can either draw my signature right on my phone screen or import a signature image and then attach it to a document before sending it off, because printing and scanning is a huge hassle. The app should walk me through picking the document, adding the signature in the right spot, and confirming the upload all in a few taps so the whole thing takes under a minute."
+  },
+  {
+    "id": "q_scene_013_004",
+    "query_text": "Build a mobile survey tool where one of the question types lets people answer by taking a photo or picking one from their phone gallery, so respondents can just snap a picture of whatever they are describing instead of typing it all out. The survey flow on my phone should make the photo question feel as easy as the regular text ones, with a clear capture button and a small preview so people know their image was attached before they move on."
+  },
+  {
+    "id": "q_scene_013_005",
+    "query_text": "Build a mobile thesis submission tool where students can upload several required files at once, like the main document, the cover sheet, and supplementary materials, and see each one go through with a clear status so they know exactly what landed and what still needs to be sent. The app on my phone should handle multiple files in a single submission run and show a confirmation summary so I am not second-guessing whether my work actually went through."
+  }
+]

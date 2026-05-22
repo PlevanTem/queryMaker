@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_scene_034_006",
+    "query_text": "A post-surgery recovery reminder app for my phone that walks me through each step of the protocol my doctor gave me, things like wound care, medication timing, and gentle movement exercises, all laid out in a clear daily checklist I can tap through one step at a time, with a spot to note how I am feeling each day so I can track my recovery progress."
+  },
+  {
+    "id": "q_scene_034_007",
+    "query_text": "Need a mental health self-care routine checker for my phone that lets me tick off the things I want to do each day, like going outside, drinking enough water, journaling, and getting to bed on time, with a simple way to see how consistent I have been over the past week so I can stay on top of my routine."
+  },
+  {
+    "id": "q_scene_034_008",
+    "query_text": "Make a daily skincare reminder app I can use on my phone that lists each step of my morning and evening routine in order, like cleanser, toner, serum, and moisturizer, so I can tap each one done as I go and never skip a step, with a way to set the times I want reminders to pop up for both routines."
+  },
+  {
+    "id": "q_scene_034_009",
+    "query_text": "Create a diabetic insulin injection schedule app for my phone that helps me keep track of each shot, including the time, the type of insulin, and the dose, all in a simple list I can add to quickly throughout the day, with a history I can scroll back through to show my doctor at the next appointment."
+  },
+  {
+    "id": "q_scene_034_010",
+    "query_text": "Create a stretching break alert app for my phone that reminds me to get up from my desk at set intervals during the workday, like every hour or every 90 minutes, and shows me a short list of stretches to do each time, with a simple tap to mark the break done and move on."
+  },
+  {
+    "id": "q_scene_035_001",
+    "query_text": "Build a competition prep countdown planner for my phone that shows how many weeks are left until race day and breaks my training into a week-by-week plan leading up to the event, with each week listing the key workouts and targets I need to hit, so I always know exactly where I am in my prep."
+  },
+  {
+    "id": "q_scene_035_002",
+    "query_text": "A seasonal sport training logger for my phone that lets me record my sessions throughout the season, including the date, duration, and what I worked on, grouped by month so I can look back and see how my training built up over time, with a spot to write a short note about how each session felt."
+  },
+  {
+    "id": "q_scene_035_003",
+    "query_text": "Create a strength training logger for my phone that lets me record each exercise I do, the number of sets, the reps for each set, and the weight I used, all in a clean list I can fill in quickly between sets, with a way to pull up my numbers from the last time I did the same workout."
+  },
+  {
+    "id": "q_scene_035_004",
+    "query_text": "Build a marathon training tracker for my phone that lays out my weekly running plan from now until race day, showing the scheduled runs for each day of the week, with the ability to log my actual distance and time after each run so I can see how closely I am following the plan week by week."
+  },
+  {
+    "id": "q_scene_035_005",
+    "query_text": "Create a CrossFit workout-of-the-day score and record logger I can use on my phone right after class, where I can enter the workout name, my finishing time or rep count, and any notes about how it went, and then see a list of all my past results for that same workout so I can track my improvement over time."
+  },
+  {
+    "id": "q_scene_035_006",
+    "query_text": "Create a cycling tracker for my phone that lets me log each ride with the route name, distance I covered, and how long it took, and then shows my average speed calculated automatically, with a list of all my past rides I can scroll through to see which routes I am getting faster on."
+  },
+  {
+    "id": "q_scene_035_007",
+    "query_text": "Make a swimming lap counter app I can use at the pool on my phone, where I tap a big button each time I finish a lap so it counts them up automatically, and I can also see my total distance for the session and how long I have been in the water, with a history of past swim sessions to look back on."
+  },
+  {
+    "id": "q_scene_035_008",
+    "query_text": "A yoga flow logger for my phone where I can record each session by listing the poses I did in order, how long I held each one, and any notes about what I want to try differently next time, so I can build up a library of my own sequences and pick one to follow on the next time I practice."
+  },
+  {
+    "id": "q_scene_035_009",
+    "query_text": "Need a rock climbing route tracker for my phone that lets me log each route I attempt, with the grade, the crag or gym name, whether I completed it, and a quick note about how the climb went, and then shows me a summary of which grade range I am climbing most often so I can see myself improving."
+  },
+  {
+    "id": "q_scene_035_010",
+    "query_text": "Make a dance practice logger for my phone that lets me record each session with the piece or routine I worked on, how long I practiced, and which parts I focused on, with a running list of all my sessions so I can look back and see how much time I have put into learning each choreography."
+  },
+  {
+    "id": "q_scene_036_001",
+    "query_text": "Build a mobile app that helps me track my weight and my menstrual cycle together on the same calendar, so I can spot patterns between where I am in my cycle and how my weight shifts, with daily log entries for weight and cycle day, and a simple chart that shows both things lined up over the past month."
+  },
+  {
+    "id": "q_scene_036_002",
+    "query_text": "Make a sleep coaching milestone tracker I can use on my phone to follow a multi-week programme for improving my sleep, where each week has a list of habits or targets to work on, and I can tick off each one as I do it, with a progress bar showing how far through the programme I am."
+  },
+  {
+    "id": "q_scene_036_003",
+    "query_text": "Build a morning weigh-in tracker for my phone where I enter my weight each day and it draws a simple line chart showing how my weight has changed over the past month, with my current weight and a note of the highest and lowest readings, so I can see the overall trend clearly without getting caught up in daily ups and downs."
+  },
+  {
+    "id": "q_scene_036_004",
+    "query_text": "Make a menstrual cycle and fertile window calendar app for my phone that lets me log the start and end of each period, and then shows the next expected cycle and the days likely to be the fertile window highlighted right on a calendar, with a spot to add notes about symptoms for each day."
+  },
+  {
+    "id": "q_scene_036_005",
+    "query_text": "A sleep quality tracker for my phone where I log each night's sleep by entering what time I went to bed, what time I woke up, and how rested I feel on a simple scale, and the app shows a chart of my sleep duration and quality scores over the past two weeks so I can see which nights I slept well and which I did not."
+  },
+  {
+    "id": "q_scene_036_006",
+    "query_text": "Need a body measurement log I can use on my phone to record my tape measurements every couple of weeks, things like waist, hips, chest, and arms, with a history of past entries so I can see the numbers changing over time, and a way to set which measurements I care about tracking."
+  },
+  {
+    "id": "q_scene_036_007",
+    "query_text": "An intermittent fasting tracker app for my phone that shows a timer counting down my current eating window or fasting window, lets me set which fasting protocol I am following like 16/8 or 18/6, and keeps a log of each completed fast with the start time, end time, and total hours, so I can see my streak of consistent fasting days."
+  },
+  {
+    "id": "q_scene_036_008",
+    "query_text": "Need a blood glucose log for my phone that lets me record my readings throughout the day, including the time, the reading value, and whether it was taken before or after a meal, all saved in a clean list I can scroll through, with a way to see my average reading over the past seven days at a glance."
+  },
+  {
+    "id": "q_scene_036_009",
+    "query_text": "Need a blood pressure and heart rate logger for my phone that lets me enter my systolic, diastolic, and pulse numbers each time I measure, with the date and time saved automatically, and a chart showing how my readings have trended over the past month so I can bring a clear picture to my next checkup."
+  },
+  {
+    "id": "q_scene_036_010",
+    "query_text": "Build a body fat percentage tracker for my phone where I can log my body fat reading every week or two, along with my weight, and see a line chart showing how both numbers are changing over time, with my starting point clearly marked so I can see how much progress I have made since I began."
+  },
+  {
+    "id": "q_scene_037_001",
+    "query_text": "Create a health insurance claim and deductible tracker for my phone that keeps everything organized in one place, so I can log each claim with the date, provider, and amount submitted, then see how much of my yearly deductible I have already met and how much is left, with a running total at the top and a list of past claims below it."
+  },
+  {
+    "id": "q_scene_037_002",
+    "query_text": "Make a preventive screening schedule reminder app for my phone that lists all the key checkups I need each year, like blood pressure checks, cholesterol panels, and cancer screenings, with the recommended frequency next to each one, a way to mark when I last completed it, and a reminder that nudges me when the next one is coming up."
+  },
+  {
+    "id": "q_scene_037_003",
+    "query_text": "A vitals overview app for my phone that pulls together all my key health numbers in one tidy spot, showing things like heart rate, blood pressure, blood sugar, and weight in a simple list I can scan at a glance, with the most recent reading and the date it was recorded, plus a small note area under each one so I can add any context my doctor might want."
+  },
+  {
+    "id": "q_scene_037_004",
+    "query_text": "Make a mental health weekly score tracker as a mobile app where I can rate how I am feeling each day on a simple scale, see a weekly summary that shows my average mood score for the week, and keep a short note for any day where something specific affected my mood, so I can bring a clear picture to my therapist each session."
+  },
+  {
+    "id": "q_scene_037_005",
+    "query_text": "Need a nutrition macro balance summary app on my phone that lets me log my meals and automatically tallies up my daily protein, carbs, and fat, shows a simple breakdown for the day so I can see if I am hitting my targets, and keeps a weekly summary so I can spot patterns in how balanced my eating has been across the whole week."
+  },
+  {
+    "id": "q_scene_037_006",
+    "query_text": "Build a fertility cycle status overview app for my phone that tracks my cycle length, lets me log my basal body temperature and symptoms each day, shows a clear calendar view of where I am in my current cycle, and highlights the days that look most fertile based on the data I have entered so far."
+  },
+  {
+    "id": "q_scene_037_007",
+    "query_text": "Create a mobile app for tracking my athletic performance over time, where I can log each workout with the activity type, distance or duration, and how hard it felt, then see a simple graph showing my progress week by week, plus a personal best section that highlights my top numbers for each activity so I can watch myself improve."
+  },
+  {
+    "id": "q_scene_037_008",
+    "query_text": "Make a chronic condition management app for my phone that lets me keep tabs on multiple ongoing health conditions at once, log daily symptoms and medication taken for each one, and see a clear summary per condition showing how things have been trending this week compared to last week, so I have something organized to review with my doctor."
+  },
+  {
+    "id": "q_scene_037_009",
+    "query_text": "Create a post-COVID recovery progress tracker for my phone that lets me log daily symptoms like fatigue, brain fog, and breathlessness on a simple scale, track my energy level and how many steps I managed each day, and show a weekly progress chart so I can see whether things are slowly getting better over time and share it with my doctor."
+  },
+  {
+    "id": "q_scene_037_010",
+    "query_text": "Make a mobile app for tracking an elderly parent's daily health, where I can log their meals, medications, blood pressure readings, and mood each day in one place, see a clean daily summary at the top, and have a history list so I can quickly flip back and compare how they were doing earlier in the week or last week."
+  },
+  {
+    "id": "q_scene_038_001",
+    "query_text": "Create a grief and loss compassion meditation app for my phone with a soft, muted color palette, gentle typography, and a quiet atmosphere that feels like a safe space rather than a wellness product, where each session guides you through acknowledging the pain of loss with warm narrated prompts, and the overall tone is unhurried and deeply tender."
+  },
+  {
+    "id": "q_scene_038_002",
+    "query_text": "Need a postpartum relaxation breathing guide for my phone that feels warm and nurturing rather than clinical, with a gentle visual that expands and contracts to pace your breath, soft pastel tones that feel calming, and short encouraging words timed to each inhale and exhale so a new mom can decompress in just a few quiet minutes."
+  },
+  {
+    "id": "q_scene_038_003",
+    "query_text": "Need a 4-7-8 breathing timer for my phone that feels like a calm ritual rather than a stopwatch, with a beautiful animated visual that blooms open on the inhale and softly closes on the exhale, a muted earthy color story that instantly soothes, and a gentle chime marking each phase so you can do the whole cycle with your eyes half-closed."
+  },
+  {
+    "id": "q_scene_038_004",
+    "query_text": "Make a box breathing stress reset guide as a mobile app where the whole visual experience feels like slowing down, with a quietly animated square that traces the four equal phases in a way that feels almost meditative to watch, cool neutral tones that feel like taking a deep breath just by looking at the screen, and a simple count visible during each phase."
+  },
+  {
+    "id": "q_scene_038_005",
+    "query_text": "Need a loving-kindness meditation app on my phone where the whole experience feels like being wrapped in warmth, the screen uses soft golds and creams that feel genuinely inviting, each step of the script appears one gentle phrase at a time, and the pacing gives you a real moment to sit with each wish before the next one arrives."
+  },
+  {
+    "id": "q_scene_038_006",
+    "query_text": "Make a sleep meditation narration series as a mobile-first app that feels like someone dimmed the lights for you, with a dark dreamy visual, hushed typography, and a series of narrated sessions you can choose by mood or length, where each one eases you in slowly with a calming soundscape playing softly underneath the voice."
+  },
+  {
+    "id": "q_scene_038_007",
+    "query_text": "Build a pre-exam focus breathing calm app for my phone that looks clean and focused but still feels reassuring, with a single breathing animation front and center, a color palette of clear soft blues that feel sharp but not cold, and a short guided intro that sets the right mental tone before you tap to start the breathing cycle."
+  },
+  {
+    "id": "q_scene_038_008",
+    "query_text": "Need a grief processing gentle meditation app on my phone that feels genuinely unhurried and compassionate, with a soft natural color palette of muted greens and creams, slow flowing transitions between each guided moment, and narration that speaks to you like a kind friend rather than a wellness coach, giving you space to feel whatever comes up."
+  },
+  {
+    "id": "q_scene_038_009",
+    "query_text": "Build a nature soundscape ambient session player for my phone that feels immersive and beautifully designed, with lush illustrations that shift between forest, rain, and ocean scenes matching the selected sound, a dim minimal layout that keeps the visual distraction low, and a simple timer so you can set a session length and just let the sounds wash over you."
+  },
+  {
+    "id": "q_scene_038_010",
+    "query_text": "Make an anger release breathwork guide as a mobile app with a bold visual energy that matches the intensity of the practice, using deep warm tones like burnt orange and charcoal that feel strong rather than soft, a rhythm-driven animation that pulses with each powerful exhale, and short prompts between rounds that help you release tension and come back to calm."
+  },
+  {
+    "id": "q_scene_039_001",
+    "query_text": "A guided audio tour downloader for heritage sites as a mobile app, where I can search for a site by name or location, see a list of available audio tours for that place, tap to download the one I want before I leave home so I have it ready offline, and keep a library of everything I have downloaded sorted by destination so I can find them quickly on the day."
+  },
+  {
+    "id": "q_scene_039_002",
+    "query_text": "Make a taxi and rideshare price comparison tool for my phone that lets me enter my pickup and drop-off points at a travel destination and shows me a side-by-side list of estimated prices from local taxis and available rideshare apps, so I can quickly pick the best option without having to switch between separate apps to check each one."
+  },
+  {
+    "id": "q_scene_039_003",
+    "query_text": "Make a car rental pick-up and drop-off planner as a mobile app that lets me enter my rental details including the company, pick-up location, date and time, and return location and deadline, shows a clear summary of the full rental window, and lets me add notes like the fuel policy or any extras I paid for so I have everything in one place for the trip."
+  },
+  {
+    "id": "q_scene_039_004",
+    "query_text": "A travel health advisory tool for my phone where I can type in a destination and get a clear list of health-related things to know before I go, like recommended vaccinations, any current disease alerts, food and water safety tips, and whether I need travel insurance for medical coverage, all organized neatly so I can tick through the list before I pack."
+  },
+  {
+    "id": "q_scene_039_005",
+    "query_text": "Make a travel safety score and advisory mobile app where I can type in any destination and instantly see a safety rating for that place along with a short list of current advisories, things to be aware of in specific neighborhoods, and any emergency contact numbers I should save, so I always feel informed and prepared before and during the trip."
+  }
+]

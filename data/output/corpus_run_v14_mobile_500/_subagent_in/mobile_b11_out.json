@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_029_006",
+    "query_text": "Create a household chore assignment manager app for my phone that lets me add all the chores that need doing each week, assign them to different people in the house, and check them off once done. I want each person to see their own list when they open it, and I need a simple way to rotate who does what each week so I stop being the one who always cleans the bathroom."
+  },
+  {
+    "id": "q_scene_029_007",
+    "query_text": "A client deliverable milestone checklist app for mobile where I can set up each project, add all the things that need to be handed over, and tick them off one by one as they get done. Each milestone should show the due date and who is responsible, so when my boss asks for a status update I can just pull up my phone and tell them exactly where things stand instead of digging through emails."
+  },
+  {
+    "id": "q_scene_029_008",
+    "query_text": "Create a weekly review and planning app for my phone that helps me look back at what I actually finished, write down what went sideways, and then lay out the key things I want to get done next week. I want a simple two-part layout, one part for reviewing the week that just ended and one part for planning the week ahead, so I can stop carrying everything in my head and actually feel like I have a plan."
+  },
+  {
+    "id": "q_scene_029_009",
+    "query_text": "Make a quick-capture and sort-out app for my phone where I can dump every random thing on my mind into one inbox with a single tap, then go through each item and decide what to do with it, like turn it into a task, move it to a someday list, or just delete it. I hate having half my brain taken up by stuff I might forget, so I need a really fast way to get thoughts out of my head and decide where they belong."
+  },
+  {
+    "id": "q_scene_029_010",
+    "query_text": "Build a legal case action steps manager app for my phone that lets me track every step I need to take for each case I am handling, set deadlines for each action, and mark things done as I go. I want to be able to group the steps under each case name so when I am in a meeting I can pull up my phone and instantly see what still needs to happen and when, instead of trying to remember everything or hunting through my notes."
+  },
+  {
+    "id": "q_scene_030_001",
+    "query_text": "A 5-minute sprint timer app for my phone that you just open and hit start, no setup needed, and it counts down a tight five-minute burst with a loud alert at the end. I want a big clear countdown number on screen so I can glance at it from across my desk, and maybe a counter that tracks how many sprints I have done today, because sometimes all I need is to trick myself into starting for just five minutes."
+  },
+  {
+    "id": "q_scene_030_002",
+    "query_text": "Build a focus timer app for my phone where the main screen shows a big start button and a countdown so I can kick off a timed work session in one tap without having to dig through settings first. I want to be able to set a custom length before I start, and have it buzz my phone when time is up, because half the time I waste ten minutes just deciding whether to start and I need something that removes all the friction."
+  },
+  {
+    "id": "q_scene_030_003",
+    "query_text": "Build a 25/5 focus timer app for my phone that runs a 25-minute work block and then automatically switches to a 5-minute rest, then goes back to work, cycling through until I stop it. I want a big countdown showing which phase I am in, work or rest, and a small counter showing how many rounds I have done in one sitting, because I keep losing track of how long I have been working and this would help me pace myself."
+  },
+  {
+    "id": "q_scene_030_004",
+    "query_text": "A 90-minute deep focus timer app for my phone with a clean full-screen countdown and nothing else showing, so I can lock in and stop checking the time every few minutes. The timer should buzz or ring at the end, and ideally it should be possible to type in a short note about what I am working on before starting so I remember why I sat down in the first place. For me this is purely about carving out a real long block of focused time and actually sticking to it."
+  },
+  {
+    "id": "q_scene_030_005",
+    "query_text": "Make a study subject rotation app for my phone that lets me add all the subjects I am studying, set a time for each one, and then cycle through them automatically so I spend equal time on each and actually review everything instead of getting stuck on one subject all evening. I want it to show me which subject is up now and which comes next, with a buzzer between each switch, because I always end up spending two hours on the same topic and ignoring the rest."
+  },
+  {
+    "id": "q_scene_030_006",
+    "query_text": "Build a pair work rotation timer app for my phone that tracks two people taking turns on a shared task, counts down each person's turn, and then rings to signal the switch. I want it to show each person's name and how much time they have left in their current turn, with a clear sound when it is time to swap, because right now we just guess and one person always ends up doing most of the hands-on work without realizing it."
+  },
+  {
+    "id": "q_scene_030_007",
+    "query_text": "Make a meeting time keeper app for my phone that lets me enter how long the whole meeting should run and set a time limit for each person's turn to speak, then counts down visibly so everyone can see how much time is left. I want a one-tap way to move to the next person and a clear warning when we are running over, because our remote team calls always go way over time and nobody wants to be the one to say something."
+  },
+  {
+    "id": "q_scene_030_008",
+    "query_text": "Create a 10-minute language drill timer app for my phone that I can use for short focused practice sessions, where I tap start and it counts down exactly 10 minutes with a gentle buzz at the end. I want to be able to type in which language or topic I am drilling before I start, and see a log of past sessions so I can tell whether I am actually keeping up my daily practice or just telling myself I am."
+  },
+  {
+    "id": "q_scene_030_009",
+    "query_text": "Need a work break reminder app for my phone that nudges me to stop and rest at regular intervals throughout the day, like every hour or so, and suggests a quick thing to do on each break such as stretch, drink water, or step away from my screen for a bit. I want to be able to set the interval myself and have it actually buzz my phone even when the screen is locked, because I routinely work straight through for four hours and feel terrible afterward."
+  },
+  {
+    "id": "q_scene_030_010",
+    "query_text": "Create a classroom activity timer app for my phone that lets a teacher set the time for each part of a lesson, like group work, discussion, or solo reading, then countdown each activity and ring when it is time to move on. I want a big visible countdown so students in the back can see it too, and a way to tap to the next activity without having to retype everything, because constantly looking at my watch mid-lesson breaks the flow for everyone."
+  },
+  {
+    "id": "q_scene_031_001",
+    "query_text": "Need a yearly roadmap planner app for my phone where I can lay out my main goals across the whole year, break them down into quarters, and add specific milestones under each one. I want to see all twelve months at a glance on one screen so I can spot when things pile up, and tap into any month to see the details. Having everything mapped out on my phone instead of scattered across notebooks would make me feel so much more on top of things."
+  },
+  {
+    "id": "q_scene_031_002",
+    "query_text": "Build a team availability planner app for my phone that makes it easy for everyone to mark when they are free each week so we can figure out the best time for our daily stand-up without going back and forth in chat. I want each person to tap their free slots on a simple grid, and then the app shows which times overlap for the whole group, because right now scheduling even a 15-minute check-in turns into a whole conversation that takes longer than the meeting itself."
+  },
+  {
+    "id": "q_scene_031_003",
+    "query_text": "Make a personal weekly schedule planner app for my phone where I can lay out my whole week day by day, add time blocks for work, errands, exercise, and whatever else I need to fit in, and check things off as the day goes. I want to be able to plan Monday through Sunday in one place and see the whole week at a glance, because I keep double-booking myself or forgetting things I said I would do and then scrambling to catch up."
+  },
+  {
+    "id": "q_scene_031_004",
+    "query_text": "Need a conference schedule app for my phone that lets me enter all the sessions and events for a conference or event day, see them in a clear time-ordered list, and tap each one to see the details like location and speaker. I want to be able to star the sessions I plan to attend and get a reminder a few minutes before each one starts, because I always end up missing something I wanted to see because I was too busy talking to someone."
+  },
+  {
+    "id": "q_scene_031_005",
+    "query_text": "Need an academic semester calendar app for my phone where I can enter all my classes, assignment due dates, and exam dates for the whole semester and see them laid out month by month. I want to tap on any day to see what is due and be able to add notes like which chapters to review, because every semester I lose track of deadlines until they sneak up on me and then I am pulling all-nighters that could have been avoided."
+  },
+  {
+    "id": "q_scene_031_006",
+    "query_text": "A sprint and release cycle planner app for my phone that shows all the current sprints laid out on a timeline with their start and end dates, what is supposed to ship in each one, and a simple indicator of whether each sprint is on track, late, or done. I want to be able to scroll through past and upcoming sprints in one place on my phone so when someone asks about a release date I can just check quickly instead of having to find my laptop."
+  },
+  {
+    "id": "q_scene_031_007",
+    "query_text": "A healthcare appointment tracker app for my phone where I can add every upcoming doctor, dentist, or specialist visit with the date, time, clinic name, and any prep notes I need to remember, then see them all sorted by date in a list. I want a reminder the day before each appointment, because I keep mixing up dates or forgetting what I was supposed to bring, and missing a medical appointment is not something I want to do."
+  },
+  {
+    "id": "q_scene_031_008",
+    "query_text": "Make a world clock app for my phone that shows the current time in several cities at once, so I can pick which cities to add from a list and have them all displayed together on one screen. I want each city to show a clear local time and a small note on whether they are ahead or behind my own timezone, because I am always doing quick mental math to figure out if it is a decent hour to call a colleague and I always get it wrong."
+  },
+  {
+    "id": "q_scene_031_009",
+    "query_text": "Build a legal deadline tracker app for my phone that lets me enter court dates and filing deadlines for each case, with the case name and a countdown showing how many days are left. I want the app to sort everything by urgency so the most urgent dates show up at the top, and send me a reminder a week before and the day before each deadline, because missing a court date has consequences I really cannot afford."
+  },
+  {
+    "id": "q_scene_031_010",
+    "query_text": "Make a content publishing calendar app for my phone where I can plan out what I am posting and when, add the platform, topic, and status for each piece of content, and see everything laid out by week or month. I want to be able to update the status on my phone the moment something goes live, and see at a glance what is coming up next so I stop scrambling at the last minute trying to figure out what I am supposed to be working on."
+  }
+]

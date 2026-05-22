@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_006_001",
+    "query_text": "Make a smart home setup app for my phone where I can pair new devices one by one and then assign each one to a specific room in my place, like bedroom or kitchen, so everything ends up organized and I can actually find which device is where without digging through a messy list."
+  },
+  {
+    "id": "q_scene_006_002",
+    "query_text": "Create a subscription manager app for mobile where I can add new content sources, like newsletters or blogs, and for each one pick how often I want updates, daily, weekly, or monthly, so I can keep track of what I follow and make sure I'm only getting things at the pace that works for me."
+  },
+  {
+    "id": "q_scene_006_003",
+    "query_text": "Make a forum app for my phone where I can start a new discussion thread, write out what I want to talk about, and pick one or more topic categories to attach to it so other people can find it easily, with the category list right there on the same screen when I'm writing."
+  },
+  {
+    "id": "q_scene_006_004",
+    "query_text": "Need a community event planner app for mobile where organizers can set up an event with a title, date, and a set number of spots available, then people can grab a ticket right there in the app, and once all the spots fill up the registration closes on its own so nobody oversigns."
+  },
+  {
+    "id": "q_scene_006_005",
+    "query_text": "Need a language flashcard app for my phone where I can build a new vocabulary deck by adding words and their meanings one at a time, and the app keeps a review schedule that spaces out when each card comes back so I'm practicing things right before I'd normally forget them."
+  },
+  {
+    "id": "q_scene_006_006",
+    "query_text": "Build a stock tracker app for mobile where I can add tickers to a personal watchlist and for each one set a price level I care about, so the app shows me a clear alert on that stock's entry whenever the price hits the number I picked, keeping everything in one easy place."
+  },
+  {
+    "id": "q_scene_006_007",
+    "query_text": "A leave request tool for the phone where an employee can fill in the dates, pick the leave type, attach any supporting paperwork like a doctor's note or approval letter, and also add the name of whoever is covering their work while they're out, all in one clean flow before submitting."
+  },
+  {
+    "id": "q_scene_006_008",
+    "query_text": "Build a mobile insurance claim app where I can start a new claim by filling in what happened, then snap and upload photos of the damage straight from my phone camera as evidence, with each photo showing a small thumbnail so I can confirm I attached the right ones before I hit submit."
+  },
+  {
+    "id": "q_scene_006_009",
+    "query_text": "Build a property inspection app for mobile where I can go through a checklist of things to check in a unit, and for each item I can mark how bad the issue is on a simple scale from minor to serious, so at the end I get a quick summary showing which problems need urgent attention."
+  },
+  {
+    "id": "q_scene_006_010",
+    "query_text": "Create a grant application tool for my phone where I can start a new submission by filling in the project name, description, and requested amount, then attach any supporting files like a budget sheet or proposal doc, so the whole thing is ready to send without needing to jump between different apps."
+  },
+  {
+    "id": "q_scene_007_001",
+    "query_text": "Create a class schedule manager app for my phone so I can go in and change a class time or swap the room it meets in, and if that change creates a clash, like the same instructor or same room booked twice, the app flags it right away so I can fix it before saving and avoid the headache later."
+  },
+  {
+    "id": "q_scene_007_002",
+    "query_text": "Build a routine manager app for mobile where I can edit the conditions of any automated routine I have set up, and before I actually save the changes the app shows me a plain summary of what else will be affected, so I know upfront if tweaking one thing breaks something else I depend on."
+  },
+  {
+    "id": "q_scene_007_003",
+    "query_text": "Create a checkout flow app for my phone where I can move through each step separately, updating my delivery address on one screen and then switching my payment method on the next, so I can fix whatever needs changing without having to redo the whole order from scratch every single time."
+  },
+  {
+    "id": "q_scene_007_004",
+    "query_text": "Make a blog manager app for mobile where I can pull up any post and quickly update the title it shows in search results, the short description that appears under it, and the URL link for that post, so search engines pick up the right info and I stop having default or broken values sitting there."
+  },
+  {
+    "id": "q_scene_007_005",
+    "query_text": "A shared writing tool for my phone where multiple people can edit the same document at the same time, and if two people change the same part the app surfaces both versions side by side so I can pick which one to keep or combine them, saving me from losing work or overwriting someone else's changes."
+  },
+  {
+    "id": "q_scene_007_006",
+    "query_text": "Create a product manager app for mobile where I can select a whole group of items at once and update shared details like price, category, or size options across all of them in one go, instead of opening each item one by one, because doing that for dozens of products is a total time sink."
+  },
+  {
+    "id": "q_scene_007_007",
+    "query_text": "Need a performance review app for my phone that lets managers open an employee's review, update the ratings and written feedback, and leave comments back and forth with the employee in a running thread right on the same screen, so everything stays in one place and nothing gets buried in separate emails."
+  },
+  {
+    "id": "q_scene_007_008",
+    "query_text": "A car maintenance logger for my phone where I can find a past service record and update it with the current mileage reading, add notes about what was done this time, and save it so I always have a clean history of what happened to my car and when, sorted by the mileage I entered."
+  },
+  {
+    "id": "q_scene_007_009",
+    "query_text": "Make a lease renewal app for my phone where I can review the current contract terms and propose changes to things like the monthly rent or lease length, and the landlord side can see my suggested edits and respond to each one, so we can go back and forth and settle on the final version before signing."
+  },
+  {
+    "id": "q_scene_007_010",
+    "query_text": "Make a sprint planning app for my phone where I can open any task in the backlog and quickly change the effort estimate to a number that better reflects the actual work involved, so the whole list stays accurate and the team can see the updated totals right away without waiting for the next meeting."
+  },
+  {
+    "id": "q_scene_008_001",
+    "query_text": "A social feed app for mobile where I can type in a topic or hashtag and get a list of all the posts tagged with it, with the matching label highlighted in each result so I can spot the relevant ones fast, and I can tap another label in any result to keep drilling into related topics without going back to the start."
+  },
+  {
+    "id": "q_scene_008_002",
+    "query_text": "Need a document search app for my phone that lets me type a question or idea in plain words, not just exact phrases, and then shows me the relevant passages from my files with the matching parts highlighted in the text so I can actually read the context and figure out which result is the one I was looking for."
+  },
+  {
+    "id": "q_scene_008_003",
+    "query_text": "Create a photo search tool for mobile where I can take a picture of something with text in it, like a sign, a receipt, or a page, and the app reads the text from the image and pulls up other stored photos that contain similar words, so I can find things by what's written on them instead of trying to remember filenames."
+  },
+  {
+    "id": "q_scene_008_004",
+    "query_text": "A file finder app for my phone where I can search across deeply nested folders and the results show me exactly where each file lives as a trail of folder names I can tap to jump to any level, so I know the full path to what I found and can get back to the right folder without hunting around manually."
+  },
+  {
+    "id": "q_scene_008_005",
+    "query_text": "Build a code reference app for mobile where I can type the name of a function or variable and get a list of all the places in the codebase where it's defined or used, with each result showing the file name and a snippet of the surrounding lines so I can jump straight to the right spot without scrolling through everything."
+  }
+]

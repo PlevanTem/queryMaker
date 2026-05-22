@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "last_updated": "2026-05-21T03:07:43.365Z",
+  "last_updated": "2026-05-21T07:00:41.684Z",
   "usage": {
     "① Adding & Creating": {
       "Recipe step-by-step creation wizard with ingredient input": 1,
@@ -25,7 +25,17 @@
       "Project kickoff form with team invite and phase timeline": 1,
       "Medical appointment scheduler with provider search": 1,
       "Subscription enrollment with side-by-side plan comparison": 1,
-      "Report template creation with data-source binding": 1
+      "Report template creation with data-source binding": 1,
+      "Smart home device pairing and room assignment flow": 1,
+      "Subscription content source add with frequency preference": 1,
+      "Forum discussion thread starter with category tagging": 1,
+      "Community event with ticketing and capacity limit": 1,
+      "Language deck creation with spaced-repetition schedule": 1,
+      "Investment watchlist ticker add with price alert": 1,
+      "HR leave request with document and coverage attach": 1,
+      "Insurance claim with photo evidence upload": 1,
+      "Property inspection checklist with severity scoring": 1,
+      "Grant application new submission with file attach": 1
     },
     "② Editing & Updating": {
       "Inline text field edit with auto-save and change indicator": 1,
@@ -50,7 +60,17 @@
       "Tag rename applied globally across all linked items": 1,
       "Schedule edit with conflict detection and suggestion": 1,
       "Health record correction with doctor approval workflow": 1,
-      "Multi-language content update with translation sync panel": 1
+      "Multi-language content update with translation sync panel": 1,
+      "Class schedule edit with room and instructor conflict alert": 1,
+      "Routine condition edit with impact summary before save": 1,
+      "Multi-step checkout delivery address and payment edit": 1,
+      "Blog post SEO metadata and slug update": 1,
+      "Shared document collaborative edit with conflict resolve": 1,
+      "Inventory SKU attributes bulk update form": 1,
+      "Employee performance review update with comment thread": 1,
+      "Vehicle maintenance record update with mileage": 1,
+      "Lease renewal contract terms negotiation edit": 1,
+      "Sprint backlog story point estimate update": 1
     },
     "③ Searching & Finding": {
       "Global keyword search with real-time animated suggestions": 1,
@@ -75,7 +95,17 @@
       "Conversation and chat history keyword search": 1,
       "Multi-language input auto-detect search": 1,
       "Fuzzy person or contact name search with phonetic match": 1,
-      "Ingredient-based recipe match search": 1
+      "Ingredient-based recipe match search": 1,
+      "Hashtag and topic label search in social feed": 1,
+      "Document semantic search with passage highlight result": 1,
+      "In-app OCR text recognition image search": 1,
+      "Nested folder deep search with breadcrumb path": 1,
+      "Code symbol and function IDE-style search": 1,
+      "Social platform username and profile search": 1,
+      "Transaction merchant category and amount search": 1,
+      "Knowledge graph concept relationship explorer": 1,
+      "Podcast transcript full-text keyword search": 1,
+      "Property deed and public record search": 1
     },
     "④ Selecting & Choosing": {
       "Single-item radio selection with expanded detail preview": 1,
@@ -100,7 +130,17 @@
       "Font family selector with live text preview": 1,
       "Template gallery selection with full preview and apply": 1,
       "Subscription plan comparison table with selection CTA": 1,
-      "Venue seat map selection with availability color": 1
+      "Venue seat map selection with availability color": 1,
+      "Filter preset selection with apply and save option": 1,
+      "Priority level selection with color and urgency label": 1,
+      "Preferred notification channel multi-select": 1,
+      "Insurance deductible and tier selection": 1,
+      "Dashboard card metric arrangement drag select": 1,
+      "Report visualization type chooser": 1,
+      "Background music mood selection for video": 1,
+      "Accessibility text size and contrast chooser": 1,
+      "Academic course selection with credit count": 1,
+      "Investment risk appetite profile selector": 1
     },
     "⑤ Filtering & Sorting": {
       "Faceted filter panel with collapsible category groups": 1,
@@ -125,7 +165,17 @@
       "Content type filter in media browser (image/video/audio)": 1,
       "Language and region filter for global content feed": 1,
       "Dietary restriction multi-filter for food discovery": 1,
-      "Sensor threshold filter with numeric input in IoT": 1
+      "Sensor threshold filter with numeric input in IoT": 1,
+      "Saved audience segment filter in analytics report": 1,
+      "Filter with pin-to-top result and sticky header": 1,
+      "Customer segment filter by lifetime value": 1,
+      "Research library filter by impact factor": 1,
+      "Medical symptom filter by severity and onset": 1,
+      "Compliance document filter by jurisdiction": 1,
+      "Marketplace listing filter by seller rating": 1,
+      "Portfolio asset class and region filter": 1,
+      "Leaderboard rank filter by region and age": 1,
+      "Support queue filter by SLA urgency": 1
     },
     "⑥ Deleting & Removing": {
       "Swipe-left delete with immediate undo snackbar": 1,
@@ -150,7 +200,17 @@
       "Delete project with sub-task archive prompt": 1,
       "Remove cart item with save-for-later shortcut": 1,
       "Message recall within time window with seen-status warning": 1,
-      "Delete annotation on shared document with comment thread": 1
+      "Delete annotation on shared document with comment thread": 1,
+      "Remove integration with OAuth token revocation confirmation": 1,
+      "Detach media from post while keeping post text intact": 1,
+      "Scheduled post cancel and move to draft": 1,
+      "Friend request decline with block option": 1,
+      "Subscription pause with refund grace period": 1,
+      "Selective app data reset with category picker": 1,
+      "Co-author write permission revoke from document": 1,
+      "Alert rule deactivate with archive keep": 1,
+      "Referral code expire and batch deactivate": 1,
+      "Linked bank account unlink with balance confirm": 1
     },
     "⑦ Editing Profile": {
       "Display name and username change with real-time availability check": 1,
@@ -175,7 +235,17 @@
       "Profile theme and color accent picker with live preview": 1,
       "Personal data download request and export status": 1,
       "Account deletion with data-wipe confirmation steps": 1,
-      "Email change with reverification and rollback grace period": 1
+      "Email change with reverification and rollback grace period": 1,
+      "Pronouns and custom identity field with free input": 1,
+      "Emergency contact and health profile setup wizard": 1,
+      "Nonprofit volunteer cause and skills profile": 1,
+      "Legal professional bar registration profile": 1,
+      "Telemedicine patient health baseline history": 1,
+      "Religious community member role profile": 1,
+      "Personal finance budget persona profile": 1,
+      "Expat community home city and language profile": 1,
+      "Online marketplace buyer trust score profile": 1,
+      "Performing arts ensemble role and audition": 1
     },
     "⑧ Uploading & Downloading": {
       "Single file pick with upload progress ring and cancel": 1,
@@ -200,7 +270,17 @@
       "Download history with one-tap re-download option": 1,
       "ZIP archive download for selected file set": 1,
       "Media download with quality selector (4K / HD / SD)": 1,
-      "Invoice and receipt PDF batch export": 1
+      "Invoice and receipt PDF batch export": 1,
+      "Attachment download from message thread list": 1,
+      "Sync-on-Wi-Fi-only setting with manual override": 1,
+      "Legal contract digital signature upload flow": 1,
+      "Survey image-response photo capture upload": 1,
+      "Academic thesis multi-file submission upload": 1,
+      "Field inspection GPS-geotagged photo upload": 1,
+      "Smart meter data export CSV download": 1,
+      "Manufacturing QA inspection report export": 1,
+      "Immigration visa document upload checklist": 1,
+      "Social media scheduled batch media upload": 1
     },
     "⑨ Copying & Duplicating": {
       "Duplicate task with independent progress state": 1,
@@ -225,7 +305,17 @@
       "Duplicate saved filter with modified condition": 1,
       "Mirror schedule to secondary calendar with color": 1,
       "Reorder with one-tap copy from previous order": 1,
-      "Duplicate flashcard deck for grammar variant study": 1
+      "Duplicate flashcard deck for grammar variant study": 1,
+      "Clone alert rule for different metric threshold": 1,
+      "Copy config from staging to production environment": 1,
+      "Tax filing prior-year data copy and prefill": 1,
+      "Sprint retrospective template board clone": 1,
+      "Customer journey map stage duplicate": 1,
+      "Loyalty tier benefit structure copy and adjust": 1,
+      "Production environment config copy to staging": 1,
+      "Product bundle copy with new pricing": 1,
+      "Invoice line item copy to new invoice": 1,
+      "Shift rotation weekly pattern duplicate": 1
     },
     "⑩ Misc": {
       "Onboarding walkthrough with skip-and-resume progress": 1,
@@ -250,7 +340,17 @@
       "Force update prompt with changelog accordion": 1,
       "Session timeout warning with extend-session option": 1,
       "Inline bug report form with screenshot attach": 1,
-      "Data sync conflict resolution picker dialog": 1
+      "Data sync conflict resolution picker dialog": 1,
+      "In-app purchase paywall with free-trial option": 1,
+      "Accessibility audit result and quick-fix panel": 1,
+      "Face ID and fingerprint biometric enrollment": 1,
+      "Home screen widget add and resize": 1,
+      "Accessibility feature onboarding wizard": 1,
+      "App permissions audit and revoke manager": 1,
+      "Bluetooth device pairing and name assignment": 1,
+      "Calendar external account sync setup": 1,
+      "Cross-platform data import and mapping flow": 1,
+      "Deep link disambiguation destination chooser": 1
     },
     "① 计算器/换算器": {
       "Currency converter with live exchange rates": 1,
@@ -280,7 +380,19 @@
       "Blood alcohol content estimator": 1,
       "Ohm Law Electrical Resistance Calculator": 1,
       "Molecular Weight Chemistry Calculator": 1,
-      "Real Estate Cap Rate Investment Calculator": 1
+      "Real Estate Cap Rate Investment Calculator": 1,
+      "Payroll Gross-to-Net Salary Calculator": 1,
+      "Foreign Currency Real-Time Rate Converter": 1,
+      "Body Frame Size BMI Variant Calculator": 1,
+      "Fuel Efficiency MPG to Liter Converter": 1,
+      "Lumber Volume Board Feet Calculator": 1,
+      "Road Trip Fuel Cost Estimator": 1,
+      "Cooking Measurement US to Metric Converter": 1,
+      "Retirement Withdrawal Safe Rate Calculator": 1,
+      "Time Zone Meeting Scheduler Tool": 1,
+      "Photo Print DPI Resolution Calculator": 1,
+      "Knitting Yarn Yardage Estimator": 1,
+      "Musical BPM and Time Signature Helper": 1
     },
     "② 生活记录器": {
       "Daily mood tracker with emoji and freetext note": 1,
@@ -310,7 +422,19 @@
       "Memory box voice note recorder": 1,
       "Daily Mood and Energy Level Journal": 1,
       "Gratitude Three-Things Daily Log": 1,
-      "Coffee and Caffeine Intake Tracker": 1
+      "Coffee and Caffeine Intake Tracker": 1,
+      "Book Reading Pages Progress Tracker": 1,
+      "Screen Time App Category Logger": 1,
+      "Personal Finance Cash Flow Daily Log": 1,
+      "Symptom and Medication Side Effect Journal": 1,
+      "Baby Feeding and Diaper Change Log": 1,
+      "Social Interaction Quality Diary": 1,
+      "Weather and Outfit Daily Match Log": 1,
+      "Focus Session Deep Work Log": 1,
+      "Language New Words Learned Daily": 1,
+      "Home Chore Completion Habit Log": 1,
+      "Sleep Quality Subjective Rating Log": 1,
+      "Daily Step and Active Minutes Recorder": 1
     },
     "③ 社交辅助": {
       "Random icebreaker question generator for groups": 1,
@@ -339,7 +463,18 @@
       "Awkward silence recovery phrase bank": 1,
       "Compliment-a-day habit reminder": 1,
       "Icebreaker Question Generator for Events": 1,
-      "Social Anxiety Conversation Prompt Card": 1
+      "Social Anxiety Conversation Prompt Card": 1,
+      "LinkedIn Connection Message Personalizer": 1,
+      "Thank-You Note Template Generator": 1,
+      "Apology Message Builder and Tone Checker": 1,
+      "Gift Recommendation by Personality Type": 1,
+      "Party Guest Introduction Card Generator": 1,
+      "Long-Distance Friendship Activity Planner": 1,
+      "Social Media Caption and Emoji Generator": 1,
+      "Difficult Conversation Script Builder": 1,
+      "Networking Event Pre-Meeting Prep Kit": 1,
+      "Holiday Card Message Creator": 1,
+      "Team Building Activity Idea Suggester": 1
     },
     "④ 倒计时/纪念日": {
       "Wedding countdown with vendor checklist integration": 1,
@@ -368,7 +503,18 @@
       "Weight-loss goal date tracker": 1,
       "Habit formation 21-day countdown": 1,
       "Baby Due Date Countdown Widget": 1,
-      "Final Exam Study D-Day Countdown": 1
+      "Final Exam Study D-Day Countdown": 1,
+      "Event Ticket Show Countdown Timer": 1,
+      "Retirement Age Years-Left Counter": 1,
+      "Sports Season Opening Countdown": 1,
+      "Bar or Board Exam Prep Countdown": 1,
+      "Visa Immigration Status Deadline Tracker": 1,
+      "Sobriety Clean Days Milestone Counter": 1,
+      "Military Deployment Return Countdown": 1,
+      "Apartment Lease Renewal Date Tracker": 1,
+      "Product Launch Date Countdown Page": 1,
+      "Album or Book Release Countdown": 1,
+      "Space Mission Launch Event Countdown": 1
     },
     "⑤ 文本处理": {
       "Language translator with dialect selector": 1,
@@ -396,7 +542,18 @@
       "Rhyme finder for songwriting assistance": 1,
       "Roman numeral to decimal converter": 1,
       "Emoji description and codepoint lookup": 1,
-      "Text Case Converter UPPER lower Title": 1
+      "Text Case Converter UPPER lower Title": 1,
+      "Word and Character Count with Density": 1,
+      "Duplicate Line and Phrase Remover": 1,
+      "Text Diff Side-by-Side Comparison": 1,
+      "Email Subject Line A/B Tester": 1,
+      "JSON CSV YAML Formatter and Validator": 1,
+      "Regular Expression Builder and Tester": 1,
+      "Spell Check and Grammar Corrector": 1,
+      "Text Summarizer Key Points Extractor": 1,
+      "Secure Password Strength Generator": 1,
+      "Markdown to HTML Converter": 1,
+      "Readability Flesch Score Checker": 1
     },
     "⑥ 随机生成器": {
       "Baby name generator by origin, meaning and popularity": 1,
@@ -424,7 +581,18 @@
       "Random documentary or film picker": 1,
       "Weekend plan adventure randomizer": 1,
       "Random language word-of-the-day picker": 1,
-      "Dinner Menu Random Spin Wheel": 1
+      "Dinner Menu Random Spin Wheel": 1,
+      "Workout Exercise Random Picker": 1,
+      "Movie Genre and Film Random Selector": 1,
+      "Baby Name Random Generator": 1,
+      "Random Color Palette Brand Creator": 1,
+      "Story Prompt and Writing Idea Generator": 1,
+      "Random Team Tournament Bracket Builder": 1,
+      "Trivia Question Category Picker": 1,
+      "Vacation Destination Roulette Wheel": 1,
+      "Random Acts of Kindness Daily Suggester": 1,
+      "Board Game Scenario and Event Generator": 1,
+      "Dice Roll and Coin Flip Simulator": 1
     },
     "⑦ 无障碍辅助": {
       "High-contrast mode with customizable color pair": 1,
@@ -452,7 +620,18 @@
       "Photo alternative text auto-generator": 1,
       "Keyboard-only navigation mode": 1,
       "Navigation landmark and region indicator": 1,
-      "Real-Time Screen Reader Voice Narration": 1
+      "Real-Time Screen Reader Voice Narration": 1,
+      "Image Alt Text Auto-Describer AI": 1,
+      "Live Caption Generator for Audio and Video": 1,
+      "One-Hand Swipe Operation Mode Toggle": 1,
+      "High Contrast and Colorblind Palette Mode": 1,
+      "Large Text and Dyslexia Friendly Font": 1,
+      "Voice-to-Command Navigation Map": 1,
+      "Eye-Gaze Cursor Navigation Mode": 1,
+      "Tremor Filter Touch Stabilizer Setting": 1,
+      "Sign Language Webcam Interpreter": 1,
+      "Simplified Vocabulary Reading Mode": 1,
+      "Predictive AAC Symbol Communication Board": 1
     },
     "⑧ 其他长尾微工具": {
       "Parking meter timer with move-car push alert": 1,
@@ -480,7 +659,18 @@
       "Shake-to-random action shortcut widget": 1,
       "Screen mirroring and presentation companion": 1,
       "Star map and sky object identifier via AR": 1,
-      "Parking Location Quick Pin Saver": 1
+      "Parking Location Quick Pin Saver": 1,
+      "Pill and Capsule Photo Identifier": 1,
+      "Dream Journal and Symbol Glossary": 1,
+      "Geocache Location Field Logger": 1,
+      "Plant Disease Photo Diagnoser": 1,
+      "Home Wi-Fi Speed Tester Tool": 1,
+      "Ambient Noise dB Level Meter": 1,
+      "Star Gazing Constellation Finder": 1,
+      "QR Code Business Card Generator": 1,
+      "USB Cable and Port Type Identifier": 1,
+      "Car VIN Decoder and History Lookup": 1,
+      "Local Sunrise and Sunset Clock": 1
     },
     "① 闪卡/单词记忆": {
       "English GRE vocabulary with usage sentences": 1,
@@ -506,7 +696,18 @@
       "ISO country code flashcard deck": 1,
       "NATO phonetic alphabet card": 1,
       "Business idiom and phrase card": 1,
-      "CSS property quick-reference card": 1
+      "CSS property quick-reference card": 1,
+      "Historical figure and contribution card": 1,
+      "Language Verb Conjugation Flashcards": 1,
+      "Medical Terminology Spaced Repetition Deck": 1,
+      "Legal Case Principle Memorization Cards": 1,
+      "Chemistry Periodic Element Symbol Cards": 1,
+      "History Date and Event Matching Cards": 1,
+      "GRE Vocabulary Retention Drill Deck": 1,
+      "World Capital and Country Flag Cards": 1,
+      "Sign Language Gesture Visual Card Set": 1,
+      "Music Theory Note and Chord Cards": 1,
+      "Programming Syntax and API Flashcard Deck": 1
     },
     "② 备考自测/刷题": {
       "IELTS reading comprehension mock test": 1,
@@ -532,7 +733,18 @@
       "DELF B2 French essay writing prompt": 1,
       "Citizenship civics naturalization quiz": 1,
       "EMT scenario and protocol drill": 1,
-      "High school physics formula application test": 1
+      "High school physics formula application test": 1,
+      "University entrance essay planning prompt": 1,
+      "SAT and ACT Full Practice Simulation": 1,
+      "IELTS TOEFL Writing Task Drill": 1,
+      "Medical License USMLE Question Bank": 1,
+      "State Bar Exam Law Practice Set": 1,
+      "CFA Level 1 Financial Exam Drill": 1,
+      "Data Science Interview Coding Question": 1,
+      "Driving Theory Test Simulation": 1,
+      "Civil Service Exam Section Practice": 1,
+      "Real Estate License State Question Bank": 1,
+      "Nursing NCLEX Practice Question Set": 1
     },
     "③ 学习打卡/进度追踪": {
       "30-day language learning streak calendar": 1,
@@ -558,7 +770,18 @@
       "Public speaking rehearsal session log": 1,
       "Academic research reading tracker": 1,
       "Finance self-study topic coverage map": 1,
-      "Recipe skill-unlock system": 1
+      "Recipe skill-unlock system": 1,
+      "Dance technique video milestone tracker": 1,
+      "Language CEFR Level Progress Dashboard": 1,
+      "Coding Bootcamp Daily Milestone Tracker": 1,
+      "Reading 52-Book Annual Challenge Log": 1,
+      "Fitness Instructor Certification Progress": 1,
+      "Online Course Module Completion Rate": 1,
+      "Guitar Practice Session Daily Logger": 1,
+      "Chess Rating Improvement Trend Chart": 1,
+      "Drawing Skill Daily Prompt Log": 1,
+      "30-Day Habit Formation Streak Tracker": 1,
+      "Creative Writing Daily Word Count Goal": 1
     },
     "④ 课程目录/课堂界面": {
       "Online course chapter list with completion checkmarks": 1,
@@ -584,7 +807,18 @@
       "Course recommendation based on completion history": 1,
       "Resume-where-I-left-off continue button": 1,
       "Glossary and term definition sidebar panel": 1,
-      "Peer-review assignment submission and rubric": 1
+      "Peer-review assignment submission and rubric": 1,
+      "Class schedule and module calendar view": 1,
+      "Online University Course Catalog Browser": 1,
+      "K-12 Subject Curriculum Map View": 1,
+      "Coding Bootcamp Module Track Guide": 1,
+      "Professional Certification Learning Path": 1,
+      "Language School Level Ladder Overview": 1,
+      "Music Academy Lesson Weekly Schedule": 1,
+      "Fitness Class Studio Timetable": 1,
+      "Corporate Training Catalog Browser": 1,
+      "Vocational Trade Skills Directory": 1,
+      "STEM Enrichment Module Explorer": 1
     },
     "⑤ 知识速查/公式表": {
       "Math formula cheatsheet (algebra, calculus, geometry)": 1,
@@ -610,7 +844,18 @@
       "First aid quick procedure card": 1,
       "Tax bracket and deduction reference": 1,
       "Sports scoring rule quick reference": 1,
-      "Machine learning model comparison table": 1
+      "Machine learning model comparison table": 1,
+      "Road sign meaning quick reference": 1,
+      "Physics Constants and Formula Quick Sheet": 1,
+      "Chemical Periodic Element Reference": 1,
+      "Grammar and Punctuation Rules Guide": 1,
+      "Cooking Temperature and Time Reference": 1,
+      "Medical Drug Interaction Reference Table": 1,
+      "Tax Bracket and Rate Calculator Sheet": 1,
+      "Musical Key Signature Chart Reference": 1,
+      "Legal Latin Terms and Phrases Index": 1,
+      "Sports Rules and Penalty Reference Card": 1,
+      "Stock Market Technical Indicator Cheat Sheet": 1
     },
     "① 待办清单/任务管理": {
       "GTD inbox capture with weekly review dashboard": 1,
@@ -635,7 +880,17 @@
       "Completed task archive with full-text search": 1,
       "Smart due-date suggestion from past behavior": 1,
       "Calendar-block creation from task deadline": 1,
-      "Habit task streak with streak-protection option": 1
+      "Habit task streak with streak-protection option": 1,
+      "Work backlog grooming with estimation": 1,
+      "Collaborative grocery and shopping list": 1,
+      "Daily Priority Triage Task Board": 1,
+      "Team Sprint Kanban Board": 1,
+      "Personal OKR Goal Breakdown Tracker": 1,
+      "Household Chore Assignment Manager": 1,
+      "Client Deliverable Milestone Checklist": 1,
+      "Weekly Review and Planning Template": 1,
+      "GTD Inbox Capture and Process Flow": 1,
+      "Legal Case Action Steps Manager": 1
     },
     "② 番茄钟/专注计时": {
       "Classic 25/5 pomodoro with session count log": 1,
@@ -660,7 +915,17 @@
       "Focus journal prompt at session end": 1,
       "Daily focus time goal and progress ring": 1,
       "Weekend vs weekday focus comparison chart": 1,
-      "Peak productivity time-of-day analyzer": 1
+      "Peak productivity time-of-day analyzer": 1,
+      "Ultra-short 5-minute dash sprint mode": 1,
+      "Home screen timer widget with quick start": 1,
+      "25/5 Pomodoro Focus Session Timer": 1,
+      "Deep Work 90-Minute Flow State Timer": 1,
+      "Study Subject Rotation Clock": 1,
+      "Pair Programming Rotation Switch Timer": 1,
+      "Remote Team Meeting Time Keeper": 1,
+      "Language 10-Minute Drill Sprint Timer": 1,
+      "Mindful Work Break Scheduler": 1,
+      "Classroom Activity Time Controller": 1
     },
     "③ 日程/倒计时": {
       "Daily schedule time-block drag-and-drop planner": 1,
@@ -685,7 +950,17 @@
       "Out-of-office auto-reply schedule setter": 1,
       "School timetable and class schedule viewer": 1,
       "Sports fixture and season calendar": 1,
-      "Subscription and renewal date reminder": 1
+      "Subscription and renewal date reminder": 1,
+      "Annual roadmap planning overview": 1,
+      "Availability broadcast for stand-up scheduling": 1,
+      "Personal Weekly Schedule Planner": 1,
+      "Conference and Event Day Schedule": 1,
+      "Academic Semester Calendar View": 1,
+      "Sprint and Release Cycle Timeline": 1,
+      "Healthcare Appointment Date Book": 1,
+      "Multi-Timezone World Clock Viewer": 1,
+      "Legal Court Date Deadline Tracker": 1,
+      "Content Publishing Calendar": 1
     },
     "④ 数据仪表盘/报表": {
       "Sales performance KPI real-time dashboard": 1,
@@ -710,7 +985,17 @@
       "Student performance and class average report": 1,
       "Event registration and attendance funnel": 1,
       "Quality defect rate trend analysis": 1,
-      "Content performance by category breakdown": 1
+      "Content performance by category breakdown": 1,
+      "Grant spending and budget compliance report": 1,
+      "Patient outcome and clinic dashboard": 1,
+      "Sales KPI Performance Dashboard": 1,
+      "Marketing Campaign ROI Analytics": 1,
+      "Personal Finance Spending Breakdown": 1,
+      "Team Velocity and Burndown Chart": 1,
+      "Social Media Engagement Metrics Board": 1,
+      "E-commerce Revenue Funnel View": 1,
+      "HR Headcount and Attrition Dashboard": 1,
+      "Customer Support SLA Tracker": 1
     },
     "⑤ 笔记/文档编辑": {
       "Daily note with auto-date header and tag": 1,
@@ -735,7 +1020,17 @@
       "Public share link with edit or view permission": 1,
       "Encrypted note with password protection": 1,
       "Note reminder and deadline attached": 1,
-      "SOP documentation with numbered steps": 1
+      "SOP documentation with numbered steps": 1,
+      "Knowledge base with wiki-style internal links": 1,
+      "Meeting transcript with auto-summary AI": 1,
+      "Daily Work Log Meeting Note": 1,
+      "Technical Documentation Writing Tool": 1,
+      "Meeting Minutes and Action Items": 1,
+      "Research Literature Review Note": 1,
+      "Personal Knowledge Wiki Builder": 1,
+      "Recipe Collection Digital Notebook": 1,
+      "Field Inspection Report Editor": 1,
+      "Legal Case Summary Note Organizer": 1
     },
     "① 饮水/服药/习惯提醒": {
       "Daily water intake goal with glass-tap log": 1,
@@ -760,7 +1055,17 @@
       "Cold shower habit streak tracker": 1,
       "10,000 steps daily walking nudge": 1,
       "Social connection habit (call a friend) reminder": 1,
-      "Journaling habit streak with guard option": 1
+      "Journaling habit streak with guard option": 1,
+      "Evening reflection satisfaction score": 1,
+      "Weekly habit audit and review prompt": 1,
+      "Daily Water Intake 8-Glass Tracker": 1,
+      "Prescription Pill Reminder and Refill Log": 1,
+      "Vitamin and Supplement Daily Reminder": 1,
+      "Post-Surgery Recovery Protocol Reminder": 1,
+      "Mental Health Self-Care Routine Check": 1,
+      "Daily Skincare Step Routine Reminder": 1,
+      "Diabetic Insulin Injection Schedule": 1,
+      "Stretching Break Desk Alert": 1
     },
     "② 运动记录/健身计划": {
       "Workout session log with sets, reps and weight": 1,
@@ -785,7 +1090,17 @@
       "Group fitness class schedule and booking": 1,
       "Wearable device sync and data import": 1,
       "Training block periodization planner": 1,
-      "Injury rehabilitation exercise tracker": 1
+      "Injury rehabilitation exercise tracker": 1,
+      "Competition prep countdown training plan": 1,
+      "Seasonal sport training log": 1,
+      "Strength Training Rep and Set Logger": 1,
+      "Marathon Weekly Training Plan Tracker": 1,
+      "CrossFit WOD Score and Record": 1,
+      "Cycling Route Distance and Speed Tracker": 1,
+      "Swimming Pool Lap Counter App": 1,
+      "Yoga Flow Session Sequence Logger": 1,
+      "Rock Climbing Route Grade Tracker": 1,
+      "Dance Choreography Practice Log": 1
     },
     "③ 体重/经期/睡眠追踪": {
       "Weight trend graph with goal overlay line": 1,
@@ -810,7 +1125,17 @@
       "Cycle symptom prediction and prep card": 1,
       "Heavy day and flow intensity log": 1,
       "Period pain level and intervention tracker": 1,
-      "Mood across cycle phase correlation chart": 1
+      "Mood across cycle phase correlation chart": 1,
+      "Weight and menstrual cycle pattern insight": 1,
+      "Sleep coaching programme milestone tracker": 1,
+      "Morning Weigh-In Trend Chart": 1,
+      "Menstrual Cycle and Fertile Window Calendar": 1,
+      "Sleep Quality and Stage Analysis": 1,
+      "Body Measurement Tape Record Log": 1,
+      "Intermittent Fasting Protocol Tracker": 1,
+      "Blood Glucose Level Daily Log": 1,
+      "Blood Pressure and Heart Rate Monitor": 1,
+      "Body Fat Percentage Progress Tracker": 1
     },
     "④ 健康数据看板": {
       "Daily vitals summary (heart rate, BP, SpO2, temp)": 1,
@@ -835,7 +1160,17 @@
       "UV exposure accumulated daily tracker": 1,
       "Weekly health goal completion report": 1,
       "Doctor visit and health event timeline": 1,
-      "Allergy trigger frequency log": 1
+      "Allergy trigger frequency log": 1,
+      "Health insurance claim and deductible tracker": 1,
+      "Preventive screening schedule reminder": 1,
+      "Comprehensive Vitals Overview Dashboard": 1,
+      "Mental Health Weekly Score View": 1,
+      "Nutrition Macro Balance Summary": 1,
+      "Fertility Cycle Status Overview": 1,
+      "Athletic Performance Trend Dashboard": 1,
+      "Chronic Condition Management Board": 1,
+      "Post-COVID Recovery Progress Tracker": 1,
+      "Elder Care Daily Health Summary": 1
     },
     "⑤ 冥想/呼吸练习": {
       "Guided body scan relaxation session": 1,
@@ -860,7 +1195,17 @@
       "Open awareness and presence meditation": 1,
       "Work stress decompression break routine": 1,
       "Child-friendly calm-down breathing game": 1,
-      "Couples synchronized breathing exercise": 1
+      "Couples synchronized breathing exercise": 1,
+      "Grief and loss compassion meditation": 1,
+      "Postpartum relaxation breathing guide": 1,
+      "4-7-8 Breathing Anxiety Relief Timer": 1,
+      "Box Breathing Stress Reset Guide": 1,
+      "Loving-Kindness Meditation Script": 1,
+      "Sleep Meditation Narration Series": 1,
+      "Pre-Exam Focus Breathing Calm": 1,
+      "Grief Processing Gentle Meditation": 1,
+      "Nature Soundscape Ambient Session": 1,
+      "Anger Release Breathwork Guide": 1
     },
     "① 行程规划器": {
       "Day-by-day multi-city itinerary builder": 1,
@@ -881,7 +1226,16 @@
       "Family-friendly POI filter for trip": 1,
       "Accessible travel route planner": 1,
       "Sustainable travel option highlighter": 1,
-      "Festival and event calendar overlay for destination": 1
+      "Festival and event calendar overlay for destination": 1,
+      "Guided audio tour download for heritage sites": 1,
+      "Taxi and rideshare price comparison at destination": 1,
+      "Car rental pick-up and drop-off planner": 1,
+      "Travel health advisory by destination": 1,
+      "Safety score and advisory display": 1,
+      "Trip highlight reel auto-compiled from photos": 1,
+      "City Hop Multi-Destination Planner": 1,
+      "Budget Backpacker Route Builder": 1,
+      "Family Road Trip Day-by-Day Planner": 1
     },
     "② 打包清单/旅行准备": {
       "Smart packing list by destination and forecast weather": 1,
@@ -902,7 +1256,16 @@
       "Airport transit checklist (passport, boarding pass, currency)": 1,
       "Destination-specific vaccination reminder": 1,
       "Pet travel requirement and document checklist": 1,
-      "Baby and toddler travel packing guide": 1
+      "Baby and toddler travel packing guide": 1,
+      "Photography gear travel checklist": 1,
+      "Travel insurance document preparation guide": 1,
+      "Customs duty limit by country reference": 1,
+      "Emergency kit and safety item reminder": 1,
+      "Eco-travel reusable item packing guide": 1,
+      "Cruise-specific requirement and packing guide": 1,
+      "Beach Vacation Packing Checklist": 1,
+      "Winter Ski Trip Gear List": 1,
+      "Business Trip Essentials Checklist": 1
     },
     "③ 地图/路线导航": {
       "Walking route with accessibility and step-free paths": 1,
@@ -923,7 +1286,16 @@
       "Pedestrian crossing and signal timing info": 1,
       "Border crossing wait time indicator": 1,
       "Public toilet finder along route": 1,
-      "Historical city overlay map for tourism": 1
+      "Historical city overlay map for tourism": 1,
+      "Green park and nature path route option": 1,
+      "Foreign street sign translation overlay": 1,
+      "Trail distance and elevation for hiking": 1,
+      "Crowd level indicator for tourist sites": 1,
+      "Railway platform and gate navigator": 1,
+      "Neighbourhood food and shop discovery walk": 1,
+      "Walking Tour Self-Guided City Map": 1,
+      "Cycling Path and Trail Navigator": 1,
+      "Scenic Road Trip Route Planner": 1
     },
     "④ 天气/实时信息查询": {
       "Hourly forecast with precipitation probability bar": 1,
@@ -944,7 +1316,16 @@
       "Festival and outdoor event weather suitability": 1,
       "Lightning strike map and thunderstorm alert": 1,
       "Wildfire smoke and ash advisory": 1,
-      "Destination weather comparison tool": 1
+      "Destination weather comparison tool": 1,
+      "Marine weather forecast for sailing": 1,
+      "Construction site daily weather briefing": 1,
+      "Running and cycling weather suitability score": 1,
+      "Fog and visibility alert for drivers": 1,
+      "Historical weather on a specific date lookup": 1,
+      "Seasonal climate normal and expectation": 1,
+      "7-Day Hyperlocal Forecast Widget": 1,
+      "Storm Alert and Lightning Tracker": 1,
+      "Air Quality AQI Live Monitor": 1
     },
     "⑤ 交通时刻/票价查询": {
       "Train timetable with seat class availability": 1,
@@ -965,7 +1346,16 @@
       "Funicular and cable car timetable": 1,
       "Long-distance coach departure board": 1,
       "Real-time arrival prediction digital board": 1,
-      "Multi-leg journey total price breakdown": 1
+      "Multi-leg journey total price breakdown": 1,
+      "Student and senior discount fare lookup": 1,
+      "Group ticket and pass bulk booking": 1,
+      "Cancellation and refund policy checker": 1,
+      "Accessibility-friendly transport filter": 1,
+      "Luggage storage and locker location finder": 1,
+      "Sleeper train berth class booking": 1,
+      "High-Speed Train Timetable Lookup": 1,
+      "Budget Airline Fare Comparison": 1,
+      "Ferry and Boat Schedule Finder": 1
     },
     "② 食物热量/升糖查询": {
       "Barcode scan calorie and nutrition lookup": 1,
@@ -985,7 +1375,15 @@
       "Diet plan comparison (keto, paleo, Mediterranean)": 1,
       "Alcohol calorie and sugar calculator": 1,
       "Fiber content ranking for gut health": 1,
-      "Anti-inflammatory food scoring tool": 1
+      "Anti-inflammatory food scoring tool": 1,
+      "Omega-3 and healthy fat food finder": 1,
+      "Sodium content alert for hypertension diet": 1,
+      "Iron and plant-based protein source finder": 1,
+      "Calcium and bone health food tracker": 1,
+      "Hydrating food water content reference": 1,
+      "Pre and post workout snack guide": 1,
+      "Seasonal superfood nutrition highlight": 1,
+      "Per-Serving Calorie Count Lookup": 1
     },
     "③ 菜谱生成/食材搭配": {
       "Pantry ingredient to recipe generator": 1,
@@ -1005,7 +1403,15 @@
       "Budget gourmet meal under $5 recipe": 1,
       "Slow cooker and instant pot adapter": 1,
       "Party appetizer and finger food builder": 1,
-      "Dessert pairing for main course": 1
+      "Dessert pairing for main course": 1,
+      "Fermentation and preservation recipe guide": 1,
+      "Vegan complete amino acid protein combo": 1,
+      "Restaurant copycat recipe creator": 1,
+      "Cocktail and mocktail ingredient pairing": 1,
+      "Sourdough and bread baking guide": 1,
+      "Ingredient flavor profile pairing chart": 1,
+      "Cold and warm food advisory guide": 1,
+      "30-Minute Weeknight Dinner Generator": 1
     },
     "④ 餐厅列表/点评浏览": {
       "Nearby restaurant map with cuisine filter": 1,
@@ -1025,7 +1431,15 @@
       "Ambiance and occasion tag filter (romantic, casual)": 1,
       "Chef profile and kitchen story": 1,
       "Loyalty stamp and reward display": 1,
-      "Seasonal menu update alert": 1
+      "Seasonal menu update alert": 1,
+      "Critic vs user review comparison": 1,
+      "Dish photo gallery spotlight": 1,
+      "Takeout and delivery option toggle": 1,
+      "Food allergy communication card generator": 1,
+      "Restaurant anniversary and history story": 1,
+      "Menu price trend alert": 1,
+      "Community dining event at venue": 1,
+      "Michelin Star Restaurant City Guide": 1
     },
     "① 文字猜谜/知识竞赛": {
       "Daily word guess (Wordle-style) challenge": 1,
@@ -1042,7 +1456,13 @@
       "Emoji story decode challenge": 1,
       "Spelling bee difficulty-level game": 1,
       "Language translation guess game": 1,
-      "Number sequence pattern quiz": 1
+      "Number sequence pattern quiz": 1,
+      "Famous painting and artist attribution quiz": 1,
+      "Logo and brand recognition quiz": 1,
+      "Sports stat and record trivia": 1,
+      "Music lyric fill-in-the-blank game": 1,
+      "Literature character identification quiz": 1,
+      "Mythology and legend character quiz": 1
     },
     "② 抽签/转盘/随机决策": {
       "Restaurant choice customizable spin wheel": 1,
@@ -1059,7 +1479,13 @@
       "Random kindness act picker": 1,
       "Party game activity selector": 1,
       "Date night idea spinner": 1,
-      "Workout move of the day picker": 1
+      "Workout move of the day picker": 1,
+      "Diet-friendly snack randomizer": 1,
+      "Debate topic randomizer": 1,
+      "Random compliment generator wheel": 1,
+      "Ice cream flavour randomizer": 1,
+      "Weekend activity adventure randomizer": 1,
+      "Random artist or musician discovery": 1
     },
     "③ 经典小游戏": {
       "2048 tile merge number puzzle": 1,
@@ -1076,7 +1502,13 @@
       "Nonogram pixel logic puzzle": 1,
       "Peg solitaire jump-and-remove game": 1,
       "Bubble shooter arcade game": 1,
-      "Memory card flip matching pairs": 1
+      "Memory card flip matching pairs": 1,
+      "Tower of Hanoi disc puzzle": 1,
+      "Tic-tac-toe and four-in-a-row": 1,
+      "Othello flip-disc strategy game": 1,
+      "Dots and boxes territory game": 1,
+      "Word search hidden letter grid": 1,
+      "Pipe connect flow puzzle": 1
     },
     "④ 情绪减压/解压玩具": {
       "Virtual bubble wrap popping sensation": 1,
@@ -1093,7 +1525,13 @@
       "Water ripple touch pond simulation": 1,
       "Crackling campfire ambient loop player": 1,
       "Digital Zen garden rake and pebble": 1,
-      "Etch-a-sketch shake and clear canvas": 1
+      "Etch-a-sketch shake and clear canvas": 1,
+      "Cat purr and virtual petting simulation": 1,
+      "Meteor shower meditative view": 1,
+      "Lava lamp bubble drift animation": 1,
+      "Bouncing physics ball with gravity control": 1,
+      "Colour mixing and swirl paint toy": 1,
+      "Newton cradle pendulum click simulation": 1
     },
     "① 图片编辑/滤镜/裁剪": {
       "One-click background removal and replacement": 1,
@@ -1110,7 +1548,13 @@
       "Bokeh background blur effect simulator": 1,
       "Text and sticker overlay editor": 1,
       "Drawing and annotation on photo": 1,
-      "EXIF data viewer and GPS strip tool": 1
+      "EXIF data viewer and GPS strip tool": 1,
+      "HDR and shadow recovery edit": 1,
+      "Meme generator with caption text box": 1,
+      "Noise reduction and sharpness enhancer": 1,
+      "Panorama stitch and horizon leveller": 1,
+      "GIF maker from burst photo sequence": 1,
+      "Color grading with LUT preset": 1
     },
     "② 海报/简历/卡片模板": {
       "ATS-optimized resume template builder": 1,
@@ -1127,7 +1571,13 @@
       "Motivational quote poster with font choice": 1,
       "Sale and discount announcement banner": 1,
       "Job vacancy posting flyer template": 1,
-      "Presentation slide template gallery": 1
+      "Presentation slide template gallery": 1,
+      "Product launch announcement card": 1,
+      "Graduation congratulation poster": 1,
+      "Baby shower invitation designer": 1,
+      "Thank-you card personaliser": 1,
+      "Real estate listing flyer template": 1,
+      "Fundraising campaign visual creator": 1
     },
     "③ 音视频播放界面": {
       "Music player with waveform visualizer": 1,
@@ -1142,7 +1592,13 @@
       "Background play and picture-in-picture": 1,
       "Equalizer and audio enhancement setting": 1,
       "Offline downloaded media library player": 1,
-      "Artist radio and smart shuffle mode": 1
+      "Artist radio and smart shuffle mode": 1,
+      "Cross-fade and gapless playback setting": 1,
+      "Album art full-screen display": 1,
+      "Podcast transcript with chapter search": 1,
+      "Watch party sync with remote viewers": 1,
+      "Loop section and A-B repeat mode": 1,
+      "Song identifier from ambient sound": 1
     },
     "④ 内容创作工具": {
       "Blog post draft with SEO keyword hint": 1,
@@ -1157,7 +1613,13 @@
       "YouTube thumbnail concept designer": 1,
       "TikTok trend and hook idea explorer": 1,
       "Brand voice consistency checker": 1,
-      "Twitter thread and long-post composer": 1
+      "Twitter thread and long-post composer": 1,
+      "Hashtag strategy and analytics report": 1,
+      "UGC inspiration gallery for brand": 1,
+      "Carousel slide content planner": 1,
+      "Email drip sequence copy writer": 1,
+      "Short-form video hook phrase generator": 1,
+      "Sponsorship brief template builder": 1
     },
     "② 文章详情/阅读模式": {
       "Distraction-free reading mode with font control": 1,
@@ -1172,7 +1634,13 @@
       "Sorted reader comment section": 1,
       "Save-for-later reading list bookmark": 1,
       "Article translation to preferred language": 1,
-      "Dark mode for night reading": 1
+      "Dark mode for night reading": 1,
+      "Correction and update notice on article": 1,
+      "Source and citation reference list": 1,
+      "Paywall reminder and subscription prompt": 1,
+      "Reading position save and progress bar": 1,
+      "Gift article to friend option": 1,
+      "Print-optimized article layout": 1
     },
     "③ 订阅/频道管理": {
       "News source subscription browser": 1,
@@ -1187,7 +1655,13 @@
       "OPML subscription list import": 1,
       "Source credibility and bias rating display": 1,
       "Paid newsletter subscription manager": 1,
-      "Topic follow with suggested sources": 1
+      "Topic follow with suggested sources": 1,
+      "Cross-platform subscription sync": 1,
+      "Language and region filter for sources": 1,
+      "Shared reading list with group": 1,
+      "Creator subscriber growth dashboard": 1,
+      "Recommendation engine tuning control": 1,
+      "Quiet hours do-not-disturb for news alerts": 1
     },
     "④ 搜索与筛选": {
       "News keyword search with date range filter": 1,
@@ -1202,28 +1676,40 @@
       "Latest and breaking news sort": 1,
       "Most-read and most-shared sort": 1,
       "Article length filter (brief vs long-read)": 1,
-      "Opinion vs reporting content type filter": 1
+      "Opinion vs reporting content type filter": 1,
+      "Exclusive investigation filter toggle": 1,
+      "Search within saved and bookmarked articles": 1,
+      "Topic alert subscription from search": 1,
+      "Full-text vs headline search toggle": 1,
+      "Image and video story filter": 1,
+      "Hide sponsored content filter": 1
     },
     "① 商品详情/规格选择": {
       "Product photo zoom and 360-degree rotation view": 1,
       "Size guide with body measurement input": 1,
       "Color and variant swatch selection": 1,
       "Accessory compatibility checker": 1,
-      "Stock availability by size and color display": 1
+      "Stock availability by size and color display": 1,
+      "Customer review with star rating filter": 1,
+      "Q&A section with seller response thread": 1
     },
     "② 购物车/结算": {
       "Multi-item cart with quantity adjuster": 1,
       "Save-for-later from cart action": 1,
       "Coupon and promo code entry with validation": 1,
       "Loyalty points redeem at checkout": 1,
-      "Bundle discount automatic calculation": 1
+      "Bundle discount automatic calculation": 1,
+      "Estimated delivery date per item": 1,
+      "Split delivery option by location": 1
     },
     "③ 订单/物流追踪": {
       "Real-time shipment GPS map tracking": 1,
       "Delivery status step timeline": 1,
       "ETA update with push notification": 1,
       "Photo proof of delivery viewer": 1,
-      "Signature-required appointment scheduling": 1
+      "Signature-required appointment scheduling": 1,
+      "Reroute to parcel locker option": 1,
+      "Return request with label print flow": 1
     },
     "① 个人生活类": {
       "Travel Memory Scrapbook": 1,

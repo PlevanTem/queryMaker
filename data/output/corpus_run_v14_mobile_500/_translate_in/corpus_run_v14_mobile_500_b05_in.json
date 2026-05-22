@@ -1,0 +1,202 @@
+[
+  {
+    "id": "q_scene_024_011",
+    "query_text": "Create a programming syntax and API flashcard app for my phone where I can flip through cards one at a time, each card showing the syntax or method name on the front and the explanation on the back, with a way to mark cards as learned or still need review, and a count at the top showing how many cards I have left to go through in that session."
+  },
+  {
+    "id": "q_scene_025_001",
+    "query_text": "Make a university entrance essay planning tool for my phone that walks me through each part of the essay one step at a time, with prompts that ask me things like my key message, my supporting points, and my conclusion, so I can fill in each piece before putting it all together, and a summary at the end showing everything I have planned out."
+  },
+  {
+    "id": "q_scene_025_002",
+    "query_text": "Create a full SAT and ACT practice simulation app for my phone that gives me timed sections just like the real test, lets me pick whether I want to do the whole thing or just one subject at a time, and shows me which questions I got right or wrong with a simple score at the end so I know where to focus my studying."
+  },
+  {
+    "id": "q_scene_025_003",
+    "query_text": "Build an IELTS and TOEFL writing practice app for my phone where I get a new writing task prompt to work on, a text area to type my response, and a timer so I know how long I am taking, with a way to save each completed response and go back to compare my older ones so I can see if I am improving over time."
+  },
+  {
+    "id": "q_scene_025_004",
+    "query_text": "A medical license USMLE question bank app for my phone that lets me pick a subject area, then gives me one question at a time with four answer choices, shows me whether I got it right right away, and keeps a running list of which subjects I have practiced and my correct rate for each one so I can spot my weak spots easily."
+  },
+  {
+    "id": "q_scene_025_005",
+    "query_text": "Create a state bar exam law practice app for my phone that organizes questions by topic so I can work through one area at a time, shows me the right answer and a short plain-language explanation after each question, and gives me a score at the end of each topic set so I can check off the areas where I feel ready."
+  },
+  {
+    "id": "q_scene_025_006",
+    "query_text": "Make a CFA Level 1 practice drill app for my phone that groups questions by topic area like ethics, fixed income, and equity, lets me tap through one question at a time with multiple choice answers, and shows me a result summary after each set listing how many I got right per topic so I can see exactly where I need more practice."
+  },
+  {
+    "id": "q_scene_025_007",
+    "query_text": "Build a data science interview coding question practice app for my phone where I can read a question, type out my answer or approach in a text box, then reveal the suggested solution to compare, and I can mark each question as confident or needs more review so I have a clear list to come back to before my next interview."
+  },
+  {
+    "id": "q_scene_025_008",
+    "query_text": "Build a driving theory test simulation app for my phone that gives me a full set of timed questions just like the real test, covers things like road signs, rules of the road, and hazard awareness, and shows me a pass or fail result with a breakdown of which categories I did well in and which ones I should study more."
+  },
+  {
+    "id": "q_scene_025_009",
+    "query_text": "Make a civil service exam practice app for my phone that lets me pick which section to drill, like verbal reasoning or math problems, gives me questions one at a time with a short time limit per question, and shows me a score at the end of each section so I can track which parts I am strong in and which ones still need work."
+  },
+  {
+    "id": "q_scene_025_010",
+    "query_text": "A real estate license state exam question bank app for my phone where I can pick a topic like contracts, financing, or property law, go through practice questions one by one with immediate answer feedback, and see a list at the end showing my score per topic so I know which areas to spend more time on before my exam date."
+  },
+  {
+    "id": "q_scene_025_011",
+    "query_text": "Make a nursing NCLEX practice question app for my phone that walks me through questions one at a time, gives me the four choices and shows me which one is correct after I pick, with a short explanation for why that answer is right, plus a running count of my correct answers so I can see my overall accuracy as I go through each set."
+  },
+  {
+    "id": "q_scene_026_001",
+    "query_text": "A dance technique milestone tracker app for my phone where I can list the specific moves or skills I am working on, check off each one when I feel I have got it down, and attach a short video clip or note to each milestone so I can look back and see how my technique has improved, with all my milestones organized by style or skill group."
+  },
+  {
+    "id": "q_scene_026_002",
+    "query_text": "Make a language learning progress tracker for my phone that shows which CEFR level I am working toward, lets me log each study session with the date and what I practiced, and displays a simple bar or indicator showing how far along I am toward my next level, with separate progress for reading, listening, writing, and speaking so I can see each skill clearly."
+  },
+  {
+    "id": "q_scene_026_003",
+    "query_text": "Need a coding bootcamp daily milestone tracker for my phone that lets me check off each lesson or project I complete each day, shows a running streak so I can see how many days in a row I have kept up, and organizes my milestones by week so I can flip back and see the full list of what I have finished since I started the bootcamp."
+  },
+  {
+    "id": "q_scene_026_004",
+    "query_text": "A reading challenge logger for my phone where I can track all 52 books I want to read this year, add each book with the title, author, and the date I finished it, and see a progress bar showing how many books I have completed out of 52, with the full list of finished and upcoming books so I can stay on track month by month."
+  },
+  {
+    "id": "q_scene_026_005",
+    "query_text": "A fitness instructor certification progress tracker for my phone where I can list all the required modules and practical assessments I need to complete, tap each one to mark it done, add the date I finished it, and see an overall progress bar showing how close I am to completing the full certification, with a running checklist of what is left."
+  },
+  {
+    "id": "q_scene_026_006",
+    "query_text": "Build an online course progress tracker for my phone where I can add the courses I am enrolled in, mark each lesson or unit as done as I work through them, and see a completion percentage for each course so I know at a glance how far along I am, with all my courses listed in one place so I can easily pick up where I left off."
+  },
+  {
+    "id": "q_scene_026_007",
+    "query_text": "Build a guitar practice logger for my phone where I can record each session with the date, how long I practiced, and what I worked on, whether that is chords, scales, or a specific song, with a weekly summary showing my total practice time and a list of what I have been focusing on so I can see which areas I am giving the most time to."
+  },
+  {
+    "id": "q_scene_026_008",
+    "query_text": "Need a chess rating improvement tracker for my phone that lets me log my rating after each game or session, shows a simple line chart of how my rating has gone up or down over time, and lets me add a short note about what I think helped or hurt, so I can look back and spot the patterns that lead to rating gains."
+  },
+  {
+    "id": "q_scene_026_009",
+    "query_text": "A drawing skill daily prompt logger for my phone where I get a new practice prompt each day, can jot down a note or upload a photo of my sketch for that prompt, and see a calendar view of which days I completed a prompt and which I missed, so I can keep a consistent daily drawing habit and look back at my entries over the past month."
+  },
+  {
+    "id": "q_scene_026_010",
+    "query_text": "Build a 30-day habit streak tracker for my phone where I can set up the habits I want to build, tap to mark each one done for the day, and see a row of checkmarks or circles showing my streak for each habit so I can tell at a glance which ones I have kept going and which ones broke, with a count of my current streak for each habit."
+  },
+  {
+    "id": "q_scene_026_011",
+    "query_text": "Make a creative writing daily word count tracker for my phone where I can log how many words I wrote each day toward my target, set a personal daily goal like 500 or 1000 words, and see a simple calendar filled in for each day I hit my goal, with a running total showing how many words I have written overall since I started."
+  },
+  {
+    "id": "q_scene_027_001",
+    "query_text": "Build a class schedule and calendar planner for my phone that lets me add all my courses with the meeting times and location, shows each week laid out so I can see which days are packed and which are free, and lets me tap on any class to see the details and any notes I have added, so I always know what is coming up for the week."
+  },
+  {
+    "id": "q_scene_027_002",
+    "query_text": "Build an online university course catalog browser for my phone where I can scroll through available courses sorted by subject, tap on any course to read the full description and see things like credit hours and prerequisites, and save the ones I am interested in to a personal list so I can compare them and decide which ones to sign up for."
+  },
+  {
+    "id": "q_scene_027_003",
+    "query_text": "Create a mobile app that shows a full K-12 subject curriculum map so I can see all the core subjects and grade levels laid out in one place on my phone. I want to tap into any grade to see what topics are covered that year, and each subject like math, science, and language arts should have its own color so I can tell them apart at a glance."
+  },
+  {
+    "id": "q_scene_027_004",
+    "query_text": "Create a coding bootcamp tracker for my phone that lays out every module and track in the program so I know exactly where I am and what comes next. I want to see which modules are done, which ones I am working on right now, and what is still ahead, with each track listed in order so nothing feels out of sequence."
+  },
+  {
+    "id": "q_scene_027_005",
+    "query_text": "A professional certification planner for my phone where I can see the full learning path from beginner all the way to the final exam in one clear sequence. The app should show each step I need to complete, let me mark things off as I finish them, and include a spot for the estimated time each stage takes so I can plan my schedule."
+  },
+  {
+    "id": "q_scene_027_006",
+    "query_text": "Create a mobile app that shows all the levels at a language school laid out like a ladder so students can see how they progress from the very first level all the way to advanced. Each level should list the main skills covered, like reading, speaking, and grammar, and there should be a simple way to tap a level to read a short description of what gets taught there."
+  },
+  {
+    "id": "q_scene_027_007",
+    "query_text": "Make a music academy schedule planner for my phone that shows every lesson slot across the whole week in one view so students and parents can see what is happening each day. I want to filter by instrument type, see the teacher name for each lesson, and have the weekly layout update neatly when I switch between different weeks."
+  },
+  {
+    "id": "q_scene_027_008",
+    "query_text": "Build a fitness studio timetable app for phones that shows all the classes running throughout the week so members can quickly find a session that fits their day. Each class entry should show the class name, start time, duration, and instructor name, and members should be able to tap a class to see a short description and how many spots are left."
+  },
+  {
+    "id": "q_scene_027_009",
+    "query_text": "Need a corporate training catalog tool for my phone where employees can browse all the available training courses the company offers. I want the courses grouped by topic or department so they are easy to find, and each listing should show the course name, length, and a short summary so people know what they are signing up for before they tap to learn more."
+  },
+  {
+    "id": "q_scene_027_010",
+    "query_text": "Need a vocational trade skills directory for my phone that lists all the main trade areas like electrical, plumbing, carpentry, and welding so workers can browse what skills fall under each trade. Each trade should expand to show the specific skills and tasks involved, and there should be a search box at the top so I can quickly find a skill by typing a keyword."
+  },
+  {
+    "id": "q_scene_027_011",
+    "query_text": "Make a STEM enrichment explorer app for my phone that lets kids and parents browse all the available modules across science, technology, engineering, and math. Each module should show a title, a short description of what you do in it, the recommended age range, and whether it is beginner or more advanced, so families can pick the right one without guessing."
+  },
+  {
+    "id": "q_scene_028_001",
+    "query_text": "Need a road sign reference tool for my phone so I stop having to search online every time I forget what a sign means. The app should be a quick lookup where I can browse signs by category, like warning signs and regulatory signs, and tap any sign to see its name and a plain-language explanation of what it means and what drivers should do when they see it."
+  },
+  {
+    "id": "q_scene_028_002",
+    "query_text": "Build a physics constants and formula reference app for my phone so I can stop hunting through my textbook every time I need a value or formula during studying. I want all the major constants listed with their symbols and units, plus the common formulas organized by topic like motion, energy, and electricity, so I can find what I need in seconds."
+  },
+  {
+    "id": "q_scene_028_003",
+    "query_text": "Create a chemical periodic element reference app for my phone that gives me everything I need to know about any element without having to dig through a chemistry textbook. Each element should show its symbol, atomic number, atomic mass, and basic properties, and I want a search bar so I can pull up any element by name or symbol right away."
+  },
+  {
+    "id": "q_scene_028_004",
+    "query_text": "Build a grammar and punctuation rules reference app for my phone so I can stop second-guessing myself every time I write something important. I want the rules organized into clear sections like comma usage, apostrophes, and sentence structure, with short plain-English explanations and one or two simple examples for each rule so it actually makes sense."
+  },
+  {
+    "id": "q_scene_028_005",
+    "query_text": "A cooking temperature and time reference tool for my phone that I can check in the kitchen whenever I need to know how long something should cook or at what heat. The app should cover common foods like chicken, beef, fish, and vegetables, and let me tap any food to see the right internal temperature and rough cooking time so I stop guessing and overcooking things."
+  },
+  {
+    "id": "q_scene_028_006",
+    "query_text": "A drug interaction reference tool for my phone that helps me quickly check whether two medications are safe to take together, because right now I have no easy way to do that without calling a pharmacy. The app should let me pick two drugs from a list and show a clear result explaining whether there is a known interaction and how serious it is, so I always know what to watch out for."
+  },
+  {
+    "id": "q_scene_028_007",
+    "query_text": "Build a tax bracket and income calculator for my phone so I can stop stressing about whether I am in the right bracket and just check it quickly whenever I need to. I want to enter my income and filing status and see which bracket applies to me, plus a breakdown of how much tax applies at each rate so the whole thing is actually clear instead of confusing."
+  },
+  {
+    "id": "q_scene_028_008",
+    "query_text": "Make a musical key signature reference app for my phone that shows all the major and minor keys with their sharps and flats so I can look them up fast during practice. Each key should display the key signature, list which notes are sharp or flat, and show the relative major or minor, because right now I have to search online every time I forget and that breaks my practice flow."
+  },
+  {
+    "id": "q_scene_028_009",
+    "query_text": "Need a legal Latin terms index for my phone that lets me look up any phrase I come across in a legal document and get a plain-English explanation right away. I want the terms listed alphabetically so I can browse or search, and each entry should give the Latin phrase, a simple definition, and maybe a short note on where it is commonly used, so I actually understand what I am reading."
+  },
+  {
+    "id": "q_scene_028_010",
+    "query_text": "Build a sports rules and penalty reference app for my phone so my friends and I can settle arguments about the rules during games without everyone shouting different things. I want it to cover several sports like soccer, basketball, and football, and for each sport there should be a list of common rules and penalties with short clear explanations so anyone can read it and understand."
+  },
+  {
+    "id": "q_scene_028_011",
+    "query_text": "Make a stock market technical indicator reference app for my phone that lists the most common indicators like RSI, MACD, and moving averages with a plain-language explanation of what each one measures and how traders use it. I keep forgetting what the signals mean when I am looking at a chart, so I need something I can open fast on my phone and get a clear answer without wading through long articles."
+  },
+  {
+    "id": "q_scene_029_001",
+    "query_text": "Build a work backlog manager for my phone that helps me go through all my pending tasks, add a rough effort estimate to each one, and decide which things to tackle first. I want to be able to add tasks with a short description, pick a size estimate like small, medium, or large, and then drag them into priority order so I always know what I should be working on next."
+  },
+  {
+    "id": "q_scene_029_002",
+    "query_text": "Make a shared shopping list app for my phone that my household can all add items to in real time so we stop ending up at the store with three different lists that all have different things. I want anyone to be able to add an item, check it off when it is in the cart, and see each other's additions right away, with items grouped by category like produce, dairy, and snacks so the list stays organized."
+  },
+  {
+    "id": "q_scene_029_003",
+    "query_text": "A daily task triage planner for my phone where I can dump all my to-dos for the day and then sort them into three buckets, urgent, important, and can wait, so I stop wasting time on the wrong things. I want to tap each task and move it to the right group, see all three groups on one screen, and check tasks off as I finish them throughout the day."
+  },
+  {
+    "id": "q_scene_029_004",
+    "query_text": "Make a team sprint board for my phone so our small team can track what everyone is working on during the week without having to dig through long message threads. I want tasks organized into three columns, to do, in progress, and done, so we can move cards across as work gets done and everyone can see the current state of the sprint from their own phone."
+  },
+  {
+    "id": "q_scene_029_005",
+    "query_text": "Need a personal goals tracker for my phone where I can write down my main goals for the year and then break each one into smaller steps I need to take to get there. I want to be able to add a goal, list out the key actions under it, and mark each action complete as I go so I can see my progress and actually feel like I am moving forward instead of just having a vague goal that never gets done."
+  }
+]

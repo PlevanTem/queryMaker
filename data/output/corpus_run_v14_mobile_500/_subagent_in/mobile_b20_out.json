@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_056_006",
+    "query_text": "Create a news feed reader app for my phone where I can browse through the latest stories one at a time, tapping to go deeper on anything that catches my eye, and the home screen shows a clean scrolling list of headlines with little thumbnails so I can quickly decide what to read, plus a way to mark things I want to come back to later."
+  },
+  {
+    "id": "q_scene_057_001",
+    "query_text": "Create a mobile reading app where article corrections and update notices feel really intentional and considered, like a soft banner at the top of the article that shows what changed and when, with a gentle color that stands out but does not feel alarming, so the whole reading experience still feels calm and trustworthy even when something has been corrected."
+  },
+  {
+    "id": "q_scene_057_002",
+    "query_text": "Make a mobile reading app where the sources and references at the end of each article look genuinely beautiful, almost like a curated list in a well-designed book, with each citation presented in a clean typographic style that feels intentional and easy to skim on a small screen, and tapping any source opens it in a way that feels graceful rather than jarring."
+  },
+  {
+    "id": "q_scene_057_003",
+    "query_text": "Create a mobile news reading app where the paywall reminder and subscription prompt feel warm and editorial rather than pushy, like the app is gently inviting you into something worthwhile, with a soft overlay that shows a tasteful preview of what you would be unlocking and a subscription option that feels calm and considered rather than urgent."
+  },
+  {
+    "id": "q_scene_057_004",
+    "query_text": "A reading tracker app for phone where your place in every article is quietly saved so you can pick up exactly where you left off, with a slim elegant progress indicator near the top that shows how far through the piece you are, almost like the subtle ribbon in a physical book, and the whole thing feels refined and understated rather than showy."
+  },
+  {
+    "id": "q_scene_057_005",
+    "query_text": "Need a mobile reading app that lets me send a full article to a friend as a kind of gift, so they can read the whole thing even if it is behind a paywall, and the sharing experience feels like passing along something you love rather than just copying a link, with a nice little presentation screen that shows the article title and a personal note I can write before sending."
+  },
+  {
+    "id": "q_scene_057_006",
+    "query_text": "Make a mobile news reader app that has a print-friendly layout option, where when I tap to print an article it reformats everything beautifully for paper, with clean typography, no navigation clutter, and the byline and publication date presented in a classic editorial style that looks great whether I am printing from my phone or just previewing it."
+  },
+  {
+    "id": "q_scene_058_001",
+    "query_text": "Build a subscription manager app for your phone where all the newsletters and news channels you follow stay perfectly in sync no matter what device you open it on, so if you add a new source on your laptop it shows up right away on mobile too, with a simple list view of everything you are subscribed to and a clear indicator showing when each one last synced."
+  },
+  {
+    "id": "q_scene_058_002",
+    "query_text": "Need a news source manager app for my phone that lets me filter everything by language and region so I only see sources from the countries and languages I actually care about, with a straightforward picker where I can select a few languages and a handful of regions, and the app remembers my choices and applies them every time I open it."
+  },
+  {
+    "id": "q_scene_058_003",
+    "query_text": "A shared reading list app for mobile where you and a few friends can all add articles to the same collection and see what everyone else has saved, with each item showing who added it and a little space to leave a short note, so the whole group can read the same things and come back to discuss them, and each person can check off what they have read."
+  },
+  {
+    "id": "q_scene_058_004",
+    "query_text": "Need a subscriber tracker app for my phone where I can see how my channel or newsletter is growing over time, with a simple chart showing new subscribers each week and a running total at the top, plus a quick glance at which posts or issues brought in the most new followers, so I know what is actually working."
+  },
+  {
+    "id": "q_scene_058_005",
+    "query_text": "Build a news feed tuner app for mobile where I can tell the app what kinds of stories I want to see more or less of, using plain sliders or on/off switches for different topics like sports, politics, tech, and local news, so the feed actually reflects what I care about instead of just guessing, and I can adjust it any time."
+  },
+  {
+    "id": "q_scene_058_006",
+    "query_text": "Build a news alert manager app for my phone that lets me set quiet hours so I stop getting pinged during times I have chosen, like late at night or early in the morning, with a simple schedule where I pick a start time and end time for each day of the week, and all news notifications are held until my quiet period ends."
+  },
+  {
+    "id": "q_scene_059_001",
+    "query_text": "Need a news finder app for my phone with a quick toggle that lets me show only exclusive investigations and in-depth reporting, so when I am tired of regular headlines I can flip one switch and instantly see only the serious long-form pieces, without having to dig through filters or mess with complicated settings every single time."
+  },
+  {
+    "id": "q_scene_059_002",
+    "query_text": "Need a bookmarks manager app for my phone that actually lets me search through all my saved articles, because right now I save stuff and then can never find it again, so I want a simple search bar at the top that looks through titles and topics of everything I have saved and pulls up the right article right away."
+  },
+  {
+    "id": "q_scene_059_003",
+    "query_text": "A news alert app for mobile where after I search for any topic I can just tap one button to start getting notifications whenever new stories about that topic come in, so I never have to remember to search again, with a simple list of all my active topic alerts that I can turn on or off individually from one place."
+  },
+  {
+    "id": "q_scene_059_004",
+    "query_text": "A news search app for my phone where I can quickly switch between searching just headlines and searching the full text of articles, because sometimes I want a fast headline match and other times I need to find something buried in the body of a piece, with a simple two-option toggle right above the search results that I can tap to switch between the two modes."
+  },
+  {
+    "id": "q_scene_059_005",
+    "query_text": "Make a news browsing app for my phone that has a filter so I can choose to see only stories that have photos or videos attached, because I find myself much more likely to actually read something when there is a good image or clip with it, and the filter should be easy to toggle on and off right from the main feed without having to go into any settings."
+  },
+  {
+    "id": "q_scene_059_006",
+    "query_text": "Create a news reader app for my phone where I can turn on a filter that keeps all the sponsored stories and paid posts out of my feed so I only see actual journalism, with a clear on/off switch I can find easily, and once it is on the feed just shows real articles with no promoted clutter mixed in."
+  },
+  {
+    "id": "q_scene_060_001",
+    "query_text": "Create a product review reader app for mobile that lets me filter customer reviews by star rating so I can choose to see only 3-star and below when I want honest feedback, with a simple row of star buttons at the top of the reviews section that highlights which rating I have selected and instantly updates the list below to show only matching reviews."
+  },
+  {
+    "id": "q_scene_060_002",
+    "query_text": "Make a product Q and A app for my phone where shoppers can post questions and the seller can reply right underneath each one, so the whole conversation is easy to follow, with the most recent unanswered questions shown first and a way to search through existing questions before posting a new one so people stop asking the same thing over and over."
+  },
+  {
+    "id": "q_scene_061_001",
+    "query_text": "Build a shopping cart app for my phone where each item in the cart shows its own estimated delivery date right there in the list, so I can see at a glance that the shoes will arrive Thursday but the book might take until next week, and I do not have to tap into each item separately just to figure out when things are coming."
+  },
+  {
+    "id": "q_scene_061_002",
+    "query_text": "Make a mobile checkout app where when I have items going to different addresses, like one to my home and another to my parents, I can split the delivery so each item goes to the right place and I can confirm both addresses separately before paying, all handled on one clear checkout screen on my phone without making me place two separate orders."
+  },
+  {
+    "id": "q_scene_062_001",
+    "query_text": "Build a package tracking app for my phone that lets me reroute an incoming delivery to a nearby parcel locker if I know I will not be home, with a simple option to pick a locker from a short list of nearby ones, confirm the change, and then track the updated delivery right from the same app without having to call anyone or jump to another service."
+  },
+  {
+    "id": "q_scene_062_002",
+    "query_text": "A returns manager app for my phone where I can start a return on any order, pick a reason, and then get a return label sent right to my phone that I can either print at home or show as a QR code at a drop-off point, so the whole return is handled in a few taps and I always know the status of my refund afterward."
+  }
+]

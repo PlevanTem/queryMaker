@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_016_001",
+    "query_text": "Need a mobile calculator app that takes my gross monthly salary and works out my actual take-home pay, because I always forget to account for taxes and deductions and end up surprised every payday. I want to punch in my gross amount, pick my filing status and a couple of standard deduction types, and immediately see the net figure broken down so I know exactly what I am working with before I plan my budget."
+  },
+  {
+    "id": "q_scene_016_002",
+    "query_text": "Build a currency converter app for my phone that pulls live exchange rates so I can type in any amount in one currency and instantly see what it is worth in another, because manually looking up rates every time I travel or shop from overseas stores is a real pain. The app should let me pick from a list of major currencies, show the converted amount right away, and display when the rate was last updated so I know the number is fresh."
+  },
+  {
+    "id": "q_scene_016_003",
+    "query_text": "Build a body-frame BMI calculator app for my phone that goes beyond the basic BMI number and actually adjusts the result based on whether I have a small, medium, or large frame, since standard BMI always feels off for my build. I want to enter my height, weight, and wrist circumference to figure out my frame size, and then see a BMI result that is calibrated to that frame along with a simple note on what the number means."
+  },
+  {
+    "id": "q_scene_016_004",
+    "query_text": "Make a fuel efficiency converter app for my phone that flips between MPG and liters per 100km so I stop getting confused when I look at European car specs or rental comparisons. I want to type in either value and get the other one instantly, plus maybe a quick comparison row showing a few common benchmarks like city driving versus highway so I have some context for whether a number is actually good or not."
+  },
+  {
+    "id": "q_scene_016_005",
+    "query_text": "Need a lumber board feet calculator app for my phone that lets me enter the thickness, width, and length of each piece of wood and instantly tells me the total board feet, because I always mess up the formula at the lumber yard and end up buying either too much or too little. It should let me add multiple pieces to a list so I can tally up a whole project order before I even get to the checkout."
+  },
+  {
+    "id": "q_scene_016_006",
+    "query_text": "Need a road trip fuel cost estimator app for my phone that takes my trip distance, my car's fuel efficiency, and the current gas price and spits out roughly how much I should budget for gas, so I can stop guessing and actually plan my drive properly. I want to be able to swap between kilometers and miles, and maybe split the total across the number of people riding along so everyone knows their share upfront."
+  },
+  {
+    "id": "q_scene_016_007",
+    "query_text": "Create a cooking measurement converter app for my phone that lets me switch between US cups, tablespoons, teaspoons, and ounces on one side and grams, milliliters, and liters on the other, because following American recipes when I only have a kitchen scale is such a headache. I want a clean input where I pick the ingredient type like flour or water, enter the US amount, and get the metric equivalent right away so I can just cook."
+  },
+  {
+    "id": "q_scene_016_008",
+    "query_text": "Build a retirement withdrawal calculator app for my phone that lets me enter my total savings, my expected annual spending, and a withdrawal rate I pick, then shows me how many years that money will last before it runs out, because I keep seeing different rules of thumb online and I just want a simple tool to check my own numbers. It should also show a year-by-year breakdown so I can see which year things start getting tight."
+  },
+  {
+    "id": "q_scene_016_009",
+    "query_text": "Create a time zone meeting scheduler tool for my phone that lets me pick a meeting time in my local time and see what hour that is in several other cities at once, because I waste so much time doing mental math and then still get it wrong when setting up calls with people in different countries. I want to add a few cities I commonly work with, set a proposed time, and instantly see whether it falls during normal working hours for everyone involved."
+  },
+  {
+    "id": "q_scene_016_010",
+    "query_text": "Build a photo print quality calculator app for my phone that lets me enter a photo's pixel dimensions and the print size I want, then tells me the resulting DPI and whether the print will look sharp or blurry, because I keep ordering prints and ending up disappointed when the image looks soft. I want the result to clearly say something like good quality or too low so I know whether to bother printing at that size or find a higher-res version first."
+  },
+  {
+    "id": "q_scene_016_011",
+    "query_text": "Need a knitting yarn estimator app for my phone that helps me figure out how many yards of yarn I need for a project, because I always either run out mid-scarf or end up with way too many leftover skeins. I want to enter the type of project like a hat, scarf, or sweater, my needle size, and my yarn weight, and get a yardage estimate along with how many skeins to buy based on the skein size I am working with."
+  },
+  {
+    "id": "q_scene_016_012",
+    "query_text": "Create a BPM and time signature helper app for my phone that lets me tap a button to detect the tempo of a song I am listening to, and then shows me the note lengths in milliseconds for that BPM at whatever time signature I pick, because I always struggle to sync my loops and effects correctly when I am making music on the go. It should show the delay times for common note values like quarter notes and eighth notes so I can just copy the numbers straight into my settings."
+  },
+  {
+    "id": "q_scene_017_001",
+    "query_text": "Need a book reading tracker app for my phone where I can add the books I am currently reading, enter how many pages I finished today, and watch a little progress bar fill up as I get closer to the end. I like the idea of seeing my reading history laid out so I can look back at all the books I finished over the year, and it would be great if I could set a daily page goal and get a small nudge on the home screen of the app reminding me how close I am."
+  },
+  {
+    "id": "q_scene_017_002",
+    "query_text": "Create a screen time logger app for my phone where I can manually jot down which category of app I just spent time on, like social media, games, work, or news, and roughly how many minutes I was on it, so I can get a sense of where my phone time actually goes each day. I want a simple way to tap a category, enter a duration, and then see a little daily summary showing which buckets are eating up the most of my time."
+  },
+  {
+    "id": "q_scene_017_003",
+    "query_text": "Create a personal cash flow daily log app for my phone where I can quickly jot down money coming in and money going out throughout the day, tag each entry with a simple category like food, transport, or income, and then see a running total for the day so I always know whether I am in the green or red. I want to be able to flip through past days easily and see a simple summary at the top of the app showing my net for the current week."
+  },
+  {
+    "id": "q_scene_017_004",
+    "query_text": "Need a symptom and medication side effect journal app for my phone where I can log how I feel each day alongside what medications I took, so I can actually bring useful notes to my doctor instead of trying to remember everything from the past two weeks. I want to jot down a symptom with a quick severity rating, tie it to a specific medication if I think they are related, and see a simple timeline of entries so patterns are easy to spot."
+  },
+  {
+    "id": "q_scene_017_005",
+    "query_text": "Build a baby feeding and diaper change log app for my phone where I can tap a big easy button whenever a feeding or diaper change happens and quickly note the time and a few details like feeding duration or diaper type, because trying to remember the last feed time when I am sleep-deprived is impossible. I want the home screen of the app to always show how many hours ago the last feeding was and a count of diaper changes for the day so I can answer the pediatrician's questions without digging through my memory."
+  },
+  {
+    "id": "q_scene_017_006",
+    "query_text": "A social interaction diary app for my phone where I can write a quick note after hanging out with someone, rate how energized or drained the interaction left me on a simple scale, and log who I spent time with, so I can start noticing which relationships leave me feeling good versus which ones are always exhausting. The app should let me look back at entries by person so I can see a pattern over time for each relationship in my life."
+  },
+  {
+    "id": "q_scene_017_007",
+    "query_text": "A daily outfit and weather log app for my phone that lets me record what I wore each morning and match it to the weather that day, like temperature and whether it rained, so I can look back and figure out which outfits actually worked for which conditions. The tracker should keep a running list of past entries so I can quickly reference what I wore last time it was cold and rainy and decide whether to repeat the combo or try something different."
+  },
+  {
+    "id": "q_scene_017_008",
+    "query_text": "Need a focus session logger app for my phone where I can start a timer when I sit down to do deep work, label what I am working on, and then save the session when I am done so I can see how many focused hours I actually put in each week. I want the app to show a simple list of past sessions with the topic and duration so I can look back at a week and see whether I am being as productive as I think or just telling myself I worked a lot."
+  },
+  {
+    "id": "q_scene_017_009",
+    "query_text": "Create a daily new words tracker app for my phone where I can add any new word I picked up that day in whatever language I am studying, jot down a quick example sentence, and then flip through all my saved words later to review them. I want the app to show me how many new words I have added each day so I can keep a streak going, and a simple list view where I can tap any word to see my notes and example sentence again."
+  },
+  {
+    "id": "q_scene_017_010",
+    "query_text": "Create a home chore habit log app for my phone where I can set up a list of regular chores like vacuuming, doing laundry, or cleaning the bathroom, mark each one as done when I finish it, and see which ones I have been skipping for too long. I want the app to show me the last time I did each chore so I never have to wonder whether I already mopped this week or whether it has been two weeks since I cleaned the bathroom."
+  },
+  {
+    "id": "q_scene_017_011",
+    "query_text": "Build a sleep quality log app for my phone where every morning I can rate how well I slept on a simple scale, add a short note about anything that might have affected my sleep like stress or late coffee, and track what time I went to bed and woke up. I want the app to show a weekly summary so I can see whether my sleep quality is trending up or down and figure out what is helping or hurting my rest over time."
+  },
+  {
+    "id": "q_scene_017_012",
+    "query_text": "Need a daily steps and active minutes recorder app for my phone where I can manually enter my step count and how many minutes I spent moving around each day, since I do not always have my fitness tracker synced and just want a simple place to log the numbers myself. I want to see a weekly chart showing my activity so I can notice when I have had a lazy stretch and motivate myself to move more the following days."
+  },
+  {
+    "id": "q_scene_018_001",
+    "query_text": "A LinkedIn connection message personalizer tool for my phone where I type in a few quick details about the person I want to connect with, like their job title, company, or something we have in common, and the app generates a short personalized message I can copy and send right away. I want a few different tone options like friendly, professional, or casual so I can pick the one that fits the situation, and the whole thing should fit comfortably on a single mobile screen so I can use it on the go."
+  }
+]

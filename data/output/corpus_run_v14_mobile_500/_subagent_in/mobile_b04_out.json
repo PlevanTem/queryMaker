@@ -1,0 +1,102 @@
+[
+  {
+    "id": "q_scene_013_006",
+    "query_text": "A field inspection photo uploader for my phone where I can take photos on-site and each one automatically gets tagged with my current GPS location before it goes up, so I never have to manually type in where I was standing. The app should show a list of my uploaded photos with a small map pin label on each one, and I can group them by inspection job so everything stays organized without extra effort."
+  },
+  {
+    "id": "q_scene_013_007",
+    "query_text": "A smart meter data tool on my phone that saves me the hassle of copying numbers by hand, letting me pull my meter readings for any date range and download the whole thing as a CSV file straight to my phone, so I can hand it off to whoever needs it. The app should show the readings in a simple list first so I can check the data looks right before I download."
+  },
+  {
+    "id": "q_scene_013_008",
+    "query_text": "Make a QA inspection report exporter for the factory floor that works on mobile, where I can fill in the inspection results for each batch right on my phone and then export the whole report as a file I can send to my supervisor. The app should let me pick which production line and date the check was done, then bundle everything into one clean report I can share without having to copy anything manually."
+  },
+  {
+    "id": "q_scene_013_009",
+    "query_text": "Create a visa document checklist app for my phone that tells me exactly which papers I need to upload for my immigration application and lets me tick off each one as I go. Each item on the list should have an upload spot right next to it so I can attach the file immediately, and the app should show me at a glance which documents are still missing so I stop losing track of what I already submitted."
+  },
+  {
+    "id": "q_scene_013_010",
+    "query_text": "Make a social media scheduler tool for my phone where I can queue up a bunch of photos and videos at once and set a specific date and time for each batch to go out, so I stop scrambling to post manually every single day. The app should let me pick multiple files in one go, assign them to a scheduled slot, and show me a simple calendar view of everything that is lined up to be posted."
+  },
+  {
+    "id": "q_scene_014_001",
+    "query_text": "Build a mobile alert rule manager where I can see all my existing alert rules in a list and tap a copy button on any one of them to duplicate it, then just change the number threshold for the new copy without having to fill in every field from scratch. The app should let me give the cloned rule a new name and pick a different metric limit right after copying, so I can set up a whole family of similar alerts without doing the same repetitive work over and over."
+  },
+  {
+    "id": "q_scene_014_002",
+    "query_text": "Make a config copying tool that works on my phone, where I can see all the settings from my test environment listed out and tap a button to push the whole thing over to the live environment in one shot. The app should show me a side-by-side comparison of what is in each environment before I confirm, so I can catch any differences and avoid accidentally overwriting something important."
+  },
+  {
+    "id": "q_scene_014_003",
+    "query_text": "Create a tax filing helper app for my phone that pulls in the numbers I entered last year and fills them into this year's form automatically, so I spend less time hunting through old paperwork. The app should show me which fields were copied from last year highlighted, so I can quickly review and update anything that changed, rather than re-typing the same information all over again."
+  },
+  {
+    "id": "q_scene_014_004",
+    "query_text": "Need a mobile retrospective board tool that lets my team clone a pre-made meeting template at the start of each sprint, so we can skip all the setup and just get straight to filling it in. The app should show a list of saved templates I can copy with one tap, then let everyone add their own notes to the cloned board from their phones during the meeting without overwriting each other."
+  },
+  {
+    "id": "q_scene_014_005",
+    "query_text": "A customer journey planning tool for my phone where each stage of the journey is its own card, and I can tap any card to make an exact copy of it so I can reuse the same structure for a new stage without typing everything again. The app should let me rename the duplicate and edit just the parts that differ from the original, saving me from rebuilding the same touchpoints and notes from scratch every single time."
+  },
+  {
+    "id": "q_scene_014_006",
+    "query_text": "Build a loyalty program manager on mobile where I can view all my existing membership tier setups and copy one tier's benefit list to use as a starting point for a new tier, then just tweak the perks and limits instead of writing everything out fresh. The app should let me rename the copied tier and adjust individual benefits one by one, so spinning up a new level takes a minute instead of half a day."
+  },
+  {
+    "id": "q_scene_014_007",
+    "query_text": "Need a mobile config sync tool that lets me take the current live server settings and copy them down to the test environment with one tap, so I can make sure my tests are running against real conditions. The app should show me a clear summary of what settings are about to be copied before I confirm, and highlight anything that looks different between the two environments so I can decide whether to keep or skip it."
+  },
+  {
+    "id": "q_scene_014_008",
+    "query_text": "Build a product bundle manager for my phone where I can see all my existing bundles and tap any one to make a copy of it, then update the price and any included items for the new version without starting from zero. The app should let me preview what the copied bundle looks like before saving, so I can quickly roll out a promotional version with adjusted pricing and confirm everything looks right from my phone."
+  },
+  {
+    "id": "q_scene_014_009",
+    "query_text": "Need a mobile invoice tool that lets me open any past invoice, select the line items I want, and copy them straight into a brand-new invoice so I stop retyping the same services and prices every month. The app should let me pick which items to carry over, adjust the quantities or amounts for the new invoice, and show me a running total as I go so I know the final number before I send it."
+  },
+  {
+    "id": "q_scene_014_010",
+    "query_text": "Create a shift planner app for my phone where I can set up one week's worth of shift rotations and then duplicate that whole pattern to fill in the next several weeks automatically, instead of manually entering the same schedule over and over. The app should show the repeated weeks in a calendar so I can spot any conflicts and make small edits to specific days without having to redo the whole rotation from scratch."
+  },
+  {
+    "id": "q_scene_015_001",
+    "query_text": "Need a little mobile app for my phone that shows a paywall screen when a free user tries to use a paid feature, giving them the option to start a free trial before committing to a subscription. The screen should clearly show what they get during the trial period, how long it lasts, and a simple button to start it, so there is no confusion about what they are signing up for."
+  },
+  {
+    "id": "q_scene_015_002",
+    "query_text": "Create a mobile accessibility checker tool that scans a page and shows me a list of issues it found, grouped by how serious they are, so I can see the biggest problems first. For each issue the app should offer a quick one-tap fix suggestion right there on the phone, so I can clean up the most common problems on the spot without having to dig through documentation to figure out what to do."
+  },
+  {
+    "id": "q_scene_015_003",
+    "query_text": "Create a biometric setup app for my phone that walks me through enrolling my face and fingerprint one step at a time, so I know exactly what to do and do not get confused by the process. The app should show a clear progress indicator for each enrollment step, let me try the scan again if it does not work the first time, and confirm at the end that both my face and fingerprint are saved and ready to use."
+  },
+  {
+    "id": "q_scene_015_004",
+    "query_text": "Make a mobile home screen customizer app where I can pick from a list of small info blocks to add to my phone's home screen, and then drag the corners to make each one bigger or smaller so it fits the space I have. The app should show a live preview of how my home screen will look as I add and resize things, so I can arrange everything exactly how I want it before applying the changes."
+  },
+  {
+    "id": "q_scene_015_005",
+    "query_text": "Need a mobile setup guide app that walks new users through turning on helpful accessibility features on their phone, one feature at a time, so they can find options that make the app easier to use without having to dig through a bunch of settings menus on their own. Each step should show what the feature does in plain language with a simple toggle, and the guide should remember which ones the user already turned on so they can come back and adjust later."
+  },
+  {
+    "id": "q_scene_015_006",
+    "query_text": "Build a mobile permissions manager app where I can see at a glance which phone apps have access to things like my camera, contacts, and location, all in one place instead of hunting through system settings. The app should let me tap any permission to see which apps have it and turn off access for specific ones right there, so I can clean up all those permissions I said yes to without really thinking about it."
+  },
+  {
+    "id": "q_scene_015_007",
+    "query_text": "Need a Bluetooth pairing app for my phone that shows nearby devices in a simple list, lets me tap one to connect, and then lets me give each paired device a custom nickname so I can tell them apart. The app should remember all my paired devices and show their nicknames instead of the generic device IDs, so I stop having to guess which one is my speaker and which one is my headphones every single time."
+  },
+  {
+    "id": "q_scene_015_008",
+    "query_text": "A calendar sync setup tool for my phone that lets me connect my Google or work calendar account and choose which of those calendars I want to show up in my main calendar app, so all my events land in one place. The app should walk me through linking each account step by step and let me toggle individual calendars on or off after connecting, so I have full control over what shows up on my phone."
+  },
+  {
+    "id": "q_scene_015_009",
+    "query_text": "Build a data import helper app for my phone that lets me bring in a file from another app or service and then match up the columns from that file to the right fields in my app, so the data lands in the correct place. The app should show me a side-by-side preview of how the imported data will look after matching, and let me correct any mismatches before confirming, so I stop ending up with names in the wrong column or dates in the wrong format."
+  },
+  {
+    "id": "q_scene_015_010",
+    "query_text": "Create a mobile link router app that intercepts shared links on my phone and, when a link could open in more than one app, shows me a quick picker listing all the options so I can choose where it goes each time. The app should remember my preferred choices for common link types and let me update those defaults from a simple settings list, so I stop being sent to the wrong app by accident."
+  }
+]
