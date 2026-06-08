@@ -2,6 +2,13 @@
 
 # ui-queryMaker
 
+Query Instruction is the initial stage of the data pipeline, determining the task distribution downstream across the entire pipeline. As such, the pipeline needs to establish a rigorous “syllabus and exam” structure, since this greatly influences the range of problems students will eventually be able to solve.
+
+Many datasets have gaps in the following areas:
+- Incomplete syllabus: they lack coverage diversity for scenarios that effectively improve a model’s front-end design capability.
+- Scattered teaching materials: the datasets are either too simple or resemble a PRD, and their complexity has not been properly modularized and controlled.
+- Lack of realism: they fail to objectively reflect real human–machine interaction instruction habits, which affects the model’s user experience in real-world scenarios.
+
 ### Realistic UI query data, synthesized with rigor.
 
 Two orthogonal signals — **corpus** controls what to ask, **persona** controls who asks and how —
